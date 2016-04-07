@@ -1,0 +1,987 @@
+body {
+    padding:0;
+    margin:0;
+    overflow:hidden;
+}
+#canvas {
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+}
+form {
+    margin-bottom:0px;
+}
+.btn-play, .btn-settings, .btn-spectate, .btn-play-guest, .btn-login, .btn-logout {
+    display:block;
+    float:left;
+    height:35px;
+}
+.btn-spectate, .btn-logout {
+    height:35px;
+    display:block;
+    width:110px;
+    margin-left:10px;
+    margin-bottom:5px;
+}
+
+#helloContainer[data-logged-in="0"] .btn-play-guest {
+    margin-left:5px;
+    width:75px;
+}
+#helloContainer[data-logged-in="0"] .btn-login {
+    margin-left:5px;
+    width:145px;
+}
+#helloContainer[data-logged-in="0"] .warball-exp-bar, #helloContainer[data-logged-in="0"] .progress-bar-star, #helloContainer[data-logged-in="0"] #warball-main-buttons .warball-profile, #helloContainer[data-logged-in="0"] .btn-play {
+    display:none;
+}
+#helloContainer[data-logged-in="0"] .btn-logout {
+    display:none;
+}
+#helloContainer[data-logged-in="1"] .btn-play {
+    margin-left:5px;
+    width:75px;
+}
+#helloContainer[data-logged-in="1"] .btn-play-guest {
+    display:none;
+}
+#helloContainer[data-logged-in="1"] .btn-login {
+    display:none;
+}
+.btn-settings {
+    width:40px;
+}
+.btn-spectate {
+    display:block;
+    float:right;
+}
+#adsBottom {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+}
+#adsBottomInner {
+    margin:0px auto;
+    width:728px;
+    height:90px;
+    border:5px solid white;
+    border-radius:5px 5px 0px 0px;
+    background-color:#FFFFFF;
+    box-sizing:content-box;
+}
+.region-message {
+    display:none;
+    margin-bottom:12px;
+    margin-left:6px;
+    margin-right:6px;
+    text-align:center;
+}
+#nick {
+    width: 64%;
+    float:left;
+    margin-right: 10px;
+}
+#locationKnown #region {
+    width:100%;
+}
+#locationUnknown #region {
+    margin-bottom:15px;
+}
+#gamemode {
+    width:40%;
+    float:right;
+}
+#gamemode2 {
+    width:100%;
+    float:left;
+	font-weight: bold;
+}
+.warball-panel {
+    display:inline-block;
+    width:369px;
+    background-color:#FFFFFF;
+    margin:2px;
+    border-radius:10px;
+    padding:5px 15px 5px 15px;
+    vertical-align:top;
+}
+.warball-skor-panel {
+    display:inline-block;
+    width:250px;
+}
+.warball-klan-panel {
+    display:inline-block;
+    width:320px;
+}
+.warball-side-panel {
+    display:inline-block;
+    width:250px;
+}
+#helloContainer, .connecting-panel {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-right:-50%;
+    -webkit-transform:translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
+
+.warball-exp-bar {
+    height:30px;
+    position:relative;
+    border:2px solid #01612B;
+}
+.warball-exp-bar .progress-bar {
+    background-color:#338833;
+    border-radius:0px 4px 4px 0px;
+    -webkit-transition:none;
+    transition:none;
+}
+.warball-exp-bar .progress-bar-text {
+    font-size:12pt;
+    cursor:default;
+    opacity:0.75;
+    color:#FFF;
+    text-align:center;
+    line-height:26px;
+    text-shadow:0px 0px 3px #000000, -1px 0px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, -1px -1px 0px #000000, 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    font-family:'Ubuntu', sans-serif;
+}
+#warball-results-table {
+    width:100%;
+}
+#warball-results-table th {
+    text-align:center;
+    font-size:8pt;
+}
+#warball-results-table td {
+    text-align:center;
+    color:#999;
+    font-size:11pt;
+    padding-bottom:15px;
+}
+.progress-bar-star {
+    position:absolute;
+    top:-13px;
+    right:-16px;
+    width:50px;
+    height:50px;
+    background-image:url("img/star.html");
+    background-size:cover;
+    -webkit-transform:rotate3d(0, 0, 1, 10deg);
+    transform:rotate3d(0, 0, 1, 10deg);
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-delay:0s;
+    animation-delay:0s;
+    -webkit-animation-iteration-count:1;
+    animation-iteration-count:1;
+    cursor:default;
+    color:#FFF;
+    text-align:center;
+    line-height:55px;
+    font-size:12pt;
+    text-shadow:0px 0px 3px #000000, -1px 0px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, -1px -1px 0px #000000, 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000;
+    font-family:'Ubuntu', sans-serif;
+}
+.tooltip-inner {
+    max-width:300px;
+}
+.warball-profile-panel {
+    padding:15px 15px 15px 15px;
+}
+.warball-profile-panel .warball-profile-picture {
+    float:left;
+    display:block;
+    width:64px;
+    height:64px;
+    border-radius:5px;
+    border:2px solid #CCC;
+    margin-right:6px;
+}
+.warball-profile-panel .warball-profile-name-container {
+    float:left;
+    display:table;
+    width:120px;
+    height:64px;
+    position:relative;
+}
+.warball-profile-panel .warball-profile-name-container .warball-profile-name {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    font-weight:bold;
+}
+#helloContainer[data-has-account-data="0"] .warball-profile-panel {
+    display:none;
+}
+.warball-party, .warball-party-0, .warball-party-1, .warball-party-2, .warball-party-3, .warball-party-4, .warball-party-5, .warball-party-6 {
+    display:none;
+}
+#helloContainer[data-gamemode=":party"] .warball-party {
+    display:block;
+    position:relative;
+}
+#helloContainer[data-gamemode=":party"] .warball-promo {
+    display:none;
+}
+#helloContainer[data-party-state="0"] .warball-party-0 {
+    display:block;
+}
+#helloContainer[data-party-state="1"] .warball-party-1 {
+    display:block;
+}
+#helloContainer[data-party-state="2"] .warball-party-2 {
+    display:block;
+}
+#helloContainer[data-party-state="3"] .warball-party-3 {
+    display:block;
+}
+#helloContainer[data-party-state="4"] .warball-party-4 {
+    display:block;
+}
+#helloContainer[data-party-state="5"] .warball-party-5 {
+    display:block;
+}
+#helloContainer[data-party-state="6"] .warball-party-6 {
+    display:block;
+}
+.partyToken {
+    margin-bottom:10px;
+}
+.side-container {
+    vertical-align:top;
+    display:inline-block;
+    width:224px;
+}
+.cell-spinner {
+    display:block;
+    margin:0;
+}
+.creating-party-text {
+    position:absolute;
+    cursor:default;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:#FFF;
+    font-size:24px;
+    line-height:100px;
+    text-shadow:0px 0px 3px #000000, -1px 0px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, -1px -1px 0px #000000, 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000;
+}
+.warball-results-0, .warball-results-1, .warball-results-2 {
+    display:none;
+}
+#helloContainer[data-results-state="0"] .warball-results-0 {
+    display:block;
+}
+#helloContainer[data-results-state="1"] .warball-results-1 {
+    display:block;
+}
+#helloContainer[data-results-state="2"] .warball-results-2 {
+    display:block;
+}
+#options>label {
+    display:block;
+    width:94px;
+    float:left;
+}
+#stats {
+    position:relative;
+    width:350px;
+    height:581px;
+    padding:0px 0px 300px 0px;
+    overflow:hidden;
+}
+#statsPelletsContainer, #statsTimeAliveContainer, #statsHighestMassContainer, #statsTimeLeaderboardContainer, #statsPlayerCellsEatenContainer, #statsTopPositionContainer {
+    position:absolute;
+    width:100px;
+    height:100px;
+}
+#statsPelletsContainer {
+    top:30px;
+    left:50px;
+}
+#statsHighestMassContainer {
+    top:30px;
+    right:50px;
+}
+#statsTimeAliveContainer {
+    top:85px;
+    left:50px;
+}
+#statsTimeLeaderboardContainer {
+    top:85px;
+    right:50px;
+}
+#statsPlayerCellsEatenContainer {
+    top:140px;
+    left:50px;
+}
+#statsTopPositionContainer {
+    top:140px;
+    right:50px;
+}
+#statsPellets {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+}
+#statsText {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    line-height:100px;
+    font-size:23px;
+}
+#statsSubtext {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    line-height:60px;
+    font-size:12px;
+    color:#000;
+    text-align:center;
+}
+#statsChartText {
+    position:absolute;
+    left:20px;
+    bottom:250px;
+    line-height:40px;
+    font-size:40px;
+}
+#statsChartText, #statsText {
+    cursor:default;
+    color:#444;
+    text-align:center;
+    font-weight:bold;
+}
+#statsContinue {
+    position:absolute;
+    left:25px;
+    right:25px;
+    width:300px;
+    bottom:310px;
+}
+#statsGraph {
+    position:absolute;
+    bottom:350px;
+    left:0px;
+    right:0px;
+    opacity:0.4;
+}
+#s300x250 {
+    position:absolute;
+    bottom:45px;
+    left:25px;
+    right:25px;
+    width:300px;
+    height:250px;
+}
+.tosBox {
+    z-index:1000;
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-color:#FFF;
+    border-radius:5px 0px 0px 0px;
+    padding:5px 10px;
+}
+#chat_textbox {
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	position: absolute;
+	z-index: 1;
+	bottom: 10px;
+	background: rgba(0, 0, 0, .2);
+	border: 0px;
+	outline: none;
+	color: #FFF;
+	height: 30px;
+	text-indent: 12px;
+	left: 10px;
+	width: 300px;
+}
+
+#chat_textbox:focus {
+	background: rgba(0, 0, 0, .5);
+}
+
+#a300x250 {
+	width: 336px;
+	height: 280px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  z-index: -1!important;
+}
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F0F0F0;
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+ 
+ 
+ 
+ 
+ ul.skortablosu {
+    background: rgba(255, 255, 255, 0.05) none repeat scroll 0 0;
+    border-radius: 3px;
+    cursor: pointer;
+    list-style: outside none none;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    padding: 0;
+    z-index: 209;
+}
+ul.skortablosu .skorlar_baslik {
+    background: #3071a9 none repeat scroll 0 0 !important;
+    color: #fff !important;
+    font-family: arial;
+    font-size: 110%;
+    height: 35px;
+    line-height: 25px;
+    margin-bottom: 1px;
+    padding: 5px 0 !important;
+}
+ul.skortablosu .skorlar_baslik span {
+    color: #fff !important;
+}
+ul.skortablosu .skorlar_baslik .skor_no {
+    background: #3071a9 none repeat scroll 0 0 !important;
+    color: #fff !important;
+    text-align: center;
+}
+.skorlar_baslik_aciklama {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: #666;
+    font-size: 120%;
+    font-weight: 700;
+    padding: 0 !important;
+    text-align: center;
+    text-transform: capitalize;
+}
+.basliktext {
+    cursor: default;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+ul.skortablosu .bildirim {
+    color: #666;
+    font-family: arial;
+    font-size: 75%;
+    margin-top: 5px;
+    text-align: center;
+}
+ul.skortablosu li {
+    clear: both;
+    margin-bottom: 0;
+    padding: 4px 0;
+}
+ul.skortablosu li:nth-child(2n+1) {
+    background: rgba(200, 255, 200, 0.23) none repeat scroll 0 0;
+}
+ul.skortablosu li:nth-child(2n) {
+    background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+}
+ul.skortablosu li a {
+    color: #3071a9;
+    font-family: arial;
+    font-size: 85%;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+ul.skortablosu li a:hover {
+    color: #111;
+}
+ul.skortablosu li span {
+    color: #3071a9;
+    float: right;
+    font-family: arial;
+    font-size: 90%;
+    font-weight: 700;
+    margin-right: 10px;
+}
+ul.skortablosu li .skor_no {
+    background: #3071a9 none repeat scroll 0 0;
+    border-radius: 2px !important;
+    color: #eee !important;
+    float: left !important;
+    font-family: arial !important;
+    font-size: 85% !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    margin-left: 5px !important;
+    padding: 0 7px !important;
+    text-align: center !important;
+    width: 30px !important;
+}
+ul.skortablosu li:hover .skor_no {
+    background: #444 none repeat scroll 0 0;
+    color: #fff;
+}
+ul.skortablosu li:hover a {
+    color: #000;
+}
+.skor_buton {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px #444;
+    color: #ab3900;
+    font-size: 120%;
+    font-weight: 700;
+    padding: 4px 5px;
+    position: absolute;
+    right: -155px;
+    text-align: center;
+    top: 0;
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.g_cagir2:hover {
+    background: #222 none repeat scroll 0 0;
+}
+#g_alan {
+    border-radius: 3px;
+    margin-top: 0;
+    padding: 10px;
+    text-align: center;
+}
+#g_adres {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #777;
+    font: 13px arial;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+}
+.g_cagir {
+    background: #ffa900 none repeat scroll 0 0;
+    border-radius: 4px;
+    clear: both;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: 15px/16px arial;
+    margin: 10px auto;
+    padding: 6px 15px;
+    text-align: center;
+}
+.g_cagir:hover {
+    background: #222 none repeat scroll 0 0;
+}
+.set_baslik {
+    color: #666;
+    font: 700 18px arial;
+    margin-top: 20px;
+}
+ul.video_listesi {
+    list-style: outside none none;
+    margin: 15px 0 0;
+    overflow: hidden;
+    padding: 0;
+}
+ul.video_listesi li {
+    background: rgba(255, 255, 255, 0.25) none repeat scroll 0 0;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    clear: both;
+    float: left;
+    height: 50px !important;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 280px;
+    position: relative;
+}
+.little_alert {
+    font: 12px arial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+}
+ul.video_listesi li:hover {
+    background: rgba(78, 142, 177, 0.25) none repeat scroll 0 0;
+    border: 1px solid #4d6bb3;
+    cursor: pointer;
+}
+ul.video_listesi li:hover .vbaslik {
+    color: #222;
+}
+.eatme_div {
+    display: inline-block;
+    height: 95px;
+    margin: 15px auto 0;
+    overflow: hidden;
+    width: 260px;
+}
+.video_liste_baslik {
+    color: #666;
+    display: inline-block;
+    font: 18px arial;
+    margin: 0 auto;
+    text-align: center;
+    width: 280px;
+}
+ul.video_listesi li .vbaslik {
+    color: #666;
+    float: left;
+    font-family: arial;
+    font-size: 12px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    margin-top: 2px;
+    padding: 0 10px;
+    text-transform: capitalize;
+    width: 210px;
+}
+ul.video_listesi li img {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 4px;
+    float: left;
+    padding: 2px;
+    width: 50px;
+}
+.vid_baslik {
+    color: #666;
+    font: bold 18px arial;
+    margin-top: 0 !important;
+}
+.sol_aciklama {
+    background: #f0f0f0 none repeat scroll 0 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    color: #666;
+    display: inline-block;
+    font: 12px/20px arial;
+    margin: 0 auto;
+    padding: 10px;
+    width: 280px;
+}
+.left h2 {
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+}
+#g_aciklama_input {
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    color: #666;
+    font: 12px arial;
+    margin-top: 3px;
+    padding: 10px;
+    resize: none;
+    width: 220px;
+}
+#g_baslik_input {
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    color: #666;
+    font: 12px arial;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    padding: 10px;
+    width: 220px;
+}
+.g_cagir2 {
+    background: #222 none repeat scroll 0 0;
+    border-radius: 4px;
+    clear: both;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-size: 15px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 16px;
+    margin: 10px auto;
+    padding: 6px 15px;
+    text-align: center;
+}
+.vid_comment {
+    color: #888;
+    font: 11px arial;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    margin-top: -12px;
+}
+.g_cagir2:hover {
+    background: #222 none repeat scroll 0 0;
+}
+
+.c_flag {
+    float: left;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: -7px;
+}
+
+.controls {
+    left: 10px;
+    position: fixed;
+    top: 50px;
+    width: 160px;
+}
+.gallery {
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+.gallery img {
+    border-radius: 7px;
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
+    width: 160px;
+}
+.btn-social {
+    display: none;
+}
+#window {
+    height: auto;
+    left: calc(50% - 35%);
+    position: fixed;
+    top: 30px;
+    width: 70%;
+    z-index: 9999;
+}
+#window img {
+    height: auto;
+    width: 100%;
+}
+#window .btn {
+    margin-left: 10px;
+    margin-top: 40px;
+    position: absolute;
+    z-index: 101;
+}
+.candp_h2 {
+    color: #444;
+    font-size: 18px;
+    left: 20px;
+    position: absolute;
+    top: 85px;
+	width:720px;
+}
+.candp_aciklama {
+    color: #666;
+    left: 20px;
+    position: absolute;
+    top: 150px;
+		width:650px;
+}
+#window-video {
+    height: auto;
+    left: calc(50% - 30%);
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    z-index: 9999;
+}
+#window-video img {
+    height: auto;
+    width: 100%;
+}
+#window-video .btn {
+    margin-left: 10px;
+    margin-top: 40px;
+    position: absolute;
+    z-index: 101;
+}
+
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+
+.hide_chatbox {
+	display:none;
+}
+
+.skor{
+	display:none;
+	
+}
+
+.side-container{
+		display:none;
+	
+	
+}
+	
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+ 
+.skor{
+	display:none;
+	
+}
+
+.side-container{
+		display:none;
+	
+	
+}
+	
+}
+
+
+@media only screen and (min-width: 961px) and (max-width: 1980px) {
+	
+	
+}
+
+.hide_chatbox {
+    bottom: 10px;
+    left: 315px;
+    letter-spacing: 0;
+    position: absolute;
+    z-index: 100;
+}

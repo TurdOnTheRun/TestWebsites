@@ -1,0 +1,403 @@
+/* Eonline.com Video Player Engine Styles (Tweet: @eDevelopers1) */
+
+/* From /resources/css/videos.css: */
+.video .video-player-containers{height:392px;width:580px;}
+.video .video-player-containers img{margin-left:15px;}
+/* End from /resources/css/videos.css */
+
+.emailOverlay {display:none !important}
+
+.video-engine-players {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.news .in-blog-video-players,
+.news .expandable-blog-video-players, 
+.shows .in-blog-video-players,
+.shows .expandable-blog-video-players {
+	float: left;
+}
+
+.news .in-blog-video-players,
+.shows .in-blog-video-players,
+.redcarpet .in-blog-video-players {
+	margin: 5px 20px 0px 20px;
+}
+
+.video-engine-players.newsExpandableBlog { /* IE 7 & IE 8 fix */
+	float: left;
+	margin-bottom: 0px;
+}
+
+#modal-dialog .video-engine-players,
+.video-engine-players.videoDetail {
+	margin-bottom: 0px;
+}
+
+/* Overrides styles inherited from eol.css */
+
+#modal-dialog .video-engine-players .video-thumbnail-roots,
+.video-engine-players.videoDetail .video-thumbnail-roots {
+	margin: 0px 0px 0px 0px;
+}
+
+.video-engine-players .overlays {
+	cursor: default;
+	display: none;
+}
+
+.lp-widget.v2 .video-engine-players .overlays {
+	margin-top: 6px;
+}
+
+.lp-widget.v2 .video-engine-players .overlays.active {
+	margin-top: 0px;
+}
+
+.video-engine-players .overlays .active,
+.video-engine-players.newsInBlog .video-thumbnail-roots .overlays.active,
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .overlays.active,
+#modal-dialog .video-engine-players .overlays.active,
+.lp-widget.v2 .video-engine-players .overlays.active,
+.video-engine-players.videoDetail .overlays.active,
+.video-engine-players.newsInBlog .video-thumbnail-roots .overlays.active
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .overlays .active
+.video-engine-players.newsInBlog.ipad .video-thumbnail-roots .overlays.active {
+	border: 3px solid red;
+	cursor: pointer;
+	display: block; /* ! important; */
+}
+
+.video-engine-players.newsInBlog .video-thumbnail-roots .overlays {
+	height: 338px; /* 306px; */
+	width: 600px; /* 547px; */
+}
+
+#modal-dialog .video-engine-players .overlays,
+.video-engine-players.videoDetail .overlays {
+	cursor: pointer;
+	position: absolute;
+	z-index: 3;
+}
+
+/* Overrides styles inherited from videos.css */
+
+.video-engine-players .images {
+	margin-left: 0px ! important;
+}
+
+/* Overrides styles inherited from eol_blog.css */
+
+.video-engine-players .video-thumbnail-roots {
+	height: auto;
+}
+
+.video-engine-players .video-players-groups {
+	display: none;
+	visibility: hidden;
+}
+
+.video-engine-players.newsInBlog.ipad .video-thumbnails-groups,
+#modal-dialog .video-engine-players.ipad .video-players-groups,
+.video-engine-players.videoDetail.ipad .video-players-groups {
+	display: block;
+	visibility: visible;
+}
+
+#modal-dialog .video-engine-players .video-players-groups,
+.video-engine-players.videoDetail .video-players-groups {
+	margin-top: 15px;
+}
+
+.video-engine-players.newsInBlog .video-thumbnail-roots,
+.video-engine-players.newsInBlog .video-thumbnail-roots .overlays,
+.video-engine-players.newsInBlog .video-thumbnail-roots .thumbnail-wrappers {
+	float: none;
+}
+
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots {
+	background-color: transparent;
+	height: 110px;
+	margin: 12px 25px 13px 0;
+	/* This will hide the close X button: overflow: hidden; */
+	width: 196px;
+}
+
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .links {
+	display: block;
+	height: 111px;
+	width: 197px;
+}
+
+.video-engine-players.newsInBlog .video-thumbnail-roots .overlays,
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .overlays {
+	position: absolute;
+	z-index: 2
+}
+
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .overlays {
+	display: none;
+	height: 106px;
+	width: 192px;
+}
+
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .thumbnail-wrappers {
+	background: none;
+}
+
+.video-engine-players .video-thumbnail-roots {
+	clear: left;
+	float: left;
+	overflow: visible;
+	position: relative;
+}
+
+.video-engine-players.newsInBlog .eol-video-players-group {
+	margin: 12px 25px 0px 13px;
+}
+
+#modal-dialog .video-engine-players .titles,
+.video-engine-players.videoDetail .titles {
+	margin-top: 10px;
+}
+
+.video-engine-players .video-thumbnail-roots .play-btns {
+	background: url("http://images.eonline.com/static/uberblog/images/play-btn.png") no-repeat scroll 0 0 transparent;
+	display: block; /* <- Required for IE to show a play button, when the Expandable Blog is expanded & its Large Thumbnail is displayed & the video has stopped playing. */
+	height: 56px;
+	position: relative;
+	width: 56px;
+	margin: 27px 0 0 71px;
+	cursor: pointer;
+}
+
+.news .in-blog-video-players .video-thumbnail-roots .play-btns,
+.shows .in-blog-video-players .video-thumbnail-roots .play-btns,
+.video-engine-players.videoDetail .video-thumbnail-roots .play-btns,
+#modal-dialog .video-engine-players .video-thumbnail-roots .play-btns,
+.lp-widget.v2 .video-engine-players .video-thumbnail-roots .play-btns {
+	position: absolute;
+}
+
+.expandable-blog-video-players.zoomSmaller .video-engine-players .video-thumbnail-roots.expanded .play-btns {
+	margin: 145px 0px 0px 290px;
+	position: relative;
+}
+
+.video-engine-players .video-thumbnail-roots .titles {
+	color: #FFFFFF;
+	line-height: 19px;
+}
+
+.video-engine-players.newsInBlog .video-thumbnail-roots,
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots {
+	font-weight: bold;
+}
+
+.video-engine-players.newsInBlog .video-thumbnail-roots .titles-spacer {
+	height: 50px;
+}
+
+.video-engine-players.newsInBlog .video-thumbnail-roots .titles {
+	background: url("http://images.eonline.com/static/photogallery/images/thumb_overlay.png") repeat scroll 0 0 transparent;
+	display: block;
+	font-size: 14pt; /* = 18.67px */
+	height: 40px;
+	left: 0px;
+	line-height: 22px;
+	overflow: hidden;
+	padding: 5px 10px 6px 10px;
+	position: absolute;
+	top: 255px;
+}
+
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .titles {
+	background: url("http://images.eonline.com/static/photogallery/images/thumb_overlay.png") repeat scroll 0 0 transparent;
+	bottom: 0px;
+	color: white;
+	display: none;
+	font-family: Arial;
+	font-size: 9pt;
+	max-height: 32px;
+	left: 0;
+	line-height: 18px;
+	margin-bottom: -2px;
+	padding: 5px 5px 7px 5px;
+	position: absolute;
+	width: 187px;
+}
+
+#modal-dialog .video-engine-players .video-thumbnail-roots,
+.video-engine-players.videoDetail .video-thumbnail-roots {
+	float: none;
+}
+
+.video-engine-players .video-thumbnail-roots .titles {
+	font-size: 12pt;
+}
+
+/* These are the 3 thumbnails. */
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots .titles {
+	font-family: Arial;
+	font-size: 9pt; /* = 12px */
+	line-height: 13pt; /* = 17px */
+}
+
+/* This is the larger thumbnail player experience. */
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots.expanded .titles {
+	font-family: "DIN Web Condensed", "Arial Narrow", Sans-Serif;
+	font-size: 14pt; /* = 18.67px */
+	line-height: 19px;
+}
+
+#modal-dialog .video-engine-players .video-thumbnail-roots .titles,
+.video-engine-players.videoDetail .video-thumbnail-roots .titles {
+	display: block;
+	height: 34px;
+	margin: 5px;
+	overflow: hidden;
+	position: relative;
+}
+
+/*#modal-dialog .video-engine-players .video-thumbnail-roots .titles {
+	font-size: 12pt;
+}*/
+
+.video-engine-players.videoDetail .video-thumbnail-roots .titles {
+	font-size: 15pt;
+	padding: 10px 5px 4px 5px;
+}
+
+/* #modal-dialog .video-engine-players .thumbnail-wrappers, */
+.video-engine-players.videoDetail .thumbnail-wrappers {
+	margin-top: 15px;
+}
+
+.video-engine-players #expandable-video {
+	display: none;
+}
+
+.video-engine-players.newsExpandableBlog .images {
+	float: left;
+}
+
+.video-engine-players.newsExpandableBlog .expanded {
+	border: none;
+	height: 338px ! important;
+	/* margin: 14px 614px 358px 0px; These values are also set up in the video.player.engine.js code: 614x345 + 13px bottom margin (setup above) = 614x358 */
+}
+
+#modal-dialog .video-engine-players .images,
+.video-engine-players.videoDetail .images {
+	margin-bottom: 3px;
+}
+
+.video-engine-players.newsExpandableBlog .expanded .images {
+	border: none;
+	height: 338px;
+	overflow: hidden;
+	width: 600px;
+}
+
+#modal-dialog .video-engine-players .staticOverlayViewable,
+.video-engine-players.videoDetail .staticOverlayViewable {
+	margin-top: 15px;
+}
+
+#modal-dialog .video-engine-players .video-thumbnail-roots.staticOverlayViewable .titles {
+	padding-top: 10px;
+}
+
+.video-engine-players.videoDetail .video-thumbnail-roots.staticOverlayViewable .titles {
+	padding-top: 7px;
+}
+
+.video-engine-players.newsInBlog .video-players-groups {
+	margin-bottom: 2px;
+}
+
+.video-engine-players.newsExpandableBlog .video-players-groups {
+	margin-top: 12px;
+	position: absolute;
+	z-index: 2;
+}
+
+.video-engine-players.newsExpandableBlog .video-players-groups embed {
+	border: 1px solid #BFBFBF;
+	display: block;
+	position: static;
+	z-index: 2;
+}
+
+.video-engine-players .video-thumbnail-roots .close-btns {
+	border: none;
+	cursor: pointer;
+	display: none;
+	left: -16px;
+	position: absolute;
+	top: -16px;
+	z-index: 3;
+}
+
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots.expanded .overlays {
+	height: 334px ! important;
+	width: 598px ! important;
+}
+
+.video-engine-players.newsExpandableBlog .video-thumbnail-roots.expanded .titles {
+	font-size: 18px;
+	line-height: 22px;
+	margin-top: 227px;
+	padding: 5px 0px 6px 10px;
+	width: 594px;
+}
+
+/* Safari iPad Classes */
+
+/* In Blog iPad Player */
+
+.video-engine-players.newsInBlog.ipad .video-thumbnail-roots,
+.video-engine-players.newsInBlog.ipad .video-thumbnail-roots .thumbnail-wrappers {
+	display: block;
+}
+
+.video-engine-players.newsExpandableBlog.ipad .video-thumbnail-roots .titles {
+	cursor: pointer;
+}
+
+.video-engine-players.newsInBlog.ipad .video-thumbnail-roots .overlays {
+	position: absolute;
+}
+
+.video-engine-players.newsInBlog.ipad .video-thumbnail-roots .play-btns {
+	margin: 0;
+	left: 248px;
+	top: 127px;
+}
+
+.video-engine-players.newsInBlog.ipad .video-thumbnail-roots .titles {
+	cursor: pointer;
+	display: block; /* iPad doesn't have mouse-over/hover states, like the PC does. So titles can't animate up, when "finger-swiped-over" instead of "moused-over". */
+	width: 527px;
+}
+
+/* Video Detail iPad Player */
+
+#modal-dialog .video-engine-players.ipad .video-thumbnail-roots,
+.video-engine-players.videoDetail.ipad .video-thumbnail-roots {
+	display: block;
+	width: 590px;
+}
+
+#modal-dialog .video-engine-players.ipad .video-thumbnail-roots .links,
+.video-engine-players.videoDetail.ipad .video-thumbnail-roots .links {
+	display: none;
+}
+
+#modal-dialog .video-engine-players.ipad .video-thumbnail-roots .titles,
+.video-engine-players.videoDetail.ipad .video-thumbnail-roots .titles {
+	display: block;
+	height: auto;
+	width: 580px;
+}

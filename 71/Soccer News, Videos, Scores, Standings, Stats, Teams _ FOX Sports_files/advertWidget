@@ -1,0 +1,281 @@
+body {
+  font:normal 62.5% Arial;
+  margin:0;
+  padding:0;
+}
+
+a {
+  text-decoration:none;
+}
+
+.eventList {
+  height:212px;
+  width:300px;
+  background:url(/javaImages/f2/6c/0,,13138~10448114,00.jpg) no-repeat left top;
+  padding:0 0 38px;
+}
+
+.innerList {
+  height:144px;
+  padding:15px 0 0;
+}
+
+.innerList .event {
+  border-bottom:1px solid #d6d6d6;
+  text-align:left;
+  margin:0 auto 8px;
+  width:227px;
+  padding-bottom:8px;
+  font:normal 1.2em Arial;
+  color:#333;
+}
+
+.eventDesc {
+  font-weight:bold;
+  display:block;
+  margin-bottom:3px;
+}
+
+.eventStatus {
+  font-size:1em;
+}
+
+.eventStatus b {
+  background:url(/javaImages/c8/b6/0,,13138~9942728,00.png) no-repeat left 3px;
+  padding-left:10px;
+  font-weight:normal !important;
+  color:#667a92;
+}
+
+.eventStatus .eventTime, .dateHeader {
+  font-size:0.9em;
+  color:#656565;
+}
+
+.jspContainer {
+  overflow:hidden;
+  position:relative;
+}
+
+.jspPane {
+  position:absolute;
+  padding:8px 0 0 !important;
+}
+
+.jspVerticalBar {
+  position:absolute;
+  top:0;
+  right:1px;
+  width:22px;
+  height:100%;
+}
+
+.jspVerticalBar * {
+  margin:0;
+  padding:0;
+}
+
+.jspCap {
+  display:none;
+}
+
+.jspTrack {
+  background:url(/javaImages/b4/b9/0,,13138~9943476,00.png) repeat-y;
+  position:relative;
+  width:22px;
+}
+
+.jspDrag {
+  background:#ccc;
+  position:relative;
+  top:0;
+  left:0;
+  cursor:pointer;
+}
+
+.jspHorizontalBar .jspTrack {
+  float:left;
+  height:100%;
+}
+
+.jspArrow {
+  background:url(/javaImages/d2/b9/0,,13138~9943506,00.png) no-repeat;
+  text-indent:-20000px;
+  display:block;
+  cursor:pointer;
+}
+
+.jspArrow.jspDisabled {
+  cursor:default;
+}
+
+.jspVerticalBar .jspArrow {
+  height:19px;
+  width:22px;
+}
+
+.jspVerticalBar .jspArrow.jspArrowDown {
+  background-position:left bottom;
+}
+
+.jspVerticalBar .jspArrow:focus {
+  outline:none;
+}
+
+.jspHorizontalBar .jspArrow {
+  float:left;
+  height:100%;
+}
+
+.jspCorner {
+  background:#eeeef4;
+  float:left;
+  height:100%;
+}
+
+* html .jspCorner {
+  margin:0 -3px 0 0;
+}
+    
+.watchLive {
+  display:block;
+  text-indent:-999px;
+  overflow:hidden;
+  height:38px;
+}
+
+.logo {
+  text-indent:-999px;
+  display:block;
+  height:69px;
+  width:300px;
+  overflow:hidden;
+}
+
+/* Widget 420x50 */
+#widget2 {
+  width:420px;
+  height:50px;
+  background:url(/javaImages/ea/75/0,,13138~11367914,00.png) no-repeat left top;
+  padding:0;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  user-select:none;
+}
+
+#widget2 .logo {
+  float:left;
+  height:50px;
+  width:145px;
+}
+
+#widget2 .innerList {
+  height:35px;
+  padding:0;
+}
+
+#widget2 .watchLive {
+  height:15px;
+  float:right;
+  width:270px;
+}
+
+#widget2 .eventDesc {
+  margin:3px 0 0;
+}
+
+#widget2 .event {
+  float:right;
+  margin:0;
+  padding:0;
+  text-align:left;
+  border:0;
+  width:263px;
+  height:31px;
+}
+
+#widget2 .jcarousel-clip-vertical {
+  height:35px;
+  padding:0;
+  width:263px;
+  float:right;
+}
+
+#widget2 .jcarousel-prev-vertical {
+  background:url(/javaImages/4a/c5/0,,13138~9946442,00.png) no-repeat left top;
+  height:7px;
+  width:13px;
+  position:absolute;
+  right:7px;
+  top:3px;
+  cursor:pointer;
+}
+
+#widget2 .jcarousel-next-vertical {
+  background:url(/javaImages/4a/c5/0,,13138~9946442,00.png) no-repeat left bottom;
+  height:7px;
+  width:13px;
+  position:absolute;
+  right:7px;
+  top:23px;
+  cursor:pointer;
+}
+
+#widget2 .jcarousel-next-disabled,
+#widget2 .jcarousel-prev-disabled {
+  filter:alpha(opacity=30);
+  opacity:.3;
+  cursor:default;
+}
+
+#widget2 .counter {
+  position:absolute;
+  right:4px;
+  top:10px;
+  font:bold 1.1em Arial;
+}
+
+/* Widget 233x552 */
+#widget3 {
+  width:233px;
+  height:555px;
+  background:url(/javaImages/f6/6c/0,,13138~10448118,00.jpg) no-repeat left top;
+  padding:0;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  user-select:none;
+}
+
+#widget3 .logo {
+  height:52px;
+  width:233px;
+}
+
+#widget3 .watchLive {
+  height:35px;
+}
+
+#widget3 .innerList {
+  height:468px;
+}
+
+#widget3 .innerList .event {
+  width:190px;
+}
+.playButton {
+ float: left;
+ padding-right: 4px; 
+}
+.eventOn a {
+ color: red; 
+ font-weight: bold;
+}
+
+.eventOn .playButton img {
+  color: none; 
+  border: none;
+}
+.dateHeader2 {
+ width: 100px;
+ overflow: hidden;
+}

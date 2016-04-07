@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://s1.2mdn.net/3856256/1459352933257/INCMen_728x90_Shirting.416.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+		<title>INCMen_728x90_Shirting.416</title>
+        <meta name="ad.size" content="width=728,height=90">
+        <script type="text/javascript">
+            var clickTag = "http://www.google.com";
+        </script>
+        <link href="./main.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+    	<div id="mainContainer">
+            <div id="img1" style="opacity: 1;"></div>  
+            <div id="img2" style="opacity: 1;"></div>  
+            <div id="img3" style="opacity: 1;"></div>  
+          	<div id="headline1" class="adType" style="opacity: 0;"></div>
+            <div id="logoLockup" class="adType" style="opacity: 1;"></div>
+          	<div id="cta" class="adType" style="opacity: 1;"></div>
+            <div id="border"></div>
+            <div id="bg-exit"></div>
+            <div id="replayBtn" class="adType" style="opacity: 1; visibility: visible;"></div>
+		</div>
+	<script src="./tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+    <script src="./main.js"></script> 
+	
+</body></html>

@@ -1,0 +1,15 @@
+//tealium universal tag - utag.23 ut4.0.201603300819, Copyright 2016 Tealium.com Inc. All Rights Reserved.
+try{(function(id,loader){var u={};utag.o[loader].sender[id]=u;if(utag===undefined){utag={};}if(utag.ut===undefined){utag.ut={};}if(utag.ut.loader===undefined){u.loader=function(o){var a,b,c,l;a=document;if(o.type==="iframe"){b=a.createElement("iframe");b.setAttribute("height","1");b.setAttribute("width","1");b.setAttribute("style","display:none");b.setAttribute("src",o.src);}else if(o.type==="img"){utag.DB("Attach img: "+o.src);b=new Image();b.src=o.src;return;}else{b=a.createElement("script");b.language="javascript";b.type="text/javascript";b.async=1;b.charset="utf-8";b.src=o.src;}if(o.id){b.id=o.id;}if(typeof o.cb==="function"){if(b.addEventListener){b.addEventListener("load",function(){o.cb();},false);}else{b.onreadystatechange=function(){if(this.readyState==="complete"||this.readyState==="loaded"){this.onreadystatechange=null;o.cb();}};}}l=o.loc||"head";c=a.getElementsByTagName(l)[0];if(c){utag.DB("Attach to "+l+": "+o.src);if(l==="script"){c.parentNode.insertBefore(b,c);}else{c.appendChild(b);}}};}else{u.loader=utag.ut.loader;}
+u.ev={'view':1,'link':1};u.initialized=false;u.map={"dy_scsec":"scsec","dy_context_type":"type","dy_event_name":"name"};u.extend=[function(a,b){try{if(b['event_name']=='registration complete'){b['dy_event_name']='registration complete'}}catch(e){utag.DB(e)}}];u.send=function(a,b){if(u.ev[a]||u.ev.all!==undefined){var c,d,e,f,i;u.data={};for(c=0;c<u.extend.length;c++){try{d=u.extend[c](a,b);if(d==false)return}catch(e){}};for(d in utag.loader.GV(u.map)){if(b[d]!==undefined&&b[d]!==""){e=u.map[d].split(",");for(f=0;f<e.length;f++){u.data[e[f]]=b[d];}}}
+if(window.DY){var dyUtagSync=true;}else{var dyUtagSync=false;window.DY={scsec:u.data.scsec,API:function(){(window.DY.API.actions=window.DY.API.actions||[]).push(arguments)}};}
+if(u.data.type&&u.data.type.match(/HOMEPAGE|CATEGORY|ARTICLE/)){u.event_type="context";}else if(u.data.name){u.event_type="event";}
+var data={"type":u.data.type,}
+if(u.event_type==="context"){event_data=[];if(u.data.page_type==="CATEGORY"){if(u.data.TOP_LEVEL_CAT){event_data.push(u.data.TOP_LEVEL_CAT);}
+if(u.data.CHILD_CAT){event_data.push(u.data.CHILD_CAT);}
+if(u.data.GRANDCHILD_CAT){event_data.push(u.data.GRANDCHILD_CAT);}}
+if(u.data.page_type==="ARTICLE"){if(u.data.ARTICLEID){event_data.push(u.data.ARTICLEID);}}
+if(event_data.length>0){data.data=event_data;}}
+if(u.event_type==="event"){var data={"name":u.data.name};var properties={};for(varName in u.data){if(varName.indexOf('properties.')===0){properties[varName.split('properties.')[1]]=u.data[varName];}}
+data.properties=properties;DY.API(u.event_type,data);}
+if(!dyUtagSync){if(!u.initialized){u.loader({"type":"script","src":"//cdn.dynamicyield.com/api/"+u.data.scsec+"/api_dynamic.js","cb":u.loader_cb,"loc":"script","id":'utag_23'});u.loader({"type":"script","src":"//cdn.dynamicyield.com/api/"+u.data.scsec+"/api_static.js","cb":u.loader_cb,"loc":"script","id":'utag_23'});}else{u.loader_cb();}}
+}};utag.o[loader].loader.LOAD(id);})("23","northern-and-shell.dx");}catch(error){utag.DB(error);}

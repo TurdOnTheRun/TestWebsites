@@ -1,0 +1,172 @@
+.bolt-control-bar .bolt-separator:after,.bolt-sharing-layer .bolt-social-links:after{clear:both}
+.bolt-container video{display:inline-block;vertical-align:baseline}
+.bolt-container a{background:0 0}
+.bolt-container,.bolt-content .bolt-ad-container{background:#000}
+.bolt-container a:active,.bolt-container a:hover{outline:0}
+.bolt-container img{border:0}
+.bolt-container svg:not(:root){overflow:hidden}
+.bolt-container button,.bolt-container input,.bolt-container optgroup,.bolt-container select,.bolt-container textarea{color:inherit;font:inherit;margin:0}
+.bolt-container button{overflow:visible}
+.bolt-container button,.bolt-container select{text-transform:none}
+.bolt-container button,.bolt-container html input[type=button],.bolt-container input[type=reset],.bolt-container input[type=submit]{-webkit-appearance:button;cursor:pointer}
+.bolt-container button[disabled],.bolt-container html input[disabled]{cursor:default}
+.bolt-content:hover,.bolt-related-layer .bolt-related-title,.bolt-related-layer .bolt-related-video:hover,.bolt-sharing-layer .bolt-sharing-close:hover,.bolt-sharing-layer .bolt-social-icon:hover{cursor:pointer}
+.bolt-container button::-moz-focus-inner,.bolt-container input::-moz-focus-inner{border:0;padding:0}
+.bolt-container input{line-height:normal}
+.bolt-container input[type=checkbox],.bolt-container input[type=radio]{box-sizing:border-box;padding:0}
+.bolt-container input[type=number]::-webkit-inner-spin-button,.bolt-container input[type=number]::-webkit-outer-spin-button{height:auto}
+.bolt-container input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+.bolt-container input[type=search]::-webkit-search-cancel-button,.bolt-container input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+.bolt-container fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+.bolt-container legend{border:0;padding:0}
+.bolt-container textarea{overflow:auto}
+.bolt-container optgroup{font-weight:700}
+.bolt-container table{border-collapse:collapse;border-spacing:0}
+.bolt-container td,.bolt-container th{padding:0}
+.bolt-center{margin-left:auto;margin-right:auto;display:block}
+.bolt-hidden{display:none}
+.bolt-container{position:relative;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased;text-shadow:1px 1px 1px rgba(0,0,0,.004);-moz-osx-font-smoothing:grayscale;width:100%;height:100%}
+.bolt-container object{position:absolute;top:0;left:0}
+.bolt-container svg{pointer-events:none!important}
+.bolt-content{position:absolute;width:100%;height:100%}
+.bolt-content .bolt-video-container{position:absolute;display:block;top:0;left:0;right:0;bottom:0}
+.bolt-content .bolt-ad-container,.bolt-error-container{display:none;position:absolute;top:0;left:0;bottom:0;right:0}
+.bolt-poster{position:absolute;top:0;left:0;right:0;bottom:0;background-repeat:no-repeat;background-position:center center;background-size:contain;pointer-events:none}
+.bolt-error-container{text-align:center;background:#000}
+.bolt-error-container p{margin-top:25%;color:red}
+.bolt-background{background-color:#313131}
+.bolt-background-alpha-50{background-color:rgba(49,49,49,.5)}
+.bolt-foreground{color:#fff;fill:#fff}
+.bolt-highlight,.bolt-mouse-input .bolt-hover-highlight:hover .bolt-icon{fill:#18adf3;color:#18adf3}
+.bolt-foreground :visited{color:#fff}
+.bolt-mouse-input .bolt-hover-highlight:hover{color:#18adf3;cursor:pointer}
+.bolt-block-highlight{background-color:#18adf3}
+.bolt-disabled{display:none!important}
+.bolt-selected,.bolt-selected .bolt-icon{color:#18adf3!important;fill:#18adf3!important}
+.bolt-age-gate-layer{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(23,23,23,.9);text-align:center;display:inline-table}
+.bolt-age-gate-layer .bolt-age-gate-container{position:relative;text-align:center;display:table-cell;vertical-align:middle}
+.bolt-age-gate-layer .bolt-age-gate-container .wrap{width:80%;margin-left:auto;margin-right:auto;text-align:center}
+.bolt-age-gate-layer .bolt-age-gate-container .wrap .bolt-age-gate-form{width:100%}
+.bolt-age-gate-layer .bolt-age-gate-container .wrap .bolt-age-gate-form .bolt-age-gate-header{font-size:16px;margin:0 0 16px}
+.bolt-age-gate-layer .bolt-age-gate-container .wrap .bolt-age-gate-form .bolt-age-gate-input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:14px;width:45px;padding:0;height:24px}
+.bolt-age-gate-layer .bolt-age-gate-container .wrap .bolt-age-gate-form .bolt-age-gate-submit{font-size:14px;line-height:16px;margin-left:5px;margin-top:1px;padding:4px;height:24px}
+.bolt-age-gate-layer .bolt-age-gate-container .wrap .bolt-age-gate-form .bolt-age-gate-error-message{color:red;font-size:14px;line-height:14px;margin-top:14px;margin-bottom:-28px}
+.bolt-age-gate-layer .bolt-age-gate-container .wrap .bolt-age-gate-failed{width:100%;color:#fff}
+.bolt-small .bolt-age-gate-layer .bolt-age-gate-container .wrap{width:90%}
+.bolt-bigplay-layer{position:absolute;top:0;left:0;width:100%;height:100%;display:none;background-color:rgba(49,49,49,.5)}
+.bolt-bigplay-layer .bolt-icon{position:absolute;top:50%;left:50%;width:100px;height:100px;margin-left:-50px;margin-top:-50px}
+.bolt-small .bolt-bigplay-layer .bolt-icon{width:50px;height:50px;margin-left:-25px;margin-top:-25px}
+.bolt-control-bar{position:absolute;width:100%;height:33px;bottom:0;left:0;overflow:visible}
+.bolt-control-bar>.wrap{display:inline-table;width:100%;height:24.8px;table-layout:fixed;margin-top:4px;position:relative}
+.bolt-control-bar .bolt-separator{width:2px;position:relative;overflow:hidden;display:table-cell;vertical-align:middle;height:14px}
+.bolt-control-bar .bolt-separator .bolt-light-line{width:1px;height:100%;background-color:#4c4c4c;display:inline;float:left}
+.bolt-control-bar .bolt-separator .bolt-dark-line{width:1px;height:100%;background-color:rgba(0,0,0,.2);display:inline;float:left}
+.bolt-control-bar .bolt-separator:after,.bolt-control-bar .bolt-separator:before{content:" ";display:table}
+.bolt-control-bar .bolt-ad-title{width:93px;font-size:11px}
+.bolt-control-bar .bolt-ad-title span{display:block}
+.bolt-control-bar-element{display:table-cell;width:30px;height:100%;text-align:center;position:relative;vertical-align:middle;color:#fff}
+.bolt-control-bar-element .wrap{position:relative;width:14px;height:14px;margin-left:auto;margin-right:auto}
+.bolt-control-bar-element .wrap .bolt-icon{position:absolute;width:14px;height:14px;top:0;left:0}
+.bolt-scrubber{width:100%;height:10px;margin-top:-10px;position:relative;background-color:#272727}
+.bolt-scrubber .bolt-timebar{position:absolute;top:0;left:0;right:0;bottom:0}
+.bolt-scrubber .bolt-timebar .bolt-loaded{position:absolute;top:0;left:0;height:100%;width:1px;background-color:#052a39}
+.bolt-scrubber .bolt-timebar .bolt-progress{position:absolute;top:0;left:0;height:100%;width:1px}
+.bolt-scrubber .bolt-timebar .bolt-cuepoint{position:absolute;width:4px;height:4px;top:0;bottom:0;margin-top:auto;margin-bottom:auto}
+.bolt-scrubber .bolt-scrubber-interactive{position:absolute;top:0;left:0;height:100%;width:100%!important}
+.bolt-time-container{text-align:center;width:100%;vertical-align:middle;height:100%}
+.bolt-time-container .bolt-time{margin-left:2%;margin-right:2%;width:96%;text-align:left;font-size:11px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.bolt-small .bolt-time-container,.bolt-small .bolt-time-separator{display:none!important}
+.bolt-drawer{display:none;position:absolute;bottom:100%;font-size:11px;text-align:left;padding:5px}
+.bolt-linear-ad-on .bolt-logo,.bolt-linear-ad-on .bolt-logo-separator,.bolt-linear-ad-on .bolt-play-btn,.bolt-linear-ad-on .bolt-play-btn-separator,.bolt-linear-ad-on .bolt-playlist-btn,.bolt-linear-ad-on .bolt-playlist-btn-separator,.bolt-linear-ad-on .bolt-settings-btn,.bolt-linear-ad-on .bolt-settings-btn-separator,.bolt-linear-ad-on .bolt-sharing-btn,.bolt-linear-ad-on .bolt-sharing-btn-separator,.bolt-linear-ad-on .bolt-subtitle-btn,.bolt-linear-ad-on .bolt-subtitle-btn-separator{display:none!important}
+.bolt-content-on .bolt-ad-title,.bolt-content-on .bolt-ad-title-separator,.bolt-content-on.bolt-state-playing .bolt-play-icon,.bolt-content-on.bolt-state-playing .bolt-replay-icon,.bolt-linear-ad-on .bolt-cuepoint-container,.bolt-linear-ad-on.bolt-ad-type-static-image .bolt-sound-btn,.bolt-linear-ad-on.bolt-ad-type-static-image .bolt-sound-btn-separator,.bolt-linear-ad-on.bolt-ad-type-video300x250 .bolt-sound-btn,.bolt-linear-ad-on.bolt-ad-type-video300x250 .bolt-sound-btn-separator{display:none}
+.bolt-content-on.bolt-state-playing .bolt-pause-icon{display:block}
+.bolt-content-on.bolt-state-paused .bolt-pause-icon,.bolt-content-on.bolt-state-paused .bolt-replay-icon,.bolt-content-on.bolt-state-start .bolt-pause-icon,.bolt-content-on.bolt-state-start .bolt-replay-icon{display:none}
+.bolt-content-on.bolt-state-paused .bolt-play-icon,.bolt-content-on.bolt-state-start .bolt-play-icon{display:block}
+.bolt-content-on.bolt-state-ended .bolt-pause-icon,.bolt-content-on.bolt-state-ended .bolt-play-icon,.bolt-content-on.bolt-state-related-videos .bolt-pause-icon,.bolt-content-on.bolt-state-related-videos .bolt-play-icon{display:none}
+.bolt-content-on.bolt-state-ended .bolt-replay-icon,.bolt-content-on.bolt-state-related-videos .bolt-replay-icon{display:block}
+.bolt-content-on.bolt-cuepoint-container{display:block;visibility:visible}
+.bolt-hd-disabled .bolt-settings-btn,.bolt-hd-disabled .bolt-settings-btn-separator,.bolt-share-disabled .bolt-sharing-btn,.bolt-share-disabled .bolt-sharing-btn-separator,.bolt-subtitle-disabled .bolt-subtitle-btn,.bolt-subtitle-disabled .bolt-subtitle-btn-separator{display:none!important}
+.bolt-hd-on .bolt-settings-btn .bolt-icon{color:#18adf3!important;fill:#18adf3!important}
+.bolt-static-control-bar .bolt-control-bar,.bolt-static-scrubber .bolt-scrubber{visibility:visible!important}
+.bolt-static-scrubber .bolt-scrubber .bolt-loaded{width:50%!important}
+.bolt-static-scrubber .bolt-scrubber .bolt-progress{width:25%!important}
+.bolt-automute-disabled .bolt-mute-icon,.bolt-pause-icon,.bolt-replay-icon{display:none}
+.bolt-automute-disabled .bolt-sound-icon,.bolt-automute-enabled .bolt-mute-icon{display:block}
+.bolt-automute-enabled .bolt-sound-icon{display:none}
+.bolt-loading-layer{position:absolute;top:50%;left:50%;width:24px;height:24px;display:none}
+.bolt-playlist-container{width:200px;right:0;display:none}
+.bolt-playlist-container .bolt-playlist-header{font-size:14px;line-height:21px;color:#fff}
+.bolt-playlist-container .bolt-playlist-mask{float:left;overflow:hidden;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.bolt-playlist-container .bolt-playlist-menu{margin:0}
+.bolt-playlist-container .bolt-playlist-row{width:100%;height:64px;position:relative;clear:both;border-bottom:1px solid #4c4c4c;padding:0 0 6px;overflow:hidden}
+.bolt-playlist-container .bolt-playlist-thumbnail{width:40%;border:1px solid #313131;float:left;display:inline;padding-bottom:25%;margin-top:4%}
+.bolt-playlist-container .bolt-playlist-title{float:left;padding:0 6px;width:50%;font-size:11px;line-height:12px;display:inline-block;margin-top:4%}
+.bolt-playlist-container .bolt-playlist-slider{float:right;width:10px;min-width:10px;max-width:10px;height:80%;display:none;background-color:#18adf3}
+.bolt-playlist-container .bolt-playlist-handle{width:100%;height:30%;background-color:#fff;position:absolute;top:0}
+.bolt-related-layer{position:absolute;top:0;left:0;width:100%;height:100%;display:none;background-color:rgba(23,23,23,.9)}
+.bolt-related-layer .bolt-related-container{margin:5%;width:90%;height:80%}
+.bolt-related-layer .bolt-related-menu{margin-left:auto;margin-right:auto;display:block;width:90%;height:100%}
+.bolt-related-layer .bolt-related-header{font-size:20px;margin-bottom:2%;margin-left:2%}
+.bolt-related-layer .bolt-related-video{display:inline-block;background-color:#000;background-size:cover;background-clip:padding-box;background-position:center center;margin-right:2%;margin-bottom:2%;width:30%;height:30%;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.bolt-related-layer .bolt-related-title{top:0;left:0;right:0;font-size:10px;line-height:14px;padding:2px;display:none;position:absolute;background-color:rgba(27,27,27,.8)}
+.bolt-related-layer .bolt-related-video:hover .bolt-related-title{display:block}
+.bolt-related-layer .bolt-related-video-border{display:block!important;position:absolute!important;top:0;bottom:0;left:0;right:0}
+.bolt-related-layer .bolt-related-video:hover .bolt-related-video-border{border:1px solid #18adf3}
+.bolt-sharing-layer{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(23,23,23,.9);text-align:center;display:inline-table}
+.bolt-sharing-layer .bolt-sharing-container{position:relative;text-align:center;display:table-cell;vertical-align:middle}
+.bolt-sharing-layer .bolt-sharing-container .wrap{width:80%;margin-left:auto;margin-right:auto;text-align:left}
+.bolt-sharing-layer .bolt-sharing-line{text-align:left;margin-bottom:5%}
+.bolt-sharing-layer .bolt-sharing-header{font-size:16px}
+.bolt-sharing-layer .bolt-sharing-input{font-size:14px;padding:0;border:0;vertical-align:bottom;color:#000;width:90%;height:1.5em;margin-top:5px}
+.bolt-sharing-layer .bolt-sharing-icon{width:20px;height:20px;fill:#fff;vertical-align:bottom}
+.bolt-sharing-layer .bolt-social-links{margin-top:8px}
+.bolt-sharing-layer .bolt-social-links:after,.bolt-sharing-layer .bolt-social-links:before{content:" ";display:table}
+.bolt-scrubber-tooltip,.bolt-subtitle-text,.bolt-tooltip{text-align:center;display:none;position:absolute;font-size:11px}
+.bolt-sharing-layer .bolt-social-share-btn{float:left}
+.bolt-sharing-layer .bolt-social-icon{width:30px;height:30px;margin-right:8px}
+.bolt-sharing-layer .bolt-sharing-close svg{pointer-events:auto!important;position:absolute;top:5px;right:5px;width:30px;height:30px}
+.bolt-small .bolt-sharing-layer .bolt-sharing-container .wrap{width:90%}
+.bolt-subtitle-text{bottom:15%;left:15%;right:15%;width:70%;color:#fff;background-color:rgba(47,47,47,.5);font-family:Verdana,Geneva,sans-serif;text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000}
+.bolt-ie .bolt-subtitle-menu{margin-bottom:100%}
+.bolt-scrubber-tooltip,.bolt-tooltip{width:70px;height:20px;line-height:20px;padding:0;top:-25px;background-color:#454545;z-index:999999}
+.bolt-scrubber-tooltip{width:auto}
+.bolt-scrubber-tooltip span{margin:0 10px}
+.bolt-top-bar{top:0;left:0;right:0;width:100%;height:25px;display:block;position:absolute}
+.bolt-top-bar .wrap{display:inline-table;width:100%;height:100%;table-layout:fixed;position:relative}
+.bolt-top-bar .wrap .bolt-title-container{display:table-cell;vertical-align:middle;padding-left:10px;padding-right:10px;white-space:nowrap;overflow:hidden;width:90%}
+.bolt-top-bar .wrap .bolt-title-container .bolt-title{font-size:11px;display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:left!important}
+.bolt-volume-container{width:30px;height:89px;position:absolute;top:-89px;left:0;text-align:center;display:none;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.bolt-volume-container .bolt-volume-slider{height:70px;width:10px;margin-left:auto;margin-right:auto;margin-top:7px;text-align:center;position:relative;background:0 0!important}
+.bolt-volume-container .bolt-volume-slider .bolt-current-volume,.bolt-volume-container .bolt-volume-slider .bolt-volume-slider-background{height:63px;width:8px;left:1px;bottom:0;position:absolute}
+.bolt-volume-container .bolt-volume-slider .bolt-volume-slider-background{background-color:#052a39}
+.bolt-volume-container .bolt-volume-slider .bolt-handle{position:absolute;width:10px;height:10px}
+.bolt-volume-container .bolt-volume-slider .bolt-handle .bolt-volume-marker{position:absolute;cursor:ns-resize;top:0;left:0;bottom:0;right:0;width:100%;height:100%}
+.bolt-volume-container .bolt-volume-slider .bolt-chrome .bolt-handle{left:-1px}
+.bolt-watermark-layer{position:absolute;bottom:11%;right:1%;display:none;opacity:.5}
+.bolt-watermark-layer a,.bolt-watermark-layer p,.bolt-watermark-layer span{font-size:11px;text-decoration:none;color:#fff;padding:0;border:0}
+.bolt-watermark-layer a:hover{color:#18adf3;text-decoration:underline}
+.bolt-watermark-layer img{width:auto;height:auto}
+.bolt-watermark-layer.bottom-right{right:1%;left:auto}
+.bolt-watermark-layer.bottom-left{left:1%;right:auto}
+.bolt-watermark-layer.top-left{bottom:auto!important;top:8%;right:auto;left:1%}
+.bolt-watermark-layer.top-right{bottom:auto!important;top:8%;right:1%;left:auto}
+.bolt-control-bar .bolt-logo{display:table-cell;width:76px;text-align:center;position:relative;vertical-align:middle;height:100%}
+.bolt-control-bar .bolt-logo a{display:block;position:relative;width:64px;height:100%;margin-left:auto;margin-right:auto;padding:0;border:0}
+.bolt-control-bar .bolt-logo .bolt-icon{display:block;position:absolute;width:100%;height:100%}
+.bolt-control-bar .bolt-logo a.bolt-logo-default{display:block}
+.bolt-control-bar .bolt-logo a.bolt-logo-hover,.bolt-control-bar .bolt-logo:hover a.bolt-logo-default{display:none}
+.bolt-control-bar .bolt-logo:hover a.bolt-logo-hover{display:block}
+.bolt-ie-9 .bolt-ad-container,.bolt-ie-9 .bolt-ad-container video{height:100%;width:100%}
+.dragdealer{position:relative;height:30px;background:#eee}
+.dragdealer .handle{position:absolute;top:0;left:0;cursor:pointer}
+.dragdealer .red-bar{width:100px;height:30px;background:#C00;color:#FFF;font-size:14px;line-height:30px;text-align:center}
+.dragdealer .disabled{background:#898989}
+.bolt-input{color:#000;padding:0;text-align:center}
+.bolt-input-error{border:2px solid red!important;background-color:#f99}
+.bolt-container{font-family:Arial,Helvetica,sans-serif;font-size:11px}
+.bolt-loading-layer{z-index:25}
+.bolt-watermark-layer{z-index:40}
+.bolt-bigplay-layer{z-index:99}
+.bolt-control-bar,.bolt-playlist-container,.bolt-sharing-layer,.bolt-subtitle-text,.bolt-top-bar{z-index:100}
+.bolt-age-gate-layer{z-index:200}
+span.bolt-tooltip{z-index:1000}

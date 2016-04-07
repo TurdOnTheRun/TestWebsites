@@ -1,0 +1,91 @@
+
+<!-- saved from url=(0842)https://static.tacdn.com/static/page_moniker/facebook_wca-v23853517055a.html#pixelType=PAGEVIEW&curLocId=187147&geoId=187147&reqUnique=4c8a5073f7b9d5628dc90907f3d7e9f4496a7b84&userUnique=3242fb23c13a2d0b6eead6234df9577131fefd50&locale=en_US&seqId=2&geoName=Paris&geoParentId=187144&geoParentName=Ile-de-France&geoMostPop=222913&isRemarketable=false&loc1=222913&productIds=["d222913enUS187147","187147enUS"]&productIdsShort=d222913enUS187147,187147enUS&trueServlet=Tourism&fbTrueServlet=P&servlet=Hotels&geoFeedBucket=medium&serverName=www.tripadvisor.com&device=Desktop&fbDevice=1&errorJS=https://static.tacdn.com/js3/remarketing-errors-c-v22262320586a.js&puid=VwXqZQokMHUAAV1QodIAAABJ&siteType=d&isMobileDevice=n&taSplit=1&tasource=OTH&geo=187147&isClickoutYN=no&criteoPartnerId=4653&ulbBucket=2&ulbScore=0.24940277326656074&countryAlpha2=US -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  </head>
+  <body>
+    <script async="" src="./fbevents.js"></script><script type="text/javascript">
+      // Pull params from URL (argdict maps keys to values or arrays of values)
+      var argdict = {};
+      var args = window.location.hash.substring(1).split("&");
+      for (var i = 0; i < args.length; i++) {
+        var pair = args[i].split("=");
+
+        if (typeof argdict[pair[0]] === "undefined") {
+          argdict[pair[0]] = pair[1];
+        } else if (typeof argdict[pair[0]] === "string") {
+          argdict[pair[0]] = [argdict[pair[0]], pair[1]];
+        } else {
+          argdict[pair[0]].push(pair[1]);
+        }
+      }
+      
+      // event name for Dynamic Product Ads
+      var eventName = encodeURIComponent(argdict.pixelType === 'CLICKOUT' ? 'Purchase' : 'ViewContent');
+      var fbCategory = encodeURIComponent(argdict.fbTrueServlet);
+      var fbDevice = encodeURIComponent(argdict.fbDevice);
+      var fbDateIn = encodeURIComponent(argdict.fbDateIn);
+      var fbDateOut = encodeURIComponent(argdict.fbDateOut);
+      var geoId = encodeURIComponent(argdict.geoId);
+      // if no property id, returns the geo's most popular property id if there is one
+      var PropId = encodeURIComponent(argdict.propId ? argdict.propId : argdict.geoMostPop);
+      var recommendedPercent = encodeURIComponent(argdict.recPercent);
+      var stars = encodeURIComponent(argdict.stars);
+      var rating = encodeURIComponent(argdict.rating);
+      var userUnique = encodeURIComponent(argdict.userUnique);
+      var ulbBucket = encodeURIComponent(argdict.ulbBucket);
+      var ulbScore = encodeURIComponent(argdict.ulbScore);
+      // product ids for Dynamic Product Ads. Currently returning a property product followed by a geo product to ensure the geo product is the last product fired
+      var productIds = [];
+      if (typeof argdict['loc1'] !== 'undefined') {
+        // On Hotels page, loc1 is the top commerce hotel for the geo in the POS.
+        // On properties page, loc1 is the actual hotel.
+        // In all other pages(e.g. SmartDeals page), loc1 is the top pop hotel of the geo.
+        productIds.push(encodeURIComponent('d' + argdict['loc1'] + argdict.locale.replace('_' , '') + geoId));
+      }
+      productIds.push(encodeURIComponent(geoId + argdict.locale.replace('_' , '')));
+      
+      // TODO: Uncomment when we start retargeting users from ShowForum and ShowTopic servlets
+      //if (category === 'ShowForum' || category === 'ShowTopic') {
+      //  category = 'Forum';
+      //}
+      
+      // The following code is copy pasted from facebook.
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','//connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '666624680067334');
+      //End of copy paste from facebook.
+
+      // For obfuscated pixel key mapping, see FB_PIXEL_KEY_MAPPING in PageMoniker.java
+      // These are used for Facebook DPA ad creation, do not modify without consulting vwang@ or om-fb@
+      var params = {
+        'content_type' : 'product',
+        'content_ids' : productIds,
+        'FB1' : fbDateIn,           // fbCheckInDate
+        'FB2' : fbDateOut,          // fbCheckOutDate
+        'FB3' : geoId,              // destinationCode
+        'FB4' : fbDevice,           // fbDevice
+        'FB5' : rating,             // hotelStarRating
+        'FB6' : stars,              // hotelClass
+        'FB7' : recommendedPercent, // percentRating
+        'FB8' : fbCategory,         // fbProductType
+        'FB9' : PropId,             // propertyID
+        'FB10': userUnique,         // userUnique - this is passed so Facebook can match users with data we provided in an offline file (5/13/15)
+        'FB13': ulbBucket,          // User level bid bucket
+        'FB14': ulbScore            // User level bid score
+      };     
+      if (argdict.pixelType === 'CLICKOUT') {
+        // Use puid as conversion unique
+        params.currency = 'USD';
+        params.value = argdict.roas;
+        params.order_id = argdict.puid;
+      }
+      // for Dynamic Product Ads
+      fbq('track', eventName, params);
+    </script>
+  
+
+</body></html>

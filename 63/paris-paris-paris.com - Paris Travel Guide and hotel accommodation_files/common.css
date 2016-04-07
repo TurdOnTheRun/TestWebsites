@@ -1,0 +1,430 @@
+body
+{
+	background-color : #d0c9c9;
+	font-family : verdana;
+}
+
+
+form input, form textarea
+{
+	font-size : 12px;
+	font-family : verdana;
+}
+
+a
+{
+	color : #417cbe;
+	text-decoration : none;
+}
+
+a:hover
+{
+	text-decoration : underline;
+}
+
+a.witharrow
+{
+	font-weight : bold;
+	background : url(link_arrow.png) left no-repeat;
+	padding-left : 25px;
+	font-size : 11px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin : 10px 0 0 0;
+	padding : 0;
+}
+
+h1.nomargintop,h2.nomargintop,h3.nomargintop,h4.nomargintop,h5.nomargintop,h6.nomargintop
+{
+	margin : 0;
+	padding : 0;
+}
+
+h2
+{
+	font-size : 1.3em;
+}
+
+h3
+{
+	font-size : 1.2em;
+}
+h4
+{
+	font-size : 1.1em;
+}
+
+h1.nomargin,h2.nomargin,h3.nomargin,h4.nomargin,h5.nomargin,h6.nomargin
+{	
+	margin-top : 0px;
+}
+
+p.normal
+{
+	font-size : 1em;
+}
+p.verybig
+{
+	font-size : 1.3em;
+}
+p.bigger
+{
+	font-size : 1.2em;
+}
+p.big
+{
+	font-size : 1.15em;
+}
+p.small
+{
+	font-size : 0.9em;
+}
+p.smaller
+{
+	font-size : 0.85em;
+}
+p.verysmall
+{
+	font-size : 0.8em;
+}
+
+span.arrow-o
+{
+	background : url(arrow_lso.png) left no-repeat;
+	padding-left : 12px;
+}
+
+span.arrow-b
+{
+	background : url(arrow_lsb.png) left no-repeat;
+	padding-left : 12px;
+}
+
+
+hr.separator
+{
+	height : 2px;
+	width : 95%;
+	border : none;
+	margin-top : 20px;
+	margin-bottom : 20px;
+	clear : both;
+}
+hr.orange
+{
+	background-color : #f7941e;
+}
+hr.blue
+{
+	background-color : #417cbe;
+}
+hr.white
+{
+	background-color : #FFFFFF;
+}
+
+ul.puce-o
+{
+	list-style-image: url(li_puce_o.gif);
+}
+
+ul.triangle-o
+{
+	list-style-image: url(li_triangle_o.gif);
+}
+
+ul.arrow-o
+{
+	list-style-image: url(li_triangle_o.gif);
+}
+
+ul.puce-b
+{
+	list-style-image: url(li_puce_b.gif);
+}
+
+ul.triangle-b
+{
+	list-style-image: url(li_triangle_b.gif);
+}
+
+ul.arrow-b
+{
+	list-style-image: url(li_triangle_b.gif);
+}
+
+span.spamfilter 
+{
+	display : none;
+}
+
+/* Common */
+.orange, .o
+{
+	color : #f7941e; 
+}
+
+.blue, .b
+{
+	color : #417cbe; 
+}
+
+.white, .w
+{
+	color : #FFFFFF; 
+}
+
+.gray, .g
+{
+	color : #666666; 
+}
+
+.center
+{
+	text-align : center;
+}
+
+
+
+/* XML  block editor */
+.orange
+{
+	color : #f7941e; 
+}
+
+.blue
+{
+	color : #417cbe; 
+}
+
+.big
+{
+	font-size : 1.1em;
+	line-height : 1em;
+}
+
+.normal
+{
+	font-weight : normal;
+}
+
+.small
+{
+	font-size : 0.8em;
+	line-height : 1em;
+}
+
+.bold
+{
+	font-weight : bolder;
+}
+
+.normal
+{
+	font-weight : normal;
+	font-style : none;
+	font-size : 1em;
+}
+
+.center
+{
+	text-align : center;
+}
+
+
+div.object-left
+{
+	float : left;
+	margin : 4px 10px 5px 0;
+}
+
+div.object-center 
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+div.object-right
+{
+	float : right;
+	margin : 0px 0 5px 10px;
+}
+
+div.object-center div.attribute-caption 
+{
+	margin-left : auto;
+	margin-right : auto;
+	padding:0;
+}
+
+div.quote-container
+{
+	width : 180px;
+}
+
+div.quoteleft-o
+{
+	float : left; width : 20px; height : 17px; background : url(quote_lo.png);
+}
+
+div.quoteright-o
+{
+	float : right; width : 20px; height : 17px; background : url(quote_ro.png); margin : -15px 0 0 10px;
+}
+
+div.quoteleft-b
+{
+	float : left; width : 20px; height : 17px; background : url(quote_lb.png);
+}
+
+div.quoteright-b
+{
+	float : right; width : 20px; height : 17px; background : url(quote_rb.png); margin : -15px 0 0 10px;
+}
+
+div.quote-content
+{
+	padding : 5px 15px 5px 10px; 
+	margin-left : 20px;
+}
+
+
+
+/**************************************/
+/***    	 COMMENT BUTTON  	    ***/
+/**************************************/
+div.comments_addbutton
+{
+	text-align : center;
+}
+
+input.comments_submitbutton
+{
+	background : url(button_mb_bg.png); width : 200px; height : 26px; 
+	text-align : center; font-size : 1em;  color : white; cursor : pointer; margin : 0 auto; 
+	font-weight : bold;
+	border : none;
+}
+
+input.comments_submitbutton:hover
+{
+	background : url(button_mo_bg.png);
+	text-decoration : underline;
+}
+
+/**************************************/
+/***    		BUTTON  		    ***/
+/**************************************/
+
+div.button-container-right { float : right; width : 200px; }
+					
+div.button-container-center 
+{
+	width : 100%; 
+	margin-top : 30px; 
+	text-align : center; 
+}
+
+
+
+div.button 
+{ 
+	margin : 0 auto; 
+	background : url(button_mb_bg.png); 
+	width : 200px;
+	height : 26px; 	
+	text-align : center; 
+	font-size : 1em;  
+	color : white; 
+	cursor : pointer; 
+	margin : 0 auto; 
+	font-weight : bold; 
+	border : none;
+}
+
+div.button:hover
+{ 
+	background : url(button_mo_bg.png);
+	text-decoration : underline;
+}
+
+div.button a {color : white; line-height : 26px; padding-top : 2px;}
+		
+
+/**************************************/
+/***     CONTENT NAV NEXT/LAST      ***/
+/**************************************/
+
+div.arrow-left { float : left; background : url(arrow_rsb.png) left no-repeat; padding-left : 15px; cursor : pointer; }
+div.arrow-right { float : right; background : url(arrow_lsb.png) right no-repeat; padding-right : 15px; cursor : pointer; }
+div.arrow-left:hover , div.arrow-right:hover { text-decoration : underline; }
+
+table.content-navigator
+{ 
+	width : 100%;
+	background-color : #f0ede9;
+	margin-top : 10px;
+	font-size : 11px;
+	font-weight : bold;
+}
+td.content-navigator-previous
+{
+		text-align : left;
+}
+
+td.content-navigator-previous-disabled
+{
+		text-align : left;
+}
+
+td.content-navigator-forum-link
+{
+		text-align : center;
+}
+td.content-navigator-next
+{
+		text-align : right;
+}
+td.content-navigator-next-disabled
+{
+		text-align : right;
+}
+/*****************/
+/***   EMBED   ***/
+/*****************/
+
+div.embed_place_info
+{
+	margin : 10px 0px;
+}
+
+/*** Correction of align = center from the default align older version of embed object ***/
+div.embed_place
+{
+	text-align : left;
+}
+
+img.scoreBarImg
+{
+    background: #f7941e url(reviewBarBg.png) no-repeat;
+    margin-right : 5px;
+}
+
+div.hotel-embed-image { float : left; width : 100px; margin-top : 4px; }
+div.hotel-embed-content { float : left; width : 140px; margin-top : 3px; }
+div.my-cnghotel-embed-title {}
+div.hotel-embed-address { margin-top : 5px; font-weight : bold;}
+div.hotel-embed-moreinfo { display : block; margin-top : 18px;}
+div.hotel-embed-desc { margin-top : 10px; }
+
+div.apart-embed-title{font-size : 11px; font-weight : bold; }
+div.apart-embed-image { float : left; width : 110px; margin-top : 4px; }
+div.apart-embed-content { float : left; width : 150px; margin-top : 3px; }
+div.apart-embed-address { margin-top : 5px; font-weight : bold;}
+div.apart-embed-moreinfo { display : block; margin-top : 18px;}
+div.apart-embed-price { margin-top : 10px; }
+div.apart-embed-desc { margin-top : 5px; }
+

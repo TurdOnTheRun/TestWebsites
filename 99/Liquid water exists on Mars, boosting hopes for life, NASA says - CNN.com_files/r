@@ -1,0 +1,10 @@
+document.write("<ins class='dcmads' style='display:inline-block;width:728px;height:90px'\n");
+document.write("    data-dcm-placement='N636.2037100PELOTON/B9374293.127530634'\n");
+document.write("    data-dcm-click-tracker='http%3A//adserver.adtechus.com/adlink%2F5399%2F3864196%2F0%2F225%2FAdId%3D8162892%3BBnId%3D1%3Bitime%3D6604155%3Bkvp36%3Dp36%2D1br7txop6lv9ri53%3Bkva%3Dp%2D%2Dggqus5gcnumx%3Bkr14135%3D2332931%3Bkvc%3D811032%3Bkvi%3D5721eeab5544bf40512f86a6d28ed6641292439f%3Bkr11092%3D2366427%3Bkvl%3D203091%3Bkvs%3D728x90%3Bkp%3D1074269%3Blink%3Dhttp%3A%2F%2Fexch%2Equantserve%2Ecom%2Fr%3Fa%3Dp%2D%2DGgqUS5gCnumX%3Blabels%3D%5Fqc%2Eclk%2C%5Fclick%2Eadserver%2Ertb%2C%5Fclick%2Erand%2E18233%3Brtbip%3D64%2E95%2E39%2E8%3Brtbdata2%3DEAQaIFBlbG90b25fSW50ZXJhY3RpdmVfSW5jLl9RMl8yMDE2IMu3GSjTsgwwmMAxOhJodHRwOi8vd3d3LmNubi5jb21aKFdCb3VRUThmZmhWQUduNGVDQjFtUlZVV2NoWkFIeTVEQzBvSE16Z0R1pOEkRYABtsmjI6ABAagBhKvOAroBKDY4NjQ4MjM2OTcyYTIzZjk3NmNiOTI5MzI5NWY3YjVjMzY3ZmFlNGHAAbf3igHIAZagrvm%2DKtoBKDU3MjFlZWFiNTU0NGJmNDA1MTJmODZhNmQyOGVkNjY0MTI5MjQzOWblARWZgDroAWSYAtGzDagCBagCBrACCLoCBEBfJwjAAgLIAgDQAuDo29OMmNPtmQHgAgA%3Bredirecturl2%3D'\n");
+document.write("    data-dcm-rendering-mode='iframe'\n");
+document.write("    data-dcm-https-only\n");
+document.write("    data-dcm-resettable-device-id=''>\n");
+document.write("<scr"+"ipt src='//www.googletagservices.com/dcm/dcmads.js'></scr"+"ipt>\n");
+document.write("</ins>\n");
+
+

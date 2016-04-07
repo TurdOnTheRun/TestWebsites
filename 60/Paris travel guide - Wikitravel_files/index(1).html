@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://s0.2mdn.net/1384245/1453136692063/1402_Savings-blue_160x600_DCM/index.html -->
+<html class=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+  
+  <title>Progressive Insurance</title>
+  <link href="./css(2)" rel="stylesheet" type="text/css">
+  <link href="./css(3)" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./main(1).css">
+</head>
+
+<body>
+	<div id="ad-container">
+        <a href="javascript:window.open(clickTag)">
+            <div id="ad" class="">
+            	
+                <img id="logo" src="./logo.png">
+            </div>
+        </a>
+        <div id="cta">
+            <input id="ZipCode" type="text" maxlength="5" value="Zip Code">
+            <button id="ZipSubmit" class="button" type="button">Get a Quote</button>
+        </div>
+  	</div>
+    <script type="text/javascript">
+		function $(id) { return document.getElementById(id) };
+		var add = document.addEventListener ? 'addEventListener' : 'attachEvent';
+		var ZV = 'Zip Code';
+
+		var clickTag = "https://www.progressive.com";
+		var clickTag2 = "https://www.progressive.com";
+		
+		var zs = $('ZipSubmit');
+		var f = $('cta');
+		var z = $('ZipCode');
+		
+		f[add]('click', onFormClick);
+		z[add]('focus', onZipFocus);
+		z[add]('blur', onZipBlur);
+		z[add]('keydown', onZipKeydown);
+		zs[add]('click', zipSubmit);
+	
+		function onFormClick(e) {
+			e.stopImmediatePropagation();
+		}
+
+		function onZipFocus() {
+			if(z.value === ZV) {
+				z.value = '';
+			}
+		}
+
+		function onZipBlur() {
+			z.value = z.value || ZV;
+		}
+
+		function onZipKeydown(e) {
+			var k = e.which ? e.which : e.keyCode;
+			// allow only numbers, arrows, delete, enter and backspace
+			if(!e.metaKey && !((k > 47 && k < 58) || (k > 95 && k < 106) || (k > 36 && k < 41) || k == 46 || k == 13 || k == 8)) {
+				e.preventDefault();
+			}
+			if(k == 13) {
+				zipSubmit();
+			}
+		}
+
+		function zipSubmit() {		
+			if(z.value != "ZIP CODE" && z.value.length == 5){				
+				window.open(window.clickTag2 + z.value, "_blank");
+			}else{
+				window.open(window.clickTag, "_blank");
+			}
+		}
+  	</script>
+
+</body></html>

@@ -1,0 +1,21 @@
+.article-detail-caption-titles {
+	background: url("http://images.eonline.com/static/photogallery/images/thumb_overlay.png") repeat scroll 0 0 transparent;
+	display: block;
+	font-size: 14pt; /* = 18.67px */
+	height: 40px;
+	top: 275px;
+	color:#ffffff;
+	padding: 5px 10px 6px 10px;
+	position: absolute;
+	line-height: 22px;
+	overflow: hidden;
+
+/*	left: 0px;
+	line-height: 22px;
+	overflow: hidden;
+	padding: 5px 10px 6px 10px;
+	position: absolute;
+	top: 255px;*/
+}
+
+

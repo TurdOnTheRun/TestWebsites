@@ -1,0 +1,26 @@
+div.comment-line
+{
+	margin-bottom : 10px;
+	font-size : 1.2em;
+}
+
+div.comment-line div.comment_title div.comment_title_name
+{
+	font-weight : bold;
+	float : left;
+}
+div.comment-line div.comment_title div.comment_title_author
+{
+	font-style : italic; 
+	display : inline;
+	margin-left : 10px;
+}
+
+div.comment-line div.comment_title div.comment_title_date
+{
+	font-size : 0.8em;
+	display : inline;
+}
+
+
+

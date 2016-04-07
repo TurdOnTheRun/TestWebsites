@@ -1,0 +1,16 @@
+rp_ad_response={
+"status":"ok",
+"account_id":11384,
+"site_id":31484,
+"zone_id":241614,
+"size_id":10,
+"tracking":"",
+"inventory":{"resize":"300x600"},
+"ads":[{
+"status":"no-ads",
+"reason":"floor-not-met",
+"error_code":"10",
+"impression_id":"392b69bd-f960-4040-a102-e25f902bb6df"
+}]
+};
+try{rp_onAdResponseLoaded(rp_ad_response);}catch(ignore){}

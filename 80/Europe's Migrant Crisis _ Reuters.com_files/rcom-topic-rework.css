@@ -1,0 +1,27 @@
+#topStory .moduleBody { background: #F5F5F5; background-image: none; /* margin-bottom: 15px; */ }
+#topStory .moduleBody h1, #topStory .moduleBody h2 { font-size: 22px; font-weight: bold; margin: 10px 10px 5px 10px; }
+#topStory .moduleBody .timestamp { margin: 2px 0 5px 10px;; display: block; }
+#topStory .moduleBody p { font-size: 12px; line-height: 1.5; margin: 5px 10px 10px 10px; }
+#topStory .moduleBody .topStory { background: none; }
+#topStory .moduleBody .topStory .photo { margin: 0; }
+
+#latestHeadlines .module .moduleHeader,
+#latestBlogHeadlines .module .moduleHeader { padding-bottom: 0; }
+#latestHeadlines .module .moduleBody li,
+#latestBlogHeadlines .module .moduleBody li  { font-size: 16px; background: url("http://s3.reutersmedia.net/resources_v2/images/dotsHorizontal.gif") left bottom repeat-x !important; padding: 10px 0; }
+#latestBlogHeadlines .module .moduleBody li { padding-top: 0; }
+#latestHeadlines .module .moduleBody li .relatedHeadlineInfo { margin-top:5px;}
+
+#latestHeadlines .module { margin-bottom: 0; }
+#latestBlogHeadlines .module .moduleHeader h3 a { font-size: 10px; font-weight: normal; color: #006E97; }
+
+#moreSectionNews { border-top: 4px solid #CCC; padding-top: 5px; }
+#moreSectionNews .feature .relatedInfo { clear: none; margin: -5px 0 10px 0; }
+#analysis-n-opinion h2 a, #moreSectionNews a { color: #006E97 !important; }
+
+#analysis-n-opinion .module { border-top: 4px solid #CCC; padding-top: 5px; margin-bottom: 0; padding-bottom: 0; }
+#analysis-n-opinion .module .moduleHeader { margin-bottom: 5px; }
+#analysis-n-opinion .feature { background: none; margin: 0; }
+#analysis-n-opinion .feature .photo { float: right; margin: 0 0 10px 10px; }
+#analysis-n-opinion .byline { font-weight: bold; font-size: 11px; margin: 0 0 4px 0; }
+#analysis-n-opinion .byline a { color: #000 !important; }

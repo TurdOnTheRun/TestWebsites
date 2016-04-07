@@ -1,0 +1,80 @@
+html{
+	padding:0px;
+	margin:0px;
+}
+
+#container{
+	width:298px;
+	height:248px;
+	overflow:hidden;
+	position:absolute;
+	left:0px;
+	right:0px;
+	border:1px solid #4d4d4d;
+	/*background-position: -1px;*/
+	background-color: #fff;
+}
+/*----------------------------------------*/
+/* BRANDING */
+/*----------------------------------------*/
+#background{
+	position:absolute;
+	top:-1;
+	left:-1;
+	visibility: hidden;	
+	opacity: 0;
+}
+
+#kohls_logo{
+	position:absolute;
+	top:-100px;
+	z-index: 10;
+	left: 9px;
+}
+
+#sonoma_img{
+    position:absolute;
+    bottom:-1px;
+    z-index: 13;
+    /*right: -1px;*/
+    opacity: 0;
+}
+
+#CTA_Button{
+    left: 9px;
+    position: absolute;
+    top: 213px;
+    visibility: hidden;
+    z-index: 11;
+	display:none;
+	opacity: 0;
+}
+#offer_copy {
+	position:absolute;
+    left: 8px;
+    top: 250px;
+}
+.btn {
+	cursor: pointer;
+}
+/*----------------------------------------*/
+/* CAROUSEL PARTS */
+/*----------------------------------------*/
+#carousel {
+    height: 249px;
+    left: 162px;
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    width: 136px;
+    z-index: 12;
+	
+}
+.product{
+    display: block;
+    height: auto;
+    position: absolute;
+    width: auto;
+    z-index: 13;
+    left: 163px;
+}

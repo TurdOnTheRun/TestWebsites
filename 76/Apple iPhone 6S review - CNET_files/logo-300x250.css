@@ -1,0 +1,219 @@
+@CHARSET "UTF-8";
+
+.logo-wrapper {
+	position: relative;
+	height: 48px;
+	width: 220px;
+}
+
+.sprite {
+	display: inline;
+	position: absolute;
+}
+
+.zero-width {
+	transform: rotateY(90deg) scaleX(.2);
+	-webkit-transform: rotateY(90deg) scaleX(.2);
+	-mos-transform: rotateY(90deg) scaleX(.2);
+}
+
+/*
+
+Final rectangle dimensions when animation complete
+
+T R B L 
+
+T	 rect(0px, 73px, 37px, 0px);
+
+M    rect(0px, 109px, 37px, 73px);
+
+o	 rect(0px, 131px, 37px, 109px);
+
+b	 rect(0px, 155px, 37px, 131px);
+
+i	 rect(0px, 167px, 37px, 155px);
+
+l	 rect(0px, 180px, 37px, 167px);
+
+e	 rect(0px, 204px, 37px, 180px);
+
+reg	 rect(0px, 220px, 37px, 204px);
+
+starting "left" position for each element is 73px greater than
+the stated background offset value, to account for leftward motion
+as the tween commences.
+
+*/
+.t-sprite {
+	background: url('sprite.png') no-repeat 0px 0px;
+	width: 73px;
+	height: 37px;
+	left: 146px;
+	animation: flipped-and-faded .71s cubic-bezier(0.39, 0.575, 0.565, 1) 0.26s forwards;
+	-webkit-animation: flipped-and-faded .71s cubic-bezier(0.39, 0.575, 0.565, 1) 0.26s forwards;
+
+}
+
+.m-sprite {
+	background: url('sprite.png') no-repeat -73px 0px;
+	left: 146px;
+	width: 36px;
+	height: 37px;
+	animation: expand-to-full-width 0.46s ease .7s forwards;
+	-webkit-animation: expand-to-full-width 0.46s ease .7s forwards;
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.o-sprite {
+	background: url('sprite.png') no-repeat -109px 0px;
+	left: 182px;
+	width: 22px;
+	height: 37px;
+	animation: expand-to-full-width 0.46s ease .699s forwards;
+	-webkit-animation: expand-to-full-width 0.46s ease .690s forwards;
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.b-sprite {
+	background: url('sprite.png') no-repeat -131px 0px;
+	left: 204px;
+	width: 24px;
+	height: 37px;
+	animation: expand-to-full-width 0.46s ease .699s forwards;
+	-webkit-animation: expand-to-full-width 0.46s ease .699s forwards;
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.i-sprite {
+	background: url('sprite.png') no-repeat -155px 0px;
+	left: 228px;
+	width: 12px;
+	height: 37px;
+	animation: expand-to-full-width 0.46s ease .699s forwards;
+	-webkit-animation: expand-to-full-width 0.46s ease .698s forwards;
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.l-sprite {
+	background: url('sprite.png') no-repeat -167px 0px;
+	left: 240px;
+	width: 13px;
+	height: 37px;
+	animation: expand-to-full-width 0.46s ease .699s forwards;
+	-webkit-animation: expand-to-full-width 0.46s ease .698s forwards;
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.e-sprite {
+	background: url('sprite.png') no-repeat -180px 0px;
+	left: 253px;
+	width: 24px;
+	height: 37px;
+	animation: expand-to-full-width 0.46s ease .699s forwards;
+	-webkit-animation: expand-to-full-width 0.46s ease .699s forwards;
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.reg-sprite {
+	background: url('sprite.png') no-repeat -204px 0px;
+	left: 277px;
+	width: 16px;
+	height: 37px;
+	animation: expand-to-full-width 0.46s ease .72s forwards;
+	-webkit-animation: expand-to-full-width 0.46s ease .72s forwards;
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+/** animations */
+
+@-webkit-keyframes flipped-and-faded {
+0% 	{   
+     -moz-transform: scaleY(-1);
+     -o-transform: scaleY(-1);
+     -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+      filter: FlipV;
+      -ms-filter: "FlipV";
+      opacity:.4;
+      filter: alpha(opacity=40);
+      }
+55% {   
+      -moz-transform: scaleY(1);
+      -o-transform: scaleY(1);
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      filter: FlipV;
+      -ms-filter: "FlipV";
+      opacity:1;
+      filter: alpha(opacity=100); 
+      }
+100% {
+	-webkit-transform: translateX(-146px);
+	-moz-transform: translateX(-146px);
+	transform: translateX(-146px);
+	}
+}
+        
+@keyframes flipped-and-faded {
+0% 	{   
+     -moz-transform: scaleY(-1);
+     -o-transform: scaleY(-1);
+     -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+      opacity:.3;
+      filter: FlipV;
+      -ms-filter: "FlipV";
+      filter: alpha(opacity=40);
+      }
+55% {   
+      -moz-transform: scaleY(1);
+      -o-transform: scaleY(1);
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      opacity:1;
+      filter: FlipV;
+      -ms-filter: "FlipV";
+      filter: alpha(opacity=100); 
+      }
+100% {
+	-webkit-transform: translateX(-146px);
+	-moz-transform: translateX(-146px);
+	transform: translateX(-146px);
+	}
+}
+
+@keyframes expand-to-full-width {
+	0% {   
+	  transform:  rotateY( 90deg );
+	  -webkit-transform:  rotateY( 90deg );
+	  scaleX(0);
+	   }
+	100% {
+	-webkit-transform: rotateY( 0deg ) translateX(-73px) scaleX(1);
+	-moz-transform: rotateY( 0deg ) translateX(-73px) scaleX(1);
+	transform: rotateY( 0deg ) translateX(-73px) scaleX(1);
+	}
+}
+
+@-webkit-keyframes expand-to-full-width {
+	0% {   
+	  transform:  rotateY( 90deg );
+	  -webkit-transform:  rotateY( 90deg );
+	   scaleX(0);
+	   }  
+	100% {
+	-webkit-transform: rotateY( 0deg ) translateX(-73px) scaleX(1);
+	-moz-transform: rotateY( 0deg ) translateX(-73px) scaleX(1);
+	transform: rotateY( 0deg ) translateX(-73px) scaleX(1);
+	}
+}
+

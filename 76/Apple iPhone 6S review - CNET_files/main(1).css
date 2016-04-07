@@ -1,0 +1,168 @@
+@font-face {
+	font-family: 'teleGrotesk';
+	src: url('../../assets/fonts/TeleGroteskFett.woff') format('woff');
+}
+
+#container {
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#introRichload {
+	width: 300px;
+	height: 250px;
+}
+
+#endframeRichload {
+	width: 300px;
+	height: 250px;
+}
+
+#frame4Richload {
+	width: 300px;
+	height: 250px;
+}
+
+#background {
+	width: 300px;
+	height: 250px;
+}
+
+#frame2 {
+	opacity:0;
+	width:300px;
+	height:250px;
+}
+
+#frame3 {
+	opacity:0;
+	width:300px;
+	height:250px;
+}
+
+#frame4 {
+	opacity:0;
+	width:300px;
+	height:250px;
+}
+
+#frame5 {
+	opacity:0;
+	width:300px;
+	height:250px;
+}
+
+#frame6 {
+	opacity:0;
+	width:300px;
+	height:250px;
+}
+
+#frame2headline {
+	left:-300px;
+}
+
+#frame2subHeadline1 {
+	left:300px;
+}
+
+#frame2subHeadline2 {
+	opacity:0;
+}
+
+#frame3headline {
+	left:-300px;
+}
+
+#frame3subHeadline1 {
+	left:300px;
+}
+
+#frame3subHeadline2 {
+	opacity:0;
+}
+
+#frame4headline {
+	opacity:0;
+}
+
+#frame4subHeadline1 {
+	left:-300px;
+}
+
+#frame4subHeadline2 {
+	top:250px;
+}
+
+#frame4subHeadline3 {
+	top:250px;
+}
+
+#frame5headline {
+	left:-300px;
+}
+
+#frame5subHeadline1 {
+	left:300px;
+}
+
+#frame5subHeadline2 {
+	left:300px;
+}
+
+#frame5BG {
+	width:300px;
+	height:250px;
+}
+
+#frame6headline {
+	left:-300px;
+}
+
+#frame6subHeadline1 {
+	left:300px;
+}
+
+#frame6subHeadline2 {
+	left:300px;
+}
+
+#frame6brandImage {
+	left:300px;
+}
+
+#frame6BG {
+	width:300px;
+	height:250px;
+}
+
+#ctaBtn {
+	opacity:0;
+}
+
+.legal {
+	opacity:0;
+	width:290px;
+	font-size:8px;
+	font-family:teleGrotesk;
+	text-align:center;
+	bottom:3px;
+	left:5px;
+}
+
+#logo {
+	top:-100px;
+}
+
+#border {
+	width: 298px;
+	height: 248px;
+	border: 1px solid #000000;
+}
+
+.abs {
+	position: absolute;
+}

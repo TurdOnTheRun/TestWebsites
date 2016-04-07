@@ -1,0 +1,18 @@
+
+var ftGUID_1714316="29774EE968D94E";
+var ftConfID_1714316="0";
+var ftParams_1714316="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_referrer=http%3A%2F%2Fwikitravel.org%2Fen%2FParis&cachebuster=6341.84196816201";
+var ftKeyword_1714316="";
+var ftCustom_1714316="";
+var ftSection_1714316="";
+var ftSegment_1714316="fe6,jnh,i4x,iiq,gwb,gwb479";
+var ftSegmentList_1714316=[{s:'fe6'},{s:'jnh'},{s:'i4x'},{s:'iiq'},{m:'c5864_dest',s:'gwb'},{m:'c5864_dm',s:'gwb479'}];
+var ftRuleMatch_1714316="0";
+var ftTimestamp_1714316="1460005626";
+var ftImp1714316 = {};
+ftImp1714316.privacy = "x";
+ftImp1714316.guidAge = "42";
+ftImp1714316.impID = "30194DC67AA4FD";
+
+document.write('<scr'+'ipt src="https://secure.flashtalking.com/xre/171/1714316/1266412/js/j-1714316-1266412.js" id="ftscript_m1714316" name="ftscript_m1714316"></scr'+'ipt>');
+                    

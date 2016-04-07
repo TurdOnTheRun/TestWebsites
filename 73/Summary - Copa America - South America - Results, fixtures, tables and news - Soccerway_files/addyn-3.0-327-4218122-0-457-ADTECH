@@ -1,0 +1,3 @@
+document.write('<a href="http://adserver.adtech.de/?adlink|327|4218122|0|457|AdId=9260003;BnId=4;itime=5958875;sub1=[subst];" target="_blank"><img src="http://aka-cdn-ns.adtech.de/images/483/Ad9260003St1Sz457Sq104768615V0Id4.jpg" border="0" alt=" " width="300" height="100"/></a>');
+ var adcount_4218122_1_=new Image();
+adcount_4218122_1_.src="http://adserver.adtech.de/adcount|2.0|327|4218122|0|457|AdId=9260003;BnId=4;ct=546098511;st=2632;adcid=1;itime=5958875;reqtype=5;;"; 

@@ -1,0 +1,87 @@
+
+<!-- saved from url=(0839)https://static.tacdn.com/static/page_moniker/sundaysky-v21175534570a.html#pixelType=PAGEVIEW&curLocId=187147&geoId=187147&reqUnique=4c8a5073f7b9d5628dc90907f3d7e9f4496a7b84&userUnique=3242fb23c13a2d0b6eead6234df9577131fefd50&locale=en_US&seqId=2&geoName=Paris&geoParentId=187144&geoParentName=Ile-de-France&geoMostPop=222913&isRemarketable=false&loc1=222913&productIds=["d222913enUS187147","187147enUS"]&productIdsShort=d222913enUS187147,187147enUS&trueServlet=Tourism&fbTrueServlet=P&servlet=Hotels&geoFeedBucket=medium&serverName=www.tripadvisor.com&device=Desktop&fbDevice=1&errorJS=https://static.tacdn.com/js3/remarketing-errors-c-v22262320586a.js&puid=VwXqZQokMHUAAV1QodIAAABJ&siteType=d&isMobileDevice=n&taSplit=1&tasource=OTH&geo=187147&isClickoutYN=no&criteoPartnerId=4653&ulbBucket=2&ulbScore=0.24940277326656074&countryAlpha2=US -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    </head>
+    <body>
+        <script type="text/javascript" async="" src="./t.js"></script><iframe src="javascript:false" title="" style="width: 0px; height: 0px; border: 0px;"></iframe><script type="text/javascript">
+            var context = {};
+            context.get = function(key) {
+                return this.hasOwnProperty(key) ? this[key] : '';
+            };
+            (function() {
+                var pairs = window.location.hash.substring(1).split('&');
+                for (var i = 0; i < pairs.length; i++) {
+                    var pair = pairs[i].split('=');
+                    context[pair[0]] = pair[1];
+                }
+            })();
+
+            // SundaySky provided this JS
+            var SSKY = SSKY || [];
+            (function(d) {
+              var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true;
+              s.src = ('https:' == d.location.protocol ? 'https://dds6m601du5ji.cloudfront.net' : 'http://cdn1-res.sundaysky.com') + '/vop/t.js';
+              var n = d.getElementsByTagName('script')[0]; n.parentNode.insertBefore(s, n);
+            })(document);
+
+            var userUnique = context.get('userUnique');
+            var locId = context.get('locId');
+            var curLocId = context.get('curLocId');
+            var geoId = context.get('geoId');
+            var roas = context.get('roas');
+            var dateIn = context.get('dateIn');
+            var dateOut = context.get('dateOut');
+            var geoMostPop = context.get('geoMostPop');
+            var servlet = context.get('servlet');
+            var isClickout = context.get('pixelType') == "CLICKOUT";
+
+            var pixelEvent = {
+                account: "tripadvisor",
+                profile: "1",
+                ver: "travel",
+                user_id: userUnique
+            };
+
+            var attrs = {
+                pgtp: servlet // Technically the spec only required this for impression pixels, but this seems harmless enough.
+            };
+            pixelEvent.attrs = attrs;
+
+            var transactionType = "t.browse";
+
+            // Three types of pixels: conversion, view geo list page, and view property detail page
+            if (isClickout) {
+                transactionType = "t.conversion";
+                // ommit order_id
+                pixelEvent.order_value = roas;
+                attrs.pp = locId;
+                // ommit pricep
+                attrs.chkinp = dateIn;
+                attrs.checkoutp = dateOut;
+            } else if (curLocId == geoId) {
+                // geo page
+                attrs.geos = geoId;
+                // ommit prices
+                // ommit styles
+                if (dateIn && dateOut) {
+                    attrs.chkins = dateIn;
+                    attrs.checkouts = dateOut;
+                }
+                attrs.topprops = geoMostPop;
+            } else {
+                // property page
+                attrs.pv = curLocId;
+                // ommit pricev
+                if (dateIn && dateOut) {
+                    attrs.chkinv = dateIn;
+                    attrs.checkoutv = dateOut;
+                }
+                attrs.toppropv = geoMostPop;
+            }
+
+            SSKY.push([transactionType, pixelEvent]);
+        </script>
+    
+
+</body></html>

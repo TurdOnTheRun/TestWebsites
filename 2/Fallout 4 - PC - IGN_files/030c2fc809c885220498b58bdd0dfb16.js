@@ -1,0 +1,2 @@
+/* 14:51:59 20/05/2014 [http://oystatic.ignimgs.com/src/ignmedia/js/v2games/gameobject.js]*/
+(function(a){a(".ign-tab").live("click",function(){var b=jQuery(this).attr("data-tab");jQuery(this).parent().siblings().children(".ign-tabContent").hide();a(b).show();a(".ign-tab").removeClass("selected");a(this).addClass("selected")});a(".dropdown-arrow").live("click",function(){var b=a(this).parent(".dropdown");b.hasClass("selected")?b.removeClass("selected"):(b.addClass("selected"),a(window).one("mouseup",function(){b.removeClass("selected")}))})})(jQuery);

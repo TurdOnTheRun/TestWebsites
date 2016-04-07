@@ -1,0 +1,52 @@
+#topSections {
+	margin-top: 20px;
+	padding-top: 10px;
+	border-top: 3px solid #CCC;
+}
+#topSections .gridPanel {
+	zoom: 1;
+}
+#topSections #topSectionsTitle {
+	float: left;
+	display: inline;
+	margin: 10px 0 20px 0;
+}
+#topSections .module {
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+#topSections .module .moduleHeader {
+	background: transparent;
+	padding: 0;
+	margin: 0 0 5px 0;
+	border-top: none;
+}
+#topSections .module .moduleHeader h3 {
+	margin: 0;
+	font-size: 14px;
+	color: #000;
+}
+#topSections .module .moduleHeader h3 a {
+	color: #000;
+}
+#topSections .module .moduleBody ul li {
+	/* border-top: none; border-bottom: none; */
+	background-image: none;
+	margin: 0 0 5px 0;
+	padding: 4px 0;
+	font-weight: bold;
+	font-size: 11px;
+}
+#topSections .columnCenter {
+	margin-right: 20px;
+}
+#topSections .columnLeft p, #topSections .columnRight p {
+	display: block;
+}
+#topSections .otherSections {
+	font-size: 11px; color: #CCC;
+}
+#topSections .otherSections a {
+	font-weight: bold;
+	text-transform: uppercase;
+}

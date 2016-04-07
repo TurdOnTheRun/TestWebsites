@@ -1,0 +1,611 @@
+var mboxCurrent = mboxFactories.get('default').get('target-global-mbox',0);mboxCurrent.setOffer(new mboxOfferAjax('<!-- Offer Id: 370863  -->\n\n\n\n\n\n\n\n<!-- Offer Id: 108054  -->'));mboxCurrent.getOffer().setOnLoad(function() {
+    /**
+     * Override Segmented Autocomplete Search Component.
+     */
+    Viator.SegmentedSearch = (function (window) {
+        var arrowIndex = -1,
+                hoverItemIndex = -1,
+                inited = false,
+                visible = false,
+                $input,
+                URL = "/ajaxSegmentSearch.jspa",
+                cache = {},
+        /* previous keywords typed by user.
+         * used primarily to detect if the entered character is space and trimmed
+         *  keyword is the same as the last keyword. note: this var has no other purpose
+         *  and gets reset when focus is lost on the input element.
+         * */
+                previousKeyword,
+        /* the keyword used for search*/
+                keyword,
+                htmlStrippedKeyword,
+        //var INVALID_CHARS_PATTERN=/[\&\*\#\^\$]+/g;
+                INVALID_CHARS_PATTERN = /[\*\#\^\$\&]+/g,
+        // var INVALID_WORDS=/(update|delete)/ig;
+                DEFAULT_ITEM_CSS_HOVER_CLASS = 'segmented-search-item-hover',
+                FIND_MORE_ITEM_CSS_HOVER_CLASS = 'segmented-search-find-more-item-hover',
+        // jQuery object for the top attractions and recommendations
+                opened = false,
+                $topSearch,
+                settings,
+                defaultOptions = {
+                    minLength: 2,
+                    delay: 600,
+                    topSearch: false
+                };
+
+        function escapeRegExp(str) {
+            return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+        }
+
+        function stripHTML(str) {
+            return str.replace(/<[^>]*>/gm, '');
+        }
+
+        function sanitizeKeyword(keyword) {
+            htmlStrippedKeyword = $.trim(stripHTML(keyword));
+            return escapeRegExp(htmlStrippedKeyword.replace(INVALID_CHARS_PATTERN, ''));
+        }
+
+        function sendRequest(_keyword, callback, url, requestId) {
+            //strip special characters. Which isn't really necessary but will do it nevertheless
+            // term=term.replace(INVALID_CHARS_PATTERN,'');
+            //term=$.trim(term);
+            keyword = sanitizeKeyword(_keyword);
+
+            if (keyword.length < settings.minLength) {
+                callback([]);
+                return;
+            }
+
+            var destinationId = $("#regionId").val() && $("#regionId").val() != 0 ? $("#regionId").val() : ($("#countryId").val() && $("#countryId").val() != 0 ? $("#countryId").val() : '');
+
+            if (typeof cache[keyword + ":" + destinationId] !== 'undefined') {
+                callback(cache[keyword + ":" + destinationId]);
+                return;
+            }
+
+            $.ajax({
+                url: url ? url : URL + '?term=' + encodeURIComponent(keyword) + (destinationId ? '&destinationID=' + destinationId : ''),
+                cache: true,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (response) {
+                    var items = createAutoCompleteItems(response, keyword);
+
+                    //only display suggestion box if there are any results
+                    if (items.length === 1 && items[0].category === 'moreResults') {
+                        //items = [];
+                    } else if (settings.topSearch) {
+                        $topSearch.hide();
+                    }
+
+                    cache[keyword + ":" + destinationId] = items;
+                    callback(items);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (window.console) {
+                        console.log('SegmentedSearch._sendRequest error occured:' + textStatus);
+                    }
+                }
+            });
+
+            previousKeyword = keyword;
+        }
+
+        function createAutoCompleteItems(response, searchTerm) {
+            var segments = {
+                destinations: {
+                    "category": "POPULAR DESTINATIONS",
+                    items: response["destinations"]
+                },
+                attractions: {
+                    "category": "ATTRACTIONS & RECOMMENDATIONS",
+                    items: response["seoPages"]
+                },
+                tours: {
+                    "category": "TOURS & ACTIVITIES",
+                    items: response["products"]
+                },
+                search: {
+                    "category": "moreResults",
+                    items: response["moreResults"] ?
+                            response["moreResults"] :
+                            [{
+                                category: "moreResults",
+                                id: searchTerm,
+                                label: "Find more results for '" + searchTerm + "'",
+                                title: "Find more results for '" + searchTerm + "'",
+                                url: "/search/" + encodeURIComponent(searchTerm),
+                                value: searchTerm
+                            }]
+                }
+            };
+
+            var autoCompleItems = [];
+
+            $.each(segments, function (i, segment) {
+                if (segment.items && segment.items.length > 0) {
+                    $.each(segment.items, function (j, item) {
+                        item.label = item.title;
+                        item.category = segment.category;
+                        item.value = item.id;
+                        autoCompleItems.push(item);
+                    });
+                }
+            });
+
+            return autoCompleItems;
+        }
+
+
+        function applyHoverEffect(item) {
+            var $item = $(item);
+
+            if ($item.hasClass('find-more-results')) {
+                $item.addClass(FIND_MORE_ITEM_CSS_HOVER_CLASS);
+            } else {
+                $item.addClass(DEFAULT_ITEM_CSS_HOVER_CLASS);
+            }
+        }
+
+        function removeHoverEffect(item) {
+            var $item = $(item);
+
+            if ($item.hasClass('find-more-results')) {
+                $item.removeClass(FIND_MORE_ITEM_CSS_HOVER_CLASS);
+            } else {
+                $item.removeClass(DEFAULT_ITEM_CSS_HOVER_CLASS);
+            }
+        }
+
+        function onKeyBoardAction(evt) {
+            var pointer = arrowIndex;
+            var preventDefault = false;
+            var keyCode = evt.keyCode,
+                    item;
+
+            if (keyCode !== 38 && keyCode !== 40 && keyCode !== 13) {
+                return true;
+            }
+
+            var items = $('#segmented-search-container .ui-autocomplete-item a');
+
+            switch (keyCode) {
+                case 38: //up
+                    pointer--;
+                    break;
+                case 40: //down
+                    pointer++;
+                    break;
+                case 13:
+                    if (arrowIndex === -1 || arrowIndex <= items.size()) {
+                        return true;
+                    } else {
+                        evt.preventDefault();
+                    }
+                    preventDefault = true;
+                    break;
+            }
+
+            if (items.size() === 0) {
+                evt.preventDefault();
+                arrowIndex = -1;
+                return false;
+            }
+
+            if (arrowIndex > -1 && arrowIndex < items.size()) {
+                item = items.get(arrowIndex);
+                removeHoverEffect(item);
+            }
+
+            if (hoverItemIndex > -1 && hoverItemIndex < items.size()) {
+                item = items.get(hoverItemIndex);
+                removeHoverEffect(item);
+                pointer = parseInt(hoverItemIndex) + (keyCode === 38 ? -1 : 1);
+            }
+
+            if (pointer >= items.size()) {
+                pointer = items.size() - 1;
+            } else if (pointer < 0) {
+                pointer = 0;
+            }
+
+            item = items.get(pointer);
+
+            if (keyCode === 13) {
+                if (visible && item && item.url) {
+                    $('body').trigger('Viator.SegmentedSearch.MENU_ITEM_SELECTED');
+                    location.href = item.href;
+                    return false;
+                } else {
+                    $input.parents('form:first').submit();
+                }
+
+                return true;
+            } else {
+                applyHoverEffect(item);
+                // $(item).addClass('segmented-search-item-hover');
+            }
+
+            // evt.preventDefault();
+            arrowIndex = pointer;
+            hoverItemIndex = -1;
+
+            return !preventDefault;
+        }
+
+        function showTopSearch(source) {
+            var $source = $(source);
+
+            if ($.trim($source.val()) === '') {
+                $topSearch
+                        .show()
+                        .css({
+                            top: $source.offset().top + $source.outerHeight(true),
+                            left: $source.offset().left - $topSearch.outerWidth(true) + $source.outerWidth()
+                        });
+            }
+        }
+
+        function setUpEventhandlers() {
+            $('body').click(function (e) {
+                if (settings.topSearch && !$(e.target).closest($topSearch).length) {
+                    if (!$input.is(':focus') && $topSearch.is(':visible')) {
+                        $topSearch.hide();
+                    }
+                }
+            });
+
+            //add keyboard keys listener
+            $input.keyup(function (evt) {
+                        var len = this.value.length;
+
+                        if (settings.topSearch) {
+                            if (len === 0 && !opened) {
+                                showTopSearch(this);
+                            } else if (len >= settings.minLength) {
+                                $topSearch.hide();
+                            }
+                        }
+
+                        return onKeyBoardAction(evt);
+                    })
+                    .focus(function () {
+                        if (settings.topSearch) {
+                            showTopSearch(this);
+                        }
+                    })
+                    //reset previous keyword on blur.
+                    .blur(function () {
+                        previousKeyword = null;
+                        if (settings.topSearch && !$topSearch.is(':hover')) {
+                            $topSearch.hide();
+                        }
+                    });
+
+            $('.segmented-search a')
+                    .on('mouseover', function () {
+                        applyHoverEffect(this);
+
+                        if (arrowIndex > 0) {
+                            var items = $('#segmented-search-container .ui-autocomplete-item a');
+
+                            if (arrowIndex > -1 && arrowIndex < items.size()) {
+                                var lastHoverItem = $(items.get(arrowIndex));
+                                removeHoverEffect(lastHoverItem);
+                                //check if the last item selected using arrow keys is  the same as the current hover item.
+                                //if it is same add the class again as so the mouseover style is reapplied
+                                if (lastHoverItem.attr('index') === $(this).attr('index')) {
+                                    applyHoverEffect(lastHoverItem);
+                                }
+                            }
+                        }
+                        arrowIndex = -1;
+                        hoverItemIndex = parseInt($(this).attr('index'));
+                    })
+                    .on('mouseout', function () {
+                        arrowIndex = -1;
+                        removeHoverEffect(this);
+                    });
+        }
+
+        function loadTemplates() {
+            var container = '<div id="segmented-search-container" style="position:absolute;"></div>';
+            $topSearch = $('#topSearch');
+
+            if (settings.topSearch && $topSearch.length < 1) {
+                return Promise
+                        .resolve($.get(Viator.Common.versionedUrl('/js/search/topsearch.html')))
+                        .then(function (data) {
+                            $topSearch = $(data);
+                            $('body').append($topSearch)
+                                    .append(container);
+                        });
+
+            } else {
+                return new Promise(function (resolve, reject) {
+                    $('body').append(container);
+                    resolve();
+                });
+            }
+        }
+
+        return {
+            /**
+             *
+             * @param {Object} config Configuration Object Literal<br>
+             * <b>config.minLength {Integer}:</b> The minimum charachers that should be entered before Autocomplete kicks in.<br>
+             * Defaults  is 2.<br>
+             * <b>config.id {String}:</b> The textbox id to attach   autocomplete to.
+             * <b>config.delay {Integer}:</b> The delay in seconds before autocomplete kicks in. Default 'slow'.
+             *
+             */
+            init: function (selector, options) {
+                if (inited || typeof selector === 'undefined') {
+                    return;
+                }
+
+                $input = $(selector);
+
+                if ($input.length === 0) {
+                    //console.warn("Failed to initialize segmented search. Autocomplete input component named '" + selector + "' not found.");
+                    return;
+                }
+
+                settings = $.extend({}, defaultOptions, options);
+
+                loadTemplates()
+                        .then(function () {
+                            $.widget("custom.catcomplete", $.ui.autocomplete, {
+                                _renderMenu: function (ul, items) {
+                                    var self = this;
+                                    $(ul).addClass("segmented-search");
+                                    // var keyword=$('#'+id).val();
+
+                                    var currentCategory = "";
+                                    $.each(items, function (index, item) {
+                                        if (item.category !== currentCategory) {
+                                            if (item.category !== 'moreResults') {
+                                                ul.append('<li class="ui-autocomplete-category"><i class="icon icon-arrow-south-west"></i>' + item.category + "</li>");
+                                            }
+                                            currentCategory = item.category;
+                                        }
+
+                                        self._renderItem(ul, item, htmlStrippedKeyword, index);
+                                    });
+                                    if (items.length > 0) {
+                                        visible = true;
+                                    }
+                                }
+                            });
+
+                            //$(document.body).append('<div id="segmented-search-container" style="position:absolute;"></div>');
+                            $input
+                                    .click(function () {
+                                        if (settings.topSearch) {
+                                            showTopSearch(this);
+                                        }
+                                    })
+                                    .catcomplete({
+                                        minLength: settings.minLength,
+                                        delay: settings.delay,
+                                        appendTo: '#segmented-search-container',
+                                        focus: function (event, ui) {
+                                            //prevent the plugin from automatically setting value of search box to item.id
+                                            event.preventDefault(); // Prevent the default focus behavior.
+                                        },
+                                        source: function (request, callback) {
+                                            visible = false;
+                                            arrowIndex = -1;
+                                            hoverItemIndex = -1;
+                                            sendRequest(request.term, callback);
+                                        },
+                                        select: function (a, b) {
+                                            // $(this).val(b.item.label);
+                                            location.href = b.item.url;
+                                            return false;//prevent setting the search box's value to item.value
+                                        },
+                                        close: function (event, ui) {
+                                            if (settings.topSearch) {
+                                                showTopSearch(this);
+                                                opened = false;
+                                            }
+                                        },
+                                        open: function (event, ui) {
+                                            if (settings.topSearch) {
+                                                $topSearch.hide();
+                                                opened = true;
+                                            }
+
+                                            var $ul = $('#segmented-search-container ul'),
+                                                    $searchDiv = $("#searchBoxWithPopupResults"),
+                                                    ulWidth = $ul.outerWidth(true),
+                                                    searchBoxWidth = $searchDiv.outerWidth(true);
+                                            if (settings.topSearch) {
+                                                $('.ui-autocomplete').css('left', $ul.offset().left - (ulWidth - searchBoxWidth)/2 + 'px');
+                                            } else {
+                                                var marginLeft = parseInt($ul.css("marginLeft").replace('px', ''), 10);
+                                                $('.ui-autocomplete').css('left', $input.offset().left - ulWidth + searchBoxWidth + marginLeft + 'px');
+                                            }
+                                        }
+                                    })
+                                    .data("catcomplete")._renderItem = function (ul, item, keyword, index) {
+                                var title = item.label.replace(new RegExp("(" + keyword + ")", "gi"), '<b style="font-weight:bold">$1</b>');
+
+                                if (item.category === 'moreResults') {
+                                    $('<li class="ui-autocomplete-item ui-autocomplete-search"></li>')
+                                            .data("item.autocomplete", item)
+                                            .append('<a id="find-more-results" class="find-more-results" index="' + index + '" href="' + item.url + '"><i class="via-search mrs"></i>Find more results for "<b style="font-weight:bold !important;">' + htmlStrippedKeyword /*decodeURIComponent(htmlStrippedKeyword)*/ + '<b>"</a></li>')
+                                            .appendTo(ul);
+                                } else {
+                                    $('<li class="ui-autocomplete-item"></li>')
+                                            .data("item.autocomplete", item)
+                                            .append('<a index="' + index + '" href="' + item.url + '">' + title + '<span class="ui-autocomplete-item-destination">' + item.dest + '<span></a>')
+                                            .appendTo(ul);
+                                }
+                            };
+
+                            setUpEventhandlers();
+                            inited = true;
+                        });
+            },
+            /*temporary hook to disable autocomplete for ab testing.
+             *
+             **/
+            destroy: function () {
+                $input.catcomplete("destroy");
+                $input.unbind();//remove custom handlers  keydown and blur
+            }
+        };
+    })(window);
+
+    Viator.SegmentedSearch.init('#freeTextKeyword', {
+        topSearch: typeof s === 'undefined' ? '' : s.pageName === 'Home'
+    });
+
+    $(function() {
+        function createEventTracker() {
+            if (typeof Viator === 'undefined') {
+                Viator = {};
+            }
+            if (!Viator.Mbox) {
+                Viator.Mbox = {};
+            }
+            if (!Viator.Mbox.eventMonitor) {
+                if (typeof mboxFactoryDefault !== 'undefined') {
+                    // create event tracking MBox
+                    var evtTrackingMboxId = 'viatorEventTracking';
+                    var evtTrackingMboxDivId = 'mboxEventTrackingDiv';
+
+                    if (mboxFactoryDefault.getMboxes().get(evtTrackingMboxId).length() == 0) {
+                        $('<div/>', {
+                            id: evtTrackingMboxDivId
+                        }).appendTo('body');
+                        mboxDefine(evtTrackingMboxDivId, evtTrackingMboxId);
+                    }
+
+                    Viator.Mbox.eventMonitor = {
+                        log: function (eventSpec) {
+                            mboxUpdate(evtTrackingMboxId, eventSpec);
+                        }
+                    }
+                }
+            }
+        }
+
+        createEventTracker();
+
+        if (Viator.Mbox.eventMonitor && Viator.Mbox.eventMonitor.log) {
+            /* register search box focus event tracking */
+            $('#freeTextKeyword').focus(function() {
+                Viator.Mbox.eventMonitor.log('searchBoxFocused=yes');
+            });
+
+        } else {
+            if (console && console.warn) {
+                console.warn('Failed to initialize event tracking (Viator.Mbox.eventMonitor.log not defined)');
+            }
+        }
+    });
+
+    $(function () {
+        var freeTextSearchFormMatches = $('form[action="/freeTextSearch.jspa"]');
+
+        var redirectWithTracking = function(redirectUrl) {
+            //window.location.pathname = redirectUrl + (redirectUrl.indexOf('?') > -1 ? '&' : '?') + 'ref=search';
+            window.location.href = redirectUrl + (redirectUrl.indexOf('?') > -1 ? '&' : '?') + 'ref=search';
+        }
+
+        var submitFallback = function (submitButton) {
+            submitButton.off('click');
+
+            submitButton.prevAll('[id="' + submitButton.attr('id') + '_clone"]').click();
+        };
+
+        var exactMatchRedirect = function(searchKeyWord, submitButton) {
+            $.ajax({
+                url: '/ajaxSegmentSearch.jspa?term=' + encodeURIComponent(searchKeyWord),
+                cache: true,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.destinations != null && response.destinations.length == 1 &&
+                            response.destinations[0].fullPlaceNameClean === searchKeyWord) {
+                        redirectWithTracking(response.destinations[0].url);
+                    } else if (response.seoPages != null && response.seoPages.length > 0 &&
+                            response.seoPages[0].title.toUpperCase() === searchKeyWord.toUpperCase()) {
+                        if (response.seoPages.length == 1 ||
+                                response.seoPages[1].title.toUpperCase() !== searchKeyWord.toUpperCase()) {
+                            redirectWithTracking(response.seoPages[0].url);
+                        } else {
+                            submitFallback(submitButton);
+                        }
+                    } else {
+                        submitFallback(submitButton);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (window.console) {
+                        console.log('ajaxSegmentSearch request error:' + textStatus);
+                    }
+                    submitFallback(submitButton);
+                }
+            });
+        }
+
+        freeTextSearchFormMatches
+                .removeAttr('onsubmit')
+                .submit(function (event) {
+                    event.preventDefault();
+
+                    exactMatchRedirect(
+                            $(event.target).find('input[name="freeTextKeyword"]').val(),
+                            $(event.target).find('input[type="button"]:not([id$="_clone"])'));
+                });
+
+        var freeTextSearchButtonMatches = $('form[action="/freeTextSearch.jspa"] > input[type="button"]');
+
+        freeTextSearchButtonMatches.each(function() {
+            $(this).before($(this).clone(true, false).attr('id', $(this).attr('id') + '_clone').hide());
+        });
+
+        freeTextSearchButtonMatches //.attr('_onclick', freeTextSearchFormMatches.attr('onclick'))
+                .removeAttr('onclick')
+                .off('click')
+                .click(function(event) {
+                    exactMatchRedirect(
+                            $(event.target).prevAll('input[type="text"]').val(),
+                            $(event.target));
+                });
+    });
+
+    $(function() {
+        /* Tag Hotjar recording */
+        function initializeHotjarRecording() {
+            if (typeof Viator === 'undefined') {
+                Viator = {};
+            }
+            if (!Viator.Hotjar) {
+                Viator.Hotjar = {};
+            }
+            if (!Viator.Hotjar.recording) {
+                Viator.Hotjar.recording = {
+                    tag: function (label) {
+                        window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+                        hj('tagRecording', [label]);
+                    }
+                }
+            }
+        }
+
+        initializeHotjarRecording();
+
+        $('#freeTextKeyword').focus(function() {
+            Viator.Hotjar.recording.tag('Search box focused - B');
+        });
+    });
+
+/*T&T Metadata v3 ==>Response Plugin*/
+window.ttMETA=(typeof(window.ttMETA)!="undefined")?window.ttMETA:[];window.ttMETA.push({"CampaignName":"Desktop: All Except Home, Cart, Checkout (Auto-redirect Exact Destination or Attraction Match) - 3/15/2016 - PROD","CampaignId":"125117","RecipeName":"B - Redirect Match","RecipeId":"16","OfferId":"370863","OfferName":"Desktop: All Except Home, Cart, Checkout (Auto-redirect Exact Destination or Attraction Match) - Recipe B","MboxName":"target-global-mbox"});
+});mboxCurrent.loaded();mboxFactories.get('default').getPCId().forceId("1458846609911-455934.17_86");

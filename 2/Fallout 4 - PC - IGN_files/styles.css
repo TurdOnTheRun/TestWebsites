@@ -1,0 +1,98 @@
+/*ad border, dimensions, and mouse over pointer*/
+#ad {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    border: 1px solid #000000;
+    background: #000;
+    margin: 0px;
+/*
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+*/
+    cursor: pointer;
+}
+
+#adWrapper {
+    visibility: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+.sprite {
+/*    visibility:hidden;*/
+/*    opacity: 0;*/
+}
+
+.vis {
+    visibility: inherit;
+    opacity: 1;
+}
+
+.img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-style: hidden;
+}
+
+.frame_01 {
+    background: url("../images/frame_01.jpg");
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+    cursor: pointer;
+
+}
+
+.frame_02 {
+    background: url("../images/frame_02.jpg");
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+}
+
+.frame_03 {
+    background: url("../images/frame_03.jpg");
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+    cursor: pointer;
+}
+
+.frame_04 {
+    background: url("../images/frame_04.jpg");
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+    cursor: pointer;
+}
+
+.blkFade {
+    background-color: #000;
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+    cursor: pointer;
+}
+
+div {
+/*    border: solid thin red;*/
+}
+
+#f1 { opacity:0;}
+#f2 { opacity:0;}
+#f3 { opacity:0;}
+#f4 { opacity:0;}

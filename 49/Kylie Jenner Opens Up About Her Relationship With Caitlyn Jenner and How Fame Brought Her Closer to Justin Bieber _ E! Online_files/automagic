@@ -1,0 +1,137 @@
+var adBlockEnabled = true;
+(function() {
+  mps=mps||{};
+  mps._queue=mps._queue||{};
+  mps._queue.abdetect=mps._queue.abdetect||[]; 
+  mps._ga={
+    'init':function(property,nopv) {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','mpsga');
+      mpsga('create',property,'auto');
+      mps._debug('[mps:GA] INITIALIZED '+property);
+      var pagevars = mps.pagevars;
+      mps._ga.custom.mps_instance=pagevars.instance;
+      mps._ga.custom.mps_path=pagevars.path;
+      mps._ga.custom.mps_type=pagevars.type;
+      mps._ga.custom.mps_topsect=pagevars.cats&&pagevars.cats[0]?pagevars.cats[0]:null;
+      mps._ga.custom.mps_sect=pagevars.hierarchy;
+      mps._ga.custom.mps_cags=(typeof pagevars.dart_cags==='object')?mps._ga.cags(pagevars.dart_cags):null;
+      var gaNum=1;
+      for(var i in mps._ga.custom) { mps._ga.set('dimension' + gaNum,mps._ga.custom[i]);gaNum++}
+      if(!nopv) {
+        mpsga('send','pageview');
+        mps._debug('[mps:GA] PAGEVIEW');
+      }
+    },
+    'set':function(key,val) {
+      mps._debug('[mps:GA] SET('+key+','+val+')');
+      if(val) {mpsga('set', key, val);}
+    },
+    'event':function(category,action,label,options) {
+      if(typeof(mpsga)!='function') {
+        mps._debug('[mps:GA] EVENT FAILED');
+        return false;
+      }
+      mps._debug('[mps:GA] EVENT('+category+','+action+','+label+','+options+')');
+      return mpsga('send','event',category,action,label,options);
+    },
+    'cags':function(val) {
+      var cagStr='';
+      for(var i in val) {
+        var cagVal = '';
+        for(var j in val[i]) {
+          cagVal+=i + '::' + val[i][j] + ',';
+        }
+        if(cagVal.length > 0) {cagVal=cagVal.substring(0, cagVal.length - 1);}
+        cagStr+=(cagVal + '|');
+      }
+      if(cagStr.length > 0) {cagStr=cagStr.substring(0, cagStr.length - 1);}
+      return cagStr;
+    },
+    'custom':{}
+  }
+})();
+(function() {
+  mps=mps||{};
+  mps._ab=mps._ab||{};
+  mps._ab.timer=0;
+  mps._ab.run=false;
+  mps._ga.init('UA-43067077-2');
+  mps._ab.track = function(enabled, type) {
+    var instance = mps && mps.pagevars && mps.pagevars.instance ? mps.pagevars.instance : 'UNKNOWN';
+    switch(enabled) {
+      case 1:
+        //mps._ga.event(instance, 'a-block');
+        mps._ga.event(instance, 'ab', type, 1, {'nonInteraction':1});
+      break;
+      default:
+        //mps._ga.event(instance, 'a-load');
+        mps._ga.event(instance, 'ab', 'NONE', 0, {'nonInteraction':1});
+      break;
+    }
+  };
+  mps._ab.metrics = function() {
+    mps._debug('[mps:AB] Collecting Metrics');
+    var instance = mps && mps.pagevars && mps.pagevars.instance ? mps.pagevars.instance : 'UNKNOWN';
+    if(mps._ext&&mps._ext._insertedads&&mps._adloads&&mps._adloads[0]) {
+      if(typeof mps._keys === 'function') {
+        var fad = mps._adloads[0][mps._keys(mps._adloads[0])[0]];
+      } else {
+        var fad = mps._adloads[0][Object.keys(mps._adloads[0])[0]];
+      }
+      if(typeof(fad)=='object'&& fad._mps&&fad._mps._elapsed>0) {
+        mps._ga.set('metric1',fad._mps._elapsed);
+      }
+      var atotal = [];
+      for(var ls in mps._adloads) { atotal.push.apply(atotal,mps._keys(mps._adloads[ls])) }
+      mps._ga.set('metric2',atotal.length);
+    }
+    if(typeof(mps._adloads)=='object' && typeof(mps._adloads[0])=='object') {
+      if(typeof mps._keys === 'function') {
+        var _adobj = mps._adloads[0][mps._keys(mps._adloads[0])[0]];
+      } else {
+        var _adobj = mps._adloads[0][Object.keys(mps._adloads[0])[0]];
+      }
+      if(typeof(_adobj)=='object' && _adobj._mps && typeof(_adobj._mps._elapsed)=="number") {
+        mps._ga.event(instance, 'firstad', _adobj._mps._elapsed, _adobj._mps._elapsed, {'nonInteraction':1});
+      }
+    }
+  },
+  mps._ab.detect = function() {
+    if(mps._ab.run) { return false; }
+    mps._ab.timer = mps._ab.timer + 500;
+    if(adBlockEnabled === true) {
+      mps._ab.run=true;
+      mps._ab.track(1, 'filename');
+      if(typeof mps._queue.render === 'function') {
+        mps._queue.render('abdetect', 'filename');
+      }
+      mps._debug('[mps:AB] DETECTED (filename)');
+    } else if((mps._gptError && mps._gptError === true)||mps._ab.timer===8000) {
+      mps._ab.run=true;
+      mps._ab.track(1,'domain');
+      if(typeof mps._queue.render === 'function') {
+        mps._queue.render('abdetect', 'domain');
+      }
+      mps._debug('[mps:AB] DETECTED (domain), timer: ' + mps._ab.timer);
+    } else if(mps._gptError === undefined && mps._ab.timer < 8000) {
+      setTimeout(function(){mps._ab.detect()}, 500);
+      mps._debug('[mps:AB] waiting... (try ' + mps._ab.timer / 500 + ' of 16)');
+      return false;
+    } else {
+      mps._ab.run=true;
+      mps._ab.track(0);
+      if(typeof mps._queue.render === 'function') {
+        mps._queue.render('abdetect', false);
+      }
+      mps._debug('[mps:AB] NOT ENABLED');
+    }
+  };
+  var ads = document.createElement('script');
+  ads.src = '//www.nbcudigitaladops.com/hosted/pubads.js';
+  ads.type = 'text/javascript';
+  ads.async = false;
+  ads.onload = function() {setTimeout(function(){mps._ab.detect()}, 500);};
+  ads.onerror = function() {setTimeout(function(){mps._ab.detect()}, 500);};
+  mps._ab.__metrics = setTimeout(function(){mps._ab.metrics()}, 4000);
+  document.getElementsByTagName('head')[0].appendChild(ads);
+})();

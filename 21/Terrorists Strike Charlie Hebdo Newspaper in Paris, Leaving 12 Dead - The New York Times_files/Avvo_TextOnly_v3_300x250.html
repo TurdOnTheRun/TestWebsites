@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://s0.2mdn.net/4497542/1450563875542/Avvo_TextOnly_v3_300x250.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Avvo_TextOnly_v3_300x250_edge.js"></script><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Untitled</title>
+<!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="./edge.6.0.0.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-5295643 { visibility:hidden; }
+    </style>
+<script>
+   AdobeEdge.loadComposition('Avvo_TextOnly_v3_300x250', 'EDGE-5295643', {
+    scaleToFit: "none",
+    centerStage: "none",
+    minW: "0px",
+    maxW: "undefined",
+    width: "300px",
+    height: "250px"
+}, {"dom":{}}, {"dom":{}});
+</script>
+<!--Adobe Edge Runtime End-->
+<script type="text/javascript">var clickTag = " "; </script>
+</head>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="EDGE-5295643" style="position: relative; height: 250px; width: 300px; z-index: 0; right: auto; bottom: auto; overflow: hidden; text-overflow: clip; background-color: rgb(255, 255, 255); background-size: 100% 100%;">
+	<div id="Stage_bg" class="Stage_bg_id" style="position: absolute; margin: 0px; opacity: 1; left: 0px; top: 0px; width: 300px; height: 250px; right: auto; bottom: auto; border: 1px none rgb(0, 0, 0); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgb(13, 72, 121); background-size: 100% 100%;"></div><div id="Stage_footer" class="Stage_footer_id" style="position: absolute; margin: 0px; width: 300px; height: 9px; left: 0px; top: 241px; right: auto; bottom: auto; overflow: hidden; text-overflow: clip; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); z-index: 0;"><div id="Stage_footer_grey" class="Stage_footer_grey_id" style="position: absolute; margin: 0px; opacity: 0; left: 227px; top: 0px; width: 80px; height: 9px; right: auto; bottom: auto; border: 1px none rgb(0, 0, 0); transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) skewX(-24deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(205, 207, 205); background-size: 100% 100%;"></div><div id="Stage_footer_turquoise" class="Stage_footer_turquoise_id" style="position: absolute; margin: 0px; opacity: 0; left: 148px; top: 0px; width: 80px; height: 9px; right: auto; bottom: auto; border: 1px none rgb(0, 0, 0); transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) skewX(-24deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(44, 253, 219); background-size: 100% 100%;"></div><div id="Stage_footer_red" class="Stage_footer_red_id" style="position: absolute; margin: 0px; opacity: 0; left: 69px; top: 0px; width: 80px; height: 9px; right: auto; bottom: auto; border: 1px none rgb(0, 0, 0); transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) skewX(-24deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(243, 121, 97); background-size: 100% 100%;"></div><div id="Stage_footer_blue" class="Stage_footer_blue_id" style="position: absolute; margin: 0px; opacity: 0; left: -8px; top: 0px; width: 80px; height: 9px; right: auto; bottom: auto; border: 1px none rgb(0, 0, 0); transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) skewX(-24deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(39, 222, 252); background-size: 100% 100%;"></div></div><img id="Stage_copy01" src="./copy01.png" class="Stage_copy01_id" style="position: absolute; margin: 0px; opacity: 0; left: 24px; top: 85px; width: auto; height: auto; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px;"><img id="Stage_copy02" src="./copy02.png" class="Stage_copy02_id" style="position: absolute; margin: 0px; opacity: 0; left: 17px; top: 99px; width: auto; height: auto; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px;"><img id="Stage_copy03" src="./copy03.png" class="Stage_copy03_id" style="position: absolute; margin: 0px; opacity: 0; left: 17px; top: 69px; width: auto; height: auto; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px;"><div id="Stage_cta" class="Stage_cta_id" style="position: absolute; margin: 0px; width: 152px; height: 31px; opacity: 0; left: 19px; top: 188px; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); z-index: 0;"><div id="Stage_cta_RectangleCopy4" class="Stage_cta_RectangleCopy4_id" style="position: absolute; margin: 0px; left: 0px; top: 3px; width: 152px; height: 27px; right: auto; bottom: auto; border-radius: 4px; border: 1px none rgb(0, 0, 0); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgb(212, 90, 50); background-size: 100% 100%;"></div><div id="Stage_cta_Rectangle" class="Stage_cta_Rectangle_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 152px; height: 27px; right: auto; bottom: auto; border-radius: 4px; border: 1px none rgb(0, 0, 0); transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(241, 119, 95); background-size: 100% 100%;"></div><div id="Stage_cta_ctaCopy" class="Stage_cta_ctaCopy_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 123px; height: 10px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(14px, 9px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/ctaCopy.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div></div><div id="Stage_logo" class="Stage_logo_id" style="position: absolute; margin: 0px; width: 300px; height: 250px; left: 0px; top: 0px; right: auto; bottom: auto; display: none; cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); z-index: 0;"><div id="Stage_logo_o" class="Stage_logo_o_id" style="position: absolute; margin: 0px; opacity: 1; left: 0px; top: 0px; width: 20px; height: 20px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(264px, -671px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/o.svg&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_logo_v" class="Stage_logo_v_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 19px; height: 20px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(241px, 198px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/v.svg&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_logo_v2" class="Stage_logo_v2_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 19px; height: 20px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(222px, 198px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/v.svg&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_logo_A" class="Stage_logo_A_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 28px; height: 29px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(192px, 190px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/a.svg&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div></div><div id="Stage_TAG" class="Stage_TAG_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 298px; height: 248px; right: auto; bottom: auto; border: 1px solid rgb(0, 0, 0); cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgba(192, 192, 192, 0); background-size: 100% 100%;"></div></div>
+
+</body></html>

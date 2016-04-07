@@ -1,0 +1,135 @@
+if (window.Adform) Adform._beforeScript = true;
+document.write('<scr' + 'ipt type="text/javascript" src="https://s1.adform.net/Banners/Elements/Files/31706/516645/pvt.js?domain=VANITYFAIR&placement=CONDESNAST2016_VANITYFAIR_USRUNOFSITE_LEADERBOARD_728X90&campaign=GLOBAL_CONDESNAST2016_H1&banner=DIFFERENCE_728x90_ENG&size=728x90&tagid=11517586"></scr' + 'ipt>');
+var ADFMediaURLs='';
+var ADF_clickTag='https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjst3qf6LpRXdsIjpoQywsS9j-0RTIGaZpaKiEih1CvGjj5tb0nyE6FBRdmVBUMmdOaitTEXiBObZqDQYWMOgpnh_NyasgYlM8KjVEanQifQBC4FgjnVI51xtAZp89Tre2nJYjw2taTEdETbB5uHRRfBT9vlxCl6eZy2Prf8i&sai=AMfl-YQm6-UcBDh7ErNRXof-YLfixnU0MX5Wh6gtBVaTgaXrR6A4kJ37jqxdlJghhQCXYq4CgdNVGYIh6w&sig=Cg0ArKJSzOIHC1rBNQhnEAE&urlfix=1&adurl=https://a1.adform.net/C/?bn=11517586;adfibeg=0;cdata=oJB-9G1XH-GcGZ-YykQX0mN0xeNDC_HGjJjjtqU0vYrmZiqQvKlKKH0PSUt0xnv84Uk-5TLpFLOVh3UQPI202NGime1ZiujcUCukm11AQeHhQW6FXjSrzw2;;CREFURL=http%3a%2f%2fwww.vanityfair.com%2fhollywood%2f2015%2f06%2fcaitlyn-jenner-bruce-cover-annie-leibovitz';
+var ADF_ClickEvent='https://a1.adform.net/CE/?bn=11517586';
+var ADFtagID='1x';
+var ADFafbanID='11517586';
+var FlashObjectID='FlashID1x';
+var ADFDomain='https://s2.adform.net/Banners/';
+var ADFDomainCDN='https://files.adform.net/Banners/';
+var ADFVideoCDN='rtmp://s1yx966tga68s8.cloudfront.net/cfx/st/';
+var ADFVideoCDNList=['rtmp://s1yx966tga68s8.cloudfront.net/cfx/st/'];
+var ADFBanVer='513';
+var ADFBanVerBak='0';
+var ADFbu=false;
+var ADFerrTimeout = 15*24*60*60*1000;
+var ADFTemplateVersion;
+var ADFClientSiteId;
+var ADFTemplateId;
+var ADFGroupId;
+var ADFbanID='13261579';
+var ADFmembID='987901';
+var ADFcmpgnID='528110';
+var ADFassetID='0';
+var ADFbanPlacID='1888510';
+var ADFUnloadID='8479345820209385470';
+var ADFGeoData='57;33;840';
+Adform=window.Adform||{};
+Adform.cache="571";
+Adform.locationInfo={Country: 'United States', Region: 'New York', City: 'New York', Latitude: '40.817030', Longitude: '-73.942470'};
+
+(function () {
+try{
+var i = Adform.ADFBannerUtils.getInstance()
+i.addBannerAttribute("1x", "bn", 11517586);
+i.addBannerAttribute("1x", "rotseqno", "1");
+i.addBannerAttribute("1x", "cookieID", "7651360482672677063");
+i.addBannerAttribute("1x", "smid", "0");
+i.addBannerAttribute("1x", "unloadID", "8479345820209385470");
+i.addBannerAttribute("1x", "height", 90);
+i.addBannerAttribute("1x", "width", 728);
+i.addBannerAttribute("1x", "clickEvent", "https://a1.adform.net/CE/?bn=11517586");
+i.addBannerAttribute("1x", "pm", "528110");
+i.addBannerAttribute("1x", "visibilityArea", [50]);
+i.addBannerAttribute("1x", "visibilityTime", [1]);
+i.addBannerAttribute("1x", "ms", "987901");
+i.addBannerAttribute("1x", "ban", "13261579");
+i.addBannerAttribute("1x", "stubFileURL", "");
+i.addBannerAttribute("1x", "serverTime", 1460005438901);
+i.addBannerAttribute("1x", "bannerVersion", "513");
+i.addBannerAttribute("1x", "bnpl", "1888510");
+i.addBannerAttribute("1x", "sendUnloadData", 1);
+i.addBannerAttribute("1x", "unloadScriptVersion", 13);
+i.addBannerAttribute("1x", "isEventsEnabled", 1);
+i.setBannerRegisteredStatus("1x");
+}catch(e){}
+})();
+
+
+<!--
+var ADFtagid1527149942 = (typeof(ADFafbanID)!="undefined") ? ADFafbanID : 0;
+var ADFclickTagString1527149942 = (typeof(ADF_clickTag)!="undefined") ? escape(ADF_clickTag) : escape('https://a1.adform.net/C/?bn='+ADFtagid1527149942);
+var ADFclickTagParameters1527149942 = (typeof(ADF_clickTagPars)!="undefined") ? escape(ADF_clickTagPars) : '';
+var ADFclickEventString = (typeof(ADF_ClickEvent) != "undefined") ? escape(ADF_ClickEvent) : escape('https://a1.adform.net/C/?bn='+ADFtagid1527149942+';bsqno=1;li=1;cset=');
+var FlashObjectID=(typeof(FlashObjectID)!="undefined") ? FlashObjectID : 'adftest';
+var ADFDomain=(typeof(ADFDomain)!="undefined") ? ADFDomain : '';
+var ADFDomainCDN=(typeof(ADFDomainCDN)!="undefined") ? ADFDomainCDN : '';
+var ADFVideoCDN=(typeof(ADFVideoCDN)!="undefined") ? ADFVideoCDN : '';
+var ADFClientSiteId=(typeof(ADFClientSiteId)!="undefined") ? ADFClientSiteId : '';
+var ADFTemplateVersion=(typeof(ADFTemplateVersion)!="undefined") ? ADFTemplateVersion : '1527149942';
+var ADFTemplateId=(typeof(ADFTemplateId)!="undefined") ? ADFTemplateId : '';
+var ADFGroupId=(typeof(ADFGroupId)!="undefined") ? ADFGroupId : '';
+var ADFGeoData=(typeof ADFGeoData != "undefined" || ADFGeoData != null) ? ADFGeoData : '0;0;0';
+var ADFBanVer=(typeof(ADFBanVer)!="undefined") ? ADFBanVer : '1527149942';
+var ADFBanVerBak=(typeof(ADFBanVerBak)!="undefined") ? ADFBanVerBak : '1527149942';
+var ADFtagID=(typeof(ADFtagID)!="undefined") ? ADFtagID : '1x';
+if (typeof(ADFbu)=="undefined") ADFbu=false;
+
+var ADFcmpgnID = (typeof(ADFcmpgnID) != "undefined") ? ADFcmpgnID : '0';
+var ADFmembID = (typeof(ADFmembID) != "undefined") ? ADFmembID : '0';
+var ADFbanID = (typeof(ADFbanID) != "undefined") ? ADFbanID : '0';
+var ADFbanPlacID = (typeof(ADFbanPlacID) != "undefined") ? ADFbanPlacID : '0';
+var ADFUnloadID = (typeof(ADFUnloadID) != "undefined") ? ADFUnloadID : '0';
+
+
+var ADFclickTagVariables1527149942 = 'clickTAG='+ADFclickTagString1527149942+';C=1'+ADFclickTagParameters1527149942+'&backupClickUrl='+ADFclickTagString1527149942+';C=2'+ADFclickTagParameters1527149942+'';
+if (ADFMediaURLs) ADFclickTagVariables1527149942 = ADFMediaURLs;
+
+
+
+if(typeof Adform == "undefined") {var Adform = {};};
+Adform.BannerData                    = {};
+Adform.Data                          = Adform.BannerData;
+Adform.RMBData                       = Adform.BannerData;
+Adform.RMBData.type                  = 'standard';
+Adform.RMBData.subtype               = 'rmb';
+Adform.BannerData.timestamp          = '201602181528027549';
+Adform.BannerData.ADFFlash           =  ADFDomain +'Elements/Files/32050/836139/836139.js?ADFassetID=836139&bv='+ADFBanVer;
+Adform.BannerData.ADFBuckup          =  ADFDomain +'Elements/Files/32050/673753.gif?bv='+ADFBanVerBak;
+Adform.BannerData.ADFBuckupClickURL  =  ADF_clickTag+';C=2';
+Adform.BannerData.width              = "728";
+Adform.BannerData.height             = "90";
+Adform.BannerData.ADFid              = ADFtagID;
+Adform.BannerData.ADFban             = (typeof(ADFafbanID)!="undefined") ? ADFafbanID : 0;
+Adform.BannerData.wmode              = "opaque";
+Adform.RMBData.landingPageTarget     = "_blank";
+Adform.BannerData.quality            = "Autohigh";
+Adform.BannerData.bannerAlign        = "";
+Adform.BannerData.clicktags          = 'cid='+ADFClientSiteId+'&geo='+ADFGeoData+'&gid='+ADFGroupId+'&tv='+ADFTemplateVersion+'&tid='+ADFTemplateId+'&domain='+ ADFDomain +'&bv='+ADFBanVer+'&ADFid='+ADFtagID+'&'+ADFclickTagVariables1527149942+'';
+Adform.BannerData.clicktags         += '&ADFcmpgnID='+ADFcmpgnID+'&ADFmembID='+ADFmembID+'&ADFbanID='+ADFbanID+'&ADFbanPlacID='+ADFbanPlacID+'&unloadID='+ADFUnloadID;
+Adform.BannerData.clicktags         += "&bn="+ADFtagid1527149942;
+Adform.BannerData.clicktags         += "&wmode=opaque";
+Adform.BannerData.clicktags         += "&evtBaseLink="+ADFclickEventString;
+
+Adform.BannerData.clicktags         += "&settingsXML=" +  ADFDomain + ADFbanID  + "/settings.xml?bv="+ADFBanVer;
+Adform.BannerData.clicktags         += "&ADFDomain=" + ( ADFDomain ).replace(/\/$/, "");
+
+
+Adform.RMBData.css =  ADFDomain  + "scripts/assets/css/Adform.RMB.css?bv="+ADFBanVer;
+Adform.RMBData.socializeURL = "";
+
+
+
+Adform.BannerList = Adform.BannerList || [];
+Adform.BannerList.push(Adform.BannerData);
+
+if (!Adform.RMB || !Adform.RMB.AdConstructor) {
+	// Load constructor script
+	document.write('<scr' + 'ipt type="text/javascript" src="'+ ADFDomain +'scripts/rmb/Adform.RMB.js?bv='+ Adform.cache +'"></scr' + 'ipt>');
+} else {
+	// Run loaded constructor
+	Adform.RMB.AdConstructor.build();
+}
+//-->
+

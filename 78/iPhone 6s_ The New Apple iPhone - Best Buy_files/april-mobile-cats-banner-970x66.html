@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0157)https://s3.amazonaws.com/medianetwork/House+and+MDF+Ads/BBY2016_febMobile_cats_A_desktop_970x66/153374-april-cats-banner/april-mobile-cats-banner-970x66.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>april-mobile-cats-banner-970x66</title>
+
+<style>
+	html, body {
+	  margin: 0px;
+	  padding: 0px;
+	}
+	#banner {
+	    position: absolute;
+	  	top: 0;
+	  	left: 0;
+	    width: 728px;
+	    height: 90px;
+	    color: white;
+	    cursor: pointer;
+		box-sizing: border-box;
+	}
+</style>
+
+<script src="./easeljs-0.8.1.min.js"></script>
+<script src="./tweenjs-0.6.1.min.js"></script>
+<script src="./movieclip-0.8.1.min.js"></script>
+<script src="./preloadjs-0.6.1.min.js"></script>
+<script src="./april-mobile-cats-banner-970x66.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+	ss = ss||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+loader.loadFile({src:"./april_mobile_cats_banner_970x66_atlas_.json", type:"spritesheet", id:"april_mobile_cats_banner_970x66_atlas_"}, true);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	var queue = evt.target;
+	ss["april_mobile_cats_banner_970x66_atlas_"] = queue.getResult("april_mobile_cats_banner_970x66_atlas_");
+	exportRoot = new lib.aprilmobilecatsbanner970x66();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4" marginwidth="0" marginheight="0">
+	<div id="banner">
+		<canvas id="canvas" width="970" height="66" style="background-color:#FFFFFF"></canvas>
+	</div>
+	<script type="text/javascript">	
+		document.getElementById("banner").addEventListener("mouseover",
+			function(){
+				document.rollOverFunction();
+	    	}
+		);
+		document.getElementById("banner").addEventListener("mouseout",
+			function(){
+				document.rollOutFunction();
+	    	}
+		);		
+		var clickTag = "";
+		document.getElementById("banner").addEventListener("click",
+			function(){
+				window.open(window.clickTag);
+			}
+		);
+	</script>
+
+</body></html>

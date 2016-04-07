@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://s0.2mdn.net/5167495/1456340193076/deploy/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+
+<meta name="ad.size" content="width=300,height=600">
+<title>300x600-Standards-NA_v2</title>
+<link href="./style.css" rel="stylesheet" type="text/css">
+<script src="./Enabler.js"></script>
+<script src="./CSSPlugin.min.js"></script>
+<script src="./TweenLite.min.js"></script>
+</head>
+
+<body>
+	<script>var clickTag = 'http://google.com';</script>
+	<div id="ad_content" class=" bg-color2" style="display: block;">
+    	<img id="bgImg" src="./img2.jpg" class="img" style="top: 0px; left: -130px; height: 545px; width: auto;">
+        <div id="f1_txt" class="sprite f1_txt" style="left: 0px; width: 0px;"></div>
+        <div id="f5-holder" class="f5-holder" style="left: 0px; opacity: 0;">
+        	<div id="f5_txt" class="sprite f5_txt" style="left: 0px;"></div>
+        </div>
+        <div id="line" class="sprite line" style="left: -2px;"></div>
+        <div id="f6_txt" class="sprite f6_txt" style="opacity: 1;"></div>
+        <div class="cta">
+            <div id="f6_cta" class="sprite f6_cta" style="opacity: 1;"></div>
+            <div id="f6_cta_arrow" class="sprite f6_cta_arrow"></div>
+        </div>
+        <div id="logo" class="sprite logo" style="top: 545px;"></div>
+    </div>
+	<script src="./main(1).js"></script>
+
+</body></html>

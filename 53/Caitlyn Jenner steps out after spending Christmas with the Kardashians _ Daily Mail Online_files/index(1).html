@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://s0.2mdn.net/4158761/1459275370996/od-awareness-300x250/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+  
+  <meta name="ad.size" content="width=300,height=250">
+  <title>OD - Awareness</title>
+  <style>
+img {
+	border: none;
+}
+body, body * {
+	vertical-align: baseline;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+.container {
+	position: absolute;
+	margin: 0px;
+	border: 1px solid black;
+	overflow: hidden;
+	width: 300px;
+	height: 250px;
+	box-sizing: border-box;
+}
+#bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	visibility: hidden;
+	z-index: 1;
+}
+#youdrive, #packed {
+	position: absolute;
+	top: 168px;
+	left: 16px;
+	visibility: hidden;
+	z-index:2;
+}
+#wedrive {
+	position: absolute;
+	top: 133px;
+	left: 16px;
+	visibility: hidden;
+	z-index:2;
+}
+#logo {
+	position: absolute;
+	top: 50px;
+	left: 18px;
+	visibility: hidden;
+	z-index:3;
+}
+#logo1 {
+	position: absolute;
+	top: 19px;
+	left: 18px;
+	visibility: hidden;
+	z-index:3;
+}
+#selfmove {
+	position: absolute;
+	top: 142px;
+	left: 53px;
+	visibility: hidden;
+	z-index:3;
+}
+
+#cta {
+	position: absolute;
+	background-image: url('cta.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 83px;
+	height: 21px;
+	top: 192px;
+	left: 105px;
+	visibility: hidden;
+	z-index: 4;
+	padding: 0px;
+	margin: 0px;
+}
+#cta:hover {
+	background-position: 0px -22px;
+}
+
+</style>
+  <script type="text/javascript" src="./tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+  <script type="text/javascript">
+    var clickTag = "https://ad.doubleclick.net/ddm/clk/295239814;122219969;t";
+  </script>
+  </head>
+  <body>
+<a href="javascript:window.open(window.clickTag)">
+  <div class="container"><img src="./bg.jpg" id="bg" style="visibility: inherit; opacity: 1;"><img src="./logo.png" id="logo" style="visibility: inherit; opacity: 1;"><img src="./youdrive.png" id="youdrive" style="visibility: hidden; opacity: 0;"><img src="./wedrive.png" id="wedrive" style="visibility: hidden; opacity: 0;"><img src="./packed.png" id="packed" style="visibility: hidden; opacity: 0;"><img src="./selfmove.png" id="selfmove" style="visibility: inherit; opacity: 1;"><img src="./logo1.png" id="logo1" style="visibility: hidden; opacity: 0;"><div id="cta" style="visibility: inherit; opacity: 1;"></div>
+  </div>
+  </a> 
+<script>
+  //animation timeline
+var tl = new TimelineLite();
+
+function timeLineAnim() {
+	//tl.set(bg, {scale:1.3});
+	tl.add("intro");
+	tl.to(bg, .25, {autoAlpha:1, ease: Back.easeOut.config(1)},"intro");
+	tl.to(logo1, .25, {autoAlpha:1, ease: Back.easeOut.config(1)},"intro");
+	//tl.to(logo, .25, {autoAlpha:1, ease: Back.easeOut.config(1)},"intro");
+	//tl.fromTo(bg, 1.25, {scale: 1.2},{scale: 1},"intro");
+	
+	tl.to(youdrive, .5, {autoAlpha:1},"intro");
+	tl.to(youdrive, .5, {autoAlpha:0},"+=2");
+	
+	tl.to(wedrive, .5, {autoAlpha:1});
+	tl.to(wedrive, .5, {autoAlpha:0},"+=3");
+	
+	tl.to(packed, .5, {autoAlpha:1});
+	
+	tl.add("packedOut","+=2");
+	tl.to(packed, .5, {autoAlpha:0},"packedOut");
+	tl.to(logo1, .5, {autoAlpha:0},"packedOut");
+	//tl.to(logo, .5, {autoAlpha:0},"packedOut");
+	
+	
+	
+	tl.add("final");
+	//tl.set(logo, {top:17},"final");
+	tl.to(logo, .5, {autoAlpha:1, ease: Back.easeOut.config(1)},"final");
+	tl.to(selfmove, .5, {autoAlpha:1, ease: Back.easeOut.config(1)},"final");
+	tl.to(cta, 1, {autoAlpha:1, ease: Power4.easeOut},"final");
+	
+	
+}
+window.addEventListener('load', timeLineAnim);
+</script>
+
+</body></html>

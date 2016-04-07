@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!-- saved from url=(0145)https://s0.2mdn.net/ads/richmedia/studio/pv2/38042147/20150826115809457/index.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=YPlxIn6Vxw&t=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>CableVision</title>
+	<link href="./css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">
+
+		@font-face
+		{
+		    font-family: "Regular-Bold";
+		    src: url('Regular-Bold.ttf'),
+		         url("Regular-Bold.woff"),
+		         url("Regular-Bold.eot"); /* IE9 */
+		}
+
+		html {
+ 			-webkit-font-smoothing: antialiased;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		    font-family: "Regular-Bold", "Open Sans", sans-serif;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		@media
+		only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		only screen and ( min-device-pixel-ratio: 1.25),
+		only screen and ( min-resolution: 200dpi),
+		only screen and ( min-resolution: 1.25dppx)
+		{
+		   -webkit-font-smoothing: subpixel-antialiased;
+		}
+
+		div {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+		}
+
+		#mainHolder {
+			border: 1px solid #000000;
+			width: 728px;
+			height: 90px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			/* background: #43d1b9; */
+			cursor: pointer;
+			overflow: hidden;
+		    -webkit-touch-callout: none;
+		    -webkit-user-select: none;
+		    -khtml-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		}
+
+		#logo {
+			left: 720px;
+			top: 100px;
+		}
+
+		#icon0 {
+			left: 174px;
+			top: 100px;
+			opacity: 0;
+		}
+
+		#icon1 {
+			left: 232px;
+			top: -60px;
+			opacity: 0;
+		}
+
+		#icon2 {
+			left: 291px;
+			top: 100px;
+			opacity: 0;
+		}
+
+		.f0 {
+			font-size: 12pt;
+			text-align: left;
+			width: 160px;
+			color: #ffffff;
+		}
+
+		#f0_batch0 {
+			left: -728px;
+			top: 0px;
+			width: 728px;
+		}
+
+		#f0_l0 {
+			left: 0px;
+			top: 7px;
+		}
+
+		#f0_l1 {
+			left: 0px;
+			top: 26px;
+		}
+
+		#f0_l2 {
+			left: 0px;
+			top: 45px;
+		}
+
+		#f0_l3 {
+			left: 0px;
+			top:  63px;
+		}
+
+		.f1 {
+			font-size: 16pt;
+			line-height: 16pt;
+			text-align: left;
+			width: 250px;
+			color: #ffffff;
+		}
+
+		#f1_l0 {
+			left: -250px;
+			top: 7px;
+		}
+
+		#f1_l1 {
+			left: -250px;
+			top: 32px;
+		}
+
+		#f1_l2 {
+			left: -250px;
+			top: 58px;
+		}
+
+		.f1b {
+			font-size: 12pt;
+			text-align: left;
+			left: 367px;
+			width: 250px;
+			color: #ffffff;
+		}
+
+		#f1_l3 {
+			top: 110px;
+		}
+
+		#f1_l4 {
+			top: 127px;
+		}
+
+		#f1_l5 {
+			top: 143px;
+		}
+
+		#f1_l6 {
+			top: 162px;
+		}
+
+		.f2 {
+			left: 156px;
+			font-size: 12pt;
+			text-align: left;
+			width: 728px;
+			color: #ffffff;
+		}
+
+		#f2_l0 {
+			top: 158px;
+			color: #AF3AAC;
+			font-size: 17pt;
+		}
+
+		#f2_l1 {
+			top: 190px;
+		}
+
+		#f2_l2 {
+			top: 203px;
+			color: #AF3AAC;
+		}
+
+		#f2_l3 {
+			top: 225px;
+		}
+
+		.f3 {
+			font-size: 12pt;
+			left: 156px;
+			text-align: left;
+			width: 728px;
+			color: #ffffff;
+		}
+
+		#f3_l0 {
+			top: 156px;
+			color: #AF3AAC;
+			font-size: 16pt;
+		}
+
+		#f3_l1 {
+			top: 182px;
+		}
+
+		#f3_l2 {
+			top: 203px;
+			color: #AF3AAC;
+		}
+
+		#f3_l3 {
+			top: 225px;
+		}
+
+		.f4 {
+			font-size: 12pt;
+			left: 156px;
+			text-align: left;
+			width: 728px;
+			color: #ffffff;
+		}
+
+		#f4_l0 {
+			top: 156px;
+			color: #AF3AAC;
+			font-size: 16pt;
+		}
+
+		#f4_l1 {
+			top: 182px;
+		}
+
+		#f4_l2 {
+			top: 203px;
+			color: #AF3AAC;
+		}
+
+		#f4_l3 {
+			top: 223px;
+		}
+
+		#f4_l4 {
+			top: 242px;
+		}
+
+		.f5a {
+			font-size: 17pt;
+			left: -250px;
+			text-align: left;
+			width: 250px;
+			color: #AF3AAC;
+		}
+
+		#f5_l0 {
+			top: 7px;
+		}
+
+		#f5_l1 {
+			top: 32px;
+		}
+
+		#f5_l2 {
+			top: 58px;
+		}
+
+		.f5b {
+			font-size: 10pt;
+			left: 443px;
+			text-align: left;
+			width: 700px;
+			color: #ffffff;
+		}
+
+		#f5_l3 {
+			top: 122px;
+		}
+
+		#f5_l4 {
+			top: 137px;
+		}
+
+		#f5_l5 {
+			top: 150px;
+		}
+
+		#f5_l6 {
+			top: 163px;
+		}
+
+		.f5c {
+			color: #ffffff;
+		}
+
+
+		#f5_urgency {
+			font-size: 9pt;
+			left: 539px;
+			top: -80px;
+			width: 90px;
+			text-align: right;
+		}
+
+		#f5_CTA {
+			font-size: 8pt;
+			left: 636px;
+			top: -80px;
+			text-align: left;
+			width: 700px;
+			color: #ffffff;
+		}
+
+		#btnCTA {
+			left: 615px;
+			top: -83px;
+		}
+
+		#f5_dollar {
+			font-size: 20pt;
+			left: 305px;
+			top: 124px;
+			width: 500px;
+			color: #AF3AAC;
+		}
+
+		#f5_numA {
+			font-size: 46pt;
+			left: 318px;
+			top: 125px;
+			width: 500px;
+			color: #AF3AAC;
+		}
+
+		#f5_numB {
+			font-size: 26pt;
+			left: 385px;
+			top: 127px;
+			width: 500px;
+			color: #AF3AAC;
+		}
+
+		#f5_numNote {
+			font-size: 8pt;
+			left: 387px;
+			top: 156px;
+			width: 500px;
+			color: #AF3AAC;
+		}
+
+		#replay {
+			left: 800px;
+			top: 4px;
+		}
+
+		#bgClickArea {
+			top: 0px;
+			left: 0px;
+			width: 728px;
+			height: 90px;
+		}
+
+		#guide1 {
+			opacity: 0.5;
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+
+	<div id="mainHolder" style="background-color: rgb(67, 209, 185);">
+		<!-- <div id="guide1"><img src="guide6.png" /></div> -->
+
+		<div id="f0_img" style="opacity: 0;"></div>
+        <div id="f0_batch0" style="left: 12px; opacity: 0;">
+	        <div id="f0_l0" class="f0">Cord</div>
+	        <div id="f0_l1" class="f0">Cutters</div>
+	        <div id="f0_l2" class="f0">Rejoice</div>
+	        <div id="f0_l3" class="f0"></div>
+        </div>
+
+        <div id="f1_l0" class="f1" style="font-size: 16pt; left: 17px; opacity: 0;">Free TV, internet</div>
+        <div id="f1_l1" class="f1" style="left: 17px; opacity: 0;">&amp; Freewheel</div>
+        <div id="f1_l2" class="f1" style="left: 17px; opacity: 0;">$34.90 mo</div>
+
+        <div id="f1_l3" class="f1b" style="top: 10px; opacity: 0;">Cut the cord.</div>
+        <div id="f1_l4" class="f1b" style="top: 27px; opacity: 0;">Cut the cost.</div>
+        <div id="f1_l5" class="f1b" style="top: 43px; opacity: 0;"></div>
+        <div id="f1_l6" class="f1b" style="top: 62px; opacity: 0;"></div>
+
+        <div id="f2_l0" class="f2" style="color: rgb(170, 80, 170); top: 6px; opacity: 0;">Internet</div>
+        <div id="f2_l1" class="f2" style="top: 27px; opacity: 0;">Unlimited WiFi</div>
+        <div id="f2_l2" class="f2" style="color: rgb(170, 80, 170); top: 44px; opacity: 0;">plus</div>
+        <div id="f2_l3" class="f2" style="top: 61px; opacity: 0;">Free Smart Router</div>
+
+        <div id="f3_l0" class="f3" style="color: rgb(170, 80, 170); top: 6px; opacity: 0;">Broadcast TV</div>
+        <div id="f3_l1" class="f3" style="top: 27px; opacity: 0;">Free Digital Antenna</div>
+        <div id="f3_l2" class="f3" style="color: rgb(170, 80, 170); top: 44px; opacity: 0;">plus</div>
+        <div id="f3_l3" class="f3" style="top: 61px; opacity: 0;">Up to 40 channels</div>
+
+        <div id="f4_l0" class="f4" style="color: rgb(170, 80, 170); top: 6px; opacity: 0;">Freewheel</div>
+        <div id="f4_l1" class="f4" style="top: 27px; opacity: 0;">All WiFi device</div>
+        <div id="f4_l2" class="f4" style="color: rgb(170, 80, 170); top: 44px; opacity: 0;">plus</div>
+        <div id="f4_l3" class="f4" style="top: 61px; opacity: 0;">talk, text, data</div>
+        <div id="f4_l4" class="f4" style="opacity: 0;"></div>
+
+		<div id="f5_l0" class="f5a" style="color: rgb(170, 80, 170); left: 19px;">Free TV,</div>        
+		<div id="f5_l1" class="f5a" style="color: rgb(170, 80, 170); left: 19px;">internet &amp;</div>        
+		<div id="f5_l2" class="f5a" style="color: rgb(170, 80, 170); left: 19px;">Freewheel</div>
+
+		<div id="f5_dollar" style="color: rgb(170, 80, 170); top: 11px;">$</div>
+		<div id="f5_numA" style="color: rgb(170, 80, 170); top: 12px;">34</div>
+		<div id="f5_numB" style="color: rgb(170, 80, 170); top: 14px;">90</div>
+		<div id="f5_numNote" style="color: rgb(170, 80, 170); top: 43px;">mo</div>
+
+		<div id="f5_l3" class="f5b" style="top: 19px;"><b>Includes free:</b></div>
+		<div id="f5_l4" class="f5b" style="top: 34px;">Digital Antenna</div>
+		<div id="f5_l5" class="f5b" style="top: 47px;">Smart Router</div>
+		<div id="f5_l6" class="f5b" style="top: 60px;">WiFi Access</div>
+
+		<div id="icon0" style="height: 60px; opacity: 1; top: 20px; left: 131px;"><img id="imgIcon0" src="./6741_20150526063444802_internet_icon_300x250.png" height="49" style="height: 49px; opacity: 1;"></div>
+		<div id="icon1" style="height: 60px; opacity: 1; top: 20px; left: 186px;"><img id="imgIcon1" src="./6741_20150526063448508_tv_icon_300x250.png" height="49" style="height: 49px; opacity: 1;"></div>
+		<div id="icon2" style="height: 60px; opacity: 1; top: 20px; left: 242px;"><img id="imgIcon2" src="./6741_20150615081613870_freewheel_icon_300x250-cool.png" height="49" style="height: 49px;"></div>
+		<div id="logo" style="top: 44px; left: 577px;"><img id="imgLogo" src="./6741_20150812073706681_optimum-logo_728x90.png" width="120"></div>
+
+		<div id="f5_urgency" class="f5c" style="top: 20px;">866.980.3325</div>
+
+		<div id="bgClickArea"></div>
+		<div id="ctaClickArea">
+			<div id="btnCTA" style="top: 18px;"><svg version="1.1" id="imgBtnCTA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="99px" height="27px" viewBox="0 0 99 27" enable-background="new 0 0 99 27" xml:space="preserve" style="height: 18px;">
+<path id="imgBtnCTAFill" fill-rule="evenodd" clip-rule="evenodd" fill="#AF3AAC" d="M98.8,7.95v10.6c-0.033,0.5-0.066,0.967-0.1,1.4
+	c-0.066,0.434-0.167,0.85-0.3,1.25c-0.2,0.767-0.483,1.434-0.851,2c-0.399,0.566-0.833,1.05-1.3,1.45
+	c-0.5,0.366-0.983,0.666-1.45,0.899c-0.533,0.233-1.017,0.434-1.45,0.601c-0.5,0.133-0.933,0.233-1.3,0.3l-0.899,0.1H7.95
+	c-0.467,0-0.934-0.017-1.4-0.05c-0.433-0.1-0.85-0.184-1.25-0.25c-0.733-0.233-1.383-0.55-1.95-0.95
+	c-0.6-0.399-1.067-0.816-1.4-1.25c-0.4-0.5-0.717-0.983-0.95-1.45c-0.267-0.533-0.467-1.05-0.6-1.55
+	c-0.167-0.467-0.267-0.883-0.3-1.25L0,18.9V7.95C-0.033,7.483,0,7.033,0.1,6.6c0.033-0.467,0.117-0.9,0.25-1.3
+	C0.517,4.567,0.8,3.917,1.2,3.35c0.4-0.567,0.85-1.033,1.35-1.4C2.983,1.55,3.467,1.233,4,1c0.467-0.267,0.95-0.45,1.45-0.55
+	c0.5-0.2,0.917-0.317,1.25-0.35l84.1-0.05C91.3-0.017,91.767,0,92.2,0.1c0.434,0.033,0.85,0.117,1.25,0.25
+	c0.767,0.167,1.434,0.45,2,0.85c0.533,0.4,1,0.85,1.399,1.35c0.4,0.434,0.7,0.917,0.9,1.45c0.267,0.5,0.467,0.983,0.6,1.45
+	c0.134,0.5,0.25,0.917,0.351,1.25L98.8,7.95z"></path>
+</svg></div>
+			<div id="f5_CTA" class="f5c" style="top: 20px;">Get started</div>
+		</div>
+
+		<div id="replay" style="opacity: 1; left: 707px;"><img id="imgReplay" src="./replay.svg" height="14"></div>
+	</div>
+
+	<!-- GSAP -->
+	<script src="./TweenMax.min.js"></script>
+	<!-- Studio Enabler -->
+	<script src="./Enabler_01_79.js"></script>
+
+<!--
+ * Dynamic Content Enable code for Profile: 1054597
+ *
+ * The following code initializes the following dynamic variables for
+ * development testing and live serving of Fields associated to the above profile
+-->
+
+<!-- DynamicContent Start: HTML5 invocation code. -->
+<script type="text/javascript">
+
+// Dynamic Content variables and sample values
+    Enabler.setProfileId(1054597);
+    var devDynamicContent = {};
+
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1= [{}];
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0]._id = 0;
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Unique_ID = 1;
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Reporting_Label = "GM Launch 41415";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Start_Date = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Start_Date.RawValue = "3/31/0205";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Start_Date.UtcValue = -55690301222000;
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].End_Date = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].End_Date.RawValue = "12/31/2015";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].End_Date.UtcValue = 1451548800000;
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Template = "originals";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].General_Hex_Control = "#AA50AA";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Hex_Band = "#43D1B9";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Logo_URL = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Logo_URL.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Logo_URL.Url = "https://s0.2mdn.net/ads/richmedia/studio/37796767/6741_20150812073700897_optimum logo_160x600.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame1_Background_Image = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame1_Background_Image.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame1_Background_Image.Url = "https://s0.2mdn.net/ads/richmedia/studio/36118765/6741_20150326073158190_Two-Timed-Image_160wide.jpg";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame1_Text = "Stop Paying^twice^for internet^access";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame1_Fontsizes = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame1_Text_Override_Image = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_TV = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_TV.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_TV.Url = "https://s0.2mdn.net/ads/richmedia/studio/36118564/6741_20150326073153196_TV-175wide.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_Phone = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_Phone.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_Phone.Url = "https://s0.2mdn.net/ads/richmedia/studio/36123463/6741_20150326073146517_Phone-60wide.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_Tablet = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_Tablet.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Image_Tablet.Url = "https://s0.2mdn.net/ads/richmedia/studio/36118563/6741_20150326073149721_Tablet-150.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Text = "Get TV, phone and internet^$84.95^mo\/2yrs.^At home and^on the go^with no mobile^data fees.";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Fontsizes = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame2_Text_Override_Image = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame3_Image = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame3_Image.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame3_Image.Url = "https://s0.2mdn.net/ads/richmedia/studio/36118564/6741_20150326073153196_TV-175wide.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame3_Text = "TV^Over 260 channels^plus^Free Multi-Room DVR";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame3_Fontsizes = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame3_Text_Override_Image = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame4_Image = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame4_Image.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame4_Image.Url = "https://s0.2mdn.net/ads/richmedia/studio/36123463/6741_20150326073146517_Phone-60wide.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame4_Text = "Phone^over 20 calling features^plus^Free 411";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame4_Fontsizes = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame4_Text_Override_Image = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame5_Image = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame5_Image.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame5_Image.Url = "https://s0.2mdn.net/ads/richmedia/studio/36118563/6741_20150326073149721_Tablet-150.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame5_Text = "Internet^Unlimited access to over 1 million WiFi hotspots^plus^free speed upgrade";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame5_Fontsizes = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame5_Text_Override_Image = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame6_Image = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame6_Image.Type = "file";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame6_Image.Url = "https://s0.2mdn.net/ads/richmedia/studio/36118563/6741_20150326073149721_Tablet-150.png";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame6_Text = "Get the^Optimum^Triple Play^84^95^mo\/2yrs.^<b>Includes free:<\/b>^Multi-Room DVR for 1yr.^Speed Upgrade for ^6 mos. Smart Router^1-866-213-0265^Get started";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame6_Fontsizes = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Frame6_Text_Override_Image = "";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Exit_URL = {};
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Exit_URL.Url = "http://www.optimum.com/order/triple_play.jsp?s_cid=d-_-phd-_-15gmtpdco8495-_-51414-_-123114-_-p-_-a-_-pd&bsp=gmdocv2";
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Active = true;
+    devDynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Default = true;
+    Enabler.setDevDynamicContent(devDynamicContent);
+
+</script>
+
+<!--
+ * You may access the variables in the following manner
+ * AFTER the Studio Enabler is initialized.
+ * var Unique_ID = dynamicContent.CablevisionResidentialDCOAUG2015_Sheet1[0].Unique_ID;
+ * Note: be sure to use "dynamicContent", not "devDynamicContent"
+-->
+	
+	<script src="./main.js"></script>
+
+
+</body></html>

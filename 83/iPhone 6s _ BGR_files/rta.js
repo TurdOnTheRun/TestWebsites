@@ -1,0 +1,1 @@
+crtg_content = ''; (function(){document.cookie = 'crtg_rta=' + escape(crtg_content) + '; path=/; expires=Sat, 07 May 2016 05:15:19 GMT; domain=bgr.com';})();

@@ -1,0 +1,240 @@
+/* = Browser Reset
+-----------------------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* /Browser Reset */
+
+
+
+
+
+/* = General
+-----------------------------------------------------------------------------*/
+.panel {
+	width: 300px;
+	height: 600px;
+	overflow: hidden;
+}
+#banner div,
+#banner img {
+	position: absolute;
+}
+img, video, svg {
+	display: block; /* now it doesn't adhere to line-height anymore */
+}
+
+#frame {
+	box-sizing: border-box;
+	border: 1px solid #000;
+	pointer-events: none;
+}
+
+
+/* ----- General Navigation ----- */
+
+.mainClickTag {
+	cursor: pointer;
+	background-color: white; opacity: 0; /*IE 10 make clickable fix*/
+}
+
+.ctaBtn {
+	cursor: pointer;
+}
+.ctaBtnOver {
+	display: none;
+}
+
+/* remove iPhone video play button */
+video::-webkit-media-controls-start-playback-button {
+	display: none !important;
+	-webkit-appearance: none;
+}
+
+/* /General */
+
+
+
+/* VIDEO Panel
+-----------------------------------------------------------------------------*/
+
+#vid_panel {
+	visibility: hidden; /* = Firefox fix ("display:none" not working with svg/tweenmax) */
+	background-color: #fff;
+}
+#vid_vid, #vid_vid2 {
+	display: none;
+}
+
+#vid_txt {
+	top: 25px;
+	left: 46px;
+}
+
+#vid_tt {
+	top: 48px;
+	left: 15px;
+}
+
+#vid_date {
+	top: 500px;
+	left: 31px;
+}
+
+#vid_mobileStatic {
+	display: none;
+}
+
+.gen_loader {
+	top: 50%;
+	left: 50%;
+	margin: -13px 0 0 -10px;
+	display: none;
+}
+
+#vid_ctaBtn1, #vid_ctaBtn1over  {
+	left: 64px;
+	bottom: 28px;
+}
+
+/* VIDEO player
+-----------------------------*/
+#vid_cont {
+	top: 123px;
+	background-color: #000;
+}
+#vid_vidNav {
+	display: none;
+	top: 126px;
+	left: 3px;
+}
+#vid_pauseBtn,
+#vid_playBtn,
+#vid_audioOffBtn,
+#vid_audioOnBtn,
+#vid_clickForSoundBtn {
+	width: 22px;
+	height: 22px;
+	background: url("vid_buttons.png") no-repeat;
+	cursor: pointer;
+}
+#vid_audioOnBtn {
+	background-position: 2px 2px;
+}
+#vid_audioOffBtn {
+	background-position: 2px -22px;
+}
+#vid_pauseBtn {
+	left: 21px;
+	background-position: -19px 1px;
+}
+#vid_playBtn {
+	left: 21px;
+	background-position: -19px -22px;
+	visibility: hidden;
+}
+#vid_clickForSoundBtn {
+	top: 123px;
+	width: 300px;
+	height: 30px;
+	background-position: 70px -44px;
+	background-color: rgba(0,0,0,0.4);
+	display: none;
+}
+
+#vid_overlayPlayBtn {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: rgba(255,255,255,0.75);
+	border-radius: 100%;
+	top: 50%;
+	left: 50%;
+	margin: -35px 0 0 -35px;
+	display: none;
+}
+
+#vid_overlayPlayIcon {
+	position: relative;
+	top: 17px;
+	left: 35%;
+	width: 0;
+	height: 0;
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	border-left: 28px solid rgba(111, 111, 111, 0.8);
+}
+/* /VIDEO Panel */
+
+
+
+/* END Panel
+-----------------------------------------------------------------------------*/
+#end_panel {
+	background-color: #fff;
+	visibility: hidden; /* = Firefox fix ("display:none" not working with svg/tweenmax) */
+}
+
+#end_bg {
+	left: 5px;
+	top: 118px;
+}
+#end_txt {
+	top: 24px;
+	left: 46px;
+}
+#end_tt {
+	top: 47px;
+	left: 15px;
+}
+#end_date {
+	bottom: 75px;
+	left: 31px;
+}
+
+#end_ctaBtn1, #end_ctaBtn1over  {
+	left: 64px;
+	bottom: 28px;
+}
+
+#end_replayBtn {
+	top: 2px;
+	left: 3px;
+	width: 25px;
+	height: 25px;
+	background: url("vid_buttons.png") no-repeat;
+	cursor: pointer;
+	background-position: -42px -0px;
+}
+/* /END Panel */
+

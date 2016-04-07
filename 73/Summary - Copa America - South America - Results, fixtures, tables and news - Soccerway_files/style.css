@@ -1,0 +1,379 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main-panel {
+	position: absolute;
+}
+
+/*   Collapsed Panel   */
+#collapsed-panel {
+	
+}
+
+/*   Expanded Panel   */
+#expanded-panel{
+	
+}
+
+.alphaed {
+	opacity: 0;
+	display: inline-block;
+}
+
+.cta {
+	cursor: pointer;
+	z-index: 100;
+	position: absolute;
+}
+
+.col-full {
+	
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.centered {
+	text-align: center;
+}
+
+.free {
+	position: absolute;
+}
+
+.exp-full {
+	
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.centered {
+	text-align: center;
+}
+
+.bg {
+	position: relative;
+	background-color: #000;
+}
+
+.exit {
+	z-index: 75;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+#bg-exp-exit {
+	
+}
+
+
+/*  Size Specific    */
+img {border: none; }
+a img {border: 0px; }
+
+a {
+	border: none;
+	outline: none;
+}
+.a {
+	position: absolute;
+}
+.r {
+	position: relative;
+}
+.o {
+	overflow: hidden;
+}
+
+#cover {
+	background-color:#000000; 
+	width:728px; 
+	height:90px; 
+	z-index:9;
+}
+
+#bannerBg {
+	background-color:#000000;
+	background-image:url(../images/bg.jpg); 
+	width:726px; 
+	height:88px; 
+	z-index:1;
+}
+#logo {
+	background-image:url(../images/logo.png); 
+	background-repeat:no-repeat; 
+	width:41px; 
+	height:34px; 
+	z-index:8;
+	left: 20px;
+	top: 21px;
+}
+
+#logoM {
+	background-image:url(../images/logoM.png); 
+	background-repeat:no-repeat; 
+	width:78px; 
+	height:54px; 
+	z-index:8;
+	left: 76px;
+	top: 7px;
+}
+
+#legal {
+	background-image:url(../images/legal.png); 
+	background-repeat:no-repeat; 
+	width:442px; 
+	height:9px; 
+	z-index:8;
+	left: 146px;
+	top: 80px;
+}
+
+#t1 {
+	background-image:url(../images/t1.png); 
+	background-repeat:no-repeat; 
+	width:229px; 
+	height:28px; 
+	z-index:8;
+	left: 250px;
+	top: 29px;
+}
+
+
+#t2 {
+	background-image:url(../images/t2.png); 
+	background-repeat:no-repeat; 
+	width:295px; 
+	height:52px; 
+	z-index:8;
+	left: 226px;
+	top: 15px;
+}
+
+#t3 {
+	background-image:url(../images/t3.png); 
+	background-repeat:no-repeat; 
+	width:257px; 
+	height:29px; 
+	z-index:8;
+	left: 235px;
+	top: 29px;
+}
+
+#t4 {
+	background-image:url(../images/t4.png); 
+	background-repeat:no-repeat; 
+	width:158px; 
+	height:25px;
+	left: 285px;
+	top:27px; 
+	z-index:8;
+}
+
+#t5 {
+	background-image:url(../images/t5.png); 
+	background-repeat:no-repeat; 
+	width:257px; 
+	height:29px;
+	left: 182px;
+	top:29px; 
+	z-index:8;
+}
+
+
+
+#food1 {
+	background-image:url(../images/food1.png); 
+	background-repeat:no-repeat; 
+	width:179px; 
+	height:90px; 
+	z-index:5;
+	left: 550px;
+	top: 0px;
+}
+
+
+
+#moneypile {
+	background-image:url(../images/moneypile.png); 
+	background-repeat:no-repeat; 
+	width:139px; 
+	height:35px; 
+	z-index:4;
+	left: 11px;
+	top: 55px;
+}
+
+
+
+#money1a {
+	background-image:url(../images/money1.png); 
+	background-repeat:no-repeat; 
+	width:60px; 
+	height:59px; 
+	z-index:7;
+	left: 188px;
+	top: -80px;
+}
+
+#money1b {
+	background-image:url(../images/money1.png); 
+	background-repeat:no-repeat; 
+	width:60px; 
+	height:59px; 
+	z-index:7;
+	left: 188px;
+	top: -80px;
+}
+
+#money1c {
+	background-image:url(../images/money1.png); 
+	background-repeat:no-repeat; 
+	width:60px; 
+	height:59px; 
+	z-index:7;
+	left: 170px;
+	top: -80px;
+}
+
+#money1d {
+	background-image:url(../images/money1.png); 
+	background-repeat:no-repeat; 
+	width:60px; 
+	height:59px; 
+	z-index:7;
+	left: 160px;
+	top: -80px;
+}
+
+#money2a {
+	background-image:url(../images/money2.png); 
+	background-repeat:no-repeat; 
+	width:40px; 
+	height:47px; 
+	z-index:7;
+	left: 180px;
+	top: -60px;
+}
+
+#money2b {
+	background-image:url(../images/money2.png); 
+	background-repeat:no-repeat; 
+	width:40px; 
+	height:47px; 
+	z-index:7;
+	left: 170px;
+	top: -60px;
+}
+
+#money2c {
+	background-image:url(../images/money2.png); 
+	background-repeat:no-repeat; 
+	width:40px; 
+	height:47px; 
+	z-index:7;
+	left: 178px;
+	top: -60px;
+}
+
+#money2d {
+	background-image:url(../images/money2.png); 
+	background-repeat:no-repeat; 
+	width:40px; 
+	height:47px; 
+	z-index:7;
+	left: 180px;
+	top: -60px;
+}
+#money3a {
+	background-image:url(../images/money3.png); 
+	background-repeat:no-repeat; 
+	width:33px; 
+	height:26px; 
+	z-index:7;
+	left: 199px;
+	top: -40px;
+}
+
+#money3b {
+	background-image:url(../images/money3.png); 
+	background-repeat:no-repeat; 
+	width:33px; 
+	height:26px; 
+	z-index:7;
+	left: 160px;
+	top: -40px;
+}
+
+#money3c {
+	background-image:url(../images/money3.png); 
+	background-repeat:no-repeat; 
+	width:33px; 
+	height:26px; 
+	z-index:7;
+	left: 180px;
+	top: -40px;
+}
+
+#money3d {
+	background-image:url(../images/money3.png); 
+	background-repeat:no-repeat; 
+	width:33px; 
+	height:26px; 
+	z-index:7;
+	left: 165px;
+	top: -40px;
+}
+
+#money4a {
+	background-image:url(../images/money4.png); 
+	background-repeat:no-repeat; 
+	width:25px; 
+	height:31px; 
+	z-index:7;
+	left: 155px;
+	top: -50px;
+}
+
+#money4b {
+	background-image:url(../images/money4.png); 
+	background-repeat:no-repeat; 
+	width:25px; 
+	height:31px; 
+	z-index:7;
+	left: 150px;
+	top: -50px;
+}
+
+#money4c {
+	background-image:url(../images/money4.png); 
+	background-repeat:no-repeat; 
+	width:25px; 
+	height:31px; 
+	z-index:7;
+	left: 180px;
+	top: -50px;
+}
+
+#money4d {
+	background-image:url(../images/money4.png); 
+	background-repeat:no-repeat; 
+	width:25px; 
+	height:31px; 
+	z-index:7;
+	left: 195px;
+	top: -50px;
+}
+
+
+#bannerButton {
+	left:464px; 
+	top: 33px;
+	z-index:8;
+}

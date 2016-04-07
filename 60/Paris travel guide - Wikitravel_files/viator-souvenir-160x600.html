@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0074)https://secure.flashtalking.com/57827/1362482/viator-souvenir-160x600.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <style></style>
+		<meta name="viewport" content="width=160, initial-scale=1, maximum-scale=1, user-scalable=0"> <!--320-->
+		<meta name="ad.size" content="width=160,height=600">
+
+		<title>Viator: Souvenir - 160x600</title>
+
+		<script src="./Enabler.js"> </script>
+		
+		<style>
+			/* classes */
+			.pos-absolute { position: absolute; }
+
+			.animated-content {
+				position: absolute;
+				overflow:hidden;
+				width:160px;
+				height:600px;
+				top:600px;
+			}
+
+			.mask {
+				/* 
+				background: transparent url('img/mask.png') no-repeat 0px 0px;
+				*/
+				position: absolute;
+				overflow: hidden;
+			}
+
+			/* IDs */
+			#bg-exit { background-color:#fff; cursor: pointer; z-index: 99999; }
+			#layout_guide { z-index: 10000; }
+			#banner { background-color:#00769a; overflow:hidden; }
+			#border { border:1px solid #000; opacity:0; }
+			#banner:hover { cursor: hand; }
+			#preload { display: none; }
+
+			#BG { background: transparent url('img/BG.jpg') no-repeat 0px 0px;}
+
+			.arrow { background: transparent url('img/sprite.png') no-repeat 0px 0px;}
+			#copy01 { background: transparent url('img/sprite.png') no-repeat -160px 0px;}
+			#copy02 { background: transparent url('img/sprite.png') no-repeat -320px 0px;}
+
+			#cta-hover { background: transparent url('img/sprite.png') no-repeat -480px 0px;}
+			#cta-off { background: transparent url('img/sprite.png') no-repeat -640px 0px;}
+
+			#icon-cat { background: transparent url('img/sprite.png') no-repeat -800px 0px;}
+			#icon-mug { background: transparent url('img/sprite.png') no-repeat -960px 0px;}
+			#icon-pants { background: transparent url('img/sprite.png') no-repeat -1120px 0px;}
+			#icon-snowglobe { background: transparent url('img/sprite.png') no-repeat -1280px 00px;}
+			#icon-sweater { background: transparent url('img/sprite.png') no-repeat -1440px 0px;}
+
+			#logo-viator { background: transparent url('img/sprite.png') no-repeat -1600px 0px;}
+
+		</style>
+    </head>
+
+    <body>
+    	<div id="container" style="cursor: pointer; width: 160px; height: 600px; background-image: url(&quot;about:blank&quot;);">
+    		<div id="border" class="pos-absolute" style="top: 0px; left: 0px; width: 158px; height: 598px; opacity: 1;"></div>
+	    	<div id="banner" class="pos-absolute" style="top: 1px; left: 1px; width: 158px; height: 598px;">
+		    	<div id="content" class="pos-absolute" style="top: -1px; left: -1px; width: 160px; height: 600px;">
+
+				    <div id="BG" class="animated-content" style="top: 0px; left: -940px; opacity: 0.3; width: 1711px;"></div>
+
+				   	<div id="icon-sweater" class="animated-content" style="top: 0px; left: -235px; opacity: 1;"></div>
+				    <div id="icon-mug" class="animated-content" style="top: 0px; left: -235px; opacity: 1;"></div>
+				    <div id="icon-pants" class="animated-content" style="top: 0px; left: -235px; opacity: 1;"></div>
+				    <div id="icon-snowglobe" class="animated-content" style="top: 0px; left: -235px; opacity: 1;"></div>
+				    <div id="icon-cat" class="animated-content" style="top: 0px; left: -160px; opacity: 1;"></div>
+
+				    <div id="copy" class="animated-content" style="top: 0px; left: -160px; opacity: 1; width: 320px;">
+				    	<div id="arrow01" class="animated-content arrow" style="top: 0px; left: 0px; opacity: 1;"></div>
+				    	<div id="arrow02" class="animated-content arrow" style="top: 0px; left: 160px; opacity: 1;"></div>
+			    		<div id="copy01" class="animated-content" style="top: 0px; left: 0px; opacity: 1;"></div> <!-- for a trip so... -->
+			    		<div id="copy02" class="animated-content" style="top: 0px; left: 160px; opacity: 1;"></div> <!-- book a memorable... -->
+			    	</div>
+
+			    	<div id="logo-viator" class="animated-content" style="top: 0px; left: 0px; opacity: 1;"></div>
+
+		    		<div id="cta" class="animated-content" style="top: 0px; left: 0px; opacity: 1;">
+		    			<div id="cta-off" class="animated-content" style="top: 0px; left: 0px; opacity: 1;"></div>
+		    			<div id="cta-hover" class="animated-content" style="top: 0px; left: 0px; opacity: 0;"></div>
+		    		</div>
+		    	</div>
+	    	</div>
+
+		    <!-- 
+	    	<div id = "layout-guide" class = "pos-absolute"><img src = "../../../_guide/01-beat_seat/01-dmv/300x250/01.jpg"></div>
+	    	-->
+	  		
+	    	<div id="bg-exit" class="pos-absolute" style="top: 0px; left: 0px; width: 160px; height: 600px; opacity: 0;"></div>
+	    </div>
+
+		<script src="./jquery.min.js"></script>
+		<script type="text/javascript" src="./html5API.js"></script>
+		<script src="./jquery.transit.min.js"></script>
+		<script src="./Banner-160x600.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function()
+			{
+				if (Enabler.isInitialized())
+				{
+					enablerInitComplete();
+				} else {
+					Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitComplete);
+				}
+
+				function enablerInitComplete()
+				{
+					if (Enabler.isPageLoaded())
+					{
+					    pageLoadComplete();
+					} else {
+						Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, pageLoadComplete);
+					}
+
+					function pageLoadComplete()
+					{
+						var myFT = new FT();
+						var container = myFT.$("#container");
+						myFT.applyClickTag(container);
+
+						var banner = new Banner();
+						banner.render();
+					}
+				}
+			});
+
+		</script>
+    
+</body></html>

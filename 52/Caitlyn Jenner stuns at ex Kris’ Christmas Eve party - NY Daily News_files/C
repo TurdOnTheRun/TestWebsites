@@ -1,0 +1,2 @@
+function RPClient(){}
+(function(){RPClient.c =157; RPClient.pu = "r.3gl.net/hawklogserver/r.p"; RPClient.r =6000; if(document.onConfigLoaded!==undefined){document.onConfigLoaded();}})(); 

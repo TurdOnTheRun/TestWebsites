@@ -1,0 +1,4066 @@
+<!DOCTYPE html>
+<!-- saved from url=(0702)https://as.jivox.com/unit/layout_renderer.php?creativeUnitType=13&bDim=5x5&bUnitId=1300&siteId=554580bc721c8d&campaignId=85034&es_pId=x5XN67&jvxVer=2&cMacro=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253D&r=775267308&objectName=jvxAdObject&npl=1&busted=1&bustType=1&objectName=jvxAdObject&adUnitId=1300&jvxSessionId=1460005108.7649&base=1&allowExp=0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Jivox Interactivity Ad Framework Jivox</title>
+<style>
+		*{margin:0;padding:0;border:0px;}
+		body.portrait5x5{width:5px;height:5px;padding:0px;margin:0px;}
+		.portrait5x5 #scene-1{width:5px;height:5px; position:absolute;top:5000px;left:0;visibility:hidden;}
+						.portrait5x5 #scene-1 #asset101{position:absolute;left:0px;top:1px;width:5px;height:4px;z-index:1;opacity:1;}
+				object, embed { 
+ outline: 0; 
+} 
+#mask{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #FFFFFF repeat scroll 0 0;display: none;z-index: 499;filter:alpha(opacity=60); -moz-opacity:0.6; -khtml-opacity: 0.6; opacity: 0.6;}
+#loader{position:absolute;z-index:99999999999;left:50%;top:50%;display:none;}
+#closeBtnModel{position:absolute;top:0px;left:0px;cursor:pointer;display:none;filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8; font-family:arial, tahoma; letter-spacing:0px; line-height:1; text-transform:none;right:0px;height:24px; width:24px;background: url('https://playercdn.jivox.com/1452127304/player/images/close_24x24.png');}
+
+</style>
+		<script type="text/javascript" src="./jquery-2.1.0.min.js"></script>
+
+<script type="text/javascript" src="./velocity.min.js"></script>
+<style type="text/css">.jvxAdObjectloadingSpinner { position: absolute; border-top-color: transparent; height: 20px; vertical-align: middle; width: 20px; border: 3px solid #444; border-top-color: transparent; border-radius: 50%; -webkit-animation: spin 1s infinite linear; -moz-animation: spin 1s infinite linear; -ms-animation: spin 1s infinite linear; animation: spin 1s infinite linear; } @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } } @-ms-keyframes spin { 100% { -ms-transform: rotate(360deg); } } @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } } @-keyframes spin { 100% { transform: rotate(360deg); } }</style></head>
+<body class="portrait5x5" style="width: 100%; height: 346.667px;">
+<script id="jvxWidget" src="./jivoxWidgetApiV2.js"></script><script>
+var serverProtocolStr = 'https://';
+var layoutRendererJSON = {"adIdx":"111967","layout":{"inbanner":{"13":{"5x5":{"adUnitIdx":"1300","scenes":{"scene-1":{"components":{"asset101":{"location":"0,1,5,4","options":[],"layerId":"1"}}}}}}}}};
+var assetsDetailedJSON = {"customAsset.asset101":{"interactionIdentifier":"customAsset.asset101","icon":"\u003Cstyle\u003E\n\tbody\n\t{\n\t\tpadding: 0px;\n\t\tmargin: 0px;\n\t\tbackground-color: transparent;\n\t}\n\n\t#adContainer\n\t{\n\t\tbackground-size: 100%;\n\t\tbackground-repeat: no-repeat;\n\t\tcursor: pointer;\n\t\twidth: 100%;\n\t}\n\n\t@media screen and (min-width: 769px)\n\t{\n\t\t#adContainer\n\t\t{\n\t\t\t\/*BACKGROUND IMAGE FOR DESKTOP UNIT *\/\n\t\t\tbackground-image: url(\"https:\/\/cdn.jivox.com\/85034\/1\/34317-0-aim56fcedef2f2f8.jpg\");\n\t\t}\n\t\t\n\t}\n\n\t@media screen and (max-width: 768px)\n\t{\n\t\t\/*BACKGROUND IMAGE FOR MOBILE UNIT *\/\n\t\t#adContainer\n\t\t{\n\t\t\tbackground-image: url(\"https:\/\/cdn.jivox.com\/85034\/1\/34317-0-aim56fcedf7d0526.jpg\");\n\t\t}\t\t\t\n\t}\n\u003C\/style\u003E\n\n\u003Cdiv id=\"adContainer\"\u003E\u003C\/div\u003E\n\n\u003Cscript\u003E\nfunction initiate()\n{\n\tvar adCalcHeight, screenWidth;\n\tvar adContainer = document.getElementById(\"adContainer\");\n\t\n\tparent.parent.postMessage(\"updateSize\",\"*\");\n\tjvxSetWidthToFullVP();\n\tjvxUpdateHeight();\n\tattachEvents();\n\t\n\t\n\tconsole.log(\"Jvx_Crown_Initiated\");\n\n\tfunction jvxUpdateHeight()\n\t{\n\t\tscreenWidth = document.documentElement.clientWidth;\n\t\tadCalcHeight = (screenWidth \u003E= 769)? (screenWidth * 52 \/ 192):(screenWidth * 432 \/ 768);\n\t\tadContainer.style.height = parseFloat(adCalcHeight)+\"px\";\n\t\tparent.jQuery(\"#asset101\").css(\"height\",adCalcHeight+\"px\");\n\t\tparent.jQuery(\"#scene-1\").css(\"height\",adCalcHeight+\"px\");\n\t\tparent.jQuery(\".portrait5x5\").css(\"height\",adCalcHeight+\"px\");\t\t\n\t}\n\t\n\tfunction jvxSetWidthToFullVP()\n\t{\n\t\tparent.jQuery(\"#asset101\").css(\"width\",\"100%\").css(\"top\",\"0px\");\n\t\tparent.jQuery(\"#scene-1\").css(\"width\",\"100%\");\n\t\tparent.jQuery(\".portrait5x5\").css(\"width\",\"100%\");\n\t\tparent.jQuery(\"#scene-1\").css(\"background\",\"transparent\");\n\t\t\n\t}\n\t\n\tfunction attachEvents()\n\t{\n\t\tadContainer.onclick = function()\n\t\t{\n\t\t\tjvxAd.openClickThrough();\n\t\t}\n\t\t\n\t\twindow.onresize = function()\n\t\t{\n\t\t\tparent.parent.postMessage(\"updateSize\",\"*\");\n\t\t\tjvxUpdateHeight();\n\t\t}\n\t\t\n\t\twindow.onload = function()\n\t\t{\n\t\t\tconsole.log(\"Onload From Widget\");\n\t\t\tparent.parent.postMessage(\"updateSize\",\"*\");\n\t\t}\n\t}\n\t\n\t\n}\n\u003C\/script\u003E","label":"CrownResponsiveWidget","data":null,"externalPostURL":null,"eventType":"102","iconFileName":null,"urlFileName":null,"showInInteractNowBar":null,"type":"asset","orderNumber":1,"paramString":null,"secondaryVideoURL":null,"adFormat":null,"toEmailLabel":null,"fromEmailLabel":null,"messageLabel":null,"phoneRecipientLabel":null,"fromNameLabel":null,"postInteractionLaunchURL":null,"brandAwarenessLevel":null,"facebookUrlType":null,"isActionButton":null,"iconDimension":"[300,250]","assetDimension":null,"origIconDimension":"[300,250]","origAssetDimension":null,"assetBgColor":null,"iconBgColor":null,"iconFileType":"custom-widget","isIconActivePanel":null,"iconParamString":null,"autoPlay":null,"iconGlowColor":null,"isIconBgTransparent":null,"isWatermarkLogo":null,"fallbackImgURL":null,"fallbackImgFileName":null,"shareUrlType":null,"shareMsg":null,"fallbackType":null,"fallbackWidgetSrc":null,"fallbackWidgetURL":null,"fallbackWidgetFileName":null,"isCreatedByWidget":null,"clickHandler":"user","iconCustomEventQueryStr":null,"actionCustomEventQueryStr":null,"iconWidgetType":"0","modificationCount":null,"customEvents":null,"customActions":null,"disableClickThrough":null,"virtual":"0","groups":null,"additionalFiles":"JVXMDESKT147D1=https:\/\/cdn.jivox.com\/85034\/1\/34317-0-aim56fcedef2f2f8.jpg|1920x520.jpg,JVXMMOBIL0F2AC=https:\/\/cdn.jivox.com\/85034\/1\/34317-0-aim56fcedf7d0526.jpg|768x432.jpg","dependentFiles":null,"fallbackDependentFiles":null,"hoverIcon":null,"hoverIconFileName":null,"hoverOpacity":null,"hoverEffect":null,"scaleToFit":null,"widgetData":null},"customAsset.asset102":{"interactionIdentifier":"customAsset.asset102","icon":"(function(){\n\t\n\tvar adLoaded = false;\n\n\twindow.addEventListener(\"message\", function(e)\n\t{\n\t\t\n\t\t\n\t\tfunction jvxUpdateSizes() {\n\t\t\t\t\n\t\t\t\tvar jvxAdUnitContainerId = document.getElementById(jvxAdObject.adUnitContainerId),\n\t\t\t\t\tjvxBaseId = document.getElementById(jvxAdObject.baseId),\n\t\t\t\t\tunitHeight;\n\t\t\t\t\n\t\t\t\t\n\t\t\t\ttry {\n\t\t\t\t\t\n\t\t\t\t\tjvxAdUnitContainerId.style.width = \"100%\";\n\t\t\t\t\tjvxBaseId.style.width = \"100%\";\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\tif(window.document.documentElement.clientWidth \u003E= 769)\n\t\t\t\t\t\tunitHeight = parseFloat((jvxAdUnitContainerId.clientWidth * 52) \/ 192);\n\t\t\t\t\telse\n\t\t\t\t\t\tunitHeight = parseFloat((jvxAdUnitContainerId.clientWidth * 432) \/ 768);\n\t\t\t\t\t\n\t\t\t\t\tjvxAdUnitContainerId.style.height = unitHeight+\"px\";\n\t\t\t\t\tjvxBaseId.style.height = unitHeight+\"px\";\n\t\t\t\t\t\n\t\t\t\t\tif(!adLoaded)\n\t\t\t\t\t{\n\t\t\t\t\t\tdispatchEvent(unitHeight);\n\t\t\t\t\t\tadLoaded = true;\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\tcatch(err){\n\t\t\t\t\t\/\/Ad is not served....\n\t\t\t\t\tconsole.log(\"Jvx-Ad_Crown_Disabled...\");\n\t\t\t\t}\n\t\t}\n\t\t\n\t\tfunction dispatchEvent(state) \n\t\t{\n\t\t\t\/*\n\t\t\tvar evt = new CustomEvent('jvxCrownAdLoaded', { detail : { jvxAdHeight : state} });\n\t\t\twindow.dispatchEvent(evt);\n\t\t\t*\/\n\t\t\t\n\t\t\tvar event = document.createEvent(\"Event\");\n\t\t\tevent.initEvent('jvxCrownAdLoaded', true, true);\n\t\t\tevent.detail = {}\n\t\t\tevent.detail.jvxAdHeight = state;\n\t\t\twindow.dispatchEvent(event);\n\t\t}\n\t\t\n\t\tif(e.data == \"updateSize\" && e.origin.indexOf(\"jivox.com\") != -1)\n\t\t\tjvxUpdateSizes();\n\t\t\n\t});\n\n})();\n\n\/*\nwindow.addEventListener(\"jvxCrownAdLoaded\",function(e)\n{ \n\tconsole.log(\"Jvx Ad loaded: Height - \"+e.detail.jvxAdHeight); \n});\n\n*\/","label":"attachtotag_sourceCode","data":null,"externalPostURL":null,"eventType":"103","iconFileName":null,"urlFileName":null,"showInInteractNowBar":null,"type":"asset","orderNumber":2,"paramString":null,"secondaryVideoURL":null,"adFormat":null,"toEmailLabel":null,"fromEmailLabel":null,"messageLabel":null,"phoneRecipientLabel":null,"fromNameLabel":null,"postInteractionLaunchURL":null,"brandAwarenessLevel":null,"facebookUrlType":null,"isActionButton":null,"iconDimension":"[300,250]","assetDimension":null,"origIconDimension":"[300,250]","origAssetDimension":null,"assetBgColor":null,"iconBgColor":null,"iconFileType":"custom-widget","isIconActivePanel":null,"iconParamString":null,"autoPlay":null,"iconGlowColor":null,"isIconBgTransparent":null,"isWatermarkLogo":null,"fallbackImgURL":null,"fallbackImgFileName":null,"shareUrlType":null,"shareMsg":null,"fallbackType":null,"fallbackWidgetSrc":null,"fallbackWidgetURL":null,"fallbackWidgetFileName":null,"isCreatedByWidget":null,"clickHandler":"user","iconCustomEventQueryStr":null,"actionCustomEventQueryStr":null,"iconWidgetType":"0","modificationCount":null,"customEvents":null,"customActions":null,"disableClickThrough":null,"virtual":"0","groups":null,"additionalFiles":null,"dependentFiles":null,"fallbackDependentFiles":null,"hoverIcon":null,"hoverIconFileName":null,"hoverOpacity":null,"hoverEffect":null,"scaleToFit":null,"widgetData":null}};
+var adUnitNestedJSON = {"5x5":{"adIdx":"111967","versionId":"0","adUnitIdx":"1300","type":"banner","unitType":"inbanner","creativeUnitType":"13","dimension":"5x5","backgroundType":"image","url":null,"fileName":null,"dependentFiles":null,"backgroundColor":null,"fallbackType":null,"fallbackURL":null,"fallbackFileName":null,"fallbackDependentFiles":null,"fallbackWidgetSrc":null,"hasLayout":"1","hasVirtualAssets":"0","loadEvent":null,"clickEvent":null,"lastUpdatedAt":"2016-03-31 05:29:51","expansionUnitIdx":null,"paramString":null}};
+var mainPlayerInfo = {"Id":"85034","adId":"111967","advId":"34317","adURL":null,"duration":null,"aspectRatio":"4x3","thumbnailURL":null,"costBasis":"\u003CcostBasis\u003E\n\t\u003Cmode\u003Ecpm\u003C\/mode\u003E\n\t\u003CdesiredCPM\u003E0.90\u003C\/desiredCPM\u003E\n\t\u003CmaxCPM\u003E0.90\u003C\/maxCPM\u003E\n\t\u003CdesiredCPC\u003E0\u003C\/desiredCPC\u003E\n\t\u003CmaxCPC\u003E0\u003C\/maxCPC\u003E\n\u003C\/costBasis\u003E","adFormats":null,"campaignState":"Running","oldAdIdx":"111967","budget":"900.00","title":"CN_Samsung-Galaxy-TabPro_V1","tags":null,"campaignType":"web","metadataVersion":"4","cpm":"0.90","cpc":"0","allAdURLs":null};
+
+var mediaGalleryData = [];
+var abParamJSON = [];
+var creativeUnitType = '13';
+var widgetParamStr = "var adUnitType=14;var isCampaign=1;var campaignId=85034;var adId=0;var isMobile=0; var creativeUnitType=13;var serverDateObj={'seconds':28,'minutes':58,'hours':0,'mday':7,'wday':4,'mon':4,'year':2016,'yday':97,'weekday':'Thursday','month':'April','0':1460005108};var serverGMTDateObj={'seconds':28,'minutes':58,'hours':4,'mday':7,'wday':4,'mon':4,'year':2016,'yday':97,'weekday':'Thursday','month':'April','0':1460005108};var objectName='jvxAdObject';var clickTagURL='http://evs.jivox.com/jivox/serverAPIs/externalReporting/proxy.php?campaignId=85034&siteId=554580bc721c8d&adUnitType=14&es_pId=x5XN67&jvxSessionId=1460005108.7649&clickTagURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu';var clickTag='https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu';var siteId='554580bc721c8d';var eventReportingURL='https://evs.jivox.com';var sessionKey='';var serverProtocolStr='https://';var jvxSessionId='1460005108.7649';var placementId='x5XN67';var isDynamic=0;var serverURL='https://as.jivox.com';";
+var jivoxWidget = 'https://playercdn.jivox.com/1452127304/widgets/jivoxWidgetApi/gz/jivoxWidgetApiV2.js';
+var unitTypeStr = 'inbanner';
+var galleryFileURL = '/unit/mediaGallery_v2.php';
+var trackersAllJSON = [{"eventId":"12","trackerURL":"https:\/\/ad.doubleclick.net\/ddm\/ad\/N4478.condenast.comOX2307\/B9517944.129290232;sz=1x1;ord=554;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?","trackerType":"3","placementId":"x5XN67"},{"eventId":"1","trackerURL":"https:\/\/ad.doubleclick.net\/ddm\/clk\/303280337;129290232;u","trackerType":"1","placementId":"x5XN67"}];
+var trackersForVideo = "";
+var hasFlash = false;
+var orgHasFlash = false;
+var isMSIE = false;
+var isFF = false;
+var useFlash = 1;
+var useHTML5Video = 1;
+var useHTML5Vast = 0;
+var paramQueryStr = "adUnitType=14&campaignId=85034&base=1&creativeUnitType=13&versionId=0&adUnitId=1300&isDynamic=0&objectName=jvxAdObject&clickThroughURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu&serverURL=https://as.jivox.com&placementId=x5XN67&clickTag=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu&reportingURL=https://evs.jivox.com&jvxSessionId=1460005108.7649&siteId=554580bc721c8d&isCampaign=1&es_pId=x5XN67";
+var videoParamQueryStr = "adUnitType=14&campaignId=85034&base=1&creativeUnitType=13&versionId=0&adUnitId=1300&isDynamic=0&objectName=jvxAdObject&clickThroughURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu&serverURL=https://as.jivox.com&placementId=x5XN67&clickTag=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu&reportingURL=https://evs.jivox.com&jvxSessionId=1460005108.7649&siteId=554580bc721c8d&isCampaign=1&es_pId=x5XN67&inplace=1&userInitAction=0";
+var primaryVideoParamQueryStr = "&creativeUnitType=13&bDim=5x5&bUnitId=1300&siteId=554580bc721c8d&campaignId=85034&es_pId=x5XN67&jvxVer=2&cMacro=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253D&r=775267308&objectName=jvxAdObject&npl=1&busted=1&bustType=1&adUnitId=1300&jvxSessionId=1460005108.7649&base=1&allowExp=0&clickTagURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu";
+var videoAssetsInScene = {};
+var videoStatusJSON = {};
+var isManualPause = {};
+var YTcheckForEvent = {},
+	YTcurrentTime = {},
+	YTduration = {},
+	YTisMute = {},
+	YTProgressEventDone = {},
+	YTProgressEventArr = [0,25,50,75];
+var eventHistory = [];
+var base = Number(1);
+var isMraid = Number(0);
+var sceneRotateInterval = null;
+var UIRTimer = null;
+var fitToScreenID = {};
+var anyVideoPlaying = false;
+var cMacro = 'https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%26sai%3DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%26sig%3DCg0ArKJSzNxgC2IZV7JqEAE%26urlfix%3D1%26adurl%3D';
+var isMobileUnit = 0;
+var objectName = 'jvxAdObject';
+var isMobile = '';
+var defaultJSON = {
+	"anim" : {
+		"duration" : 400,
+		"easing"   : "swing",
+		"type"	   : "fadeIn"
+	}
+} 
+function removeParameter(queryStr,keyArray){
+	if(queryStr == null || queryStr == "") return "";
+	var queryStrArr = queryStr.split("&"),
+		queryStrArrLen = queryStrArr.length,
+		keyArrayLen = keyArray.length,
+		tempArr = [],
+		preStr = "",
+		postStr = "";
+	for(var i=0; i<queryStrArrLen; i++){
+		tempArr = queryStrArr[i].split("=");
+		if(!i){	preStr = ""; postStr = "&"; }
+		for(var j=0; j<keyArrayLen; j++){
+			if(tempArr[0]==keyArray[j]){
+				queryStr = queryStr.replace(preStr+tempArr[0]+"="+tempArr[1]+postStr,"");
+			}
+		}
+		preStr = "&";
+		postStr = "";
+	}
+	return queryStr;
+}
+function addParameter(queryStr,keyValueArr){
+	if(queryStr == null || queryStr == "") return "";
+	var keyValueArrLen = keyValueArr.length,
+		tempArr=null;
+	for(var i=0; i<keyValueArrLen; i++){
+		tempArr = keyValueArr[i].split("=");
+		if(queryStr.search(tempArr[0]) == -1){
+			queryStr += "&"+tempArr[0]+"="+tempArr[1];
+		}
+	}
+	return queryStr;
+}
+function getParameterValue(queryStr,key){
+	if(queryStr == null || queryStr == "") return "";
+	var queryStrArr = queryStr.split("&"),
+		queryStrArrLen = queryStrArr.length,
+		tempArr = null,
+		retVal = null;
+	for(var i=0; i<queryStrArrLen; i++){
+		tempArr = queryStrArr[i].split("=");
+		if(key == tempArr[0]) retVal = tempArr[1];
+	}
+	return retVal;
+}
+function getParameterInJSON(queryStr){
+	var retJSON = {},
+		queryStrArr = queryStr.split("&"),
+		queryStrArrLen = queryStrArr.length,
+		keyValArr = null;
+	for(var loopVar=0; loopVar< queryStrArrLen; loopVar++){
+		keyValArr = queryStrArr[loopVar].split("=");
+		retJSON[keyValArr[0]] = keyValArr[1];
+	}
+	return retJSON;
+}
+function addAdnlQueryStr(paramArr){
+	var len = paramArr.length;
+	var retStr = "";
+	for(var loopVar = 0; loopVar<len; loopVar++){
+		if(typeof paramArr[loopVar] != undefined && paramArr[loopVar] != null){
+			retStr += "&"+ paramArr[loopVar];
+		}
+	}
+	return retStr;
+}
+function checkIsFlashAva(){
+	var hasFlashPlugin = (function(){
+		if(navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]){
+			hasFlash = navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin;
+		} 
+		if(!hasFlash && isMSIE){
+			// if we are here, this is for MSIE only.
+			try {
+				var flashObj = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+				if(flashObj)
+					hasFlash = true;
+			} catch (ex) {
+			}
+		}		
+		return hasFlash;
+	})();
+	orgHasFlash = hasFlash;
+	if(!useFlash){
+		hasFlash = false;
+	}
+}
+
+	function fireTracker(trackerInfo,addnlParam){
+		if(isNaN(parseInt(trackerInfo,10))) return false;
+		trackerInfo += ""; 
+		var finalURL = "",
+			url = "https://evs.jivox.com/trk/"+trackerInfo+"/85034/554580bc721c8d/14/jvxSId_1460005108.7649"+"/es_pId_x5XN67"+"";
+			imgEl = document.createElement('img');//,
+		if(trackersAllJSON.length){
+			checkForExternalTracker(trackerInfo);
+		}
+	    finalURL = url + "/r_" + Math.random();
+	    if(typeof addnlParam != "undefined"){
+			addnlParam = addnlParam.replace(/&/g, "/").replace(/=/g, "_");
+	    	finalURL += addnlParam;
+	    }
+		getRequest(finalURL,0);
+	}
+	function checkForExternalTracker(trackerInfo){
+		var externalTrackerJSON = getExternalTrackerJSON(trackerInfo),
+			imgEl = document.createElement('img');
+		if(externalTrackerJSON == null) return false;
+		if(trackerInfo != 1){
+			/*if(externalTrackerJSON['trackerType'] == 2){
+				imgEl.src = externalTrackerJSON['trackerURL'];
+			}*/
+		}else{
+			var externalTrackerJSONLen = externalTrackerJSON.length,
+				value = null;
+			for(var i=0; i<externalTrackerJSONLen; i++){
+				value = externalTrackerJSON[i];
+				if(value['trackerType'] == 2){
+					//imgEl.src = value['trackerURL'];
+					getRequest(value['trackerURL'],1);
+				}
+			}
+			/*$.each(externalTrackerJSON, function(index, value) {
+				if(value['trackerType'] == 2){
+					//imgEl.src = value['trackerURL'];
+					getRequest(value['trackerURL']);
+				}
+			});*/
+		}
+		return true;
+	}
+	function getRequest(url,isTracker,elType){
+						var requestInt = window.setTimeout(function(url){
+			clearTimeout(requestInt);
+			if(typeof elType != "undefined" && elType == 'script'){
+				var scrEl = document.createElement('script');
+				scrEl.src = url;
+								document.body.appendChild(scrEl);
+			}else{
+				var imgEl = document.createElement('img');
+				imgEl.src = url;
+			}
+		},1,url);
+			}
+	function getExternalTrackerJSON(eventId){
+		var reqJSON = null;
+		if(eventId == 1)	reqJSON = [];
+		var trackersAllJSONLen = trackersAllJSON.length,
+			value = null;
+		for(var i=0; i<trackersAllJSONLen; i++){
+			value = trackersAllJSON[i];
+			if(value['eventId'] == eventId){
+				if(eventId == 1){
+					reqJSON[reqJSON.length] = value;
+				}else{
+					reqJSON = value;
+				}
+			}
+		}
+		/*$.each(trackersAllJSON, function(index, value){
+			if(value['eventId'] == eventId){
+				if(eventId == 1){
+					reqJSON[reqJSON.length] = value;
+				}else{
+					reqJSON = value;
+				}
+			}
+		});*/
+		return reqJSON;
+	}
+	function recordEvent(eventId, addnlParam){
+	        fireTracker(eventId,addnlParam);
+	}
+	function recordEventByName(event_name, isInteractive, addnlParam, assetID){
+		var finalAdnlParam = null,
+			eventType = parseInt(getRequiredAssetDetail(assetID,"eventType"),10),
+			startEventId = null,
+			isInteractive = Number(isInteractive);
+		addnlParam = typeof addnlParam == "undefined" ? "" : (addnlParam.replace(/&/g, "/").replace(/=/g, "_"));
+		if((isInteractive || isInteractive == "true")&& isInteractive != "false"){
+			startEventId = 10000000;
+		}else{
+			startEventId = 30000000;
+		}
+		finalAdnlParam = "/es_eName_"+event_name+addnlParam;
+		fireTracker(startEventId,finalAdnlParam);
+	}
+	function getTrackerForVideo(){
+		var trackersAllJSONLen = trackersAllJSON.length,
+			trackerObj = null;
+		for(var loopVar = 0; loopVar < trackersAllJSONLen; loopVar++){
+			trackerObj = trackersAllJSON[loopVar];
+			if(trackerObj['eventId'] == 1 && trackerObj['trackerType'] == 2){
+				trackersForVideo += encodeURIComponent(trackerObj['trackerURL']) +",";
+			}
+		}
+	}
+	getTrackerForVideo();
+function addReqVideoParam(videoURL){
+	if(trackersForVideo != ""){
+		videoURL += "&clickTrackerURLs="+trackersForVideo;
+	}
+	return videoURL;
+}
+function externalTrackerForEvent(eventId,trackerType){
+	var obj = null;
+	$.each(trackersAllJSON, function(index, value){
+		if(value['eventId'] == eventId){
+			if(eventId != 1 || value['trackerType'] == 1){
+				obj = value;
+			}
+		}
+	});
+	return obj;
+}
+function fireEvent(assetID,eventNum){
+			var eventType = parseInt(getRequiredAssetDetail(assetID,"eventType"),10),   			eventId = (eventType+200) + eventNum;
+		fireTracker(eventId);
+	}
+function getEventIdOnType(eventId,eventType){
+	var retVal = null,
+		reqEventId = ((Number(eventId) + 200) * 100) + 50;
+	retVal = (eventType == "click") ? eventId :
+			 (eventType == "hover") ? reqEventId+1 : eventId;
+    return retVal;
+}
+function createHTMLElement(containerID,element,ID,elementStyle,additionalAttr){
+	var sceneCntDiv = document.createElement(element);
+	sceneCntDiv.id = ID;
+	if(elementStyle != "" && elementStyle != null)	sceneCntDiv.setAttribute("style",elementStyle);
+	if(typeof additionalAttr != "undefined") sceneCntDiv.setAttribute(additionalAttr[0],additionalAttr[1]);
+	if(containerID=="body"){
+		document.body.appendChild(sceneCntDiv);
+	}else{
+		document.getElementById(containerID).appendChild(sceneCntDiv);
+	}
+}
+function layoutEventHandling(elementID,eventArr,callback){
+	var eventArrLen = eventArr.length;
+	var eventType;
+	for(var loopVar = 0; loopVar<eventArrLen; loopVar++){
+		eventType = eventArr[loopVar];
+		attachEventListener(document.getElementById(elementID),eventType,function(event){callback(event);},false);
+	}
+}
+function convertToStr(){
+	return arguments[0].toString();
+}
+function loadJS(attrJSON){
+	var script = document.createElement('script');
+	if(typeof attrJSON != "undefined"){
+		for(var key in attrJSON){
+			script.setAttribute(key,attrJSON[key]);
+		}
+	}
+	document.getElementsByTagName('head')[0].appendChild(script);
+}
+function loadLoader(){
+	/* Plugin - to create the loader depends on the LoaderType where corresponding Css Styles are added by default and Div s for respective loaderType is created */
+
+/* PARAMETERS : Pass $cntId and $loaderType to append the loader to the respective Div */ 
+
+var css = '',
+	head = document.head || document.getElementsByTagName('head')[0],
+	style = document.createElement('style');
+style.type = 'text/css';
+	css = '.jvxAdObjectloadingSpinner { position: absolute; border-top-color: transparent; height: 20px; vertical-align: middle; width: 20px; border: 3px solid #444; border-top-color: transparent; border-radius: 50%; -webkit-animation: spin 1s infinite linear; -moz-animation: spin 1s infinite linear; -ms-animation: spin 1s infinite linear; animation: spin 1s infinite linear; } @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } } @-ms-keyframes spin { 100% { -ms-transform: rotate(360deg); } } @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } } @-keyframes spin { 100% { transform: rotate(360deg); } }';
+	/* Adding Css content to document.head */
+	if(css){
+		if (style.styleSheet){
+		  style.styleSheet.cssText = css;
+		} else {
+		  style.appendChild(document.createTextNode(css));
+		}
+		head.appendChild(style);
+	}
+	/* End */
+	
+	/**
+     * Helper that creates a Div component with the Id passed 
+     * and add default CSS class, innerText and extra styles to the component 
+	 * and then append the component to the main element
+     * @param {Main element to which new node has to appended } mainEl
+	 * @param {Id for the new node} nodeId
+	 * @param {default CSS class name to be added} className
+	 * @param {innerText to the node} text
+	 * @param {Object - styles to be added to the node} styleObj
+     */
+	function addDivComponent_v2(mainEl, nodeId, className, text, styleObj)
+	{
+		var node = document.createElement('div');
+        node.id = nodeId;
+		node.innerHTML = text;							
+		if(className != ''){
+			if(node.classList && node.classList.length > 0){
+				node.className += ' ' + className;
+			} else {
+				node.className =  className;	
+			}
+		}
+		if(styleObj != ''){
+			var css = '';
+			for (var name in styleObj) {
+				if(styleObj.hasOwnProperty(name)){
+					try{
+						node.style[name] = styleObj[name];
+					} catch(e){
+						css += name+':'+styleObj[name]+';';			// added for IE8
+					}
+				}
+			}
+			if(css != '') node.style.cssText = css.toString();
+		}
+		return mainEl.appendChild(node);
+	}
+	
+	/* Creating corresponding DIV s for the LoaderType */
+
+	var	mainEl = document.getElementById('scenesContainer'),
+		lSize = parseInt('22'),
+		loaderId = '',
+		elHeight = '', elWidth = '',
+		tTop = '', tLeft = '',
+		topPos = '', leftPos = '';
+	
+			loaderId = 'loader';
+			elHeight = parseInt(mainEl.style.height.replace("px",""));
+	elWidth = parseInt(mainEl.style.width.replace("px",""));
+		
+	topPos = elHeight/2; 
+	leftPos = elWidth/2;
+		
+			var lStyles = {'top': topPos+"px", 'left': leftPos+"px", 'width': lSize + 'px', 'height': lSize + 'px', 'display':'block'},	
+			loader = addDivComponent_v2(mainEl, loaderId, 'jvxAdObjectloadingSpinner', '', lStyles);
+					
+	
+	/* End */	document.getElementById("loader").style.display = "none";
+}
+function attachEventListener(target, eventType, functionRef, capture){
+	if(typeof target.addEventListener != "undefined"){
+		target.addEventListener(eventType, functionRef, capture);
+	}else{
+		target.attachEvent("on" + eventType, functionRef);
+	}
+};
+function getRequiredJSON(){
+try{
+	var requiredJSON = layoutRendererJSON['layout'][unitTypeStr];
+	if(arguments[0] != unitTypeStr){
+		requiredJSON = requiredJSON[creativeUnitType];
+		if(arguments[0] != creativeUnitType){
+			requiredJSON = requiredJSON[layoutObj.matchLayoutDim];
+			if(arguments[0] != layoutObj.matchLayoutDim){
+				requiredJSON = requiredJSON['scenes'];
+				if(arguments[0] != 'scenes'){
+					requiredJSON = requiredJSON[layoutObj.activeSceneID];
+					if(arguments[0] != layoutObj.activeSceneID){
+						requiredJSON.hasOwnProperty(arguments[0])? requiredJSON = requiredJSON[arguments[0]] : requiredJSON = false;
+						if(typeof arguments[1] != "undefined"){
+							requiredJSON.hasOwnProperty(arguments[1])? requiredJSON = requiredJSON[arguments[1]] : requiredJSON = false;
+						}
+					}
+				}
+			}
+		}
+	}
+	if(requiredJSON == undefined) requiredJSON = false;
+	return requiredJSON;
+}catch(e){
+	return false;
+}
+}
+function hideGroups(groupName){
+	var group = null,
+		assetID = null,
+		groupName = typeof groupName == "undefined" ? "" : groupName;
+	for(var key in assetsDetailedJSON){
+		group = assetsDetailedJSON[key]['groups'];
+		if(group != "" && group != null && (group == groupName || groupName == "")){
+			assetID = key.replace("customAsset.","");
+			hideAsset(assetID);
+		}
+	}
+}
+function showGroups(groupName){
+	var assetID = null,
+		group = null,
+		groupName = typeof groupName == "undefined" ? "" : groupName;
+	for(var key in assetsDetailedJSON){
+		group = assetsDetailedJSON[key]['groups'];
+		if(group != "" && group != null &&(group == groupName || groupName == "")){
+			assetID = key.replace("customAsset.","");
+			showAsset(assetID);
+		}
+	}
+}
+function setStorageData(setName,useSessionStorage){
+	var setNameArr = setName.split("&"),
+		key = null,
+		value = null,
+		useLocalStorage = (typeof useSessionStorage == "undefined" || !Number(useSessionStorage)) ? 1 : 0;
+	$.each(setNameArr,function(index,data){
+		data = data.split("=");
+		key = data[0];
+		value = data[1];
+		if(typeof(Storage) != "undefined"){
+			if(useLocalStorage){
+				localStorage.setItem(key,value);
+			}else{
+				sessionStorage.setItem(key,value);
+			}
+		}else{
+					}
+	})
+}
+function getStorageData(getName,preferSessionStorage){
+	var useLocalStorage = (typeof preferSessionStorage == "undefined" || !Number(preferSessionStorage)) ? 1 : 0,
+		getNameArr = getName.split(","),
+		retVal = [];
+	if(typeof(Storage) != "undefined"){
+		if(useLocalStorage){
+			$.each(getNameArr,function(index,data){
+				retVal.push(localStorage.getItem(data));
+			});
+		}else{
+			$.each(getNameArr,function(index,data){
+				retVal.push(sessionStorage.getItem(data));
+			});
+		}
+	}else{
+			}
+	if(retVal.length == 1){
+		return retVal[0];
+	}else{
+		return retVal;
+	}
+}
+
+function setRequiredJSON(obj){
+	if(obj['setOnKey'] == "creativeUnitType"){
+		layoutRendererJSON['layout'][unitTypeStr][creativeUnitType] = obj['setJSON'];
+	}
+}
+function createDummyJSONForLayout(){
+	layoutRendererJSON =  JSON.parse('{"layout":{"'+unitTypeStr+'":{"'+creativeUnitType+'":{"'+layoutObj.matchLayoutDim+'":{"scenes":{"scene-1":{"components":{}}}}}}}}');
+}
+function addTransitionToLayoutJSON(){
+	var tempJSON = getRequiredJSON(creativeUnitType),
+		sceneData = null,
+		componentJOSN = null,
+		assetJSON = null,
+		obj = {};
+	for(var layoutDim in tempJSON){
+		sceneData = tempJSON[layoutDim]['scenes'];
+		for(var scene in sceneData){
+			componentJOSN = sceneData[scene]['components'];
+			for(var asset in componentJOSN){
+				assetJSON = componentJOSN[asset];
+				if(!assetJSON.hasOwnProperty("options")) assetJSON['options'] = {}
+				if(!assetJSON['options'].hasOwnProperty("transitionTime") && !assetJSON['options'].hasOwnProperty("fitToScreen")){
+					assetJSON['options']['transitionTime'] = 0.5; 
+					assetJSON['options']['transitionType'] = 'fade'; 
+				}
+			}
+		}
+	}
+	obj['setOnKey'] = "creativeUnitType";
+	obj['setJSON'] = tempJSON;
+	setRequiredJSON(obj);
+}
+function getRequiredInteraction(interactionsJSON,matchKeyValue){
+	if(!interactionsJSON) return false;
+	var key = matchKeyValue[0],
+		value = matchKeyValue[1],
+		reqJSON = false;
+	$.each(interactionsJSON, function(index, data) {
+		if(data[key] == value){
+			reqJSON = data;
+		}
+	});
+	return reqJSON;
+}
+function getRequiredAssetDetail(){
+	var reqdAssetDet = assetsDetailedJSON.hasOwnProperty('customAsset.'+arguments[0]) ?  assetsDetailedJSON['customAsset.'+arguments[0]] : null;
+	if(reqdAssetDet != null && typeof arguments[1] != "undefined"){
+		reqdAssetDet = reqdAssetDet.hasOwnProperty(arguments[1]) ? reqdAssetDet[arguments[1]] : null;
+	}
+	if(reqdAssetDet == null && arguments[0] == "componentBG"){
+		if(typeof arguments[1] != "undefined"){
+			reqdAssetDet = checkIsDataAva(adUnitNestedJSON,layoutObj.matchLayoutDim,arguments[1]);
+		}
+	}
+	return reqdAssetDet;
+}
+function setRequiredAssetDetail(){
+	var keyValueArr = arguments[1].split("="),
+		key = keyValueArr[0],
+		value = keyValueArr[1];
+	if(assetsDetailedJSON.hasOwnProperty('customAsset.'+arguments[0]) && assetsDetailedJSON['customAsset.'+arguments[0]].hasOwnProperty(key)){
+		assetsDetailedJSON['customAsset.'+arguments[0]][key] = value;
+	}
+}
+function getWidgetParamStr(assetID){
+	var iconParamString = getRequiredAssetDetail(assetID,"paramString");
+		widgetParamJSON = {},
+		externalStartEventId  = Number(getRequiredAssetDetail(assetID,"eventType"))*100,
+		tempWidgetStr = " \n var assetID='"+assetID+"';var externalStartEventId="+externalStartEventId+";";
+				tempWidgetStr += "\nvar oldAlert = window.alert;console.oldLog = console.log;\nconsole.log = function(){};window.alert = function(){};";
+			if(iconParamString != null){
+		var keyValueArr = iconParamString.split("&"),
+			valueArr = "";
+		$.each(keyValueArr, function(index, value) {
+		  valueArr = value.split("=");
+		  widgetParamJSON[valueArr[0]] = decodeURIComponent(valueArr[1]);
+		});
+		tempWidgetStr += " function getWidgetConfig(){ return "+JSON.stringify(widgetParamJSON)+"} \n";
+	}
+	return widgetParamStr+tempWidgetStr;
+}
+function log(param){
+	if(console && console.log){
+		console.log(param);
+	}
+}
+function createSWF(obj){
+	var id = obj.id, 
+		src = obj.src, 
+		width = obj.width, 
+		height = obj.height,
+		params = obj.params,
+		paramsHTMLStr = '',
+		str = '';
+
+	for(var paramName in params){
+		paramsHTMLStr += '<param name="'+paramName+'" value="'+params[paramName]+'" />';
+	}
+
+	str += '<object type="application/x-shockwave-flash" data="'+src+'" id="'+id+'" name="'+id+'" width="'+width+'" height="'+height+'">';
+	str += paramsHTMLStr;
+	str += '</object>';
+	return str;		
+}
+function assetHasWrapper(assetID){
+	if($("#"+assetID+"wrapper").length) 
+		return "#"+assetID+"wrapper";
+	else
+		return "#"+assetID;
+}
+function deactivateAsset(assetID){
+	$("#"+assetID+","+assetHasWrapper(assetID)).stop().css({"margin-top":"5000px","transform":"","left":"","top":"","opacity":"","height":"","width":""}).data("isInsideVP",false);
+	if(isVideoElement(assetID) || isYT(assetID)){
+		setTimeout(function(){
+			pauseVideo(assetID,1);
+		},1);
+	}
+}
+function activateAsset(assetID){
+	$("#"+assetID+","+assetHasWrapper(assetID)).css({"margin":0 /*,"opacity":"1"*/}).data("isInsideVP",true);
+	if(isVideoElement(assetID) && isVideoAutoPlay(assetID) && assetID == getActiveVideoID()){
+		setTimeout(function(){
+			resumeVideo(assetID);
+		},1);
+	}
+/*	if(isVideoElement(assetID) && $("#"+assetID).css("display") == "none"){
+		$("#"+assetID).css({"display":"block"})
+	}*/
+}
+function setAssetToInit(assetID){
+	$("#"+assetID).css({"transform":"","left":"","top":""});
+}
+function findPosAsset(assetID){
+	var cord = [];
+	cord[0] = parseInt($("#"+assetID).css("left"),10);
+	cord[1] = parseInt($("#"+assetID).css("top"),10);
+	return cord;
+}
+function findDimAsset(assetID){
+	var dim = [];
+	dim[0] = parseInt($("#"+assetID).css("width"),10);
+	dim[1] = parseInt($("#"+assetID).css("height"),10);
+	return dim; 
+}
+function actualLocaionArr(assetID){
+	var assetComponents = getRequiredJSON('components',assetID)['location'];
+	if(assetComponents){
+		assetComponents = assetComponents.split(',');
+		return assetComponents;
+	}else{
+		return;
+	}
+}
+function findActualDimAsset(assetID){
+	var dim = [],
+		assetDimArr = actualLocaionArr(assetID);
+	if(typeof assetDimArr != 'undefined'){
+		dim[0] = parseInt(assetDimArr[2],10);
+		dim[1] = parseInt(assetDimArr[3],10);
+	}
+	return dim;  
+}
+function findActualPosAsset(assetID){
+	var cord = [],
+		assetPosArr = actualLocaionArr(assetID);
+	cord[0] = parseInt(assetPosArr[0],10),
+	cord[1] = parseInt(assetPosArr[1],10);
+	return cord;
+}
+function findLayoutDimArr(){
+	var dim = [],
+		layoutDimArr = layoutObj.matchLayoutDim.split("x");
+	dim[0] = parseInt(layoutDimArr[0],10);
+	dim[1] = parseInt(layoutDimArr[1],10);
+	return dim;
+}
+function clickedOnInteraction(){
+	clearInterval(sceneRotateInterval);
+}
+function activateModelLayer(assetID,showCloseBtn,showMask){
+	var self = layoutObj,
+		closeBtnModelLeft = "0",
+		closeBtnModelTop = "0",
+		closeBtnModelWidth = parseInt($("#closeBtnModel").css("width"),10),
+		closeBtnModelHeight = parseInt($("#closeBtnModel").css("height"),10),
+		layoutWidth = parseInt(layoutObj.matchLayoutDim.split(",")[0],10),
+		assetData = null,
+		zIndex = null,
+		countModelAsset =0;
+	if(typeof showCloseBtn == "undefined") showCloseBtn = 1;
+	if(typeof showMask == "undefined") showMask = 1;
+	if(!self.activeModelAssetIDs[self.activeSceneID].hasOwnProperty(assetID)) self.activeModelAssetIDs[self.activeSceneID][assetID] = {};
+	for(var assetID in self.activeModelAssetIDs[self.activeSceneID]){
+		countModelAsset++;
+	}
+	if((countModelAsset > 1 && 1 && !base) || (countModelAsset > 1 && base)){
+		closeBtnModelLeft =  layoutWidth - closeBtnModelWidth;
+	}else{
+		closeBtnModelLeft = findPosAsset(assetID)[0] + findDimAsset(assetID)[0];
+		if(closeBtnModelLeft+closeBtnModelWidth > layoutWidth)	closeBtnModelLeft -= closeBtnModelWidth;
+		if(closeBtnModelLeft > (layoutWidth - closeBtnModelWidth)) closeBtnModelLeft = layoutWidth - closeBtnModelWidth;
+		closeBtnModelTop = findPosAsset(assetID)[1] - closeBtnModelHeight;
+		if(closeBtnModelTop < 0) closeBtnModelTop += closeBtnModelHeight;
+		if(closeBtnModelTop < 0) closeBtnModelTop = 0;
+	}
+	if(showMask){
+		$("#mask").css({"display":"block","z-index":"499"});
+	}
+	if(showCloseBtn){
+		$("#closeBtnModel").css({"display":"block","z-index":"1000","left":closeBtnModelLeft+"px","top":closeBtnModelTop+"px"});
+	}
+	assetData = getRequiredJSON('components',assetID);
+	zIndex = assetData.hasOwnProperty('layerId') ? parseInt(assetData['layerId'],10) : 0;
+	$("#"+assetID+","+assetHasWrapper(assetID)).css({"z-index":500 + zIndex});
+	if(showMask){
+		pauseVideo(getActiveVideoID(),1);
+	}
+}
+function bindEventModelLayer(){
+	$("#closeBtnModel").on("click",function(){
+		deactivateModelLayer();
+		pauseAllVideos();
+	//	fireEvent(layoutObj.modelInitiaterAssetID,0);
+		eventMsg(layoutObj.activeSceneID+".clickModelCloseBtn");
+	});
+}
+function isModelLayerActive(){
+	return jQuery.isEmptyObject(layoutObj.activeModelAssetIDs[layoutObj.activeSceneID]) ? false : true;
+}
+function deactivateModelLayer(){
+	if(!isModelLayerActive()) return;
+	$("#closeBtnModel").css({"display":"none","z-index":"0"});
+	$("#mask").css({"display":"none","z-index":"0"});
+	for(var assetID in layoutObj.activeModelAssetIDs[layoutObj.activeSceneID]){
+		deactivateAsset(assetID);
+	}
+	var activeVideoID = getActiveVideoID();
+	if(isAssetActive(activeVideoID) && !layoutObj.activeModelAssetIDs[layoutObj.activeSceneID].hasOwnProperty(activeVideoID)){
+		setTimeout(function(){
+			resumeVideo(activeVideoID);
+		},1);
+	}
+	if(layoutObj.activeModelAssetIDs[layoutObj.activeSceneID].hasOwnProperty(activeVideoID)){
+		setActiveVideoID(null);
+	}
+	layoutObj.activeModelAssetIDs[layoutObj.activeSceneID] = {};
+}
+
+function isWrapperForAssetReq(assetID){
+	var retVal = false,
+		customAssetID = "customAsset."+assetID,
+		assetDetailsJSON = assetsDetailedJSON[customAssetID],
+		assetIconFileType = assetDetailsJSON['iconFileType'],
+		assetClickHandler = assetDetailsJSON['clickHandler'];
+	if((assetIconFileType == "js" || assetIconFileType == "custom-widget" || assetIconFileType == "custom-html-widget-file" || assetIconFileType ==  "custom-js-widget-file" || assetIconFileType == "html" || assetIconFileType == "flash" || assetIconFileType == "text-widget" ) && assetClickHandler == "system"){
+		retVal = true;
+	}
+	return retVal;
+}
+function urlFormat(url){
+	return (url.search("http")== -1) ? (serverProtocolStr + url) : url;
+}
+function isEventInInteractions(assetInteractionsData,assetEventType){
+	var retVal = false;
+	$.each(assetInteractionsData, function(index, data) {
+		if(data["srcEvent"] == assetEventType){
+			retVal = true;
+		}
+	});
+	return retVal;
+}
+function isInsideVP(assetID){
+	return (typeof $("#"+assetID).data("isInsideVP") == "undefined" || $("#"+assetID).data("isInsideVP")) ? true : false;
+}
+function animInitiateBy(assetID){
+	return (typeof $("#"+assetID).data("animInitiateBy") != "undefined") ? $("#"+assetID).data("animInitiateBy") : assetID;
+}
+function validateVal(val){
+	return (typeof val == "undefined" || val == null || val == "") ? false : true;
+}
+function checkAnimType(type){
+ return (type == "fadeIn" || type == "slideIn" || type == "zoomIn") ?
+         "appear" : ((type == "fadeOut" || type == "slideOut" || type == "zoomOut") ? "disappear" : null);
+}
+function getAminArr(options,type){
+  var str = checkIsDataAva(options,type);
+  if (str == null) return [];
+  var A = [],firstIndex = 0,lastIndex = 0,lastDelimeter = ",",len = str.length;
+  for(var i=0;i<str.length;i++){
+    if(str[i] == "+" || str[i] == "," || i == (str.length-1)){
+      lastIndex = (i == len-1) ? len : i;
+      A[A.length] = [((lastDelimeter == ",") ? "parallel" : "squential"),str.slice(firstIndex, lastIndex)];
+      firstIndex = i + 1;
+      lastDelimeter = str[i];
+    }
+  }
+  return A;
+}
+function checkIsDataAva(){
+	var jsonData = arguments[0],
+		argLen = arguments.length,
+		returnVal = null;
+	if(arguments[0] == null) return null;
+	$.each(arguments,function(index,value){
+		if(index && typeof value != "undefined" && jsonData.hasOwnProperty(value) && jsonData[value] !== null && jsonData[value] !== ""){
+			index < argLen - 1 ? jsonData = jsonData[value] : returnVal = jsonData[value];
+		}
+	});
+	return returnVal
+}
+function hasAppearEffect(assetID){
+	return (validateVal(checkIsDataAva(getRequiredJSON("components",assetID),"options","appearanceEffects")) ? true : false);
+}
+function hasAnimDelayORSpeed(assetID,effect){
+	var returnVal = false,assetData = getRequiredJSON("components",assetID),
+		animJ = checkIsDataAva(assetData,"options",effect+"anceEffects"),
+		animDetail = null,delay,speed;
+	if(validateVal(animJ)){
+		animJ = animJ.split(",");
+		$.each(animJ,function(index,value){
+			animDetail = checkIsDataAva(assetData,"animations",value);
+			delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+			speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : 0;
+			if(delay || speed){
+				returnVal = true;
+			}
+		});
+	}
+	return returnVal;
+}
+function getValueWithDefault(value,defaultVal){
+	return validateVal(value) ? value : defaultVal;
+}
+function isNeedClickThrough(assetID,assetEventType){
+	var retVal = false,
+		assetID = assetID.replace("wrapper","").replace("PlaceHolder",""),
+		assetInteractionsData = getRequiredJSON('interactions',assetID),
+		assetDetailsJSON = (assetID.search("asset") != -1) ? assetsDetailedJSON["customAsset."+assetID] : 0,
+		isClickInteractionInJSON = null;
+	if(assetEventType=="click" && !isEventInInteractions(assetInteractionsData,"click") && assetID != "scrollDownArrow" && assetID != "scrollUpArrow" && !isVideoElement(assetID)){
+		retVal = true;
+	}
+	if(assetDetailsJSON && assetDetailsJSON.hasOwnProperty('disableClickThrough') && Number(assetDetailsJSON['disableClickThrough'])){
+		retVal = false;
+	}
+	return retVal;
+}
+/* LAYOUTER JS */
+//layouter constructor
+function Layout(){
+}
+Layout.prototype={
+	constructor:Layout,
+	globalAreaJSON: {},
+	matchLayoutDim: "",
+	layoutWidth: 0,
+	layoutHeight: 0,
+	activeSceneID: 'scene-1',
+	isSceneSwitchAnimComplete: true,
+	assetsTransitionJSON: {},
+    assetInvokeTransitionsJSON: {},
+	initTransitionsTimerJSON: {},
+	transitionTimersArray: new Array(),
+	enableFallback: true,
+	activeModelAssetIDs: {},
+	modelInitiaterAssetID: null,
+	isYouTubeLidLoaded: false,
+	YouTubeIDs: {},
+	YouTubeObject: {},
+	assetHoverTimer: {},
+	isSceneInitialized: true,
+	preLayoutDim: null,
+	setDefaultParameters: function(){
+		checkIsFlashAva();
+					if(hasFlash){
+				this.enableFallback = false;
+			}
+			},
+	loadContainer: function(){
+		createHTMLElement("body","div","eventHandler","position:absolute; top:-1000px; left:-1000px;");
+		createHTMLElement("body","div","mask","");
+		createHTMLElement("body","div","closeBtnModel","");
+		createHTMLElement("body","div","scenesContainer","");  // (Parent, HTML Tag, elementID, elementStyle);
+		loadLoader();
+			},
+	loadJSLib: function(){
+			},
+	isCoreJSLibLoaded: function(){
+		if(typeof $ == 'function'){
+			return true;
+		} 
+		return false;
+	},
+	setBGAsCompnent: function(){
+		var backgroundDetails = adUnitNestedJSON[layoutObj.matchLayoutDim],
+			actualBackgroundType = backgroundDetails['backgroundType'];
+		if(checkIsDataAva(backgroundDetails,"backgroundType") == null) return;
+		var backgroundType = actualBackgroundType,
+			backgroundURL = backgroundDetails['url'],
+			fallbackType = backgroundDetails['fallbackType'],
+			fallbackURL = backgroundDetails['fallbackURL'],
+			fallbackWidgetSrc = backgroundDetails['fallbackWidgetSrc'],
+			bgDimensionArr = backgroundDetails['dimension'].split("x"),
+			bgWidth = bgDimensionArr[0],
+			bgHeight = bgDimensionArr[1],
+			useBGElmentStr = "",
+			enableFallback = true;
+		if(!validateVal(backgroundURL) && !validateVal(fallbackURL) && !validateVal(fallbackWidgetSrc)){
+			return;
+		}
+		if(backgroundType == "flash"){
+							if(hasFlash){
+					var obj = {};
+					obj.id = "componentBG";
+					obj.src = backgroundURL;
+					obj.width = bgWidth;
+					obj.height = bgHeight;			
+					obj.params = {'movie' : backgroundURL, 
+								  'wmode' : 'transparent',
+								  'allowScriptAccess' : 'always'
+								  };
+					useBGElmentStr = createSWF(obj);
+				}
+						if(this.enableFallback){
+				if(fallbackType == "image"){
+					useBGElmentStr = '<img src="'+fallbackURL+'" width="'+bgWidth+'" height="'+bgHeight+'">';
+				}else if(fallbackType == "html5" || fallbackType == "swiffy"){
+					backgroundType = "html5";
+					backgroundURL = fallbackURL;
+				}else if(fallbackType == "widget"){
+					backgroundType = "widget";
+					backgroundURL = fallbackWidgetSrc;
+				}
+			}	
+		}
+		if(backgroundType == "html" || backgroundType == "html5"){
+			useBGElmentStr = '<iframe id="componentBG" src = "'+backgroundURL+'" marginwidth="0" marginHeight="0" style="width:'+bgWidth+'px;height:'+bgHeight+'px;" frameborder="0" scrolling="no" allowtransparency="true" style="visibility:hidden" onload="this.style.visibility=\'visible\';" seamless="seamless"><div></div>';
+		}
+		if(backgroundType == "widget"){
+			useBGElmentStr = '<iframe id="componentBG" style="width:'+bgWidth+'px;height:'+bgWidth+'px;" frameborder="0" scrolling="no" allowtransparency="true" style="visibility:hidden" onload="this.style.visibility=\'visible\';" seamless="seamless"><div></div>';
+		}
+		document.getElementById(this.activeSceneID).innerHTML = useBGElmentStr;
+		if(backgroundType == "widget"){
+			var widgetStr = '<body>'+backgroundURL+'</body>';
+			var bgAsIframeRef = document.getElementById("componentBG");
+			var bgAsFrameWindow = bgAsIframeRef.contentWindow || bgAsIframeRef.contentDocument;
+			bgAsFrameWindow.document.open('text/html', 'replace');
+			bgAsFrameWindow.document.write(widgetStr);
+			bgAsFrameWindow.document.close();
+		}
+			},
+	setWrapperForBGAsHTML: function(bgWidth,bgHeight){
+		useBGElmentStr = '<div id = "componentBGWrapper" style="position:absolute;left:0px;top:0px;width:'+bgWidth+'px;height:'+bgHeight+'px;"></div>';
+		document.getElementById(layoutObj.activeSceneID).insertAdjacentHTML( 'beforeend', useBGElmentStr );
+	},
+	openClickThrough: function(clickUrl){
+					var url = "https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%26sai%3DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%26sig%3DCg0ArKJSzNxgC2IZV7JqEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fclk%2F303280337%3B129290232%3Bu";
+			if(typeof clickUrl != "undefined"){
+			    url = (validateVal(cMacro) && (clickUrl.search(cMacro) == -1)) ? cMacro+clickUrl : clickUrl;
+			}
+			eventMsg(layoutObj.activeSceneID+".clickThrough");
+			url = urlFormat(url);
+			window.open(url);
+												fireTracker(1);
+										},
+	loadCmacro: function(){
+					var rand = Math.random();
+			var imgElmt = document.createElement("img");
+			var cMacroURL = "https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%26sai%3DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%26sig%3DCg0ArKJSzNxgC2IZV7JqEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fplayercdn.jivox.com%2F1452127304%2Fplayer%2Fimages%2Fpixeltracker.gif%3F" + "r_" + rand;
+			imgElmt.src = cMacroURL;
+				
+	},
+	init: function(){
+		this.setDefaultParameters();
+		this.loadContainer();
+		this.matchLayoutDim = this.findMatchLayoutDim();
+		if(!getRequiredJSON("components")) createDummyJSONForLayout();
+		//if(typeof layoutRendererJSON['layout'] == "undefined") createDummyJSONForLayout();
+				this.renderLayoutContainer();
+		this.setBGAsCompnent();
+		this.applyContainersCss();
+		this.handleLayoutLoading();
+	},
+	deActivateAllScenesAsset: function(){
+		var allDimJSON = getRequiredJSON(creativeUnitType),
+			components = null,
+			scenesJSON = null;
+		for(var dim in allDimJSON){
+			scenesJSON = allDimJSON[dim]['scenes'];
+			for(var scene in scenesJSON){
+				components = scenesJSON[scene]['components']
+				for(var asset in components){
+					deactivateAsset(asset);
+					deactivateAsset(asset+scene);
+				}
+			}
+		}
+	},
+	preSettingOnOrientation: function(){
+		var self = this;
+		self.preLayoutDim = self.matchLayoutDim;
+		var fitToScreenAsset = self.getFitToSceneID(self.activeSceneID),
+			tempFitToScreenID = fitToScreenAsset+self.activeSceneID+"ft";
+		if(fitToScreenAsset != null){
+			$("#"+tempFitToScreenID).hide();
+		}
+		var nextSceneID = "scene-1",
+			currentSceneID = layoutObj.activeSceneID,
+			self = layoutObj;
+		pauseVideo(getActiveVideoID(),1);
+		layoutObj.pauseTransiton();
+		deactivateModelLayer();
+		$('#'+currentSceneID).css({"visibility":"hidden","top":"500000px","left":"0px","opacity":"0"});
+		self.addSceneID(currentSceneID);
+		layoutObj.activeSceneID = nextSceneID;
+		$("#"+nextSceneID).css({"visibility":"visible", "top" : '0px', "left":"0px", "opacity":"1"});
+		self.removeSceneID(nextSceneID);
+	},
+	postSettingOnOrientation: function(){
+		var self = this;
+		var centerSceneXY = corToCenterAlignOnWindow(layoutObj.layoutWidth,layoutObj.layoutHeight);	
+		$('#scenesContainer').css({"left":centerSceneXY[0]+"px","top":centerSceneXY[1]+"px"});
+        var fitToScreenAsset = layoutObj.getFitToSceneID(layoutObj.activeSceneID),
+			tempFitToScreenID = fitToScreenAsset+self.activeSceneID+"ft";
+		if(fitToScreenAsset == null){
+			$("#"+layoutObj.activeSceneID).css({"background":""});
+		}else{
+			$("#"+layoutObj.activeSceneID).css({"background":"transparent"});
+			$("#"+tempFitToScreenID).css({"visibility":"visible", "top" : '0px', "left":"0px", "opacity":"1","margin-top":"0px","display":"block"});
+		}
+		if($("#scenesContainer #"+fitToScreenAsset).length) $("#scenesContainer #"+fitToScreenAsset).css({"margin-top":"5000px"});
+		layoutObj.checkVideoStatus();
+	},
+	checkVideoStatus: function(){ 
+				var activeVideoInPreDim = getDetailsFromVideoStatus("dim",layoutObj.preLayoutDim,'activeVideoID');
+		var lastPlayedVideoInPreDim = getDetailsFromVideoStatus("dim",layoutObj.preLayoutDim,'lastPlayedVideoID');
+		var activeVideoInCurrentDim = getActiveVideoID();
+		if($("#"+lastPlayedVideoInPreDim).length){
+			if(jQuery.isEmptyObject(activeVideoInPreDim)){
+				if(activeVideoInCurrentDim == lastPlayedVideoInPreDim){
+					pauseAllVideos();
+					setActiveVideoID(null);
+				}
+			}else{
+				setTimeout(function(){
+					resumeVideo(activeVideoInPreDim);
+				},1);
+			}	
+		}   
+	},
+	onOrientationChange: function(){                       		if(layoutObj.matchLayoutDim == layoutObj.findMatchLayoutDim()){
+			centerAlignSceneCnt();
+			return;
+		}
+		layoutObj.deActiveScene();
+		layoutObj.deActivateAllScenesAsset();
+		layoutObj.preSettingOnOrientation();
+		layoutObj.matchLayoutDim = layoutObj.findMatchLayoutDim();
+		layoutObj.renderLayoutContainer();
+		layoutObj.applyContainersCss();
+		layoutObj.loadRenderLayoutComponent('scene-1');
+		layoutObj.postSettingOnOrientation();
+		loadMediaGalleryOutPutImage();
+	},
+	handleLayoutLoading: function(){                       
+		var activeSceneDiv = document.getElementById(layoutObj.activeSceneID);
+		activeSceneDiv.style.display = "block";
+		this.initLayoutLoading();
+	},
+	applyContainersCss: function(){
+		try{
+		var layoutDimArr = this.matchLayoutDim.split("x"),
+			layoutWidth = parseInt(layoutDimArr[0],10),
+			layoutHeight = parseInt(layoutDimArr[1],10),
+			orientationMode = "portrait";
+		if(layoutWidth > layoutHeight){
+			orientationMode = "landscape";
+		}
+		var bodyCSSClassname = orientationMode + this.matchLayoutDim;
+		document.body.setAttribute("class",bodyCSSClassname);
+		}catch(e){}
+	},
+	jqueryAndSceneCntLoaded: function(){
+		$("#loader").remove().appendTo('body');
+		bindEventModelLayer();
+				jqueryAvailable();
+	},
+	initLayoutLoading: function(){
+		layoutObj.loadJSLib();
+		var isCoreJSLibLoaded = setInterval(function(){
+			if(layoutObj.isCoreJSLibLoaded()){
+				clearInterval(isCoreJSLibLoaded);
+				layoutEventHandling("scenesContainer",["click","mouseover","mouseout","mouseenter"],layoutObj.assetInteractionHandler);
+				layoutObj.jqueryAndSceneCntLoaded();
+				layoutObj.loadRenderLayoutComponent(layoutObj.activeSceneID);
+			};
+		},25);
+		window.parent.postMessage('jvxAdObject:' + 'expansionLoaded', "*");
+	},
+	checkSceneAssetsLoaded: function(sceneID){
+		var retVal = true;
+		if($('#'+sceneID).is(':empty') || (!$('#'+sceneID+' div[id*=asset]').length && !$('#'+sceneID+' iframe[id*=asset]').length && !$('#'+sceneID+' object[id*=asset]').length && !$('#'+sceneID+' img[id*=asset]').length)) retVal = false;
+		return retVal;
+	},
+	loadRenderLayoutComponent : function(sceneID){
+		var self = this;
+		self.renderLayoutPreSetting();
+		if(!self.checkSceneAssetsLoaded(sceneID)){
+			self.renderLayoutComponents(sceneID);
+			self.isSceneAssetsLoaded(sceneID);
+			self.isSceneInitialized = true;
+		}else{
+			self.renderLayoutComponents(sceneID);
+			self.isSceneInitialized = false;
+		}
+	},
+	sceneRevisited: function(sceneID){
+		eventMsg(this.activeSceneID+".sceneLoaded");
+	},
+	renderLayoutPreSetting : function(){
+		try{
+		$("#"+this.activeSceneID).css({"visibility":"visible","top":"0px","left":"0px","opacity":"1"});
+		if(!videoStatusJSON.hasOwnProperty(this.matchLayoutDim))	videoStatusJSON[this.matchLayoutDim] = {};
+		if(!fitToScreenID.hasOwnProperty(this.matchLayoutDim))	fitToScreenID[this.matchLayoutDim] = {};
+		}catch(e){}
+	},
+	renderLayoutCntPreSetting: function(){
+		var layoutDim = layoutObj.matchLayoutDim;
+			layoutDimArr = layoutDim.split("x");
+		layoutObj.layoutWidth = Number(layoutDimArr[0]);
+		layoutObj.layoutHeight = Number(layoutDimArr[1]);
+	},
+	renderLayoutContainer: function(){                     		this.renderLayoutCntPreSetting();
+		var self = this;
+		var layoutCreativeJSONData = getRequiredJSON(creativeUnitType),
+			layoutScenesJSONData = getRequiredJSON('scenes'),
+			sceneContainerDiv = document.getElementById("scenesContainer"),
+			sceneDocumnetFragment=document.createDocumentFragment();
+		for(var scenes in layoutScenesJSONData){
+			if(document.getElementById(scenes) != null) continue;
+			var sceneDiv = document.createElement('div');
+			sceneDiv.id = scenes;
+			sceneDiv.setAttribute("style","background:transparent");
+			sceneDocumnetFragment.appendChild(sceneDiv);
+		}
+		sceneContainerDiv.appendChild(sceneDocumnetFragment);
+	},
+	findMatchLayoutDim: function(){                      					var layoutCreativeJSONData = adUnitNestedJSON,
+				layoutCount = 0,
+				matchLayoutDim = 0;
+			for(var layoutDimension in layoutCreativeJSONData){
+				layoutDimensionArr = layoutDimension.split("x");
+				this.globalAreaJSON[layoutDimension] = parseInt(layoutDimensionArr[0]) * parseInt(layoutDimensionArr[1]);
+				matchLayoutDim = layoutDimension;
+				layoutCount++;
+			}
+			if(layoutCount == 1){
+				return matchLayoutDim;
+			}
+			var vpWidth = document.documentElement.clientWidth,
+				vpHeight = document.documentElement.clientHeight;
+						matchLayoutDim = this.getClosest(vpWidth, vpHeight, layoutCount);
+				return matchLayoutDim;
+	},
+	getClosest: function(width, height,layoutCount){
+		closest = null;
+		str = "";
+		excludeAddressBarHeight = 100;
+		var leastDiff = 10000; 
+		var layoutMatchRange = parseInt(1000);
+		var closestMatch = null;
+		var prevAssetWidth = 0;
+		var prevAssetHeight = 0;
+		var layoutCount = 0;
+		var tmpLayout = null;
+		var smallestWidth, smallestDim = null;
+			globalLayouts = this.globalAreaJSON;
+		for(var layoutItem in globalLayouts){
+			cords = layoutItem.split('x');
+			assetWidth = parseInt(cords[0]);
+			assetHeight = parseInt(cords[1]);
+			if(assetWidth == width && assetHeight == height){
+				 
+				return layoutItem;
+			}
+						if(((assetWidth == width) && (Math.abs(assetHeight - height)) <= excludeAddressBarHeight)){
+				if(prevAssetHeight != 0 && (Math.abs(prevAssetHeight-height) < Math.abs(assetHeight-height))){
+					continue;
+				}
+				closestMatch = layoutItem;
+				prevAssetHeight = assetHeight;			
+			}
+					}
+		if(closestMatch != null){
+			 
+			return closestMatch;
+		}
+		for(var layoutItem in globalLayouts){
+			cords = layoutItem.split('x');
+			assetWidth = parseInt(cords[0]);
+			assetHeight = parseInt(cords[1]);
+			/*var currentWidthDiff = Math.abs(assetWidth - width);
+			var currentHeightDiff = Math.abs(assetHeight - height);
+			if(currentWidthDiff <= layoutMatchRange && currentHeightDiff <= layoutMatchRange){
+				layoutMatchRange = (currentWidthDiff > currentHeightDiff) ? currentWidthDiff : currentHeightDiff;
+				closestMatch = layoutItem;
+				 
+			}*/
+			//console.log('abcd: '+assetWidth+' '+width+' '+layoutItem);
+			if(assetWidth < width && (width - assetWidth) < leastDiff) {
+				leastDiff = (width - assetWidth);
+				closestMatch = layoutItem;
+			} 
+			if(smallestWidth == null || assetWidth < smallestWidth) {
+				smallestWidth = assetWidth;
+				smallestDim = layoutItem;
+			}
+		}
+				if(closestMatch == null && smallestDim != null) {
+			closestMatch = smallestDim;
+		}
+				if(closestMatch != null){
+			return closestMatch;
+		}
+	},
+	preSettingRLC: function(){
+		if(!this.assetsTransitionJSON.hasOwnProperty(this.activeSceneID)){
+			this.assetsTransitionJSON[this.activeSceneID] = {};
+        	this.assetInvokeTransitionsJSON[this.activeSceneID] = {};
+        	videoAssetsInScene[this.activeSceneID] = {};
+        	this.activeModelAssetIDs[this.activeSceneID] = {};
+        	this.YouTubeObject[this.activeSceneID] = {};
+			isManualPause[this.activeSceneID] = {};
+       }else{
+		    this.assetsTransitionJSON[this.activeSceneID] = {};
+			this.assetInvokeTransitionsJSON[this.activeSceneID] = {};
+	   }
+		if(!videoStatusJSON[this.matchLayoutDim].hasOwnProperty(this.activeSceneID)){
+			videoStatusJSON[this.matchLayoutDim][this.activeSceneID] = {};
+			fitToScreenID[this.matchLayoutDim][this.activeSceneID] = {"assetID":null};
+		}
+	},
+	renderLayoutComponents: function(sceneID){                    		this.activeSceneID = sceneID;
+		this.preSettingRLC();
+		var sceneData = getRequiredJSON('components');
+		for(var assetID in sceneData){
+			if(this.isNeedToLoadAsset(assetID)){
+				this.renderComponent(assetID);
+			}
+		}
+		this.initTransitions();     
+	},
+	isNeedToLoadAsset: function(assetID){
+		var isNeedToLoadAsset = true,
+			assetData = getRequiredJSON('components',assetID);
+		if(assetData.hasOwnProperty('options') && assetData['options'].hasOwnProperty('initVisible') && !parseInt(assetData['options']['initVisible'],10)){
+			isNeedToLoadAsset = false;
+		}
+		// need to check for youtubeURL,url,share = false;
+		return isNeedToLoadAsset;
+	},
+	checkForWebMobileOnly: function(assetID){
+		var retVal = true,
+			assetData = getRequiredJSON('components',assetID),
+			layerOptionsJSON = getRequiredJSON('layerOptions');
+		if(layerOptionsJSON){
+			var ignoreLayerKey = "mobile";
+						var ignoreLayerArr =  (layerOptionsJSON.hasOwnProperty(ignoreLayerKey) && layerOptionsJSON[ignoreLayerKey] != null) ? layerOptionsJSON[ignoreLayerKey].split(",") : false;
+			if($.inArray(assetData['layerId']+"",ignoreLayerArr) != -1){
+				retVal = false;
+			}
+		}
+		return retVal;
+	},
+	resizePosAndDimAsset: function(assetID){
+		if(isVideoElement(assetID)){
+			var currentWidth = $('#'+assetID).attr('initWidth'),	
+				currentHeight = $('#'+assetID).attr('initHeight'),
+				assetWidth = findActualDimAsset(assetID)[0],
+				assetHeight = findActualDimAsset(assetID)[1];
+			if(currentWidth != assetWidth || currentHeight != assetHeight){
+				var scaleW = assetWidth	/ currentWidth,
+					scaleH = assetHeight / currentHeight;
+				$("#"+assetID)[0].contentWindow.postMessage('jvxAdObject:jvxScalePlayer:'+scaleW+'x'+scaleH, "*");
+			}else{
+				$("#"+assetID)[0].contentWindow.postMessage('jvxAdObject:jvxNoScalePlayer', "*");
+			}
+		}
+	},
+	loadPrimaryPlayer: function(assetID){
+		var layoutAssetInfo = getRequiredJSON('components',assetID),
+			assetDimensionArr = layoutAssetInfo['location'].split(","),
+			assetLeft = assetDimensionArr[0],
+			assetTop = assetDimensionArr[1],
+			assetWidth = assetDimensionArr[2],
+			assetHeight = assetDimensionArr[3],
+			assetLayerID = layoutAssetInfo['layerId'],
+			customAssetID = "customAsset."+assetID,
+			clsOnDone = layoutAssetInfo.hasOwnProperty("options") ? (layoutAssetInfo['options'].hasOwnProperty("clsOnDone") && Number(layoutAssetInfo['options']['clsOnDone']) )? 1 : 0 : 0,
+			disableClickThrough = layoutAssetInfo.hasOwnProperty('disableClickThrough') ? Number(layoutAssetInfo['disableClickThrough']) : 0,
+			assetURL = mainPlayerInfo['thumbnailURL'],
+			autoPlay = mainPlayerInfo.hasOwnProperty("autoPlay")? mainPlayerInfo['autoPlay'] : true,
+			componentElementStr = "",
+			aspectRatio = mainPlayerInfo.hasOwnProperty("aspectRatio") ? mainPlayerInfo["aspectRatio"] : 0;
+			assetIconDim = (aspectRatio == "16x9" ? "320x180" :
+							aspectRatio == "4x3" ? "304x228" : "0x0").split("x"),
+			showControlBar = (layoutAssetInfo.hasOwnProperty("options") && layoutAssetInfo["options"].hasOwnProperty("showControlBar")) ? layoutAssetInfo["options"]["showControlBar"] : 0,
+			assetVideoParamQueryStr = videoParamQueryStr + primaryVideoParamQueryStr + '&enableInteractivity=false&isInLayout=1&r='+Math.random(),
+			assetAdURL = mainPlayerInfo['adURL'],
+			isVideoConverted = false,
+			adFormats = validateVal(mainPlayerInfo['adFormats']) ? mainPlayerInfo['adFormats'] : "0";
+		if(!disableClickThrough){
+			assetVideoParamQueryStr = addParameter(assetVideoParamQueryStr,["clickThroughURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu","clickTagURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu"]);
+		}else{
+			assetVideoParamQueryStr =removeParameter(assetVideoParamQueryStr,["clickTagURL","clickThroughURL"]);
+			assetVideoParamQueryStr = addParameter(assetVideoParamQueryStr,["enableVideoClickThrough=0"]);
+		}
+		if(showControlBar){
+			assetVideoParamQueryStr = ((showControlBar == "never") ? "svNoControlBar=1&" : "") +assetVideoParamQueryStr;
+		}
+		if((Number(assetWidth) > 350 || Number(assetHeight) > 230) && mainPlayerInfo.hasOwnProperty("allAdURLs")){
+			var hd_URL = mainPlayerInfo["allAdURLs"].hasOwnProperty("AVC_HD_baseline") ? mainPlayerInfo["allAdURLs"]["AVC_HD_baseline"] : null;
+			if(typeof hd_URL == "string"){
+				assetAdURL = hd_URL;
+			}
+		}
+		var fvParams = '';
+					isVideoConverted = true;
+				if(isVideoConverted && adFormats != "0"){
+			var	assetData = (mainPlayerInfo.hasOwnProperty('adConvertedURL') && mainPlayerInfo['adConvertedURL'] != "") ? mainPlayerInfo['adConvertedURL'] : assetAdURL;
+			var	videoURL = "https://as.jivox.com/player/InteractivityPlayer.swf?videoFile="+assetData;
+			fvParams = "&closeWhenDone="+clsOnDone+"&amp;thumbnailURL="+assetURL+"&amp;videoWidth="+assetIconDim[0]+"&amp;videoHeight="+assetIconDim[1]+"&amp;isPrimary=1&actionButtonId="+assetID+"&"+assetVideoParamQueryStr+"&autoPlay="+autoPlay;
+		}else{
+			var videoURL = "https://as.jivox.com/previewplayer/PreviewPlayerSmall.swf?";
+			fvParams = "thumbnailURL="+assetURL+"&amp;videoWidth="+assetIconDim[0]+"&closeWhenDone="+clsOnDone+"&amp;videoHeight="+assetIconDim[1]+"&amp;isPrimary=1&actionButtonId="+assetID+"&"+assetVideoParamQueryStr+"&autoPlay="+autoPlay;
+		}
+				videoURL = addReqVideoParam(videoURL);
+		videoAssetsInScene[this.activeSceneID][assetID] = {'autoPlay':autoPlay, 'isPlaying':0};
+					if(hasFlash){
+				var obj = {};
+				obj.id = assetID + 'PlaceHolder';
+				obj.src = videoURL;
+				obj.width = assetWidth;
+				obj.height = assetHeight;
+				obj.params = {'movie' : videoURL, 
+				  'wmode' : 'transparent',
+				  'allowScriptAccess' : 'always'
+		          , 'flashvars' : fvParams 				  };
+				componentElementStr = createSWF(obj);
+			}
+				componentElementStr = '<div id='+assetID+' class="components">'+componentElementStr+'</div>';
+		if((this.enableFallback || useHTML5Video) && adFormats != "0"){
+			componentElementStr = '<iframe src="https://as.jivox.com/player/player_html5.php?isInLayout=1&reportingURL=https://evs.jivox.com&closeWhenDone='+clsOnDone+'&playerUniqueId=jvxAdObject&campaignId=85034&key='+assetID+'&width='+assetWidth+'&setDomain=1&height='+assetHeight+'&'+assetVideoParamQueryStr+'&autoPlay='+autoPlay+'" id="'+assetID+'" class="components" frameborder="0" scrolling="no" style="visibility:hidden" initWidth="'+assetWidth+'" initHeight="'+assetHeight+'" onload="this.style.visibility=\'visible\';"></iframe>';
+		}
+		$(componentElementStr).appendTo('#'+this.activeSceneID);
+	},
+	loadYouTubeLid: function(assetID){
+		var self = this;
+		self.YouTubeIDs[assetID] = {};
+		if(!$("#youtubeLb").length){
+			var obj = {"src":"https://www.youtube.com/iframe_api","id":"youtubeLb"}
+			loadJS(obj);
+		}
+		if(self.isYouTubeLidLoaded){
+			self.renderYoutubeComponent(assetID);
+		}else{
+			var checkYTLoad = setInterval(function(){
+				if(self.isYouTubeLidLoaded){   //youTubeAssetIDs
+					clearInterval(checkYTLoad);
+					for(var assetID in self.YouTubeIDs){
+						self.renderYoutubeComponent(assetID);
+					}
+					self.YouTubeIDs = {}
+				}
+			},100);
+		}
+
+	},
+	renderYoutubeComponent: function(assetID){
+		var self = this,
+			layoutAssetInfo = getRequiredJSON('components',assetID),
+			assetDetailsJSON = assetsDetailedJSON["customAsset."+assetID],
+			assetData = assetDetailsJSON['data'],
+			assetDimensionArr = layoutAssetInfo['location'].split(","),
+			assetWidth = assetDimensionArr[2],
+			assetHeight = assetDimensionArr[3],
+			autoPlay = (assetDetailsJSON.hasOwnProperty("autoPlay") && Number(assetDetailsJSON['autoPlay'])) ? 1 : 0,
+		    options = layoutAssetInfo.hasOwnProperty("options") ? layoutAssetInfo["options"] : 0,
+			initVisible = (options && options.hasOwnProperty("initVisible")) ? Number(options["initVisible"]) : 1;
+			videoAssetsInScene[self.activeSceneID][assetID] = {'autoPlay':autoPlay, 'isPlaying':0},
+			getYTAssetParams = assetDetailsJSON['paramString'],
+			showThumbnailOnYTEnd = getParameterValue(getYTAssetParams,"showThumbnailOnYTEnd"),
+			rel = 1,
+			isMob = isMobile == "1" ? true : false;
+			if(isMob){
+				rel = 0; 
+			}
+			rel = showThumbnailOnYTEnd !=  "" ? (showThumbnailOnYTEnd == 1 ? 0 : 1) : rel;
+		self.YouTubeObject[self.activeSceneID][assetID] = new YT.Player(assetID,{
+			width:  assetWidth,
+			height: assetHeight,
+			videoId: assetData,
+			infoData: {'assetID':assetID,'autoPlay':autoPlay, 'initVisible':initVisible},
+			playerVars: { 'autoplay': autoPlay, 'rel' : rel },
+			events: {
+				"onReady" : function(e){
+					e.jvxAdAssetID = assetID;
+					e.jvxAdAutoPlay = autoPlay;
+					e.jvxAdInitVisible = initVisible;
+					onReadyYTPlayer(e)
+				},
+				"onStateChange" : function(e){
+					e.jvxAssetID = assetID;
+					onYTStateChangeYoutube(e);
+				}
+			}
+		});
+	},
+	loadGalleryShadow: function(assetID){
+		var galleryDetails = mediaGalleryData['customWidget.'+assetID];
+			options = JSON.parse(galleryDetails.options);
+		var	shadow = (options.hasOwnProperty('shadow') && Number(options.hasOwnProperty('shadow'))) ? 1 : 0;
+		if(shadow){
+			var shadowColor = options.hasOwnProperty('shadowColor') ? options['shadowColor'] : "#000" ;
+			var shadowClass = '.'+assetID+'_shadow{box-shadow: 4px 4px 2px '+shadowColor+';-moz-box-shadow: 4px 4px 2px '+shadowColor+';-webkit-box-shadow: 4px 4px 2px '+shadowColor+';-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Strength=3,Color='+shadowColor+')";filter: progid:DXImageTransform.Microsoft.Glow(Strength=3, Color='+shadowColor+');}';
+			document.getElementsByTagName('head')[0].insertAdjacentHTML('beforeEnd','<style>'+shadowClass+'</style>');
+			$("#"+assetID).addClass(assetID+"_shadow");
+		}
+	},
+	loadGallery: function(assetID){
+		var self = this,
+			layoutAssetInfo = getRequiredJSON('components',assetID),
+			assetDimensionArr = layoutAssetInfo['location'].split(","),
+			assetLeft = assetDimensionArr[0],
+			assetTop = assetDimensionArr[1],
+			assetWidth = assetDimensionArr[2],
+			assetHeight = assetDimensionArr[3],
+			assetParamQueryStr = paramQueryStr + "&clickThroughURL=https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%26sai%3DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%26sig%3DCg0ArKJSzNxgC2IZV7JqEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fclk%2F303280337%3B129290232%3Bu";
+			componentElementStr = "",
+			url ="";
+		url = galleryFileURL +'?component='+assetID+'&'+assetParamQueryStr;
+		componentElementStr = '<iframe src="'+url+'" id="'+assetID+'" frameborder="0" scrolling="no" allowtransparency="true"'+
+								'style="visibility:hidden" onload="this.style.visibility=\'visible\';"></iframe>';
+		$(componentElementStr).appendTo('#'+this.activeSceneID);
+		self.loadGalleryShadow(assetID);
+	},
+	isFitToScreen: function(assetID){
+		var layoutAssetInfo = getRequiredJSON('components',assetID);
+			options = layoutAssetInfo.hasOwnProperty("options") ? layoutAssetInfo["options"] : 0,
+			assetFitToScreen = (options && options.hasOwnProperty("fitToScreen")) ? Number(options["fitToScreen"]) : 0;
+		return assetFitToScreen;
+	},
+	renderComponent: function(assetID){                    	try{
+		if(!this.checkForWebMobileOnly(assetID)) return;
+		var self = this;
+		if(self.isFitToScreen(assetID) && $('#'+assetID+self.activeSceneID+"ft").length){
+			resizeFitToScreenImage(assetID);
+			return;
+		}else if(self.isFitToScreen(assetID) && $('#'+assetID).length){
+			fitToScreenCopyToBody(assetID);
+			return;
+		}else if($('#'+assetID).length){
+			this.resizePosAndDimAsset(assetID);
+			return;
+		}
+		if(!$('#'+assetID).length && assetID == "player"){
+			this.loadPrimaryPlayer(assetID);
+			return;
+		}
+		if(!$('#'+assetID).length && assetID.search("gallery") != -1){
+			this.loadGallery(assetID);
+			return;
+		}
+		if(!$('#'+assetID).length){
+			var layoutAssetInfo = getRequiredJSON('components',assetID),
+				customAssetID = "customAsset."+assetID,
+				assetDetailsJSON = assetsDetailedJSON[customAssetID],
+				assetIconFileType = assetDetailsJSON['iconFileType'],
+				assetURL = assetDetailsJSON['icon'],
+				assetType = assetDetailsJSON['type'],
+				assetData = assetDetailsJSON['data'],
+				assetWidgetData = assetDetailsJSON['widgetData'],
+				assetIconDim = ((typeof assetDetailsJSON["origIconDimension"] == "string" && assetDetailsJSON["origIconDimension"] != "") ? assetDetailsJSON["origIconDimension"] : (typeof assetDetailsJSON["iconDimension"] == "string" && assetDetailsJSON["iconDimension"] != "" ? assetDetailsJSON["iconDimension"] : "[0,0]")).replace("[","").replace("]","").split(","),
+				assetDimensionArr = layoutAssetInfo['location'].split(","),
+				assetLeft = assetDimensionArr[0],
+				assetTop = assetDimensionArr[1],
+				assetWidth = assetDimensionArr[2],
+				assetHeight = assetDimensionArr[3],
+				assetEventType = assetDetailsJSON['eventType'],
+				assetFallbackType = assetDetailsJSON['fallbackType'],
+				assetFallbackImgURL = assetDetailsJSON['fallbackImgURL'],
+				assetFallbackWidgetURL = assetDetailsJSON['fallbackWidgetURL'],
+				assetFallbackWidgetSrc = assetDetailsJSON['fallbackWidgetSrc'],
+				componentElementStr = "",
+				assetClickHandler = assetDetailsJSON['clickHandler'],
+				assetIconGlowColor = assetDetailsJSON['iconGlowColor'],
+				assetIconParamString = assetDetailsJSON['iconParamString'],
+				assetParamString = assetDetailsJSON['paramString'],
+				assetClickTagURL = getParameterValue(assetIconParamString,"clickThroughURL"),
+				assetIconBgTransparent = Number(assetDetailsJSON['isIconBgTransparent']),
+				assetIconBgColor = (assetIconBgTransparent && assetIconBgTransparent != null) ? "transparent" : assetDetailsJSON['iconBgColor'],
+				assetWmode = assetIconBgTransparent ? "transparent" : "",
+				assetLayerID = layoutAssetInfo['layerId'],
+				disableClickThrough = assetDetailsJSON.hasOwnProperty('disableClickThrough') ? Number(assetDetailsJSON['disableClickThrough']) : 0,
+				showControlBar = (layoutAssetInfo.hasOwnProperty("options") && layoutAssetInfo["options"].hasOwnProperty("showControlBar")) ? layoutAssetInfo["options"]["showControlBar"] : 0,
+				assetParamQueryStr = paramQueryStr,
+				assetVideoParamQueryStr = videoParamQueryStr +'&r='+Math.random(),
+				options = layoutAssetInfo.hasOwnProperty("options") ? layoutAssetInfo["options"] : 0,
+				transitionTime = (options && options.hasOwnProperty("transitionTime")) ? Number(options["transitionTime"]) : 0,
+				assetFitToScreen = (options && options.hasOwnProperty("fitToScreen")) ? Number(options["fitToScreen"]) : 0,
+				initVisible = (options && options.hasOwnProperty("initVisible")) ? Number(options["initVisible"]) : 1,
+				hoverIcon = checkIsDataAva(assetDetailsJSON,'hoverIcon'),
+				mouseHoverTime = checkIsDataAva(options,"mouseHoverTime"),
+				externalStartEventId  = Number(assetEventType)*100,
+				scaleToFit = checkIsDataAva(assetDetailsJSON,'scaleToFit') == "0" ? false : true,
+				isDynamic = checkIsDataAva(assetDetailsJSON,'virtual') == "1" ? true : false,
+				adFormat = validateVal(assetDetailsJSON['adFormat']) ? assetDetailsJSON['adFormat'] : "0";
+			assetParamQueryStr += addAdnlQueryStr([assetIconParamString,assetParamString]);
+			assetVideoParamQueryStr += addAdnlQueryStr([assetIconParamString,assetParamString]);
+			if(assetFitToScreen){
+				fitToScreenID[self.matchLayoutDim][self.activeSceneID]['assetID'] = assetID;
+			}
+			if(!disableClickThrough){
+				assetParamQueryStr = addParameter(assetParamQueryStr,["clickThroughURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu","clickTagURL="+assetClickTagURL]);
+				assetVideoParamQueryStr = addParameter(assetVideoParamQueryStr,["clickThroughURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu","clickTagURL=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%253Fxai%253DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%2526sai%253DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%2526sig%253DCg0ArKJSzNxgC2IZV7JqEAE%2526urlfix%253D1%2526adurl%253Dhttps%253A%252F%252Fad.doubleclick.net%252Fddm%252Fclk%252F303280337%253B129290232%253Bu"]);
+			}else{
+				assetParamQueryStr =removeParameter(assetParamQueryStr,["clickTagURL","clickThroughURL"]);
+				assetVideoParamQueryStr =removeParameter(assetVideoParamQueryStr,["clickTagURL","clickThroughURL"])
+				assetVideoParamQueryStr = addParameter(assetVideoParamQueryStr,["enableVideoClickThrough=0"]);
+			}
+			if(showControlBar){
+				assetVideoParamQueryStr = ((showControlBar == "never") ? "svNoControlBar=1&" : "") +assetVideoParamQueryStr;
+			}
+			if(!initVisible || this.activeSceneID != "scene-1"){
+				assetVideoParamQueryStr += "&userInitAction=1";
+			}
+			if(assetIconGlowColor != null && assetIconGlowColor != ""){
+				self.iconGlowEffect(assetID);
+			}
+			if(assetIconFileType == "youtube"){
+				componentElementStr = '<div id='+assetID+'></div>';
+				$(componentElementStr).appendTo('#'+this.activeSceneID);
+				this.loadYouTubeLid(assetID);
+				return;
+			}
+			if(assetIconFileType == "flash"){
+									if(hasFlash || orgHasFlash || assetFallbackType == null){
+						var obj = {};
+						obj.id = assetID + 'PlaceHolder';
+						obj.src = assetURL;
+						obj.width = assetWidth;
+						obj.height = assetHeight;
+						obj.params = {'movie' : assetURL, 
+									  'wmode' : 'transparent',
+									  'allowScriptAccess' : 'always',
+									  'flashvars' : 'assetId='+assetID+'&eventId='+assetEventType+'&'+assetParamQueryStr
+									 };
+						componentElementStr = createSWF(obj);
+					}
+								assetIconBgColor = (assetIconBgColor.search("#") == -1) ? ("#"+assetIconBgColor) : assetIconBgColor
+				componentElementStr = '<div id='+assetID+' class="components" style="background:'+assetIconBgColor+'">'+componentElementStr+'</div>';
+				if(this.enableFallback && assetFallbackType != null){
+					if(assetFallbackType == "image"){
+						assetIconFileType = "image";
+						assetURL = assetFallbackImgURL;
+					}else if(assetFallbackType == "html5" || assetFallbackType == "swiffy"){
+						assetIconFileType = "custom-html-widget-file";
+						assetURL = assetFallbackImgURL;
+					}else if(assetFallbackType == "widget"){
+						assetIconFileType = "custom-widget";
+						componentElementStr = "";
+						assetURL = assetFallbackWidgetSrc;
+					}else if(assetFallbackType == "widget-url"){
+						assetIconFileType = "custom-html-widget-file";
+						componentElementStr = "";
+						assetURL = assetFallbackWidgetURL;
+					}else if(assetFallbackType == "widget-src"){
+						assetIconFileType = "custom-widget";
+						componentElementStr = "";
+						assetURL = assetFallbackWidgetSrc;
+					}
+					if(assetIconBgTransparent && (assetIconFileType == "custom-html-widget-file")){
+						assetURL = "/jivox/serverAPIs/getTransparentSwiffy.php?url="+assetURL;
+					}
+				}
+				if(!hasFlash && !orgHasFlash && assetFallbackType == null){
+					componentElementStr = "";
+				}
+			}
+						if(assetIconFileType == "image" && assetType != "asset-video"){
+				componentElementStr = '<img id="'+assetID+'" src="'+assetURL+'" />';
+			}
+			if(assetIconFileType == "custom-html-widget-file"){
+				var baseURL = assetURL;
+				assetURL += "?externalWg=1&"+removeParameter(paramQueryStr,["versionId"])+"&assetID="+assetID+"&isMobile=&externalStartEventId="+externalStartEventId;
+				var iframeAssetURL = (assetData && assetWidgetData) ? "about:blank" : 'about:blank';
+				componentElementStr = '<iframe id="'+assetID+'"  src="'+iframeAssetURL+'"  marginwidth="0" marginheight="0" frameborder="0" scrolling="no" allowtransparency="true"'+
+										'style="visibility:hidden" onload="this.style.visibility=\'visible\';">';
+			}
+			if(assetType == "asset-video" || assetIconFileType == "external-video" || assetIconFileType == "vast"){
+				var autoPlay = (assetDetailsJSON.hasOwnProperty("autoPlay") && Number(assetDetailsJSON['autoPlay'])) ? true : false;
+				var clsOnDone = layoutAssetInfo.hasOwnProperty("options") ? 
+							   (layoutAssetInfo['options'].hasOwnProperty("clsOnDone") && Number(layoutAssetInfo['options']['clsOnDone']) )? 1 : 0 : 0;
+				//var thumbnailURLVal = validateVal(assetURL) ? '&thumbnailURL='+assetURL : '';
+				var thumbnailURLVal="";
+				if(assetIconFileType == "external-video" || assetIconFileType == "vast"){
+					thumbnailURLVal = validateVal(assetDetailsJSON.icon) ? '&thumbnailURL='+assetDetailsJSON.icon : '';
+				} else {
+					thumbnailURLVal = validateVal(assetURL) ? '&thumbnailURL='+assetURL : '';
+				}
+				videoAssetsInScene[this.activeSceneID][assetID] = {'autoPlay':autoPlay, 'isPlaying':0};
+				if(hasAnimDelayORSpeed(assetID,"appear") || transitionTime){
+					autoPlay = false;
+				}
+				if(assetIconFileType == "vast") {
+					var volVal = getParameterValue(assetParamString, "svVolume");
+					var volumeVal = (volVal) ? '&volume='+volVal : '';
+									}
+			}
+			if(assetType == "asset-video" || assetIconFileType == "external-video"){
+				if(assetIconFileType == "external-video"){
+					adFormat = 1;
+				}
+				if((Number(assetWidth) > 350 || Number(assetHeight) > 230) && assetDetailsJSON.hasOwnProperty("highResURL")){
+					if(typeof assetDetailsJSON["highResURL"] == "string"){
+						assetData = assetDetailsJSON["highResURL"];
+					}
+				}
+				var fvParams = '';
+				videoURL = "https://as.jivox.com/player/InteractivityPlayer.swf?videoFile="+encodeURIComponent(assetData);
+				fvParams = "&raiseCMacroFlag=1&closeWhenDone="+clsOnDone+"&amp;autoPlay="+autoPlay+thumbnailURLVal+"&amp;videoWidth="+assetIconDim[0]+"&amp;videoHeight="+assetIconDim[1]+"&actionButtonId="+assetID+"&eventId="+assetEventType+"&"+assetVideoParamQueryStr;
+								videoURL = addReqVideoParam(videoURL);
+									if(hasFlash){
+						var obj = {};
+						obj.id = assetID + 'PlaceHolder';
+						obj.src = videoURL;
+						obj.width = assetWidth;
+						obj.height = assetHeight;
+						obj.params = {'movie' : videoURL, 
+									  'wmode' : 'transparent',
+									  'allowScriptAccess' : 'always'
+						, 'flashvars' : fvParams									 };
+						componentElementStr = createSWF(obj);
+					}
+								componentElementStr = '<div id='+assetID+' class="components">'+componentElementStr+'</div>';
+				if((this.enableFallback || useHTML5Video) && adFormat != "0"){
+					if(assetIconFileType == "external-video"){
+						assetVideoParamQueryStr += '&videoFile='+encodeURIComponent(assetData);
+					}
+					componentElementStr = '<iframe src="https://as.jivox.com/player/player_html5.php?isInLayout=1&reportingURL=https://evs.jivox.com&playerUniqueId=jvxAdObject&campaignId=85034&raiseCMacroFlag=1&autoPlay='+autoPlay+thumbnailURLVal+'&closeWhenDone='+clsOnDone+'&eventId='+assetEventType+'&setDomain=1&key='+customAssetID+'&width='+assetWidth+'&height='+assetHeight+'&eventId='+assetEventType+'&'+assetVideoParamQueryStr+'" id="'+assetID+'" class="components" frameborder="0" scrolling="no" style="visibility:hidden" initWidth="'+assetWidth+'" initHeight="'+assetHeight+'" onload="this.style.visibility=\'visible\';"></iframe>';
+				}
+			}
+			if(assetIconFileType == "vast"){
+				assetVideoParamQueryStr = removeParameter(assetVideoParamQueryStr,["svVolume"]);
+				var fvParams = 'reverseScale=1&campaignId=85034&siteId=554580bc721c8d&assetId=' + assetID + '&parentDivId='+assetID+'&objectName=&externalStartEventId=' + externalStartEventId + '&vastURL=' + encodeURIComponent(assetData) + "&closeWhenDone="+clsOnDone+"&amp;autoPlay="+autoPlay+thumbnailURLVal+volumeVal+"&amp;width="+assetWidth+"&amp;height="+assetHeight+"&actionButtonId="+assetID+"&eventId="+assetEventType+"&"+assetVideoParamQueryStr,
+				playerURL = 'https://as.jivox.com/VAST/inStreamPlayer.swf',
+				obj = {};
+				obj.src = playerURL;
+				obj.id = assetID+'PlaceHolder';
+				obj.width = assetWidth;
+				obj.height = assetHeight;
+				obj.params = {
+					'movie': playerURL,
+					'wmode': 'transparent',
+					'allowScriptAccess': 'always',
+					'allowFullScreen' : 'true',
+					'flashvars': fvParams
+				};
+				componentElementStr = createSWF(obj);
+				componentElementStr = '<div id='+assetID+' class="components">'+componentElementStr+'</div>';
+				videoAssetsInScene[this.activeSceneID][assetID] = {'autoPlay':autoPlay, 'isPlaying':0};
+				if(this.enableFallback || useHTML5Vast){
+					assetURL = '<script src="https://as.jivox.com/VAST/inStreamJSPlayer.php?'+fvParams+'"><\/script>';
+					assetIconFileType = "custom-widget";
+					componentElementStr = "";
+				}
+			}
+			if(!assetFitToScreen){
+				$(componentElementStr).appendTo('#'+this.activeSceneID);
+			}else{
+					fitToscreen(componentElementStr);				
+			}
+
+			if(assetIconFileType == "custom-html-widget-file"){
+									renderExtHTMLFile(assetURL,assetID,baseURL,assetData,assetWidgetData);
+							}
+			if(assetIconFileType == "custom-js-widget-file" || assetIconFileType == "custom-widget" || assetIconFileType == "text-widget"){
+				componentElementStr = '<iframe id="'+assetID+'" frameborder="0" scrolling="no" allowtransparency="true"'+
+										'style="visibility:hidden"></iframe>';
+				$(componentElementStr).appendTo('#'+this.activeSceneID);
+				var widgetStr = "";
+				if(assetIconFileType == "custom-js-widget-file"){
+					widgetStr = '<body><script src="'+assetURL+'"><\/script></body>';
+				}
+				if(assetIconFileType == "custom-widget"){
+					var widgetParamInfo = getWidgetParamStr(assetID);
+					widgetStr = '<head><script>'+widgetParamInfo+'<\/script>';
+											widgetStr += '<script id="jvxWidget" src = "'+jivoxWidget+'"><\/script>';
+									
+					widgetStr += '<style>'+self.getStyeleCW()+'</style></head>';
+					widgetStr += '<body>'+assetURL+'</body>';
+					
+				}else if(assetIconFileType == "text-widget"){
+					//assetData = (validateVal(assetParamString) && scaleToFit == true) ? (assetData+self.doScaleScriptTW()) : assetData+'<style>#'+assetID+'{white-space: nowrap;    overflow: hidden;text-overflow: ellipsis;}</style>';
+					
+					assetData = !isDynamic ? assetData : ( scaleToFit ? (assetData+self.doScaleScriptTW()) : (assetData+'<style>#'+assetID+'{white-space: nowrap;    overflow: hidden;text-overflow: ellipsis;}</style>') );
+					
+					widgetStr = '<script>var assetID=window.frameElement.id;'+convertToStr(attachEventListener)+convertToStr(layoutEventHandling)+' <\/script>'+self.richTextWidget(assetURL)+'<style>body,font{padding:0;margin:0;cursor:pointer;} body,body>div:first-child{width:'+assetWidth+"px;height:"+assetHeight+"px;} "+self.getStyleTW(assetParamString)+'</style>'+'<body><div id="'+assetID+'">'+assetData+'<script>/*document.body.id=assetID;*/layoutEventHandling(assetID,["click","mouseover","mouseout"],function(e){if(e.target != undefined){e.target.id=assetID;}else{e.srcElement.id=assetID;} parent.layoutObj.assetInteractionHandler(e)});<\/script></body>';
+				}
+				var widgetIframeRef = document.getElementById(assetID);
+				attachEventListener(widgetIframeRef, "load", function(){ widgetIframeRef.style.visibility = 'visible'; }, false);
+				var widgetFrameWindow = widgetIframeRef.contentWindow || widgetIframeRef.contentDocument;
+				widgetFrameWindow.document.open('text/html', 'replace');
+				widgetFrameWindow.document.write(widgetStr);
+				widgetFrameWindow.document.close();
+			}
+			if(isWrapperForAssetReq(assetID)){
+				componentElementStr = '<div id="'+assetID+'wrapper" style="position:absolute;left:'+assetLeft+'px;top:'+assetTop+'px;width:'+assetWidth+'px;height:'+assetHeight+'px;z-index:'+assetLayerID+'"></div>';
+				$(componentElementStr).appendTo('#'+this.activeSceneID);
+			}
+						self.setHoverIcon({assetID:assetID,options:options,icon:assetURL,assetDetailsJSON:assetDetailsJSON});
+			if(self.assetHasInteractionOnEvent(assetID,"hover")){
+				self.setTimerOnHover(assetID);
+			}
+			self.postSettingRenderComponent(assetID);
+		}
+	}catch(e){
+			}
+	},
+	postSettingRenderComponent: function(assetID){
+		var disableClickThrough = Number(getRequiredAssetDetail(assetID,"disableClickThrough")),
+			interactionData = getRequiredJSON("interactions",assetID),
+			assetIconFileType = getRequiredAssetDetail(assetID,"iconFileType");
+		if(disableClickThrough){
+			$("#"+assetID).css({"cursor":"auto"});
+			if(assetIconFileType == "text-widget"){
+				$(this).contents().find('body').css({"cursor":"auto"});
+			}
+		}
+		if(interactionData){
+			$("#"+assetID).css({"cursor":"pointer"});
+		}
+		
+	},
+	getStyeleCW: function(){
+		return "body{padding:0;margin:0;}";
+	},
+	getStyleTW : function(assetParamString){
+		if(assetParamString == "" || assetParamString == null) return "";
+		var retVal = "html{",
+			paramStringInJSON = getParameterInJSON(assetParamString);
+		for(var key in paramStringInJSON){
+			retVal += key + ":" + paramStringInJSON[key]+";";
+		}
+		retVal += "}";
+		return retVal;
+	},
+	doScaleScriptTW: function(){
+		return '<script>var assetID = window.frameElement.id; var windowWidth = parseInt(parent.$("#"+assetID).css("width"),10),windowHeight = parseInt(parent.$("#"+assetID).css("height"),10),scrollWidth = document.body.scrollWidth,scrollHeight = document.body.scrollHeight;scaleXIndex = ((Number(windowWidth)/Number(scrollWidth)) < 1) ? (Number(windowWidth)/Number(scrollWidth) - 0.10) : 1,	scaleYIndex = ((Number(windowHeight)/Number(scrollHeight)) < 1) ? (Number(windowHeight) /Number(scrollHeight) - 0.10) : 1; /*document.body.setAttribute("style","width:100%;height:100%;margin:0;cursor:pointer;padding:0;-ms-transform: scale("+scaleXIndex+","+scaleYIndex+");-webkit-transform: scale("+scaleXIndex+","+scaleYIndex+");-moz-transform: scale("+scaleXIndex+","+scaleYIndex+");transform: scale("+scaleXIndex+","+scaleYIndex+");transform-origin: 0;-ms-transform-origin: 0;-webkit-transform-origin: 0;-moz-transform-origin: 0;");*/if(Number(scrollWidth)> Number(windowWidth) || Number(scrollHeight) > Number(windowHeight)){if(document.getElementsByTagName("font").length){document.getElementsByTagName("font")[0].removeAttribute("size");} if(document.body.style.fontSize=="")document.body.style.fontSize="100%";var loopVar =0;while(1){loopVar++;scrollWidth = document.body.scrollWidth;scrollHeight = document.body.scrollHeight;document.body.style.fontSize = parseInt(document.body.style.fontSize) - 2 + "%"; /*console.log("windowWidth...."+windowWidth+"....scrollWidth....."+scrollWidth+"....windowHeight.."+windowHeight+"......scrollHeight...."+scrollHeight+"....fontSize....."+document.body.style.fontSize);*/ if(loopVar==100 || Number(windowWidth) >= Number(scrollWidth) && Number(windowHeight) >= Number(scrollHeight)) break; }}<\/script>';
+	},
+	richTextWidget: function(assetURL){
+		var retVal = "";
+		if(assetURL != "" && assetURL != null && assetURL != "null"){
+			retVal = '<style>@font-face{font-family: fontFamily;src: url('+assetURL+')} body,font{font-family: fontFamily; padding:0;margin:0;cursor:pointer;} </style>';
+		}
+		return retVal;
+	},
+	iconGlowEffect: function(assetID){
+					var assetInteraction = getRequiredJSON('interactions',assetID),
+				customAssetID = "customAsset."+assetID,
+				assetDetailsJSON = assetsDetailedJSON[customAssetID],
+				assetIconGlowColor = assetDetailsJSON['iconGlowColor'];
+			//if(!assetInteraction) return;
+			if($('#glowStyleContainer').length == 0){
+				$("<style type='text/css' id='glowStyleContainer'></style>").appendTo("head");
+			}
+			glowClass = '.shadowGlow'+assetID+'{box-shadow: 0 0 3px 3px '+assetIconGlowColor+';-moz-box-shadow: 0 0 3px 3px '+assetIconGlowColor+';-webkit-box-shadow: 0 0 3px 3px '+assetIconGlowColor+';/*-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Strength=3,Color='+assetIconGlowColor+')";filter: progid:DXImageTransform.Microsoft.Glow(Strength=3, Color='+assetIconGlowColor+');*/}';
+				try{
+				$('#glowStyleContainer').append(glowClass);
+		}catch(e){// handle IE8.
+				glowClass = document.getElementById('glowStyleContainer').styleSheet.cssText + glowClass;
+				document.getElementById('glowStyleContainer').styleSheet.cssText = glowClass;									
+		}
+			window.setTimeout(function(assetID){
+				$("#"+assetID).on({"mouseover":function(){
+					$(this).addClass('shadowGlow' + assetID);
+				},"mouseout":function(){
+					$(this).removeClass('shadowGlow' + assetID);
+				}});
+			},1,assetID);
+			},
+	setHoverIcon: function(o){
+		var hoverIcon = checkIsDataAva(o.assetDetailsJSON, 'hoverIcon'),
+		    hoverEffect = checkIsDataAva(o.assetDetailsJSON, 'hoverEffect'),
+			hoverOpacity = checkIsDataAva(o.assetDetailsJSON, 'hoverOpacity');
+		if(!validateVal(hoverIcon) && !validateVal(hoverEffect) && !validateVal(hoverOpacity)){
+			return;
+		}
+		var assetOpacity = checkIsDataAva(o.options,"opacity");
+ 		o.hoverIcon = getValueWithDefault(hoverIcon,o.icon);
+		o.hoverEffect = getValueWithDefault(hoverEffect,null);
+		o.assetOpacity = getValueWithDefault(assetOpacity,1);
+		o.hoverOpacity = getValueWithDefault(hoverOpacity,o.assetOpacity);
+		if(o.assetOpacity != 1){
+			$("#"+o.assetID).css({"opacity":o.assetOpacity});
+		}
+		if(o.icon != o.hoverIcon){
+			$("<img />").attr("src",o.hoverIcon);
+		}
+		if(o.hoverEffect == "fade"){
+			(function(o){
+				if(o.icon == o.hoverIcon){
+					$("#"+o.assetID).hover(function(){
+						$(this).stop().animate({opacity:o.hoverOpacity}, 250,function(){
+						});
+					},function(){
+						$(this).stop().animate({opacity:o.assetOpacity}, 250,function(){
+						});
+					});
+				}else{
+					$("#"+o.assetID).hover(function(){
+						$(this).stop().animate({opacity:0.3}, 250,function(){
+							$(this).attr('src',o.hoverIcon).animate({opacity:o.hoverOpacity},250);
+						});
+					},function(){
+						$(this).stop().animate({opacity:0.3},250, function(){
+							$(this).attr('src',o.icon).animate({opacity:o.assetOpacity},250);
+						});
+					});
+				}
+			})(o);
+		}else if(o.hoverEffect == null || o.hoverEffect == "none"){
+			(function(o){
+				$("#"+o.assetID).hover(function(){
+					$(this).attr('src',o.hoverIcon).css({"opacity":o.hoverOpacity});
+				},function(){
+					$(this).attr('src',o.icon).css({"opacity":o.assetOpacity});;
+				});
+			})(o);
+		}
+	},
+	assetMouseOverCallback: function(assetID){
+		this.invokeInteractions(assetID);
+	},
+	assetClickCallback: function(assetID){
+		this.invokeInteractions(assetID);                  
+	},
+	disableEvent: function(obj){
+		var retVal = false,
+			assetID = obj.assetID;
+		if((obj.assetEventType != "click") && (!assetID.search("scene-") || !obj.assetInteractionsData )){
+			retVal = true;
+		}
+		if(getRequiredAssetDetail(assetID,"iconFileType") == "flash" && hasFlash && getRequiredAssetDetail(assetID,"clickHandler") != "system"){
+			retVal = true;
+		}
+		if((obj.assetEventType == "click") && (assetID == "scrollDownArrow" || assetID == "scrollUpArrow")){
+			retVal = true;
+		}
+				return retVal;
+	},
+	assetHasEventInteractionSet: function(obj){
+		var retVal = false,
+			assetEventType = obj.assetEventType,
+			assetInteractionsData = obj.assetInteractionsData,
+			srcEvent = null;
+		$.each(assetInteractionsData, function(index, data){
+			srcEvent = data['srcEvent'];
+			if((srcEvent == assetEventType) || (srcEvent == "mouseover" && assetEventType == "mouseout")){
+				retVal = true;
+			}
+		});
+		return retVal;
+	},
+	assetInteractionHandler: function(event){              		var self = layoutObj,
+			eventSrc = event.target || event.srcElement,
+			assetEventType = event.type,
+			assetID = eventSrc.id.replace("wrapper","").replace("PlaceHolder",""),
+			assetInteractionsData = getRequiredJSON('interactions',assetID),
+			options = getRequiredJSON('components',assetID),
+			mouseHoverTime = options.hasOwnProperty("mouseHoverTime") ? options["mouseHoverTime"] : 0,
+			obj = {assetID:assetID,assetEventType:assetEventType,assetInteractionsData:assetInteractionsData};
+				self.invokeInteractsAndTrans(obj);
+	},
+	invokeInteractsAndTrans: function(obj){
+		if(layoutObj.disableEvent(obj)) return;
+		var assetID = obj.assetID,
+			assetEventType = obj.assetEventType;
+		if(isNeedClickThrough(assetID,assetEventType)){
+			layoutObj.openClickThrough();
+			clickedOnInteraction();
+			return;
+		}
+					if(!layoutObj.assetHasEventInteractionSet(obj)) return;
+				if(assetEventType == "click") clickedOnInteraction();
+		//if(layoutObj.setTimerOnHover(assetID,assetEventType)){
+		//}else{
+			if(typeof assetEventType == "undefined") assetEventType = "click";
+			layoutObj.invokeInteractions(assetID,assetEventType);
+			layoutObj.invokedTransitions(assetID,assetEventType);
+		//}
+		eventMsg(assetID+"."+assetEventType);
+	},
+	setTimerOnHover: function(assetID){
+				var self = layoutObj,
+			assetData = getRequiredJSON('components',assetID),
+			options = assetData.hasOwnProperty("options") ? assetData["options"] : 0,
+			mouseHoverTime = options && options.hasOwnProperty("mouseHoverTime") && !isMobile ? options["mouseHoverTime"] : 0;
+		$("#"+assetID).hover(function(){
+			self.assetHoverTimer[assetID] = setTimeout(function(){
+				layoutObj.invokeInteractions(assetID,"hover");
+				layoutObj.invokedTransitions(assetID,"hover");
+			},mouseHoverTime*1000);
+		},function(){
+			clearTimeout(self.assetHoverTimer[assetID]);
+		});
+		return true;
+	},
+	clearTimeOnHover: function(){
+		for(var key in layoutObj.assetHoverTimer){
+			clearTimeout(layoutObj.assetHoverTimer[key]);
+		}
+	},
+	invokeInteractions: function(assetID,assetEventType,noTracker){
+		var assetInteractionsData = getRequiredJSON('interactions',assetID),
+			eventBasedJSON = [],
+			srcEvent,
+			destObject,
+			assetDestAction,
+			eventType = (!isVideoElement(assetID) && assetID.search("scene-") == -1) ? getRequiredAssetDetail(assetID,'eventType') : "";
+		$.each(assetInteractionsData, function(index, data) {
+			srcEvent = data['srcEvent'];
+			destObject = data['destObject'];
+			assetDestAction = data['destAction'];
+			if(srcEvent == assetEventType){
+				eventBasedJSON.push(data);
+			}
+		});
+		$.each(eventBasedJSON,function(index, data){
+			layoutObj.doInteraction(data);
+		});
+				/*Specifically added check for Adobe Edge child assets, whether assetEventType is a custom event or listeners added to events click, mouseover or mouseout*/
+		if(eventBasedJSON.length && !layoutObj.hasOpenORCloseExpansion(assetID,assetEventType) && (typeof noTracker == "undefined" || noTracker) && assetEventType.indexOf("mouseover") == -1 && assetEventType .indexOf("mouseout") == -1 && assetEventType .indexOf(".click") == -1 && assetDestAction != 'openClickThrough'){
+			    eventType = getEventIdOnType(eventType,assetEventType);
+				fireTracker(eventType);
+			}
+			},
+	hasOpenORCloseExpansion: function(assetID,assetEventType){
+		var retVal = false,
+			assetInteractionsData = getRequiredJSON('interactions',assetID),
+			srcEvent = null;
+		$.each(assetInteractionsData,function(index, data){
+			srcEvent = data['srcEvent'];
+			if(srcEvent == assetEventType && (data['destAction'] == "openExpansion" || data['destAction'] == "closeExpansion")){
+				retVal = true;
+			}
+		});
+		return retVal;
+	},
+	assetHasInteractionOnEvent: function(assetID,assetEventType){
+		var retVal = false,
+			assetInteractionsData = getRequiredJSON('interactions',assetID),
+			srcEvent = null;
+		$.each(assetInteractionsData,function(index, data){
+			srcEvent = data['srcEvent'];
+			if(srcEvent == assetEventType){
+				retVal = true;
+				/*$.each(destActionArr,function(i, value){
+					if(data['destAction'] == value && data['destObject'] == invokeAsset){
+						retVal = true;
+					}
+				});*/
+			}
+		});
+		return retVal;
+	},
+	doInteraction: function(obj){
+		var destAction = obj['destAction'],
+			destObject = obj['destObject'],
+			assetDetailsJSON = null,
+			url = null,
+			destObjOption = checkIsDataAva(getRequiredJSON("components",destObject),"options");
+		if(destAction == "show"){
+			if(!$("#"+destObject).length){
+				this.renderComponent(destObject);
+				if(checkIsDataAva(destObjOption,"appearanceEffects") != null){
+					deactivateAsset(destObject);
+				}
+			}
+			if(!hasAppearEffect(destObject)){
+			//if(checkIsDataAva(destObjOption,"appearanceEffects") == null){
+				activateAsset(destObject);
+				if(checkIsDataAva(destObjOption,"modal") == 1){
+					if(self.modelInitiaterAssetID != assetID){
+						self.modelInitiaterAssetID = assetID;
+						deactivateModelLayer();
+					}
+					activateModelLayer(destObject);
+				}
+			}else{
+				//deactivateAsset(destObject);
+			}
+		}else if(destAction == "hide"){
+			if(checkIsDataAva(destObjOption,"disappearanceEffects") == null){
+				deactivateAsset(destObject);
+			}
+		}else if(destAction == "animate"){
+			//activateAsset(destObject);
+		}else if(destAction == "switchScene"){
+			this.invokeSceneSwitch(obj);
+		}else if(destAction == "openExpansion" || destAction == "closeExpansion"){
+			layoutObj.deActiveScene({animPause:0});
+						openClickThrough();
+					}else if(destAction == "open"){
+			layoutObj.openURLInteraction(destObject);
+		}else if(destAction == "play"){
+			resumeVideo(destObject);
+		}else if(destAction == "pause"){
+			pauseVideo(destObject,1);
+		}else if(destAction == "mute"){
+			setVideoVolume(destObject,0);
+		}else if(destAction == "unmute"){
+			setVideoVolume(destObject,100);
+		}else if(destAction == "openClickThrough"){
+			openClickThrough();
+		}else if(destAction == "initiate"){
+			if(getRequiredAssetDetail(destObject,"type")=="asset-video"){
+				restartVideo(destObject);
+			}else{
+				reloadAsset(destObject);
+			}
+			setTimeout(function(){
+				resumeVideo(destObject);
+			},1000);
+		}
+		this.msgConfiguredInWidget(obj);
+	},
+	openURLInteraction: function(assetID){
+		var url = getRequiredAssetDetail(assetID,"externalPostURL"),
+			eventType = getRequiredAssetDetail(assetID,"eventType"),
+			icon = getRequiredAssetDetail(assetID,"iconFileType");
+		url = (url == null) ? getRequiredAssetDetail(assetID,"icon") : url;
+		var shareMsg = getRequiredAssetDetail(assetID,"shareMsg");
+		url += (shareMsg != null && shareMsg != "") ? "&text="+shareMsg : "";
+		var externalTrackerData = externalTrackerForEvent(eventType);
+		if(externalTrackerData != null){
+			url = externalTrackerData['trackerURL'];
+		}
+		if(url.search("http")== -1){
+			url = serverProtocolStr + url;
+		}
+				window.open(url);
+	},
+	msgConfiguredInWidget: function(obj){
+		var destAction = obj['destAction'],
+			destObject = obj['destObject'],
+			iconWidgetType = Number(getRequiredAssetDetail(destObject,"iconWidgetType"));
+		if(getRequiredAssetDetail(destObject,"iconFileType") != "custom-widget" || !$("#"+destObject).length) return;
+		if((iconWidgetType == "" || !iconWidgetType)){
+			try{
+				$("#"+destObject)[0].contentWindow.receiveMsgOnWidgetConfig(destAction);
+			}catch(e){}
+		}
+	},
+	invokedTransitions: function(assetID,eventType){       		var self = this, 
+			actionData = getRequiredJSON('interactions',assetID),
+			destObject,destAction,srcEvent,
+			sceneData = getRequiredJSON('components'),
+			assetLYDetail,options,
+			assetLYDetail,initVisible,inTime,outTime,advanceTime,paAdvanceTime,sqAdvanceTime,appearJ,disappearJ,animateJ,animDetail,time,lastTimeIn,animJSON,initInvisible,order,animID,
+			t = {};
+		if(!self.assetInvokeTransitionsJSON[this.activeSceneID].hasOwnProperty(assetID)) self.assetInvokeTransitionsJSON[this.activeSceneID][assetID] = {};	
+		if(!self.assetInvokeTransitionsJSON[this.activeSceneID][assetID].hasOwnProperty(eventType)) self.assetInvokeTransitionsJSON[this.activeSceneID][assetID][eventType] = {};	
+		t = self.assetInvokeTransitionsJSON[self.activeSceneID][assetID][eventType];
+		$.each(actionData, function(i, data){
+			destObject = data['destObject'];
+			destAction = data['destAction'];
+			srcEvent = data['srcEvent'];
+			if(srcEvent != eventType) return true;
+			advanceTime = 0;paAdvanceTime = 0;sqAdvanceTime = 0;
+			assetLYDetail = checkIsDataAva(sceneData,destObject);
+			if(destAction == "show" || destAction == "hide"){
+				options = checkIsDataAva(assetLYDetail,'options');
+				if(options == null) return true;
+				inTime = options.hasOwnProperty('transitionTime') ? Number(options['transitionTime']) : 0.1;
+				outTime = options.hasOwnProperty('transitionOutTime') ? Number(options['transitionOutTime']) : 0.1;
+				appearJ = getAminArr(options,"appearanceEffects");
+				disappearJ = getAminArr(options,"disappearanceEffects");
+				initInvisible = checkIsDataAva(options,"initInvisible");
+				if(!appearJ.length){
+					inTime = 0;
+				}
+				if(destAction == "show"){
+					$.each(appearJ,function(index,data){
+						order = data[0];
+						animID = data[1];
+						animDetail = checkIsDataAva(assetLYDetail,"animations",animID);
+						delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+						speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+						type = checkIsDataAva(animDetail,"type");
+						if(order == "parallel"){
+							time = inTime + delay;
+							paAdvanceTime = (delay + speed) > paAdvanceTime ? delay+speed : paAdvanceTime;
+						}else if(order == "squential"){
+							sqAdvanceTime = sqAdvanceTime > paAdvanceTime ? sqAdvanceTime : paAdvanceTime;
+							time = sqAdvanceTime + inTime + delay;
+							sqAdvanceTime += speed + delay;
+						}
+						if(!t.hasOwnProperty(time)){
+							t[time] = {};
+						}
+						animJSON = t[time];
+						if(!animJSON.hasOwnProperty(destObject)){ 
+							animJSON[destObject] = [];
+						}
+						if($.inArray(animID,animJSON[destObject]) == -1){ 
+							animJSON[destObject].push(animID);
+						}
+						t[time] = animJSON;
+						/*if(type != null){
+							self.hideTransitionElement(destObject);
+						}*/
+					});
+					paAdvanceTime += inTime;
+					sqAdvanceTime += inTime;
+					advanceTime = paAdvanceTime > sqAdvanceTime ? paAdvanceTime : sqAdvanceTime;
+					sqAdvanceTime = 0;
+				}
+				if(initInvisible != 0 || destAction == "hide"){
+				//if(destAction == "hide"){
+					$.each(disappearJ,function(index,data){
+						order = data[0],
+						animID = data[1],
+						animDetail = checkIsDataAva(assetLYDetail,"animations",animID);
+						delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+						speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+						if(order == "parallel"){
+							time = advanceTime + outTime + delay;
+						}else if(order == "squential"){
+							time = sqAdvanceTime + outTime + delay;
+							sqAdvanceTime += delay + speed;
+						}
+						if(!t.hasOwnProperty(time)){
+							t[time] = {};
+						}
+						animJSON = t[time];
+						if(!animJSON.hasOwnProperty(destObject)){ 
+							animJSON[destObject] = [];
+						}
+						if($.inArray(animID,animJSON[destObject]) == -1){ 
+							animJSON[destObject].push(animID);
+						}
+						t[time] = animJSON;
+					});
+				//}
+				}
+			}else if(destAction == "animate"){
+				options = checkIsDataAva(data,'options');
+				if(options == null) return true;
+				animateJ = getAminArr(options,"animations");
+				$.each(animateJ,function(index,data){
+						order = data[0];
+						animID = data[1];
+						animDetail = checkIsDataAva(assetLYDetail,"animations",animID);
+						delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+						speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+						type = checkIsDataAva(animDetail,"type");
+						if(order == "parallel"){
+							time = delay;
+							paAdvanceTime = (delay + speed) > paAdvanceTime ? delay+speed : paAdvanceTime;
+						}else if(order == "squential"){
+							sqAdvanceTime = sqAdvanceTime > paAdvanceTime ? sqAdvanceTime : paAdvanceTime;
+							time = sqAdvanceTime + delay;
+							sqAdvanceTime += speed + delay;
+						}
+						if(!t.hasOwnProperty(time)){
+							t[time] = {};
+						}
+						animJSON = t[time];
+						if(!animJSON.hasOwnProperty(destObject)){ 
+							animJSON[destObject] = [];
+						}
+						if($.inArray(animID,animJSON[destObject]) == -1){ 
+							animJSON[destObject].push(animID);
+						}
+						t[time] = animJSON;
+						/*if(type != null){
+							self.hideTransitionElement(destObject);
+						}*/
+					});
+			}
+			if((destAction == "show" && (!isInsideVP(destObject) || checkIsDataAva(options,"appearanceEffects") == null)) || (destAction == "hide" && isInsideVP(destObject)) || (destAction == "animate")){
+				if($("#"+destObject).length) $("#"+destObject).data("animInitiateBy",assetID);
+			}
+		});
+		self.assetInvokeTransitionsJSON[self.activeSceneID][assetID][eventType] = t;
+		var timeJ = {},animLen;
+		for(var timer in t){
+			self.transitionTimersArray[self.transitionTimersArray.length] = window.setTimeout(function(timer,assetID,eventType){
+				timeJ = self.assetInvokeTransitionsJSON[self.activeSceneID][assetID][eventType][timer];
+				for(var assetAnim in timeJ){
+					animData = timeJ[assetAnim];
+					$.each(animData,function(index,animID){
+						o = {initiater:assetID,assetID:assetAnim,animID:animID}
+						if(self.isAnimNeeded(o)){
+							self.doThisAnim(o);
+						}
+					});
+				}
+			},timer*1000,timer,assetID,eventType);
+		}
+	},
+	isAnimNeeded: function(o){
+		var retValue = true,
+			type = checkIsDataAva(getRequiredJSON("components",o.assetID),"animations",o.animID,"type"),
+			type = checkAnimType(type);
+		retValue = ( animInitiateBy(o.assetID) != o.initiater ) ? false : retValue;
+		retValue = (type == "appear"  && isInsideVP(o.assetID)) ? false : retValue;
+		retValue = (type == "disappear" && !isInsideVP(o.assetID)) ? false : retValue;
+		retValue = !$("#"+o.assetID).length ? false : retValue;
+		return retValue;
+	},
+	initTransitions: function(sceneID,sourceID){
+		//this.assetsTransitionJSON[this.activeSceneID] = {}
+		var self = this,sceneData = getRequiredJSON('components'),
+			assetLYDetail,options,initVisible,inTime,outTime,advanceTime,paAdvanceTime,sqAdvanceTime,appearJ,disappearJ,animDetail,time,lastTimeIn,animJSON,initInvisible,order,animID,
+			t = self.assetsTransitionJSON[self.activeSceneID];
+		for(var assetID in sceneData){
+			assetLYDetail = checkIsDataAva(sceneData,assetID);
+			options = checkIsDataAva(assetLYDetail,'options');
+			initVisible = checkIsDataAva(options,"initVisible");
+			if(options == null || initVisible == "0") continue;
+			initInvisible = checkIsDataAva(options,"initInvisible");
+			inTime = options.hasOwnProperty('transitionTime') ? Number(options['transitionTime']) : 0;
+			outTime = options.hasOwnProperty('transitionOutTime') ? Number(options['transitionOutTime']) : 0.1;
+			appearJ = getAminArr(options,"appearanceEffects");
+			disappearJ = getAminArr(options,"disappearanceEffects");
+			advanceTime = 0;paAdvanceTime = 0;sqAdvanceTime = 0;
+			if(!appearJ.length){ 
+				inTime = 0;
+				activateAsset(assetID);
+			}
+			$.each(appearJ,function(index,data){
+				order = data[0];
+				animID = data[1];
+				animDetail = checkIsDataAva(assetLYDetail,"animations",animID);
+				delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+				speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+				type = checkIsDataAva(animDetail,"type");
+				if(order == "parallel"){
+					time = inTime + delay;
+					paAdvanceTime = (delay + speed) > paAdvanceTime ? delay+speed : paAdvanceTime;
+				}else if(order == "squential"){
+					sqAdvanceTime = sqAdvanceTime > paAdvanceTime ? sqAdvanceTime : paAdvanceTime;
+					time = sqAdvanceTime + inTime + delay;
+					sqAdvanceTime += speed + delay;
+				}
+				if(!t.hasOwnProperty(time)){
+					t[time] = {};
+				}
+				animJSON = t[time];
+				if(!animJSON.hasOwnProperty(assetID)){ 
+					animJSON[assetID] = [];
+				}
+				if($.inArray(animID,animJSON[assetID]) == -1){ 
+					animJSON[assetID].push(animID);
+				}
+				t[time] = animJSON;
+				if(type != null){
+					self.hideTransitionElement(assetID);
+				}else{
+					activateAsset(assetID);
+				}
+			});
+			if(initInvisible != 0){
+				paAdvanceTime += inTime;
+				sqAdvanceTime += inTime;
+				advanceTime = paAdvanceTime > sqAdvanceTime ? paAdvanceTime : sqAdvanceTime;
+				sqAdvanceTime = 0;
+				$.each(disappearJ,function(index,data){
+					order = data[0],
+					animID = data[1],
+					animDetail = checkIsDataAva(assetLYDetail,"animations",animID);
+					delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+					speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+					if(order == "parallel"){
+						time = advanceTime + outTime + delay;
+					}else if(order == "squential"){
+						time = sqAdvanceTime + outTime + delay;
+						sqAdvanceTime += delay + speed;
+					}
+					if(!t.hasOwnProperty(time)){
+						t[time] = {};
+					}
+					animJSON = t[time];
+					if(!animJSON.hasOwnProperty(assetID)){ 
+						animJSON[assetID] = [];
+					}
+					if($.inArray(animID,animJSON[assetID]) == -1){ 
+						animJSON[assetID].push(animID);
+					}
+					t[time] = animJSON;
+				});
+			}
+		}
+		self.assetsTransitionJSON[self.activeSceneID] = t;
+		//Start the timer
+		var timeJ = {},animLen,o = {};
+		for(var timer in t){
+			this.transitionTimersArray[this.transitionTimersArray.length] = window.setTimeout(function(timer){
+				timeJ = self.assetsTransitionJSON[self.activeSceneID][timer];
+				for(var assetAnim in timeJ){
+					animData = timeJ[assetAnim];
+					$.each(animData,function(index,animID){
+						o = {initiater:assetAnim,assetID:assetAnim,animID:animID}
+						if(self.isAnimNeeded(o)){
+							self.doThisAnim(o);
+						}
+					});
+				}
+			},timer*1000,timer);
+		}
+	},
+	hideTransitionElement: function(assetID){
+		var needToDoTransition = true;
+		needToDoTransition = (typeof $("#"+assetID).data("animInitiateBy") != "undefined" && $("#"+assetID).data("animInitiateBy") != assetID ) ? false : true;
+		if(needToDoTransition){
+			deactivateAsset(assetID);
+		}
+	},
+	assetHasShowHideTransition: function(obj,sourceID){
+		var self = this,
+			transitionOutTime = obj.transitionOutTime,
+			transitionMode = obj.transitionMode,
+        	assetID = obj.assetID,
+        	object = {},
+        	sourceID = typeof sourceID != "undefined" ? sourceID : null;
+		this.transitionTimersArray[this.transitionTimersArray.length] = window.setTimeout(function(data,sourceID){
+			obj.assetID = data.assetID;
+			obj.displayMode = "hide";
+			obj.transitionMode = data.transitionMode;
+			if(self.isNeedToDoTransition(obj.assetID,"hide",sourceID)){
+				self.doThisAssetTransition(obj);
+			}
+		},transitionOutTime*1000,{assetID:assetID,transitionMode:transitionMode},sourceID);
+	},
+	doThisAnim: function(o){
+				var self = this,
+			animDetail = checkIsDataAva(getRequiredJSON("components",o.assetID),"animations",o.animID),
+			options = checkIsDataAva(animDetail,"options");
+		o.type = checkIsDataAva(animDetail,"type") != null ? animDetail['type'] : defaultJSON["anim"]["type"];
+		o.easing = checkIsDataAva(animDetail,"easing") != null ? animDetail['easing'] : defaultJSON["anim"]["easing"];
+		o.speed = checkIsDataAva(animDetail,"speed") != null ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+		o.preCss = {};o.toCss = {};o.postCss = {};
+		o.elWidth = $("#"+o.assetID).width();
+		o.elHeight = $("#"+o.assetID).height();
+		o.elLeft = parseInt($("#"+o.assetID).css("left"),10);
+		o.elRight = $("#"+o.assetID).parent().width() - (o.elLeft + o.elWidth);
+		o.elTop = parseInt($("#"+o.assetID).css("top"),10);
+		o.elBottom = $("#scenesContainer").parent().height() - (o.elTop + o.elHeight);
+		o.opacity = $("#"+o.assetID).css("opacity");
+		if(o.type == "slideIn" || o.type == "slideOut"){
+			o.direction = checkIsDataAva(options,'direction') != null ? options['direction'] : null;
+			if(o.direction == null){
+				var leastDistFromLeft = false,
+					leastDistFromTop = false,
+					posVal = 0;
+				o.direction = 'left';
+				leastDistFromLeft = (o.elLeft < o.elRight) ? true : false;
+				leastDistFromTop = (o.elTop < o.elBottom) ? true : false;
+				if(leastDistFromLeft && leastDistFromTop){
+					o.direction = (o.elLeft < o.elTop) ? 'left' : 'top';
+				}else if(leastDistFromLeft && !leastDistFromTop){
+					o.direction = (o.elLeft < o.elBottom) ? 'left' : 'bottom';
+				}else if(!leastDistFromLeft && leastDistFromTop){
+					o.direction = (o.elRight < o.elTop) ? 'right' : 'top';
+				}else if(!leastDistFromLeft && !leastDistFromTop){
+					o.direction = (o.elRight < o.elBottom) ? 'right' : 'bottom';
+				}
+				
+			}
+			if(o.type == "slideIn"){
+							}else{
+							}
+			if(o.direction == 'left'){
+				slideDir = 'left';
+				posVal = -(o.elLeft + o.elWidth);
+			}else if(o.direction == 'top'){
+				slideDir = 'top';
+				posVal = -(o.elTop + o.elHeight);
+			}else if(o.direction == 'right'){
+				slideDir = 'left';
+				posVal = Number(layoutObj.layoutWidth) + o.elWidth;
+			}else if(o.direction == 'bottom'){
+				slideDir = 'top';
+				posVal = o.elBottom + o.elHeight + o.elTop;
+			}
+		}
+		switch(o.type){
+			case "slideIn":
+				$("#"+o.assetID).velocity({"scale":"1"},1);
+				o.preCss['margin'] = "0";
+				o.preCss[slideDir] = posVal+"px";
+				o.toCss = postCss = {"left":o.elLeft+"px","top":o.elTop+"px"}
+			break;
+			case "slideOut":
+				o.preCss = {"left":o.elLeft+"px","top":o.elTop+"px"}
+				o.toCss[slideDir] = posVal+"px";
+				o.postCss = {"left":o.elLeft+"px","top":o.elTop+"px"}
+			break;
+			case "move":
+				o.preCss = {"left":o.elLeft+"px","top":o.elTop+"px"}
+				var newLeft = checkIsDataAva(options,"left") != null ? options["left"] : o.elLeft,
+					newTop = checkIsDataAva(options,"top") != null ? options["top"] : o.elTop;
+				o.toCss = postCss = {"left":newLeft+"px","top":newTop+"px"}
+			break;
+			case "fadeIn":
+				$("#"+o.assetID).velocity({"scale":"1"},1);
+				o.preCss['margin'] = "0";
+				o.preCss['opacity'] = "0";
+				o.toCss = o.postCss = {"opacity":o.opacity}
+			break;
+			case "fadeOut":
+				o.preCss['margin'] = "0";
+				o.preCss['opacity'] = o.opacity;
+				o.toCss['opacity'] = "0";
+				o.postCss['opacity'] = o.opacity;
+			break;
+			case "fadeTo":
+			    var fadeTo = Number(options['opacity']);
+				o.preCss['margin'] = "0";
+				o.toCss['opacity'] = o.postCss['opacity'] = fadeTo;
+			break;
+			case "zoomIn":
+				o.preCss = {"margin":"0"}
+				$("#"+o.assetID).velocity({"scale":"0"},{ 
+					  duration: 25,
+					  complete : function(e){
+						self.animate(o);
+					  }
+				});
+				o.toCss['scale'] = o.postCss['scale'] = "1";
+			break;
+			case "zoomOut":
+				o.preCss['margin'] = "0";
+			//	$("#"+o.assetID).velocity({"scale":"1"},1);
+				o.toCss['scale'] = "0";
+				o.postCss['scale'] = "0";
+			break;
+			case "zoomTo":
+				var zoomTo = Number(options['percentage']);
+				o.preCss['margin'] = "0";
+				o.toCss['scale'] = o.postCss['scale'] = zoomTo;
+			break;
+			case "resize":
+				o.preCss['margin'] = "0";
+				var newWidth = checkIsDataAva(options,"width") != null ? options["width"] : o.elLeft,
+					newHeight = checkIsDataAva(options,"height") != null ? options["height"] : o.elLeft;
+				o.toCss = postCss = {"width":newWidth+"px","height":newHeight+"px"}
+			break;
+			default:
+			break;
+		}
+		if(o.type != "zoomIn"){
+			self.animate(o);
+		}
+	},
+	animate: function(o){
+		var self = this;
+				(function(o){
+			invokeAsset(o.assetID,o.animID+".start",0);
+			eventMsg(o.assetID+"."+o.animID+".start");
+			self.startAnim(o);
+			$('#'+o.assetID+","+assetHasWrapper(o.assetID)).css(o.preCss).velocity(o.toCss,
+				{ duration: o.speed * 1000,
+				  queue : false,
+				  easing: o.easing,
+				  start : function(){
+					// Not working in many browser
+				  },
+				  /* progress: function(a, p, c ) {
+						if((100 * p) > 95){
+							if(o.type == "fadeIn" || o.type == "slideIn" || o.type == "zoomIn"){
+								activateAsset(o.assetID);
+								layoutObj.resumeVideoOnCondition(o.assetID);
+							}else if(o.type == "fadeOut" || o.type == "slideOut" || o.type == "zoomOut"){
+								deactivateAsset(o.assetID);
+							}
+						}         
+				  }, */
+				  complete : function(e){
+					self.completAnim(o);
+					invokeAsset(o.assetID,o.animID+".end",0);
+					eventMsg(o.assetID+"."+o.animID+".end");
+				  }
+			});
+		})(o);
+	},
+	startAnim: function(o){
+		if(checkAnimType(o.type) == "disappear"){
+			layoutObj.pauseVideoOnConditon(o.assetID);
+		}
+	},
+	completAnim: function(o){
+		if(o.type == "fadeIn" || o.type == "slideIn" || o.type == "zoomIn"){
+			activateAsset(o.assetID);
+			layoutObj.resumeVideoOnCondition(o.assetID);
+		}else if(o.type == "fadeOut" || o.type == "slideOut" || o.type == "zoomOut"){
+			deactivateAsset(o.assetID);
+		}
+		$("#"+o.assetID).css(o.postCss);
+		if(o.postCss.hasOwnProperty("scale")){
+			$("#"+o.assetID).velocity({"scale":o.postCss.scale},1);
+		}
+	},
+	resumeVideoOnCondition:function(assetID){
+		if(isVideoElement(assetID) && isVideoAutoPlay(assetID) && !isModelLayerActive()){
+			setTimeout(function(){
+				resumeVideo(assetID);
+			},1000);
+		}
+	},
+	pauseVideoOnConditon: function(assetID){
+		if(isVideoElement(assetID)){
+			pauseVideo(assetID);
+		}
+	},
+	isSceneAssetsLoaded: function(sceneID){
+		bgInlineEmpty(sceneID);
+		if(sceneID == "scene-1") eventMsg(sceneID+".sceneInitialised");
+		if(sceneID != "scene-1") $("#loader,#mask").show();
+		var iframeLoaded = 0,
+			imgLoaded = 0,
+			totalIframe = $("#"+sceneID+" iframe").size(),
+			totalImage = $("#"+sceneID+" img").size();
+		$("#"+sceneID+" iframe").each(function(){
+            if(typeof $(this).attr("src") == "undefined"){
+//				var assetID = $(this).attr("id");
+				if($(this).contents().find('body').children().length){
+					iframeLoaded++;
+				}
+             }//else{
+				$(this).load(function(){
+					iframeLoaded++;
+				}).error(function(){
+					iframeLoaded++;
+				});
+			//}
+		});
+		$("#"+sceneID+" img").one("load").each(function() {
+			$(this).load(function(){
+				imgLoaded++;
+			}).error(function(){
+				imgLoaded++;
+			});
+			if(this.complete) $(this).load();
+		});
+		var checkLoader = setInterval(function(){
+//			log("totalIframe..."+totalIframe+"..iframeLoaded.."+iframeLoaded+"....totalImage..."+totalImage+".......imgLoaded.."+imgLoaded);
+			if(totalIframe <= iframeLoaded  && totalImage <= imgLoaded){
+				clearInterval(checkLoader);
+				$("#loader,#mask").hide();
+				sceneLoaded();
+				eventMsg(sceneID+".sceneAssetsLoaded");
+			}
+		},100);
+	},
+	invokeSceneSwitch: function(obj){
+	try{
+		var speed = 1000,
+			self = this,
+			currentSceneID = this.activeSceneID,
+			nextSceneID = obj['destObject'],
+			switchSceneMode = obj['options']['switchSceneMode'],
+			slideDirection = null,
+			dimArr = this.matchLayoutDim.split("x");
+		if(!self.isSceneSwitchAnimComplete) return;
+		self.isSceneSwitchAnimComplete = false;
+		self.deActiveScene();
+		self.activeSceneID = nextSceneID;
+		self.addSceneID(currentSceneID);
+		self.removeSceneID(nextSceneID);
+		layoutObj.loadRenderLayoutComponent(nextSceneID);
+		this.activeScene(nextSceneID);
+		self.removeSceneID(currentSceneID);
+		var curr_fitToScreen = layoutObj.getFitToSceneID(currentSceneID),
+			next_fitToScreen = layoutObj.getFitToSceneID(nextSceneID);
+		if($("#scenesContainer #"+next_fitToScreen).length) $("#scenesContainer #"+next_fitToScreen).css({"margin-top":"5000px"});
+		curr_fitToScreen += currentSceneID + "ft";
+		next_fitToScreen += nextSceneID + "ft";
+		if(switchSceneMode == "immediate"){
+			self.onSceneSwitchAnimComplete(currentSceneID,nextSceneID);
+		    $("#"+nextSceneID).css({"visibility":"visible", "top" : '0px', "left":"0px", "opacity":"1"});
+					}else if(switchSceneMode == "fade" || switchSceneMode == "move"){
+			$('#'+currentSceneID).css({"visibility":"visible","top":"0px","left":"0px"}).animate({opacity:'0'},speed,function(){
+					self.onSceneSwitchAnimComplete(currentSceneID,nextSceneID);
+			});
+		    $("#"+nextSceneID).css({"visibility":"visible", "top" : '0px', "left":"0px", "top":"0px","opacity":"0"})
+		        				.animate({opacity:'1'},speed,function(){});
+					}else if(switchSceneMode == "slide"){
+			slideDirection = obj['options']['sceneSlideDirection'];
+			if(slideDirection == "top"){
+				$('#'+currentSceneID).animate({top:'-'+dimArr[1]+'px'},speed,function(){
+					self.onSceneSwitchAnimComplete(currentSceneID,nextSceneID);
+				});
+		        $("#"+nextSceneID).css({"visibility":"visible", "top" : ''+dimArr[1]+'px', "left":"0px", "opacity":"1"})
+		        				.animate({top:'0px'},speed,function(){});	
+							}else if(slideDirection == "bottom"){
+				$('#'+currentSceneID).animate({top:''+dimArr[1]+'px'},speed,function(){
+					self.onSceneSwitchAnimComplete(currentSceneID,nextSceneID);
+				});
+		        $("#"+nextSceneID).css({"visibility":"visible", "top" : '-'+dimArr[1]+'px', "left":"0px", "opacity":"1"})
+		        				.animate({top:'0px'},speed,function(){});
+							}else if(slideDirection == "left"){
+				$('#'+currentSceneID).css({"top":"0px"}).animate({left:'-'+dimArr[0]+'px'},speed,function(){
+					self.onSceneSwitchAnimComplete(currentSceneID,nextSceneID);
+				});
+		        $("#"+nextSceneID).css({"visibility":"visible", "left" : ''+dimArr[0]+'px', "top":"0px", "opacity":"1"})
+		        				.animate({left:'0px'},speed,function(){});
+							}else if(slideDirection == "right"){
+				$('#'+currentSceneID).css({"top":"0px"}).animate({left:''+dimArr[0]+'px'},speed,function(){
+					self.onSceneSwitchAnimComplete(currentSceneID,nextSceneID);
+				});
+		        $("#"+nextSceneID).css({"visibility":"visible", "left" : '-'+dimArr[0]+'px', "top":"0px", "opacity":"1"})
+		        				.animate({left:'0px'},speed,function(){});
+							}
+		}
+	 }catch(e){
+	 }
+	},
+	onSceneSwitchAnimComplete: function(currentSceneID,nextSceneID){
+		var self = layoutObj;
+		self.isSceneSwitchAnimComplete = true;
+		$("#"+currentSceneID).css({"visibility":"hidden","opacity":"0","top":"500000px"});
+		self.addSceneID(currentSceneID);
+		self.filmStripArrowHandling(nextSceneID);
+	},
+	removeSceneID: function(sceneID){
+		var comp_ID;
+		$('#'+sceneID).children().each(function(){
+			comp_ID = $(this).attr("id");
+    	    if(comp_ID != undefined){
+				comp_ID = comp_ID.replace(sceneID,"");
+		    	$(this).attr("id",comp_ID);
+		    }
+		});
+		$("#"+sceneID+" div > object").each(function(){
+			$(this).attr("id", $(this).attr("id").replace(sceneID,""));
+			$(this).attr("name", $(this).attr("name").replace(sceneID,""));
+		});
+	},
+	addSceneID: function(sceneID){
+		var comp_ID;
+		$('#'+sceneID).children().each(function(){
+			comp_ID = $(this).attr("id");
+    	    if(comp_ID != undefined){
+		    	$(this).attr("id",comp_ID+sceneID);
+		    }
+		});
+		$("#"+sceneID+" div > object").each(function(){
+			$(this).attr("id",$(this).attr("id")+sceneID);
+			$(this).attr("name",$(this).attr("name")+sceneID);
+	  	});
+	},
+	getFitToSceneID: function(sceneID){
+		var fitToScreenAssetID = fitToScreenID[layoutObj.matchLayoutDim].hasOwnProperty(sceneID) ? fitToScreenID[layoutObj.matchLayoutDim][sceneID]['assetID'] : null;
+		return fitToScreenAssetID;
+	},
+	deActiveScene: function(o){
+		var animPause = (checkIsDataAva(o,"animPause") != null) ? o.animPause : 1;
+		pauseAllVideos();
+		if(isModelLayerActive()) setActiveVideoID(null);
+		deactivateModelLayer();
+		eventMsg(this.activeSceneID+".sceneUnloaded");
+		var assetComponentJSON = getRequiredJSON('components');
+		if(animPause){
+			this.pauseTransiton();
+			for(var assetID in assetComponentJSON){
+				$("#"+assetID).stop().velocity('stop',true).css({"transform":"","left":"","top":"","opacity":""});
+			}
+		}
+	},
+	activeScene: function(sceneID){
+		var assetComponentJSON = getRequiredJSON('components');
+		var options;
+		for(var assetID in assetComponentJSON){
+			if(!hasAppearEffect(assetID)){
+				activateAsset(assetID);
+			}
+			options = (assetComponentJSON[assetID].hasOwnProperty('options') && assetComponentJSON[assetID]['options'] != null) ? assetComponentJSON[assetID]['options'] : false;
+			if(options && options.hasOwnProperty('initVisible') && !INT(options['initVisible'])){		removeAsset(assetID);
+			}
+			if(options.hasOwnProperty('transitionOutTime')){	
+				if($("#"+assetID).length) $("#"+assetID).data("animInitiateBy",assetID);	
+			}; 
+			if(options.hasOwnProperty('transitionTime')){ 	
+				deactivateAsset(assetID);	
+				if($("#"+assetID).length) $("#"+assetID).data("animInitiateBy",assetID);
+			}
+		}
+		var videoID = getActiveVideoID();
+		if(!hasAnimDelayORSpeed(videoID,"appear") && !options.hasOwnProperty('transitionTime')){
+			resumeVideo(videoID);
+		}
+		if(!layoutObj.isSceneInitialized){
+			layoutObj.sceneRevisited();
+		}else{
+			eventMsg(sceneID+".sceneInitialised");
+		}
+	},
+	pauseTransiton: function(){
+		if(!this.transitionTimersArray.length) return;
+		for(var timer in this.transitionTimersArray){
+			clearTimeout(this.transitionTimersArray[timer]);
+		}
+	},
+			filmStripArrowHandling: function(nextSceneID){
+			}
+}
+var layoutObj = new Layout();
+layoutObj.init();
+function getDynamicAssetData(assetID){
+	if(typeof(dynamicJSONData) != 'undefined'){
+		return dynamicJSONData.hasOwnProperty('asset-data') && dynamicJSONData['asset-data'].hasOwnProperty(assetID) ? dynamicJSONData['asset-data'] [assetID] : {};
+	} else {
+		return {};
+	}
+}
+function renderExtHTMLFile(asseturl,assetID,iconURL,assetData,assetWidgetData){
+	var assetDynamicData = getDynamicAssetData(assetID);
+	// To check whether this asset (asset with assetID) is mapped dynamically to the database, then making assetData and assetWidgetData to null in case of Adobe Edge asset
+	if(assetDynamicData.hasOwnProperty('icon')){
+		assetData = assetWidgetData = null;
+	}
+	var obj = {},
+		url = asseturl;
+		baseURL = iconURL.substr(0,iconURL.lastIndexOf("/")+1),
+		appendStr = null,
+		widgetParamInfo = getWidgetParamStr(assetID);
+	appendStr = '<base href="'+baseURL+'" /><script>'+widgetParamInfo+'<\/script>';
+	obj.appendStr = appendStr;
+	obj.assetID = assetID;
+	obj.url = url;
+	obj.baseURL = baseURL;
+	if(assetData && assetWidgetData){
+		obj.widgetStr = assetData;
+		renderExtHTMLFileAsAsset(obj);
+		return;
+	}
+	(function(obj){
+			$.ajax({
+			type: "GET",
+			url: obj.url,
+			crossDomain: true,
+			success: function(widgetStr){
+				obj.widgetStr = widgetStr;
+				renderExtHTMLFileAsAsset(obj);
+			},
+			error: function(){
+				$("#"+obj.assetID).attr("src",obj.url);
+			}
+		});
+		}(obj));
+}
+function renderExtHTMLFileAsAsset(obj) {
+    var widgetStr = obj.widgetStr,
+        index = widgetStr.indexOf("<head>"),
+        appendStr = obj.appendStr,
+        assetID = obj.assetID;
+			if(widgetStr.search("jivoxWidgetApiV2.js") == -1){
+			appendStr += '<script id="jvxWidget" src = "'+jivoxWidget+'"><\/script>';
+		}
+	    if (index != -1) {
+        index += 6;
+        widgetStr = widgetStr.substr(0, index) + appendStr + widgetStr.substr(index, widgetStr.length - 1);
+    } else {
+        index = widgetStr.indexOf("<html>");
+        index += 6;
+        widgetStr = widgetStr.substr(0, index) + '<head>' + appendStr + '</head>' + widgetStr.substr(index, widgetStr.length - 1);
+    }
+    var widgetIframeRef = document.getElementById(assetID);
+    attachEventListener(widgetIframeRef, "load", function() {
+        widgetIframeRef.style.visibility = 'visible';
+    }, false);
+	$("#" + assetID).attr("extFilePath", obj.url);
+    var widgetFrameWindow = widgetIframeRef.contentWindow || widgetIframeRef.contentDocument;
+    widgetFrameWindow.document.open('text/html', 'replace');
+    widgetFrameWindow.document.write(widgetStr);
+    widgetFrameWindow.document.close();
+}
+attachEventListener(window, 'message', receiveMessage, false);
+function receiveMessage(e){
+	if(typeof e.data != "string"){
+		return;
+	}
+		var s = e.data.split(':', 10);
+	if(s && s.length >= 2){
+		var msg = s[1];
+		switch(msg){
+			case "activateScene":
+				var videoID = getActiveVideoID();
+				resumeVideo(videoID); 
+				break;
+			case "deActivateScene":
+				pauseAllVideos();
+				break;
+			case "openExpansion":
+				activateDefaultScene();
+				eventMsg("openExpansion");
+				eventMsg(layoutObj.activeSceneID+".openExpansion");
+			    break;
+			case "closeExpansion":
+				layoutObj.deActiveScene();
+				eventMsg("closeExpansion");
+				eventMsg(layoutObj.activeSceneID+".closeExpansion");
+			    break;
+			case "closeExpansionComplete":
+				shiftToDefaultScene();
+				eventMsg("closeExpansionComplete");
+				break;
+			case "openExpansionComplete":
+				postMsgToAllFrame("openExpansionComplete");
+				eventMsg("openExpansionComplete");
+				break;
+			case "reRenderLayout":
+				layoutObj.onOrientationChange();
+				eventMsg("orientationChange");
+				eventMsg(layoutObj.activeSceneID+"orientationChange");
+				break;
+						case "pauseInteraction":
+				eventMsg("pauseInteraction");
+				break;
+					}
+	}
+}
+
+function postMsgToAllFrame(msg){
+	}
+function postMsgToParent(msg){
+	window.parent.postMessage('jvxAdObject:'+msg, "*");
+}
+function shiftToDefaultScene(){
+	var currentSceneID = layoutObj.activeSceneID,
+		nextSceneID = 'scene-1',
+		self = layoutObj;
+	self.deActiveScene(currentSceneID);
+	$('#'+currentSceneID).css({"visibility":"hidden","top":"500000px","left":"0px","opacity":"0"})
+	self.addSceneID(currentSceneID);
+	self.activeSceneID = nextSceneID;
+	self.removeSceneID(nextSceneID);
+	$("#"+nextSceneID).css({"visibility":"visible", "top" : '0px', "left":"0px", "opacity":"1"});
+}
+function activateDefaultScene(){
+	var nextSceneID = 'scene-1',
+		self = layoutObj;
+	self.activeSceneID = nextSceneID;
+	self.loadRenderLayoutComponent(nextSceneID);
+	self.activeScene(nextSceneID);
+}
+function INT(str){
+	return parseInt(str,10);
+}
+// API
+function openClickThrough(url){
+	layoutObj.openClickThrough(url);
+}
+function loadCmacro(){
+	layoutObj.loadCmacro();
+}
+function openURL(url){
+	window.open(urlFormat(url));
+}
+function getUnitType(){
+	return ("banner" == "banner" ) ? "base" : "expansion"; 
+}
+function showAsset(assetID,initiater){
+	if(assetID == undefined) return;
+	initiater = (initiater == undefined) ? assetID : initiater;
+	var self = layoutObj,
+		assetInfo = getRequiredJSON("components",assetID),
+		options = checkIsDataAva(assetInfo,"options");
+	self.renderComponent(assetID);
+	if(!hasAppearEffect(assetID)){
+		activateAsset(assetID);
+	}
+	if(options == null) return;
+	var self = layoutObj,sceneData = getRequiredJSON('components'),
+			inTime,outTime,advanceTime,paAdvanceTime,sqAdvanceTime,appearJ,disappearJ,animDetail,time,animJSON,order,animID,
+			t = {};
+	inTime = options.hasOwnProperty('transitionTime') ? Number(options['transitionTime']) : 0;
+	outTime = options.hasOwnProperty('transitionOutTime') ? Number(options['transitionOutTime']) : 0;
+	appearJ = getAminArr(options,"appearanceEffects");
+	disappearJ = getAminArr(options,"disappearanceEffects");
+	advanceTime = 0;paAdvanceTime = 0;sqAdvanceTime = 0;
+	if(!appearJ.length){ inTime = 0 }
+	$.each(appearJ,function(index,data){
+		order = data[0];
+		animID = data[1];
+		animDetail = checkIsDataAva(assetInfo,"animations",animID);
+		delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+		speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+		type = checkIsDataAva(animDetail,"type");
+		if(order == "parallel"){
+			time = inTime + delay;
+			paAdvanceTime = (delay + speed) > paAdvanceTime ? delay+speed : paAdvanceTime;
+		}else if(order == "squential"){
+			sqAdvanceTime = sqAdvanceTime > paAdvanceTime ? sqAdvanceTime : paAdvanceTime;
+			time = sqAdvanceTime + inTime + delay;
+			sqAdvanceTime += speed + delay;
+		}
+		if(!t.hasOwnProperty(time)){
+			t[time] = {};
+		}
+		animJSON = t[time];
+		if(!animJSON.hasOwnProperty(assetID)){ 
+			animJSON[assetID] = [];
+		}
+		if($.inArray(animID,animJSON[assetID]) == -1){ 
+			animJSON[assetID].push(animID);
+		}
+		t[time] = animJSON;
+		if(type != null){
+			self.hideTransitionElement(assetID);
+		}
+	});
+		paAdvanceTime += inTime;
+		sqAdvanceTime += inTime;
+		advanceTime = paAdvanceTime > sqAdvanceTime ? paAdvanceTime : sqAdvanceTime;
+		sqAdvanceTime = 0;
+		$.each(disappearJ,function(index,data){
+			order = data[0],
+			animID = data[1],
+			animDetail = checkIsDataAva(assetInfo,"animations",animID);
+			delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+			speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+			if(order == "parallel"){
+				time = advanceTime + outTime + delay;
+			}else if(order == "squential"){
+				time = sqAdvanceTime + outTime + delay;
+				sqAdvanceTime += delay + speed;
+			}
+			if(!t.hasOwnProperty(time)){
+				t[time] = {};
+			}
+			animJSON = t[time];
+			if(!animJSON.hasOwnProperty(assetID)){ 
+				animJSON[assetID] = [];
+			}
+			if($.inArray(animID,animJSON[assetID]) == -1){ 
+				animJSON[assetID].push(animID);
+			}
+			t[time] = animJSON;
+		});
+	var timeJ = {},animLen,o = {};
+	for(var timer in t){
+		self.transitionTimersArray[self.transitionTimersArray.length] = window.setTimeout(function(timer,t){
+			timeJ = t[timer];
+				for(var assetAnim in timeJ){
+					animData = timeJ[assetAnim];
+					$.each(animData,function(index,animID){
+						o = {initiater:initiater,assetID:assetAnim,animID:animID}
+						if(self.isAnimNeeded(o)){
+							self.doThisAnim(o);
+						}
+					});
+				}
+			},timer*1000,timer,t);
+	}
+}
+function hideAsset(assetID,initiater){
+	var self = layoutObj;
+	if(typeof assetID == "undefined") return;
+	var initiater = (typeof initiater == "undefined") ? assetID : initiater;
+	var assetInfo = getRequiredJSON("components",assetID),
+		options = assetInfo.hasOwnProperty("options") ? assetInfo["options"] : null;
+	if(!validateVal(options)){
+		deactivateAsset(assetID);
+		return;
+	}
+	var self = layoutObj,sceneData = getRequiredJSON('components'),
+		inTime,outTime,sqAdvanceTime,appearJ,disappearJ,animDetail,time,animJSON,order,animID,
+		t = {};
+	outTime = options.hasOwnProperty('transitionOutTime') ? Number(options['transitionOutTime']) : 0;
+	disappearJ = getAminArr(options,"disappearanceEffects");
+	sqAdvanceTime = 0;
+	if(!disappearJ.length){
+		deactivateAsset(assetID);
+		return;
+	}
+	$.each(disappearJ,function(index,data){
+			order = data[0],
+			animID = data[1],
+			animDetail = checkIsDataAva(assetInfo,"animations",animID);
+			delay = animDetail.hasOwnProperty('delay') ? Number(animDetail['delay']) : 0;
+			speed = animDetail.hasOwnProperty('speed') ? Number(animDetail['speed']) : defaultJSON["anim"]["duration"];
+			if(order == "parallel"){
+				time = outTime + delay;
+			}else if(order == "squential"){
+				time = sqAdvanceTime + outTime + delay;
+				sqAdvanceTime += delay + speed;
+			}
+			if(!t.hasOwnProperty(time)){
+				t[time] = {};
+			}
+			animJSON = t[time];
+			if(!animJSON.hasOwnProperty(assetID)){ 
+				animJSON[assetID] = [];
+			}
+			if($.inArray(animID,animJSON[assetID]) == -1){ 
+				animJSON[assetID].push(animID);
+			}
+			t[time] = animJSON;
+	});
+	var timeJ = {},animLen,o = {};
+	for(var timer in t){
+		self.transitionTimersArray[self.transitionTimersArray.length] = window.setTimeout(function(timer,t){
+			timeJ = t[timer];
+				for(var assetAnim in timeJ){
+					animData = timeJ[assetAnim];
+					$.each(animData,function(index,animID){
+						o = {initiater:assetAnim,assetID:assetAnim,animID:animID}
+						if(self.isAnimNeeded(o)){
+							self.doThisAnim(o);
+						}
+					});
+				}
+			},timer*1000,timer,t);
+	}
+}
+function removeAsset(assetID){
+	if(assetID == undefined) return;
+	if($("#"+assetID).length) $("#"+assetID).remove();
+	if($(assetHasWrapper(assetID)).length) $(assetHasWrapper(assetID)).remove();
+}
+function invokeAsset(assetID,assetEventType,fireEvent){
+	var self = layoutObj;
+	if(typeof assetEventType == "undefined") assetEventType = "click";
+	if(typeof fireEvent == "undefined"){ 
+		var fireEvent = 1;
+	}else{
+		fireEvent = Number(fireEvent);
+	}
+	self.invokeInteractions(assetID,assetEventType,fireEvent);
+	self.invokedTransitions(assetID,assetEventType);
+}
+function invokeAnim(assetID,animID){
+	var o = {initiater:assetID,assetID:assetID,animID:animID};
+	layoutObj.doThisAnim(o);
+}
+function reloadAsset(assetID){
+	removeAsset(assetID);
+	layoutObj.renderComponent(assetID);
+}
+function getElementStr(obj){
+try{
+	var self = layoutObj,
+		assetID = obj.assetID;
+	if(!self.checkForWebMobileOnly(assetID)) return;
+	var layoutAssetInfo = getRequiredJSON('components',assetID),
+		customAssetID = "customAsset."+assetID,
+		assetDetailsJSON = assetsDetailedJSON[customAssetID],
+		assetIconFileType = assetDetailsJSON['iconFileType'],
+		assetURL = assetDetailsJSON['icon'],
+		assetType = assetDetailsJSON['type'],
+		assetData = assetDetailsJSON['data'],
+		assetLeft = typeof obj.left == undefined ? 0 : obj.left,
+		assetTop = typeof obj.top == undefined ? 0 : obj.top,
+		assetWidth = obj.width,
+		assetHeight = obj.height,
+		assetEventType = assetDetailsJSON['eventType'],
+		assetFallbackType = assetDetailsJSON['fallbackType'],
+		assetFallbackImgURL = assetDetailsJSON['fallbackImgURL'],
+		assetFallbackWidgetURL = assetDetailsJSON['fallbackWidgetURL'],
+		assetFallbackWidgetSrc = assetDetailsJSON['fallbackWidgetSrc'],
+		componentElementStr = "",
+		assetClickHandler = assetDetailsJSON['clickHandler'],
+		assetIconGlowColor = assetDetailsJSON['iconGlowColor'],
+		assetIconParamString = assetDetailsJSON['iconParamString'],
+		assetClickTagURL = getParameterValue(assetIconParamString,"clickThroughURL"),
+		assetIconBgTransparent = Number(assetDetailsJSON['isIconBgTransparent']),
+		assetIconBgColor = (assetIconBgTransparent && assetIconBgTransparent != null) ? "transparent" : assetDetailsJSON['iconBgColor'],
+		assetWmode = assetIconBgTransparent ? "transparent" : "",
+		disableClickThrough = assetDetailsJSON.hasOwnProperty('disableClickThrough') ? Number(assetDetailsJSON['disableClickThrough']) : 0,
+		adlnParam = typeof obj.adlnParam != "undefined" ? obj.adlnParam : "",
+		assetParamQueryStr = paramQueryStr +"&"+ assetIconParamString + adlnParam,
+		assetVideoParamQueryStr = videoParamQueryStr +"&"+ assetIconParamString+adlnParam+'&r='+Math.random();
+		if(!disableClickThrough){
+			assetParamQueryStr = addParameter(assetParamQueryStr,["clickThroughURL=https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%26sai%3DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%26sig%3DCg0ArKJSzNxgC2IZV7JqEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fclk%2F303280337%3B129290232%3Bu","clickTagURL="+assetClickTagURL]);
+			assetVideoParamQueryStr = addParameter(assetVideoParamQueryStr,["clickThroughURL=https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%26sai%3DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%26sig%3DCg0ArKJSzNxgC2IZV7JqEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fclk%2F303280337%3B129290232%3Bu","clickTagURL=https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssjnsZOvy-0sbXaUrwez89otgvZpMzdx7fS7-jI6gvHletdTgY91QcBctCpRF34Iorb3q4wmKy0ioOkVeVwzBdNv8ipco2Fi75q1X_aR923UuZfX0-sbg5sgAi6SEnVT3Cyrs-56X5Z0CzE6gQuB4l63kudaBukDo4X0eQ%26sai%3DAMfl-YSANTt2V7cFbkCIqtRL9QMSy8mVY3pDje4I7AEkWZXfFh4BTWuuQ67MP9w21SBYP-Nq-gUWdQkHtA%26sig%3DCg0ArKJSzNxgC2IZV7JqEAE%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fddm%2Fclk%2F303280337%3B129290232%3Bu"]);
+		}else{
+			assetParamQueryStr =removeParameter(assetParamQueryStr,["clickTagURL","clickThroughURL"]);
+			assetVideoParamQueryStr =removeParameter(assetVideoParamQueryStr,["clickTagURL","clickThroughURL"])
+		}
+		if(assetIconFileType == "youtube"){
+			componentElementStr = '<div id='+assetID+'></div>';
+			$(componentElementStr).appendTo('#'+self.activeSceneID);
+			self.loadYouTubeLid(assetID);
+			return;
+		}
+		if(assetIconFileType == "flash"){
+							if(hasFlash){
+					var obj = {};
+					obj.id = assetID + 'PlaceHolder';
+					obj.src = assetURL;
+					obj.width = assetWidth;
+					obj.height = assetHeight;
+					obj.params = {'movie' : assetURL, 
+								  'wmode' : 'transparent',
+								  'allowScriptAccess' : 'always',
+								  'flashvars' : 'assetId='+assetID+'&eventId='+assetEventType+'&'+assetParamQueryStr
+								 };
+					componentElementStr = createSWF(obj);
+				}
+						assetIconBgColor = (assetIconBgColor.search("#") == -1) ? ("#"+assetIconBgColor) : assetIconBgColor
+			componentElementStr = '<div id='+assetID+' class="components" style="background:'+assetIconBgColor+'">'+componentElementStr+'</div>';
+			if(self.enableFallback){
+				if(assetFallbackType == "image"){
+					assetIconFileType = "image";
+					assetURL = assetFallbackImgURL;
+				}else if(assetFallbackType == "html5" || assetFallbackType == "swiffy"){
+					assetIconFileType = "custom-html-widget-file";
+					assetURL = assetFallbackImgURL;
+				}else if(assetFallbackType == "widget"){
+					assetIconFileType = "custom-widget";
+					componentElementStr = "";
+					assetURL = assetFallbackWidgetSrc;
+				}else if(assetFallbackType == "widget-url"){
+					assetIconFileType = "custom-html-widget-file";
+					componentElementStr = "";
+					assetURL = assetFallbackWidgetURL;
+				}else if(assetFallbackType == "widget-src"){
+					assetIconFileType = "custom-widget";
+					componentElementStr = "";
+					assetURL = assetFallbackWidgetSrc;
+				}
+				if(assetIconBgTransparent && (assetIconFileType == "custom-html-widget-file")){
+					assetURL = "/jivox/serverAPIs/getTransparentSwiffy.php?url="+assetURL;
+				}
+			}
+		}
+				if(assetIconFileType == "image" && assetType != "asset-video"){
+			componentElementStr = '<img id="'+assetID+'" src="'+assetURL+'" />';
+		}
+		if(assetIconFileType == "custom-html-widget-file"){
+			assetURL += "?"+removeParameter(paramQueryStr,["versionId"])+"&assetID="+assetID+"&isMobile=";
+			componentElementStr = '<iframe id="'+assetID+'" marginwidth="0" marginheight="0" src="'+assetURL+'" frameborder="0" scrolling="no" allowtransparency="true"'+
+									'style="visibility:hidden" onload="this.style.visibility=\'visible\';">';
+		}
+		if(assetType == "asset-video"){
+			var autoPlay = (assetDetailsJSON.hasOwnProperty("autoPlay") && Number(assetDetailsJSON['autoPlay'])) ? true : false;
+			videoAssetsInScene[self.activeSceneID][assetID] = {'autoPlay':autoPlay, 'isPlaying':0};
+			var fvParams = '';
+			videoURL = "https://as.jivox.com/player/InteractivityPlayer.swf?videoFile="+assetData;
+			fvParams = "&amp;autoPlay="+autoPlay+"&thumbnailURL="+assetURL+"&amp;videoWidth=200&amp;videoHeight=200&actionButtonId="+assetID+"&eventId="+assetEventType+"&"+assetVideoParamQueryStr;
+						videoURL = addReqVideoParam(videoURL);
+							if(hasFlash){
+					var obj = {};
+					obj.id = assetID + 'PlaceHolder';
+					obj.src = videoURL;
+					obj.width = assetWidth;
+					obj.height = assetHeight;
+					obj.params = {'movie' : videoURL, 
+								  'wmode' : 'transparent',
+								  'allowScriptAccess' : 'always'
+					, 'flashvars' : fvParams								 };
+					componentElementStr = createSWF(obj);
+				}
+						componentElementStr = '<div id='+assetID+' class="components">'+componentElementStr+'</div>';
+			if(self.enableFallback || useHTML5Video){
+				componentElementStr = '<iframe src="https://as.jivox.com/player/player_html5.php?isInLayout=1&reportingURL=https://evs.jivox.com&playerUniqueId=jvxAdObject&campaignId=85034&autoPlay='+autoPlay+'&eventId='+assetEventType+'&key='+customAssetID+'&width='+assetWidth+'&height='+assetHeight+'&eventId='+assetEventType+'&'+assetVideoParamQueryStr+'" id="'+assetID+'" class="components" frameborder="0" scrolling="no" width="'+assetWidth+'" height="'+assetHeight+'" initWidth="'+assetWidth+'" initHeight="'+assetHeight+'" style="visibility:hidden" onload="this.style.visibility=\'visible\';"></iframe>';
+			}
+		}
+		return componentElementStr;
+}catch(e){
+	}
+}
+/*Youtube*/
+window.onYouTubePlayerAPIReady = function(){
+		layoutObj.isYouTubeLidLoaded = true;
+}
+function onReadyYTPlayer(e){
+	var assetID = e.jvxAdAssetID,
+		autoPlay = e.jvxAdAutoPlay,
+		initVisible = e.jvxAdInitVisible;
+	$("#"+assetID).data({"volStatus":1,"isPlaying":0});
+	if(autoPlay && base && initVisible){
+		setVideoVolume(assetID,0);
+		$("#"+assetID).data({"volStatus":0,"isPlaying":1});
+	}else{
+		setVideoVolume(assetID,100);
+		$("#"+assetID).data({"volStatus":1,"isPlaying":0});
+	}
+}
+function onYTStateChangeYoutube(e){
+	var assetID = e.jvxAssetID,
+		assetInteractionsData = getRequiredJSON('interactions',assetID);
+	switch(e.data){
+		case YT.PlayerState.CUED:  // Ready to play
+			eventMsg(assetID+".cued");
+			break;
+		case YT.PlayerState.ENDED:
+			$("#"+assetID).data({"isPlaying":0});
+			YTVideoStatus("PAUSED",assetID);
+			setActiveVideoID(null);
+			fireYTEventProgress(assetID, 4);
+			eventMsg(assetID+".complete100");
+			eventMsg(assetID+".ended");
+			YTProgressEventDone[layoutObj.activeSceneID+"_"+assetID] = [];
+			break;
+		case YT.PlayerState.PLAYING:
+			if($("#"+assetID).data("isPlaying")) return;
+			setActiveVideoID(assetID);
+			anyVideoPlaying = true;
+			if($("#"+assetID).css("margin-top") != "0px"){
+				pauseVideo(assetID,1);
+				anyVideoPlaying = false;
+				return;
+			}
+			YTisMute[assetID]=videoIsMuted(assetID);
+			if(YTisMute[assetID]){
+				$("#"+assetID).data("volStatus",0);
+			}else{
+				$("#"+assetID).data("volStatus",1);
+			}
+			invokeMethodOnLoad(pauseAllVideos,assetID);
+			YTVideoStatus("PLAYING",assetID);
+			if(!$("#"+assetID).data("isPlaying")){
+				$("#"+assetID).data({"isPlaying":1});
+				eventMsg(assetID+".playing");
+				videoAssetsInScene[layoutObj.activeSceneID][assetID]["isPlaying"] = 1;
+				fireYTEvent(assetID,4);
+			}
+			break;
+		case YT.PlayerState.PAUSED:
+			YTVideoStatus("PAUSED",assetID);
+			$("#"+assetID).data({"isPlaying":0});
+			if(isManualPause[layoutObj.activeSceneID][assetID]){
+				setActiveVideoID(null);
+				fireYTEvent(assetID,3);
+			}
+			eventMsg(assetID+".pauseClicked");
+			videoAssetsInScene[layoutObj.activeSceneID][assetID]["isPlaying"] = 0;
+			break;
+		case YT.PlayerState.BUFFERING:
+			eventMsg(assetID+".buffering");
+			break;
+		default :
+			//eventMsg();
+	}
+}
+
+function YTVideoStatus(status,assetID){
+	if(status == "PLAYING"){
+		YTcheckForEvent[assetID] = null;
+		YTcurrentTime[assetID] = null;
+		YTduration[assetID] = getVideoDuration(assetID); 
+		YTisMute[assetID] = false;
+		var progressPercent = null,
+		activeSceneID = layoutObj.activeSceneID;
+		var YTAssetDetails = activeSceneID+"_"+assetID;
+		YTcheckForEvent[assetID] = setInterval(function(){
+			progressPercent = (parseInt(getVideoCurrentTime(assetID))/parseInt(YTduration[assetID])*100);
+			progressPercent = progressPercent <= 0 ? 0  :
+							  (progressPercent > 20 && progressPercent < 30) ? 25 : 
+							  (progressPercent > 50 && progressPercent < 60) ? 50 :
+							  (progressPercent > 70 && progressPercent < 80) ? 75 : progressPercent;
+			if($.inArray(progressPercent,YTProgressEventArr) != -1 && $.inArray(progressPercent,YTProgressEventDone[YTAssetDetails]) == -1){
+				eventMsg(assetID+".complete"+progressPercent);
+				if(typeof YTProgressEventDone[YTAssetDetails] == "undefined"){
+					YTProgressEventDone[YTAssetDetails] = [];
+				}
+				YTProgressEventDone[YTAssetDetails].push(progressPercent);
+				fireYTEventProgress(assetID,progressPercent/25);
+			}
+			YTisMute[assetID]=videoIsMuted(assetID);
+			if(YTisMute[assetID]){
+				if($("#"+assetID).data("volStatus")){
+					$("#"+assetID).data({"volStatus":0});
+					eventMsg(assetID+".mute");
+					fireYTEvent(assetID,1);
+				}
+			}else{
+				if(!$("#"+assetID).data("volStatus")){
+					$("#"+assetID).data({"volStatus":1});
+					eventMsg(assetID+".unmute");
+					fireYTEvent(assetID,2);
+				}
+			}
+		},100);
+	}else{
+		clearInterval(YTcheckForEvent[assetID]);
+	}
+}
+function fireYTEventProgress(assetID,progressEventNum){
+			var eventType = parseInt(getRequiredAssetDetail(assetID,"eventType"),10),
+			eventId = (eventType+200)*100 + progressEventNum,
+			elapsedTime = getVideoCurrentTime(assetID),
+			addnlParam = "/es_et_"+parseInt(elapsedTime,10);
+		fireTracker(eventId,addnlParam);
+	}
+function fireYTEvent(assetID,eventNum){
+			var eventType = parseInt(getRequiredAssetDetail(assetID,"eventType"),10),
+			eventId = eventType*100 + eventNum,
+			elapsedTime = getVideoCurrentTime(assetID),
+			addnlParam = "/es_et_"+parseInt(elapsedTime,10);
+		fireTracker(eventId,addnlParam);
+	}
+function getVideoVolume(videoID){
+	return layoutObj.YouTubeObject[layoutObj.activeSceneID][videoID].getVolume();
+}
+function getVideoDuration(videoID){
+	return layoutObj.YouTubeObject[layoutObj.activeSceneID][videoID].getDuration();
+}
+function getVideoCurrentTime(videoID){
+	return layoutObj.YouTubeObject[layoutObj.activeSceneID][videoID].getCurrentTime();
+}
+function seekVideoToNextTime(videoID,time){
+	layoutObj.YouTubeObject[layoutObj.activeSceneID][videoID].seekTo(time);
+}
+function setVideoToMute(videoID){
+	layoutObj.YouTubeObject[layoutObj.activeSceneID][videoID].mute();
+}
+function setVideoToUnMute(videoID){
+	layoutObj.YouTubeObject[layoutObj.activeSceneID][videoID].unMute();
+}
+function videoIsMuted(videoID){
+	return layoutObj.YouTubeObject[layoutObj.activeSceneID][videoID].isMuted();
+}
+/*video Handling */
+function videoAPIHandling(videoID, API, justPause, Vol){
+	var videoElemID = (videoID != undefined) ? videoID : getActiveVideoID(),
+		justPause = (justPause != undefined) ? justPause : 0,
+		Vol = (Vol != undefined) ? Vol : "",
+		html5API = justPause ? "jvxJustPauseAd" : API,
+		html5Vol = ":"+Vol;
+		if(videoElemID == null || API == undefined) return;
+
+		var assetUsesFlash = false;
+		if(videoElemID != "player") {
+			var customAssetID = "customAsset."+videoElemID,
+			assetDetailsJSON = assetsDetailedJSON[customAssetID],
+			assetIconFileType = assetDetailsJSON['iconFileType'],
+			assetType = assetDetailsJSON['type'];
+			if(hasFlash) {
+				if((assetIconFileType == "vast" && !useHTML5Vast) || ((assetType == "asset-video" || assetIconFileType == "external-video") && !useHTML5Video)) {
+					assetUsesFlash = true;
+				}
+			}
+		} else if(hasFlash && !useHTML5Video){
+			assetUsesFlash = true;
+		}
+	
+	try{
+		if(assetUsesFlash){
+			eval("getFlashMovieObject(videoElemID + 'PlaceHolder')."+API+"("+Vol+")");
+		}else{
+			var html5Iframe = getFlashMovieObject(videoElemID);
+			// html5 player
+			if(typeof(html5Iframe.contentWindow) != 'undefined') {
+					html5Iframe.contentWindow.postMessage('jvxAdObject:'+html5API+html5Vol, "*");
+			} else {
+					html5Iframe.postMessage('jvxAdObject:'+html5API+html5Vol, "*");
+			}
+		}
+	}catch(e){
+			}	
+}
+function YTvideoAPIHandling(obj){
+	try{
+		if(!obj.hasOwnProperty("val")) obj.val = "";
+		eval("layoutObj.YouTubeObject[layoutObj.activeSceneID]['"+obj.videoID+"']."+obj.APIName+"("+obj.val+")");
+	}catch(e){}
+}
+function closeBase(){
+	window.parent.postMessage('jvxAdObject:closeBase', "*");
+}
+function pauseVideo(videoID,justPause){
+	if(typeof justPause == "undefined") justPause = 1;
+	if(!anyVideoPlaying)
+		return;
+	if(layoutObj.YouTubeObject[layoutObj.activeSceneID].hasOwnProperty(videoID)){
+		YTvideoAPIHandling({"videoID":videoID,"APIName":"pauseVideo"});
+		isManualPause[layoutObj.activeSceneID][videoID] = false;
+		return;
+	}
+	var videoElemID = (videoID != undefined) ? videoID : getActiveVideoID();
+	if(videoElemID == null) return;
+	isManualPause[layoutObj.activeSceneID][videoID] = false;
+	videoAPIHandling(videoID,"jvxPauseAd",justPause);
+}
+function resumeVideo(videoID){
+	if(isAssetActive(videoID)){
+		if(layoutObj.YouTubeObject[layoutObj.activeSceneID].hasOwnProperty(videoID)){
+			YTvideoAPIHandling({"videoID":videoID,"APIName":"playVideo"});
+			return;
+		}
+		var videoElemID = (videoID != undefined) ? videoID : getActiveVideoID();
+		if(videoElemID == null) return;
+		videoAPIHandling(videoID,"jvxResumeAd");
+	}
+}
+function setVideoVolume(videoID, vol){
+	if(layoutObj.YouTubeObject[layoutObj.activeSceneID].hasOwnProperty(videoID)){
+		YTvideoAPIHandling({"videoID":videoID,"APIName":"setVolume","val":vol});
+		return;
+	}
+	var videoElemID = (videoID != undefined) ? videoID : getActiveVideoID(),
+		vol = (vol != undefined) ? vol : 0;
+		vol = vol > 1 ? 1 : vol;
+	if(videoElemID == null) return;
+	videoAPIHandling(videoID,"jvxSetVol",undefined,vol);
+}
+function restartVideo(videoID){
+	var videoElemID = (videoID != undefined) ? videoID : getActiveVideoID();
+	if(videoElemID == null) return;
+	
+	videoAPIHandling(videoID,"jvxRestartAd");
+}
+function pauseAllVideos(activeVideoID){       // Pause all other video except activeVideoID
+	if(!anyVideoPlaying)
+		return;
+	var tempActiveVideoID = getActiveVideoID();
+	if(tempActiveVideoID == null || typeof tempActiveVideoID == "undefined") return; 
+	// return if activeVideoID is null or undefined
+	var activeVideoID = typeof activeVideoID != "undefined" ? activeVideoID : null,
+		self = layoutObj;
+	for(var videoID in videoAssetsInScene[layoutObj.activeSceneID]){
+		if(activeVideoID == videoID) continue;
+		if(isVideoPlaying(videoID)) {
+			pauseVideo(videoID,1);
+		}
+	}
+}
+function getFlashMovieObject(movieName){
+	if(!hasFlash){
+		var obj = document.getElementById(movieName);
+		if(obj){
+			return obj;
+		}
+	}else{
+		if (window.document[movieName]){
+		  return window.document[movieName];
+		}
+		if(navigator.appName.indexOf("Microsoft Internet")==-1){
+			if (document.embeds && document.embeds[movieName])
+				return document.embeds[movieName];
+			else
+				 return document.getElementById(movieName);
+		}else{
+			return document.getElementById(movieName);
+		}
+	}
+}
+function getActiveVideoID(){
+	try{
+		return videoStatusJSON[layoutObj.matchLayoutDim][layoutObj.activeSceneID]['activeVideoID'];
+	}catch(e){
+		return null;
+	}
+}
+function getIDfromVideoStatus(paramKey,paramVal){
+	var dim = (paramKey=="dim") ? paramVal : layoutObj.matchLayoutDim,
+		scene = (paramKey=="scene") ? paramVal : layoutObj.activeSceneID;
+	try{
+		return videoStatusJSON[dim][scene]['activeVideoID'];
+	}catch(e){
+		return null;
+	}
+}
+function setActiveVideoID(videoID){
+	if(videoID == null) {
+		anyVideoPlaying = false;
+		for(var vidId in videoAssetsInScene[layoutObj.activeSceneID]) {
+			videoAssetsInScene[layoutObj.activeSceneID][vidId]["isPlaying"] = 0;
+		}
+	}else{
+		videoStatusJSON[layoutObj.matchLayoutDim][layoutObj.activeSceneID]['lastPlayedVideoID'] = videoID;
+	}
+	if(layoutObj.activeModelAssetIDs[layoutObj.activeSceneID].hasOwnProperty(videoID)) return;
+	videoStatusJSON[layoutObj.matchLayoutDim][layoutObj.activeSceneID]['activeVideoID'] = videoID;
+	isManualPause[layoutObj.activeSceneID][videoID] = true;
+}
+function getDetailsFromVideoStatus(paramKey,paramVal,paramData){
+	var dim = (paramKey=="dim") ? paramVal : layoutObj.matchLayoutDim,
+		scene = (paramKey=="scene") ? paramVal : layoutObj.activeSceneID;
+	try{
+		return videoStatusJSON[dim][scene][paramData];
+	}catch(e){
+		return null;
+	}
+}
+
+function isVideoElement(assetID){
+	return (videoAssetsInScene.hasOwnProperty(layoutObj.activeSceneID) && videoAssetsInScene[layoutObj.activeSceneID].hasOwnProperty(assetID)) ? true : false;
+}
+function isYT(assetID){
+	return (layoutObj.YouTubeObject.hasOwnProperty(layoutObj.activeSceneID) && layoutObj.YouTubeObject[layoutObj.activeSceneID].hasOwnProperty(assetID)) ? true : false;
+}
+function isVideoAutoPlay(videoID){
+	return (videoAssetsInScene.hasOwnProperty(layoutObj.activeSceneID) && videoAssetsInScene[layoutObj.activeSceneID].hasOwnProperty(videoID)) ? videoAssetsInScene[layoutObj.activeSceneID][videoID]["autoPlay"] : null;
+}
+function isVideoPlaying(videoID){
+	return (videoAssetsInScene.hasOwnProperty(layoutObj.activeSceneID) && videoAssetsInScene[layoutObj.activeSceneID].hasOwnProperty(videoID)) ? videoAssetsInScene[layoutObj.activeSceneID][videoID]["isPlaying"] : null;
+}
+function isAssetActive(assetID){
+	return ($("#"+assetID).css("margin-top") == "0px") ? true : false;
+}
+function checkVastPlayerType(videoID){
+	var vastPlayerType = "flash";
+    var vastVideoEl = document.getElementById(videoID);
+	if(vastVideoEl.nodeName.toUpperCase() == "IFRAME"){
+	  if(vastVideoEl.contentWindow.document.getElementById(videoID) == null){
+	    vastPlayerType = "html";
+	  }
+	}
+	return vastPlayerType;
+}
+function receiveRelayMessage(msg) {
+	var videoID = msg.split(".")[0];
+	var status = msg.split(".")[1];
+	var assetType = "";
+	if(videoID != "player") {
+		assetType = assetsDetailedJSON["customAsset."+videoID]['iconFileType'];
+	}
+	switch(status){
+		case "playing":
+		case "complete0":
+						var vastPlayerType = checkVastPlayerType(videoID);
+			if( (status == "complete0" && assetType == "vast" && vastPlayerType == "flash") || status == "playing" || (status == "complete0" && isFF)){
+				setActiveVideoID(videoID);
+				if($("#"+videoID).css("margin-top") != "0px"){
+					pauseVideo(videoID,1);
+					anyVideoPlaying = false;
+					videoAssetsInScene[layoutObj.activeSceneID][videoID]["isPlaying"] = 0;
+					return;
+				}
+				videoAssetsInScene[layoutObj.activeSceneID][videoID]["isPlaying"] = 1;
+	    		invokeMethodOnLoad(pauseAllVideos,videoID);
+				anyVideoPlaying = true;
+			}
+			break;
+		case "finished":
+			setActiveVideoID(null);
+			break;
+		case "pauseClicked":
+			if(isManualPause[layoutObj.activeSceneID][videoID]){
+				setActiveVideoID(null);
+			}
+			isManualPause[layoutObj.activeSceneID][videoID] = true;
+			videoAssetsInScene[layoutObj.activeSceneID][videoID]["isPlaying"] = 0;
+		break;
+		case "clickthrough":
+			msg = layoutObj.activeSceneID+".clickThrough";
+			if(videoID != getActiveVideoID()) {
+				pauseVideo(getActiveVideoID(),1);
+			}
+		break;
+		case "complete100":
+			videoAssetsInScene[layoutObj.activeSceneID][videoID]["isPlaying"] = 0;
+		break;
+		case "paused":
+			videoAssetsInScene[layoutObj.activeSceneID][videoID]["isPlaying"] = 0;
+		break;
+		default:
+			//notifyEventFramework(msg);
+			break;
+	}
+	//handleMsg(msg);
+	eventMsg(msg);
+	}
+
+//Syn
+
+function settingForSynMsg(){
+	attachEventListener(window, "storage", listenSyncMsg, false);
+	attachEventListener(window, "storage", listenInvokeB2E, false);
+	attachEventListener(window, "storage", listenEventB2E, false);
+}
+settingForSynMsg();
+function saveSyncMsg(msg){
+	var synObj = {};
+	synObj.msg = msg;
+	synObj = JSON.stringify(synObj);
+	sessionStorage.setItem("syncMsg", synObj);
+}
+function listenSyncMsg(e){
+		var data = sessionStorage.getItem("syncMsg");
+	if(isJson(data)){
+		data = JSON.parse(data);
+		var msg = (data != null && data.hasOwnProperty("msg")) ? data['msg'] : null;
+		if(msg != null){
+			handleMsg(msg);
+		}
+	}
+}
+function listenInvokeB2E(e){
+	var eventSrc = e.target || e.srcElement;
+	if(eventSrc.objectName != objectName){
+		return;
+	}
+	var key = e.key.replace("invokeB2E_"+objectName+"_",""),
+		value = e.newValue.replace("_invokeB2E",""),
+		lenIframe = $("iframe[id*=asset]").length;
+	if(lenIframe){
+		for(var loopVar = 0; loopVar<lenIframe; loopVar++){
+			try{
+				$("iframe[id*=asset]")[loopVar].contentWindow.window[key](value);
+			}catch(e){
+				$("iframe[id*=asset]")[loopVar].contentWindow.postMessage('layoutWidgetListner:invokeB2E:'+key+":"+value, "*");
+			}
+		}
+	}
+}
+function invokeBaseMethod(key,value){ 
+	saveKeyValueOnStorage({key:key,value:value,uniqueKey:"invokeB2E"}); 
+}
+function invokeExpMethod(key,value){ 
+	saveKeyValueOnStorage({key:key,value:value,uniqueKey:"invokeB2E"});
+}
+function saveKeyValueOnStorage(obj){
+	var value = typeof obj.value == "undefined" ? "" : obj.value,
+		key = typeof obj.key == "undefined" ? "" : obj.key,
+		uniqueKey = obj.uniqueKey;
+	if(typeof Storage != "undefined"){
+		var stored_data = sessionStorage.getItem(uniqueKey+"_jvxAdObject_"+key);
+		if(stored_data == value){
+			sessionStorage.setItem(uniqueKey+"_jvxAdObject_"+key,value+"_"+uniqueKey);
+		}else{
+			sessionStorage.setItem(uniqueKey+"_jvxAdObject_"+key, value);
+		}
+	}
+}
+function isJson(str) {
+    try{ JSON.parse(str); }catch(e){ return false; }
+    return true;
+}
+function raiseEventOnBase(msg){ saveKeyValueOnStorage({key:msg,uniqueKey:"raiseB2E"}); }
+function raiseEventOnExp(msg){ saveKeyValueOnStorage({key:msg,uniqueKey:"raiseB2E"}); }
+function listenEventB2E(e){
+	var eventSrc = e.target || e.srcElement;
+	if(eventSrc.objectName != objectName){
+		return;
+	}
+	var key = e.key.replace("raiseB2E_"+objectName+"_","");
+	notifyEventFramework(key);
+}
+//Widget & Event
+function raiseEvent(msg){
+	eventMsg(msg);
+	handleMsg(msg);
+}
+function raiseAllEventsInHistory(){
+	$.each(eventHistory, function(index,value) {
+		notifyEventFramework(value);
+	});
+}
+function clearAllEventsInHistory(){
+	eventHistory = [];
+}
+function eventMsg(msg){
+	var dotIndex = msg.indexOf("."),//(msg.search("player") == -1) ? 8 : 6,
+		assetID = (dotIndex != -1) ? msg.substr(0,dotIndex) : null;
+	if(assetID != null && (isVideoElement(assetID) || assetID.search("scene-") != -1)) {
+		handleMsg(msg);
+	}
+	if(msg.search("sceneUnloaded")!= -1) clearAllEventsInHistory();
+	if(msg.search("sceneAssetsLoaded")!= -1){
+		raiseAllEventsInHistory();
+		clearAllEventsInHistory();
+	}else{
+		if($.inArray(msg,eventHistory) == -1){
+			eventHistory[eventHistory.length] = msg;
+			if($("#loader").css("display") != "none") return;
+		}
+	}
+		notifyEventFramework(msg);
+	
+}
+function modifyEventMsgText(msg){
+	var dotIndex = msg.indexOf("."),//(msg.search("player") == -1) ? 8 : 6,
+		assetID = (dotIndex != -1) ? msg.substr(0,dotIndex) : null,
+		eventTypeStr = msg.substr(dotIndex+1,msg.length-1),
+		retVal = "";
+	eventTypeStr = (eventTypeStr == "click") ? "clicked" : 
+				   (eventTypeStr.search("COMPLETE") != -1) ? eventTypeStr.toLowerCase() : eventTypeStr;
+	retVal = (assetID == null) ? msg : (assetID+"."+eventTypeStr);
+//	retVal = (eventTypeStr == "openExpansion" || eventTypeStr == "closeExpansion" || eventTypeStr == "orientationChange") ? eventTypeStr : retVal;
+	return retVal;
+}
+function notifyEventFramework(msg){
+	if(typeof msg == "undefined" || msg == "" || msg == null){
+		return;
+	}
+		msg = modifyEventMsgText(msg);
+	$('#eventHandler').trigger(msg, ['event', msg]);
+	var lenIframe = $("iframe[id*=asset]").length;
+	try{
+		for(var loopVar = 0; loopVar<lenIframe; loopVar++){
+            $("iframe[id*=custom]")[loopVar].contentWindow.eventListner(msg);
+		}
+	}catch(e){
+	      if($("iframe[id*=asset]").length){
+		  for(var loopVar = 0; loopVar<lenIframe; loopVar++){
+		  	$("iframe[id*=asset]")[loopVar].contentWindow.postMessage('layoutWidgetListner:eventListner:raiseEvent:'+msg, "*");
+		  }
+		}  
+	}
+}
+function handleMsg(msg){
+	var dotIndex = msg.indexOf("."),
+		assetID = msg.substr(0,dotIndex),
+		eventTypeStr = msg.substr(dotIndex+1,msg.length-1),
+		assetEventType = eventTypeStr.search("pauseClicked") != -1 ? "paused" : 
+						 eventTypeStr.search("playClicked") != -1 ? "playing" :	eventTypeStr,
+		interctionsJSON = getRequiredJSON("interactions",assetID),
+		interactionJSON = getRequiredInteraction(interctionsJSON,["srcEvent",assetEventType]),
+		tempAssetEventType = assetEventType.toUpperCase(); //clickModelCloseBtn
+	if(tempAssetEventType == "FINISHED" || tempAssetEventType == "ENDED" || (tempAssetEventType == "COMPLETE100" && interactionJSON.destAction == "closeExpansion")){
+		closeOnCompletion(assetID);
+	}
+	switch(tempAssetEventType){
+		case "CLICKMODELCLOSEBTN":
+			handleClickModelCloseBtnMsg(msg);
+		break;
+	}
+	if(isYT(assetID) && interactionJSON){
+		seekVideoToNextTime(assetID,getVideoCurrentTime(assetID)+2);
+	}
+	if(isVideoElement(assetID)) handleVideoControlInteraction(assetID,assetEventType);
+	layoutObj.invokeInteractions(assetID,assetEventType);
+	layoutObj.invokedTransitions(assetID,assetEventType);
+}
+function handleVideoControlInteraction(assetID,assetEventType){
+	}
+function handleClickModelCloseBtnMsg(){
+	}
+function anyModelAssetIsActive(assetID){
+	var retVal = false;
+	var sceneModelAssets = layoutObj.activeModelAssetIDs[layoutObj.activeSceneID];
+	for(var asset in sceneModelAssets){
+		if(assetID == asset) continue;
+		if(isAssetActive(asset)) retVal = true;
+	}
+	return retVal;
+}
+function closeOnCompletion(assetID){
+	var closeOnCompletion = getRequiredJSON("components",assetID),
+		options = closeOnCompletion.hasOwnProperty("options") ? closeOnCompletion['options'] : 0,
+		clsOnDone = (options && options.hasOwnProperty("clsOnDone") && Number(options["clsOnDone"])),
+		isModel = (options && options.hasOwnProperty("isModel") && Number(options["isModel"]));
+	if(clsOnDone){
+		deactivateAsset(assetID);
+	//	$("#"+assetID).css("display","none");
+		if(!anyModelAssetIsActive(assetID)){
+			deactivateModelLayer();
+		}
+	}
+	
+}
+function captureEvent(){
+}
+attachEventListener(window, 'message', receiveAPIMessage, false);
+function receiveAPIMessage(e)
+{
+	if(typeof e.data != "string"){
+		return;
+	}
+		var s = e.data.split(':', 10);
+	if(s[0] == 'jvxAdObject') s.shift();
+	if(s && s.length >= 2 )
+	{
+		var apiMethod =  s[1]; // second part needs to be the API method name that needs to be invoked
+				//invoke API with the element id passed
+		if(s[0] == 'jvxAPI'){
+			if(s[2] != undefined){
+				if(s[1] == "openClickThrough" || s[1] == "openURL" || s[1] == "recordEventByName"){
+					s[2] = decodeURIComponent(s[2]);
+				}
+				var sParam = s.splice(2,s.length-2);
+				window[apiMethod].apply(this,sParam);
+			}else{
+				window[apiMethod]();
+			}
+		}else if(s[0] == 'jvxAPIGetData'){
+			var reqData = null;
+			if(s[2] != undefined){
+				var sParam = s.splice(2,s.length-2);
+				reqData = window[apiMethod].apply(this,sParam);
+			}else{
+				reqData = window[apiMethod]();
+			}
+			var lenIframe = $("iframe[id*=asset]").length;
+			if(lenIframe){
+			  for(var loopVar = 0; loopVar<lenIframe; loopVar++){
+			  	$("iframe[id*=asset]")[loopVar].contentWindow.postMessage('layoutWidgetListner:eventListner'+':'+apiMethod+':'+reqData, "*");
+			  }
+			}
+		}
+	}
+}
+function invokeMethodOnLoad(methodName,param1){
+	var checkForLoad = setInterval(function(){
+		if($("#loader").css("display") == "none"){
+			clearInterval(checkForLoad);
+			if(param1 != undefined){
+				eval("methodName(param1)");
+			}else{
+				eval("methodName()");
+			}
+		}
+	},100);
+}
+function preSettinOnWO(){
+	layoutObj.clearTimeOnHover();
+	pauseAllVideos();
+}
+	var oldWindowOpen = window.open;
+    window.open = function(url, sName, sFeatures, bReplace) {
+    	preSettinOnWO();
+        oldWindowOpen(url);
+    };
+function corToCenterAlignOnWindow(objWidth,objHeight){
+	var objX =  ($(window).width() - objWidth) / 2 ;
+	var objY =  ($(window).height() - objHeight) / 2 ;
+	return [objX,objY];
+}
+function findCorToCenterAlign(assetDimArr){
+	var cord = [];
+		assetWidth = Number(assetDimArr[0]),
+		assetHeight = Number(assetDimArr[1]);
+	cord[0] = (layoutObj.layoutWidth - assetWidth)/2;
+	cord[1] = (layoutObj.layoutHeight - assetHeight)/2;
+	//	layoutDimArr = (layoutObj.matchLayoutDim).split("x");
+	return cord;
+}
+function splitStrToArr(str){
+	return str.replace('[',"").replace(']',"").split(",");
+}
+function isAssetInLayout(assetID){
+	return getRequiredJSON("components",assetID);
+}
+function loadMediaGalleryOutPutImage(){
+		//mediaGalleryData
+		if(jQuery.isEmptyObject(mediaGalleryData)) return;
+		var actionButtons,
+			actionButtonsArr,
+			dataArr,
+			obj = {},
+			galleryLayoutInfo = null,
+			options = null,
+			assetID = null,
+			outputWindowType = false,
+			outputWindowLocation = false;
+		
+		for(var gallery in mediaGalleryData){
+			assetID = gallery.replace("customWidget.","");
+			galleryLayoutInfo = getRequiredJSON("components",assetID);
+			options = galleryLayoutInfo.hasOwnProperty("options") ? galleryLayoutInfo['options'] : null;
+			outputWindowType = options && options.hasOwnProperty("outputWindowType") ? options['outputWindowType'] : false;
+			outputWindowLocation =  options && options.hasOwnProperty("outputWindowLocation") ? options['outputWindowLocation'] : false;
+			obj.layerId = galleryLayoutInfo['layerId'];
+			obj.outputWindowLocation = outputWindowLocation;
+			actionButtons = mediaGalleryData[gallery]["actionButtons"];
+			actionButtonsArr = actionButtons.split(",");
+			$.each(actionButtonsArr, function(index, data) {
+				  dataArr = data.split(":");
+				  obj.assetID = dataArr[1];
+				  appendGalleryImageToLayoutData(obj);
+			});
+		}
+	}
+	function appendGalleryImageToLayoutData(obj){
+		var assetID = obj.assetID
+		if(isAssetAnInteraction(assetID) || getRequiredAssetDetail(assetID) == null) return;
+		var assetJSON = {},
+			layerId = obj.layerId,
+			assetDetailsJSON = assetsDetailedJSON["customAsset."+assetID],
+			assetLayoutInfo = getRequiredJSON("components",assetID),
+			options = assetLayoutInfo.hasOwnProperty("options") ? assetLayoutInfo["options"] : false,
+			assetDim = splitStrToArr(assetDetailsJSON["iconDimension"]),			
+			cordinate = null,
+			location = null;
+		if(obj.outputWindowLocation){
+			cordinate = splitStrToArr(obj.outputWindowLocation);
+			assetDim[0] = cordinate[2];
+			assetDim[1] = cordinate[3];
+			location = obj.outputWindowLocation;
+		}else{
+			cordinate = findCorToCenterAlign(assetDim),
+			location = cordinate[0]+","+cordinate[1]+","+assetDim[0]+","+assetDim[1];
+		}
+		assetJSON = {
+			"layerId" : layerId,
+			"location" : location,
+			"options" : {
+					"initInvisible": 0,
+					"initVisible": 0,
+					"modal": 1
+			}
+		}
+		if(!isAssetInLayout(assetID)){
+			layoutRendererJSON['layout'][unitTypeStr][creativeUnitType][layoutObj.matchLayoutDim]['scenes'][layoutObj.activeSceneID]["components"][assetID] = assetJSON;
+		}
+		var assetCSS = "."+document.body.className+" #"+layoutObj.activeSceneID+" #"+assetID+"{width:"+assetDim[0]+"px;height:"+assetDim[1]+"px;left:"+cordinate[0]+"px;top:"+cordinate[1]+"px;position:absolute;}";
+		$('head').append('<style>'+assetCSS+'<\/style>');
+	}
+	function showGalleryImageAsModel(obj){
+		if(obj.assetID == null) return;
+		deactivateModelLayer();
+		var assetID = obj.assetID,
+			galleryID = obj.galleryID,
+			showMask = true;
+		layoutObj.modelInitiaterAssetID = obj.thumbNailId;
+		var galleryLayoutInfo = getRequiredJSON("components",galleryID),
+			options = galleryLayoutInfo.hasOwnProperty("options") ? galleryLayoutInfo['options'] : null,
+			outputWindowType = options && options.hasOwnProperty("outputWindowType") ? options['outputWindowType'] : false,
+			outputWindowShowClose = options && options.hasOwnProperty("outputWindowShowClose") ? Number(options['outputWindowShowClose']) : 1;
+		if(outputWindowType == "custom"){
+			showMask = false;
+		}
+		if(!isAssetAnInteraction(assetID)){
+			showAsset(assetID);
+			activateAsset(assetID);
+			activateModelLayer(assetID,outputWindowShowClose,showMask);
+		}else{
+			layoutObj.openURLInteraction(assetID);
+		}
+	}
+function isAssetAnInteraction(assetID){
+	var iconFileType = getRequiredAssetDetail(assetID,"iconFileType"),
+		retVal = false;
+	if(iconFileType == "url" || iconFileType == "fbshare" || iconFileType == "gplusshare" || iconFileType =="twittershare"){
+		retVal = true;
+	}
+	return retVal;
+	}
+function postDYDataToExtWidget(data){
+	var lenIframe = $("iframe[id*=asset]").length;
+	if($("iframe[id*=asset]").length){
+		for(var i = 0; i<lenIframe; i++){
+			$("iframe[id*=asset]")[i].contentWindow.postMessage('layoutWidgetListner:dynamicData:'+encodeURIComponent(JSON.stringify(data)), "*");
+		}
+	}
+}
+function sceneLoaded(){
+	window.parent.postMessage('jvxAdObject:' + 'sceneLoaded', "*");
+				$("#"+layoutObj.activeSceneID).css({'cursor':'pointer'});
+		loadMediaGalleryOutPutImage();
+	doCSSReflow();
+}
+function doCSSReflow(){
+	setTimeout(function(){
+		document.body.style.position = "relative";
+		document.body.offsetHeight;
+		document.body.style.position = "";
+	},2000);
+}
+function centerAlignSceneCnt(){
+	var centerSceneXY = [0,0],
+		layoutArr = layoutObj.matchLayoutDim.split("x");
+	centerSceneXY = corToCenterAlignOnWindow(Number(layoutArr[0]),Number(layoutArr[1]));	
+	centerSceneXY[0] = (centerSceneXY[0] < 0 ) ? 0 : centerSceneXY[0];
+	centerSceneXY[1] = (centerSceneXY[1] < 0 ) ? 0 : centerSceneXY[1];
+	var centerAlignStyle = {'position':'absolute','left':centerSceneXY[0],'top':centerSceneXY[1]};	
+	$('#scenesContainer').css(centerAlignStyle);
+}
+function jqueryAvailable(){
+		}
+function fitToscreen(componentElementStr){
+    var assetID = fitToScreenID[layoutObj.matchLayoutDim][layoutObj.activeSceneID]['assetID'],
+		tempID = assetID+layoutObj.activeSceneID+"ft";
+	if(!$("#"+tempID).length){
+		$(componentElementStr).insertBefore($("#scenesContainer"));
+	}
+	$("#"+assetID).attr({"id":tempID});
+	cssForFitToScreen(tempID);
+}
+function bgInlineEmpty(ID){
+	$("#"+ID).css({"background":""});
+	document.getElementById(ID).style.backgroundImage="";
+	document.getElementById(ID).style.backgroundColor="";
+	document.getElementById(ID).style.backgroundRepeat="";
+}
+function cssForFitToScreen(assetID){
+	var cssStyle = "#"+assetID+"{position:absolute;left:0;top:0;width:100%;height:100%;background: transparent url('"+$("#"+assetID).attr("src")+"') no-repeat center; }";
+	$('head').append('<style>'+cssStyle+'<\/style>');
+	invokeMethodOnLoad(function(){
+		$("#"+layoutObj.activeSceneID).css({"background":"transparent"});
+	});
+	$("#"+assetID).removeAttr("src").unbind("click").on("click",function(){
+		openClickThrough();
+	});
+}
+function resizeFitToScreenImage(assetID){
+	fitToScreenID[layoutObj.matchLayoutDim][layoutObj.activeSceneID]['assetID'] = assetID;
+	$("#"+assetID+layoutObj.activeSceneID+"ft").show();
+	doCSSReflow();
+}
+function fitToScreenCopyToBody(assetID){
+	var tempID = assetID+layoutObj.activeSceneID+"ft";
+	if($("#"+assetID).length){
+		$("#"+assetID).clone().insertBefore($("#scenesContainer"));
+		$("#"+assetID).attr({"id":tempID});
+		$("#scenesContainer #"+assetID).css({"margin-top":"5000px"});
+		cssForFitToScreen(tempID);
+	}
+}
+function cancelEvent(e){
+        if (!e) var e = window.event;
+        e.cancelBubble = true;
+        if (e.stopPropagation) e.stopPropagation();        
+}
+function mouseoverMinTimeDone(){
+	clearInterval(sceneRotateInterval);
+	clearTimeout(UIRTimer);
+}
+function replaceHTML(asset_ID, data, targetElemID){
+	try{
+		if(asset_ID == "self"){
+			var appendElemID = (targetElemID == undefined) ? assetID : targetElemID;
+			var appendElem = document.getElementById(appendElemID) != null ? document.getElementById(appendElemID) : document.body;
+			appendElem.innerHTML = data;
+		}else{
+			var assetHTML = document.getElementById(asset_ID);
+			var appendAssestElem = assetHTML.contentDocument.getElementById(targetElemID) != null ? assetHTML.contentDocument.getElementById(targetElemID) : assetHTML.contentDocument.body;
+			appendAssestElem.innerHTML = data;
+		}
+			
+	}catch(e){
+		assetHTML.contentWindow.postMessage('layoutWidgetListner:replaceHTML:'+data+':'+targetElemID, "*");
+	}
+}
+function appendHTML(asset_ID, data, targetElemID){
+	try{
+		if(asset_ID == "self"){
+			var appendElemID = (targetElemID == undefined) ? assetID : targetElemID;
+			var appendElem = document.getElementById(appendElemID) != null ? document.getElementById(appendElemID) : document.body;
+			appendElem.innerHTML += data;
+		}else{
+			var assetHTML = document.getElementById(asset_ID);
+			var appendAssestElem = assetHTML.contentDocument.getElementById(targetElemID) != null ? assetHTML.contentDocument.getElementById(targetElemID) : assetHTML.contentDocument.body;
+			appendAssestElem.innerHTML += data;
+		}
+			
+	}catch(e){
+		assetHTML.contentWindow.postMessage('layoutWidgetListner:appendHTML:'+data+':'+targetElemID, "*");
+	}
+}
+
+</script><div id="eventHandler" style="position:absolute; top:-1000px; left:-1000px;"></div><div id="mask" style="display: none;"></div><div id="closeBtnModel"></div><div id="scenesContainer"><div id="scene-1" style="display: block; visibility: visible; top: 0px; left: 0px; opacity: 1; width: 100%; cursor: pointer; height: 346.667px; background: transparent;"><iframe id="asset101" frameborder="0" scrolling="no" allowtransparency="true" style="visibility: visible; margin: 0px; width: 100%; top: 0px; height: 346.667px;"></iframe></div></div>
+<!-- Jivox � 2016 -->
+
+<div id="loader" class="jvxAdObjectloadingSpinner" style="width: 22px; height: 22px; display: none;"></div></body></html>

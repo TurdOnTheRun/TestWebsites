@@ -1,0 +1,38 @@
+.video-end-card-container{
+	width:640px;
+	height:350px;
+	background-color:#262626;
+}
+
+.video-end-card-area{
+	text-align:center;
+	padding:56px 0px 50px 2px;
+}
+
+.video-end-card{
+	display:inline-block;
+	padding-right:10px;
+	padding-bottom:10px;
+	position:relative;
+	width:180px;
+	box-sizing:content-box;
+}
+
+.video-end-card .overlay-wrapper{
+  display: none;
+}
+
+.video-end-card:hover .overlay-wrapper{
+  display: block;
+  background-color:rgba(0,0,0,0.7);
+  position: absolute;
+  width:180px;
+  height:120px; 
+  padding: 9px;
+  overflow: hidden;
+}
+
+.video-end-card img{
+	width:180px;
+	height:120px;
+}

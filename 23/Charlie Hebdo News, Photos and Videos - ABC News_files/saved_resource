@@ -1,0 +1,29 @@
+
+var ftGUID_1692776="29774EE968D94E";
+var ftConfID_1692776="1351959001";
+var ftParams_1692776="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_ifb=1&ft_domain=abcnews.go.com&ft_referrer=http%3A%2F%2Fabcnews.go.com%2Ftopics%2Fnews%2Freporters%2Fcharlie-hebdo.htm&cachebuster=727551.8376881145";
+var ftKeyword_1692776="";
+var ftCustom_1692776="";
+var ftSection_1692776="";
+var ftSegment_1692776="fe6,jnh";
+var ftSegmentList_1692776=[{s:'fe6'},{s:'jnh'}];
+var ftRuleMatch_1692776="0";
+var ftTimestamp_1692776="1458847061";
+var ftGeoC2_1692776="us";
+var ftGeoState_1692776="ny";
+var ftGeoCity_1692776="new york";
+var ftISP_1692776="time warner cable internet llc";
+var ftSpeed_1692776="cable";
+var ftDMA_1692776="501";
+var ftLong_1692776="-73.9703";
+var ftLat_1692776="40.7996";
+var ftPostal_1692776="10025";
+var ftTimeZone_1692776="-400";
+var ftMobileCarrier_1692776="";
+var ftImp1692776 = {};
+ftImp1692776.privacy = "x";
+ftImp1692776.guidAge = "28";
+ftImp1692776.impID = "3005871EBC086C";
+
+document.write('<scr'+'ipt src="http://cdn.flashtalking.com/xre/169/1692776/1351959/js/j-1692776-1351959.js" id="ftscript_m1692776" name="ftscript_m1692776"></scr'+'ipt>');
+                    

@@ -1,0 +1,64 @@
+.event-fixed-sidebar .fs_hot_topics{margin-bottom:10px}
+.event-fixed-sidebar .buzz-container .headerComponentContainer .headerComponent{bottom:5px}
+.event-fixed-sidebar .footer-image{height:100px;margin:0 0 -10px 0}
+.fbAuthContainer{top:0;left:0;position:fixed;z-index:5000001;height:100%;width:100%;text-align:center}
+.fbAuthWrapper{position:fixed;z-index:5000002;margin:auto 0}
+.fbAuthWrapper .screen{background-color:#111;opacity:.7;filter:alpha(opacity=50);position:fixed;top:0;left:0;bottom:0;width:100%;height:100% cursor:pointer;min-height:1000px}
+.fbAuthContainer .close{cursor:pointer;position:absolute;right:16px;top:5px;color:#fff;font-size:1.5em}
+.fbAuthWrapper .fbDialog{position:fixed;background-image:url("../../../../../content/dam/fsdigital/fscom/events/super-bowl/fb-dialog-bg.jpg");width:430px;height:201px;z-index:5000003;top:50%;left:50%;margin-top:-100px;margin-left:-215px}
+.fbAuthWrapper #fbClose{font-family:azo-sans-web,sans-serif;font-weight:bold;cursor:pointer;position:absolute;right:8px;top:11px;color:#fff;font-size:38px}
+.fbAuthWrapper #fbConnect{position:relative;top:150px;left:-144px}
+.fbAuthWrapper #fbContinue{color:#3b5999;font-size:16px;position:absolute;right:20px;top:155px;cursor:pointer}
+.channel-superbowl .box-exacto.option-standard{font-size:23px}
+#bigGame,#bGCommercial,#fbConnect{cursor:pointer}
+.event-fixed-sidebar .buzz-container .headerComponentContainer .headerComponent{margin-bottom:5px}
+.event-fixed-sidebar .viewNavSecondary .nav-primary{margin-left:-5px}
+.event-fixed-sidebar .viewNavSecondary{padding-bottom:18px}
+.event-fixed-sidebar .header .pageTitle{padding-left:12px;height:1.3em}
+.event-fixed-sidebar .news-container .news{margin-bottom:0}
+.event-fixed-sidebar .news-container .news .section{margin-bottom:15px}
+.event-fixed-sidebar .news-container .news .more-shows{margin-top:0}
+.event-fixed-sidebar .news-container .news .option-headline{margin-bottom:-22px}
+.event-fixed-sidebar .teaser .msnAdvertisement{padding-top:0}
+.event-fixed-sidebar .fotorama__nav__frame.fotorama__active{border:2px solid #009245}
+.event-fixed-sidebar .fotorama__nav__frame.fotorama__active .fotorama__thumb{border:none!important}
+.event-fixed-sidebar .header-text .pageTitle{display:block}
+.moreOnFS1{background:#fff}
+.moreOnFS1 .right{float:right!important}
+.moreOnFS1 a{display:block}
+.news .more-shows{margin-left:10px;margin-right:10px;margin-top:15px}
+.news a{color:#7f7f7f}
+.more-shows a{display:block;border-bottom:solid 1px #ccc}
+.more-shows a:last-child{border-bottom:0}
+.more-shows .show{padding-top:10px;padding-bottom:10px;min-height:70px;overflow:hidden}
+.more-shows .show .show-info{width:40%;margin-left:5%}
+.more-shows .show .show-image{width:55%}
+.more-shows .show .show-link{font-size:14px;font-weight:bold;margin-top:-13px;text-align:right;width:40%;margin-left:5%;clear:right;white-space:nowrap}
+.more-shows .show-title{font-family:"nimbus-sans-condensed",sans-serif;font-size:2em;font-weight:normal;line-height:.833333;color:#373737}
+.facebookLikeWrapper{background-color:#fff;height:56px;padding-left:10px;margin-top:-17px}
+.facebookLikeWrapper iframe{height:30px;padding-top:15px}
+.fbShareContainer{float:right;line-height:30px}
+.lt-ie9 .fbShareContainer{width:50px}
+.buzzer-header .fbShareSpan{color:#464646;font-size:12px;font-family:'lucida grande','Lucida Sans','Lucida Sans Unicode',tahoma,verdana,arial,sans-serif;padding-left:22px;margin:17px 0 17px 15px;background:url('src/components/images/fblogo.png') 0 2px no-repeat transparent;display:inline-block}
+@media(min-width:686px) and (max-width:1150px){.event-fixed-sidebar .genericHeader .pageTitle{font-size:62px}
+}
+@media(min-width:686px) and (max-width:1023px){.event-fixed-sidebar .news-container .news .newsTop{margin-top:0!important}
+.channel-superbowl .event-fixed-sidebar .headerComponentContainer .headerComponent{font-size:1.5em}
+.event-fixed-sidebar .viewNavSecondary{padding-bottom:5px}
+}
+@media(min-width:686px) and (max-width:950px){.event-fixed-sidebar .genericHeader .pageTitle{font-size:52px}
+}
+@media(min-width:686px) and (max-width:850px){.event-fixed-sidebar .genericHeader .pageTitle{font-size:44px}
+}
+@media(max-width:685px){.event-fixed-sidebar .genericHeader .pageTitle{font-size:24px}
+.event-fixed-sidebar .footer-image{height:99px;margin:0}
+.fbAuthWrapper .fbDialog{background-image:url("../../../../../content/dam/fsdigital/fscom/events/super-bowl/fb-dialog-bgsmll.jpg");width:310px;height:202px;margin-top:-101px;margin-left:-155px}
+.fbAuthWrapper #fbConnect{top:154px;left:-90px}
+.fbAuthWrapper #fbClose{right:6px;top:4px;font-size:27px}
+.event-fixed-sidebar .headerComponentContainer .headerComponent{font-size:1.3em}
+.event-fixed-sidebar .genericHeader .pageTitle,.event-fixed-sidebar .buzz-container .headerComponentContainer .headerComponent{white-space:nowrap}
+}
+@media(max-width:685px){.facebookLikeWrapper{padding-left:2%;margin-top:0}
+}
+@media(min-width:686px) and (max-width:1023px){.facebookLikeWrapper{margin-top:0;padding-left:40%}
+}

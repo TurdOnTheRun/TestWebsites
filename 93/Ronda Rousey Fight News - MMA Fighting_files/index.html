@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://s0.2mdn.net/2155040/1459892461398/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+	<meta name="ad.size" content="width=728,height=90">
+	
+    <title>Pepsi</title>
+    <script type="text/javascript" src="./TweenMax.min.js"></script>
+    <script type="text/javascript" src="./TimelineLite.min.js"></script>
+    <script type="text/javascript" src="./CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="./EasePack.min.js"></script>
+<style type="text/css">
+	.banner {
+		width: 728px;
+		height: 90px;
+		background-color: #000;
+	}
+	
+	.relContainer {
+		position: relative;
+		width: 728px;
+		height: 90px;
+		overflow: hidden;
+		-ms-overflow-x: hidden;
+	}
+	
+	img {
+		border: 0px;
+	}
+	
+	body {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+	#bgF1 {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		z-index: 5;
+		opacity: 0;
+	}
+	
+	#bgMain {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		z-index: 1;
+		opacity: 0;
+	}
+	
+	#EighteenNinetyThree {
+		left: 90px;
+		top: 0px;
+		z-index: 3;
+		position: absolute;
+		opacity: 0;
+	}
+	
+	#sparkles1 {
+		left: 0px;
+		top: 0px;
+		z-index: 3;
+		position: absolute;
+		opacity: 0;
+	}
+	
+	#sparkles2 {
+		left: 0px;
+		top: 0px;
+		z-index: 3;
+		position: absolute;
+		opacity: 0;
+	}
+	
+	#madeWith {
+		left: 451px;
+		top: 18px;
+		z-index: 3;
+		position: absolute;
+		opacity: 0;
+	}
+	#ribbonContainer {
+		width: 307px;
+		height: 40px;
+		overflow: hidden;
+		top: 43px;
+		left: 417px;
+		position: absolute;
+		z-index: 3;
+	}
+	#ribbon {
+		position: absolute;
+		top: -41px;
+		left: 0px;
+	}
+	
+	#kolaNutExtract {
+		left: 25px;
+		top: 8px;
+		z-index: 6;
+		position: absolute;
+		opacity: 0;
+	}
+	
+	#sparklingWater {
+		left: 125px;
+		top: 8px;
+		z-index: 6;
+		position: absolute;
+		opacity: 0;
+	}
+	
+	#realSugar {
+		left: 220px;
+		top: 8px;
+		z-index: 6;
+		position: absolute;
+		opacity: 0;
+	}
+
+	#boldlyBlended {
+		left: 42px;
+		top: 22px;
+		z-index: 6;
+		position: absolute;
+		opacity: 0;
+	}
+
+	#allNew {
+		left: 125px;
+		top: 0px;
+		z-index: 6;
+		position: absolute;
+		opacity: 0;
+	}
+
+	#line1 {
+		right: 0px;
+		top: 12px;
+		z-index: 6;
+		position: absolute;
+		width: 0px;
+		height: 1px;
+		background-image: url(line1.png);
+		background-repeat: no-repeat;
+		background-position: right;
+	}
+
+
+	#line2 {
+		left: 0px;
+		top: 12px;
+		z-index: 6;
+		position: absolute;
+		width: 0px;
+		height: 1px;
+		background-color: #f2f0d9;
+	}
+	
+	#linkLayer {
+		left: 0px;
+		top: 0px;
+		width: 728px;
+		height: 90px;
+		display: block;
+		position: absolute;
+		overflow: hidden;
+		cursor: pointer;
+		cursor: hand;
+		background-color: rgba(255, 255, 255, 0);
+		z-index: 100000000000000;
+	}
+</style>  
+<script language="javascript">
+	function bannerAn() {
+		document.getElementById('linkLayer').addEventListener('click', clickThrough, false);
+		
+		var bgF1 = document.getElementById('bgF1'),
+			bgMain = document.getElementById('bgMain'),
+			EighteenNinetyThree = document.getElementById('EighteenNinetyThree'),
+			sparkles1 = document.getElementById('sparkles1'),
+			sparkles2 = document.getElementById('sparkles2'),
+			madeWith = document.getElementById('madeWith'),
+			kolaNutExtract = document.getElementById('kolaNutExtract'),
+			sparklingWater = document.getElementById('sparklingWater'),
+			realSugar = document.getElementById('realSugar'),
+			boldlyBlended = document.getElementById('boldlyBlended'),
+			allNew = document.getElementById('allNew'),
+			line1 = document.getElementById('line1'),
+			line1Blocker = document.getElementById('line1Blocker'),
+			line2 = document.getElementById('line2'),
+			t2 = new TimelineLite(),
+			tl = new TimelineLite();
+		/* rotationY:360, ease:Back.easeOut */	
+		
+		// Frame animations start
+		tl.add('f1')
+		  	  .to(bgF1, 0.05, {opacity:1},"f1+=0.05")
+		  	  .to(bgMain, 0.05, {opacity:1},"f1+=0.2")
+		  	  .to(EighteenNinetyThree, 0.05, {opacity:1},"f1+=0.2")
+		  	  .to(madeWith, 0.05, {opacity:1},"f1+=0.2")
+		   .add('f2')
+			  .to(bgF1, 1, {opacity:0},"f2+=0.5")
+			  .to(ribbon, 1, {top: "0px"}, "f2+=0.5")
+		   .add('f3')
+			  .to(kolaNutExtract, 3, {opacity:1},"f3+=0.25")
+			  .to(sparklingWater, 3, {opacity:1},"f3+=0.75")
+			  .to(realSugar, 3, {opacity:1},"f3+=1.25")
+		   .add('f4')
+			  .to(EighteenNinetyThree, 0.75, {opacity:0},"f4+=0.25")
+		   .add('f5')
+			  .to(allNew, 0.5, {opacity:1})
+
+			  .to(line1, 0.5, {width:"524px", ease:Power1.easeOutIn},"f5+=0.5")
+			  .to(line2, 0.5, {width:"121px", ease:Power1.easeOutIn},"f5+=0.5")
+			  .to(boldlyBlended, 0.75, {opacity:1},"f5+=1")
+
+		  ;
+
+
+		  t2.add('sparkleBG')
+              .to(sparkles1,3,{opacity: 1, repeat:3, yoyo:true, ease:Power1.easeIn})
+		  	  .to(sparkles2, 3.5, {opacity:1, repeat:3, yoyo:true, ease:Power1.easeIn},"sparkleBG+=0.25")
+		 ;
+
+	}
+	
+var clickTag = "http://www.pepsi.com";
+
+function clickThrough(e) {
+    window.open(window.clickTag);
+}
+</script>
+</head>
+<body onload="javascript:bannerAn()">
+<div class="banner" id="banner">
+    <div class="relContainer">
+        <div id="frame1">
+            <img id="bgF1" src="./bg_f1.jpg" style="opacity: 0;">
+        </div>
+
+        <div id="frame2">
+            <img id="EighteenNinetyThree" src="./1893.png" alt="1893 From The Makers Of Pepsi-Cola" style="opacity: 0;">
+            <img id="madeWith" src="./made_with.png" alt="Made With Premium" style="opacity: 1;">
+            <div id="ribbonContainer">
+        		<img id="ribbon" src="./ribbon.png" alt=" " style="top: 0px;">
+        		<img id="kolaNutExtract" src="./kola_nut_extract.gif" alt="Kola Nut Extract" style="opacity: 1;">
+        		<img id="sparklingWater" src="./sparkling_water.gif" alt="Sparkling Water" style="opacity: 1;">
+        		<img id="realSugar" src="./real_sugar.gif" alt="Real Sugar" style="opacity: 1;">
+        	</div>
+            <img id="sparkles1" src="./sparkles1.png" style="opacity: 0.0631684;">
+            <img id="sparkles2" src="./sparkles2.png" style="opacity: 0.736654;">
+            <img id="bgMain" src="./bg_main.jpg" style="opacity: 1;">
+        </div>
+
+        	
+
+
+        <div id="frame4">
+            <img id="boldlyBlended" src="./boldly_blended.png" alt="Boldly Blended Colas" style="opacity: 1;">
+        </div>
+
+        <div id="frame5">
+        	<img id="allNew" src="./all_new.png" alt="All New" style="opacity: 1;">
+        	
+        	<div id="line1" style="width: 524px;"></div>
+        	<div id="line2" style="width: 121px;"></div>
+        </div>
+
+        <div id="linkLayer"></div>
+    </div>
+</div>
+
+</body></html>

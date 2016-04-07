@@ -1,0 +1,1 @@
+PARSELY.pInit({"apikey":"foxsports.com","settings":{"debug":false,"widget":false,"tracker":true},"customizations":null,"track_ip_addresses":true,"bundle":"/code/ptrack-v0.4.11-engaged-time.js","track_third_party_cookies":true,"uuid":"d468c2db-1255-46c9-84ff-1b8f3be17f86","network_uuid":"0c5e7ff5-8229-4f06-8537-c8fbb752cd91","apikey_uuid":"d468c2db-1255-46c9-84ff-1b8f3be17f86"});

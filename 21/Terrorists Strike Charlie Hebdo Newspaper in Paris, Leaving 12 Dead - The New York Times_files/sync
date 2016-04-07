@@ -1,0 +1,6 @@
+(function () { var f = function () { 
+(new Image).src = "http://p.adsymptotic.com/d/px?_pid=13001&_psign=c5ccca7f0d37071ee38ee7ac29330eac&_puuid=Gg4Tb27qbZQOeCDE9QYEJeqUN23iwKl4HgDAvxc&_redirect=http%3A%2F%2Fpippio.com%2Fapi%2Fsync%3Fpid%3D1284%26m%3DCIYKEioKJggBEBIaIGEwYjYwOTVjYzAyNzBhMjQzMzdiMzNhMmI2ZTVjYjUzEAAaGwih-dC3BRIFCP4JEAASBQiEChAAEgUIoAsQAA%26it%3D1%26iv%3D%24%7BUUID%7D";
+(new Image).src = "http://ce.lijit.com/merge?pid=5022&3pid=Gg4Tb27qbZQOeCDE9QYEJeqUN23iwKl4HgDAvxc";
+(new Image).src = "http://cm.dpclk.com/cm?nw_id=pippio&nw_uid3=Gg4Tb27qbZQOeCDE9QYEJeqUN23iwKl4HgDAvxc";
+};
+if (document.body) { f(); } else { document.addEventListener("DOMContentLoaded", f); }}());

@@ -1,0 +1,36 @@
+OX_2635890964({
+  "ads":{
+    "chain":1,
+    "medium":"w",
+    "record_tmpl":"http://ox-d.wikia.servedbyopenx.com/{medium}/1.0/{rtype}?ts={txn_state}",
+    "pixels":"http://us-u.openx.net/w/1.0/pd?plm=5&ph=50cd45fa-7093-4f15-95ec-1722f80fddf1",
+    "adunits" : [
+      {
+        "auid":"538229265",
+        "chain_timeout":"",
+        "chain_revenue":"756",
+        "chain":[
+          {
+            "is_fallback":0,
+            "framed":1,
+            "ad_id":"537161409",
+            "adv_acct_id":"537073219",
+            "is_ng":1,
+            "adv_id":"152d07b1-da41-4c40-ad18-fe74c269534a:537073219",
+            "brand_id":"3716",
+            "cpipc":756,
+            "auct_win_is_deal":0,
+            "pub_rev":"756",
+            "width":"300",
+            "height":"250",
+            "html":"<iframe src=\"http://aax-us-east.amazon-adsystem.com/e/ox/impi?b=IIBpqPS4DEf9q3638rgQ5RYAAAFTqfk_AAEAAAUUFgFhFQ&w=AAABU6n5QO-8BnLWS0SKCH1fBSIXuOyCdZa72w&bi=RRRC4f2GCttgia9s23--d3cXUv91bov1k8S8gOgvHkV3ujFRzr--E8uGjqziXbY3V1UqpF1BUfqsB7MbN-r8sTuH4vUpYGkdpgm-iXeKJD7kw0aXcEJnm5t-JhEtrulO.qfTQh7UU3WJfA3f6OXcn8RSSNHIKCOPzRBv2jWakITTlcCD1mWevXdNg-gObFkBWFDfbjMyOaUXuNGNF2ydSozqeTIZDiWIZJzBqzZPlXS2WLUXJLhQ1n0yVB14aSg-ki0-qpcc77UQTU2c6abp7ypj27S7t3QGoB8n.Vo12UF2SbWPrHkBp5waZNt2yG4ZXYNoBKUGYChXhb0lQm7.CcBDxOH-V4Po-LWzACm79MVTEMQJiTE5zSnEv.jUzxCArGssSP3Pi1rRDQ.X57CtePiBHxLWOzOAU.p6sz4nKtg_&s=300x250\" width=300 height=250 frameborder=0 marginwidth=0 marginheight=0 scrolling=\"no\"></iframe><iframe src=\"//s.amazon-adsystem.com/iu3?d=openx.com&cb=191951\" width=\"1\" height=\"1\" style=\"display:none\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\"></iframe>",
+            "target":"_blank",
+            "ts":"1fHJpZD0yMjVjZTMwOS0xOTJhLTRlYWYtOGY4ZC02ZmRkNDkzYzZjNmN8cnQ9MTQ1ODg0NTU5N3xhdWlkPTUzODIyOTI2NXxhdW09RE1JRC5XRUJ8c2lkPTUzNzIxMDE0NXxwdWI9NTM3MDg2ODA5fHBjPVVTRHxyYWlkPTJlOTk3NWVkLTY4MDItNDNiOS04ZDVmLTE4NjdkMTg5ZDc5ZXxjbD0xfGFpZD01MzcxNjE0MDl8dD0xMnxhcz0zMDB4MjUwfGxpZD01MzcxMjczMjZ8b2lkPTUzNzA5NTk2MHxwPTEyNDB8cHI9NzU2fGF0Yj0yMDAwfGFkdj01MzcwNzMyMTl8YWM9VVNEfHBtPVBSSUNJTkcuQ1BNfG09MXxhaT0xNTJkMDdiMS1kYTQxLTRjNDAtYWQxOC1mZTc0YzI2OTUzNGF8bWM9VVNEfG1yPTQ4NHxwaT03NTZ8bXVpPTliOGM2MTFmLTk4NzktNGIwZi1kZTEyLWFjODNhNTdkOWIxZnxtYT05MTdiODZmNS1kNzNiLTQ1OWUtYjM1NC05NGY1NzhjMTZmYjl8bXJ0PTE0NTg4NDU1OTd8bXJjPVNSVF9XT058bXdhPTUzNzA3MzIxOXxtd2JpPTM3MTZ8bXdiPTIwMDB8bWFwPTEyNDB8ZWxnPTF8bW9jPVVTRHxtb3I9NDg0fG1wYz1VU0R8bXByPTc1NnxtcGY9MTB8bW1mPTEwfG1wbmY9MTB8bW1uZj0xMHxwY3Y9MjAxNjAzMDh8bW89T1h8bXB1PTc1NnxtY3A9MTI0MHxhcXQ9cnRifG13Yz01MzcwOTU5NjB8bXdwPTUzNzEyNzMyNnxtd2NyPTUzNzE2MTQwOXxtd2lzPTF8bXdwdD1veF9wcm90b3xjaT0xfHVyPWpPTlpjcUVOd0V8bG49NTM3MDk1OTYwIzUzNzEyNzMyNiM1MzcxNjE0MDkjIzkxN2I4NmY1LWQ3M2ItNDU5ZS1iMzU0LTk0ZjU3OGMxNmZiOSMxNTJkMDdiMS1kYTQxLTRjNDAtYWQxOC1mZTc0YzI2OTUzNGEjb3hfcHJvdG8jNTM3MDczMjE5fGxkPWF1ZGlibGUuY29t",
+            "type":"html",
+            "ad_url":"<iframe src=\"http://aax-us-east.amazon-adsystem.com/e/ox/impi?b=IIBpqPS4DEf9q3638rgQ5RYAAAFTqfk_AAEAAAUUFgFhFQ&w=AAABU6n5QO-8BnLWS0SKCH1fBSIXuOyCdZa72w&bi=RRRC4f2GCttgia9s23--d3cXUv91bov1k8S8gOgvHkV3ujFRzr--E8uGjqziXbY3V1UqpF1BUfqsB7MbN-r8sTuH4vUpYGkdpgm-iXeKJD7kw0aXcEJnm5t-JhEtrulO.qfTQh7UU3WJfA3f6OXcn8RSSNHIKCOPzRBv2jWakITTlcCD1mWevXdNg-gObFkBWFDfbjMyOaUXuNGNF2ydSozqeTIZDiWIZJzBqzZPlXS2WLUXJLhQ1n0yVB14aSg-ki0-qpcc77UQTU2c6abp7ypj27S7t3QGoB8n.Vo12UF2SbWPrHkBp5waZNt2yG4ZXYNoBKUGYChXhb0lQm7.CcBDxOH-V4Po-LWzACm79MVTEMQJiTE5zSnEv.jUzxCArGssSP3Pi1rRDQ.X57CtePiBHxLWOzOAU.p6sz4nKtg_&s=300x250\" width=300 height=250 frameborder=0 marginwidth=0 marginheight=0 scrolling=\"no\"></iframe><iframe src=\"//s.amazon-adsystem.com/iu3?d=openx.com&cb=191951\" width=\"1\" height=\"1\" style=\"display:none\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\"></iframe>"
+          }
+        ]
+      }
+    ]
+  }
+});

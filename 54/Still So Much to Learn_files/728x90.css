@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, body * {
+	font-family: Arial, Helvetica, sans;
+	color: black;
+	font-size:11px;
+	vertical-align:baseline;
+	border:0 none;
+	outline:0;
+	padding:0;
+	margin:0;
+	background-color:transparent;
+}
+body {background:white;}
+.ie10 .ignore {display:none !important;}
+
+#container{
+	position:absolute;
+	width:728px;
+	height:90px;
+	top:0px;
+	left:0px;
+	margin:auto;
+}
+
+#collapsed {
+	position: absolute;
+	width:726px;
+	height:88px;
+	border:1px solid #666666;
+	z-index:100;
+	display:block;
+	
+}
+
+#bg_images {
+	position: absolute;
+	width:726px;
+	height:88px;
+	z-index:-100;
+	display:block;
+	background: url('bg.jpg') 0 0 no-repeat;
+	transition: opacity 1s;
+}
+
+
+
+
+#cta.move1 {
+	top: 87px;
+}
+
+#cta.move {
+	top: 93px;
+}
+
+#cta:hover {
+/*border-color:white;*/
+background: #0064a9 url(cta-text.png) -24px -29px  no-repeat;
+}
+
+.hidden {opacity: 0;}
+
+#terms {
+	position: absolute;
+	cursor:pointer;
+	z-index:401;
+	width: 107px;
+	height: 15px;
+	left: 220px;
+	top: 66px;
+	display:block;
+	background: url('terms.png') 0 0 no-repeat;
+	transition: opacity .7s;
+}
+
+
+
+#cta {
+	position: absolute;
+	cursor:pointer;
+	z-index:401;
+	width: 100px;
+	height: 21px;
+	left: 217px;
+	top: 34px;
+	display:block;
+	border: 1px solid #0064a9;
+	background: rgba(255, 255, 255, 1) url('cta-text.png') -24px -3px no-repeat;
+	transition: opacity .7s;
+}
+
+
+#copy1 {
+top: 5px;
+left: 214px;
+	position: absolute;
+	width:155px;
+	height:67px;
+	z-index:100;
+	display:block;
+	background: url('words.png') 0 0 no-repeat;
+	transition: opacity .7s;
+}
+#copy2 {
+top: 10px;
+left: 214px;
+	position: absolute;
+	width:144px;
+	height:37px;
+	z-index:100;
+	display:block;
+	background: url('words.png') 0 -91px no-repeat;
+	transition: opacity .5s;
+}
+#copy3 {
+top: 10px;
+left: 214px;
+	position: absolute;
+	width:185px;
+	height:20px;
+	z-index:100;
+	display:block;
+	background: url('words.png') 0 -152px no-repeat;
+	transition: opacity .5s;
+	
+}
+
+
+
+
+#other-warning {
+	color: black;
+	font-weight: bold;
+	font-size: 9px;
+	line-height: 10px;
+	position: absolute;
+top: 52px;
+left: 5px;
+}
+#safety-info {
+	color: #0061b7;
+	font-weight: bold;
+	font-size: 11px;
+	position: absolute;
+	text-transform: uppercase;
+	top: 2px;
+	left: 466px;
+	width: 236px;
+}
+
+.disclaimer {
+	font-family: Arial, Helvetica, sans;
+	color: black;
+	font-size:11px;
+	overflow:hidden;
+	height: 56px;
+	width:257px;
+	position: absolute;
+	z-index:500;
+	bottom: 16px;
+	left: 466px;
+	line-height: 13px;
+}
+
+#scroller {
+padding-right:10px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#fda-link {
+color: #0061b7;
+text-decoration:none;
+cursor:pointer;
+z-index:500;
+}
+.disclaimer ul {
+list-style-type:none;
+margin: 4px; padding: 0;
+}
+.disclaimer li {
+margin: 3px; padding: 0 0 0 6px;
+background: url(dot.png) -3px 0 no-repeat;
+}
+.disclaimer img {vertical-align:middle;}
+
+#prescribing-info {
+	font-family: Arial, Helvetica, sans;
+	text-decoration: underline;
+	color: #0061b7;
+	font-size: 9px;
+	position: absolute;
+	z-index: 500;
+	bottom: 3px;
+	left: 466px;
+	cursor: pointer;
+	width: 138px;
+}
+
+#and {
+	font-family: Arial, Helvetica, sans;
+	text-decoration: none;
+	color: #000000;
+	font-size: 9px;
+	position: absolute;
+	z-index: 500;
+	bottom: 3px;
+	left: 582px;
+	
+	
+}
+
+#prescribing-info2 {
+	font-family: Arial, Helvetica, sans;
+	text-decoration: underline;
+	color: #0061b7;
+	font-size: 9px;
+	position: absolute;
+	z-index: 500;
+	bottom: 3px;
+	left: 602px;
+	cursor: pointer;
+
+}
+
+#exit_btn{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+	z-index:400;
+	background:url(trans.gif);
+}
+
+.iScrollIndicator {
+border: none !important;
+border-radius: 0 !important;
+background: #0064a9 !important;
+}
+.iScrollVerticalScrollbar  {
+width: 4px !important;
+border: 1px solid #0064a9 !important;
+}
+
+#subload.polite *:not(#cta) {background-image: none !important;}

@@ -1,0 +1,19 @@
+var track=function(d){var l="true"===d.sx,m="true"===d.at,r="true"===d.gl,s="true"===d.cw,t="true"===d.lr,u="true"===d.tr,k=d.sid||"",n={sskyu:k,sskyss:d.sync||""},f=d.dmp||[],g="https"===d.sec,e=function(){var d=function(a,b){return encodeURIComponent instanceof Function?b?encodeURI(a):encodeURIComponent(a):escape(a)},e=function(a){if(n[a])return n[a];var b=document.cookie;if(0<b.length){var c=b.indexOf(a+"\x3d");if(-1!=c)return c=c+a.length+1,a=b.indexOf(";",c),0>a&&(a=b.length),b=unescape(b.substring(c,
+a)),0==b.indexOf('"')&&'"'==b.match('"$')&&(b=b.substring(1,b.length-1)),b}return""},f=function(){},h=function(a,b){var c=new Image(1,1);c.onload=function(){c.onload=null;(b||f)()};c.src=a},p=["9"],q={9:!0},l=p.length,m=function(a){var b=a.indexOf(":");if(-1==b)return q;var c=a.substring(0,b);a=a.substring(b+1);if("1"!=c)return q;a=eval("("+a+")");b={};for(c=0;c<l;++c){var d=p[c];void 0==a[d]&&(b[d]=!0)}return b};return new function(){this.adapTvUIDSync=function(a,b){var c=Math.round(2147483647*Math.random()),
+c=(g?"https":"http")+"://sync.adaptv.advertising.com/sync?type\x3dgif\x26key\x3dsundaysky\x26uid\x3d"+d(a)+"\x26dcord\x3d"+c;h(c,b)};this.googleAdxUIDAndUserListSync=function(a,b){var c=Math.round(2147483647*Math.random()),c=(g?"https":"http")+"://cm.g.doubleclick.net/pixel?google_nid\x3dsundaysky\x26cb\x3d"+c+"\x26v\x3d1.0.0\x26google_cm\x26google_sc";if(a){if("number"==typeof a||"string"==typeof a)a=[a];for(var e=a.length,f=0;f<e;++f)c+="\x26google_ula\x3d"+d(a[f])}h(c,b)};this.spotXchangeUIDAndDataSync=
+function(a,b,c){var e=Math.round(2147483647*Math.random());a=(g?"https":"http")+"://sync.search.spotxchange.com/partner?adv_id\x3d6434\x26uid\x3d"+d(a)+"\x26cb\x3d"+e;b&&(a+="\x26udat\x3d"+d(b));h(a+"\x26img\x3d1",c)};this.crosswise=function(a){h((g?"https":"http")+"://api.univide.com/v1/matches?k\x3ddc842d33-a399-4fdc-8bb9-409acfab5200",a)};this.crosswiseOffline=function(a){h((g?"https":"http")+"://p.univide.com/t.gif?pid\x3d19\x26pidt\x3d0\x26pdid\x3d"+k,a)};this.liveRail=function(a,b){h((g?"https":
+"http")+"://t4.liverail.com/?metric\x3dcsync\x26p\x3d3031\x26s\x3d"+a,b)};this.tremor=function(a,b){h((g?"https":"http")+"://sundaysky-partners.tremorhub.com/sync?UISS\x3d"+a,b)};this.dmpCookieSync=function(a,b){for(var c=a.length,d=0;d<c;++d)h((g?"https":"http")+"://"+a[d],b)};this.fireSSPixel=function(a){var b=!1;(function(){setTimeout(function(){var c=e("sskyu");if(void 0!=c&&""!=c&&!b){var d=e("sskyss"),d=m(d);b=!0;(a||f)(c,d)}},10)})()}}}();e.fireSSPixel(function(d,f){r&&e.googleAdxUIDAndUserListSync();
+m&&e.adapTvUIDSync(d);l&&e.spotXchangeUIDAndDataSync(d)});s&&(e.crosswise(),e.crosswiseOffline());t&&e.liveRail(k);u&&e.tremor(k);f&&e.dmpCookieSync(f)};
+track({
+	sec: "https",
+ 	sx: "true",
+ 	at: "true",
+	gl: "true",
+	cw: "{=SendCrooswise=}",
+	lr: "false",
+	tr: "true",
+
+	sid: "d4.091441f4837144308f64204605e71130",
+	sync: "2:{d:{%229%22:1460005498093}, id:{}}",
+	dmp: []
+});

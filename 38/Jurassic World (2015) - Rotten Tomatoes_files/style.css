@@ -1,0 +1,369 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+.wrapper {
+	width: 300px;
+	height: 250px;
+	background: url('../../assets/images/bg.jpg') no-repeat;
+	display: block;
+	padding: 25px;
+	position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/************* first frame ************/
+
+#card {
+	width: 191px;
+	height: 121px;
+	background: url('../../assets/images/card.jpg') no-repeat;
+	margin: 0 auto 12px auto;
+	display: block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+}
+
+#text1 {
+	width: 183px;
+	height: 30px;
+	background: url('../../assets/images/sprite_texts.png') no-repeat -42px 0;
+	margin: 0 auto;
+}
+
+/************* second frame ***************/
+
+#text2 {
+	width: 97px;
+	height: 14px;
+	background: url('../../assets/images/sprite_texts.png') no-repeat -143px -32px;
+	position: absolute;
+	top: 112px;
+	left: 42px;
+  display: none; 
+}
+
+#line2 {
+	position: absolute;
+	top: -115px;
+	left: 154px;
+	display: none;
+}
+
+/************* third frame ***************/
+
+
+#text3 {
+	width: 127px;
+	height: 64px;
+	background: url('../../assets/images/sprite_texts.png') no-repeat -3px -39px;
+	position: absolute;
+	left: 96px;
+	top: 61px;
+  display: none;
+}
+
+#line3 {
+	position: absolute;
+	left: 190px;
+	top: 100px;
+  display: none;
+}
+
+/************* fourth frame ***************/
+
+#text4 {
+  width: 142px;
+  height: 47px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat -134px -57px;
+  position: absolute;
+  left: 119px;
+  top: 82px;
+  display: none;
+}
+
+/************* fifth frame ****************/
+
+#text5 {
+  width: 97px;
+  height: 14px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat -143px -32px;
+  position: absolute;
+  left: 40px;
+  top: 96px;
+  display: none;
+}
+
+#dot5 {
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+  background: #d11534;
+  position: absolute;
+  top: 99px;
+  left: 140px;
+  display: none;
+}
+
+#plane5 {
+  width: 127px;
+  height: 72px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat -265px -87px;
+  position: absolute;
+  left: 140px;
+  top: 68px;
+  display: none;
+}
+
+/************* sixth frame ***************/
+
+#bg-red {
+  width: 300px;
+  height: 250px;
+  background: #d11534;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+#text6 {
+  width: 254px;
+  height: 55px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat 0 -105px;
+  position: absolute;
+  left: 26px;
+  top: 88px;
+  display: none;
+}
+
+/************* seventh frame **************/
+
+#card7 {
+  width:92px;
+  height: 83px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat 0 -161px;
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  display: none;
+}
+
+#bonus71 {
+  width:113px;
+  height: 55px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat -181px -163px;
+  position: absolute;
+  left: 133px;
+  top: 24px;
+  display: none
+}
+
+#bonus72 {
+  width: 83px;
+  height: 72px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat -93px -168px;
+  position: absolute;
+  left: 133px;
+  top: 102px;
+  display: none;
+}
+
+#cta7 {
+  width: 82px;
+  height: 24px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat -287px -61px;
+  position: absolute;
+  left: 130px;
+  top: 202px;
+  display: none;
+}
+
+/************* fixed elements *************/
+
+#terms {
+	width: 142px;
+	height: 10px;
+	background: url('../../assets/images/sprite_texts.png') no-repeat -230px 0px;
+	position: absolute;
+	bottom: 12px;
+	left: 11px;
+}
+
+#terms-red {
+  width: 142px;
+  height: 11px;
+  background: url('../../assets/images/sprite_texts.png') no-repeat -230px -10px;
+  position: absolute;
+  bottom: 12px;
+  left: 11px;
+  display: none;
+}
+
+#terms-end {
+	width: 122px;
+	height: 10px;
+	background: url('../../assets/images/sprite_texts.png') no-repeat -230px -20px;
+	position: absolute;
+	bottom: 12px;
+	left: 11px;
+	display: none;
+}
+
+#logo {
+	width: 41px;
+	height: 36px;
+	background: url('../../assets/images/sprite_texts.png') no-repeat;
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
+/********** animation helpers ***************/
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-ms-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear;
+  -webkit-animation: dash 5s linear;
+  /*-ms-animation: dash 5s linear;*/
+}
+

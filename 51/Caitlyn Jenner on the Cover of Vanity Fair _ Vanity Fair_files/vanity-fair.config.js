@@ -1,0 +1,1 @@
+window.SparrowConfig = {"title":"Vanity Fair","origin":"vanity-fair","events":[{"type":["click"],"selector":"a"},{"type":["scroll","pageview","timespent"],"selector":"window"}]}

@@ -1,0 +1,3665 @@
+/* Type */
+h2 {
+  font-size: 20px;
+}
+
+/* Reset */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  html { -webkit-transform: translateZ(0px); }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+/* Universal Tag Settings */
+a {
+  color: #008;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a00;
+}
+
+body {
+  background: #fff url('http://cdn.macrumors.com/images-new/bg.png') repeat-x;
+  line-height: 110%;
+}
+
+div {
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  div {
+    -webkit-backface-visibility: visible;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  div {
+    -webkit-backface-visibility: visible;
+  }
+}
+
+div, li {
+  zoom: 1;
+}
+
+div, p {
+  color: #041427;
+}
+
+img {
+  border: 0;
+}
+
+/* Articles */
+/*.article {
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  margin-bottom: 18px;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  border: 1px solid #d5d3cd;
+}
+
+.article.blog {
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  margin-bottom: 64px;
+  padding-right: 10px;
+  border: none;
+}*/
+
+.article.search {
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0 !important;
+  box-shadow: none;
+}
+
+.article.archive {
+  box-shadow: none;
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0 !important;
+}
+
+.byline {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*.article .byline {
+  border-bottom: 1px solid #d5d3cd;
+  background-color: #f2f1ec;
+  height: 29px;
+  line-height: 29px;
+  padding: 0 14px 0 14px;
+  font-family: Verdana;
+  font-size: 12px;
+  color: #39332e;
+}
+
+.article.blog .byline {
+  border: 0;
+  background: transparent;
+  margin: 0;
+  height: auto;
+  line-height: normal;
+  padding: 0;
+}*/
+
+.article.search .byline {
+  border: 0;
+  background-color: #fff;
+  margin: 4px 0 0 0;
+  height: auto;
+  line-height: normal;
+  padding: 0;
+}
+
+.article .byline a {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  text-decoration: underline;
+  color: #660000;
+}
+
+.article .byline .social {
+  float: right;
+}
+
+.article .content {
+  font-size: 10pt;
+  padding: 11px 18px 12px 18px;
+}
+
+.article .content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.article .content h2 a {
+  font-size: 20px;
+}
+
+.article .content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article .content a {
+  font-size: 10pt;
+  border-bottom: 1px solid #ccc;
+}
+
+/*.article.blog .content {
+  border: 0;
+  padding-left: 0px;
+}*/
+
+.article.search .content {
+  border: 0;
+}
+
+.article.archive .content {
+  border: 0;
+}
+
+.article .content .article_image {
+  float: right;
+  padding: 12px 17px 14px 14px;
+}
+
+.article .content p {
+  padding: 11px 18px 12px 18px;
+  color: #041427;
+  font-size: 10pt;
+}
+
+/*.article.blog .content p {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}*/
+
+.article.search .content p {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}
+
+.article.archive .content p {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}
+
+.article .content blockquote {
+  padding: 11px 18px 12px 18px;
+  color: #041427;
+  font-size: 10pt;
+}
+
+/*.article.blog .content blockquote {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}*/
+
+.article.search .content blockquote {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}
+
+.article.archive .content blockquote {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}
+
+/*.article.blog .content p.quote {
+  padding-left: 30px;
+  margin-left: 0;
+}*/
+
+.article.search .content p.quote {
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+.article.archive .content p.quote {
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+/*.article .content p.quote {
+  margin-left: 18px;
+  padding-left: 30px;
+  font-style: italic;
+  background: #fff url('http://cdn.macrumors.com/images-new/quote.png') 0 12px no-repeat;
+}*/
+
+/*.article.blog .content blockquote {
+  padding-left: 30px;
+  margin-left: 0;
+}*/
+
+.article.search .content blockquote {
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+.article.archive .content blockquote {
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+/*.article .content blockquote {
+  margin-left: 18px;
+  padding-left: 30px;
+  font-style: italic;
+  background: #fff url('http://cdn.macrumors.com/images-new/quote.png') 0 12px no-repeat;
+}*/
+
+/*.article .footer {
+  border-radius: 0 0 4px 4px;
+  moz-border-radius: 0 0 4px 4px;
+  webkit-border-radius: 0 0 4px 4px;
+  min-height: 33px;
+  height: auto;
+  overflow: hidden;
+  line-height: 33px;
+  border-top: 1px solid #d5d3cd;
+  background-color: #f2f1ec;
+  width: 100%;
+}
+
+.article .footer .social {
+  overflow: hidden;
+  width: 340px !important;
+  text-align: right;
+}
+
+.article .footer .social a {
+}
+
+.article .footer .social ul li {
+  float: right;
+  list-style: none;
+  margin-left: 10px;
+}*/
+
+/*.article.blog .footer {
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  height: auto;
+  line-height: normal;
+  border: 0;
+  background-color: #fff;
+}*/
+
+.article.search .footer {
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  height: auto;
+  line-height: normal;
+  border: 0;
+  background-color: #fff;
+}
+
+/*.article .footer .comments {
+  float: left;
+  margin: 0;
+  padding-left: 18px;
+  background-image: none;
+}*/
+
+/*.article.blog .footer .comments {
+  margin: 0;
+  padding-left: 0px;
+  background-position: 0 2px;
+}*/
+
+/*.article.search .footer .comments {
+  margin: 0;
+  background-position: 0 2px;
+}
+
+.article .footer .comments a {
+  font-size: 13px;
+  color: #008;
+  text-decoration: none;
+}
+
+.article .footer .comments a {
+  color: #660000;
+}
+
+.article .footer .rating {
+  float: left;
+  margin-left: 30px;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  color: #39291c;
+  text-decoration: none;
+}
+
+.article .footer .rating div.rating_title, .article .footer .rating div.pos, .article .footer .rating div.neg {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  color: #39291c;
+  text-decoration: none;
+}
+
+.article .footer .rating div.rating_title {
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.article .footer .rating div.pos {
+  float: left;
+  padding-right: 20px;
+  margin-right: 10px;
+  height: 33px;
+  background-image: url('http://cdn.macrumors.com/images-new/article_sprite.png');
+  background-repeat: no-repeat;
+  background-position: right -32px;
+}
+
+.article .footer .rating div.neg {
+  float: left;
+  padding-right: 20px;
+  margin-right: 10px;
+  height: 33px;
+  background-image: url('http://cdn.macrumors.com/images-new/article_sprite.png');
+  background-repeat: no-repeat;
+  background-position: right -77px;
+}
+
+.article .footer .rating strong {
+  font-family: Georgia, serif;
+  font-size: 13px;
+}
+
+.article .footer .social {
+  width: 100px;
+  height: 20px;
+  float: right;
+  margin: 6px 15px 0 0;
+}*/
+
+/*.article.blog .footer .social {
+  float: right;
+  margin: 6px 0 0 0;
+  position: relative;
+  top: -4px;
+  left: -10px;
+  width: 250px;
+}*/
+
+.article.iphone .footer .social {
+  float: right;
+  margin: 6px 0 0 0;
+  position: relative;
+  top: -4px;
+}
+
+.article .searchtitle a {
+  color: #152a44;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/*.article .title {
+  display: block;
+  background-color: #660000;
+  border-radius: 4px 4px 0 0;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 7px 17px 9px 17px;
+  overflow: none;
+  webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.article .title a {
+  color: #fff;
+  text-decoration: none;
+}*/
+
+/*.article.blog .title {
+  height: auto;
+  line-height: normal;
+  background-color: #fff;
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  border-bottom: 2px solid #dfddd7;
+  font-size: 24px;
+  color: #152a44;
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 0 0 3px 0;
+}*/
+
+/*.article.blog .title a {
+  color: #152a44;
+  text-decoration: none;
+}*/
+
+.article.search .title a {
+  height: auto;
+  line-height: normal;
+  background-color: #fff;
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  font-size: 12px;
+  color: #152a44;
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 0 0 3px 0;
+}
+
+.article.archive .title a {
+  height: auto;
+  line-height: normal;
+  background-color: #fff;
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  font-size: 12px;
+  color: #152a44;
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 0 0 3px 0;
+}
+
+#archivetitle {
+  padding-bottom: 1em;
+  color: #666;
+}
+
+#RoundupGallery {
+  margin: 0 0 35px 0;
+  padding: 33px 0px 1em 6px;
+}
+
+#RoundupGallery img {
+  border: 1px solid #999;
+  margin: 1em;
+  width: 125px;
+}
+
+#RoundupGallery object embed {
+  max-width: 336px;
+  height: auto;
+}
+
+#RoundupGallery p {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+#blogIntro {
+  margin: 0 17px 35px 17px;
+  padding-bottom: 1em;
+}
+
+#blogIntro a {
+  color: #426694;
+  text-decoration: underline;
+}
+
+#blogIntro h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #152a44;
+  margin-bottom: 5px;
+}
+
+#blogIntro img {
+  float: right;
+  padding: 0 0 5px 30px;
+}
+
+#blogIntro p {
+  color: #426694;
+  font-size: 13px;
+}
+
+.blue_box {
+  background-color: #d7e2ef;
+}
+
+.blue_box .featured, .blue_box .featured li {
+  list-style-type: none;
+}
+
+.blue_box .featured li {
+  clear: both;
+  margin-bottom: 25px;
+  font-size: 10pt;
+}
+
+.blue_box .featured li .byline {
+  color: #708296;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.blue_box .featured li .byline a {
+  color: #708296;
+  font-size: 13px;
+  text-decoration: underline;
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+}
+
+.blue_box .featured li .copy {
+  color: #152a44;
+  margin-bottom: 8px;
+}
+
+.blue_box .featured li .copy a {
+  color: #152a44;
+  text-decoration: none;
+}
+
+.blue_box .featured li .comments {
+  color: #708296;
+}
+
+.blue_box .featured li .comments a {
+  color: #708296;
+  text-decoration: underline;
+}
+
+.blue_box .featured li .copy img {
+  float: right;
+  margin: 0 0 7px 7px;
+  border: 1px solid gray;
+}
+
+.blue_box .featured li h4 {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.blue_box .featured li h4 a {
+  font-weight: bold;
+  color: #152a44;
+  text-decoration: none;
+}
+
+.blue_box h2 {
+  background-color: #426694;
+  color: #fff;
+}
+
+.blue_box .list {
+  color: #1a2e48;
+  border-top: 1px dotted #b1bece;
+}
+
+.blue_box .list a {
+  color: #1a2e48;
+}
+
+.clear {
+  clear: both;
+}
+
+.clear_left {
+  clear: left;
+}
+
+.comment.first {
+  border-top: 0;
+  padding-top: 27px;
+}
+
+.comment {
+  position: relative;
+  border-top: 1px solid #d1ccbc;
+  padding-top: 17px;
+  margin-bottom: 12px;
+  min-height: 75px;
+}
+
+.comment .avatar {
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  margin-top: 4px;
+}
+
+.comment.first .avatar {
+  top: 28px;
+}
+
+.comment .comment_content {
+  margin-left: 86px;
+}
+
+.comment .comment_content .date {
+  font-family: Verdana, sans-serif;
+  font-style: italic;
+  font-size: 11px;
+}
+
+.comment .comment_content .date strong {
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-size: 11px;
+}
+
+.comment .comment_content .content {
+  margin: 10px 0 9px 0;
+  color: #152a44;
+  font-size: 10pt;
+}
+
+.comment .comment_content .content p.quote {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 18px;
+  padding-left: 30px;
+  font-style: italic;
+  font-size: 10pt;
+  background: #fff url('http://cdn.macrumors.com/images-new/quote.png') 0 0 no-repeat;
+}
+
+.comment .comment_content .content blockquote {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 18px;
+  padding-left: 30px;
+  font-style: italic;
+  font-size: 10pt;
+  background: #fff url('http://cdn.macrumors.com/images-new/quote.png') 0 0 no-repeat;
+}
+
+.comment .comment_content .rating {
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-size: 11px;
+  color: #39291c;
+}
+
+.comment .comment_content .content img {
+  max-width: 500px;
+}
+
+.comment .comment_content .rating strong {
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-size: 11px;
+}
+
+.comment .comment_content .username a {
+  color: #660000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#comments h2 {
+  float: left;
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #152a44;
+  vertical-align: bottom;
+}
+
+#comments .view_all {
+  float: left;
+  color: #660000;
+  text-decoration: none;
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+#comments .view_more {
+  color: #660000;
+  font-size: 12px;
+}
+
+#commentsAd {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+#commentsContainer {
+  position: relative;
+  min-height: 600px;
+  margin-bottom: 26px;
+}
+
+#commentsContainerBlog {
+  position: relative;
+  min-height: 600px;
+  margin-bottom: 26px;
+  border-top: 2px solid #dfddd7;
+  padding-top: 10px;
+}
+
+#content.roundup_content {
+  padding-right: 30px;
+}
+
+#content.roundup_content h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #152a44;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+#content.roundup_content h3 {
+  font-size: 19px;
+  font-weight: normal;
+  color: #152a44;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  background: url('http://cdn.macrumors.com/images-new/square_bullet.png') 3px 6px no-repeat;
+}
+
+#content.roundup_content p {
+  line-height: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+#content.roundup_content p a {
+  border-bottom: 1px solid #ccc;
+}
+
+#contentAd {
+  text-align: center;
+  margin-bottom: 26px;
+  min-height: 250px;
+  max-height: 300px;
+}
+
+#contentAd div {
+  display: block;
+  margin: 0 0 15px;
+}
+
+#contentAd a img {
+  border: 1px solid #a3a3a3;
+}
+
+#contentContainer {
+  position: relative;
+}
+
+#contentContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#feature {
+  padding: 12px 0 5px 20px;
+  margin: 0 auto 18px auto;
+  border: 1px solid #909090;
+  background-color: #e2eaf3;
+  background-position: 95% center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+}
+
+#feature h2 {
+  font-weight: bold;
+  font-size: 15px;
+  color: #152a44;
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+#feature div {
+  height: 14px;
+  line-height: 14px;
+  margin-bottom: 4px;
+  padding-right: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 16px;
+  background: url('http://cdn.macrumors.com/images-new/red_arrow.png') no-repeat;
+  background-position: 0 1px;
+}
+
+#feature div a {
+  font-size: 11px;
+  text-decoration: none;
+  color: #152a44;
+}
+
+#f {
+  clear: both;
+  border-top: 2px solid #eae8e0;
+  padding-top: 10px;
+  height: 50px;
+  font-weight: bold;
+  color: #39291c;
+}
+
+#fBottom {
+  position: relative;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #426694;
+}
+
+#fContainer {
+  background-color: #152a44;
+  background-color: #cddaeb;
+  position: relative;
+  margin-top: 80px;
+}
+
+#fLeft {
+  float: left;
+  margin-top: 8px;
+  width: 325px;
+}
+
+#fLeft h4 {
+  color: #fff;
+  color: #152a44;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 26px 0 16px 0;
+  line-height: 1.4em;
+}
+
+#fLinks {
+  font-weight: normal;
+  float: right;
+  text-align: right;
+  color: #660000;
+  font-size: 10px;
+}
+
+#fLinks a {
+  color: #660000;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+#fNew {
+  position: relative;
+  margin: 0 auto 0 auto;
+  padding: 30px 10px 80px 25px;
+  background-color: #cddaeb;
+  z-index: 1;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#fNew div, #fNew p {
+  color: #c6d5e8;
+  color: #000;
+  font-size: 11px;
+  line-height: 1.4em;
+}
+
+#fRight {
+  border-left: 1px dotted #2e4c71;
+  margin-left: 354px;
+  padding: 24px 15px 0 30px;
+  background-color: #cddaeb;
+}
+
+#fRight h2.title {
+  font-size: 21px;
+  color: #152a44;
+  font-weight: bold;
+  margin-bottom: 27px;
+}
+
+.other_site li {
+  margin-left: 1em;
+}
+
+.other_site li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4em;
+  margin: 0 1em 0 -1em;
+  padding: 7px 0 10px 1em;
+  border-bottom: 1px dotted #2e4c71;
+}
+
+.other_site ul, .other_site li {
+  color: #152a44;
+}
+
+.other_site_container {
+  float: left;
+  width: 50%;
+}
+
+.other_site_container h2 a {
+  display: block;
+  font-size: 15px;
+  color: #152a44;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 7px;
+  padding: 6px 0 0 34px;
+  height: 25px;
+}
+
+.other_site_container h2.appshopper a {
+  background: url('http://cdn.macrumors.com/images-new/mrspriteb.png') -10px -284px no-repeat;
+}
+
+.other_site_container h2.toucharcade a {
+  background: url('http://cdn.macrumors.com/images-new/mrspriteb.png') -10px -239px no-repeat;
+}
+
+.other_site_left {
+  margin-right: 10px;
+}
+
+.other_site_right {
+  margin-left: 10px;
+}
+
+.side_specs {
+  background: url('http://cdn.macrumors.com/images-new/iphone_specs_bg@2x.png') top right no-repeat;
+  background-size: 296px 81px;
+  padding-top: 1.5em;
+}
+
+.side_specs ul {
+  margin-left: 1.2em;
+}
+
+.side_specs ul li {
+  line-height: 1.75em;
+  list-style-image: url('http://cdn.macrumors.com/images-new/square_bullet.png');
+  font-size: 13px;
+}
+
+.side_specs ul li.specs_title {
+  font-weight: bold;
+  list-style: none;
+  margin-left: -1.2em;
+}
+
+.site_link, .site_link:hover {
+  display: block;
+  margin: 19px 0 0 1em;
+  font-size: 13px;
+  color: #f39200;
+  text-decoration: underline;
+}
+
+#header {
+  position: relative;
+  height: 90px;
+  margin-bottom: 21px;
+}
+
+#logo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#mainContainer {
+  position: relative;
+  margin: 22px auto 25px auto;
+  padding: 0 25px;
+  z-index: 1;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#sharePopup {
+  position: absolute;
+  z-index: 100;
+  left: 167px;
+  top: 170px;
+  width: 180px;
+  height: 55px;
+  background-color: #e2eaf3;
+  border: 1px solid #999;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 4px 4px 4px 4px;
+  moz-border-radius: 4px 4px 4px 4px;
+  webkit-border-radius: 4px 4px 4px 4px;
+  font-size: 14px;
+  display: none;
+}
+
+#sharePopup li {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+#closebox {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+#sharePopupX {
+  position: absolute;
+  left: 190px;
+  top: -5px;
+}
+
+#nav {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+}
+
+#nav, #nav li {
+  list-style-type: none;
+}
+
+#nav li {
+  float: left;
+  border-right: 1px solid #fff;
+  background-color: #c6d5e8;
+  border-radius: 4px 4px 0 0;
+  moz-border-radius: 4px 4px 0 0;
+  webkit-border-radius: 4px 4px 0 0;
+}
+
+#nav li a {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 22px 0 22px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #152a44;
+}
+
+#nav li.active a {
+  font-weight: bold;
+}
+
+#nav li.active, #nav li.hover, #nav li:hover {
+  background-color: #152a44;
+}
+
+#nav li.active a, #nav li.hover a, #nav li:hover a {
+  color: #fff;
+}
+
+#navContainer {
+  position: relative;
+  height: 30px;
+  background-color: #c6d5e8;
+  border-bottom: 1px solid #fff;
+  border-radius: 0 4px 0 0;
+  moz-border-radius: 0 4px 0 0;
+  webkit-border-radius: 0 4px 0 0;
+  webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.pagination {
+  position: relative;
+  height: 16px;
+  margin-bottom: 20px;
+}
+
+.pagination div, .pagination div a {
+  height: 16px;
+  line-height: 16px;
+}
+
+.pagination .disabled, .pagination div a {
+  color: #660000;
+  font-weight: bold;
+}
+
+.pagination .disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.pagination .center {
+  text-align: center;
+}
+
+.pagination .left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pagination .left.disabled, .pagination .left a {
+  padding-left: 21px;
+  background: url('http://cdn.macrumors.com/images-new/mrspriteb.png') -10px -174px no-repeat;
+}
+
+.pagination .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.pagination .right.disabled, .pagination .right a {
+  padding-right: 21px;
+  background: url('http://cdn.macrumors.com/images-new/mrspriteb.png') 102px -204px no-repeat;
+}
+
+#roundupTimeline {
+  padding-right: 50px;
+}
+
+#roundupTimeline a.timeline_more {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #456893;
+  display: block;
+  margin: 10px 0 0 115px;
+}
+
+#roundupTimeline .timeline_date {
+  float: left;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #456893;
+  padding-top: 10px;
+}
+
+#roundupTimeline .timeline_date span {
+  display: block;
+  font-size: 24px;
+  font-weight: normal;
+  color: #c7d1de;
+}
+
+#roundupTimeline .timeline_event {
+  margin-left: 105px;
+  border-top: 1px dotted #d1d5da;
+  line-height: 1.1em;
+  padding: 8px 10px;
+}
+
+#roundupTimeline .timeline_event.noborder {
+  border-top: 0;
+}
+
+#roundupTimeline .timeline_event.redline {
+  padding: 0 10px;
+  border: 0;
+  background: url('http://cdn.macrumors.com/images-new/redline.png') repeat-x 12px 12px;
+  padding-left: 0;
+  margin-left: 105px;
+}
+
+#roundupTimeline .timeline_event a {
+  font-size: 14px;
+  color: #162b43;
+  line-height: 1.4em;
+}
+
+#roundupTimeline .timeline_event span {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #162b43;
+}
+
+#RumorTimeline a {
+  color: #152a44;
+}
+
+#RumorTimeline a:hover {
+  color: #152a44;
+}
+
+#pageHero {
+  position: relative;
+  text-align: center;
+  margin: 15px auto 10px;
+  background: #fff center center no-repeat;
+  text-align: left;
+}
+
+#pageHero h1, #pageHero h2 {
+  font-weight: 100;
+  margin-left: 45px;
+  width: 600px;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+#pageHero h1 {
+  font-size: 70px;
+  line-height: .69em;
+  letter-spacing: -3px;
+  color: #162b43;
+  margin-bottom: 10px;
+  padding-top: 40px;
+}
+
+#pageHero h2 {
+  font-size: 24px;
+  color: #446793;
+  letter-spacing: -1px;
+}
+
+#search {
+  position: absolute;
+  right: 0;
+  margin: 3px 8px 0 0;
+}
+
+#search input {
+  height: 22px;
+  line-height: 22px;
+  background-color: #fff;
+  border: 1px solid #a9b9cd;
+  border-radius: 11px;
+  moz-border-radius: 11px;
+  webkit-border-radius: 11px;
+  padding: 0 4px 0 23px;
+  width: 179px;
+  font-size: 13px;
+  color: #0d0d0d;
+  background: #fff url('http://cdn.macrumors.com/images-new/mrspriteb.png') -4px -31px no-repeat;
+  outline: none;
+}
+
+#secondaryNav {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  margin-bottom: 18px;
+  background-color: #e2eaf3;
+  border-radius: 0 0 4px 4px;
+  moz-border-radius: 0 0 4px 4px;
+  webkit-border-radius: 0 0 4px 4px;
+  color: #1a2e48;
+  webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+#secondaryNav .left {
+  height: 32px;
+  line-height: 32px;
+  float: left;
+  padding-left: 18px;
+}
+
+#secondaryNav .left a {
+  color: #660000;
+  text-decoration: underline;
+}
+
+#secondaryNav .right {
+  height: 32px;
+  line-height: 32px;
+  float: right;
+  text-align: right;
+  padding-right: 21px;
+}
+
+#secondaryNav .right a {
+  color: #1a2e48;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+#topAd {
+  float: right;
+  max-height: 90px;
+}
+
+#topAdb {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+
+#sideAd {
+  text-align: center;
+  margin-bottom: 18px;
+  min-height: 250px;
+  max-height: 650px;
+}
+
+.widget_box {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.side_box {
+  position: relative;
+  padding: 56px 19px 18px 23px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  behavior: url('../js-new/pie/PIE.htc');
+  margin-bottom: 38px;
+}
+
+.side_box * {
+  font-size: 13px;
+}
+
+.side_box.ad_box {
+  padding: 0;
+  text-align: center;
+}
+
+.side_box.last {
+  margin-bottom: 0;
+}
+
+.side_box.product {
+  padding-top: 46px;
+}
+
+.side_box h2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px 0 4px 0;
+  webkit-border-radius: 4px 0 4px 0;
+  moz-border-radius: 4px 0 4px 0;
+  behavior: url('../js-new/pie/PIE.htc');
+  padding: 7px 14px 6px 19px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.productlist {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: #39291c;
+  font-size: 10pt;
+}
+
+.productlist a {
+  color: #39291c;
+  font-size: 10pt;
+}
+
+.productlist a:hover {
+  color: #a00;
+}
+
+.side_box .listitem {
+  padding-left: 5px;
+  border-top: 1px dotted #b1bece;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.side_box .listitem.first {
+  border-top: none;
+}
+
+.side_box .listitem.last {
+  border-top: 1px dotted #b1bece;
+  border-bottom: 1px dotted #b1bece;
+  padding-bottom: 14px;
+}
+
+.side_box .listitem a {
+  text-decoration: none;
+  color: #39291c;
+  font-size: 9pt;
+}
+
+.side_box .listitemb {
+  padding-left: 5px;
+  border-top: 1px dotted #b1bece;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.side_box .listitemb a {
+  text-decoration: none;
+  color: #39291c;
+  font-size: 10pt;
+}
+
+.side_box .listitemb .comments {
+  font-size: 8pt;
+  color: #708296;
+}
+
+.side_box .listitemb .comments a {
+  color: #708296;
+}
+
+.tan_box {
+  background-color: #f2f1ec;
+  padding-left: 14px;
+}
+
+.tan_box fieldset {
+  border: 1px solid #d8d5cf;
+  border-radius: 3px;
+  moz-border-radius: 3px;
+  webkit-border-radius: 3px;
+  behavior: url('../js-new/pie/PIE.htc');
+  padding: .5em 0;
+  margin-bottom: .75em;
+}
+
+.tan_box fieldset div {
+  padding: .5em 1em;
+}
+
+.tan_box fieldset label {
+  color: #39291c;
+}
+
+.tan_box fieldset div#checkbox_notify {
+  border-top: 1px solid #d8d5cf;
+  margin-top: .5em;
+  padding: 0;
+}
+
+.tan_box fieldset div#checkbox_notify span {
+  display: block;
+  margin: 0 .5em .5em 3em;
+  padding-left: 1.2em;
+  background: url('http://cdn.macrumors.com/images-new/notify_warning.png') 0 1px no-repeat;
+  font-size: 10px;
+  color: #958d84;
+}
+
+.tan_box h2 {
+  background-color: #dfddd7;
+  color: #39291c;
+}
+
+.tan_box h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #39291c;
+  margin-bottom: 5px;
+}
+
+.tan_box h3.second {
+  margin-top: 15px;
+}
+
+.tan_box h3 a {
+  color: #39291c;
+}
+
+.tan_box h3 a:hover {
+  color: #a00;
+}
+
+.tan_box .list {
+  color: #39291c;
+  border-top: 1px dotted #c3beb4;
+}
+
+.tan_box .list.first {
+  border-top: none;
+}
+
+.tan_box .list a {
+  color: #39291c;
+  font-size: 12px;
+}
+
+.tan_box .list a span {
+  color: #660000;
+  font-size: 12px;
+}
+
+.tan_box p {
+  color: #39291c;
+  margin: 0 5px 0 5px;
+}
+
+.tan_box table {
+  border-collapse: collapse;
+  border-radius: 3px;
+  moz-border-radius: 3px;
+  webkit-border-radius: 3px;
+}
+
+.tan_box table td {
+  border: 1px solid #d9d6d0;
+}
+
+.tan_box table td a {
+  text-decoration: none;
+  color: #39291c;
+  display: block;
+  padding: 10px;
+  width: 80px;
+}
+
+.tan_box table tr.alt td {
+  background-color: #e9e7e1;
+}
+
+.tan_box .tip, .tan_box .subscribe {
+  padding: 3px;
+  border: 1px solid #d8d5cf;
+  background-color: #fff;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  behavior: url('../js-new/pie/PIE.htc');
+  margin-bottom: 14px;
+}
+
+.tan_box .tip input.submit, .tan_box .subscribe input.submit {
+  float: right;
+  width: 72px;
+  height: 29px;
+  padding: 3px 0;
+  margin: 3px 0 0 0;
+  line-height: 1em;
+  text-align: center;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  behavior: url('../js-new/pie/PIE.htc');
+  background-color: #39291c;
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f2f1ec;
+}
+
+.tan_box .tip input.text, .tan_box .subscribe input.text {
+  height: 29px;
+  padding: 3px 0;
+  margin: 0;
+  line-height: 1em;
+  border: 0;
+  background-color: #fff;
+  margin: 0 4px 0 4px;
+  outline: 0;
+  width: 215px;
+  font-size: 15px;
+  color: #887f77;
+}
+
+.staff {
+  float: left;
+  width: 50%;
+  margin: 10px 0 9px 0;
+}
+
+.staff.clear {
+  width: 100%;
+}
+
+#staffList {
+  padding: 13px 3px 4px 3px;
+}
+
+#staffList h2 {
+  color: #152a44;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.staff_name {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.staff_name a{
+  color: #000;
+  text-decoration: underline;
+}
+
+.staff_links a {
+  color: #000;
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+.mobile_link {
+  font-size: 11px;
+  text-decoration: underline;
+  color: #000;
+  font-weight: normal;
+}
+
+#advertiseLink {
+  display: block;
+  margin: 25px 0 20px 0;
+  background-color: #243d5a;
+  background-image: -moz-linear-gradient(100% 100% 90deg, #1b324e, #243d5a);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#243d5a), to(#1b324e));
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  float: left;
+  width: 234px;
+}
+
+.rss {
+  background: url('http://cdn.macrumors.com/images-new/mrspriteb.png') -10px -134px no-repeat;
+  padding-left: 22px;
+}
+
+.facebook {
+  background: url('http://cdn.macrumors.com/images-new/mrspriteb.png') -10px -98px no-repeat;
+  padding-left: 23px;
+}
+
+.twitter {
+  background: url('http://cdn.macrumors.com/images-new/mrspriteb.png') -10px -62px no-repeat;
+  padding-left: 23px;
+}
+
+.push-social {
+  background: url('http://cdn.macrumors.com/images-new/icon-push-subscribe.png') no-repeat left 6px;
+  background-size: 20px 17px;
+  padding-left: 26px;
+}
+
+.email-button {
+  background: url('http://cdn.macrumors.com/images-new/email@2x.png') no-repeat left 4px;
+  background-size: 22px
+  22px;
+  padding-left: 26px;
+}
+
+#alert {
+  padding: 0 0 10px 10px;
+}
+
+#alert h2 {
+  padding: 10px 0 10px 0;
+}
+
+#alert ul {
+  padding-left: 30px;
+}
+
+#alert p {
+  padding: 5px 0 5px 10px;
+}
+
+.stock {
+}
+
+.stock .up {
+  font-size: 10px;
+  color: #0a0;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.alignright {
+  padding: 4px;
+  margin: 0 0 2px 7px;
+  display: inline;
+  float: right;
+}
+
+img.alignleft {
+  padding: 4px;
+  margin: 0 7px 2px 0;
+  display: inline;
+  float: left;
+}
+
+#formmessage {
+  border: 1px solid red;
+  background: #eaa;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.fb_share_count_nub_right {
+  vertical-align: middle !important;
+}
+
+.social #fb {
+  position: relative;
+  top: -40px;
+  left: 0px;
+  width: 236px;
+  z-index: 9;
+}
+
+.social #twitter {
+  position: relative;
+  top: -20px;
+  left: 0px;
+  width: 356px;
+  z-index: 12;
+}
+
+.social #googleplus {
+  position: relative;
+  left: 0px;
+  width: 170px;
+  z-index: 11;
+}
+
+.social #fbraw {
+  float: right;
+  width: 80px;
+  cursor: pointer;
+}
+
+.social #twitterraw {
+  float: right;
+  width: 66px;
+  cursor: pointer;
+}
+
+.pricelist td {
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .25em;
+  padding-top: .25em;
+}
+
+.pricelist .head {
+  background: #44b;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pricelist .sep td {
+  border-bottom: 1px solid #aaa;
+}
+
+.pricelist .odd {
+  background-color: #eee;
+}
+
+.pullquote {
+  width: 220px;
+  float: right;
+  margin: 0 0 1em 1em;
+  font-size: 22px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  color: #aa1617;
+  padding: .6em 1em .6em 1em;
+  line-height: 25px;
+  background-color: #d7e2ef;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.pullquote:before {
+  content: "“ ";
+  font-weight: bold;
+}
+
+.pullquote:after {
+  content: " ”";
+  font-weight: bold;
+}
+
+/*.article.excerpt {
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  margin-bottom: 18px;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  border: 1px solid #d5d3cd;
+}*/
+
+/*.article.excerpt .title {
+  display: block;
+  background-color: #660000;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 7px 17px 9px 17px;
+  overflow: none;
+}
+
+.article.excerpt .title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.article.excerpt .byline {
+  border-bottom: 1px solid #d5d3cd;
+  background-color: #f2f1ec;
+  height: auto;
+  line-height: 16px;
+  padding: 7px 14px;
+  overflow: none;
+  font-family: Verdana;
+  font-size: 12px;
+  color: #39332e;
+}
+
+.article.excerpt .content {
+  height: 164px;
+  font-size: 10pt;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 15px 18px;
+  border: none;
+  overflow: hidden;
+}
+
+.article.excerpt .content p {
+  margin-bottom: 15px;
+}
+
+.article.excerpt .content blockquote {
+  padding: 18px 0 18px 0;
+  color: #152a44;
+  background: transparent;
+}
+
+.article.excerpt .footer {
+  border-radius: 0 0 4px 4px;
+  moz-border-radius: 0 0 4px 4px;
+  webkit-border-radius: 0 0 4px 4px;
+  min-height: 36px;
+  height: auto;
+  overflow: hidden;
+  line-height: 36px;
+  border: none;
+  border-top: 1px dashed #d5d3cd;
+  color: #660000;
+  font-size: 12px;
+  padding: 0 15px;
+  background-color: transparent;
+}
+
+.article.excerpt .footer .comments {
+  padding-left: 20px;
+  background: url('http://cdn.macrumors.com/images-new/red_arrow.png') no-repeat;
+  background-position: left center;
+}
+
+.article.excerpt .footer a {
+  color: #660000;
+  text-decoration: none;
+}
+
+.article.excerpt .footer .social {
+  width: 100px;
+  height: 20px;
+  float: right;
+  margin: 8px 0 0 0;
+}
+
+.article.excerpt img.thumb {
+  float: left;
+  width: 170px;
+  margin: 0 18px 0 0;
+}*/
+
+/*.article.blog.excerpt {
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  margin-bottom: 64px;
+  padding-right: 10px;
+}*/
+
+/*.article.blog.excerpt .title {
+  height: auto;
+  line-height: normal;
+  background-color: #fff;
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  border-bottom: 2px solid #dfddd7;
+  font-size: 24px;
+  color: #152a44;
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 0 0 3px 0;
+}
+
+.article.blog.excerpt .title a {
+  color: #152a44;
+  text-decoration: none;
+}
+
+.article.blog.excerpt .byline {
+  border: 0;
+  background-color: #fff;
+  margin: 4px 0 0 0;
+  height: auto;
+  line-height: normal;
+  padding: 0;
+}
+
+.article.blog.excerpt .content {
+  border: 0;
+  padding-left: 0px;
+}
+
+.article.blog.excerpt .content p {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}
+
+.article.blog.excerpt .content blockquote {
+  padding: 11px 0 12px 0;
+  color: #152a44;
+}
+
+.article.blog.excerpt .content p.quote {
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+.article.blog.excerpt .content blockquote {
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+.article.blog.excerpt .footer {
+  border-radius: 0 0 4px 4px;
+  moz-border-radius: 0 0 4px 4px;
+  webkit-border-radius: 0 0 4px 4px;
+  height: 36px;
+  line-height: 36px;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-top: 1px dashed #d5d3cd;
+  color: #660000;
+  font-size: 12px;
+  padding: 0 15px;
+  background-color: transparent;
+}
+
+.article.blog.excerpt .footer .comments {
+  padding-left: 20px;
+  background: url('http://cdn.macrumors.com/images-new/red_arrow.png') no-repeat;
+  background-position: left center;
+}
+
+.article.blog.excerpt .footer .social {
+  width: 100px;
+  height: 20px;
+  float: right;
+  margin: 12px 15px 0 0;
+}*/
+
+img.lazy {
+  display: block;
+}
+
+#container {
+  margin: 0 auto;
+  width: 80%;
+  padding: 30px 0;
+}
+
+#video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+}
+
+#video-container iframe,
+#video-container object,
+#video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.follow-banner {
+  width: 100%;
+  min-width: 645px;
+  font-size: 15px;
+  color: #152a44;
+  padding: 9px 14px 11px 14px;
+  overflow: hidden;
+  box-shadow: 0px 1px 1px rgba(66,102,148,0.2);
+  background: #fff url(http://cdn.macrumors.com/images-new/follow-banner-bg.jpg) bottom repeat-x;
+  background-image: -moz-linear-gradient(top, #fff, #e2ebf4);
+  background-image: -ms-linear-gradient(top, #fff, #e2ebf4);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e2ebf4));
+  background-image: -webkit-linear-gradient(top, #fff, #e2ebf4);
+  border: 1px solid #e3e6ea;
+  border-bottom-color: #c1ccd6;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  border-radius: 4px;
+  moz-box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.follow-banner p {
+  float: left;
+}
+
+.follow-banner span.logo {
+  display: inline-block;
+  width: 118px;
+  height: 20px;
+  text-indent: -9999px;
+  background: url(http://cdn.macrumors.com/images-new/follow-logo@2x.png) no-repeat;
+  background-size: 118px 20px;
+  vertical-align: 3px;
+}
+
+.follow-banner .buttons {
+  float: right;
+  width: 190px;
+  height: 22px;
+  margin: 2px 0 -5px 0;
+}
+
+.follow-banner a.facebook {
+  float: left;
+  width: 76px;
+  height: 22px;
+  text-indent: -9999px;
+  background: url(http://cdn.macrumors.com/images-new/follow-facebook@2x.png) top;
+  background-size: 98px 44px;
+}
+
+.follow-banner a.twitter {
+  float: right;
+  width: 60px;
+  height: 22px;
+  text-indent: -9999px;
+  background: url(http://cdn.macrumors.com/images-new/follow-twitter@2x.png) top;
+  background-size: 83px 44px;
+}
+
+.follow-banner a.facebook:hover, .follow-banner a.twitter:hover {
+  background-position: bottom;
+}
+
+.roundup {
+  width: 100%;
+  min-width: 626px;
+  height: 81px;
+  font-size: 15px;
+  color: #152a44;
+  overflow: hidden;
+  box-shadow: 0px 1px 1px rgba(66,102,148,0.2);
+  background: #fff;
+  border: 1px solid #e3e6ea;
+  border-bottom-color: #c1ccd6;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  border-radius: 5px;
+  moz-background-clip: padding;
+  webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  moz-box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 0 1px rgba(0,0,0,.01);
+  webkit-box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 0 1px rgba(0,0,0,.1);
+  box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 0 1px rgba(0,0,0,.1);
+  background-image: -moz-linear-gradient(bottom, #e1ebf3 0%, #f9fbfc 100%);
+  background-image: -o-linear-gradient(bottom, #e1ebf3 0%, #f9fbfc 100%);
+  background-image: -webkit-linear-gradient(bottom, #e1ebf3 0%, #f9fbfc 100%);
+  background-image: linear-gradient(bottom, #e1ebf3 0%, #f9fbfc 100%);
+}
+
+.roundup a.text {
+  float: left;
+  height: 81px;
+  width: 389px;
+  text-indent: -9999px;
+}
+
+.roundup a.img {
+  float: right;
+  height: 81px;
+  width: 254px;
+}
+
+.roundup.iphone5 a.text {
+  background: url(http://cdn.macrumors.com/images-new/roundup-iphone5-text@2x.jpg);
+  background-size: 389px 81px;
+}
+
+.roundup.iphone5 a.img {
+  background: url(http://cdn.macrumors.com/images-new/roundup-iphone5@2x.jpg);
+  background-size: 254px 81px;
+}
+
+.roundup.ipad-mini a.text {
+  background: url(images/roundup-ipadmini-text.jpg);
+}
+
+.roundup.ipad-mini a.img {
+  background: url(images/roundup-ipadmini.jpg);
+}
+
+.roundup.countdown {
+  height: auto;
+}
+
+.roundup.countdown .timer {
+  clear: both;
+  overflow: hidden;
+  border-top: 1px solid #e5edf4;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 44px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+}
+
+.roundup.countdown .timer .event {
+  float: left;
+}
+
+.roundup.countdown .timer .event span.date {
+  display: inline-block;
+  width: 27px;
+  height: 30px;
+  margin-right: 10px;
+  background: url(http://cdn.macrumors.com/images-new/icon-calendar@2x.png);
+  background-size: 27px 30px;
+  vertical-align: middle;
+  margin-top: -2px;
+  line-height: 33px;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.roundup.countdown .timer .event a {
+  color: black;
+}
+
+.roundup.countdown .timer .event a:hover {
+  color: black;
+}
+
+.roundup.countdown .timer .tickers {
+  float: right;
+  font-size: 14px;
+}
+
+.roundup.countdown .timer .tickers span.ticker {
+  display: inline-block;
+  width: 39px;
+  height: 30px;
+  margin-left: 8px;
+  background: url(http://cdn.macrumors.com/images-new/icon-ticker@2x.jpg);
+  background-size: 39px 30px;
+  vertical-align: middle;
+  margin-top: -4px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 7px;
+  text-indent: 5px;
+}
+
+.roundup.split .split1 {
+  float: left;
+  width: 50%;
+  height: 81px;
+  border-right: 1px solid #e3e6ea;
+  moz-box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.roundup.split .split2 {
+  float: right;
+  width: 50%;
+  height: 81px;
+}
+
+.roundup.split a.text {
+  width: 158px;
+}
+
+.roundup.split a.img {
+  width: 162px;
+}
+
+.roundup.split .split1 a.text {
+  background: url(images/roundup-split1-text.jpg);
+}
+
+.roundup.split .split1 a.img {
+  background: url(images/roundup-split1-img.jpg);
+}
+
+.roundup.split .split2 a.text {
+  background: url(images/roundup-split2-text.jpg);
+}
+
+.roundup.split .split2 a.img {
+  background: url(images/roundup-split2-img.jpg);
+}
+
+.roundup.multiple {
+  position: relative;
+}
+
+.roundup.multiple p {
+  font-size: 17px;
+  padding: 15px 20px;
+}
+
+.roundup.multiple a {
+  color: #000;
+}
+
+.roundup.multiple a:hover {
+  color: #a00;
+}
+
+.roundup.multiple a.img {
+  background: display: block;
+  position: absolute;
+  top: 6px;
+  right: 40px;
+}
+
+.roundup.multiple ul {
+  background: #e2ebf4;
+  border-top: 1px solid #ccd7e5;
+  overflow: hidden;
+  height: 30px;
+  line-height: 26px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px
+  20px;
+}
+
+.roundup.multiple ul li {
+  display: inline;
+  border-right: 1px solid #ccd7e5;
+  padding-right: 10px;
+  margin-right: 5px;
+}
+
+.roundup.multiple ul li a {
+  color: #203853;
+  text-decoration: underline;
+}
+
+.roundup.multiple ul li a:hover {
+  color: #a00;
+}
+
+.mobile.roundup {
+  min-width: 293px;
+}
+
+.mobile.roundup a.text {
+  float: left;
+  height: 81px;
+  width: 158px;
+  text-indent: -9999px;
+}
+
+.mobile.roundup a.img {
+  float: right;
+  height: 81px;
+  width: 133px;
+}
+
+.mobile.roundup.iphone5 a.text {
+  background: url(http://cdn.macrumors.com/images-new/mobile-roundup-iphone5-text.jpg);
+}
+
+.mobile.roundup.iphone5 a.img {
+  background: url(http://cdn.macrumors.com/images-new/mobile-roundup-iphone5.jpg);
+}
+
+.mobile.roundup.countdown .timer {
+  text-align: center;
+  padding: 0;
+}
+
+.mobile.roundup.countdown .timer .event {
+  float: none;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 40px;
+}
+
+.mobile.roundup.countdown .timer .tickers {
+  float: none;
+  font-size: 12px;
+}
+
+.mobile.roundup.countdown .timer .tickers span.ticker {
+  margin: 0;
+}
+
+#nav li#roundups {
+  position: relative;
+}
+
+#nav li#roundups a span {
+  display: inline-block;
+  width: 7px;
+  height: 4px;
+  background: url(http://cdn.macrumors.com/images-new/icon-triangle.png);
+  background-size: 7px 8px;
+  background-position: top;
+  vertical-align: middle;
+  margin-left: 1px;
+}
+
+#nav li#roundups.hover a span, #nav li#roundups:hover a span {
+  background-position: bottom;
+}
+
+#nav li#roundups ul#nav-dropdown-single {
+  position: absolute;
+  top: 32px;
+  left: 00px;
+  width: 205px;
+  background: #edf2f7;
+  border: 1px solid #dbe3ef;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 3px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+  display: none;
+}
+
+#nav li#roundups.hover ul#nav-dropdown-single, #nav li#roundups:hover ul#nav-dropdown-single {
+  display: block;
+}
+
+#nav li#roundups ul#nav-dropdown-single li {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #dbe3ef;
+  border-right: none;
+  font-size: 12px;
+  text-align: left;
+  height: 51px;
+  position: relative;
+}
+
+#nav li#roundups ul#nav-dropdown-single li:last-child {
+  border-bottom: none;
+}
+
+#nav li#roundups ul#nav-dropdown-single li a {
+  font-size: 12px;
+  color: #152a44;
+  padding: 0px 0px 0px 13px;
+  height: 51px;
+  line-height: 51px;
+}
+
+#nav li#roundups ul#nav-dropdown-single li a:hover {
+  background: #e1e9f2;
+}
+
+#nav li#roundups ul#nav-dropdown-single li img {
+  float: right;
+  width: 56px;
+  height: 39px;
+  margin: 6px;
+}
+
+#nav li#roundups ul#nav-dropdown-single li span.updated {
+  text-indent: -9999px;
+  background: url(images/dropdown-updated.png);
+  background-size: 42px 42px;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#nav li#roundups {
+  position: relative;
+}
+
+#nav li#roundups a span {
+  display: inline-block;
+  width: 7px;
+  height: 4px;
+  background: url(http://cdn.macrumors.com/images-new/icon-triangle.png);
+  background-size: 7px 8px;
+  background-position: top;
+  vertical-align: middle;
+  margin-left: 1px;
+}
+
+#nav li#roundups.hover a span, #nav li#roundups:hover a span {
+  background-position: bottom;
+}
+
+#nav li#roundups ul#nav-dropdown {
+  position: absolute;
+  top: 32px;
+  left: -137px;
+  width: 410px;
+  background: #edf2f7;
+  border: 1px solid #dbe3ef;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 3px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+  display: none;
+}
+
+#nav li#roundups.hover ul#nav-dropdown, #nav li#roundups:hover ul#nav-dropdown {
+  display: block;
+}
+
+#nav li#roundups ul#nav-dropdown li {
+  display: block;
+  width: 50%;
+  padding: 0;
+  background: transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #dbe3ef;
+  border-right: 1px solid #dbe3ef;
+  font-size: 12px;
+  text-align: left;
+  height: 51px;
+  position: relative;
+  moz-box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#nav li#roundups ul#nav-dropdown li:nth-child(odd) {
+  border-right: none;
+}
+
+#nav li#roundups ul#nav-dropdown li:last-child {
+  border-bottom: none;
+}
+
+#nav li#roundups ul#nav-dropdown li a {
+  font-size: 12px;
+  color: #152a44;
+  padding: 0px 0px 0px 13px;
+  height: 51px;
+  line-height: 51px;
+}
+
+#nav li#roundups ul#nav-dropdown li a:hover {
+  background: #e1e9f2;
+}
+
+#nav li#roundups ul#nav-dropdown li img {
+  float: right;
+  width: 56px;
+  height: 39px;
+  margin: 6px;
+}
+
+#nav li#roundups ul#nav-dropdown li span.updated {
+  text-indent: -9999px;
+  background: url(images/dropdown-updated.png);
+  background-size: 42px 42px;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  #nav li#roundups ul#nav-dropdown {
+    width: 200px;
+    left: 0px;
+  }
+
+  #nav li#roundups ul#nav-dropdown li {
+    width: 100%;
+    border-right: navajowhite;
+  }
+
+}
+
+#top-stories-titles {
+  height: 42px;
+  width: 92%;
+}
+
+#top-stories {
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  margin-bottom: 18px;
+  border: 1px solid #d0cfc8;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+#top-stories #bar {
+  background: #c6d5e7 url(http://cdn.macrumors.com/images-new/top-stories-bg.jpg);
+  color: #162a43;
+  padding: 0 50px 0 12px;
+  height: 42px;
+  line-height: 42px;
+  position: relative;
+}
+
+#top-stories #bar h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#top-stories #bar a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #162a43;
+  height: 14px;
+}
+
+#top-stories #bar ul {
+  list-style: none;
+  position: absolute;
+  top: 1px;
+  left: 12px;
+  overflow: hidden;
+}
+
+#top-stories #bar ul li {
+  overflow: hidden;
+  width: 100%;
+  height: 42px;
+  display: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 0px;
+}
+
+#top-stories #bar ul li.active {
+  display: block;
+}
+
+#top-stories span#collapse {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-indent: -9999px;
+  height: 42px;
+  width: 42px;
+  background: url(http://cdn.macrumors.com/images-new/collapse-arrow.png) no-repeat center;
+  background-size: 13px 8px;
+  cursor: pointer;
+}
+
+#top-stories #carousel {
+  background: #dfdfdf;
+  overflow: hidden;
+}
+
+#top-stories #carousel ul {
+  list-style: none;
+}
+
+#top-stories #carousel ul li {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  border-right: 1px solid #d0cfc8;
+  background: url(http://cdn.macrumors.com/images-new/top-stories-line.png) repeat-x center top;
+  background-size: 15px 1px;
+  position: relative;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#top-stories #carousel ul li:last-child {
+  border: none;
+}
+
+#top-stories #carousel ul li.active {
+  background: #fff url(http://cdn.macrumors.com/images-new/indicator-arrow.png) no-repeat center top;
+  background-size: 500px 9px;
+}
+
+#top-stories #carousel ul li span {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px 9px;
+  z-index: 9;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#top-stories-images span {
+  display: none;
+}
+
+#top-stories-images span.active {
+  display: block;
+}
+
+#top-stories-titles li {
+  font-size: 14px;
+  position: absolute;
+}
+
+#content.full-width {
+  width: 100%;
+  padding: 0 !important;
+}
+
+.full-article {
+}
+
+.full-article section {
+  bor/der: 1px solid #ccc;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.full-article h2 {
+  color: #4D6C99;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.full-article h2.section-title {
+  color: #172D4D;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: 58px;
+  line-height: 60px;
+  margin: 0px 0 40px 0;
+  letter-spacing: -3px;
+}
+
+.full-article p {
+  margin-bottom: 23px;
+  line-height: 25px;
+  font-size: 15px;
+  color: #152A44;
+}
+
+.full-article span.changes {
+  background: #F2E6AA;
+  border: 1px solid #E6D273;
+  box-shadow: inset 0px 1px 0px #F9F3D5;
+  padding: 3px;
+}
+
+.full-article section p:last-child {
+  margin-bottom: 0;
+}
+
+.full-article div {
+  line-height: 20px;
+  font-size: 14px;
+  color: #333333;
+  position: relative;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.full-article .text-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(46,48,51,0.8);
+  color: #fff;
+  padding: 30px;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: Helvetica-LightOblique, Helvetica, sans-serif;
+  font-style: italic;
+  margin: 0 auto;
+}
+
+.full-article section a {
+  border-bottom: 1px solid #ccc;
+}
+
+.full-article img {
+  display: block;
+  max-width: 100%;
+}
+
+.full-article .col-10 {
+  width: 10%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-20 {
+  width: 20%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-30 {
+  width: 30%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-40 {
+  width: 40%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-50 {
+  width: 50%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-60 {
+  width: 60%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-70 {
+  width: 70%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-80 {
+  width: 80%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-90 {
+  width: 90%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .col-100 {
+  width: 100%;
+  float: left;
+  padd/ing: 30px;
+}
+
+.full-article .center {
+  float: none;
+  margin: 0 auto;
+}
+
+.full-article .padding-none {
+  padding: 0;
+}
+
+.full-article .padding-left {
+  padding-left: 30px;
+}
+
+.full-article .padding-right {
+  padding-right: 30px;
+}
+
+.full-article .padding-left-none {
+  padding-left: 0;
+}
+
+.full-article .padding-right-none {
+  padding-right: 0;
+}
+
+.full-article .padding-top-none {
+  padding-top: 0;
+}
+
+.full-article .padding-bottom-none {
+  padding-bottom: 0;
+}
+
+.full-article blockquote {
+  display: block;
+  min-height: 55px;
+  font-size: 23px;
+  line-height: 30px;
+  color: #4D6C99;
+  font-style: italic;
+  background: url(http://cdn.macrumors.com/images-new/blockquote.png) no-repeat left 4px;
+  background-size: 27px 24px;
+  padding-left: 34px;
+}
+
+.full-article blockquote span.speaker {
+  display: block;
+  color: #172D4D;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.full-article .background-gray {
+  background: #e6e9ed;
+}
+
+.full-article .background-lightblue {
+  background: #F5F7FA;
+  border-bottom: 2px solid #CFD8E6;
+  padding: 40px 30px;
+}
+
+.full-article .background-darkblue {
+  background: #4D6C99;
+  border-bottom: 2px solid #CFD8E6;
+  color: #fff;
+  padding: 40px 30px;
+}
+
+.full-article .background-darkblue p {
+  color: #fff;
+}
+
+.full-article .background-darkblue h2 {
+  color: #fff;
+}
+
+.full-article .background-darkblue blockquote {
+  color: #fff;
+  background: url(http://cdn.macrumors.com/images-new/blockquote.png) no-repeat left 4px;
+  background-size: 27px 24px;
+}
+
+.full-article .background-darkblue blockquote span.speaker {
+  color: #CFD8E6;
+}
+
+.full-article .background-darkblue a {
+  color: rgb(192,192,192);
+}
+
+.full-article .background-darkblue a:hover {
+  color: #a00;
+}
+
+.full-article .header-margin {
+  margin-bottom: 40px;
+}
+
+.full-article .header-no-margin {
+  margin-bottom: 0px;
+}
+
+.full-article #roundup-header h1 {
+  color: #172D4D;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 72px;
+  margin: 30px 0 5px 0;
+  letter-spacing: -3px;
+}
+
+.full-article #roundup-header h2 {
+  text-transform: none;
+  line-height: 30px;
+}
+
+.full-article #roundup-header img {
+  max-height: 250px;
+  margin: auto;
+}
+
+.full-article #quick-info {
+  margin-top: 0;
+}
+
+.full-article #quick-info h2 {
+  margin-bottom: 13px;
+}
+
+.full-article #quick-info #glance, .full-article #quick-info #specs, .full-article #quick-info #buy {
+  width: 33.33%;
+  float: left;
+  padding: 30px 0;
+}
+
+.full-article #quick-info #ad {
+  width: 33.33%;
+  float: left;
+  padding: 5px 0 0 0;
+min-height: 266px;
+}
+
+.full-article #quick-info #glance {
+  border-top: 6px solid #172D4D;
+  padding-right: 25px;
+}
+
+.full-article #quick-info #specs {
+  border-top: 6px solid #4D6C99;
+  border-right: 1px solid #CFD8E6;
+  border-left: 1px solid #CFD8E6;
+  padding: 30px 20px;
+}
+
+.full-article #quick-info #specs ul {
+  list-style: none;
+  padding-top: 10px;
+}
+
+.full-article #quick-info #specs ul li {
+  background: url(http://cdn.macrumors.com/images-new/list-block.png) no-repeat left;
+  background-size: 12px;
+  padding-left: 20px;
+  line-height: 25px;
+  font-size: 15px;
+  background-position: 0px 6px;
+}
+
+.full-article #quick-info #buy {
+  border-top: 6px solid #DAE4F2;
+  padding-left: 20px;
+}
+
+.full-article #quick-info #ad {
+  border-top: 6px solid #DAE4F2;
+  padding-left: 10px;
+}
+
+.full-article #updates {
+  clear: both;
+  border-top: 2px solid #CFD8E6;
+  border-bottom: 2px solid #CFD8E6;
+  overflow: hidden;
+}
+
+.full-article #updates #last-update {
+  width: 33.33%;
+  float: left;
+  padding: 10px 0px 10px 0;
+  color: #aa1416;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.full-article #updates #last-update span {
+  display: inline-block;
+  background: #aa1416;
+  color: #fff;
+  text-transform: none;
+  padding: 1px 6px;
+  border: 1px solid #800D0D;
+  border-radius: 3px;
+  margin-left: 2px;
+  box-shadow: inset 0px 1px 0px #BD4141, 0px 1px 1px rgba(0,0,0,0.25);
+}
+
+.full-article #updates #time-updates {
+  border-left: 1px solid #CFD8E6;
+  border-right: 1px solid #CFD8E6;
+  width: 33.33%;
+  float: left;
+  padding: 10px 20px 10px 20px;
+  color: #172D4D;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.full-article #updates #time-updates ul {
+  list-style: none;
+  font-weight: normal;
+  text-transform: none;
+  display: inline;
+  margin-left: 5px;
+}
+
+.full-article #updates #time-updates ul li {
+  display: inline-block;
+  padding: 1px 7px;
+  margin-right: -3px;
+}
+
+.full-article #updates #time-updates ul li.active {
+  background: #F2E6AA;
+  border: 1px solid #E6D273;
+  box-shadow: inset 0px 1px 0px #F9F3D5;
+  border-radius: 3px;
+}
+
+#quick-info a.roundup-changes-active {
+  text-decoration: none;
+  color: #172D4D;
+  border-bottom: 0;
+}
+
+.roundup-hide {
+  display: none;
+}
+
+.full-article .thumb-gallery {
+}
+
+.full-article .thumb-gallery h2 {
+  background: #4B6B9A;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.full-article .thumb-gallery ul li {
+  float: left;
+  width: 20%;
+  outline: 1px solid #fff;
+  list-style: none;
+  position: relative;
+}
+
+.full-article .thumb-gallery.four ul li {
+  float: left;
+  width: 25%;
+  outline: 1px solid #fff;
+  list-style: none;
+  position: relative;
+}
+
+.full-article .thumb-gallery.three ul li {
+  float: left;
+  width: 33%;
+  outline: 1px solid #fff;
+  list-style: none;
+  position: relative;
+}
+
+.full-article .thumb-gallery.two ul li {
+  float: left;
+  width: 50%;
+  outline: 1px solid #fff;
+  list-style: none;
+  position: relative;
+}
+
+.full-article .thumb-gallery ul li img {
+  width: 100%;
+  height: auto;
+}
+
+.full-article .thumb-gallery ul li a {
+  display: block;
+}
+
+.full-article .thumb-gallery ul li span.title {
+  position: absolute;
+  bottom: 0;
+  background: rgba(102,113,128,0.9);
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 800px) {
+  .full-article section {
+    margin: 0;
+  }
+
+  .full-article .col-10, .full-article .col-20, .full-article .col-30, .full-article .col-40, .full-article .col-50, .full-article .col-60, .full-article .col-70, .full-article .col-80, .full-article .col-90, .full-article .col-100 {
+    width: 100%;
+    float: none;
+    margin: 40px 0;
+    padding: 0 !important;
+  }
+
+  .full-article section img {
+    margin: 0 auto;
+  }
+
+  .full-article .background-darkblue {
+    padding: 30px !important;
+  }
+
+  .full-article .background-lightblue {
+    padding: 0 30px;
+  }
+
+  .full-article #roundup-header .col-40 {
+    margin-bottom: 0;
+  }
+
+}
+
+.full-article .article {
+  margin-bottom: 0px !important;
+  border: 0px !important;
+  width: 33.33% !important;
+  float: right;
+}
+
+.full-article .social {
+  overflow: hidden;
+  padding: 10px 0 0 0;
+}
+
+.full-article .social ul li {
+  float: left;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.roundupIntro h2 {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 1em 0;
+}
+
+.roundupIntro p {
+  font-size: 13px;
+  line-height: 17px;
+  display: block;
+  margin: 1em 0;
+}
+
+.rounduplist img.thumb {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: auto;
+}
+
+.rounduplist .content {
+  position: relative;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 0 0 0 170px;
+  height: 145px;
+  overflow: hidden;
+}
+
+.rounduplist .title {
+  font-size: 25px;
+  font-weight: normal;
+  padding: 10px 0px;
+  margin: 10px 0px;
+  border-bottom: 1px solid #999;
+}
+
+.rounduplist .title a {
+  color: #000;
+}
+
+.rounduplist .footer {
+  padding-left: 20px;
+  background: url('http://cdn.macrumors.com/images-new/red_arrow.png') no-repeat;
+  background-position: left center;
+  margin: 1em 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.rounduplist .footer a {
+  color: #660000;
+}
+
+.linkback {
+  font-style: italic;
+}
+
+.push-content .push-intro {
+  margin-bottom: 40px;
+}
+
+.push-content .push-intro img {
+  float: right;
+}
+
+.push-content .push-intro h1 {
+  color: #172D4D;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 80px;
+  margin: 50px 0 0 0;
+  letter-spacing: -3px;
+}
+
+.push-content .push-intro h2 {
+  color: #4D6C99;
+  margin-bottom: 1em;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  text-shadow: 0px 0px 1px #fff;
+  letter-spacing: normal;
+  margin: 15px 0;
+}
+
+.push-content p {
+  margin-bottom: 23px;
+  line-height: 25px;
+  font-size: 15px;
+  color: #152A44;
+}
+
+.push-content h2 {
+  color: #172D4D;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 30px 0 30px 0;
+  letter-spacing: -3px;
+}
+
+.push-subscribe {
+  background: #F5F9FC url(/images-new/icon-push-subscribe.png) no-repeat 20px 13px;
+  background-size: 40px 32px;
+  border: 1px solid #D3DCE6;
+  border-radius: 4px;
+  padding: 15px 20px 0px 79px;
+  font-size: 13px;
+  color: #172d4d;
+  overflow: hidden;
+  margin: 50px 0;
+}
+
+.push-subscribe.not-available {
+  background: #F5F9FC url(/images-new/icon-push-subscribe-no.png) no-repeat 20px 13px;
+  background-size: 40px 32px;
+}
+
+.push-subscribe .info {
+  float: left;
+  margin-bottom: 15px;
+}
+
+.push-subscribe .info strong {
+  display: block;
+  margin-bottom: 1px;
+}
+
+.push-subscribe span.status {
+  float: right;
+  font-size: 11px;
+  font-weight: bold;
+  color: #b32424;
+  margin-top: 10px;
+}
+
+.push-subscribe a.push-subscribe-button {
+  margin-top: 3px;
+}
+
+.push-subscribe p {
+  margin: 0 !important;
+  font-size: 13px;
+  line-height: normal;
+}
+
+.push-subscribe .options {
+  overflow: hidden;
+  clear: both;
+  border-top: 1px solid #CFD8E7;
+  padding: 15px 0 0 0;
+}
+
+.push-subscribe .options ul {
+  list-style: none;
+  font-size: 15px;
+  margin-bottom: 13px;
+}
+
+.push-subscribe .options ul li {
+  margin-bottom: 15px;
+}
+
+.push-subscribe .options ul li input {
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+
+.push-subscribe p.instructions {
+  border-top: 1px solid #CFD8E7;
+  padding: 13px 0 15px;
+  clear: both;
+}
+
+.push-subscribe a {
+  color: #172d4d;
+}
+
+a.push-subscribe-button {
+  float: right;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  padding: 6px 11px;
+  border-radius: 4px;
+  background: #406595;
+  border: 1px solid #264774;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.25), inset 0px 1px 2px #476FA5;
+}
+
+a.push-subscribe-button:hover {
+  background: #9B4746;
+  border: 1px solid #7A2D2C;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.25), inset 0px 1px 2px #AB4F4E;
+}
+
+.alert-push-notifications {
+  margin: 20px 0;
+  background: #162C4E url(/images-new/icon-push-alert.png) no-repeat 13px 11px;
+  background-size: 22px 18px;
+  color: #fff;
+  font-size: 13px;
+  padding: 13px 37px 13px 45px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: none;
+}
+
+.alert-push-notifications a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.alert-push-notifications p {
+  float: left;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.1);
+  color: #fff;
+}
+
+.alert-push-notifications a.push-subscribe-button {
+  text-decoration: none;
+  margin: -5px 0;
+  padding: 4px 11px;
+}
+
+.alert-push-notifications span.close {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: url(/images-new/icon-close.png);
+  background-size: 9px;
+  top: 17px;
+  right: 15px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.newsletter-signup {
+  background: #F5F9FC;
+  border: 1px solid #D3DCE6;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #172d4d;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.newsletter-signup img {
+  float: right;
+  margin-left: 17px;
+}
+
+.newsletter-signup .info {
+  border-bottom: 1px solid #D3DCE6;
+  padding: 15px 17px;
+}
+
+.newsletter-signup .signup {
+  padding: 15px 17px 10px 17px;
+}
+
+.newsletter-signup .signup input#email {
+  padding: 8px;
+  border: 1px solid #D3DCE6;
+  width: 188px;
+}
+
+.newsletter-signup .signup span {
+  clear: both;
+  display: inline-block;
+  margin: 8px 8px 0 2px;
+}
+
+.newsletter-signup .signup .checkbox {
+  margin-right: 7px;
+}
+
+.t-share {
+  background: url('http://cdn.macrumors.com/images-new/button-twitter@2x.png') no-repeat;
+  background-size: 58px 20px;
+  padding-left: 58px;
+  padding-top: 23px;
+}
+
+.fb-share {
+  background: url('http://cdn.macrumors.com/images-new/button-facebook@2x.png') no-repeat;
+  background-size: 56px 20px;
+  padding-left: 56px;
+  padding-top: 23px;
+}
+
+.g-share {
+  background: url('http://cdn.macrumors.com/images-new/button-google@2x.png') no-repeat;
+  background-size: 59px 20px;
+  padding-left: 59px;
+  padding-top: 23px;
+}
+
+@-moz-document url-prefix() {
+  .article .footer .t-share {
+    background: url('http://cdn.macrumors.com/images-new/button-twitter@2x.png') no-repeat;
+    background-size: 58px 20px;
+    padding-left: 58px;
+    padding-top: 6px;
+  }
+
+  .article .footer .fb-share {
+    background: url('http://cdn.macrumors.com/images-new/button-facebook@2x.png') no-repeat;
+    background-size: 56px 20px;
+    padding-left: 56px;
+    padding-top: 6px;
+  }
+
+  .article .footer .g-share {
+    background: url('http://cdn.macrumors.com/images-new/button-google@2x.png') no-repeat;
+    background-size: 59px 20px;
+    padding-left: 59px;
+    padding-top: 6px;
+  }
+
+  .article.excerpt .footer .t-share {
+    padding-top: 6px;
+  }
+
+  .article.excerpt .footer .fb-share {
+    padding-top: 6px;
+  }
+
+  .article.excerpt .footer .g-share {
+    padding-top: 6px;
+  }
+
+  .article.blog .footer .t-share {
+    padding-top: 6px;
+  }
+
+  .article.blog .footer .fb-share {
+    padding-top: 6px;
+  }
+
+  .article.blog .footer .g-share {
+    padding-top: 6px;
+  }
+
+}
+
+#upcoming-products {
+  background: #d7e2ef;
+  padding: 35px 10px 10px 10px;
+  border-radius: 4px;
+  margin: 25px 0;
+  position: relative;
+}
+
+#upcoming-products h3 {
+  background: #426694;
+  color: #fff;
+  font-size: 15px;
+  padding: 6px 4%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px 0;
+}
+
+#upcoming-products ul {
+}
+
+#upcoming-products ul li {
+  border-bottom: 1px dotted #b4bccb;
+  overflow: hidden;
+  list-style: none;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+#upcoming-products ul li:last-child {
+  border: none;
+}
+
+#upcoming-products ul li a.image {
+  float: left;
+  width: 56px;
+  height: 43px;
+  padding: 2px 11px 0 5px;
+}
+
+#upcoming-products ul li a.image img {
+  width: 56px;
+  height: 43px;
+}
+
+#upcoming-products ul li div.text {
+  float: left;
+  max-width: 75%;
+}
+
+#upcoming-products ul li a.product-title {
+  font-weight: bold;
+  color: #162b43;
+}
+
+#upcoming-products ul li a.product-title small {
+  font-size: 11px;
+  font-weight: normal;
+  color: #718295;
+}
+
+#upcoming-products ul li a.no-image {
+  background: url('http://cdn.macrumors.com/images-new/list-bullet.png') no-repeat 4px;
+  background-size: 6px;
+  padding-left: 17px;
+}
+
+.full-article a span.changes {
+  text-decoration: underline;
+}
+
+/* Roundup Item Social Border Fix
+   https://trello.com/c/6oVQsHq2/62-border-showing-up-on-social-buttons-group-on-roundup-items-pages
+*/
+#quick-info #updates .article {
+  box-shadow: none;
+}

@@ -1,0 +1,39 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = {}; 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=Ctwl8kzz0VozyKMbQfJC-kKAF-s-XsEKCz8jRnALimfPGzwIQASD2upgQYMnGqYvApNgPoAGtx6v_A8gBAagDAaoEqgFP0PNgUOaiAEUDkJLJYM7ZOMi_vwvQgMK63RfcEcIX1pOI_ZsS0L1kEZ3T0PFcIzS3-D9UZ5ckSCCB8Lzk09W940sZhc7JEee6Qfo28zSke231djoF6LVjd8pU3pm_vnQnVPxZEPnxmLQ2twhIlwO_5TwZ29txctYAMLZMEHTkaCqYGnnInvTeU1gPEksgrSy7ouvxIjs818acdwt0ue_ssWBUBo9mUnnVvYgGAYAHu7hUqAemvhvYBwE&amp;num=1&amp;cid=5Gjzhhkmptql349kVyCaHEly&amp;sig=AOD64_02Xp3dOk-A732X8aGaIZiaZGDa3Q&amp;client=ca-pub-0457527031304647&amp;adurl=http://www.smugmug.com/%3F%26mckv%3DcW1Ntd4ej_dc%7Cpcrid%7C76464993018%7Cpkw%7C%7Cpmt%7C%26s%3Dgoogle%26m%3Dcpc%26c%3DRetargeting%2B-%2BUS-CA%26t%3D%26co%3D76464993018"; 
+google_ad.visible_url = "www.smugmug.com/photo-sharing"; 
+google_ad.p_creative_view_url = "";
+google_ad.p_engaged_view_url = "";
+google_ad.p_videoplaytime_25_url = "";
+google_ad.p_videoplaytime_50_url = "";
+google_ad.p_videoplaytime_75_url = "";
+google_ad.p_videoplaytime_100_url = "";
+google_ad.log_info = "B7Lihkzz0VozyKMbQfJC-kKAFAILPyNGcAgAAEAE4AcgBAcITFwoPGNLt5FIiCAgDEAEYASAAGK3Hq_8D";
+google_ad.activeview_cid = "5Gjzhhkmptql349kVyCaHElySJI";
+google_ad.activeview_js_immediate_enabled = "true";
+google_ad.activeview_metadata = "ud=1&la=0&";
+google_ad.line1 = "Share Photos With SmugMug"; 
+google_ad.line2 = "See Why Professional Photographers"; 
+google_ad.line3 = "Share Their Photos With SmugMug."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_info.feedback_url = "https://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://gawker.com/what-is-charlie-hebdo-and-why-a-mostly-complete-histo-1677959168%26gl%3DUS%26hl%3Den%26client%3Dca-pub-0457527031304647%26ai0%3DCtwl8kzz0VozyKMbQfJC-kKAF-s-XsEKCz8jRnALimfPGzwIQASD2upgQYMnGqYvApNgPoAGtx6v_A8gBAagDAaoEqgFP0PNgUOaiAEUDkJLJYM7ZOMi_vwvQgMK63RfcEcIX1pOI_ZsS0L1kEZ3T0PFcIzS3-D9UZ5ckSCCB8Lzk09W940sZhc7JEee6Qfo28zSke231djoF6LVjd8pU3pm_vnQnVPxZEPnxmLQ2twhIlwO_5TwZ29txctYAMLZMEHTkaCqYGnnInvTeU1gPEksgrSy7ouvxIjs818acdwt0ue_ssWBUBo9mUnnVvYgGAYAHu7hUqAemvhvYBwE\x26usg\x3dAFQjCNFqiIyLNdcEBR8ST-e3dx7wV2dhKw";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

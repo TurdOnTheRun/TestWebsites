@@ -1,0 +1,13 @@
+document.write("<!-- Creative 38705359 served by Member 229 via AppNexus. -->");var apn_geo = {
+  "FR" : {click_url: "http://www4.smartadserver.com/call/cliccommand/10656433/286342", img_url : "https://a248.e.akamai.net/appnexus.download.akamai.com/89298/adnexus-prod/p/4a/17/56/26/4a175626e8ad8aa0fed1c6cb99549de3.JPG"},
+  "DE" : {click_url: "http://www.dkms.de/?utm_source=AppNexus&utm_medium=banner&utm_campaign=cotton", img_url : "https://a248.e.akamai.net/appnexus.download.akamai.com/89298/adnexus-prod/p/79/54/54/ab/795454abdfc1a6cb4cde92599d46d5ab.jpg"},
+   "US" : {click_url: "http://www.ampleharvest.org/DNoFoodLeftBehind-AN.php?utm_source=AppNexus&utm_medium=banner&utm_campaign=cotton", img_url : "https://a248.e.akamai.net/appnexus.download.akamai.com/89298/adnexus-prod/p/e7/a1/01/50/e7a10150688fee95463d57dcbe194f10.jpg"}
+}
+if ("US" in apn_geo) {
+document.write("<a target=\"_blank\" href=https://secure-nym.adnxs.com/click?AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA__________8AAAAAAAAAAAAAAAAAAAAA5QAAAAIAAADPmE4CAAAAAAAAAAAAAAAAAAAAACwB-gAAAAAAAAAAAgEAAAAAAAAAwQtgBAAAAAA./bn=0/clickenc=" + apn_geo["US"].click_url
+ + "><img src=" + apn_geo["US"].img_url + "></a>");  
+}else {
+  img_url = "https://a248.e.akamai.net/appnexus.download.akamai.com/89298/adnexus-prod/p/f2/8f/c4/09/f28fc409d015d99f5f19ccebfbd78b85.jpg";
+  click_url = "http://girlrising.com/?utm_source=AppNexus&utm_medium=banner";
+  document.write("<a target=\"_blank\" href=https://secure-nym.adnxs.com/click?AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA__________8AAAAAAAAAAAAAAAAAAAAA5QAAAAIAAADPmE4CAAAAAAAAAAAAAAAAAAAAACwB-gAAAAAAAAAAAgEAAAAAAAAAwQtgBAAAAAA./bn=0/clickenc=" + click_url + "><img src=" + img_url + "></a>");
+}

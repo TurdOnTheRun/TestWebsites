@@ -1,0 +1,1 @@
+window.parent.googletag.impl.pubads.setCookieInfo({"_cookies_":[{"_value_":"ID=40d4346f15c1f0ff:T=1460005780:S=ALNI_MZETSuoOCfD07xTfCVOLPEfhR3Jmw","_expires_":1523077780,"_path_":"/","_domain_":"cnet.com"}]});

@@ -1,0 +1,1 @@
+crtg_content = ''; (function(){document.cookie = 'crtg_abc=' + escape(crtg_content) + '; path=/; expires=Sat, 23 Apr 2016 19:17:25 GMT; domain=go.com';})();

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0157)http://s0.2mdn.net/ads/richmedia/studio/pv2/42335694/20160401115429454/300x250_EMOJI/main.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=lVNtDwijwN&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>NT07-52564_300x250_Emoji</title>
+<!-- write your code here -->
+<script src="./Enabler_01_110.js"> </script>
+<meta name="ad.size" content="width=300,height=250">
+
+<script src="./createjs-2015.11.26.min(1).js"></script>
+<script src="./NT07-52564_300x250_Emoji.js"></script>
+<script>
+var canvas, stage, exportRoot;
+
+window.onload = function() {
+  if (Enabler.isInitialized()) {
+      enablerInitHandler();
+  } else {
+      Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+  }
+}
+
+function enablerInitHandler() {
+	init();
+}
+
+function init() {
+	// --- write your JS code here ---
+	
+	canvas = document.getElementById("canvas");
+	images = images||{};
+	canvas.style.cursor = 'pointer';
+	
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+
+	canvas.addEventListener('click', canvasOnClick);
+}
+
+function canvasOnClick(){
+	Enabler.exit("exit");
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib.NT0752564_300x250_Emoji();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+</script>
+
+<!-- write your code here -->
+
+</head>
+<body style="background-color:#D4D4D4;margin:0px;">
+	<canvas id="canvas" width="300" height="250" style="cursor: pointer; background-color: rgb(255, 255, 255);"></canvas>
+
+
+</body></html>

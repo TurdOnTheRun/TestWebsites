@@ -1,0 +1,34 @@
+OX_1380257291({
+  "ads":{
+    "medium":"w",
+    "record_tmpl":"http://ox-d.evolvemedia.servedbyopenx.com/{medium}/1.0/{rtype}?ts={txn_state}",
+    "pixels":"http://us-u.openx.net/w/1.0/pd?plm=5&ph=b0627bd3-23b6-4e34-beba-43213fdf18e6",
+    "adunits" : [
+      {
+        "auid":"538160740",
+        "chain_revenue":"",
+        "chain":[
+          {
+            "is_fallback":0,
+            "framed":1,
+            "ad_id":"537539043",
+            "adv_acct_id":"537073287",
+            "is_ng":1,
+            "adv_id":"152d07b1-da41-4c40-ad18-fe74c269534a:537073287",
+            "brand_id":"57588",
+            "cpipc":2748,
+            "auct_win_is_deal":0,
+            "pub_rev":"2748",
+            "width":"300",
+            "height":"250",
+            "html":"<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"Expires\" content=\"Tue, 01 Jan 2000 12:12:12 GMT\"><meta http-equiv=\"Pragma\" content=\"no-cache\"></head><body> <img src=\"http://node-p2e-h3da6o.sitescout.com/openx/px/aid:5705ed8585ff6bdc007a0004;c:AAABU-8n0h19_5spK-M0kAmoiqWsQ5wRmtoKgw;s:78846372e9a41966;cid:302184;ts:1460006277233\" width=\"1\" height=\"1\" style=\"position: absolute; left: -150px;\" /><img src=\"http://pixel.sitescout.com/dmp/pixelSync?nid=4&wb=1&hdid=1\" width=\"1\" height=\"1\" style=\"position: absolute; left: -150px;\" /><a href=\"http://clickserv.sitescout.com/clk/61c687f597b566ae/7277008264f3e3a2/4-49583013/2/sherdog.com//~_aid_~5705ed8585ff6bdc007a0004//cidentOUE2RURDMzMzNTAyOTMwOEFFM0JCNjQ0RTVBMjFENDEvLy8vL2Vu\" target=\"_blank\"><img src=\"http://cdn01.centro.net/89900/89824/0ff31231103771fa.gif\" alt=\"\" border=\"0\" /></a><script type=\"text/javascript\" src=\"https://q.adrta.com/aa.js?cb=1460006277233#ss;paid=ss;avid=89761;caid=302184;publisherId=0;plid=1138470;segment=514;kv4=74.71.4.239;kv14=46676,3881;kv1=300x250;siteId=49583013;kv7=4;kv15=ABOVE_THE_FOLD;kv16=;kv17=;kv18=;kv24=WEB;kv20=;kv21=;kv22=;kv23={carrier};kv11=5705ed8585ff6bdc007a0004;kv3=8e5ea5ef-7e5d-4db3-8323-212b3cf2b661;kv2=http%3A%2F%2Fwww.sherdog.com%2Ffighter%2FRonda-Rousey-73073\"></script><noscript><img src=\"https://adrta.com/i?clid=ss&paid=ss&cb=1460006277233&avid=89761&caid=302184&publisherId=0&plid=1138470&segment=514&kv4=74.71.4.239&kv14=46676,3881&kv1=300x250&siteId=49583013&kv7=4&kv15=ABOVE_THE_FOLD&kv16=&kv17=&kv18=&kv24=WEB&kv20=&kv21=&kv22=&kv23={carrier}&kv11=5705ed8585ff6bdc007a0004&kv3=8e5ea5ef-7e5d-4db3-8323-212b3cf2b661&kv2=http%3A%2F%2Fwww.sherdog.com%2Ffighter%2FRonda-Rousey-73073\" width=\"1\" height=\"1\" style=\"position: absolute; left: -150px;\" /></noscript></body></html>",
+            "target":"_blank",
+            "ts":"1fHJpZD01MTE4MDFlNi1lNDIwLTRmOTMtODQ2OS0xMTQ1OWJmMzFjMDB8cnQ9MTQ2MDAwNjI3N3xhdWlkPTUzODE2MDc0MHxhdW09RE1JRC5XRUJ8c2lkPTUzNzIyMzMxMnxwdWI9NTM3MTE5NjE1fHBjPVVTRHxyYWlkPTMxZTE3ZDVkLWQzNzYtNDAzMy1iNzUzLTE5NzlhMGVjOGU3NHxhaWQ9NTM3NTM5MDQzfHQ9MTJ8YXM9MzAweDI1MHxsaWQ9NTM3MzQ4NDI5fG9pZD01MzcyMjQ0MDB8cD0zNzEwfHByPTI3NDh8YXRiPTcwNDB8YWR2PTUzNzA3MzI4N3xhYz1VU0R8cG09UFJJQ0lORy5DUE18bT0xfGFpPTE1MmQwN2IxLWRhNDEtNGM0MC1hZDE4LWZlNzRjMjY5NTM0YXxtYz1VU0R8bXI9OTYyfHBpPTI3NDh8bXVpPTliOGM2MTFmLTk4NzktNGIwZi1kZTEyLWFjODNhNTdkOWIxZnxtdz03MjB8bWE9NDBmMDg4NjQtZTZmNi00YmNjLTk5OTYtZDIwZmM4ZmIzYzAyfG1ydD0xNDYwMDA2Mjc3fG1yYz1TUlRfV09OfG13YT01MzcwNzMyODd8bXdiaT01NzU4OHxtd2I9NzA0MHxtYXA9MzcxMHxlbGc9MXxtb2M9VVNEfG1vcj05NjJ8bXBjPVVTRHxtcHI9Mjc0OHxtcGY9MTQ5fG1tZj0xNDl8bXBuZj0xNDl8bW1uZj0xNDl8cGN2PTIwMTYwMzAzfG1vPU9YfGVjPTExMzg0NzB8bXB1PTI3NDh8bWNwPTM3MTB8bXdjPTUzNzIyNDQwMHxtd3A9NTM3MzQ4NDI5fG13Y3I9NTM3NTM5MDQzfG13aXM9MXxtd3B0PW94X3Byb3RvfHVyPVUzZVAyZW1Wd2U",
+            "type":"html",
+            "ad_url":"<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"Expires\" content=\"Tue, 01 Jan 2000 12:12:12 GMT\"><meta http-equiv=\"Pragma\" content=\"no-cache\"></head><body> <img src=\"http://node-p2e-h3da6o.sitescout.com/openx/px/aid:5705ed8585ff6bdc007a0004;c:AAABU-8n0h19_5spK-M0kAmoiqWsQ5wRmtoKgw;s:78846372e9a41966;cid:302184;ts:1460006277233\" width=\"1\" height=\"1\" style=\"position: absolute; left: -150px;\" /><img src=\"http://pixel.sitescout.com/dmp/pixelSync?nid=4&wb=1&hdid=1\" width=\"1\" height=\"1\" style=\"position: absolute; left: -150px;\" /><a href=\"http://clickserv.sitescout.com/clk/61c687f597b566ae/7277008264f3e3a2/4-49583013/2/sherdog.com//~_aid_~5705ed8585ff6bdc007a0004//cidentOUE2RURDMzMzNTAyOTMwOEFFM0JCNjQ0RTVBMjFENDEvLy8vL2Vu\" target=\"_blank\"><img src=\"http://cdn01.centro.net/89900/89824/0ff31231103771fa.gif\" alt=\"\" border=\"0\" /></a><script type=\"text/javascript\" src=\"https://q.adrta.com/aa.js?cb=1460006277233#ss;paid=ss;avid=89761;caid=302184;publisherId=0;plid=1138470;segment=514;kv4=74.71.4.239;kv14=46676,3881;kv1=300x250;siteId=49583013;kv7=4;kv15=ABOVE_THE_FOLD;kv16=;kv17=;kv18=;kv24=WEB;kv20=;kv21=;kv22=;kv23={carrier};kv11=5705ed8585ff6bdc007a0004;kv3=8e5ea5ef-7e5d-4db3-8323-212b3cf2b661;kv2=http%3A%2F%2Fwww.sherdog.com%2Ffighter%2FRonda-Rousey-73073\"></script><noscript><img src=\"https://adrta.com/i?clid=ss&paid=ss&cb=1460006277233&avid=89761&caid=302184&publisherId=0&plid=1138470&segment=514&kv4=74.71.4.239&kv14=46676,3881&kv1=300x250&siteId=49583013&kv7=4&kv15=ABOVE_THE_FOLD&kv16=&kv17=&kv18=&kv24=WEB&kv20=&kv21=&kv22=&kv23={carrier}&kv11=5705ed8585ff6bdc007a0004&kv3=8e5ea5ef-7e5d-4db3-8323-212b3cf2b661&kv2=http%3A%2F%2Fwww.sherdog.com%2Ffighter%2FRonda-Rousey-73073\" width=\"1\" height=\"1\" style=\"position: absolute; left: -150px;\" /></noscript></body></html>"
+          }
+        ]
+      }
+    ]
+  }
+});

@@ -1,0 +1,16 @@
+/* See It, Share It*/
+.story_v2 .seeitshareit{width: 298px !important;}
+.story_widget .seeitshareit .widget_head_short{padding-top:7px;}
+.seeitshareit {width: 298px !important;padding: 0 5px;font:bold 13px/15px Helvetica, Arial, sans-serif;border: 1px solid #bcc8db;}
+.seeitshareit .ssHeadline a{color:#2e538f;}
+.seeitshareit .divider {border-bottom:1px solid #bcc8dc;}
+.seeitshareit .ssItem{margin:5px 0;position:relative;}
+.seeitshareit .ssImage{float: left;margin-right: 10px;position:relative;}
+.seeitshareit .ssImage img{border:0;}
+
+
+.seeitshareit .wide {margin-top: 10px;margin-bottom: 10px;}
+.seeitshareit .wide .shareflyout{bottom:-4px;}
+.seeitshareit .wide .play_icon, .seeitshareit .wide .ss_icon{display:none;}
+
+.wf-active .story_v2 .seeitshareit{font:600 15px/17px "proxima-nova" Helvetica, Arial, sans-serif;}

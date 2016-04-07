@@ -1,0 +1,40 @@
+/* ---------------- */
+/* Showtimes Flyout */
+/* ---------------- */
+
+.btn-inactive-flyout, .showtimes-amenity-flyout, .theater-amenities-flyout{
+	width:300px;
+	position:absolute;
+	border-radius:1px;
+	background:rgba(255,255,255,1);
+	box-shadow: 0 0 1px 1px #ebebeb;
+	font-size:13px;
+	line-height:17px;
+	display:none;
+	z-index:5;
+}
+
+.flyout-title{
+	font-size:15px;
+	background-color:#4c4c4c;
+	line-height:16px;
+	padding:10px 20px;
+	color:white;
+	text-transform:uppercase;
+}
+
+.flyout-x{
+	position:absolute;
+	right:10px;
+	top:10px;
+	padding:1px 3px;
+	cursor:pointer;
+	color:#b4b4b4;
+	font-size:16px;
+}
+
+.btn-inactive-flyout-msg, .showtimes-amenity-flyout-msg, .theater-amenities-flyout-msg{
+	padding:20px;
+	color:#4c4c4c;
+	list-style-position:inside;
+}

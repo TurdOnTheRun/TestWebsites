@@ -1,0 +1,16 @@
+rp_ad_response={
+"status":"ok",
+"account_id":7470,
+"site_id":23308,
+"zone_id":185808,
+"size_id":57,
+"tracking":"mid_body",
+"inventory":{},
+"ads":[{
+"status":"no-ads",
+"reason":"floor-not-met",
+"error_code":"10",
+"impression_id":"8c4c8f09-adf4-4e1b-808f-fe878c74a159"
+}]
+};
+try{TN8.RUBICON_CB_1(rp_ad_response);}catch(ignore){}

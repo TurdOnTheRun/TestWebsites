@@ -1,0 +1,16 @@
+/* latin */
+@font-face {
+  font-family: 'TWC Round';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/l/hZpqFFFuqdyWneH9D5ULvQ/font?kit=iU3a50WeoqZc9HNy-xQfvkU2y0jP8EfEyHVWl6lBGz8&skey=710d0d44993082dc) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'TWC Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/hZpqFFFuqdyWneH9D5ULvQ/font?kit=lM0nhgaCHycB9ycUFCv95ogp9Q8gbYrhqGlRav_IXfk&skey=fcfca466214f626b) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

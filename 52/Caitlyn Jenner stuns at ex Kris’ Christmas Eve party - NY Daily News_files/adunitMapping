@@ -1,0 +1,15 @@
+var ws_unit = {
+id: 0,
+tpcid: 0,
+tpoid: 0,
+tpolid: 0,
+acid: 0,
+cw: 728,
+ch: 90,
+dnr: true
+};
+//dnr reason: order line not found
+
+var el = document.body, ss = document.scripts;for (var i = ss.length - 1; i > -1; i--) {if (ss[i].src.indexOf('adunitMapping') > -1) {el = ss[i].parentNode; break;}}var u = document.createElement('SCRIPT');
+u.src='//wfpscripts.webspectator.com/ws-ad.js';
+el.appendChild(u);

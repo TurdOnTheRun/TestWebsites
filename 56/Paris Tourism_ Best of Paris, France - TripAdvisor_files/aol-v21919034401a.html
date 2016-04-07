@@ -1,0 +1,85 @@
+
+<!-- saved from url=(0833)https://static.tacdn.com/static/page_moniker/aol-v21919034401a.html#pixelType=PAGEVIEW&curLocId=187147&geoId=187147&reqUnique=4c8a5073f7b9d5628dc90907f3d7e9f4496a7b84&userUnique=3242fb23c13a2d0b6eead6234df9577131fefd50&locale=en_US&seqId=2&geoName=Paris&geoParentId=187144&geoParentName=Ile-de-France&geoMostPop=222913&isRemarketable=false&loc1=222913&productIds=["d222913enUS187147","187147enUS"]&productIdsShort=d222913enUS187147,187147enUS&trueServlet=Tourism&fbTrueServlet=P&servlet=Hotels&geoFeedBucket=medium&serverName=www.tripadvisor.com&device=Desktop&fbDevice=1&errorJS=https://static.tacdn.com/js3/remarketing-errors-c-v22262320586a.js&puid=VwXqZQokMHUAAV1QodIAAABJ&siteType=d&isMobileDevice=n&taSplit=1&tasource=OTH&geo=187147&isClickoutYN=no&criteoPartnerId=4653&ulbBucket=2&ulbScore=0.24940277326656074&countryAlpha2=US -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  </head>
+  <body><script type="text/javascript" src="./saved_resource(1)"></script>
+    <script type="text/javascript" src="./saved_resource(2)"></script>
+    <script type="text/javascript">
+      var context = {};
+      var query = window.location.hash.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+          // If first entry with this name
+        if (typeof context[pair[0]] === "undefined") {
+          context[pair[0]] = pair[1];
+          // If second entry with this name
+        } else if (typeof context[pair[0]] === "string") {
+          var arr = [ context[pair[0]], pair[1] ];
+          context[pair[0]] = arr;
+          // If third or later entry with this name
+        } else {
+          context[pair[0]].push(pair[1]);
+        }
+      }
+
+      if (pulse) {
+        pulse.setPartnerId('30580');
+        pulse.setSite(context.serverName);
+        pulse.add('qty', 'hotel');
+        pulse.add('cid', context.geoId);
+
+        if (context.dateIn && context.dateIn.length === 10) {
+          var yyyy = context.dateIn.substring(0, 4);
+          var mm = context.dateIn.substring(5, 7);
+          var dd = context.dateIn.substring(8, 10);
+          pulse.add('sdt', mm + '/' + dd + '/' + yyyy);
+        }
+        if (context.dateOut && context.dateOut.length === 10) {
+          var yyyy = context.dateOut.substring(0, 4);
+          var mm = context.dateOut.substring(5, 7);
+          var dd = context.dateOut.substring(8, 10);
+          pulse.add('edt', mm + '/' + dd + '/' + yyyy);
+        }
+
+        // List of Hotel IDs that match what the user is viewing
+        // On property pages the first one of these should be the main hotel and maybe put in nothing else.
+        // One geo pages can put in top three hotels for geo.
+        var hotelId = context.pixelType === 'CLICKOUT' ? context.locId :
+                      context.propId ? context.propId :
+                      context.geoMostPop;
+        pulse.add('pid', hotelId);
+
+        // 'cfp' for commerce clicks, 'pp' for property pages, 'sp' for geo pages
+        pulse.set('pty', context.pixelType === 'CLICKOUT' ? 'cfp' : context.propId ? 'pp' : 'sp');
+        pulse.set('pce', context.pixelType === 'CLICKOUT' ? '1' : '0');
+        pulse.pulse();
+      } 
+
+      // AOL has a separate img pixel that needs to fire on click outs.
+      if (context.pixelType === 'CLICKOUT') {
+        var loadElem = function(tag, attribs) {
+          if (!tag) {
+            return;
+          }
+          var elem = document.createElement(tag);
+          for (var key in attribs) {
+            if (attribs.hasOwnProperty(key)) {
+              elem[key] = attribs[key];
+            }
+          }
+          document.body.appendChild(elem);
+        };
+        var loadImg = function(src, attribs) {
+          attribs = attribs || {};
+          attribs.src = src;
+          loadElem('img', attribs);
+        };
+
+        loadImg('https://secure.ace-tag.advertising.com/action/type=127500/bins=1/rich=0/mnum=1516/logs=0/');
+      }
+    </script>
+  
+
+</body></html>

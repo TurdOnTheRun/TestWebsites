@@ -1,0 +1,419 @@
+/* === MAIN ELEMENTS === */ 
+
+body, body * {
+	vertical-align:baseline;
+	border:0 none;
+	outline:0;
+	padding:0;
+	margin:0;
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamMedium.eot');
+  src: url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamMedium.eot?#iefix') format('embedded-opentype'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamMedium.woff2') format('woff2'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamMedium.woff') format('woff'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamMedium.ttf') format('truetype'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamMedium.svg#GothamMedium') format('svg');
+  font-weight:normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamBook.eot');
+  src: url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamBook.eot?#iefix') format('embedded-opentype'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamBook.woff2') format('woff2'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamBook.woff') format('woff'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamBook.ttf') format('truetype'),
+       url('https://s0.2mdn.net/ads/richmedia/studio/41546373/GothamBook.svg#GothamBook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#container{
+	position:absolute;
+	width:300px;
+	height:600px;
+	top:0px;
+	left:0px;
+	margin:auto;
+	background: #000;
+	overflow:hidden;
+}
+
+#intro {
+	position: absolute;
+	top: 0px;
+	left:0px;
+	width:298px;
+	height:598px;
+	background: #175262;
+	z-index:100;
+	display:none;
+}
+
+#trailer {
+	position: absolute;
+	top: 0px;
+	left:0px;
+	width:298px;
+	height:598px;
+	z-index:100;
+	display:none;
+	background: #000 url('img_trailer_bg.jpg') bottom no-repeat;
+}
+
+#resolve {
+	position: absolute;
+	top: 0px;
+	left:0px;
+	width:298px;
+	height:598px;
+	display:none;
+}
+
+.exitBtn {
+	position: absolute;
+	top: 0px;
+	left:0px;
+	width:298px;
+	height:598px;
+	border:1px solid #000;
+	z-index:8000;
+	cursor: pointer;
+}
+
+/* === INTRO ELEMENTS === */ 
+
+#btn_intro_skip {
+	position: absolute;
+	top:10px;
+	right:8px;
+	width:13px;
+	height:13px;
+	fill: #fff;
+	z-index:9000;
+	cursor: pointer;
+}
+
+#intro_video_player {
+	position: absolute;
+	width: 300px;
+	height: 600px;
+	z-index: 750;
+	background:#000;
+}
+
+/* === TRAILER ELEMENTS === */ 
+
+#trailer_video_player {
+	position: absolute;
+	top: 213px;
+	left: 13px;
+	width: 273px;
+	height: 153px;
+	z-index: 9750;
+	background: #000;
+}
+
+#trailer_frame {
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 300px;
+	height: 180px;
+	background: url('img_trailer_frame.png');
+	z-index: 100;
+}
+
+#trailer_top_lockup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 50px;
+}
+
+#trailer_netflix{
+    position:relative;
+	top: 8px;
+	width: 73px;
+	height: 20px;
+	background: url('img_netflix.svg') no-repeat;
+	background-size:contain;
+	z-index: 750;
+}
+
+#trailer_tagline {
+	position:relative;
+	top: 11px;
+	font-family: GothamBook;
+	font-weight:bolder;
+	font-size: 10px;
+	color: #000;
+	z-index: 750;
+}
+
+#trailer_lower_lockup {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	height: 110px;
+}
+
+#trailer_TT {
+	position:absolute;
+	top: 59px;
+	left: 42px;
+	width: 213px;
+	height: 132px;
+	background-position:bottom;
+	background-size:cover;
+}
+
+#trailer_episodes {
+	position:relative;
+	top: 483px;
+	font-family: GothamMedium;
+	font-size: 16px;
+	color: #fff;
+	z-index: 750;
+}
+
+#trailer_streaming {
+	position:relative;
+    top: 481px;
+	font-family: GothamMedium;
+	font-size: 16px;
+	color: #fff;
+	z-index: 750;
+}
+
+#btn_trailer_watchNow {
+	top: 20px;
+	position: relative;
+	display: inline-block;
+	width: auto;
+	font-family: GothamMedium;
+	font-size: 16px;
+	font-weight:lighter;
+	z-index: 9250;
+	padding: 7px 13px 7px 13px;
+	color: #fff;
+	background: #e9292c;
+	cursor: pointer;
+}
+
+#trailer_chars {
+	position: absolute;
+	bottom:0px;
+	left:0;
+	width:300px;
+	height:219px;
+	background: url('img_trailer_chars.png');
+	z-index:102;
+}
+
+#trailer_chars_ovr {
+	position: absolute;
+	bottom:0px;
+	left:0;
+	width:300px;
+	height:219px;
+	background: url('img_trailer_chars_ovr.png');
+	opacity:0;
+	z-index:103;
+}
+
+/* === RESOLVE ELEMENTS === */ 
+
+#btn_resolve_replay {
+	position: absolute;
+	top:4px;
+	left:4px;
+	width:16px;
+	height:18px;
+	background: url('btn_resolve_replay.svg');
+	background-size:contain;
+	z-index:9000;
+	cursor: pointer;
+}
+
+#resolve_lockup {
+	position: absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:598px;
+}
+
+#resolve_netflix {
+	position:relative;
+	top: 14px;
+	width: 73px;
+	height: 20px;
+	background: url('img_netflix.svg') no-repeat;
+	background-size:contain;
+	z-index: 750;
+}
+
+#resolve_cast {
+	position:absolute;
+	top: 0px;
+	width: 300px;
+	height: 57px;
+	background: url('img_resolve_cast.png');
+	background-size:contain;
+	z-index: 750;
+}
+
+#resolve_TT {
+	position:absolute;
+	top: 68px;
+	left: 42px;
+	width: 213px;
+	height: 132px;
+	z-index: 755;
+	background-size:contain;
+    background-repeat: no-repeat;
+}
+
+#resolve_TT_shadow {
+	position:absolute;
+	top: 68px;
+	left: 42px;
+	width: 213px;
+	height: 132px;
+	z-index: 754;
+	background-size:contain;
+    background-repeat: no-repeat;
+	-webkit-filter: brightness(0.3);
+	filter: brightness(0.3);
+	opacity:0;
+}
+
+#resolve_chars {
+	position: absolute;
+	top:232px;
+	left:0;
+	width:300px;
+	height:290px;
+	background: url('img_resolve_chars.png');
+	z-index:102;
+}
+
+#resolve_chars_ovr {
+	position: absolute;
+	top:232px;
+	left:0;
+	width:300px;
+	height:290px;
+	background: url('img_resolve_chars_ovr.png');
+	opacity:0;
+	z-index:103;
+}
+
+#resolve_fence {
+	position: absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:600px;
+	background: url('img_resolve_fence.png');
+	z-index:101;
+}
+
+#resolve_tagline {
+	position:relative;
+	top: 185px;
+	font-family: GothamBook;
+	font-weight:bolder;
+	font-size: 10px;
+	color: #000;
+	z-index: 750;
+}
+
+#resolve_episodes {
+	position:relative;
+	top: 483px;
+	font-family: GothamMedium;
+	font-size: 16px;
+	color: #fff;
+	z-index: 750;
+}
+
+#resolve_streaming {
+	position:relative;
+    top: 481px;
+	font-family: GothamMedium;
+	font-size: 16px;
+	color: #fff;
+	z-index: 750;
+}
+
+#btn_resolve_blocker {
+	display:none;
+}
+
+#btn_resolve_watchTrailer {
+	position: relative;
+	top: 484px;
+	display: inline-block;
+	width: auto;
+	font-family: GothamMedium;
+	font-size: 16px;
+	font-weight:lighter;
+	z-index: 9250;
+	padding: 7px 13px 7px 13px;
+	color: #fff;
+	background: #e9292c;
+	cursor: pointer;
+}
+
+#btn_resolve_watchNow {
+	position: relative;
+	top: 484px;
+	display: inline-block;
+	width: auto;
+	font-family: GothamMedium;
+	font-size: 16px;
+	font-weight:lighter;
+	z-index: 9250;
+	padding: 7px 13px 7px 13px;
+	color: #fff;
+	background: #e9292c;
+	cursor: pointer;
+}
+
+#resolve_disclaimer {
+	position: absolute;
+	left: 2px;
+	bottom: -3px;
+	width:300px;
+	height:10px;
+	font-family: GothamMedium;
+	font-size: 6px;
+	color: #8f8f8f;
+	z-index:750;
+    text-align: center;
+}
+
+#resolve_ratings {
+	position: absolute;
+	top: 2px;
+	right: 1px;
+	z-index:750;
+}
+
+#resolve_bg {
+	position: absolute;
+	top:0;
+	left:0;
+	width:298px;
+	height:598px;
+	background: url('img_resolve_bg.jpg');
+	z-index:100;
+}

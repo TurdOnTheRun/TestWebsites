@@ -1,0 +1,1 @@
+crtg_content = ''; (function(){document.cookie = 'cto_dailymail=' + escape(crtg_content) + '; path=/; expires=Sat, 07 May 2016 05:04:36 GMT; domain=dailymail.co.uk';})();

@@ -1,0 +1,5 @@
+/*!CK:4100961897!*//*1459901533,*/
+
+if (self.CavalryLogger) { CavalryLogger.start_js(["uFjaK"]); }
+
+__d('GroupSeenByNUX.react',['fbt','AsyncRequest','AsyncResponse','React','XUFIGroupSeenByNUXAsyncFetchController','XUIAmbientNUX.react'],function a(b,c,d,e,f,g,h){'use strict';if(c.__markCompiled)c.__markCompiled();var i=c('React').createClass({displayName:'GroupSeenByNUX',getInitialState:function(){return {shown:false};},componentDidMount:function(){var j=c('XUFIGroupSeenByNUXAsyncFetchController').getURIBuilder().getURI();new (c('AsyncRequest'))().setURI(j).setHandler(this._onResponse).send();},_onNUXCloseButtonClick:function(){this.setState({shown:false});},_onResponse:function(j){var k=j.getPayload();this.setState({shown:k[0]});},render:function(){return (c('React').createElement(c('XUIAmbientNUX.react'),{contextRef:this.props.contextRef,onCloseButtonClick:this._onNUXCloseButtonClick,position:'above',shown:this.state.shown,width:'normal'},h._("You can now see who hasn't seen your post and message them if it's important.")));}});f.exports=i;},null);

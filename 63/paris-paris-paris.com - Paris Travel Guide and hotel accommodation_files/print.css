@@ -1,0 +1,48 @@
+body { font-family : verdana; font-size : 13px; margin : 0; padding : 0; text-align : left;}
+#title { float : left; font-weight : bold; font-size : 18px; clear : both;	}
+#baseline { float : left; clear : both;}
+div#header-container{ background : none; }
+#maincontent-container { text-align : left; margin-top : 20px; }
+h2 { margin : 0; padding : 0; font-size : 14px; }
+h1 { margin : 0; padding : 0; font-size : 16px; }
+div.object-left { float : left; margin : 10px 10px 10px 0;}
+div.attribute-caption { font-size : 11px; }
+div.imagelegende{ font-size : 11px; }
+div.clear { clear : both; }
+a { color : black; text-decoration : none; }
+#logo,
+#logomask,
+#titleshadow ,
+#baselineshadow,
+div#zoom ,
+div#contextnav ,
+div#toolbar,
+div#topmenu,
+div#topmenu_n1,
+div#rightcol-container,
+div#adsRightColumn,
+div#footer ,
+div#map,
+div#addthis,
+div#content_tools ,
+div.quote-container,
+#maincontent-container div .block-tw-top-place ,
+#map-container,
+#placeThumbs,
+#placeComments,
+#placeContrib,
+span.spamfilter,		
+div#adsTopBanner,
+#toptools-container,
+#community_buttons_full, 
+#page-tools, 
+#community_buttons_line,
+.block-link{display : none;}
+
+
+
+
+
+
+
+

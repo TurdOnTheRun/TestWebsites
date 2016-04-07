@@ -1,0 +1,395 @@
+
+<!-- saved from url=(0145)https://s0.2mdn.net/ads/richmedia/studio/pv2/39226134/20151016082803775/index.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=OvPsKyborG&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<style>
+			body{
+				margin: 0;
+				font-family: Arial, Helvetica, sans-serif;
+				color: #FFF;
+				font-size: 1em;
+			}
+			#container-inner {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				background-color: #a2d9f3;
+			}
+			#container-dc {
+				position: relative;
+				width: 298px;
+				height: 248px;
+				overflow: hidden;
+				border: 1px #000 solid;	
+				display: none;
+				opacity: 0;
+				cursor: none;
+			}
+			#bg {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 300px;
+				height: 380px;
+				background-color: #2870c4;
+				cursor: pointer;
+			}
+			#logo {
+				position: absolute;
+				left: 22px;
+				top: 165px;
+				cursor: pointer;
+			}
+			#logo-arrow {
+				position: absolute;
+				background-image: url("img/init-load/logo-arrow.png");
+				left: 0px;
+				top: 0px;
+				width: 62px;
+				height: 69px;
+			}
+			#logo-arrow-hold {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 62px;
+				height: 69px;
+				overflow: hidden;
+			}
+			#logo-bar1 {
+				position: absolute;
+				background-image: url("img/init-load/logo-bar1.png");
+				left: 0px;
+				top: 0px;
+				width: 62px;
+				height: 69px;
+			}
+			#logo-bar2 {
+				position: absolute;
+				background-image: url("img/init-load/logo-bar2.png");
+				left: 0px;
+				top: 0px;
+				width: 62px;
+				height: 69px;
+			}
+			#logo-bar3 {
+				position: absolute;
+				background-image: url("img/init-load/logo-bar3.png");
+				left: 0px;
+				top: 0px;
+				width: 62px;
+				height: 69px;
+			}
+			#logo-circle {
+				position: absolute;
+				background-image: url("img/init-load/logo-circle.png");
+				left: 0px;
+				top: 0px;
+				width: 62px;
+				height: 0px;
+				overflow: hidden;
+			}
+			#logo-date {
+				position: absolute;
+				background-image: url("img/init-load/logo-date.png");
+				left: 0px;
+				top: 0px;
+				width: 62px;
+				height: 69px;
+			}
+			#logo-copy-bottom-hold {
+				position: absolute;
+				left: 79px;
+				top: 195px;
+				width: 78px;
+				height: 12px;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			#logo-copy-bottom {
+				position: absolute;
+				background-image: url("img/init-load/logo-copy-bottom.png");
+				left: 0px;
+				top: 0px;
+				width: 78px;
+				height: 12px;
+				cursor: pointer;
+			}
+			#logo-copy-top-hold {
+				position: absolute;
+				left: 79px;
+				top: 182px;
+				width: 138px;
+				height: 14px;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			#logo-copy-top {
+				position: absolute;
+				background-image: url("img/init-load/logo-copy-top.png");
+				left: 0px;
+				top: 0px;
+				width: 138px;
+				height: 14px;
+				cursor: pointer;
+			}
+			#lockup {
+				position: absolute;
+				top: 164px;
+				right: 0px;
+				width: 92px;
+				cursor: pointer;
+			}
+			#lockup-top {
+				position: absolute;
+				background-image: url("img/init-load/lockup-top.png");
+				left: 0px;
+				top: 0px;
+				width: 92px;
+				height: 44px;
+				cursor: pointer;
+			}
+			#lockup-bottom {
+				position: absolute;
+				background-image: url("img/init-load/lockup-bottom.png");
+				right: 0px;
+				top: 44px;
+				width: 66px;
+				height: 43px;
+				cursor: pointer;
+			}
+			#cta {
+				position: absolute;
+				background-image: url("img/cta.svg");
+				left: -1px;
+				top: -10px;
+				width: 300px;
+				height: 250px;
+				pointer-events: none;
+			}
+			#copy-main {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 300px;
+				height: 250px;
+				pointer-events: none;
+				background-image: url("img/copy-main.svg");
+				opacity: 0;
+			}
+			#copy-top {
+				position: absolute;
+				top: 15px;
+				left: 0px;
+				width: 300px;
+				height: 250px;
+				pointer-events: none;
+				background-image: url("img/copy-top.svg");
+				opacity: 0;
+			}
+			.full-img{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 300px;
+				height: 600px;
+				pointer-events: none;
+			}
+			#target {
+				background-image: url("img/target-200x200.svg");
+				position: absolute;
+				top: -100px;
+				left: -100px;
+				width: 200px;
+				height: 200px;
+				opacity: 0;
+				pointer-events: none;
+			}
+			#mainscene {
+				position: absolute;
+				left: 0px;
+				top: 200px;
+			}
+			.mainscene-nested {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			#mainscene1 {
+			}
+			#mainscene2 {
+			}
+			.ef-cancer-cell {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 300px;
+				height: 200px;
+				background-image: url("img/cell-cancer-300x200.svg");
+				opacity: 0;
+			}
+			.ef-healthy-cell {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 200px;
+				height: 200px;
+				background-image: url("img/cell-healthy-200x200.svg");
+				opacity: 0;
+			}
+			#cancer-cell{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 300px;
+				height: 200px;
+				cursor: none;
+			}
+			#cancer-cell-base{
+				position: absolute;
+				background-image: url("img/cell-cancer-300x200.svg");
+				top: -100px;
+				left: -150px;
+				width: 300px;
+				height: 200px;
+			}
+			#healthy-cell{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 200px;
+				height: 200px;
+				pointer-events: none;
+			} 
+			#healthy-cell-base{
+				position: absolute;
+				background-image: url("img/cell-healthy-200x200.svg");
+				top: -100px;
+				left: -100px;
+				width: 200px;
+				height: 200px;
+				pointer-events: none;
+			}
+			.hide {
+				display: none;
+			}
+			#bottom-click {
+				position: absolute;
+				background-color: red;
+				width: 100%;
+				height: 220px;
+				bottom: 0px;
+				opacity: 0;
+				cursor: pointer;
+			}
+			#cta-click {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 300px;
+				height: 250px;
+				cursor: pointer;
+				opacity: 0;
+			}
+			#replay {
+				background-image: url("img/replay.svg");
+				position: absolute;
+				width: 50px;
+				height: 15px;
+				right: 6px;
+				top: 6px;
+				opacity: 0;
+				cursor: pointer;
+			}
+			#endframe{
+				cursor: pointer;
+			}
+		</style>
+	<link rel="stylesheet" type="text/css" href="./main.css"><script type="text/javascript" src="./main.js"></script></head>
+	<body>
+		<!-- content -->
+		<div id="container-dc" style="display: block; opacity: 1; visibility: inherit;">
+			<div id="container-inner">
+				<div id="mainscene" style="transform: translate3d(0px, -125px, 0px) scale(0.7, 0.7);">
+					<div id="mainscene1" class="mainscene-nested" style="transform: translate3d(-731.22px, 0px, 0px);"><div class="" id="cancer-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0819082, -0.493245, 0, 0, 0.493245, -0.0819082, 0, 0, 0, 0, 1, 0, 147.95, 56.35, 0.1, 1);"><div id="cancer-cell-base"></div></div><div class="" id="cancer-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(0.0977256, 0.490357, 0, 0, -0.490357, 0.0977256, 0, 0, 0, 0, 1, 0, 360.15, -63.1, 0.1, 1);"><div id="cancer-cell-base"></div></div><div class="" id="cancer-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(0.466432, 0.180114, 0, 0, -0.180114, 0.466432, 0, 0, 0, 0, 1, 0, 568.3, 22.4, 0.1, 1);"><div id="cancer-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0602982, -0.198232, 0, 0, 0.198232, -0.0602982, 0, 0, 0, 0, 1, 0, 237.25, -68, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0539037, -0.200066, 0, 0, 0.200066, -0.0539037, 0, 0, 0, 0, 1, 0, 49.35, -139.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0724992, -0.194102, 0, 0, 0.194102, -0.0724992, 0, 0, 0, 0, 1, 0, 328.85, 164.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0610549, -0.198, 0, 0, 0.198, -0.0610549, 0, 0, 0, 0, 1, 0, 297.45, -141.8, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.057912, -0.198942, 0, 0, 0.198942, -0.057912, 0, 0, 0, 0, 1, 0, 194.55, -120.05, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0414037, -0.203021, 0, 0, 0.203021, -0.0414037, 0, 0, 0, 0, 1, 0, 17.9, 5.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0492831, -0.201254, 0, 0, 0.201254, -0.0492831, 0, 0, 0, 0, 1, 0, 56.9, -64.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0748087, -0.193224, 0, 0, 0.193224, -0.0748087, 0, 0, 0, 0, 1, 0, 352.45, 75.35, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.128453, -0.162579, 0, 0, 0.162579, -0.128453, 0, 0, 0, 0, 1, 0, 666.2, -68.2, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0917344, -0.185787, 0, 0, 0.185787, -0.0917344, 0, 0, 0, 0, 1, 0, 472.65, 52.8, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0878457, -0.187657, 0, 0, 0.187657, -0.0878457, 0, 0, 0, 0, 1, 0, 432.25, 145.1, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.068849, -0.195427, 0, 0, 0.195427, -0.068849, 0, 0, 0, 0, 1, 0, 460.25, -139.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0807941, -0.190799, 0, 0, 0.190799, -0.0807941, 0, 0, 0, 0, 1, 0, 410, 27.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0744734, -0.193353, 0, 0, 0.193353, -0.0744734, 0, 0, 0, 0, 1, 0, 528.8, -140.5, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0956736, -0.183789, 0, 0, 0.183789, -0.0956736, 0, 0, 0, 0, 1, 0, 575.4, -86.25, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.107009, -0.177429, 0, 0, 0.177429, -0.107009, 0, 0, 0, 0, 1, 0, 543.2, 130.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.124592, -0.165556, 0, 0, 0.165556, -0.124592, 0, 0, 0, 0, 1, 0, 630.4, 120.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.133446, -0.158506, 0, 0, 0.158506, -0.133446, 0, 0, 0, 0, 1, 0, 666.2, 63.15, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.108665, -0.176419, 0, 0, 0.176419, -0.108665, 0, 0, 0, 0, 1, 0, 666.2, -139.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.085036, -0.188946, 0, 0, 0.188946, -0.085036, 0, 0, 0, 0, 1, 0, 480.25, -43.8, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0547999, -0.199822, 0, 0, 0.199822, -0.0547999, 0, 0, 0, 0, 1, 0, 134.35, -90.75, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0601101, -0.198289, 0, 0, 0.198289, -0.0601101, 0, 0, 0, 0, 1, 0, 235.45, 141.1, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0468588, -0.201832, 0, 0, 0.201832, -0.0468588, 0, 0, 0, 0, 1, 0, 134.35, 158.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0363358, -0.203989, 0, 0, 0.203989, -0.0363358, 0, 0, 0, 0, 1, 0, 38.25, 120.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0636781, -0.197172, 0, 0, 0.197172, -0.0636781, 0, 0, 0, 0, 1, 0, 264.5, 26.45, 0.1, 1);"><div id="healthy-cell-base"></div></div></div>
+					<div id="mainscene2" class="mainscene-nested" style="transform: translate3d(-61.22px, 0px, 0px);"><div class="" id="cancer-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.499994, -0.00236244, 0, 0, 0.00236244, -0.499994, 0, 0, 0, 0, 1, 0, 147.95, 56.35, 0.1, 1);"><div id="cancer-cell-base"></div></div><div class="" id="cancer-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.153618, -0.475817, 0, 0, 0.475817, -0.153618, 0, 0, 0, 0, 1, 0, 360.15, -63.1, 0.1, 1);"><div id="cancer-cell-base"></div></div><div class="" id="cancer-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(0.124732, 0.484192, 0, 0, -0.484192, 0.124732, 0, 0, 0, 0, 1, 0, 568.3, 22.4, 0.1, 1);"><div id="cancer-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.156592, -0.135686, 0, 0, 0.135686, -0.156592, 0, 0, 0, 0, 1, 0, 237.25, -68, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(0.0912094, -0.186045, 0, 0, 0.186045, 0.0912094, 0, 0, 0, 0, 1, 0, 49.35, -139.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.115669, -0.171908, 0, 0, 0.171908, -0.115669, 0, 0, 0, 0, 1, 0, 328.85, 164.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.199803, -0.0548676, 0, 0, 0.0548676, -0.199803, 0, 0, 0, 0, 1, 0, 297.45, -141.8, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.166534, -0.123281, 0, 0, 0.123281, -0.166534, 0, 0, 0, 0, 1, 0, 194.55, -120.05, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(0.0613073, -0.197922, 0, 0, 0.197922, 0.0613073, 0, 0, 0, 0, 1, 0, 17.9, 5.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(0.0370965, -0.203852, 0, 0, 0.203852, 0.0370965, 0, 0, 0, 0, 1, 0, 56.9, -64.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.144741, -0.148263, 0, 0, 0.148263, -0.144741, 0, 0, 0, 0, 1, 0, 352.45, 75.35, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.202094, -0.0457154, 0, 0, 0.0457154, -0.202094, 0, 0, 0, 0, 1, 0, 666.2, -68.2, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.173735, -0.112907, 0, 0, 0.112907, -0.173735, 0, 0, 0, 0, 1, 0, 472.65, 52.8, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.147298, -0.145722, 0, 0, 0.145722, -0.147298, 0, 0, 0, 0, 1, 0, 432.25, 145.1, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.204561, -0.0329642, 0, 0, 0.0329642, -0.204561, 0, 0, 0, 0, 1, 0, 460.25, -139.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.169838, -0.118689, 0, 0, 0.118689, -0.169838, 0, 0, 0, 0, 1, 0, 410, 27.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.205371, -0.0274679, 0, 0, 0.0274679, -0.205371, 0, 0, 0, 0, 1, 0, 528.8, -140.5, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.201868, -0.0467045, 0, 0, 0.0467045, -0.201868, 0, 0, 0, 0, 1, 0, 575.4, -86.25, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.168166, -0.121045, 0, 0, 0.121045, -0.168166, 0, 0, 0, 0, 1, 0, 543.2, 130.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.17879, -0.104719, 0, 0, 0.104719, -0.17879, 0, 0, 0, 0, 1, 0, 630.4, 120.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.188841, -0.0852693, 0, 0, 0.0852693, -0.188841, 0, 0, 0, 0, 1, 0, 666.2, 63.15, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.206088, -0.0214364, 0, 0, 0.0214364, -0.206088, 0, 0, 0, 0, 1, 0, 666.2, -139.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.19277, -0.0759717, 0, 0, 0.0759717, -0.19277, 0, 0, 0, 0, 1, 0, 480.25, -43.8, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0863616, -0.188344, 0, 0, 0.188344, -0.0863616, 0, 0, 0, 0, 1, 0, 134.35, -90.75, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.08447, -0.1892, 0, 0, 0.1892, -0.08447, 0, 0, 0, 0, 1, 0, 235.45, 141.1, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.0294923, -0.20509, 0, 0, 0.20509, -0.0294923, 0, 0, 0, 0, 1, 0, 134.35, 158.95, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(0.0281944, -0.205273, 0, 0, 0.205273, 0.0281944, 0, 0, 0, 0, 1, 0, 38.25, 120.4, 0.1, 1);"><div id="healthy-cell-base"></div></div><div class="" id="healthy-cell" style="transform-origin: 0% 0% 0px; transform: matrix3d(-0.129223, -0.161967, 0, 0, 0.161967, -0.129223, 0, 0, 0, 0, 1, 0, 264.5, 26.45, 0.1, 1);"><div id="healthy-cell-base"></div></div></div>
+				</div>
+				<svg id="target" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale(0.55, 0.55); visibility: inherit;"></svg>
+				<div class="hide" id="cancer-cell"><div id="cancer-cell-base"></div></div>
+				<div class="hide" id="healthy-cell"><div id="healthy-cell-base"></div></div>
+				<div id="bg" style="visibility: inherit; opacity: 1;"></div>
+				<div id="endframe">
+					<div class="ef-cancer-cell" id="ef-cancercell" style="left: 0px; top: 0px; visibility: inherit; opacity: 1; transform: matrix3d(0.472708, -0.0833511, 0, 0, 0.0833511, 0.472708, 0, 0, 0, 0, 1, 0, 0, -26, 0, 1);"></div>
+					<div class="ef-healthy-cell" id="ef-healthycell1" style="left: 0px; top: 0px; visibility: inherit; opacity: 1; transform: matrix3d(-0.09, 0.155885, 0, 0, -0.155885, -0.09, 0, 0, 0, 0, 1, 0, 20, -60, 0, 1);"></div>
+					<div class="ef-healthy-cell" id="ef-healthycell2" style="left: 0px; top: 0px; visibility: inherit; opacity: 1; transform: matrix3d(0.11, -0.190526, 0, 0, 0.190526, 0.11, 0, 0, 0, 0, 1, 0, 120, -60, 0, 1);"></div>
+					<div class="ef-healthy-cell" id="ef-healthycell3" style="left: 0px; top: 0px; visibility: inherit; opacity: 1; transform: matrix3d(0.0347296, -0.196962, 0, 0, 0.196962, 0.0347296, 0, 0, 0, 0, 1, 0, 145, 0, 0, 1);"></div>
+					<div class="ef-healthy-cell" id="ef-healthycell4" style="left: 0px; top: 0px; visibility: inherit; opacity: 1; transform: matrix3d(0.216658, 0.0382026, 0, 0, -0.0382026, 0.216658, 0, 0, 0, 0, 1, 0, -64, -48, 0, 1);"></div>
+				</div>
+				<div id="lockup" style="visibility: inherit; opacity: 1; transform-origin: 100% 0% 0px; transform: translate3d(0px, 0px, 0px) scale(0.65, 0.65);">
+					<div id="lockup-bottom" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+					<div id="lockup-top" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+				</div>
+				<div id="logo" style="visibility: inherit; opacity: 1; transform-origin: 0% 0% 0px; transform: translate3d(0px, 0px, 0px) scale(0.82, 0.82);">
+					<div id="logo-arrow-hold" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+						<div id="logo-arrow" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+					</div>
+					<div id="logo-bar1" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+					<div id="logo-bar2" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+					<div id="logo-bar3" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+					<div id="logo-date" style="visibility: inherit; opacity: 1;"></div>
+					<div id="logo-circle" style="visibility: inherit; opacity: 1; height: 69px;"></div>
+				</div>
+				<div id="logo-copy-bottom-hold">
+					<div id="logo-copy-bottom" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+				</div>
+				<div id="logo-copy-top-hold">
+					<div id="logo-copy-top" style="visibility: inherit; opacity: 1; transform: translate3d(0px, 0px, 0px);"></div>
+				</div>
+				<svg id="copy-main" style="opacity: 0; visibility: hidden;"></svg>
+				<svg id="copy-top" style="transform: translate3d(0px, 120px, 0px); visibility: inherit; opacity: 1;"></svg>
+				<svg id="cta" style="opacity: 1; visibility: inherit;"></svg>
+				<div id="cta-click" style="display: block; visibility: inherit; opacity: 1;"></div>
+				<svg id="replay" style="visibility: inherit; opacity: 1;"></svg>
+			</div>
+		</div>
+		<!-- scripts -->
+		<script src="./Enabler_01_86.js"></script>
+        <script src="./custom.elements.min.js"></script>
+        <script src="./ytclosebutton_min.js"></script>
+		<script src="./CSSPlugin.min.js"></script>
+		<script src="./EasePack.min.js"></script>
+		<script src="./TweenLite.min.js"></script>
+		<script language="javascript">
+			if (Enabler.isInitialized()){
+				init();
+			} else {
+				Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+			}
+			function init(){
+				if(Enabler.isPageLoaded()){
+					politeInit();
+				}else{
+					Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+				} 
+			}
+			function politeInit(){		
+				//css
+				var extCSS=document.createElement('link');
+				extCSS.setAttribute("rel", "stylesheet");
+				extCSS.setAttribute("type", "text/css");
+				extCSS.setAttribute("href", Enabler.getUrl("css/main.css")); 
+				document.getElementsByTagName("head")[0].appendChild(extCSS);
+				//js
+				var extJavascript = document.createElement('script');
+				extJavascript.setAttribute('type', 'text/javascript');
+				extJavascript.setAttribute('src', Enabler.getUrl('js/main.js')); 
+				document.getElementsByTagName('head')[0].appendChild(extJavascript);
+			}
+		</script>
+	
+
+
+
+
+
+
+</body></html>

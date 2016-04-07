@@ -1,0 +1,21 @@
+document.write("<!--*\n");
+document.write("var aolAdId=\"8006928|24946893\";\n");
+document.write("var aolSize=\"728|90\";\n");
+document.write("var aolFormat=\"3rdPartyRichMediaRedirect\";\n");
+document.write("var aolGUID=\"1460005543|31527735802712964\";\n");
+document.write("*-->\n");
+document.write("<ins class='dcmads' style='display:inline-block;width:728px;height:90px'\n");
+document.write("data-dcm-placement='N3148.AOL/B9305735.128135770'\n");
+document.write("data-dcm-impression-exchange-id='aolO8006928'\n");
+document.write("data-dcm-click-tracker='http%3A//at.atwola.com/adlink%2F5113%2F3887037%2F0%2F225%2FAdId%3D8006928%3BBnId%3D1%3Bitime%3D5543324%3Bkp%3D946213%3Bnodecode%3Dyes%3Bimpref%3D14600055432810249254%3Bimprefseq%3D31527735802712964%3Bimprefts%3D1460005543%3Blink%3D'\n");
+document.write("data-dcm-rendering-mode='script'\n");
+document.write("data-dcm-https-only\n");
+document.write("data-dcm-resettable-device-id=''>\n");
+document.write("<scr"+"ipt src='//www.googletagservices.com/dcm/dcmads.js'></scr"+"ipt>\n");
+document.write("</ins>\n");
+document.write("<scr"+"ipt type=\"text/javascript\" src=\"http://aka-cdn-ns.adtechus.com/apps/205/Ad0St3Sz225Sq0V1Id24946893/extFile1.js\"></scr"+"ipt>\n");
+document.write("<div class=\"no_ugc_flag\" style=\"display:none\"></div>\n");
+
+
+
+

@@ -1,0 +1,19 @@
+
+var ftGUID_1782315="29774EE968D94E";
+var ftConfID_1782315="3211381";
+var ftParams_1782315="ftx=&fty=&ftadz=&ftscw=&ft_custom=9590217_130146525&ftOBA=1&ft_ifb=1&ft_domain=www.cnet.com&ft_referrer=http%3A%2F%2Fwww.cnet.com%2Fproducts%2Fapple-iphone-6s%2F&cachebuster=269990.03931566357";
+var ftKeyword_1782315="";
+var ftCustom_1782315="9590217_130146525";
+var ftSection_1782315="";
+var ftSegment_1782315="fe6,jnh,i4x,iiq,gwb,gwb479";
+var ftSegmentList_1782315=[{s:'fe6'},{s:'jnh'},{s:'i4x'},{s:'iiq'},{m:'c5864_dest',s:'gwb'},{m:'c5864_dm',s:'gwb479'}];
+var ftRuleMatch_1782315="0";
+var ftTimestamp_1782315="1460006003";
+var ftImp1782315 = {};
+ftImp1782315.privacy = "x";
+ftImp1782315.guidAge = "42";
+ftImp1782315.impID = "3019083BA5B5BF";
+
+
+document.write('<scr'+'ipt src="https://secure.flashtalking.com/xre/178/1782315/1372536/js/j-1782315-1372536.js" id="ftscript_m1782315" name="ftscript_m1782315"></scr'+'ipt>');
+                    

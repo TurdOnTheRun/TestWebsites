@@ -1,0 +1,12 @@
+document.write("<!--*\n");
+document.write("var aolAdId=\"8049645|25052599\";\n");
+document.write("var aolSize=\"300|600\";\n");
+document.write("var aolFormat=\"3rdPartyRichMediaRedirect\";\n");
+document.write("var aolGUID=\"1460005315|157065412205794495\";\n");
+document.write("*-->\n");
+document.write("<SCR"+"IPT language='JavaScript1.1' SRC=\"https://ad.doubleclick.net/ddm/adj/N9003.599MOVIEFONE/B9457497.129702330;sz=300x600;click=http%3A//at.atwola.com/adlink%2F5113%2F2196629%2F0%2F529%2FAdId%3D8049645%3BBnId%3D11%3Bitime%3D5315738%3Bnodecode%3Dyes%3Bimpref%3D14600053152491438555%3Bimprefseq%3D157065412205794495%3Bimprefts%3D1460005315%3Blink%3D;ord=5315738;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\">\n");
+document.write("</SCR"+"IPT>\n");
+
+
+
+

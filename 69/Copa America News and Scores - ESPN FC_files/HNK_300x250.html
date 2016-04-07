@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://s0.2mdn.net/1679522/1457639477369/HNK_300x250/HNK_300x250.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./HNK_300x250_edge.js"></script><script src="./jquery-1.7.1.min.js"></script><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="ad.size" content="width=300,height=250">
+	<title>HNK 300x250</title>
+	<title>Untitled</title>
+        <meta name="generator" content="studio_templates=4">
+	<!-- The DoubleClick Studio Enabler must be included before the edge runtime. -->
+	<script type="text/javascript" charset="utf-8" src="./Enabler.js"></script>
+<!--Adobe Edge Runtime-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script type="text/javascript" charset="utf-8" src="./edge.5.0.1.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-187896307 { visibility:hidden; }
+		#clicktag{ position: absolute; z-index: 999999;}
+    </style>
+<script>
+   AdobeEdge.loadComposition('HNK_300x250', 'EDGE-187896307', {
+    scaleToFit: "none",
+    centerStage: "none",
+    minW: "0",
+    maxW: "undefined",
+    width: "300px",
+    height: "250px"
+}, {"dom":{}}, {"dom":{}});
+</script>
+<!--Adobe Edge Runtime End-->
+
+</head>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="EDGE-187896307" style="position: relative; height: 250px; width: 300px; z-index: 0; right: auto; bottom: auto; overflow: hidden; text-overflow: clip; background-color: rgb(255, 255, 255); background-size: 100% 100%;">
+		<a href="javascript:window.open(window.clickTag)">
+			<img src="./blank.png" width="300" height="250" id="clicktag" alt="">
+		</a>
+        
+        
+        
+        
+    <div id="Stage__300x250" class="Stage__300x250_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 300px; height: 250px; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-image: url(&quot;images/300x250.jpg&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage__300x250_txt" class="Stage__300x250_txt_id" style="position: absolute; margin: 0px; opacity: 1; left: 0px; top: 0px; width: 300px; height: 250px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/300x250_txt.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage__300x250_btn" class="Stage__300x250_btn_id" style="position: absolute; margin: 0px; opacity: 1; left: 0px; top: 0px; width: 300px; height: 250px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/300x250_btn.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_border" class="Stage_border_id" style="position: absolute; margin: 0px; opacity: 1; left: 0px; top: 0px; width: 298px; height: 248px; right: auto; bottom: auto; border: 1px solid rgb(102, 102, 102); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgba(192, 192, 192, 0); background-size: 100% 100%;"></div></div>
+<script type="text/javascript">
+    var clickTag = "https://www.doubleclickbygoogle.com/";
+</script>
+
+</body></html>

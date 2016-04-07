@@ -1,0 +1,5 @@
+var DISQUSWIDGETS;
+
+if (typeof DISQUSWIDGETS != 'undefined') {
+    DISQUSWIDGETS.displayCount({"text":{"and":"and","comments":{"zero":"<b class=\"b-cbox\"><\/b><b class=\"bgr-cnt\">0<\/b>","multiple":"<b class=\"b-cbox\"><\/b><b class=\"bgr-cnt\">{num}<\/b>","one":"<b class=\"b-cbox\"><\/b><b class=\"bgr-cnt\">1<\/b>"}},"counts":[{"id":"4834698 http:\/\/bgr.com\/?p=4834698","comments":24},{"id":"4834726 http:\/\/bgr.com\/?p=4834726","comments":6},{"id":"4840536 http:\/\/bgr.com\/?p=4840536","comments":19},{"id":"4843947 http:\/\/bgr.com\/?p=4843947","comments":17},{"id":"4838490 http:\/\/bgr.com\/?p=4838490","comments":320},{"id":"4833963 http:\/\/bgr.com\/?p=4833963","comments":135},{"id":"4840634 http:\/\/bgr.com\/?p=4840634","comments":21},{"id":"4842071 http:\/\/bgr.com\/?p=4842071","comments":436},{"id":"4842469 http:\/\/bgr.com\/?p=4842469","comments":12},{"id":"4833544 http:\/\/bgr.com\/?p=4833544","comments":22}]});
+}

@@ -1,0 +1,289 @@
+﻿
+/**************** MODAL STYLING DESKOP ****************/
+div#sweeps-modal.main-modal-gated-sweepstakes {
+    width: 620px;
+    /*height: 750px !important;*/
+    background-color: #fff;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    border:none;
+}
+
+.modal-image-desktop {
+    width: 620px;
+    height: 350px;
+    display: block;
+}
+
+.modal-image-mobile {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.element-padding {
+    padding: 10px;
+}
+
+.element-align-center {
+    text-align: center;
+}
+
+.gated-sweepstakes-rules {
+    padding: 0px 35px 20px 35px;
+    font:normal 400 12px/18px proxima-nova, Helvetica, Arial, sans-serif;
+}
+
+.gated-sweepstakes-rules p, .gated-optIn-text p, .gated-sweepstakes-acceptance-copy p {
+    font-size:12px !important;
+    color:#ebebeb !important;
+}
+
+.gated-optIn-text {
+    padding-left: 21px;
+}
+
+.gated-sweepstakes-optin {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.gated-sweepstakes-optin-content {
+    float: left;
+}
+
+.gated-sweepstakes-optin-content input[type='checkbox'] {
+    margin: 3px 0 0 0; 
+}
+
+.gated-sweepstakes-acceptance-copy {
+    padding: 0px 35px 0 35px;
+    font:normal 400 12px/18px proxima-nova, Helvetica, Arial, sans-serif;
+}
+
+.gated-sweepstakes-enter-sweepstakes {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px 10px 0px 10px;
+}
+
+.gated-sweepstakes-no-thank-you {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.close-button {
+    cursor:pointer;
+    background-image:url('../../../static/img/Close_btn.png'); 
+    width:23px; 
+    height:23px;
+    box-shadow: 5px 0px 9px -3px #000000;
+    position:absolute;
+    top:-12px;
+    right:-12px;
+    border-radius:18px;
+}
+
+.top-title-desktop {
+    display: inline;
+    color:#929292;
+    font: normal bold 16px/19px proxima-nova, Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+}
+
+.top-title-mobile {
+    display: none;
+}
+
+.gated-sweepstakes-images-container {
+    text-align: center;
+}
+
+.thank-you-modal-gated-sweepstakes {
+    background-color: white;
+    color: black;
+    height: 76px !important;
+    width: 745px !important;
+    font-family: "proxima-nova",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    padding: 30px !important;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0px;
+    right: 0px;
+}
+
+.mobile-return-link {
+    display: none;
+}
+
+.gated-sweeps-fandango-logo {
+    display: none;
+}
+
+.kill-bottom-padding {
+    padding-bottom: 0px !important;
+}
+
+.gated-sweeps-background {
+    color: white;
+    padding-bottom: 10px;
+}
+
+.sweepstake-content-main a{
+    color: #fff !important;
+}
+
+.gated-primary-headline{
+    padding: 20px 35px 0px 35px;
+    color:#ebebeb;
+    font:normal 300 28px/25px alternate-gothic-no-1-d, 'Futura Condensed', 'Arial Narrow', Arial, sans-serif;    
+}
+
+.gated-secondary-headline{
+    padding: 10px 35px 10px 35px;
+    font-style:italic !important;
+    font:400 18px/22px 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+.gated-light-gray-background{
+    background-color:#333333;
+}
+
+.gated-dark-gray-background {
+    background-color:#262626;
+}
+
+.gated-sweepstakes-no-thank-you a {
+    color:#ebebeb !important;
+    font-family: "proxima-nova", Helvetica, Arial, sans-serif; 
+    font-size: 14px; 
+    font-weight: 400;
+}
+
+a#lnkButtonEnterSweeps.btn-cta {
+    margin: 0;
+}
+
+a#lnkButtonEnterSweeps.btn-cta:hover {
+    -webkit-transition:opacity 0.3s linear;
+            transition:opacity 0.3s linear;
+    padding:15px 20px;
+}
+
+.mobile-close-button {
+    display:none;
+    cursor:pointer;
+    background-image:url('../../../static/img/Close_btn.png'); 
+    width:23px; 
+    height:23px;
+    box-shadow: 5px 0px 9px -3px #000000;
+    border-radius:18px;
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+/**************** MODAL STYLING MOBILE ****************/
+
+@media only screen and (max-width: 768px) {
+
+    .main-modal-gated-sweepstakes {
+        max-width: 720px !important;
+        width: 100% !important;
+        /*height: 855px !important;*/
+        top: 0px !important;
+    }
+
+    div#sweeps-modal .close-button {
+        margin-top: 119px;
+        margin-right: 15px;
+        display:none;
+    }
+
+    .mobile-close-button {
+        display:block;
+    }
+
+    .title-headline-container {
+        position:relative;
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+
+    .top-title-desktop {
+        display: none;
+    }
+
+    .top-title-mobile {
+        display: inline;
+        text-transform:uppercase;
+    }
+
+    .modal-image-desktop {
+        display: none;
+    }
+
+    .modal-image-mobile {
+        display: inline;
+    }
+
+    .thank-you-modal-gated-sweepstakes {
+        max-width: 720px !important;
+        width: 100% !important;
+        height: 100px !important;
+        min-height: 100px;
+        margin-top: 170px;
+    }
+
+    .mobile-return-link {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #eaeaea;
+        padding: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform:uppercase;
+    }
+
+    .gated-sweeps-fandango-logo {
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .gated-sweepstakes-optin {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px !important;
+        font-size: 12px;
+        padding-right: 25px;
+        padding-left: 25px;
+        text-align: justify;        
+    }
+
+    .gated-sweepstakes-rules {
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 11px;
+        text-align: justify;
+    }
+}

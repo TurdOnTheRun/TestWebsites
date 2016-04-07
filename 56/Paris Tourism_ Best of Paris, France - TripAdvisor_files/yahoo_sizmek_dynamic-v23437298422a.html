@@ -1,0 +1,60 @@
+
+<!-- saved from url=(0850)https://static.tacdn.com/static/page_moniker/yahoo_sizmek_dynamic-v23437298422a.html#pixelType=PAGEVIEW&curLocId=187147&geoId=187147&reqUnique=4c8a5073f7b9d5628dc90907f3d7e9f4496a7b84&userUnique=3242fb23c13a2d0b6eead6234df9577131fefd50&locale=en_US&seqId=2&geoName=Paris&geoParentId=187144&geoParentName=Ile-de-France&geoMostPop=222913&isRemarketable=false&loc1=222913&productIds=["d222913enUS187147","187147enUS"]&productIdsShort=d222913enUS187147,187147enUS&trueServlet=Tourism&fbTrueServlet=P&servlet=Hotels&geoFeedBucket=medium&serverName=www.tripadvisor.com&device=Desktop&fbDevice=1&errorJS=https://static.tacdn.com/js3/remarketing-errors-c-v22262320586a.js&puid=VwXqZQokMHUAAV1QodIAAABJ&siteType=d&isMobileDevice=n&taSplit=1&tasource=OTH&geo=187147&isClickoutYN=no&criteoPartnerId=4653&ulbBucket=2&ulbScore=0.24940277326656074&countryAlpha2=US -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  </head>
+  <body>
+    <script type="text/javascript">
+      var context = {};
+      var query = window.location.hash.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+          // If first entry with this name
+        if (typeof context[pair[0]] === "undefined") {
+          context[pair[0]] = pair[1];
+          // If second entry with this name
+        } else if (typeof context[pair[0]] === "string") {
+          var arr = [ context[pair[0]], pair[1] ];
+          context[pair[0]] = arr;
+          // If third or later entry with this name
+        } else {
+          context[pair[0]].push(pair[1]);
+        }
+      }
+
+      var versaTag = {
+        id : "3560",
+        sync : 0,
+        dispType : "js",
+        ptcl : "HTTPS",
+        bsUrl : "bs.serving-sys.com/BurstingPipe"
+      };
+
+      var locationId = "";
+      if (context.pixelType === 'CLICKOUT') {
+        locationId = context.locId;
+        versaTag.activityParams = {
+          pid : context.locId,
+          OrderID : context.reqUnique,
+          Value : context.roas
+        };
+      } else {
+        var curLocId = context.curLocId;
+        var geoId = context.geoId;
+        if (curLocId === geoId) {
+          locationId = context.geoMostPop;
+        } else {
+          locationId = curLocId;
+        }
+      }
+
+      // ID of hotel for which to show dynamic ads
+      versaTag.dynamicRetargetParams = {
+          20901 : locationId
+      };
+    </script>
+    <script id="ebOneTagUrlId" src="./ebOneTag.js"></script><script type="text/javascript" src="./Serving" async=""></script>
+  
+
+</body></html>

@@ -1,0 +1,38 @@
+var om_app_pix = new Array();
+om_app_pix[0] = new Image();
+om_app_pix[0].src = "http://cm.g.doubleclick.net/pixel?google_nid=yo&google_hm=MjA2NzQxMjAwNDAz&google_sc&google_cm";
+om_app_pix[1] = new Image();
+om_app_pix[1].src = "http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1044284962/?value=0&label=6Rz1CJr54wQQooz68QM&guid=ON&script=0";
+om_app_pix[2] = new Image();
+om_app_pix[2].src = "http://ib.adnxs.com/setuid?entity=6&code=206741200403";
+om_app_pix[3] = new Image();
+om_app_pix[3].src = "http://dpm.demdex.net/ibs:dpid=22069&dpuuid=206741200403";
+om_app_pix[4] = new Image();
+om_app_pix[4].src = "http://image2.pubmatic.com/AdServer/Pug?vcode=bz0yJnR5cGU9MSZjb2RlPTI5ODkmdGw9MTU3NjgwMA==&piggybackCookie=206741200403";
+om_app_pix[5] = new Image();
+om_app_pix[5].src = "http://ad.yieldlab.net/m?dm_id=50707&ext_id=206741200403";
+om_app_pix[6] = new Image();
+om_app_pix[6].src = "http://rtb.gumgum.com/usersync?b=ada&i=206741200403";
+om_app_pix[7] = new Image();
+om_app_pix[7].src = "http://geo-um.btrll.com/v1/map/0b7563eb0d2a0f3c/206741200403/";
+om_app_pix[8] = new Image();
+om_app_pix[8].src = "http://sync.adap.tv/sync?type=gif&key=394_adaramedia_336&uid=206741200403";
+
+(function () {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+}
+_fbq.push(['addPixelId', '1145758492105333']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+
+window._fbq.push(['track', 'kv', {"key1510":"aWUwMG10bXdtYWk1aTA",
+"key10570":"aWUwMGNnZnlheG1pMDU3MA",
+"ckid":206741200403} ]);

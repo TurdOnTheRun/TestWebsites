@@ -1,0 +1,29 @@
+
+var ftGUID_1692775="29774EE968D94E";
+var ftConfID_1692775="3125859";
+var ftParams_1692775="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_referrer=http%3A%2F%2Fabcnews.go.com%2Ftopics%2Fnews%2Freporters%2Fcharlie-hebdo.htm&cachebuster=711327.1204346168";
+var ftKeyword_1692775="";
+var ftCustom_1692775="";
+var ftSection_1692775="";
+var ftSegment_1692775="fe6,jnh";
+var ftSegmentList_1692775=[{s:'fe6'},{s:'jnh'}];
+var ftRuleMatch_1692775="0";
+var ftTimestamp_1692775="1458847062";
+var ftGeoC2_1692775="us";
+var ftGeoState_1692775="ny";
+var ftGeoCity_1692775="new york";
+var ftISP_1692775="time warner cable internet llc";
+var ftSpeed_1692775="cable";
+var ftDMA_1692775="501";
+var ftLong_1692775="-73.9703";
+var ftLat_1692775="40.7996";
+var ftPostal_1692775="10025";
+var ftTimeZone_1692775="-400";
+var ftMobileCarrier_1692775="";
+var ftImp1692775 = {};
+ftImp1692775.privacy = "x";
+ftImp1692775.guidAge = "28";
+ftImp1692775.impID = "3005BD6A46047C";
+
+document.write('<scr'+'ipt src="http://cdn.flashtalking.com/xre/169/1692775/1351921/js/j-1692775-1351921.js" id="ftscript_m1692775" name="ftscript_m1692775"></scr'+'ipt>');
+                    

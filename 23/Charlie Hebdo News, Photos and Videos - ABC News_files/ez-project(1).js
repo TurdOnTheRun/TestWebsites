@@ -1,0 +1,3 @@
+ezQuery(function() {
+    
+});

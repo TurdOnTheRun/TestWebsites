@@ -1,0 +1,1 @@
+document.write('<iframe width="600" height="330" src="//www.google.com/trends/fetchComponent?hl\75en-US\46q\75agario,+agar.io\46cmpt\75q\46tz\46tz\46content\0751\46cid\75TIMESERIES_GRAPH_0\46export\0755\46w\075600\46h\075330" style="border: none;"></iframe>');

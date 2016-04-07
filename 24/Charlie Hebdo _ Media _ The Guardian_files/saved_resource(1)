@@ -1,0 +1,19 @@
+
+var ftGUID_1583374="29774EE968D94E";
+var ftConfID_1583374="0";
+var ftParams_1583374="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_referrer=http%3A%2F%2Fwww.theguardian.com%2Fmedia%2Fcharlie-hebdo&cachebuster=387971.424718899";
+var ftKeyword_1583374="";
+var ftCustom_1583374="";
+var ftSection_1583374="";
+var ftSegment_1583374="fe6,jnh";
+var ftSegmentList_1583374=[{s:'fe6'},{s:'jnh'}];
+var ftRuleMatch_1583374="0";
+var ftTimestamp_1583374="1458847116";
+var ftImp1583374 = {};
+ftImp1583374.privacy = "x";
+ftImp1583374.guidAge = "28";
+ftImp1583374.impID = "30057234F4A984";
+
+
+document.write('<scr'+'ipt src="https://secure.flashtalking.com/xre/158/1583374/1108814/js/j-1583374-1108814.js" id="ftscript_m1583374" name="ftscript_m1583374"></scr'+'ipt>');
+                    

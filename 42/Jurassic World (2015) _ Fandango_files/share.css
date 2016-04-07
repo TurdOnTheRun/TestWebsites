@@ -1,0 +1,200 @@
+.icon-share {
+  background: transparent url(../img/icon-share.svg) no-repeat center center;
+  float: left;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  background-size: 16px 15px;
+  vertical-align: middle;
+}
+
+.btn-share {
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  margin: 0 0 1em 0;
+  max-height: 40px;
+  outline: none;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s; 
+}
+
+.btn-share.is-active {
+  background: rgba(74, 167, 246, 1);
+  color: #fff;
+}
+
+.btn-share:before {
+  background: rgba(74, 167, 246, 0.6);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.btn-share:after {
+  background: rgba(74, 167, 246, 1);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-share:hover {
+  color: #fff;
+}
+
+.btn-share:hover:after,
+.btn-share:active:after {
+  width: 100%;
+}
+
+.share-panel-container {
+  width: 107px;
+  height: 109px;
+  position: absolute;
+  top: -999em;
+  left: -999em;
+  opacity: 0;
+  -webkit-transition: opacity 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+  -moz-transition: opacity 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+  -ms-transition: opacity 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+  transition: opacity 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+}
+
+.share-panel-container.is-visible {
+  -webkit-transform: translate3d(0,-13px,0);
+  -moz-transform: translate3d(0,-13px,0);
+  -ms-transform: translateY(-13px);
+  transform: translate3d(0,-13px,0);
+  opacity: 1;
+}
+
+.share-panel {
+  position: relative;
+  font-size: 0;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+  padding: 0 0 2px 0;
+}
+
+.share-panel:before {
+  content: "";
+  background: #4aa7f6;
+  height: 2px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  /* border-bottom: 1px solid #3270a5; */
+}
+
+.share-panel:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0; 
+  height: 0; 
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #4aa7f6;
+}
+
+.social-share {
+  width: 53px;
+  height: 54px;
+  background: rgba(255,255,255,0.9);
+  display: inline-block;
+  margin-bottom: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-share img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.social-share:nth-child(odd) {
+  margin-right: 1px;
+}
+
+.social-share span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* hover rollover */
+.social-share.icon-facebook span {
+  background: transparent url(../img/icon-facebook.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}
+
+.social-share.icon-facebook:hover span {
+  background: #3b5999 url(../img/icon-facebook-white.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}
+
+.social-share.icon-twitter span {
+  background: transparent url(../img/icon-twitter.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}
+
+.social-share.icon-twitter:hover span {
+  background: #5fa9dd url(../img/icon-twitter-white.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}
+
+.social-share.icon-gplus span {
+  background: transparent url(../img/icon-gplus.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}
+
+.social-share.icon-gplus:hover span {
+  background: #dd4b39 url(../img/icon-gplus-white.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}
+
+.social-share.icon-pinterest span {
+  background: transparent url(../img/icon-pinterest.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}
+
+.social-share.icon-pinterest:hover span {
+  background: #cd2129 url(../img/icon-pinterest-white.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+}

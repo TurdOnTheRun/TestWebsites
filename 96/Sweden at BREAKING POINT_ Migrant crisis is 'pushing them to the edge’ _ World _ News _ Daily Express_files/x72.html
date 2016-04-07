@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0057)http://cdn-akamai.mookie1.com/html/x72.html?country_id=us -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./jquery.min.js">
+</script>
+</head>
+<body>
+<script>
+function cookie_check(ifd,ife){ var s=ife.indexOf(ifd); if(s==-1)return ""; s+=ifd.length; var e=ife.indexOf(";",s); if(e==-1)e=ife.length; return ife.substring(s,e); }
+function encodeToHex(str){ var r=""; var e=str.length; var c=0; var h; while(c<e){ h=str.charCodeAt(c++).toString(16); r+=h; } return r; }
+
+var is_http=false;
+if(document.location.protocol == "http:") {
+	is_http=true;
+}
+
+var Xaxis_ID=cookie_check("id=",document.cookie);
+var Xaxis_7d=cookie_check("Xaxis_7d=",document.cookie);
+
+OAS_rn = new String (Math.random());
+OAS_rns = OAS_rn.substring (2, 11);
+
+
+var xaxis_full_url=document.location.toString();
+xaxis_full_url=decodeURIComponent(xaxis_full_url);
+
+var xaxis_string=xaxis_full_url.substring(xaxis_full_url.indexOf('?')+1,xaxis_full_url.length);
+
+var xaxis_string_pairs=xaxis_string.split('&');
+var country_id = '';
+
+try {
+	for (var i = 0; i < xaxis_string_pairs.length; i++) {
+		var qs=xaxis_string_pairs[i].split('=');
+
+		if(qs[0] == 'country_id') { 
+			country_id=qs[1].toLowerCase();
+		} 
+	}
+} catch (e) {}
+
+if(country_id = '') {
+	country_id = 'us';
+}
+
+// Send AppNexus our ID
+var APN_url='https://secure.adnxs.com/mapuid?member=364&user=';
+var APNPixel=new Image();
+APNPixel.src=APN_url+Xaxis_ID;
+
+// Get AppNexus  ID
+var get_an=new Image();
+get_an.src='//secure.adnxs.com/getuid?//odr.mookie1.com/t/v2/sync?tagid=V2_2083&src.visitorID=$UID';
+
+// Send BK our ID
+var send_bk=new Image(1,1);
+send_bk.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=https://stags.bluekai.com/site/4048?BK_SWAP_DEST=4048%26id=[MOOKIE]';
+
+// Send Exelate our ID. 
+var send_exelate=new Image(1,1);
+send_exelate.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=https://loadm.exelator.com/load/?p=204%26g=211%26j=0%26buid=[MOOKIE]%26buid2=ignore';
+
+// Send DLX our ID. 
+var send_dlx=new Image(1,1);
+send_dlx.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//e.nexac.com/e/xaxis_sync.xgi?na_exid=[MOOKIE]';
+	
+// Send TTD our ID
+var send_ttd=new Image(1,1);
+send_ttd.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//match.adsrvr.org/track/cmf/generic?ttd_pid=mookie%26ttd_puid=[MOOKIE]';
+	
+// Get TTD ID
+var get_ttd=new Image(1,1);
+get_ttd.src='//match.adsrvr.org/track/cmf/generic?ttd_pid=mookie-ps&ttd_tpi=1';
+	
+// Get TubeMogul ID
+var get_tubemogul=new Image(1,1);
+get_tubemogul.src='//rtd.tubemogul.com/upi/pid/NoUd35C3?redir=https%3A%2F%2Fgmtdmp.mookie1.com%2Ftagr%2Fv1%2Fsync%3Finst%3DNA%26tagid%3D01110100%26src.platformID%3DTM%26src.visitorID%3D%24%7BTM_USER_ID%7D%26appdist%3D%7Btrb%7D';
+	
+// Send X+1 our ID
+var send_xplusone=new Image(1,1);
+send_xplusone.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=https://msec.xp1.ru4.com/cx?_i=53518239%26_u=[MOOKIE]';
+
+// Send LiveRamp our ID
+var send_liveramp=new Image(1,1);
+send_liveramp.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//idsync.rlcdn.com/360897.gif?partner_uid=[MOOKIE]';
+
+// Send Millenial Media our ID
+var send_mm=new Image(1,1);
+//send_mm.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//pixel.jumptap.com/e/v1/pixel/networks/1/partners/17225/users/[MOOKIE]';
+
+// Send TapAd our ID
+var send_tapad=new Image(1,1);
+send_tapad.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//tapestry.tapad.com/tapestry/1?ta_partner_id=935%26ta_partner_did=[MOOKIE]%26ta_add_audiences='+country_id+'%26ta_format=png';
+
+// Send Drawbridge our ID
+var send_drawbridge=new Image(1,1);
+send_drawbridge.src='//p.adsymptotic.com/d/px?_pid=13188&_psign=467c3569e71876326338beac82e08d0f&_puuid='+Xaxis_ID;
+
+// Send Adara our ID
+var send_adara=new Image(1,1);
+//send_adara.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=https://tag.yieldoptimizer.com/ps/imp?pxid=3%26exid=[MOOKIE]';
+
+// Send IB our ID - File distribution
+var send_ib=new Image(1,1);
+send_ib.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//global.ib-ibi.com/image.sbxx?go=252404%26pid=370%26xid=[MOOKIE]';
+
+// Send Jivox our ID
+//var send_jivox=new Image(1,1);
+//send_jivox.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//as.jivox.com/dsync/usersync.php?partnerId=turbine%26partnerUserId=[MOOKIE]';
+
+// Send comScore our ID
+var send_comscore=new Image(1,1);
+send_comscore.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//sb.scorecardresearch.com/p?c1=9%26c2=13846818%26cj=1%26rn=[TS]%26c6=[MOOKIE]';
+
+// Send Adobe our ID
+var send_adobe=new Image(1,1);
+send_adobe.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//dpm.demdex.net/ibs:dpid=30862%26dpuuid=[MOOKIE]';
+
+// Get Adobe ID
+var get_adobe=new Image(1,1);
+get_adobe.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=https://dpm.demdex.net/ibs:dpid=30862%26dpuuid=[MOOKIE]%26redir=https%253A%252F%252Ft.mookie1.com%252Ft%252Fv1%252Fevent%253FmigClientId%253D7413%2526migAction%253Dsync%2526migSource%253Dmig%2526migParam1%253D${DD_UUID}';
+
+// Send Bing our ID
+var send_bing=new Image(1,1);
+send_bing.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//dps.bing.com/AI/Api/v1/UserRest.svc/Provider/0F97D0BF-2CCF-46A4-8E15-3A90E85D77D6/User/[MOOKIE]/gif?meta=XAxis';
+
+// Get DBM ID
+var get_dbm=new Image(1,1);
+get_dbm.src='//cm.g.doubleclick.net/pixel?google_nid=xaxis_dmp&google_cm';
+
+// Get Jivox ID
+var get_jivox=new Image(1,1);
+get_jivox.src='//pxl.jivox.com/tags/sync/usync.php?px=7m7ikAOR';
+
+// Get the Yahoo ID every 30 days
+
+var Xaxis_thirty_day=cookie_check("x30d=",document.cookie);
+if(Xaxis_thirty_day.length == 0 ) {
+	var get_yahoo=new Image(1,1);
+	get_yahoo.src='//cms.analytics.yahoo.com/cms?partner_id=XAXIS';
+	// Set cookie with marker to do it all again in 1 day
+	var oas_d=new Date();
+	var oas_m=oas_d.getTime();
+	oas_d.setTime(oas_m+86400000*30);
+	document.cookie="x30d=set;expires="+oas_d.toGMTString()+";path=/;domain=.mookie1.com";
+}
+
+// Get the DataXu ID
+var get_dataxu=new Image(1,1);
+if(!is_http) {
+	get_dataxu.src='https://i.w55c.net/ping_match.gif?st=SAH&rurl=https://t.mookie1.com/t/v1/event?migClientId=6040&migAction=synch&migSource=mig&migParam1=_wfivefivec_';
+} else {
+	get_dataxu.src='http://i.w55c.net/ping_match.gif?st=SAH&rurl=http://t.mookie1.com/t/v1/event?migClientId=6040&migAction=synch&migSource=mig&migParam1=_wfivefivec_';
+}
+
+// Get Videology ID
+var get_videology=new Image(1,1);
+get_videology.src='//sync.tidaltv.com/GenericUserSync.ashx?dpid=100';
+	
+if(is_http) {
+
+	// Send Neustar our ID
+	var send_neustar=new Image(1,1);
+	send_neustar.src='//t.mookie1.com/rsp?dnv='+OAS_rns+'&rurl=//adadvisor.net/adscores/g.pixel?sid=9201418898%26xid=[MOOKIE]';
+}
+
+// Set cookie with marker to do it all again in 30 days
+var oas_d=new Date();
+var oas_m=oas_d.getTime();
+oas_d.setTime(oas_m+86400000*30);
+document.cookie="x30d=set;expires="+oas_d.toGMTString()+";path=/;domain=.mookie1.com";
+</script>
+
+
+</body></html>

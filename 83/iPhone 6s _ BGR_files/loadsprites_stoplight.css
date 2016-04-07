@@ -1,0 +1,106 @@
+/******************************************
+Replace with your custom spritesheet name
+******************************************/
+.sprite {
+	background: url("spritesheet_stoplight.png") no-repeat;
+}
+/************************************
+ Used by unified index.html + main.js
+ DO NOT TOUCH.
+ ***********************************/
+
+/* The 5 end screen shapes */
+.triangle1 {
+	background-position: 0px 0px;
+	width: 60px;
+	height: 90px;
+	-ms-transform-origin: 15px 15px;
+	-webkit-transform-origin: 15px 15px;
+	transform-origin: 15px 15px;
+}
+.triangle2 {
+	background-position: -60px 0px;
+	width: 90px;
+	height: 90px;
+	-ms-transform-origin: 15px 15px;
+	-webkit-transform-origin: 15px 15px;
+	transform-origin: 15px 15px;
+}
+.triangle3 {
+	background-position: 0px -90px;
+	width: 150px;
+	height: 90px;
+	-ms-transform-origin: 15px 15px;
+	-webkit-transform-origin: 15px 15px;
+	transform-origin: 15px 15px;
+}
+.diamond {
+	background-position: -151px -120px;
+	width: 90px;
+	height: 90px;
+	-ms-transform-origin: 45px 45px;
+	-webkit-transform-origin: 45px 45px;
+	transform-origin: 45px 45px;
+}
+.parallelogram {
+	background-position: -150px 0px;
+	width: 60px;
+	height: 120px;
+	-ms-transform-origin: 15px 15px;
+	-webkit-transform-origin: 15px 15px;
+	transform-origin: 15px 15px;
+}
+.logoColored {
+	background-position: -5px -180px;
+	left: 18px;
+	top: 218px;
+	width: 63px;
+	height: 22px;
+	opacity: 0;
+}
+.logoWhite {
+	background-position: -80px -180px;
+	left: 18px;
+	top: 218px;
+	width: 63px;
+	height: 22px;
+	opacity: 0;
+}
+/* The 4 CTA button shapes */
+.ctaTriLeft {
+	background-position: -400px -15px;
+	left: -28px;
+	top: 145px;
+	width: 53px;
+	height: 53px;
+	opacity: 0;
+}
+.ctaPara {
+	background-position: -240px -15px;
+	left: -2px;
+	top: 129px;
+	width: 152px;
+	height: 54px;
+	opacity: 0;
+}
+.ctaTriRight {
+	background-position: -400px -75px;
+	left: 136px;
+	top: 104px;
+	width: 53px;
+	height: 53px;
+	opacity: 0;
+}
+.ctaRect {
+	background-position: -240px -75px;
+	left: 14px;
+	top: 129px;
+	width: 152px;
+	height: 54px;
+	opacity: 0;
+}
+/***********************************
+ PLACE YOUR CUSTOM SPRITE CSS BELOW
+ .sampleName is safe to delete
+ **********************************/
+ 

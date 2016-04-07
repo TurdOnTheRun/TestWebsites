@@ -1,0 +1,79 @@
+var mboxCurrent=mboxFactories.get('default').get('target-global-mbox',0);mboxCurrent.setEventTime('include.start');document.write('<div style="visibility: hidden; display: none" id="mboxImported-default-target-global-mbox-0">');/* Offer id: 19749*/ ;_mboxDefaultContentOffer = function() {
+  this._onLoad = function() {};
+};
+
+_mboxDefaultContentOffer.prototype.setOnLoad = function(_onLoad) {
+  this._onLoad = _onLoad;
+};
+
+_mboxDefaultContentOffer.prototype.shouldAppendClickHandler = function(_mbox, _clickHandlerDiv, _defaultDiv) {
+  var _result = _mbox.getFetcher && _mbox.getFetcher().getType() === 'ajax';
+  _result = _result && _mbox.getDiv() === _mbox.getDefaultDiv();
+  _result = _result && _clickHandlerDiv !== null;
+  _result = _result && _clickHandlerDiv !== _defaultDiv;
+
+  return  _result;
+};
+
+_mboxDefaultContentOffer.prototype.appendClickHandlerIfRequired = function(_mbox, _clickHandlerDiv, _defaultDiv) {
+  if (this.shouldAppendClickHandler(_mbox, _clickHandlerDiv, _defaultDiv)) {
+    _defaultDiv.appendChild(_clickHandlerDiv);
+  }
+};
+
+_mboxDefaultContentOffer.prototype.onClickHandler = function(_mbox) {
+  // just use _mbox.getName() when everyone is on mboxVersion >= 21
+  var _mboxName = _mbox.getName ? _mbox.getName() : _mbox.id;
+  var _clickDiv = document.getElementById('mboxClick-' + _mboxName);
+
+  if (_clickDiv !== null) {
+    _clickDiv.onclick();
+  }
+};
+
+_mboxDefaultContentOffer.prototype.show = function(_mbox) {
+  try {
+    var _self = this;
+    var _defaultDiv = _mbox.getDefaultDiv();
+
+    if (_defaultDiv === null) {
+      return 0;
+    }
+
+    _defaultDiv.onclick = function () {
+      _self.onClickHandler(_mbox);
+    };
+
+    var _clickHandlerDiv = _mbox.getDiv();
+    var _result = _mbox.hide();
+
+    if (_result === 1) {
+      this.appendClickHandlerIfRequired(_mbox, _clickHandlerDiv, _defaultDiv);
+      this._onLoad();
+    }
+
+    return _result;
+  } catch (e) {
+    var _errorMessage = "Default content offer caused exception: " + e;
+
+    if (_mbox.setMessage) {
+      _mbox.setMessage(_errorMessage);
+    } else {
+      _mbox.setError(_errorMessage);
+    }
+
+    return 0;
+  }
+};
+
+(function(){
+  var shouldShowMbox = mboxCurrent.getFetcher && mboxCurrent.getFetcher().getType() === 'ajax';
+
+  mboxCurrent.setOffer(new _mboxDefaultContentOffer());
+
+  if (shouldShowMbox) {
+    mboxCurrent.show();
+  }
+}());
+
+document.write('<!-- Offer Id: 22956  --><script type=\"text\/javascript\">\r\n\/\/5050 = \'\';\r\n\/\/campaign = \'TS: CR40150 -  iPhone SE – Generic vs. Promo - 2016-04-04 - (LIVE)\';\r\n\/\/recipe = \'Experience A\';\r\n<\/script>');document.write('<!-- Offer Id: 271866  --><script type=\"text\/javascript\">\r\n\/*mboxHighlight+ (1of2) v1 ==> Response Plugin*\/\r\nwindow.ttMETA=(typeof(window.ttMETA)!=\'undefined\')?window.ttMETA:[];window.ttMETA.push({\'mbox\':\'target-global-mbox\',\'campaign\':\'TS: CR40150 -  iPhone SE \u2013 Generic vs. Promo - 2016-04-04 - (LIVE)\',\'experience\':\'Experience A\',\'offer\':\'Default Content\'});window.ttMBX=function(x){var mbxList=[];for(i=0;i<ttMETA.length;i++){if(ttMETA[i].mbox==x.getName()){mbxList.push(ttMETA[i])}}return mbxList[x.getId()]}\r\nif (\'undefined\' != typeof window.jQuery) {\r\n    jQuery(document).trigger({type:\"ttMETALoaded\"});\r\n}\r\n<\/script>');document.write('<!-- Offer Id: 26753  --><script type=\"text\/javascript\">\r\n\/*T&T to SiteCat v4.1 ==>Response Plugin*\/\r\nwindow.s_tnt = window.s_tnt || \'\', tntVal = \'75198:0:0,\';\r\nif (window.s_tnt.indexOf(tntVal) == -1) {\r\n    window.s_tnt += tntVal\r\n}\r\nif (typeof mboxCurrent != \'undefined\' && mboxCurrent.getFetcher().getType() == \'ajax\'  && (window.s && window.s.tl)) {\r\n   var ltv = s.linkTrackVars;\r\n   var lte = s.linkTrackEvents;\r\n   s.linkTrackVars = \'None\';\r\n   s.linkTrackEvents = \'None\';\r\n   s.tl(\'TnT\', \'o\', \'TnT\');\r\n   s.linkTrackVars = ltv;\r\n   s.linkTrackEvents = lte;\r\n}\r\n\r\n\/******old version ************\/\r\n\/\/if (typeof(s_tnt) == \'undefined\') {\r\n\/\/var s_tnt = \'\';\r\n\/\/}\r\n\/\/s_tnt += \'75198:0:0,\';\r\n\/********************\/\r\n\r\n\/\/------\r\n\/\/You are in this campaign  = TS: CR40150 -  iPhone SE – Generic vs. Promo - 2016-04-04 - (LIVE);\r\n\/\/You are in this recipe = Experience A;\r\n\/\/user.VisitedCorePage     = ;\r\n\/\/user.geocountry              = ;\r\n\r\nfunction readCookie(name) {\r\n        var nameEQ = name + \"=\";\r\n        var ca = document.cookie.split(\';\');\r\n        for (var i = 0; i < ca.length; i++) {\r\n          var c = ca[i];\r\n          while (c.charAt(0) == \' \') c = c.substring(1, c.length);\r\n          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);\r\n        }\r\n        return null;\r\n      } \r\n \r\nfunction tntForesee()\r\n  {\r\n    var foreseeCookie = readCookie(\'fsr.s\');\r\n    if (foreseeCookie && FSR && FSR.CPPS) {   \r\n      \/\/ <![CDATA[\r\n    \/\/\'TS: CR40150 -  iPhone SE – Generic vs. Promo - 2016-04-04 - (LIVE):Experience A\';\r\n    FSR.CPPS.set(\'campaign_name\',\'TS: CR40150 -  iPhone SE – Generic vs. Promo - 2016-04-04 - (LIVE)\');\r\n    FSR.CPPS.set(\'campaign_recipe_name\',\'Experience A\');\r\n    \/\/ ]]>\r\n    }\r\n  }\r\n  \/\/window.onload=tntForesee;\r\n\r\n<\/script>\r\n\r\n');document.write('</div>');mboxCurrent.setEventTime('include.end');mboxFactories.get('default').get('target-global-mbox',0).loaded();_AT.applyWhenReady([{"action": "trackClick","clickTrackId": "3.75198.57365","selector": "#why-verizon > SECTION.iso-section:eq(0) > DIV.row:eq(0) > DIV.col--4-12:eq(0) > A.btn-primary--large:eq(0)"},{"action": "trackClick","clickTrackId": "4.75198.57365","selector": "#myBtn"},{"action": "trackClick","clickTrackId": "32767.75198.57365","selector": "#pageWrapper > SECTION.section:eq(1) > DIV.hero:eq(0) > DIV.hero-container:eq(0) > DIV.hero-wrapper:eq(0) > DIV.hero-slide:eq(2) > DIV.hero-slide-wrapper:eq(0) > DIV.hero-slide-leftSection:eq(0) > A.secondaryCTA:eq(0)"}]);

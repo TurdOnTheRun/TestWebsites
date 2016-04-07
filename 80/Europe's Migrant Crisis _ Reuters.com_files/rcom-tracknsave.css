@@ -1,0 +1,584 @@
+.trackAndSaveInfo {
+	padding: 10px;
+	background: #F3F3F3;
+	margin: 10px 20px 0 0;
+}
+
+/* .saveTrack:hover {	text-decoration: underline; } */
+
+.saveTrack {
+	position: absolute;
+	display: block;
+	height: 30px;
+	width: 49px;
+	padding: 6px 0 0 0;
+	overflow: hidden;
+	float: left;
+	background: transparent url("http://s2.reutersmedia.net/resources_v2/images/bg_save.gif") top left no-repeat;
+	vertical-align: center;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	color: #2083A6;
+	text-transform: uppercase;
+	opacity: 0.01;
+	-moz-opacity: 0.01;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+	filter: alpha(opacity=1);
+	z-index: 16777265;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box
+}
+
+.saveTrack.saved .hrefClone {
+	font-weight: normal;
+	color: #CCC;
+}
+
+.saveTrack.saved .hrefClone:hover {
+	text-decoration: none;
+}
+
+#activeTopicChannels .availableTopic {
+	float: left;
+	width: 160px;
+	font-size: 12px;
+	margin: 0 0 4px 0;
+	position: relative;
+}
+
+#activeTopicChannels div.availableTopic span.removeTopic {
+	position: absolute;
+	top: 2px;
+	right: 0;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#activeTopicChannels {
+	float: left;
+	width: 160px;
+	margin: 10px 0;
+}
+
+#availableTopics .channel {
+	float: left;
+	width: 110px;
+	font-size: 10px;
+	font-weight: normal;
+	color: #999;
+}
+
+#availableTopics ul li {
+	width: 555px !important;
+}
+
+#availableTopics ul li a {
+	font-size: 12px;
+	float: left;
+	width: 350px;
+}
+
+#availableTopics {
+	height: 350px;
+	width: 555px;
+	float: left;
+/*	overflow: auto; */
+	margin: 10px 10px 0 0;
+	padding-right: 10px;
+	border-right: 1px dotted #CCC;
+	position: relative;
+	overflow: hidden;
+}
+
+#availableTopics ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 350px;
+	width: 565px;
+	overflow: auto;
+}
+
+#linkChecker a {
+	height: 10px;
+	overflow: hidden;
+}
+
+#linkChecker a:visited {
+	display: none;
+}
+
+#linkChecker {
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	top: -100px;
+	left: -100px;
+	overflow: hidden;
+}
+
+#myAvailableTopics {
+	margin: 0 0 10px 0;
+	float: left;
+	min-height: 266px;
+	height: auto !important;
+	height: 266px;
+}
+
+#topicList01, #topicList02 {}
+
+ul.topicPagination {
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 0 20px;
+    width: 100%;
+}
+ul.topicPagination li {
+	display: block;
+	float: left;
+	margin: 0;
+    padding: 4px 0;
+}
+ul.topicPagination li a{
+	margin: 0 4px;
+	outline:none;
+}
+ul.topicPagination li.current{
+	background-color: #ccc;
+	padding: 4px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+ul.topicPagination li.current a{
+	color: #FFF;
+}
+
+#savedItems ul li .assettype {
+	font-size: 9px;
+	font-weight: normal;
+	color: #000;
+	text-transform: uppercase;
+}
+
+#savedItems ul li .changeDown {
+	color: #A00;
+}
+
+#savedItems ul li .changeUp {
+	color: #090;
+}
+
+#savedItems ul li .companyChange {
+	float: right;
+	width: 100px;
+	font-weight: normal;
+	text-align: right;
+}
+
+#savedItems ul li .companyName {
+	width: 210px;
+	margin: 0 10px 0 0;
+	float: left;
+	font-weight: normal;
+}
+
+#savedItems ul li .companyQuote {
+	width: 60px;
+	margin: 0 10px 0 0;
+	float: left;
+	font-weight: normal;
+	text-align: right;
+}
+
+#savedItems ul li .companyRIC {
+	width: 90px;
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+#savedItems ul li .timestamp,
+#availableTopics ul li .timestamp {
+	float: right;
+}
+
+#savedItems ul li .timestamp {
+	margin: 0 20px 0 0;
+}
+
+#savedItems ul li .removeAsset,
+#availableTopics ul li .removeAsset {
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#savedItems ul li input,
+#availableTopics ul li input {
+	float: left;
+	margin: 1px 8px 0 0;
+}
+
+#savedItems ul li,
+#availableTopics ul li {
+	padding: 8px 0;
+	margin: 0;
+	border: none;
+	/* border-bottom: 1px dotted #CCC; */
+	background: url("http://s3.reutersmedia.net/resources_v2/images/dotsHorizontal.gif") bottom left repeat-x;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	width: 490px;
+	position: relative;
+}
+
+#savedItems {
+	height: 350px;
+	width: 510px;
+	float: left;
+	/* overflow: auto; */
+	position: relative;
+	overflow: hidden;
+}
+
+#savedItems ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 340px;
+	width: 510px;
+	overflow: auto;
+}
+
+#savedItems.notLoggedIn ul li input {
+	display: none;
+}
+
+#trackbar {
+	position: fixed;
+	width: 100%;
+	z-index: 16777266;
+	zoom: 1;
+}
+
+#trackbar.active {}
+
+#trackbar.active #trackbarFlyout {
+	position: fixed;
+	bottom: 34px;
+	left: 220px;
+	padding: 8px 0 0 8px;
+	width: 548px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	z-index: 16777264;
+	background: transparent url("http://s3.reutersmedia.net/resources_v2/images/bg_dropshadow_4pm.png") top left no-repeat;
+}
+
+#trackbar.active #trackbarFlyout.topical #trackbarContent {
+	width: 770px;
+}
+
+#trackbar.active #trackbarFlyout.topical {
+	width: 778px;
+}
+
+#trackbar.active ul.tabbuttons li .trackbarCount {
+	font-size: 28px;
+	float: left;
+	font-weight: normal;
+	margin: 0 6px 0 0;
+	line-height: 0.8;
+}
+
+#trackbar.active ul.tabbuttons li a,
+#trackbar.active ul.tabbuttons li .hrefClone {
+	color: #333;
+	font-weight: bold;
+}
+
+#trackbar.active ul.tabbuttons li {
+	float: left;
+	display: inline;
+	height: 34px;
+	width: 120px;
+	padding: 7px 20px 7px 6px;
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #FFF;
+	font-size: 11px;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+#trackbar.active ul.tabbuttons li#track-login {
+	padding: 12px 20px 10px 6px;
+	width: 200px;
+	cursor: default;
+}
+
+#trackbar.active ul.tabbuttons li#tns-sponsor {
+	float: right;
+	border-left: none;
+	height: 34px;
+	width: 200px;
+	padding: 7px 10px 7px 6px;
+}
+
+#trackbar.active ul.tabbuttons li.button .buttonmask {
+	position: absolute;
+	cursor: pointer;
+	cursor: hand;
+	height: 34px;
+	width: 120px;
+}
+
+#trackbar.active ul.tabbuttons li.button {
+	cursor: pointer;
+	cursor: hand;
+	font-size: 10px;
+
+}
+#trackbar.active ul.tabbuttons li#btnRecentCompanies,#trackbar.active ul.tabbuttons li#btnMyTopics{
+	background: url("http://s1.reutersmedia.net/resources_v2/images/sprite-core2.gif") 127px -1073px no-repeat;
+}
+#trackbar.active ul.tabbuttons li.button.glowing {
+	background-image: #F2F2F2 url("http://s4.reutersmedia.net/resources_v2/images/bg_trackbar_glow.gif") top left repeat-x;
+	color: #000;
+}
+
+#trackbar.active ul.tabbuttons li.hidden {
+	display: none;
+}
+
+#trackbar.active ul.tabbuttons {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: url("http://s3.reutersmedia.net/resources_v2/images/sprite-horizontal.gif") repeat-x 0 -251px;
+	height: 34px;
+	overflow: hidden;
+	color: #333;
+}
+
+#trackbarControls .buttons {
+	float: left;
+	height: 22px;
+}
+
+#trackbarControls .label {
+	float: left;
+	margin-right: 20px;
+	margin-top: 4px;
+}
+
+#trackbarControls span {
+	font-weight: bold;
+	margin-right: 8px;
+}
+
+#trackbarControls span.hrefClone {
+	color: #999;
+}
+
+#trackbarControls {
+	float: left;
+	clear: both;
+	font-size: 11px;
+	color: #999;
+	margin: 10px 0;
+	width: 100%;
+}
+
+#trackbarControls.disabled div.label {
+	color: #DDD;
+}
+
+#trackbarControls.disabled img {
+	opacity: 0.25;
+	-moz-opacity: 0.25;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+	filter: alpha(opacity=25);
+}
+
+#trackbarControls.disabled span.hrefClone {
+	color: #DDD;
+	cursor: default;
+}
+
+#trackbarControls.disabled span.hrefClone:hover {
+	text-decoration: none;
+}
+
+#trackbarControls #trackbarButtons {
+	float: right;
+	position: relative;
+}
+
+#tnsTools {
+	position: absolute;
+	float: left;
+	width: 66px;
+	left: 494px;
+	top: 76px;
+	overflow: hidden;
+	z-index: 16777267;
+	border: 1px solid #CCC;
+	border-top: none;
+	padding-top: 5px;
+	margin: -5px 0 0 1px;
+}
+
+#tnsTools ul li {
+	float: left;
+	background: #FFF;
+	padding: 2px 4px;
+	border-bottom: 1px solid #EEE;
+	width: 64px;
+	margin: 0;
+	list-style-type: none;
+}
+
+#tnsTools ul li span {
+	font-size: 10px;
+	text-transform: uppercase;
+	line-height: 1;
+	font-weight: normal;
+}
+
+#trackbarDebug input {
+	font-size: 11px;
+}
+
+#trackbarDebug label {
+	display: block;
+}
+
+#trackbarDebug {
+	position: fixed;
+	bottom: 34px;
+	left: 10px;
+	background: #FFF;
+	padding: 2px 10px;
+	border: 5px solid #CFCFCF;
+	border-bottom: 0;
+	z-index: 16777265;
+	font-size: 11px;
+}
+
+#trackbarError {
+	background: #CC0000;
+	color: #FFF;
+	padding: 5px 10px;
+	float: left;
+	display: block;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	font-size: 11px;
+	z-index: 16777267;
+}
+
+#trackbarError.alert {
+	background: #0096C9;
+}
+
+#trackbarError.hidden {
+	display: none;
+}
+
+#trackbarFlyout #trackbarClose {
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+#trackbarFlyout #trackbarContent #activeTopicChannels h2 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #000;
+	text-transform: none;
+	border-bottom: 1px solid #CCC;
+	margin: 0 0 10px 0;
+}
+
+#trackbarFlyout #trackbarContent h1 .trackbarCount {
+	font-weight: bold;
+}
+
+#trackbarFlyout #trackbarContent h1 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #CCC;
+}
+
+#trackbarFlyout #trackbarContent h2 {
+	font-size: 10px;
+	color: #999;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#trackbarFlyout #trackbarContent {
+	padding: 10px;
+	width: 540px;
+	height: 1px;
+	background: #FFF;
+	border: 5px solid #CCC;
+	border-bottom: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+}
+
+#trackbarFlyout.topical #trackbarContent #trackbarBody #availableTopics {
+	margin-top: 70px;
+}
+
+#trackbarFlyout.topical #trackbarContent #trackbarBody #trackbarControls {
+	position: absolute;
+	top: 40px;
+	left: 12px;
+	width: 560px;
+}
+
+#trackbarFlyout.topical #trackbarContent #trackbarBody #trackbarExtras .hrefClone {
+	color: #000;
+}
+
+#trackbarFlyout.topical #trackbarContent #trackbarBody #trackbarExtras {
+	position: absolute;
+	top: 25px;
+	left: 12px;
+	width: 555px;
+	text-align: right;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#trackbarFlyout.topical #trackbarContent h1#trackbarTitle {
+	position: absolute;
+	top: 13px;
+	left: 12px;
+	width: 555px;
+}
+
+#trackbarGuard {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

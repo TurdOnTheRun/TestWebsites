@@ -1,0 +1,67 @@
+
+<!-- saved from url=(0183)http://pixel.mathtag.com/sync/iframe?mt_adid=119359&v1=479&v3=undefined&v4=undefined&s1=Paris&s2=undefined&s4=undefined&s5=New&mt_uuid=b41a55f0-a0c1-4900-bcc4-ce90d6df6a4c&no_iframe=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><script type="text/javascript">
+/**/
+var sync_4815162342 = function()
+{
+this.urls = [
+[0, "http://pixel.mathtag.com/misc/img?mop_seq=0:6&mt_cb=199389&mop_top="],
+[10025, "http://su.addthis.com/red/usync?pid=11112&puid=b41a55f0-a0c1-4900-bcc4-ce90d6df6a4c"],
+[0, "http://pixel.mathtag.com/misc/img?mop_seq=1:6&mt_cb=124794&mop_top=10025:1460005499|"],
+[10009, "http://adadvisor.net/adscores/g.pixel?sid=9211132948&_mt=b41a55f0-a0c1-4900-bcc4-ce90d6df6a4c"],
+[0, "http://pixel.mathtag.com/misc/img?mop_seq=2:6&mt_cb=777321&mop_top=10025:1460005499|10009:1460005499|"],
+[10041, "http://uip.semasio.net/mediamath/1/info?sType=sync&sExtCookieId=b41a55f0-a0c1-4900-bcc4-ce90d6df6a4c&sInitiator=external"],
+[10031, "http://beacon.krxd.net/usermatch.gif?partner=mediamath&_kdpid=8dd53e69-ae3f-4829-8f12-05cc5b57b288&mmuuid=b41a55f0-a0c1-4900-bcc4-ce90d6df6a4c"],
+[10017, "http://idsync.rlcdn.com/361087.gif?partner_uid=b41a55f0-a0c1-4900-bcc4-ce90d6df6a4c"],
+[10074, "http://cm.g.doubleclick.net/pixel?google_nid=mediamath_dmp&google_cm"],
+[0, "http://pixel.mathtag.com/misc/img?mop_seq=6:6&mt_cb=424689&check=b41a55f0-a0c1-4900-bcc4-ce90d6df6a4c&mop_top=10025:1460005499|10009:1460005499|10041:1460005499|10031:1460005499|10017:1460005499|10074:1460005499|"]
+]
+   this.progress = 0;
+   var self = this;
+   var tims = "";
+   var errs = "";
+   this.sync = function(i)
+   {
+       var e = document.createElement("img");
+       var now = new Date();
+       if (e.addEventListener)
+       {
+	   e.addEventListener('load', function() {
+	       var temp = new Date().getTime() - now.getTime(); tims += self.urls[i][0]+':'+temp+"|";
+	   });
+	   e.addEventListener('error', function() {
+	       var temp = new Date().getTime() - now.getTime(); errs += self.urls[i][0]+':'+temp+"|";
+	   });
+       }
+       e.src = self.urls[i][1];
+   }
+   this.batch = function()
+   {
+      for (var i = self.progress; i < self.urls.length; ++i)
+      {
+	 self.sync(i);
+      }
+   }
+   this.final = function()
+   {
+      var e = document.createElement("img");
+      e.src = self.urls[self.urls.length-1][1]+"&final&timings="+tims+"&errors="+errs;
+   }
+   this.some = function(howmany)
+   {
+      var count = 0;
+      for (var i = self.progress; i < self.urls.length && count < howmany; ++i)
+      {
+         self.sync(i);
+	 self.progress++;
+         count++;
+      }
+   }
+}
+var s_4815162342 = new sync_4815162342();
+s_4815162342.some(1);
+setTimeout('s_4815162342.some(2)', 1000);
+setTimeout(s_4815162342.batch, 3000);
+setTimeout(s_4815162342.final, 10000);
+</script>
+</body></html>

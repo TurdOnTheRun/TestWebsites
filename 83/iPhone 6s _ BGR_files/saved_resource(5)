@@ -1,0 +1,1504 @@
+(function($) {
+	function do_all_client_side_twitter_oembed() {	
+		if( typeof twttr === undefined ) {
+			$.getScript('//platform.twitter.com/widgets.js', function() { $( '.pending-tweet' ).each( do_client_side_twitter_oembed ); } );
+		}
+	}
+
+	// handle failed tweets or tweets that haven't been fetched yet
+	function do_client_side_twitter_oembed() {
+		var $this = $(this),
+			text,
+			url = 'https://api.twitter.com/1/statuses/oembed.json?omit_script=true&callback=?&';
+
+		// Handle instances where make_clickable gets too friendly and linkifies our Twitter URL 
+		if ( $this.has( 'a' ).length ) {
+			text = $this.find( 'a' ).first().attr( 'href' );
+		} else {
+			text = $this.text();
+		}
+			
+		// If we find an exact match, we want to fetch its content from the oembed endpoint and display it
+		if ( text.match( /^http(s|):\/\/twitter\.com(\/\#\!\/|\/)([a-zA-Z0-9_]{1,20})\/status(es)*\/(\d+)$/ ) ) {
+			url += 'url=' + encodeURIComponent( text );
+		} else if ( text.match( /^(\d+)$/ ) ) {
+			url += 'id=' + text;
+		} else {
+			return;
+		}
+
+		// Need to make a JSONP call to avoid CORS issues
+		$.getJSON( url, function( data ) {
+			if ( data.html ) {
+				$this.html( data.html );
+				$this.show();
+				twttr.widgets.load();
+			}
+		} );
+	}
+
+	$( document ).ready( do_all_client_side_twitter_oembed );
+	$( document.body ).on('post-load', do_all_client_side_twitter_oembed );
+})(jQuery);
+;
+jQuery( document.body ).on( 'post-load', function() {
+	if ( typeof twttr == 'object' && twttr.widgets && twttr.widgets.load )
+		twttr.widgets.load();
+});;
+var pmc_krux_gallery_view_triggered = pmc_krux_gallery_view_triggered || [];
+
+/**
+ * Fire Krux pixel once every 5th slide
+ * @Jira: PPT-4256
+ */
+jQuery( document ).on( 'pmc-gallery-image-rendered', function (event) {
+    var curr_img_pos = event.current == 0 ? 1 : event.current;
+    if ( 1 == curr_img_pos || 0 == ( curr_img_pos % 5) || pmc_krux_gallery_view_triggered.length == 0 ) {
+        if ( pmc_krux_gallery_view_triggered.indexOf( curr_img_pos ) < 0 ) {
+            if ( typeof krux_event_pixels != 'undefined' && typeof krux_event_pixels.gallery_slide_view != 'undefined' ) {
+                /* krux_event_pixels.gallery_slide_view is already escaped in php using esc_url_raw() */
+                ( new Image() ).src = krux_event_pixels.gallery_slide_view;
+				pmc_krux_gallery_view_triggered.push( curr_img_pos );
+            }
+        }
+    }
+});
+
+;
+/**
+ * Cookie plugin
+ *
+ * Copyright (c) 2006 Klaus Hartl (stilbuero.de)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ */
+
+/**
+ * Create a cookie with the given name and value and other optional parameters.
+ *
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Set the value of a cookie.
+ * @example $.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });
+ * @desc Create a cookie with all available options.
+ * @example $.cookie('the_cookie', 'the_value');
+ * @desc Create a session cookie.
+ * @example $.cookie('the_cookie', null);
+ * @desc Delete a cookie by passing null as value. Keep in mind that you have to use the same path and domain
+ *       used when the cookie was set.
+ *
+ * @param String name The name of the cookie.
+ * @param String value The value of the cookie.
+ * @param Object options An object literal containing key/value pairs to provide optional cookie attributes.
+ * @option Number|Date expires Either an integer specifying the expiration date from now on in days or a Date object.
+ *                             If a negative value is specified (e.g. a date in the past), the cookie will be deleted.
+ *                             If set to null or omitted, the cookie will be a session cookie and will not be retained
+ *                             when the the browser exits.
+ * @option String path The value of the path atribute of the cookie (default: path of page that created the cookie).
+ * @option String domain The value of the domain attribute of the cookie (default: domain of page that created the cookie).
+ * @option Boolean secure If true, the secure attribute of the cookie will be set and the cookie transmission will
+ *                        require a secure protocol (like HTTPS).
+ * @type undefined
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+
+/**
+ * Get the value of a cookie with the given name.
+ *
+ * @example $.cookie('the_cookie');
+ * @desc Get the value of a cookie.
+ *
+ * @param String name The name of the cookie.
+ * @return The value of the cookie.
+ * @type String
+ *
+ * @name $.cookie
+ * @cat Plugins/Cookie
+ * @author Klaus Hartl/klaus.hartl@stilbuero.de
+ */
+jQuery.cookie = function(name, value, options) {
+    if (typeof value != 'undefined') { // name and value given, set cookie
+        options = options || {};
+        if (value === null) {
+            value = '';
+            options.expires = -1;
+        }
+        var expires = '';
+        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == 'number') {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+        }
+        // CAUTION: Needed to parenthesize options.path and options.domain
+        // in the following expressions, otherwise they evaluate to undefined
+        // in the packed version for some reason...
+        var path = options.path ? '; path=' + (options.path) : '';
+        var domain = options.domain ? '; domain=' + (options.domain) : '';
+        var secure = options.secure ? '; secure' : '';
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+    } else { // only name given, get cookie
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+};;
+/*
+ *	jQuery dotdotdot 1.6.14
+ *
+ *	Copyright (c) Fred Heusschen
+ *	www.frebsite.nl
+ *
+ *	Plugin website:
+ *	dotdotdot.frebsite.nl
+ *
+ *	Dual licensed under the MIT and GPL licenses.
+ *	http://en.wikipedia.org/wiki/MIT_License
+ *	http://en.wikipedia.org/wiki/GNU_General_Public_License
+ */
+!function(t,e){function n(t,e,n){var r=t.children(),o=!1;t.empty();for(var i=0,d=r.length;d>i;i++){var l=r.eq(i);if(t.append(l),n&&t.append(n),a(t,e)){l.remove(),o=!0;break}n&&n.detach()}return o}function r(e,n,i,d,l){var s=!1,c="table, thead, tbody, tfoot, tr, col, colgroup, object, embed, param, ol, ul, dl, blockquote, select, optgroup, option, textarea, script, style",u="script";return e.contents().detach().each(function(){var f=this,h=t(f);if("undefined"==typeof f||3==f.nodeType&&0==t.trim(f.data).length)return!0;if(h.is(u))e.append(h);else{if(s)return!0;e.append(h),l&&e[e.is(c)?"after":"append"](l),a(i,d)&&(s=3==f.nodeType?o(h,n,i,d,l):r(h,n,i,d,l),s||(h.detach(),s=!0)),s||l&&l.detach()}}),s}function o(e,n,r,o,d){var c=e[0];if(!c)return!1;var f=s(c),h=-1!==f.indexOf(" ")?" ":"　",p="letter"==o.wrap?"":h,g=f.split(p),v=-1,w=-1,b=0,y=g.length-1;for(o.fallbackToLetter&&0==b&&0==y&&(p="",g=f.split(p),y=g.length-1);y>=b&&(0!=b||0!=y);){var m=Math.floor((b+y)/2);if(m==w)break;w=m,l(c,g.slice(0,w+1).join(p)+o.ellipsis),a(r,o)?(y=w,o.fallbackToLetter&&0==b&&0==y&&(p="",g=g[0].split(p),v=-1,w=-1,b=0,y=g.length-1)):(v=w,b=w)}if(-1==v||1==g.length&&0==g[0].length){var x=e.parent();e.detach();var T=d&&d.closest(x).length?d.length:0;x.contents().length>T?c=u(x.contents().eq(-1-T),n):(c=u(x,n,!0),T||x.detach()),c&&(f=i(s(c),o),l(c,f),T&&d&&t(c).parent().append(d))}else f=i(g.slice(0,v+1).join(p),o),l(c,f);return!0}function a(t,e){return t.innerHeight()>e.maxHeight}function i(e,n){for(;t.inArray(e.slice(-1),n.lastCharacter.remove)>-1;)e=e.slice(0,-1);return t.inArray(e.slice(-1),n.lastCharacter.noEllipsis)<0&&(e+=n.ellipsis),e}function d(t){return{width:t.innerWidth(),height:t.innerHeight()}}function l(t,e){t.innerText?t.innerText=e:t.nodeValue?t.nodeValue=e:t.textContent&&(t.textContent=e)}function s(t){return t.innerText?t.innerText:t.nodeValue?t.nodeValue:t.textContent?t.textContent:""}function c(t){do t=t.previousSibling;while(t&&1!==t.nodeType&&3!==t.nodeType);return t}function u(e,n,r){var o,a=e&&e[0];if(a){if(!r){if(3===a.nodeType)return a;if(t.trim(e.text()))return u(e.contents().last(),n)}for(o=c(a);!o;){if(e=e.parent(),e.is(n)||!e.length)return!1;o=c(e[0])}if(o)return u(t(o),n)}return!1}function f(e,n){return e?"string"==typeof e?(e=t(e,n),e.length?e:!1):e.jquery?e:!1:!1}function h(t){for(var e=t.innerHeight(),n=["paddingTop","paddingBottom"],r=0,o=n.length;o>r;r++){var a=parseInt(t.css(n[r]),10);isNaN(a)&&(a=0),e-=a}return e}if(!t.fn.dotdotdot){t.fn.dotdotdot=function(e){if(0==this.length)return t.fn.dotdotdot.debug('No element found for "'+this.selector+'".'),this;if(this.length>1)return this.each(function(){t(this).dotdotdot(e)});var o=this;o.data("dotdotdot")&&o.trigger("destroy.dot"),o.data("dotdotdot-style",o.attr("style")||""),o.css("word-wrap","break-word"),"nowrap"===o.css("white-space")&&o.css("white-space","normal"),o.bind_events=function(){return o.bind("update.dot",function(e,d){e.preventDefault(),e.stopPropagation(),l.maxHeight="number"==typeof l.height?l.height:h(o),l.maxHeight+=l.tolerance,"undefined"!=typeof d&&(("string"==typeof d||d instanceof HTMLElement)&&(d=t("<div />").append(d).contents()),d instanceof t&&(i=d)),g=o.wrapInner('<div class="dotdotdot" />').children(),g.contents().detach().end().append(i.clone(!0)).find("br").replaceWith("  <br />  ").end().css({height:"auto",width:"auto",border:"none",padding:0,margin:0});var c=!1,u=!1;return s.afterElement&&(c=s.afterElement.clone(!0),c.show(),s.afterElement.detach()),a(g,l)&&(u="children"==l.wrap?n(g,l,c):r(g,o,g,l,c)),g.replaceWith(g.contents()),g=null,t.isFunction(l.callback)&&l.callback.call(o[0],u,i),s.isTruncated=u,u}).bind("isTruncated.dot",function(t,e){return t.preventDefault(),t.stopPropagation(),"function"==typeof e&&e.call(o[0],s.isTruncated),s.isTruncated}).bind("originalContent.dot",function(t,e){return t.preventDefault(),t.stopPropagation(),"function"==typeof e&&e.call(o[0],i),i}).bind("destroy.dot",function(t){t.preventDefault(),t.stopPropagation(),o.unwatch().unbind_events().contents().detach().end().append(i).attr("style",o.data("dotdotdot-style")||"").data("dotdotdot",!1)}),o},o.unbind_events=function(){return o.unbind(".dot"),o},o.watch=function(){if(o.unwatch(),"window"==l.watch){var e=t(window),n=e.width(),r=e.height();e.bind("resize.dot"+s.dotId,function(){n==e.width()&&r==e.height()&&l.windowResizeFix||(n=e.width(),r=e.height(),u&&clearInterval(u),u=setTimeout(function(){o.trigger("update.dot")},100))})}else c=d(o),u=setInterval(function(){if(o.is(":visible")){var t=d(o);(c.width!=t.width||c.height!=t.height)&&(o.trigger("update.dot"),c=t)}},500);return o},o.unwatch=function(){return t(window).unbind("resize.dot"+s.dotId),u&&clearInterval(u),o};var i=o.contents(),l=t.extend(!0,{},t.fn.dotdotdot.defaults,e),s={},c={},u=null,g=null;return l.lastCharacter.remove instanceof Array||(l.lastCharacter.remove=t.fn.dotdotdot.defaultArrays.lastCharacter.remove),l.lastCharacter.noEllipsis instanceof Array||(l.lastCharacter.noEllipsis=t.fn.dotdotdot.defaultArrays.lastCharacter.noEllipsis),s.afterElement=f(l.after,o),s.isTruncated=!1,s.dotId=p++,o.data("dotdotdot",!0).bind_events().trigger("update.dot"),l.watch&&o.watch(),o},t.fn.dotdotdot.defaults={ellipsis:"... ",wrap:"word",fallbackToLetter:!0,lastCharacter:{},tolerance:0,callback:null,after:null,height:null,watch:!1,windowResizeFix:!0},t.fn.dotdotdot.defaultArrays={lastCharacter:{remove:[" ","　",",",";",".","!","?"],noEllipsis:[]}},t.fn.dotdotdot.debug=function(){};var p=1,g=t.fn.html;t.fn.html=function(n){return n!=e&&!t.isFunction(n)&&this.data("dotdotdot")?this.trigger("update",[n]):g.apply(this,arguments)};var v=t.fn.text;t.fn.text=function(n){return n!=e&&!t.isFunction(n)&&this.data("dotdotdot")?(n=t("<div />").text(n).html(),this.trigger("update",[n])):v.apply(this,arguments)}}}(jQuery);;
+/*
+ * Swipe 1.0
+ *
+ * Brad Birdsall, Prime
+ * Copyright 2011, Licensed GPL & MIT
+ *
+*/
+
+window.Swipe = function(element, options) {
+
+	// return immediately if element doesn't exist
+	if (!element) { return null; }
+
+	var _this = this;
+	this.first_run = true;
+
+	this.default_timing = [
+		'linear',                // 0
+		'ease-in',               // 1
+		'ease-out',              // 2
+		'ease-in-out',           // 3
+		'cubic-bezier(0,1,1,0)', // 4
+		'cubic-bezier(0.350, 0.135, 0.610, 0.960)', // 5
+		'cubic-bezier(0.25, 0.1, 0.25, 1)', // 6 -- webkit default -- also our default, this is nice
+		'cubic-bezier(0, .96, .57, .93)', // 7 playing
+
+		'cubic-bezier(0.550, 0.085, 0.680, 0.530)',   // 9 easeInQuad
+		'cubic-bezier(0.550, 0.055, 0.675, 0.190)',   // 10 easeInCubic
+		'cubic-bezier(0.895, 0.030, 0.685, 0.220)',   // 11 easeInQuart
+		'cubic-bezier(0.755, 0.050, 0.855, 0.060)',   // 12 easeInQuint
+		'cubic-bezier(0.470, 0.000, 0.745, 0.715)',   // 13 easeInSine
+		'cubic-bezier(0.950, 0.050, 0.795, 0.035)',   // 14 easeInExpo
+		'cubic-bezier(0.600, 0.040, 0.980, 0.335)',   // 15 easeInCirc
+		'cubic-bezier(0.600, -0.280, 0.735, 0.045)',  // 16 easeInBack
+
+		'cubic-bezier(0.250, 0.460, 0.450, 0.940)',   // 17 easeOutQuad
+		'cubic-bezier(0.215, 0.610, 0.355, 1.000)',   // 18 easeOutCubic
+		'cubic-bezier(0.165, 0.840, 0.440, 1.000)',   // 19 easeOutQuart
+		'cubic-bezier(0.230, 1.000, 0.320, 1.000)',   // 20 easeOutQuint
+		'cubic-bezier(0.390, 0.575, 0.565, 1.000)',   // 21 easeOutSine -- very fast
+		'cubic-bezier(0.190, 1.000, 0.220, 1.000)',   // 22 easeOutExpo
+		'cubic-bezier(0.075, 0.820, 0.165, 1.000)',   // 23 easeOutCirc
+		'cubic-bezier(0.175, 0.885, 0.320, 1.275)',   // 24 easeOutBack
+
+		'cubic-bezier(0.455, 0.030, 0.515, 0.955)',   // 25 easeInOutQuad
+		'cubic-bezier(0.645, 0.045, 0.355, 1.000)',   // 26 easeInOutCubic
+		'cubic-bezier(0.770, 0.000, 0.175, 1.000)',   // 27 easeInOutQuart
+		'cubic-bezier(0.860, 0.000, 0.070, 1.000)',   // 28 easeInOutQuint
+		'cubic-bezier(0.445, 0.050, 0.550, 0.950)',   // 29 easeInOutSine
+		'cubic-bezier(1.000, 0.000, 0.000, 1.000)',   // 30 easeInOutExpo
+		'cubic-bezier(0.785, 0.135, 0.150, 0.860)',   // 31 easeInOutCirc
+		'cubic-bezier(0.680, -0.550, 0.265, 1.550)',  // 32 easeInOutBack
+
+		''
+	];
+
+	// retrieve options
+	var default_options = {
+		speed               : 300,
+		transition_timing   : this.default_timing[6],
+		callback            : function() {},
+		auto                : 0,
+		min_swipe_width     : 0.3,
+		start_slide         : 0,
+		el_class            : 'swipe-el'
+	};
+
+	this.options = jQuery.extend( {}, default_options, options || {} );
+	this.index = this.options.start_slide;
+	this.delay = this.options.auto;
+
+	// debug
+	//this.options.transition_timing = this.default_timing[6];
+	//this.speed = 300;
+	//jQuery('.section-break-reviews .title h3').html( 'speed: {0}, timing: {1}'.format(this.speed, this.options.transition_timing) );
+	//jQuery('.section-break-reviews .title h3').click(function() {
+	//	window.location.reload(true);
+	//});
+
+	this.container = jQuery(element); // the wrapper around our UL
+	this.element = this.container.find('ul').eq(0); // the slide pane - typically the UL
+
+	// trigger slider initialization
+	this.setup();
+
+	// begin auto slideshow
+	this.begin();
+
+	// add event listeners
+	if (this.element[0].addEventListener) {
+		if( jQuery.support.touch ) {
+			this.element[0].addEventListener('touchstart', this, false);
+			this.element[0].addEventListener('touchmove', this, false);
+			this.element[0].addEventListener('touchend', this, false);
+		}
+		this.element[0].addEventListener('webkitTransitionEnd', this, false);
+		this.element[0].addEventListener('msTransitionEnd', this, false);
+		this.element[0].addEventListener('oTransitionEnd', this, false);
+		this.element[0].addEventListener('transitionend', this, false);
+
+		if( jQuery.debounce ) {
+			jQuery(window).resize( jQuery.debounce( 500, function() { _this.setup.apply(_this); } ) );
+			//jQuery(window).resize( jQuery.debounce( 500, jQuery.proxy( this.setup, this ) );
+		} else {
+			jQuery(window).resize( function() { _this.setup.apply(_this); } );
+		}
+	}
+
+};
+
+Swipe.prototype = {
+
+	setup: function() {
+		if( !BGR.isMobile() ) {
+			if( this.element.data('swipe-init') ) {
+				// unset our CSS transitions
+				this.set_css( 'transition', '' );
+				this.element.width('');
+				this.element.data('swipe-init', 0);
+			}
+			return;
+		}
+
+		this.set_css( 'transform', 'translate3d(0,0,0)', this.container );
+		this.set_css( 'transition-timing-function', this.options.transition_timing );
+		this.set_css( 'transition-duration', this.options.speed + 'ms' );
+		this.set_css( 'transition-property', 'transform', false, true ); // we need vendor prefixes for the transform property property
+		this.element.data('swipe-init', 1);
+
+		/*
+		// @change Corey Gilmore 2012-09-28 this would be ideal, but we need to account for changes in orientation and other things that affect width
+		// return immediately if their are less than two slides
+		if (this.length < 2) return null;
+		*/
+		// determine width of each slide
+		//this.width = ("getBoundingClientRect" in this.container) ? this.container.getBoundingClientRect().width : this.container.offsetWidth;
+		this.width = this.container.width();
+
+		// return immediately if measurement fails
+		if(!this.width) { return null; }
+
+		// hide slider element but keep positioning during setup
+		//this.container.style.visibility = 'hidden';
+		this.container.css('visibility', 'hidden');
+
+		//jQuery(this.element).css('-webkit-backface-visibility', 'hidden')
+		this.set_css( 'backface-visibility', 'hidden' );
+
+		this.calculate_widths();
+
+		// set start position and force translate to remove initial flickering
+		this.slide(this.index, 0);
+
+		// show slider element
+		//this.container.style.visibility = 'visible';
+		this.container.css('visibility', 'visible');
+
+	},
+
+	calculate_widths: function() {
+		var previous_options = {}, clone_count = 0, new_clones = 0;
+
+		this.slides = jQuery('li', this.container);
+
+		if( this.first_run ) {
+			this.slides.addClass( this.options.el_class );
+			this.slides.each( function(ix, el) {
+				jQuery(el).data('swipe-index', ix);
+			});
+		}
+
+		this.length = this.slides.length;
+
+		if( this.slides.length > 1 ) {
+			// @change Corey Gilmore 2012-12-03 use widest slide -- account for left/right margins variance based on first/last child
+			this.options.slide_width = Math.max( this.slides.eq(0).outerWidth(true), this.slides.eq(1).outerWidth(true) );
+		} else {
+			this.options.slide_width = this.slides.eq(0).outerWidth(true);
+		}
+		this.options.container_width = this.container.width();
+		this.options.visible_elements = Math.round( this.options.container_width / this.options.slide_width , 0 ); // elements per page
+		this.options.margin_width = ( this.slides.outerWidth(true) - this.slides.outerWidth() ) * (this.options.visible_elements - 1); // need to account for this in the offset
+		this.options.page_width = this.options.slide_width * this.options.visible_elements;
+
+		this.true_length = Math.ceil(this.slides.length / this.options.visible_elements);
+
+		// @todo Corey Gilmore 2012-09-28 Add a check against total width here, we want 100% for anything other that's not using our mobile stylesheet
+		//this.element.style.width = (this.slides.length * this.options.slide_width) + 'px';
+		this.element.width(this.slides.length * this.options.slide_width);
+
+		this.first_run = false;
+
+	},
+
+	slide: function(index, duration) {
+		// fallback to default speed
+		if (duration == undefined) {
+				duration = this.options.speed;
+		}
+
+		// set duration speed (0 represents 1-to-1 scrolling)
+		this.set_css( 'transition-duration', duration + 'ms' );
+
+		// translate to given index position
+		var transform_x = -(index * this.options.page_width);
+		this.element.css({
+			'-webkit-transform' : 'translate(' + transform_x + 'px, 0)',
+			'-ms-transform'     : 'translateX(' + transform_x + 'px)',
+			'-moz-transform'    : 'translate(' + transform_x + 'px, 0)',
+			'-o-transform'      : 'translateX(' + transform_x + 'px)',
+			'transform'         : 'translateX(' + transform_x + 'px)'
+		});
+
+		// set new index to allow for expression arguments
+		this.index = index;
+		
+		// reset transition-duration 
+		this.set_css( 'transition-duration', this.options.speed + 'ms' );
+
+	},
+
+	set_css: function(prop, val, el, prefix_val) {
+		var map = {};
+		el = el || this.element;
+
+		if( prefix_val ) {
+			map['-webkit-'+prop] = '-webkit-'+val;
+			map['-ms-'+prop]     = '-ms-'+val;
+			map['-moz-'+prop]    = '-moz-'+val;
+			map['-o-'+prop]      = '-o-'+val;
+			map[prop]            = val;
+		} else {
+			map['-webkit-'+prop] = val;
+			map['-ms-'+prop]     = val;
+			map['-moz-'+prop]    = val;
+			map['-o-'+prop]      = val;
+			map[prop]            = val;
+		}
+
+		jQuery(el).css( map );
+	},
+
+
+	getPos: function() {
+		// return current index position
+		return this.index;
+	},
+
+	prev: function(delay) {
+		// cancel next scheduled automatic transition, if any
+		this.delay = delay || 0;
+		clearTimeout(this.interval);
+
+		// if not at first slide
+		if( this.index == 0 ) {
+			this.slide(this.true_length-1, this.options.speed);
+		} else {
+			this.slide(this.index-1, this.options.speed);
+		}
+	},
+
+	next: function(delay) {
+		// cancel next scheduled automatic transition, if any
+		this.delay = delay || 0;
+		clearTimeout(this.interval);
+
+		if( this.index < this.true_length - 1 ) {
+				this.slide(this.index+1, this.options.speed); // if not last slide
+		} else {
+			this.slide(0, this.options.speed); //if last slide return to start
+		}
+	},
+
+	begin: function() {
+		var _this = this;
+
+		this.interval = (this.delay)
+			? setTimeout(function() {
+				_this.next(_this.delay);
+			}, this.delay)
+			: 0;
+	},
+
+	stop: function() {
+		this.delay = 0;
+		clearTimeout(this.interval);
+	},
+
+	resume: function() {
+		this.delay = this.options.auto || 0;
+		this.begin();
+	},
+
+	handleEvent: function(e) {
+		switch (e.type) {
+			case 'touchstart': this.onTouchStart(e); break;
+			case 'touchmove': this.onTouchMove(e); break;
+			case 'touchend': this.onTouchEnd(e); break;
+			case 'webkitTransitionEnd':
+			case 'msTransitionEnd':
+			case 'oTransitionEnd':
+			case 'transitionend': this.transitionEnd(e); break;
+			//case 'resize': this.setup(); break;
+		}
+	},
+
+	transitionEnd: function(e) {
+		if (this.delay) { this.begin(); }
+		this.element.trigger('swipe-transitionend', [this, this.index, this.slides[this.index]]);
+		this.options.callback(e, this.index, this.slides[this.index]);
+	},
+
+	onTouchStart: function(e) {
+		this.start = {
+			// get touch coordinates for delta calculations in onTouchMove
+			pageX: e.touches[0].pageX,
+			pageY: e.touches[0].pageY,
+
+			// set initial timestamp of touch sequence
+			time: Number( new Date() )
+		};
+
+		// used for testing first onTouchMove event
+		this.isScrolling = undefined;
+
+		// reset deltaX
+		this.deltaX = 0;
+
+		// set transition time to 0 for 1-to-1 touch movement
+		this.set_css( 'transition-duration', '0ms' );
+
+		e.stopPropagation();
+	},
+
+	onTouchMove: function(e) {
+		// ensure swiping with one touch and not pinching
+		if(e.touches.length > 1 || e.scale && e.scale !== 1) return;
+
+		this.deltaX = e.touches[0].pageX - this.start.pageX;
+
+		// determine if scrolling test has run - one time test
+		if ( typeof this.isScrolling == 'undefined') {
+			this.isScrolling = !!( this.isScrolling || Math.abs(this.deltaX) < Math.abs(e.touches[0].pageY - this.start.pageY) );
+		}
+
+		// if user is not trying to scroll vertically
+		if (!this.isScrolling) {
+
+			// prevent native scrolling
+			e.preventDefault();
+
+			// cancel slideshow
+			clearTimeout(this.interval);
+
+			// increase resistance if first or last slide
+			this.deltaX =
+				this.deltaX /
+					( (!this.index && this.deltaX > 0               // if first slide and sliding left
+						|| this.index == this.true_length - 1              // or if last slide and sliding right
+						&& this.deltaX < 0                            // and if sliding at all
+					) ?
+					( Math.abs(this.deltaX) / this.options.page_width + 1 )      // determine resistance level
+					: 1 );                                          // no resistance if false
+
+			// translate immediately 1-to-1
+			//this.element.style.MozTransform = this.element.style.webkitTransform = 'translate3d(' + (this.deltaX - this.index * this.options.page_width) + 'px,0,0)';
+			var transform_x = (this.deltaX - this.index * this.options.page_width);
+			// @todo Corey Gilmore 2012-09-29 should this be translate3d? Probably not b/c of performace issues on iOS6?
+			this.element.css({
+				'-webkit-transform' : 'translate(' + transform_x + 'px, 0)',
+				'-ms-transform'     : 'translateX(' + transform_x + 'px)',
+				'-moz-transform'    : 'translate(' + transform_x + 'px, 0)',
+				'-o-transform'      : 'translateX(' + transform_x + 'px)',
+				'transform'         : 'translateX(' + transform_x + 'px)'
+			});
+
+			e.stopPropagation();
+		}
+	},
+
+	onTouchEnd: function(e) {
+		// determine if slide attempt triggers next/prev slide
+		var isValidSlide =
+					Number(new Date()) - this.start.time < 250      // if slide duration is less than 250ms
+					&& Math.abs(this.deltaX) > 20                   // and if slide amt is greater than 20px
+					|| Math.abs(this.deltaX) > this.options.page_width * this.options.min_swipe_width,        // or if slide amt is greater than half the width
+
+		// determine if slide attempt is past start and end
+				isPastBounds =
+					!this.index && this.deltaX > 0                          // if first slide and slide amt is greater than 0
+					|| this.index == this.true_length - 1 && this.deltaX < 0;    // or if last slide and slide amt is less than 0
+
+		// if not scrolling vertically
+		if (!this.isScrolling) {
+			// call slide function with slide end value based on isValidSlide and isPastBounds tests
+			this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.options.speed );
+
+		}
+
+		e.stopPropagation();
+	}
+
+};;
+jQuery(function() {
+
+	var s,
+	bgr_ga = {
+
+			settings: {
+				click_delay: 150, // Milliseconds
+				page_type:   null,
+				home:{},
+				single:{
+					permalink: null,
+					share:{
+						twitter:  jQuery( '.article-holder .share-social-twitter .icon-social'),
+						facebook: jQuery( '.article-holder .share-social-facebook .icon-social'),
+						linkedin: jQuery( '.article-holder .share-social-linkedin .icon-social'),
+						reddit:   jQuery( '.article-holder .share-social-reddit .icon-social'),
+						amazon:   jQuery( '.article-holder .amazon-inshop-button #pmc_amzn_btn_id')
+					}
+				}
+			},
+
+		/**
+		 * Kick things off
+		 */
+		init: function() {
+			s = this.settings;
+			s.page_type        = jQuery('body').data('bgr-page');
+			s.single.permalink = window.bgr_ga_tracking.permalink;
+			s.click_delay      = parseInt(window.bgr_ga_tracking.click_delay, 10);
+
+			this.bindUIActions();
+		},
+
+		/**
+		 * Bind all UI actions here
+		 *
+		 * @since 2015-12-08
+		 * @version 2015-12-08 Javier Martinez - PMCVIP-608
+		 */
+		bindUIActions: function() {
+
+			/**
+			 * Bind single page social share icons
+			 */
+			s.single.share.twitter.on("click", function(e) {
+				bgr_ga.track_social_click( 'Twitter', 'share', s.single.permalink)
+
+			});
+
+			s.single.share.facebook.on("click", function(e) {
+				bgr_ga.track_social_click( 'Facebook', 'share', s.single.permalink)
+
+			});
+
+			s.single.share.linkedin.on("click", function(e) {
+				bgr_ga.track_social_click( 'LinkedIn', 'share', s.single.permalink)
+
+			});
+
+			s.single.share.reddit.on("click", function(e) {
+				bgr_ga.track_social_click( 'Reddit', 'share', s.single.permalink)
+
+			});
+
+			s.single.share.amazon.on("click", function(e) {
+				bgr_ga.track_social_click( 'Amazon', 'share', s.single.permalink)
+
+			});
+
+		},
+
+		/**
+		 * Fire ga social tracking
+		 * @param socialNetwork
+		 * @param socialAction
+		 * @param socialTarget
+		 */
+		track_social_click: function( socialNetwork, socialAction, socialTarget ){
+
+			if ( typeof ga != 'undefined' ) {
+				ga('send', 'social', socialNetwork, socialAction, socialTarget);
+			}
+		}
+
+	};
+
+	if ( typeof ga != 'undefined' ) {
+		bgr_ga.init();
+	}
+
+});
+;
+/*jslint browser: true, eqeq: true, forin: true, plusplus: true, regexp: true, unparam: true, sloppy: true, stupid: true, sub: true, vars: true, white: true */
+
+BGR.searchFormFocus = function () {
+	var searchForm = jQuery('#header-searchform');
+
+	// mousedown fires before blur, allowing us to prevent the flash when the blur fires
+	jQuery("#header-searchform button").on('mousedown focus active click', function (ev) {
+		searchForm.addClass('focused');
+		jQuery(this).addClass('focused');
+		jQuery("#header-searchform").data('submit-clicked', 1);
+	}).on('blur', function (ev) {
+		searchForm.removeClass('focused');
+		jQuery(this).removeClass('focused');
+	});
+
+	jQuery("#header-searchform input").on('focus', function (ev) {
+		searchForm.addClass('focused').children('button').addClass('focused');
+	}).on('blur', function (ev) {
+		// don't remove focused class if the search button was clicked
+		if( jQuery("#header-searchform").data('submit-clicked') == 1 ) {
+			jQuery("#header-searchform").data('submit-clicked', 0);
+			return;
+		}
+		searchForm.removeClass('focused').children('button').removeClass('focused');
+	});
+
+	// Make the whole form zone focus the text field.
+	jQuery("#header-searchform").on('click', function (ev) {
+		if (ev.target.nodeName !== "BUTTON") {
+			jQuery(this).find("input").focus();
+		}
+	});
+
+};
+
+BGR.gallery_slider = function() {
+	var max_height = 0;
+	if( !jQuery('#image-gallery').length ) { return; }
+	jQuery('#image-gallery li').each(function(ix, el) {
+		max_height = Math.max(max_height, jQuery(this).innerHeight());
+		jQuery(this).addClass('royalSlide');
+	});
+
+	jQuery('#image-gallery').on('rsLoadingComplete', function(e, slider) {
+		slider = jQuery('#image-gallery');
+
+		jQuery('#content div.gallery dl.gallery-item dt').click( function(e) {
+			jQuery(slider).data('royalSlider').goTo( jQuery(this).data('gallery-index') - 1 );
+			History.pushState(null, null, jQuery('a', this).attr('href'));
+			e.preventDefault();
+			return false;
+
+		});
+	});
+
+	jQuery('#image-gallery').royalSlider({
+		preloadNearbyImages: true,
+		autoScaleSlider: true,
+		autoScaleSliderHeight:max_height,
+		startSlideIndex: jQuery('#image-gallery').data('current-slide-id'),
+		imageScaleMode: 'fit',
+		controlNavEnabled: false,
+		captionAnimationEnabled: false,
+		directionNavEnabled: false,
+		beforeSlideChange:function() {
+			jQuery(".gallery-index span.num").text(this.currentSlideId + 1);
+			jQuery('.gallery-thumbs .gallery-active-item').removeClass('gallery-active-item');
+			jQuery('.gallery-thumbs .gallery-item-' + (this.currentSlideId + 1) ).addClass('gallery-active-item');
+		}
+	});
+
+	jQuery('#content .gallery-prev a').click( function(e) {
+		var slider = jQuery('#image-gallery').data('royalSlider');
+		slider.prev();
+		History.pushState(null, null, jQuery(slider.slides[slider.currentSlideId]).data('permalink'));
+		if ( typeof global_urlhashchanged !== "undefined" && jQuery.isFunction( global_urlhashchanged ) ) {
+			try {
+				global_urlhashchanged();
+			} catch ( e ) {}
+		}
+		e.preventDefault();
+		return false;
+	});
+	jQuery('#content .gallery-next a').click( function(e) {
+		var slider = jQuery('#image-gallery').data('royalSlider');
+		slider.next();
+		History.pushState(null, null, jQuery(slider.slides[slider.currentSlideId]).data('permalink'));
+		if ( typeof global_urlhashchanged !== "undefined" && jQuery.isFunction( global_urlhashchanged ) ) {
+			try {
+				global_urlhashchanged();
+			} catch ( e ) {}
+		}
+		e.preventDefault();
+		return false;
+	});
+};
+
+BGR.content_toggler = function(wrap) {
+	wrap = jQuery(wrap);
+	var bq = wrap.find('blockquote.bq-toggle');
+
+	bq.slideToggle('fast', function() {
+		if( bq.is(':hidden') ) {
+			wrap.addClass('bq-hidden').removeClass('bq-visible');
+			wrap.find('.bq-toggle-button-bottom').hide();
+			wrap.find('.bq-toggle-button').html( bq.data('bq-show') );
+		} else {
+			wrap.removeClass('bq-hidden').addClass('visible');
+			wrap.find('.bq-toggle-button-bottom').show();
+			wrap.find('.bq-toggle-button').html( bq.data('bq-hide') );
+		}
+	});
+};
+
+BGR.init_navbar = function() {
+	jQuery('#primary-nav-topics').click( function(e) {
+		e.preventDefault();
+		jQuery('#catbox').slideToggle();
+		return false;
+	});
+	// none of this applies to phones
+	if( jQuery.support.touch ) {
+		return;
+	}
+
+	var nav = jQuery('#topnav');
+	if( !nav.length ) {
+		return;
+	}
+	var the_window = jQuery(window);
+	var topmost_point = nav.offset().top;
+	var nav_height = nav.outerHeight();
+	var clip_el = jQuery('#header');
+
+	var wp = jQuery('#wpadminbar');
+	var top_pos = 0;
+	if( wp.length && wp.css('display') != 'none' ) {
+		top_pos = wp.height();
+	}
+
+	the_window.scroll(function(e) {
+		var y = the_window.scrollTop();
+		var right_edge = (e === false ? 0 : 15);
+		var stuck = nav.css('position').toLowerCase() == 'fixed';
+
+		if( y != 0 && y > (jQuery('#header').outerHeight() - nav.outerHeight()) ) {
+			if( !stuck ) {
+				nav.appendTo('body');
+				if( jQuery.support.touch ) {
+					nav.css({
+						position: 'fixed',
+						top: top_pos,
+						display: 'none'
+					});
+
+					jQuery('.header-holder').hide();
+					nav.slideDown();
+				} else {
+					nav.css({
+						position: 'fixed',
+						top: top_pos
+					});
+				}
+			}
+		} else {
+			if (stuck) {
+				nav.appendTo('#nav-tray');
+				nav.css({
+					position: 'absolute',
+					top:0
+				});
+				if( jQuery.support.touch ) {
+					jQuery('.header-holder').slideDown();
+				}
+			}
+		}
+	});
+	the_window.scroll();
+
+	jQuery(document.body).trigger('bgr.init_navbar', this);
+};
+
+BGR.init_toggle_elements = function() {
+	// wrap bq-toggle elements
+	jQuery('.post blockquote.bq-toggle').each(function() {
+		jQuery(this).wrap('<div class="bq-toggle-wrap" />');
+		jQuery(this).before('<div class="bq-toggle-button bq-toggle-button-top" />');
+		jQuery(this).after('<div class="bq-toggle-button bq-toggle-button-bottom" />');
+	});
+
+	jQuery('.post .bq-toggle-wrap').click(function(e) {
+		var wrap = jQuery(this);
+
+		if( jQuery(e.target).is('.bq-toggle-button') ) {
+			BGR.content_toggler(wrap);
+			if( jQuery(e.target).is('.bq-toggle-button-bottom') ) {
+				// if the user clicks the bottom element, scroll up to the top toggle element to avoid leaving the user stranded in the footer
+				jQuery('html').scrollTop( wrap.offset().top - 15 - jQuery('#topnav').outerHeight()); // 15 is roughly one line
+			}
+		}
+	}).each( function(i, el) { // chained to jQuery('.post .bq-toggle-wrap')
+		BGR.content_toggler(el);
+	});
+
+};
+
+
+BGR.init_tips = function() {
+	var query_params = get_query_params();
+
+	jQuery('.tip-us').click(BGR.show_tip_form);
+	jQuery('.tips-overlay, .tipus-close').click(function(e) {
+		jQuery('.tips-popup-holder').hide();
+	});
+
+	if( 'contact-form-sent' in query_params ) {
+		if( jQuery('.tipus-popup .tipus-header').length ) {
+			jQuery('.tipus-popup .tipus-header').html( jQuery('.tipus-popup .tipus-header').html().replace(/ \(<a.*<\/a>\)/, '') );
+		}
+		BGR.show_tip_form();
+	}
+};
+
+BGR.show_tip_form = function(e) {
+	jQuery('.tips-overlay').height( jQuery(document).height() );
+	jQuery('.tips-popup-holder').toggle();
+	if( e ) { e.preventDefault(); }
+	return false;
+};
+
+BGR.window_load = function()  {
+	if( jQuery('body.single').length ) {
+		jQuery(document.body).trigger('bgr.page.single', this);
+	}
+
+};
+
+BGR.init = function() {
+	BGR.init_navbar();
+	BGR.init_toggle_elements();
+	BGR.searchFormFocus();
+	BGR.init_tips();
+
+	// weather/home button clicking behavior
+
+	BGR.init_swipe();
+
+	jQuery('input, textarea').placeholder();
+
+	if( jQuery('body.hub').length ) {
+		jQuery(document.body).trigger('bgr.page.hub', this);
+	}
+
+	if( jQuery('body.home').length ) {
+		jQuery(document.body).trigger('bgr.page.home', this);
+	}
+	if( jQuery('body.single').length ) {
+		jQuery(document.body).trigger('bgr.page.single', this);
+	}
+
+	jQuery('#content .social.direct a.icon-social-facebook').click(BGR.fb_share_window);
+	jQuery('#content .social.direct a.icon-social-googleplus').click(BGR.gplus_share_window);
+	jQuery('#content .social.direct a.icon-social-linkedin').click(BGR.linkedin_share_window);
+
+	// allows us to separate out debug code
+	jQuery(document.body).trigger('bgr.init', this);
+};
+
+BGR.init_mobile_search = function() {
+	jQuery('#searchtoggle').click( function(){
+		console.log("searchtoggle click");
+		jQuery('#search').slideToggle('fast');
+	});
+};
+
+BGR.init_mobile_menu = function() {
+	jQuery('#bgr-menu').click( function() {
+		var headerHeight = jQuery('#header').outerHeight();
+		jQuery('#bgr-menu-items').css( {top: headerHeight, height: jQuery(window).height() - headerHeight - 35 });
+		jQuery('#bgr-menu-items').slideToggle('fast');
+
+
+	});
+};
+
+BGR.ellipsisize = function() {
+	if( !jQuery.fn.dotdotdot ) {
+		return;
+	}
+
+	if( jQuery('body.page-template-template_search-php').length || jQuery('body.search-no-results').length || jQuery('body.error404').length ) {
+		jQuery('.section-break-reviews .txt').dotdotdot();
+	}
+
+	if( jQuery('body.hub').length ) {
+		jQuery('.hf-hub-trending-posts.hub-trending-tablet .txt').dotdotdot();
+	}
+
+	if( jQuery('body.single').length ) {
+		jQuery('.section-break-related .txt').dotdotdot();
+		jQuery('.section-break-hitlist .txt').dotdotdot();
+	}
+
+	if( jQuery('body.home').length ) {
+		jQuery('.section-break-hitlist .txt').dotdotdot();
+		jQuery('.section-break-gamechangers .txt').dotdotdot();
+		jQuery('.section-break-reviews .txt').dotdotdot();
+	}
+
+	jQuery('.section-break-hubs .col li').dotdotdot();
+};
+
+
+jQuery(window).load(function() {
+	BGR.window_load();
+});
+
+jQuery(document).ready(function() {
+	BGR.init();
+
+	// race condition - often fontsactive will fire before jQuery loads, or at least before this function is called
+	if( jQuery('html').hasClass('wf-active') ) {
+		BGR.ellipsisize();
+		BGR.init_read_more();
+	} else {
+		jQuery(document.body).on('bgr.fontsactive', BGR.ellipsisize );
+		jQuery(document.body).on('bgr.fontsactive', BGR.init_read_more );
+	}
+});
+
+BGR.init_swipe = function() {
+	var s=0, el=0, pg=0, x=0;
+	var pages = {
+		'body.home': [
+			'.section-break-hitlist',
+			'.section-break-gamechangers',
+			'.section-break-galleries',
+			'.section-break-reviews',
+			'.section-break-galleries',
+			'.section-break-shows'
+		],
+
+		'body.hub': [
+			'.hf-hub-trending-posts.hub-trending-tablet'
+		],
+
+		'body.single': [
+			'.section-break-hitlist'
+		],
+
+		'body.search-no-results': [
+			'.section-break-reviews'
+		],
+
+		'body.error404': [
+			'.section-break-reviews'
+		],
+
+		'body.page-template-template_search-php': [
+			'.section-break-reviews'
+		]
+	};
+
+	for( pg in pages ) {
+		if( jQuery(pg).length ) {
+			for( x = 0; x < pages[pg].length; x++ ) {
+				el = jQuery('.holder', pages[pg][x]);
+				if( el.length ) {
+					el.data('swipe', new Swipe(el[0]) );
+					s = el.data('swipe');
+					jQuery( '.arrows .slider-prev', pages[pg][x] ).click( BGR.bind( s.prev, s, [0] ) );
+					jQuery( '.arrows .slider-next', pages[pg][x] ).click( BGR.bind( s.next, s, [0] ) );
+				}
+			}
+			jQuery(window).resize([pages[pg]], jQuery.throttle( 500, function(e) {
+				var x = 0;
+				if( !e.data || !e.data.length ) {
+					return;
+				}
+				var els = e.data[0];
+				for( x = 0; x < els.length; x++ ) {
+					if( !BGR.isMobile() ) {
+						jQuery('.phone-view.arrows', els[x]).hide();
+					} else {
+						// show the arrows if we have more list items than we're show
+						if( (jQuery('.holder', els[x]).css('z-index') == 'auto' && (jQuery('li', els[x]).outerWidth(true) * jQuery('li', els[x]).length) - parseFloat(jQuery('li', els[x]).css('margin-right')) > jQuery('.holder', els[x]).width() )
+							|| jQuery('li', els[x]).length > jQuery('.holder', els[x]).css('z-index')
+						) {
+							jQuery('.phone-view.arrows', els[x]).show();
+						} else {
+							jQuery('.phone-view.arrows', els[x]).hide();
+						}
+					}
+				}
+			}));
+		}
+	}
+};
+
+BGR.init_read_more = function() {
+	// credit: http://css-tricks.com/text-fade-read-more/
+	jQuery(".read-more-wrap a").click(function() {
+		var $el, $ps, $up, totalHeight, $p;
+		totalHeight = 0;
+
+		$el = jQuery(this);
+		$p  = $el.parent();
+		$up = $p.parent();
+		$ps = $up.find("p:not('.read-more')");
+
+		// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+		$ps.each(function() {
+			totalHeight += jQuery(this).outerHeight();
+		});
+
+		$up
+			.css({
+				// Set height to prevent instant jumpdown when max height is removed
+				"height": $up.height(),
+				"max-height": 9999
+			})
+			.animate({
+				"height": totalHeight
+			});
+
+		// fade out read-more
+		$p.fadeOut();
+
+		// prevent jump-down
+		return false;
+
+	});
+
+};
+
+BGR.ellipsis_reveal = function(el, opts) {
+	jQuery(el).dotdotdot({
+		after: "a.read-more"
+	});
+
+	jQuery('a.read-more').on( 'click', function(event) {
+		event.preventDefault();
+		jQuery(this).parent().trigger("destroy");
+	});
+
+	return;
+
+};
+
+BGR.fb_share_window = function(e) {
+	if( BGR.openwindow( {
+			source_el: el = jQuery(this),
+			title: 'Share on Facebook'
+		}, {
+			height: 400,
+			width: 530,
+			left: '50%',
+			top: '28%',
+			location: 1,
+			resizable: 0,
+			menubar: 0,
+			toolbar: 0,
+			personalbar: 0,
+			status: 0
+		})) {
+		e.preventDefault();
+		return false;
+	}
+};
+
+BGR.gplus_share_window = function(e) {
+	if( BGR.openwindow( {
+			source_el: el = jQuery(this),
+			title: 'Share on Google Plus'
+		}, {
+			height: 480,
+			width: 530,
+			left: '50%',
+			top: '28%',
+			location: 1,
+			resizable: 0,
+			menubar: 0,
+			toolbar: 0,
+			personalbar: 0,
+			status: 0
+		})) {
+		e.preventDefault();
+		return false;
+	}
+};
+
+BGR.linkedin_share_window = function(e) {
+	if( BGR.openwindow( {
+			source_el: el = jQuery(this),
+			title: 'Share on LinkedIn'
+		}, {
+			height: 570,
+			width: 520,
+			left: '50%',
+			top: '28%',
+			location: 1,
+			resizable: 0,
+			menubar: 0,
+			toolbar: 0,
+			personalbar: 0,
+			status: 0
+		}) ) {
+		e.preventDefault();
+		return false;
+	}
+};
+
+BGR.openwindow = function( opts, features ) {
+	var index = 0, win, features_list = [], x, el = false, url = false;
+	var screen_left, screen_top, win_left;
+
+	var default_options = {
+		source_el: false, // the element to store the window reference in, manage duplicate windows better
+		url: false, // use anchor href,
+		title: 'Window', // Default title for the window
+		reuse: true // Reuse a window with the same title?
+	};
+
+	var bool_features = [
+		'menubar',
+		'toolbar',
+		'location',
+		'personalbar',
+		'status',
+		'resizable',
+		'scrollbars',
+		'dependent',
+		'dialog',
+		'minimizable'
+	];
+
+	var default_features = {
+		// Positioning
+		left: '50%',
+		top: '25%',
+		height: 300, // screenY
+		width: 500, // screenX
+
+		// Toolbar/chrome
+		menubar: 0,
+		toolbar: 0,
+		location: 1,
+		personalbar: 0,
+		status: 0,
+
+		// Functionality
+		resizable: 1,
+		scrollbars: 1,
+		dependent: 0,
+		dialog: 0,
+		minimizable: 0 // requires dialog=yes
+	};
+
+	opts = jQuery.extend( default_options, opts );
+	features = jQuery.extend( default_features, features );
+
+	if( opts.source_el ) {
+		el = jQuery(opts.source_el);
+		if( !el.length ) {
+			el = false;
+		}
+	}
+	if ( features.left.toString().indexOf('%') ) {
+		screen_left = window.screenLeft || window.screenX;
+		features.left = features.left.replace('%', '') / 100;
+		features.left = Math.round( screen_left + (jQuery(window).width() * features.left) - (features.width / 2) );
+	}
+	features_list.push( 'left=' + features.left );
+
+	if ( features.top.toString().indexOf('%') ) {
+		screen_top = window.screenTop || window.screenY;
+		features.top = Math.round( screen_top + (jQuery(window).height() * features.top.replace('%', '') / 100) );
+	}
+	features_list.push( 'top=' + features.top );
+
+	features_list.push( 'width=' + features.width );
+	features_list.push( 'height=' + features.height );
+
+	for( x = 0; x < bool_features.length; x++ ) {
+		if( features[bool_features[x]] ) {
+			features_list.push( bool_features[x] + '=yes' );
+		}
+	}
+	if( opts.url ) {
+		url = opts.url;
+	} else if( el && !opts.url_sel ) {
+		url = el;
+	}
+
+
+	if( url ) {
+		return window.open( el.attr('href'), opts.title, features_list.join(',') );
+	}
+
+	return false;
+
+};
+;
+/*!
+ * jQuery UI Core 1.11.4
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/ui-core/
+ */
+!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):a(jQuery)}(function(a){function b(b,d){var e,f,g,h=b.nodeName.toLowerCase();return"area"===h?(e=b.parentNode,f=e.name,b.href&&f&&"map"===e.nodeName.toLowerCase()?(g=a("img[usemap='#"+f+"']")[0],!!g&&c(g)):!1):(/^(input|select|textarea|button|object)$/.test(h)?!b.disabled:"a"===h?b.href||d:d)&&c(b)}function c(b){return a.expr.filters.visible(b)&&!a(b).parents().addBack().filter(function(){return"hidden"===a.css(this,"visibility")}).length}a.ui=a.ui||{},a.extend(a.ui,{version:"1.11.4",keyCode:{BACKSPACE:8,COMMA:188,DELETE:46,DOWN:40,END:35,ENTER:13,ESCAPE:27,HOME:36,LEFT:37,PAGE_DOWN:34,PAGE_UP:33,PERIOD:190,RIGHT:39,SPACE:32,TAB:9,UP:38}}),a.fn.extend({scrollParent:function(b){var c=this.css("position"),d="absolute"===c,e=b?/(auto|scroll|hidden)/:/(auto|scroll)/,f=this.parents().filter(function(){var b=a(this);return d&&"static"===b.css("position")?!1:e.test(b.css("overflow")+b.css("overflow-y")+b.css("overflow-x"))}).eq(0);return"fixed"!==c&&f.length?f:a(this[0].ownerDocument||document)},uniqueId:function(){var a=0;return function(){return this.each(function(){this.id||(this.id="ui-id-"+ ++a)})}}(),removeUniqueId:function(){return this.each(function(){/^ui-id-\d+$/.test(this.id)&&a(this).removeAttr("id")})}}),a.extend(a.expr[":"],{data:a.expr.createPseudo?a.expr.createPseudo(function(b){return function(c){return!!a.data(c,b)}}):function(b,c,d){return!!a.data(b,d[3])},focusable:function(c){return b(c,!isNaN(a.attr(c,"tabindex")))},tabbable:function(c){var d=a.attr(c,"tabindex"),e=isNaN(d);return(e||d>=0)&&b(c,!e)}}),a("<a>").outerWidth(1).jquery||a.each(["Width","Height"],function(b,c){function d(b,c,d,f){return a.each(e,function(){c-=parseFloat(a.css(b,"padding"+this))||0,d&&(c-=parseFloat(a.css(b,"border"+this+"Width"))||0),f&&(c-=parseFloat(a.css(b,"margin"+this))||0)}),c}var e="Width"===c?["Left","Right"]:["Top","Bottom"],f=c.toLowerCase(),g={innerWidth:a.fn.innerWidth,innerHeight:a.fn.innerHeight,outerWidth:a.fn.outerWidth,outerHeight:a.fn.outerHeight};a.fn["inner"+c]=function(b){return void 0===b?g["inner"+c].call(this):this.each(function(){a(this).css(f,d(this,b)+"px")})},a.fn["outer"+c]=function(b,e){return"number"!=typeof b?g["outer"+c].call(this,b):this.each(function(){a(this).css(f,d(this,b,!0,e)+"px")})}}),a.fn.addBack||(a.fn.addBack=function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}),a("<a>").data("a-b","a").removeData("a-b").data("a-b")&&(a.fn.removeData=function(b){return function(c){return arguments.length?b.call(this,a.camelCase(c)):b.call(this)}}(a.fn.removeData)),a.ui.ie=!!/msie [\w.]+/.exec(navigator.userAgent.toLowerCase()),a.fn.extend({focus:function(b){return function(c,d){return"number"==typeof c?this.each(function(){var b=this;setTimeout(function(){a(b).focus(),d&&d.call(b)},c)}):b.apply(this,arguments)}}(a.fn.focus),disableSelection:function(){var a="onselectstart"in document.createElement("div")?"selectstart":"mousedown";return function(){return this.bind(a+".ui-disableSelection",function(a){a.preventDefault()})}}(),enableSelection:function(){return this.unbind(".ui-disableSelection")},zIndex:function(b){if(void 0!==b)return this.css("zIndex",b);if(this.length)for(var c,d,e=a(this[0]);e.length&&e[0]!==document;){if(c=e.css("position"),("absolute"===c||"relative"===c||"fixed"===c)&&(d=parseInt(e.css("zIndex"),10),!isNaN(d)&&0!==d))return d;e=e.parent()}return 0}}),a.ui.plugin={add:function(b,c,d){var e,f=a.ui[b].prototype;for(e in d)f.plugins[e]=f.plugins[e]||[],f.plugins[e].push([c,d[e]])},call:function(a,b,c,d){var e,f=a.plugins[b];if(f&&(d||a.element[0].parentNode&&11!==a.element[0].parentNode.nodeType))for(e=0;e<f.length;e++)a.options[f[e][0]]&&f[e][1].apply(a.element,c)}}});;
+
+window.pmc_sticky_rightrail = {
+
+    scrollHeight : 1000,
+    is_initialized : true,
+    $window : jQuery( window ),
+    $rightrail : '',
+    $content : '',
+    $leftrail : '',
+    $pmcGallery : '',
+    docHeight : '',
+    rightrailTop : '',
+    contentTop : '',
+    scrollLimit : '',
+    headerHeight: '',
+
+    init : function( settings ) {
+        if( typeof settings.rightrail != 'undefined' ){
+            this.$rightrail = jQuery( settings.rightrail );
+        }else{
+            this.is_initialized = false;
+            return;
+        }
+        if( typeof settings.content != 'undefined' ){
+            this.$content = jQuery( settings.content );
+        }else{
+            this.is_initialized = false;
+            return;
+        }
+        if( typeof settings.leftrail != 'undefined' ){
+            this.$leftrail = jQuery( settings.leftrail );
+        }else{
+            this.is_initialized = false;
+            return;
+        }
+        if( typeof settings.pmcGallery != 'undefined' ){
+            this.$pmcGallery = jQuery( settings.pmcGallery );
+        }else{
+            this.$pmcGallery = jQuery('#pmc-gallery');
+        }
+        if( typeof settings.headerHeight != 'undefined' ){
+            this.headerHeight = settings.headerHeight;
+        }
+        this.docHeight = this.$window.height();
+        if( typeof this.$rightrail.offset() == 'undefined' || typeof this.$content.offset() == "undefined" ){
+            this.is_initialized = false;
+        }else{
+            this.rightrailTop = this.$rightrail.offset().top;
+            this.contentTop = this.$content.offset().top;
+            this.scrollLimit = this.contentTop + this.scrollHeight;
+            this.is_initialized = true;
+        }
+
+
+    },
+    should_scroll : function(){
+
+        var rightrailHeight = this.$rightrail.outerHeight();
+        var leftRailHeight = this.$leftrail.outerHeight();
+        var is_scroll = true;
+
+        if(this.$pmcGallery.length > 0 ) {
+            is_scroll = false;
+            return is_scroll;
+        }
+        if (leftRailHeight < rightrailHeight) {
+            is_scroll = false;
+        } else if (leftRailHeight < rightrailHeight + this.scrollHeight  && leftRailHeight > rightrailHeight) {
+            var scrollDiff = leftRailHeight - rightrailHeight;
+            if (scrollDiff < 500) {
+                is_scroll = false;
+            }
+            else if (500 < scrollDiff && scrollDiff < 1000) {
+                is_scroll = true;
+                this.scrollHeight = 500;
+                this.scrollLimit = this.contentTop + this.scrollHeight;
+            } else {
+                is_scroll = true;
+                this.scrollHeight = 1000;
+                this.scrollLimit = this.contentTop + this.scrollHeight;
+            }
+        } else {
+            is_scroll = true;
+            this.scrollHeight = 1000;
+            this.scrollLimit = this.contentTop + this.scrollHeight;
+        }
+        return is_scroll;
+    },
+
+    /**
+     *
+     * @param settings : {rightrail, content, leftrail }
+     * if settings does not have rightrail, content and leftrail we don't proceed
+     * with the rest of the plugin.
+     */
+    apply_sticky_rightrail : function( settings ){
+
+        this.init( settings );
+
+        if( !this.is_initialized ){
+            return;
+        }
+        jQuery(window).scroll(function () {
+
+            var $window = jQuery(window);
+
+            var docViewTop = $window.scrollTop();
+
+            var scrollHeight = window.pmc_sticky_rightrail.scrollHeight;
+
+
+            // Calculate the rightrail top position after scrolling 20px
+            // since there can be expandable billboard ad loading after DOM ready
+            // and the top position of the might increase after DOM ready
+            if ( docViewTop <= 20 ) {
+                window.pmc_sticky_rightrail.rightrailTop = window.pmc_sticky_rightrail.$rightrail.offset().top;
+                window.pmc_sticky_rightrail.is_scroll = window.pmc_sticky_rightrail.should_scroll();
+            }
+
+            if ( !window.pmc_sticky_rightrail.is_scroll ) {
+                window.pmc_sticky_rightrail.$rightrail.removeClass('sticky-start');
+                window.pmc_sticky_rightrail.$rightrail.removeClass('sticky-end-oneT');
+                window.pmc_sticky_rightrail.$rightrail.removeClass('sticky-end-fiveH');
+                return false;
+            }
+            // LOBs with sticky header need a little padding from the docviewtop.
+            if( window.pmc_sticky_rightrail.headerHeight != ''){
+                docViewTop = docViewTop + window.pmc_sticky_rightrail.headerHeight ;
+                scrollHeight = scrollHeight + window.pmc_sticky_rightrail.headerHeight ;
+            }
+            // When Header is scrolled out of view
+            // and we see only the content on the page
+            // make the right rail sticky for the next 1000px
+            if ( (docViewTop) >= (window.pmc_sticky_rightrail.rightrailTop ) && docViewTop <= window.pmc_sticky_rightrail.scrollLimit ) {
+                window.pmc_sticky_rightrail.$rightrail.removeClass( 'sticky-end-oneT' );
+                window.pmc_sticky_rightrail.$rightrail.removeClass( 'sticky-end-fiveH' );
+                window.pmc_sticky_rightrail.$rightrail.addClass( 'sticky-start' );
+
+            } else if ( window.pmc_sticky_rightrail.$rightrail.hasClass( 'sticky-start' ) ) {
+                window.pmc_sticky_rightrail.$rightrail.removeClass( 'sticky-start' );
+                if ( 1000 === scrollHeight ) {
+                    window.pmc_sticky_rightrail.$rightrail.addClass( 'sticky-end-oneT' );
+                } else {
+                    window.pmc_sticky_rightrail.$rightrail.addClass( 'sticky-end-fiveH' );
+                }
+
+            }
+
+            // Remove Sticky class when the user scrolls back to top
+            if ( ( docViewTop ) <= window.pmc_sticky_rightrail.rightrailTop) {
+                window.pmc_sticky_rightrail.$rightrail.removeClass('sticky-start');
+                window.pmc_sticky_rightrail.$rightrail.removeClass('sticky-end-oneT');
+                window.pmc_sticky_rightrail.$rightrail.removeClass('sticky-end-fiveH');
+            }
+
+        });
+    }
+
+
+}
+
+;
+(function() {
+	var ajaxurl = window.ajaxurl || '/wp-admin/admin-ajax.php',
+		data = window.wpcomVipAnalytics,
+		dataQs, percent;
+
+	if ( typeof XMLHttpRequest === 'undefined' ) {
+		return;
+	}
+
+	if ( ! data ) {
+		return;
+	}
+
+	percent = ~~data.percentToTrack;
+	if ( percent && percent < 100 && ( ~~( ( Math.random() * 100 ) + 1 ) > percent ) ) {
+		return;
+	}
+
+	dataQs = 'action=wpcom_vip_analytics';
+
+	for ( var key in data ) {
+		if ( key === 'percentToTrack' ) {
+			continue;
+		}
+		if ( data.hasOwnProperty( key ) ) {
+			dataQs += '&' +
+				encodeURIComponent( key ).replace(/%20/g, '+' ) + '=' +
+				encodeURIComponent( data[key] ).replace(/%20/g, '+' );
+		}
+	}
+
+	function sendInfo() {
+		var xhr = new XMLHttpRequest();
+		xhr.open( 'POST', ajaxurl, true );
+		xhr.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
+		xhr.send( dataQs );
+	}
+
+	// Delay for some time after the document is ready to ping
+	function docReady() {
+		setTimeout( function() {
+			sendInfo();
+		}, 1500 );
+	}
+
+	if ( document.readyState === 'complete' ) {
+		docReady.apply();
+	}
+	else if ( document.addEventListener ) {
+		document.addEventListener( 'DOMContentLoaded', docReady, false );
+	}
+	else if ( document.attachEvent ) {
+		document.attachEvent( 'onreadystatechange', docReady );
+	}
+})();
+;

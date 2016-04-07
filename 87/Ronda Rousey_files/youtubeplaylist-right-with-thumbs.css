@@ -1,0 +1,87 @@
+/* === Use this if you want to set the playlist to the right with thumbs === */
+
+#yt_holder {
+	background: #333333;
+	border: 1px solid #333333;
+}
+
+#ytvideo .ytvideoright {
+	float: left;
+	margin-bottom:-5px;
+	margin: 0;
+	padding: 0;
+}
+
+#yt_holder .ytplayerright {
+	width: 290px;
+	float: right;
+	margin: 0;
+	padding: 0;
+	border-left: 3px solid transparent;
+}
+
+/* === Custom scrollbars IE === */
+#yt_holder .ytplayerright {
+	scrollbar-arrow-color: #333333;
+	scrollbar-base-color: #333333;
+	scrollbar-dark-shadow-color: #333333;
+	scrollbar-track-color: #333333;
+	scrollbar-face-color: #fff;
+	scrollbar-shadow-color: #333333;
+	scrollbar-highlight-color: #333333;
+	scrollbar-3d-light-color: #333333;
+}
+/* === END === */
+
+/* === Custom scrollbars Webkit === */
+#yt_holder .videoytright::-webkit-scrollbar {
+width: 7px;
+height: 7px;
+}
+
+#yt_holder .videoytright::-webkit-scrollbar-track-piece  {
+background-color: #333333;
+}
+
+#yt_holder .videoytright::-webkit-scrollbar-thumb:vertical {
+height: 30px;
+background-color: #fff;
+}
+
+#yt_holder .videoytright::-webkit-scrollbar-button:vertical:increment {
+    background-image: url('downwh.png');
+    background-repeat: no-repeat, repeat-y;
+    background-position: 0px 0px, 0 0;
+}
+
+#yt_holder .videoytright::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url('upwh.png');
+    background-repeat: no-repeat, repeat-y;
+    background-position: 0px 0px, 0 0;
+}
+/* === END === */
+/* === END === */
+
+#yt_holder .youplayer ul.videoytright {
+	width: 290px;
+}
+
+#yt_holder .youplayer ul.videoytright li img {
+	display: inline;
+}
+
+#yt_holder .youplayer .youtitle_right {
+    width: 183px;
+    margin: 0 0 -14px 87px;
+}
+
+#yt_holder .youplayer ul.videoytright li a {
+    width: 183px;
+    padding: 16px 4px 0 87px;
+}
+
+#yt_holder .youplayer ul.videoytright li a.currentvideo {
+    width: 183px;
+}
+
+/* youtube css END */

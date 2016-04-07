@@ -1,0 +1,1 @@
+_tynt_crtg_content = ''; (function(){document.cookie = '_tynt_crtg=' + escape(_tynt_crtg_content) + '; path=/; expires=Sat, 07 May 2016 04:58:25 GMT; domain=nydailynews.com';})();

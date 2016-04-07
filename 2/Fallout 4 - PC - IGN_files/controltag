@@ -1,0 +1,65 @@
+
+
+/* ControlTag Loader for Kelloggs 696bde53-e9e2-4205-84af-cde254e436fb */
+(function() {
+  // Twitter iOS client doesn't allocate enough memory for realtime segment processor, giving up for now.
+  if (/Twitter for iPhone/.test(window.navigator.userAgent || '')) {
+    return;
+  }
+
+  var debugging = /kxdebug/.test(location);
+  var log = function() {
+    // It's a flag, so if it's there, then it means debug.
+    debugging && window.console && console.log([].slice.call(arguments).join(' '));
+  };
+
+  var load = function(url, callback) {
+    log('Loading script from:', url);
+    var node = document.createElement('script');
+    node.async = true;  // This is just to be friendly.
+    node.src = url;
+
+    // Connect to both in case we're in older IE.
+    node.onload = node.onreadystatechange = function() {
+      var state = node.readyState;
+      if (!callback.done && (!state || /loaded|complete/.test(state))) {
+        log('Script loaded from:', url);
+        callback.done = true;  // Mark the callback, so we don't load it twice on accident.
+        callback();
+      }
+    };
+
+    // Fetch the first script element, so we can insert the
+    // controltag before it. There *must* be at least one
+    // script element, or this code would never be called
+    var sibling = document.getElementsByTagName('script')[0];
+    sibling.parentNode.insertBefore(node, sibling);
+  };
+
+  var config = {"app":{"name":"krux-scala-config-webservice","version":"3.4.1","schema_version":3},"confid":"It1bjVmj","context_terms":[],"publisher":{"id":982,"name":"Kelloggs","uuid":"696bde53-e9e2-4205-84af-cde254e436fb","version_bucket":"stable","version_hash":"f8e94fa978cc2569e4b4423df4245d7e"},"params":{"site_level_supertag_config":"site","recommend":true,"control_tag_pixel_throttle":100,"fingerprint":false,"channel":"display","capture_js_errors":true,"user_data_timing":"load","tag_source":false,"first_party_uid":false,"dcm_profile_ids":1164937,"client_type":"marketer","target_fingerprint":false,"context_terms":true,"dfp_premium":true,"control_tag_namespace":"kelloggs"},"prioritized_segments":[],"realtime_segments":[],"services":{"userdata":"//cdn.krxd.net/userdata/get","stats":"//apiservices.krxd.net/stats","event":"//beacon.krxd.net/event.gif","set_optout":"//apiservices.krxd.net/consumer/optout","data":"//beacon.krxd.net/data.gif","userData":"//cdn.krxd.net/userdata/get","config":"//cdn.krxd.net/controltag/{{ confid }}.js","social":"//beacon.krxd.net/social.gif","pixel":"//beacon.krxd.net/pixel.gif","um":"//apiservices.krxd.net/um","proxy":"//cdn.krxd.net/partnerjs/xdi","connector":"//connector.krxd.net/content_connector","is_optout":"//beacon.krxd.net/optout_check","impression":"//beacon.krxd.net/ad_impression.gif","log":"//jslog.krxd.net/jslog.gif","set_optin":"//apiservices.krxd.net/consumer/optin"},"site":{"id":15185,"name":"DFA"},"tags":[{"id":18562,"name":"DTC User Matching Allowed","content":"<script>\nKrux('set', 'user_matching_allowed', (function() {\n  // site ids blocked for marketers\n  var BLOCKED = {\n    '1282650': true, // GDN\n    '1268801': true  // Turner Cartoon Network\n  };\n\n  if (Krux('get', 'config').params.client_type === 'marketer') {\n    try {\n      var params = Krux('require:marketer').getParams(\n        Krux('require:sizzle').find('script[src*=\"' + Krux('get', 'confid') + '\"]')\n      );\n      return !BLOCKED[(params.siteid || params.kxsiteid)];\n    }\n    catch (e) {\n      // In case we don't find the script tag or the URL parser fails, just allow matching.\n    }\n  }\n  return true;\n})());\n</script>","target":null,"target_action":"append","timing":"asap","method":"document","internal":true,"criteria":[]},{"id":18097,"name":"Nielsen Usermatch","content":"<script>\n(function(){\n  if (!Krux('get', 'user_matching_allowed')) {\n    return;\n  }\n\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n    var prefix = 'https:'; // always set to https since most pubs require secure serving\n    var r_url = prefix + '//secure-us.imrworldwide.com/cgi-bin/m?ci=ent599834&c1=kxkuid,'\n    var kurl = r_url + kuid;\n    var i = new Image();\n    i.src = kurl;\n  }\n})();\n</script>","target":"","target_action":"append","timing":"asap","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",3],["afterTag",18562]]]]},{"id":18099,"name":"Yahoo! DataX User match (GDN Safe)","content":"<script>\n(function(){\n  if (!Krux('get', 'user_matching_allowed')) {\n    return;\n  }\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n    var prefix = 'https:';\n    var rurl = prefix + '//cms.analytics.yahoo.com/cms?partner_id=KRUX';\n    var i = new Image();\n    i.src = rurl;\n  }\n})();\n</script>","target":"","target_action":"append","timing":"asap","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",10],["afterTag",18562]]]]},{"id":18101,"name":"DataLogix Standard (GDN Safe)","content":"<script>\r\n    (function() {\r\n        var allowUserMatch = function() {\r\n            var GDN_SITE_ID = '1282650';\r\n\r\n            if (Krux('get', 'config').params.client_type === 'marketer') {\r\n                try {\r\n                    var params = Krux('require:marketer').getParams(\r\n                            Krux('require:sizzle').find('script[src*=\"' + Krux('get', 'confid') + '\"]')\r\n                    );\r\n                    return GDN_SITE_ID !== (params.siteid || params.kxsiteid);\r\n                }\r\n                catch (e) {\r\n                    // In case we don't find the script tag or the URL parser fails, just allow matching.\r\n                }\r\n            }\r\n            return true;\r\n        };\r\n\r\n        var kuid = Krux('get', 'user');\r\n\r\n        if (allowUserMatch() && kuid) {\r\n            var prefix = location.protocol == 'https:' ? \"https:\" : \"http:\";\r\n            var kurl_params = encodeURIComponent(\"_kuid=\" + kuid + \"&_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&dlxid=<na_id>&dlxdata=<na_da>\");\r\n            var kurl = prefix + \"//beacon.krxd.net/data.gif?\" + kurl_params;\r\n            var dlx_url = '//r.nexac.com/e/getdata.xgi?dt=br&pkey=gpwn29rvapq62&ru=' + kurl;\r\n            var i = new Image();\r\n            i.src = dlx_url;\r\n        }\r\n    })();\r\n</script>","target":"","target_action":"append","timing":"asap","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",1]]]]},{"id":18102,"name":"Runads GDN safe","content":"<script>\n(function(){\n        var kuid = Krux('get', 'user');\n        var prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\n\n        if (kuid) {\n           var url = prefix + '//match.rundsp.com/match.gif?partner=krux&id=kruxid';\n           (new Image()).src = url;\n        }\n})();\n</script>","target":"","target_action":"append","timing":"asap","method":"document","internal":true,"criteria":[]},{"id":18103,"name":"BrightRoll","content":"<script>\r\n(function(){\r\n        var kuid = Krux('get', 'user');\r\n        var prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\r\n        if (kuid) {\r\n           var url = prefix + '//pix.btrll.com/partner/868092.png';\r\n           (new Image()).src = url;\r\n        }\r\n})();\r\n</script>","target":"","target_action":"append","timing":"asap","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",10]]]]},{"id":18111,"name":"KRM_Liveramp_RFP (Kelloggs) provider tag","content":"","target":"","target_action":"append","timing":"asap","method":"document","internal":false,"criteria":["and",["and",["and",["<=","$frequency",3]]]]},{"id":18112,"name":"KRM_Datalogix_RFP (Kelloggs) provider tag","content":"","target":"","target_action":"append","timing":"asap","method":"document","internal":false,"criteria":["and",["and",["and",["<=","$frequency",3]]]]},{"id":18113,"name":"KRM_Merkle_RFP (Kelloggs) provider tag","content":"","target":"","target_action":"append","timing":"asap","method":"document","internal":false,"criteria":["and",["and",["and",["<=","$frequency",3]]]]},{"id":18080,"name":"Krux Track Social","content":"<script type=\"text/javascript\">Krux('social.init');</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":[]},{"id":18081,"name":"Technographic Data provider tag","content":"<script>\r\n// this tag is intentionally blank\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",3]]]]},{"id":18082,"name":"Krux Geographic Data provider tag","content":"None","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",3]]]]},{"id":18088,"name":"eXelate Media provider tag","content":"<script>\r\n(function(){\r\n  var kuid = Krux('get', 'user');\r\n  if (kuid) {\r\n    Krux('require:http').pixel({\r\n      url: \"//loadm.exelator.com/load\",\r\n      data: {\r\n          _kdpid: 'e4942ff0-4070-4896-a7ef-e6a5a30ce9f9',\r\n          buid: kuid,\r\n          p: '204',\r\n          g: '270',\r\n          j: '0'\r\n      }});\r\n  }\r\n  })();\r\n</script>","target":"","target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",3]]]]},{"id":18093,"name":"Google User Matching (GDN safe)","content":"<script>\n(function(){\n  \n  var Krux = window.Krux('ns:kelloggs');\n  if (!Krux('get', 'user_matching_allowed')) {\n    return;\n  }\n  if (!!Krux) {  \n    var kuid = Krux('get', 'user');\n    if (!!kuid) {\n      var prefix = location.protocol == 'https:' ? \"https:\" :\"http:\";\n      var r_url = prefix + '//cm.g.doubleclick.net/pixel'\n      var kurl = prefix + '//apiservices.krxd.net/um?partner=google&r=' + r_url;\n      var i = new Image();\n      i.src = kurl;\n    }\n  }\n})();\n</script>","target":"","target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",3],["afterTag",18562]]]]},{"id":18094,"name":"LiveRamp User Match Pixel (Kelloggs) (GDN safe)","content":"<script>\n(function(){\n  if (!Krux('get', 'user_matching_allowed')) {\n    return;\n  }\n\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n      var liveramp_url = 'https://idsync.rlcdn.com/379708.gif?partner_uid=' + kuid;\n      var i = new Image();\n      i.src = liveramp_url;      \n  }\n})();\n</script>","target":"","target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",3],["afterTag",18562]]]]},{"id":18100,"name":"DataLogix (Kellogg's) provider tag","content":"","target":"","target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",3]]]]},{"id":18109,"name":"NCS (via Exelate) provider tag","content":"None","target":null,"target_action":"append","timing":"onload","method":"document","internal":false,"criteria":["and",["and",["and",["<=","$frequency",3]]]]}]};
+
+  // Wrap in a function and comment, then toString the func and replace
+  // everything that's not the beginning or end of a JSON object, so we get a
+  // string that's either empty or JSON.
+  var esiGeo = String(function(){/*
+   <esi:include src="/geoip_esi"/>
+   */}).replace(/^.*\/\*[^{]+|[^}]+\*\/.*$/g, '');
+
+  if (esiGeo) {
+    log('Got a request for:', esiGeo, 'adding geo to config.');
+    try {
+      config.geo = window.JSON.parse(esiGeo);
+    } catch (__) {
+      // Couldn't parse, so setting to {}
+      log('Unable to parse geo from:', config.geo);
+      config.geo = {};
+    }
+  }
+
+  
+
+  load('//cdn.krxd.net/ctjs/controltag.js.f8e94fa978cc2569e4b4423df4245d7e', function() {
+    log('Loading krux configuration.');
+    Krux('config', config);
+  });
+})();

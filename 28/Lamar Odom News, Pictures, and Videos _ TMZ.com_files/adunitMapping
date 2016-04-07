@@ -1,0 +1,15 @@
+var ws_unit = {
+id: 225787,
+tpcid: 29093,
+tpoid: 2214,
+tpolid: 66019,
+acid: 3,
+cw: 970,
+ch: 250,
+dnr: false
+};
+//dnr reason: threshold validation succeeded : threshold = 8, line priority = 13
+
+var el = document.body, ss = document.scripts;for (var i = ss.length - 1; i > -1; i--) {if (ss[i].src.indexOf('adunitMapping') > -1) {el = ss[i].parentNode; break;}}var u = document.createElement('SCRIPT');
+u.src='//wfpscripts.webspectator.com/ws-ad.js';
+el.appendChild(u);

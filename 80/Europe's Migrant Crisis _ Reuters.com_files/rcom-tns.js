@@ -1,0 +1,1 @@
+!is_ipad&&!is_iphone&&(Reuters.utils.writeStylesheet("/resources_v2/css/rcom-tracknsave.css"),is_ie6&&Reuters.utils.writeStylesheet("/resources_v2/css/rcom-tracknsave-ie6.css"),Reuters.utils.writeScript("/resources_v2/js/rcom-tns-backend.js"),Reuters.utils.writeScript("/resources_v2/js/rcom-tns-frontend.js"));

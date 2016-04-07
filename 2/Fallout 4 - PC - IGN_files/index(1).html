@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://s0.2mdn.net/4522825/1456753922668/truth_finishers_728x90/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+    
+    <title>Truth</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./main.css">
+   <script>var clickTag = "http://www.thetruth.com"</script>
+  </head>
+  <body>
+    <div id="mainContainer">
+        <div id="clickTag" class="stroke"></div>
+        
+         
+
+        
+
+        
+
+        
+
+        
+
+        <div id="frame6" style="opacity: 1;">
+           <div class="logo" style="opacity: 1;"></div>
+           <div id="textContainer4">
+            <div class="txt_be" style="left: 214px;"></div>
+            <div class="txt_that" style="left: 214px;"></div>
+          </div>
+            <div class="white-button" style="opacity: 1;"></div>
+            <div class="black-button" style="opacity: 1;"></div>
+        </div>
+       
+      <!--   <div id="endFrame">
+            <div class="logo"></div>
+            <div class="white-button"></div>
+            <div class="black-button"></div>
+        </div> -->
+
+    </div>
+     
+    <script src="./zepto.all.min.js"></script>
+    <script src="./zepto.typer.js"></script>
+    <script src="./main.js"></script>
+
+
+</body></html>

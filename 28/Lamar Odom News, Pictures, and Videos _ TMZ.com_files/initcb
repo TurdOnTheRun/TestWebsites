@@ -1,0 +1,40 @@
+var __wsconf = window.__wsconf = window.__wsconf || {};
+__wsconf.section = '1021';
+__wsconf.appId = '39';
+__wsconf.znl = {"9600":{"tu":1,"conf":{"Height":600.0,"ContainerElementSelector":"#taboola-verticalx5","sizes":[{"width":300,"height":600,"doNotRotate":false}],"Width":300.0,"ElementSelectorPosition":"inside"},"type":"normal"},"9459":{"tu":1,"conf":{"Height":250.0,"ContainerElementSelector":"","sizes":[{"width":300,"height":250,"doNotRotate":false}],"Width":300.0},"type":"normal"},"23012":{"tu":1,"conf":{"Height":1.0,"ContainerElementSelector":"div.tmz-kaltura-player","sizes":[{"width":468,"height":1,"doNotRotate":false}],"Width":468.0,"ElementSelectorPosition":"after"},"type":"normal"},"22724":{"tu":1,"conf":{"Height":1.0,"ContainerElementSelector":"#disqus_thread","sizes":[{"width":699,"height":1,"doNotRotate":false}],"Width":699.0,"ElementSelectorPosition":"before"},"type":"normal"},"9460":{"tu":1,"fp":1,"conf":{"Type":"dynamic","StickyTopOffset":10.0,"sizes":[{"width":300,"height":250,"doNotRotate":false}],"Position":"right","InitialTopOffset":10.0,"DockElementSelector":"#video-picker \u003e div \u003e div.categories \u003e div \u003e ul.views \u003e li.view.selected \u003e div \u003e ul.views \u003e li.view.selected \u003e div \u003e div.next-tab","Height":250.0,"HorizontalOffset":10.0,"MaxScroll":0.0,"Width":300.0},"type":"side"},"22997":{"tu":1,"conf":{"Height":1.0,"ContainerElementSelector":"#tmz-livestream-player","sizes":[{"width":468,"height":1,"doNotRotate":false}],"Width":468.0,"ElementSelectorPosition":"after"},"type":"normal"},"22694":{"tu":1,"conf":{"Height":1.0,"ContainerElementSelector":"#videopostmeta","sizes":[{"width":662,"height":1,"doNotRotate":false}],"Width":662.0,"ElementSelectorPosition":"after"},"type":"normal"},"9094":{"fp":1,"conf":{"Height":600.0,"BottomHeight":600.0,"sizes":[{"width":300,"height":600,"doNotRotate":false}],"Width":300.0,"TopOffset":46.0},"type":"sticky"},"22455":{"conf":{"Height":250.0,"sizes":[{"width":300,"height":250,"doNotRotate":false}],"Width":300.0,"Source":"googlesyndication.com","Selector":"google_ads_iframe_/55153744"},"type":"allocation"},"22456":{"conf":{"Height":600.0,"sizes":[{"width":300,"height":600,"doNotRotate":false}],"Width":300.0,"Source":"googlesyndication.com","Selector":"google_ads_iframe_/55153744"},"type":"allocation"},"28441":{"conf":{"PotentialGtsDuration":20.0,"sizes":[{"width":320,"height":50,"doNotRotate":false}],"Height":50.0,"IgnoreNotMeasurable":true,"Width":320.0,"Source":"googlesyndication.com","Selector":"google_ads_iframe_/55153744"},"type":"allocation"},"22457":{"conf":{"Height":90.0,"sizes":[{"width":728,"height":90,"doNotRotate":false}],"Width":728.0,"Source":"googlesyndication.com","Selector":"google_ads_iframe_/55153744"},"type":"allocation"}};
+__wsconf.rootPath = '//wsc1.webspectator.com';
+__wsconf.sessionId = '80BC482A6847C360';
+__wsconf.contextId = 'E8FC';
+__wsconf.cid = 'WS-TMZ00';
+__wsconf.vtm = 'TFPC';
+__wsconf.g_country = 'US';
+__wsconf.g_region = 'NY';
+__wsconf.g_city = 'New York';
+__wsconf.dads = 0;
+__wsconf.lts = 0;
+__wsconf.adBlckMsg = false;
+__wsconf.adBlckMsgTxt = '';
+__wsconf.frt= "25";
+__wsconf.mui= "99";
+__wsconf.ortc= {"url":"window.location.protocol + \u0027//ortc-prd.realtime.co/server\u0027 + (window.location.protocol \u003d\u003d \u0027https:\u0027 ? \u0027/ssl/\u0027 : \u0027/\u0027) + \u00272.1/\u0027","apk":"R60tcQ","aut":"ws.client"};
+__wsconf.smc= {"disconnectTimer":120.0,"idleTimer":15.0};
+
+
+var s0 = document.createElement('script');
+s0.type = 'text/javascript';
+s0.async = true;
+s0.src = "//wfpscripts.webspectator.com/ortc-2.1.24.js";
+document.getElementsByTagName('HEAD')[0].appendChild(s0);
+
+var s1 = document.createElement('script');
+s1.type = 'text/javascript';
+s1.async = true;
+s1.src = "//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js";
+document.getElementsByTagName('HEAD')[0].appendChild(s1);
+
+var s2 = document.createElement('script');
+s2.type = 'text/javascript';
+s2.async = true;
+s2.src = "//wfpscripts.webspectator.com/ws-4.4.16.js";
+document.getElementsByTagName('HEAD')[0].appendChild(s2);
+

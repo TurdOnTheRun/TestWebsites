@@ -1,0 +1,342 @@
+@charset "utf-8";
+/* CSS Document */
+#body_home{ font-family:'Open Sans'; font-size:100%; color:#FFF; line-height:16px; margin:0px; padding:0px;  font-weight: 400; font-style: normal; overflow-y:hidden; overflow-x: hidden;   }
+
+
+
+/******************** global styles ********************/
+.hide {
+	position:absolute;
+	top:-99999em;
+	left:0;
+}
+
+a, a:visited {
+	color:#000;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+	color:#000;
+}
+
+ul, ol {
+list-style-type: none;
+padding: 0px;
+margin: 0px;
+list-style-type:none; 	
+clear:both;
+}
+
+li { 
+margin:0; 
+padding:0;
+list-style:none;
+list-style-type:none; 	
+float:left;
+}
+
+img { border: 0 }
+
+
+br { clear:both;}
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+
+
+/******************** structure styles ********************/
+
+
+
+
+
+/*
+	Fluid Baseline Grid v1.0.0
+	Designed & Built by Josh Hopkins and 40 Horse, http://40horse.com	
+	Licensed under Unlicense, http://unlicense.org/
+	
+	Base stylesheet with CSS normalization, typographic baseline grid and progressive responsiveness
+*/
+
+/* HTML5 DECLARATIONS */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {display: block}
+audio[controls],canvas,video {display: inline-block; *display: inline; zoom: 1}
+
+/* BASE */
+html {height: 100%; font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; height:100%; } /* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
+body {margin: 0; min-height: 100%; -webkit-font-smoothing:antialiased; font-smoothing:antialiased; text-rendering:optimizeLegibility;} /* Improve default text rendering, handling of kerning pairs and ligatures */
+
+
+.source-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img {
+	height:auto;
+}
+
+
+/* DEFAULT FONT SETTINGS */
+/* 16px base font size with 150% (24px) friendly, unitless line height and margin for vertical rhythm */
+/* Font-size percentage is based on 16px browser default size */
+body, button, input, select, textarea {font: 100%/1.5 Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif; *font-size: 1em; color: #333} /* IE7 and older can't resize px based text */
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {margin: 0 0 0em; padding: 0}
+
+/* TYPOGRAPHY */
+/* Composed to a scale of 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px and 72px */
+h1, h2, h3, h4, h5, h6 {font-family:'quicksandlight';color:#222;text-shadow:1px 1px 1px rgba(0,0,0,.10)}
+h1 {margin: 0; font-size: 3.75em; line-height: 1.2em; margin-bottom: 0.4em} /* 60px / 72px */
+h2 {margin: 0; font-size: 3em; line-height: 1em; margin-bottom: 0.5em} /* 48px / 48px */
+h3 {margin: 0; font-size: 2.25em; line-height: 1.3333333333333333333333333333333em; margin-bottom: 0.6667em} /* 36px / 48px */ 
+h4 {margin: 0; font-size: 1.5em; line-height: 1em; margin-bottom: 1em} /* 24px / 24px */
+h5 {margin: 0; font-size: 1.3125em; line-height: 1.1428571428571428571428571428571em; margin-bottom: 1.1428571428571428571428571428571em} /* 21px / 24px */
+h6 {margin: 0; font-size: 1.125em; line-height: 1.3333333333333333333333333333333em; margin-bottom: 1.3333333333333333333333333333333em} /* 18px / 24px */
+p, ul, blockquote, pre, td, th, label {margin: 0; font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em} /* 16px / 24px */
+small, p.small {margin: 0; font-size: 0.875em; line-height: 1.7142857142857142857142857142857em; margin-bottom: 1.7142857142857142857142857142857em} /* 14px / 24px */
+
+/* CODE */
+pre {white-space: pre; white-space: pre-wrap; word-wrap: break-word} /* Allow line wrapping of 'pre' */
+pre, code, kbd, samp {font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; font-family: Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace}
+
+
+/* OTHERS */
+strong, b, dt { font-weight: bold}
+dfn {font-style: italic}
+var, address {font-style: normal}
+sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline} /* Position 'sub' and 'sup' without affecting line-height */
+sup {top: -0.5em} /* Move superscripted text up */
+sub {bottom: -0.25em} /* Move subscripted text down */
+span.amp{font-family:Adobe Caslon Pro,Baskerville,"Goudy Old Style","Palatino","Palatino Linotype","Book Antiqua",Georgia,"Times New Roman",Times,serif;font-style:italic;font-size:110%;line-height:0;position:relative;vertical-align:baseline} /* Best available ampersand */
+
+/* MICRO CLEARFIX HACK */
+.cf:before, .cf:after {content:"";display:table} /* For modern browsers */
+.cf:after {clear:both}
+.cf {zoom:1} /* For IE 6/7 (trigger hasLayout) */
+
+
+
+/* DEFAULT MOBILE STYLE */
+
+
+
+/* media Queries
+
+FOLDING FLUID GRID
+< 767px			- 1-Column Fluid Grid
+768px - 1023px	- 2-Column Fluid Grid
+> 1024px			- 3-Column Fluid Grid
+Change widths as necessary
+------------------------------------------- */
+
+
+
+/* MOBILE PORTRAIT */
+@media (min-width: 300px) and (max-width: 467px) {
+
+#estrutura { float:left; width:100%; height:320px;   background:url(../images/fundo_azul.png) #20487c top center no-repeat; background-size: 140%; }
+
+#topo_area { float:left; width:96%; padding:2%; }
+
+.titulo_goles { width:70%; float:left; font-size:180%; margin-top:1.5%; }
+
+.area_logo { float:right; width:30%;  }
+
+.area_logo img { width:100%;  }
+
+.texto_goles { width:100%; margin-top:3px; font-size:110%; }
+
+#base { float:left; width:100%; margin-top:2%; margin-bottom:2%; }
+
+.area_contador { float:left; width:96%;  margin-left:2%;   }
+
+.barra_contador { float:left;  width:100%;  }
+
+.goal {  float:left; width:10%;  height:90px; background:url(../images/gols.png) no-repeat top center; background-size:100%;  }
+.g1    {  float:left; width:10%;  height:90px; background:url(../images/g1.png) no-repeat top center; background-size:100%;  }
+.g2    {  float:left; width:10%;  height:90px; background:url(../images/g2.png) no-repeat top center; background-size:100%;  }
+.g3    {  float:left; width:10%;  height:90px; background:url(../images/g3.png) no-repeat top center; background-size:100%;  }
+.g4    {  float:left; width:10%;  height:90px; background:url(../images/g4.png) no-repeat top center; background-size:100%;  }
+.g5    {  float:left; width:10%;  height:90px; background:url(../images/g5.png) no-repeat top center; background-size:100%;  }
+.g6    {  float:left; width:10%;  height:90px; background:url(../images/g6.png) no-repeat top center; background-size:100%;  }
+.g7    {  float:left; width:10%;  height:90px; background:url(../images/g7.png) no-repeat top center; background-size:100%;  }
+.g8    {  float:left; width:10%;  height:90px; background:url(../images/g8.png) no-repeat top center; background-size:100%;  }
+.g9    {  float:left; width:10%;  height:90px; background:url(../images/g9.png) no-repeat top center; background-size:100%;  }
+
+.fundo_contador { float:left; width:100%; height:90px; background:url(../images/fundo_goles.png) no-repeat top left; background-size:100%;  }
+
+.area_numeros { float:left;  font-weight: 700;  margin-top:0%; white-space: nowrap; margin-left:2%; }
+
+.gol_numeros {  float:left; font-size:190%; text-align:center; text-transform:uppercase;  }
+	
+.info_goles { float:left; width:100%; font-size:30%; text-align:center; margin-top:0px; }	
+
+.info_goles2 { float:left; width:100%; font-size:30%; text-align:right; margin-top:0px; }	
+	
+.igual_numeros { float:left;   font-size:190%; text-align:center; margin-left:10px; margin-right:10px; }
+
+.valor_numeros { float:left;  font-size:190%; text-align:right; text-transform:uppercase;    }
+	
+	
+}
+
+/* PHABLET PORTRAIT */
+@media (min-width:468px) and (max-width:727px) {
+	
+	#estrutura { float:left; width:100%; height:320px;   background:url(../images/fundo_azul.png) #20487c top center no-repeat; background-size: 140%; }
+
+#topo_area { float:left; width:96%; padding:2%; }
+
+.titulo_goles { width:70%; float:left; font-size:200%; margin-top:1.5%; }
+
+.area_logo { float:right; width:25%;  }
+
+.area_logo img { width:100%;  }
+
+.texto_goles { width:100%; margin-top:2px; font-size:100%; }
+
+#base { float:left; width:100%; margin-top:1%; margin-bottom:2%; }
+
+.area_contador { float:left; width:96%;  margin-left:2%;   }
+
+.barra_contador { float:left;  width:100%;  }
+
+.goal {  float:left; width:10%;  height:120px; background:url(../images/gols.png) no-repeat top center; background-size:100%;  }
+.g1 {  float:left; width:10%;  height:120px; background:url(../images/g1.png) no-repeat top center; background-size:100%;  }
+.g2 {  float:left; width:10%;  height:120px; background:url(../images/g2.png) no-repeat top center; background-size:100%;  }
+.g3 {  float:left; width:10%;  height:120px; background:url(../images/g3.png) no-repeat top center; background-size:100%;  }
+.g4 {  float:left; width:10%;  height:120px; background:url(../images/g4.png) no-repeat top center; background-size:100%;  }
+.g5 {  float:left; width:10%;  height:120px; background:url(../images/g5.png) no-repeat top center; background-size:100%;  }
+.g6 {  float:left; width:10%;  height:120px; background:url(../images/g6.png) no-repeat top center; background-size:100%;  }
+.g7 {  float:left; width:10%;  height:120px; background:url(../images/g7.png) no-repeat top center; background-size:100%;  }
+.g8 {  float:left; width:10%;  height:120px; background:url(../images/g8.png) no-repeat top center; background-size:100%;  }
+.g9 {  float:left; width:10%;  height:120px; background:url(../images/g9.png) no-repeat top center; background-size:100%;  }
+
+.fundo_contador { float:left; width:100%; height:105px; background:url(../images/fundo_goles.png) no-repeat top left; background-size:100%;  }
+
+.area_numeros { float:left;  font-weight: 700;  margin-top:1%; white-space: nowrap; margin-left:2%; }
+
+.gol_numeros {  float:left; font-size:270%; text-align:center; text-transform:uppercase;  }
+	
+.info_goles { float:left; width:100%; font-size:30%; text-align:center; margin-top:3px; }	
+
+.info_goles2 { float:left; width:100%; font-size:30%; text-align:right; margin-top:2px; }	
+	
+.igual_numeros { float:left;   font-size:270%; text-align:center; margin-left:10px; margin-right:10px; }
+
+.valor_numeros { float:left;  font-size:270%; text-align:right; text-transform:uppercase;    }
+	
+	
+}
+
+
+/* TABLET PORTRAIT */
+@media (min-width:728px) and (max-width:958px) {
+	
+#estrutura { float:left; width:100%; height:210px;  background:url(../images/fundo_azul.png) #20487c center center no-repeat; background-size: 140%; }
+
+#topo_area { float:left; width:98%; padding:1%; }
+
+.titulo_goles { width:50%; float:left; font-size:200%; }
+
+.area_logo { float:right; width:15%;  }
+
+.area_logo img { width:100%;  }
+
+.texto_goles { width:80%; margin-top:15px; font-size:110%; }
+
+#base { float:left; width:100%; margin-top:1%; margin-bottom:0%; }
+
+.area_contador { float:left; width:45%;  margin-left:1%;   }
+
+.barra_contador { float:left;  width:100%;  }
+
+.goal {  float:left; width:10%;  height:90px; background:url(../images/gols.png) no-repeat top center; background-size:100%;  }
+.g1 {  float:left; width:10%;  height:90px; background:url(../images/g1.png) no-repeat top center; background-size:100%;  }
+.g2 {  float:left; width:10%;  height:90px; background:url(../images/g2.png) no-repeat top center; background-size:100%;  }
+.g3 {  float:left; width:10%;  height:90px; background:url(../images/g3.png) no-repeat top center; background-size:100%;  }
+.g4 {  float:left; width:10%;  height:90px; background:url(../images/g4.png) no-repeat top center; background-size:100%;  }
+.g5 {  float:left; width:10%;  height:90px; background:url(../images/g5.png) no-repeat top center; background-size:100%;  }
+.g6 {  float:left; width:10%;  height:90px; background:url(../images/g6.png) no-repeat top center; background-size:100%;  }
+.g7 {  float:left; width:10%;  height:90px; background:url(../images/g7.png) no-repeat top center; background-size:100%;  }
+.g8 {  float:left; width:10%;  height:90px; background:url(../images/g8.png) no-repeat top center; background-size:100%;  }
+.g9 {  float:left; width:10%;  height:90px; background:url(../images/g9.png) no-repeat top center; background-size:100%;  }
+
+.fundo_contador { float:left; width:100%; height:120px; background:url(../images/fundo_goles.png) no-repeat top left; background-size:100%;  }
+
+.area_numeros { float:right;  font-weight: 700;  margin-top:2%; white-space: nowrap; margin-right:1%; }
+
+.gol_numeros {  float:left; font-size:240%; text-align:center; text-transform:uppercase;  }
+	
+.info_goles { float:left; width:100%; font-size:30%; text-align:center; margin-top:4px; }	
+
+.info_goles2 { float:left; width:100%; font-size:30%; text-align:right; margin-top:4px; }	
+	
+.igual_numeros { float:left;   font-size:240%; text-align:center; margin-left:10px; margin-right:10px; }
+
+.valor_numeros { float:left;  font-size:240%; text-align:right; text-transform:uppercase;    }
+	
+	
+}
+
+/* DESKTOP PORTRAIT */
+@media (min-width:959px) {
+	
+#estrutura { float:left; width:100%; height:210px;  background:url(../images/fundo_azul.png) #20487c center center no-repeat; background-size: 140%; }
+
+#topo_area { float:left; width:98%; padding:1%; }
+
+.titulo_goles { width:50%; float:left; font-size:200%; }
+
+.area_logo { float:right; width:15%;  }
+
+.area_logo img { width:100%;  }
+
+.texto_goles { width:70%; margin-top:15px; font-size:130%; }
+
+#base { float:left; width:100%; margin-top:1%; }
+
+.area_contador { float:left; width:45%;  margin-left:1%;   }
+
+.barra_contador { float:left;  width:100%;  }
+
+.goal {  float:left; width:10%;  height:90px; background:url(../images/gols.png) no-repeat top center; background-size:100%;  }
+.g1    {  float:left; width:10%;  height:90px; background:url(../images/g1.png) no-repeat top center; background-size:100%;  }
+.g2    {  float:left; width:10%;  height:90px; background:url(../images/g2.png) no-repeat top center; background-size:100%;  }
+.g3    {  float:left; width:10%;  height:90px; background:url(../images/g3.png) no-repeat top center; background-size:100%;  }
+.g4    {  float:left; width:10%;  height:90px; background:url(../images/g4.png) no-repeat top center; background-size:100%;  }
+.g5    {  float:left; width:10%;  height:90px; background:url(../images/g5.png) no-repeat top center; background-size:100%;  }
+.g6    {  float:left; width:10%;  height:90px; background:url(../images/g6.png) no-repeat top center; background-size:100%;  }
+.g7    {  float:left; width:10%;  height:90px; background:url(../images/g7.png) no-repeat top center; background-size:100%;  }
+.g8    {  float:left; width:10%;  height:90px; background:url(../images/g8.png) no-repeat top center; background-size:100%;  }
+.g9    {  float:left; width:10%;  height:90px; background:url(../images/g9.png) no-repeat top center; background-size:100%;  }
+
+.fundo_contador { float:left; width:100%; height:120px; background:url(../images/fundo_goles.png) no-repeat top left; background-size:100%;  }
+
+.area_numeros { float:right;  font-weight: 700;  margin-top:1%; white-space: nowrap; margin-right:1%; }
+
+.gol_numeros {  float:left; font-size:300%; text-align:center; text-transform:uppercase;  }
+	
+.info_goles { float:left; width:100%; font-size:30%; text-align:center; margin-top:4px; }	
+
+.info_goles2 { float:left; width:100%; font-size:30%; text-align:right; margin-top:4px; }	
+	
+.igual_numeros { float:left;   font-size:300%; text-align:center; margin-left:10px; margin-right:10px; }
+
+.valor_numeros { float:left;  font-size:300%; text-align:right; text-transform:uppercase;    }
+
+	
+}
+
+
+@media (min-width:1100px) {
+	#estrutura {  height:210px;  }
+	
+	#base {  margin-top:0%; margin-bottom:4%; }
+	
+	.area_contador {  width:38%;   }
+}

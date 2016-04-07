@@ -1,0 +1,40 @@
+var __wsconf = window.__wsconf = window.__wsconf || {};
+__wsconf.section = '461';
+__wsconf.appId = '1440';
+__wsconf.znl = {"9538":{"conf":{"PotentialGtsDuration":20.0,"sizes":[{"width":300,"height":250,"doNotRotate":false}],"Height":250.0,"ContainerElementSelector":"#rectangle2-3 \u003e span \u003e #_fw_container_rectangle2 \u003e span","IgnoreNotMeasurable":true,"Width":300.0,"ElementSelectorPosition":"inside"},"type":"normal"},"10324":{"conf":{"PotentialGtsDuration":20.0,"sizes":[{"width":300,"height":250,"doNotRotate":false}],"Height":250.0,"ContainerElementSelector":"#rectangle-2","IgnoreNotMeasurable":true,"Width":300.0,"ElementSelectorPosition":"inside"},"type":"normal"},"10325":{"tu":1,"conf":{"PotentialGtsDuration":20.0,"sizes":[{"width":728,"height":90,"doNotRotate":false}],"Height":90.0,"ContainerElementSelector":"#banner-0 \u003e span \u003e span \u003e span","IgnoreNotMeasurable":true,"Width":728.0,"ElementSelectorPosition":"inside"},"type":"normal"},"10599":{"tu":1,"conf":{"PotentialGtsDuration":20.0,"sizes":[{"width":728,"height":90,"doNotRotate":false}],"Height":90.0,"ContainerElementSelector":"#banner-1 \u003e span \u003e span \u003e span","IgnoreNotMeasurable":true,"Width":728.0,"ElementSelectorPosition":"inside"},"type":"normal"},"10600":{"conf":{"PotentialGtsDuration":20.0,"sizes":[{"width":300,"height":250,"doNotRotate":false}],"Height":250.0,"ContainerElementSelector":"#_fw_container_rectangle \u003e span","IgnoreNotMeasurable":true,"Width":300.0,"ElementSelectorPosition":"inside"},"type":"normal"},"10601":{"conf":{"PotentialGtsDuration":20.0,"sizes":[{"width":300,"height":250,"doNotRotate":false}],"Height":250.0,"ContainerElementSelector":"#rectangle2-4","IgnoreNotMeasurable":true,"Width":300.0,"ElementSelectorPosition":"inside"},"type":"normal"},"10254":{"tu":1,"conf":{"PotentialGtsDuration":20.0,"BottomHeight":90.0,"sizes":[{"width":300,"height":250,"doNotRotate":false}],"TopOffset":55.0,"Zindex":0.0,"Height":250.0,"ContainerElementSelector":"#rectangle2-3","IgnoreNotMeasurable":true,"Width":300.0,"ElementSelectorPosition":"inside"},"type":"sticky"}};
+__wsconf.rootPath = '//wsc4.webspectator.com';
+__wsconf.sessionId = '80BC482A6847C360';
+__wsconf.contextId = '3C4A';
+__wsconf.cid = '92BBB444';
+__wsconf.vtm = 'TFPC';
+__wsconf.g_country = 'US';
+__wsconf.g_region = 'NY';
+__wsconf.g_city = 'New York';
+__wsconf.dads = 0;
+__wsconf.lts = 0;
+__wsconf.adBlckMsg = false;
+__wsconf.adBlckMsgTxt = '';
+__wsconf.frt= "25";
+__wsconf.mui= "99";
+__wsconf.ortc= {"url":"window.location.protocol + \u0027//ortc-prd.realtime.co/server\u0027 + (window.location.protocol \u003d\u003d \u0027https:\u0027 ? \u0027/ssl/\u0027 : \u0027/\u0027) + \u00272.1/\u0027","apk":"R60tcQ","aut":"ws.client"};
+__wsconf.smc= {"disconnectTimer":120.0,"idleTimer":15.0};
+
+
+var s0 = document.createElement('script');
+s0.type = 'text/javascript';
+s0.async = true;
+s0.src = "//wfpscripts.webspectator.com/ortc-2.1.24.js";
+document.getElementsByTagName('HEAD')[0].appendChild(s0);
+
+var s1 = document.createElement('script');
+s1.type = 'text/javascript';
+s1.async = true;
+s1.src = "//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js";
+document.getElementsByTagName('HEAD')[0].appendChild(s1);
+
+var s2 = document.createElement('script');
+s2.type = 'text/javascript';
+s2.async = true;
+s2.src = "//wfpscripts.webspectator.com/ws-4.4.15.js";
+document.getElementsByTagName('HEAD')[0].appendChild(s2);
+

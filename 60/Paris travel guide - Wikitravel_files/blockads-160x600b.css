@@ -1,0 +1,50 @@
+/* START VANILLA ADS */
+#VanillaAds {
+	width:auto;
+	margin-left:0;
+}
+#vanilla_ads {
+	font:13px Tahoma,Arial,Helvetica,Sans-Serif;
+}
+#vanilla_ads .adsByGoogle {
+	display: block;
+	padding-left: 6px;
+	padding-top: 10px;
+	margin-bottom: -12px;
+	font-size:10px;
+}
+#vanilla_ads #afcSlot_2 .adsByGoogle {
+	display:block;
+}
+#vanilla_ads .ad-1 {
+	margin:18px 4px 0 6px;
+	padding:10px;
+}
+#vanilla_ads div.ad-1-line2,
+#vanilla_ads div.ad-1-line2 div,
+#vanilla_ads div.ad-1-line3,
+#vanilla_ads div.ad-1-line3 div {
+	display:inline;
+	font-size:12px;
+}
+#vanilla_ads .googleTextAd > a > span {
+	display:block;
+	font-size:13px;
+	margin:10px 0 0;
+}
+#vanilla_ads .ad-1 div a {
+	display:block;
+	font-size:18px;
+	margin:0 0 10px;
+	text-decoration:underline;
+}
+#vanilla_ads .ad-1 {
+	background:none repeat scroll 0 0 #D9EBF1;
+}
+#vanilla_ads .vanilla_ads_white {
+	margin-top:8px;
+}
+#vanilla_ads .vanilla_ads_white .ad-1 {
+	background:none repeat scroll 0 0 #fff;
+}
+/* END VANILLA ADS */

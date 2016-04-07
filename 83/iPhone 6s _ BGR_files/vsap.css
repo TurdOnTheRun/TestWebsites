@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'vsap-icons';
+  src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAASsAA4AAAAACfwAAARQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGiAGVgCCchEICoZwhW8BNgIkA1gLLgAEIAWDMgeBTT93ZWJmBhtRCMiemrwS67dow94ABd4EDyrRMqguq17HngDgGYH0lA7mTwoEAT/uvcfPwehKVoJDgdzinMi6tNLMGHCAMw7gi+wYBHDLu95fvEAyTgNNv814hCOY7WzNdGFcjez6GllZJ7eAKJEcKSANqkJh/N6V6DEeyOgX6iUKo35Qz0gFfY13AkAAuL323QPAw0/wdGIOW+68HT9AEgCgIRCEQNCVuwCi32IfgzZL3AIkGq2nv6NfCgIaxoXLT/jUgEHXFDjAl/Jn7//fD9hjOyXDWnqglW0wctSCpTJoABD07kMHAHwMxHNTMxWvurkDCfTE40N2/tl7zrvP76ZeSh0vQT3E7mkl8kmVvV3G/UfRdZykgEyC+EcgS3y1DgAvEH9AxnA972S1fAVaVhs+gG/XSUurK2kJiE6MXRUDakNk6oD6sGrl4P5dlfsXuX3Ps9pU53j8rtMKQtjF2Z/cwr2ZmcYb8I4RdWSN8/hsQ25FDHamZ+4PedzSwC1ushDWrD4sMSzTfkC6Ta1JbUi8iYwatxXypPXJ50G2ueBZ2rP2ZwthT9uGwub7ez8sk5RmiWGJWwUOY2nMvFeTWpP4pJSN/RYFDSdr6eYoWLAsfDJsfLq90Pl4MXSf8E74s/Yve5keb7cal8KNcgcqibt7P/Q67lLNLnNrCqz9eGvzXRXacxoou0oGq4IqpwJ5NsgBVMffj+jVnOfJ+1ZUos337dKgjMtlZ2XLjSmNfbvMZVVW9sG6j26iOkLfXd/bX2GFV++QPLdr364d+/+J+DNjv1OYzkmOD/KuVGEMrb96cEBye3x1t3uxKCbqzDgr2wdb60frx9/3cYxzhX3NNKOzyi1Ei7vd46uPWQvWv6p+9iN7QlR2KnllwtjcfuFYsn+7f32Bj2OcZyzYmxtPrCy4tqzoxI/s6mfoOE8PMM/P3tD4Ns5+nm1srokTnzz864Orq4Pr/T18HI8Orvavb5D0fxafK792VX6u+CfCaGT5taFzSI37AoIAeM02OzktAQEQcM7+xRUvYPPj8GSA7155YmQfTPMCnO9CBgH2GGqSgerfB414p2SwhAOvM9AwN1TBAYGngX68XJYsoc0A5AOQYrQE34HMAsiCom4L+/nYDIhzBpqoaY2EADigUzxsQiF0jiAYFE6Jm0sgUtQgjzTxZPkNocsYFnrQNaFMohvyuYlucfLFvcMrgi/80hEp+BmlmEQK0CWTZPLJozhTuyWsEuoi0kmFwgg9DMBgK6iFkk6loafWDeZjhAGGmE0rKyJhpFJ0sIiJFouOqLkgN5xUkki7lmyS1neJ14vEpVSGUBhgjhWmXsQKI8yuLrmKM5tUhGFqCYmUUhSUPZWKIphCSsmkCPdPJedfUxW+nzgg0pASXHHDHQ/BMDYxNTO3sLSytrG1UyhJz6ksyDBkl+ZlGrgql0RpRKUQDMEIjMEETMEMzMECLNmOHCM3tikm6c4gbfVDdgA=) format('woff2'),
+       url(data:application/font-woff;charset=utf-8;base64,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) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "vsap-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="vsap-icon-"]:before, [class*=" vsap-icon-"]:before {
+  font-family: "vsap-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vsap-icon-play:before {
+  content: "\61";
+}
+.vsap-icon-pause:before {
+  content: "\62";
+}
+.vsap-icon-volume-off:before {
+  content: "\63";
+}
+.vsap-icon-volume-up:before {
+  content: "\64";
+}
+.vsap-icon-play-circle-o:before {
+  content: "\65";
+}
+
+.vsap-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.vsap-player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.vsap-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 2;
+}
+
+.vsap-btn button {
+  padding: 8px 7px 6px;
+  border-radius: 3px;
+  border: 0 none;
+  height: 30px;
+  width: 30px;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+}
+
+.vsap-btn button .vsap-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.vsap-btn button:hover {
+  background: rgb(60, 60, 60);
+  background: rgba(60, 60, 60, 0.7);
+}
+
+.vsap-btn.vsap-sound-btn {
+  bottom: 5px;
+  right: 5px;
+}
+
+.vsap-btn.vsap-sound-btn .vsap-unmute-sound {
+  display: none;
+}
+
+.vsap-btn.vsap-sound-btn .vsap-mute-sound {
+  display: inline-block;
+}
+
+.vsap-btn.vsap-sound-btn.vsap-muted .vsap-unmute-sound {
+  display: inline-block;
+}
+
+.vsap-btn.vsap-sound-btn.vsap-muted .vsap-mute-sound {
+  display: none;
+}
+
+.vsap-btn.vsap-playback-btn {
+  bottom: 5px;
+  left: 5px;
+}
+
+.vsap-btn.vsap-playback-btn .vsap-pause-playback {
+  display: none;
+}
+
+.vsap-btn.vsap-playback-btn .vsap-start-playback {
+  display: inline-block;
+}
+
+.vsap-btn.vsap-playback-btn.vsap-playing .vsap-pause-playback {
+  display: inline-block;
+}
+
+.vsap-btn.vsap-playback-btn.vsap-playing .vsap-start-playback {
+  display: none;
+}
+
+.vsap-hidden {
+  display: none !important;
+}
+
+.vsap-html5-player-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.vsap-html5-player {
+  width: 100%;
+  height: 100%;
+}
+
+.vsap-html5-ads-display {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+
+/*# sourceMappingURL=vsap.css.map */

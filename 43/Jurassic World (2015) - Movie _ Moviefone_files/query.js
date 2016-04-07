@@ -1,0 +1,1 @@
+try{window.parent._dv_win['dvCallback_1460005077364618']($dv,window,'477b86bd1cb24ed088c190539e70c01c','tps10210.doubleverify.com');}catch(e){try{var image=window.document.createElement('img');image.src=window.location.protocol+'//tps30.doubleverify.com/visit.jpg?ctx=818052&cmp=1619415&dvtagver=6.1.src&dvp_cbError='+encodeURIComponent(e.message)}catch(e){}}

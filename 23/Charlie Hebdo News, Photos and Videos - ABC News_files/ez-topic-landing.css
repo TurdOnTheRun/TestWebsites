@@ -1,0 +1,254 @@
+/* EZ Topic Landing Style*/
+.ez-page-topic-2-col .ez-topic-columns {
+    border-color: #cbd8ea;
+}
+.ez-page-topic-2-col .ez-socialLinks {
+    display: inline;
+    float: left;
+}
+.ez-Return a {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: right;
+    text-align: right;
+    font-size: 12px;
+    line-height: 16px;
+}
+#ez-mediaTypes.ez-horizontal a {
+    padding: 17px 10px;
+    text-transform: none;
+    margin-bottom: 0;
+}
+#ez-mediaTypes.ez-horizontal .ez-active a,
+#ez-mediaTypes.ez-horizontal .ez-active a:hover,
+#ez-mediaTypes.ez-horizontal .ez-filter-all.ez-trigger a,
+#ez-mediaTypes.ez-horizontal .ez-filter-all.ez-trigger a:hover {
+    border-color: #cbd8ea;
+    border-bottom-color: #fff;
+}
+#ez-mediaTypes.ez-horizontal .ez-searchMod-filter-item {
+    margin: 0 5px 0 0;
+}
+#ez-mediaTypes.ez-horizontal li.ez-searchMod-filter-item:nth-child(3) {
+    margin: 0px;
+}
+.ez-page-topic-2-col .ez-topic-columns .ez-itemMod-item {
+    border-top: 0px;
+    border-bottom: 1px solid #cbd8ea;
+    padding: 20px;
+    margin: 0;
+}
+.ez-page-topic-2-col .ez-topic-columns .ez-itemMod-item .ez-title,
+.ez-page-topic-2-col .ez-featuredResults .ez-itemMod-item .ez-title {
+    max-height: none;
+    overflow: visible;
+}
+.ez-page-topic-2-col .ez-featuredResults .ez-itemMod-item .ez-title {
+    padding-right: 10px;
+}
+.ez-page-topic-2-col .ez-topic-columns .ez-col-first,
+.ez-page-topic-2-col .ez-topic-columns .ez-col-last {
+    width: auto;
+}
+.ez-topic-columns .ez-itemMod-item .ez-thumbs,
+.ez-topic-columns .ez-Video .ez-thumbs {
+    width: 33%;
+}
+.ez-itemMod-item .ez-thumbs img {
+    width: 100%;
+}
+.ez-topic-columns .ez-itemMod-item .ez-main,
+.ez-topic-columns .ez-itemMod-item .ez-main .ez-desc {
+    overflow: hidden;
+}
+.ez-page-topic-2-col .ez-Video .ez-thumbs .ez-plainOverlay {
+    background: url(../../../root/3.12/images/play_button_overlay.png) center center no-repeat;
+}
+.ez-page-topic-2-col .ez-paginationMod a,
+.ez-page-topic-2-col .ez-paginationMod span {
+    width: auto;
+}
+.ez-page-topic-2-col .ez-featuredResults .ez-thumbs {
+    padding: 0px 30px;
+}
+.ez-page-topic-2-col .ez-featuredResults ol .ez-desc {
+    display: none;
+}
+.ez-page-topic-2-col .ez-topic-columns ol.ez-mod-content {
+    margin-bottom: 25px;
+}
+.ez-page-topic-2-col a[rel="nofollow"]:after,
+.ez-page-topic-2-col .ez-paginationMod-currentPage:after {
+    content: ",";
+}
+.ez-page-topic-2-col .ez-paginationMod {
+    border-bottom: 0px;
+}
+.ez-page-topic-2-col .ez-paginationMod a {
+    margin: 0px;
+    padding: 0 3px;
+}
+li[class^="rhi-start-"] .ez-thumbs .ez-plainOverlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height:auto;
+    z-index: 1;
+}
+/* Root Style overrides */
+@media screen and (max-width: 460px) {
+    .ez-page-topic-2-col #ez-mediaTypes.ez-horizontal ol.ez-mod-content {
+        overflow: visible;
+    }
+}
+/* Topic Landing Mobile Styles */
+#rhi-phone #ez-mediaTypes.ez-horizontal a {
+    padding: 14px 10px;
+}
+#rhi-phone .ez-media-details {
+    margin: 8px 0;
+}
+#rhi-phone .ez-topic-columns .ez-itemMod-item .ez-main,
+#rhi-phone .ez-topic-columns .ez-itemMod-item .ez-main .ez-desc {
+    overflow: visible;
+}
+#rhi-phone .ez-moreSearchLinks a {
+    display: block;
+}
+.ez-page-topic-2-col #rhi-phone .ez-socialLinks {
+    float: none;
+}
+#rhi-phone .ez-rss,
+#rhi-phone .ez-twitter-button,
+#rhi-phone .ez-fb-like-button,
+#rhi-phone .ez-google-plus1-button,
+#rhi-phone .ez-linked-in-button,
+#rhi-phone .ez-gigya-button {
+    margin: 0 5px 10px 0;
+    width: 30%;
+}
+#rhi-phone .ez-Return a {
+    margin-bottom: 10px;
+}
+#rhi-phone .ez-featuredResults .ez-thumbs {
+    padding: 0;
+}
+.rhi-landscape .ez-player-box #iframe {
+    display: block;
+    margin: 0 auto;
+}
+.rhi-landscape .ez-player-box {
+    background-color: #000;
+    clear: both;
+}
+/* Topic Landing Tablet Styles */
+#rhi-tablet .ez-moreSearchLinks a {
+    display: inline;
+}
+#rhi-tablet .ez-topic-columns .ez-itemMod-item .ez-main,
+#rhi-tablet .ez-topic-columns .ez-itemMod-item .ez-main .ez-desc {
+    overflow: visible;
+}
+#rhi-tablet #ez-mediaTypes.ez-horizontal ol.ez-mod-content {
+    padding-top: 0px;
+}
+#rhi-topSection h1 {
+    border: 0px none;
+    font-size: 32px;
+    line-height: 36px;
+}
+#rhi-topSection .ez-player-box {
+    clear: both;
+    background-color: #000;
+}
+#rhi-topSection .ez-Return {
+    float: right;
+    margin-top: 10px;
+}
+#rhi-topSection .ez-Return-tablet {
+    display: block !important;
+    clear: both;
+    width: 67%;
+    float: left;
+    margin-top: 0px;
+}
+#rhi-topSection .ez-socialLinks {
+    padding-bottom: 20px;
+    display: inline;
+    float: left;
+}
+#rhi-topSection .ez-player-box iframe {
+    display: block;
+    margin: 0 auto;
+}
+#rhi-topSection .ez-featuredResults .ez-main .ez-desc {
+    display: none;
+}
+#rhi-topSection .ez-featuredResults .ez-itemMod-item .ez-title {
+    padding-right: 10px;
+    overflow: visible;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+#rhi-topSection .ez-featuredResults ol {
+    padding: 0;
+    margin: 0;
+}
+#rhi-topSection .ez-content ol li {
+    list-style: outside none none;
+}
+#rhi-topSection .ez-itemMod-item {
+    margin: 0;
+}
+#rhi-topSection .ez-media-details {
+    position: relative;
+    opacity: 1.0;
+    color: #333;
+    background: #fff;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+}
+#rhi-topSection .ez-media-details .ez-title,
+#rhi-topSection .ez-media-details .ez-desc {
+    color: #333;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    overflow: hidden;
+}
+#rhi-topSection .ez-media-details .ez-desc {
+    font-weight: normal;
+}
+#rhi-topSection .ez-media-details .ez-details p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.1667em;
+}
+/* Pagination */
+#rhi-loading.ez-getMoreResults {
+    display:none;
+}
+.ez-getMoreResults {
+    text-align:center;
+    margin:25px auto 40px auto;
+    width: 100%;
+}
+.ez-getMoreResults span.ez-loader {
+    text-align:center;
+    display:block;
+    margin:0 auto;
+    background:url(../images/spinner_gray_85x85.gif) center center no-repeat;
+    width:85px;
+    height:85px;
+}

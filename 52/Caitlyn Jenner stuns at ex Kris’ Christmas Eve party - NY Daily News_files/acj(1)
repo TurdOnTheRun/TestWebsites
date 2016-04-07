@@ -1,0 +1,16 @@
+OX_2557007213({
+  "ads":{
+    "medium":"w",
+    "record_tmpl":"http://ox-d.33across.servedbyopenx.com/{medium}/1.0/{rtype}?ts={txn_state}",
+    "pixels":"http://us-u.openx.net/w/1.0/pd?plm=5&ph=8f5ed5d4-642c-4222-968a-d709c87ac3c8",
+    "adunits" : [
+      {
+        "auid":"538144098",
+        "chain_revenue":"",
+        "size":"300x250",
+        "chain":[
+        ]
+      }
+    ]
+  }
+});

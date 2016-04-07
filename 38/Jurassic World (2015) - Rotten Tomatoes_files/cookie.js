@@ -1,0 +1,1 @@
+window.parent.googletag.impl.pubads.setCookieInfo({"_cookies_":[{"_value_":"ID=d3dff548a16d1fbf:T=1460005089:S=ALNI_MZcjPVnG9rQN7f3oS-GXC4RjDAcdw","_expires_":1523077089,"_path_":"/","_domain_":"rottentomatoes.com"}]});

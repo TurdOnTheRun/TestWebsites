@@ -1,0 +1,24 @@
+rp_ad_response={
+"status":"ok",
+"account_id":7470,
+"site_id":23308,
+"zone_id":185808,
+"size_id":2,
+"tracking":"btf_leaderboard",
+"inventory":{},
+"ads":[{
+"status":"ok",
+"impression_id":"4ea438b3-dfbf-413f-b541-ce05615e37ba",
+"size_id":"2",
+"cpm":1.010000,
+"advertiser":105007,
+"network":1902,
+"ad_id":"3163100",
+"creative_id":3171911,
+"type":"script",
+"campaign_id":48985,
+"rtb_rule_id":1054040,
+"script":"rubicon_cb = Math.random(); rubicon_rurl = document.referrer; if(top.location==document.location){rubicon_rurl = document.location;} rubicon_rurl = escape(rubicon_rurl);\nwindow.rubicon_ad = \"3163100\" + \".\" + \"js\"; window.rubicon_creative = \"3171911\" + \".\" + \"js\"; document.write(\"\\n<div style=\\\"width: 0; height: 0; overflow: hidden;\\\">\\n<img border=\\\"0\\\" width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://beacon-us-iad2.rubiconproject.com/beacon/d/4ea438b3-dfbf-413f-b541-ce05615e37ba?accountId=7470&siteId=23308&zoneId=185808&e=6A1E40E384DA563B77DC8C854A5B00CA4F6B139C71CA9ED3F7D417562A66B969E1D020CC9E196153B44452A168175F66EA46F10ECC7BED13D13500725C28CD873E0C334304CCBFD87183385F249590F506AD3699238F770CF014A03D59219AA8EF408C02C0780260F174B420E903B892743D4428D10B37BAD62F1A6BDADCF653A953F864678CD6614FB3952A720DE77C\\\" alt=\\\"\\\" />\\n</div>\\n\\n\"); rubicon_tag_code = \"%3c!DOCTYPE%20html%3e%0a%0a%0a%3cdiv%20style=%22height:%2090px%3b%20width:%20728px%3b%20display:%20table-cell%3b%20vertical-align:%20middle%3b%22%3e%0a%3cdiv%20style=%22width:%20728px%3b%20margin-left:%20auto%3b%20margin-right:%20auto%3b%22%3e%20%20%0a%0a%20%20%3cscript%20src=%22http://adserver.adtechus.com/addyn/3.0/5399.1/2394397/0/-1/QUANTCAST%3b%3bsize=728x90%3btarget=_blank%3balias=p36-13nefhuen838640w%3bkvp36=p36-13nefhuen838640w%3bsub1=p-zj4nHTrrBJ43g%3bkvl=201794%3bkvc=821292%3bkvs=728x90%3bkvi=6f36f3052dacbad72e7ad1619ee52825c6870f80%3bkva=p-zj4nHTrrBJ43g%3brdclick=http://exch.quantserve.com/r%3fa=p-zj4nHTrrBJ43g%3blabels=_qc.clk,_click.adserver.rtb,_click.rand.54152%3brtbip=192.184.64.199%3brtbdata2=EAQaHUNhbXBhaWduX01vbml0b3JfTGVhZHNfQXByXzE2ING3GSjCqAwwrJAyOhdodHRwOi8vd3d3LnNibmF0aW9uLmNvbVooV0JvdVFROGZmaFZBR240ZUNCMW1SVlVXY2haQUh5NURDMG9ITXpnRHUe9jhEgAHRh6apDqABAagBhKvOAroBKDY4NjQ4MjM2OTcyYTIzZjk3NmNiOTI5MzI5NWY3YjVjMzY3ZmFlNGHAAf77PcgBw7-J-b4q2gEoNmYzNmYzMDUyZGFjYmFkNzJlN2FkMTYxOWVlNTI4MjVjNjg3MGY4MOUBKrbKPegBZJgC37MNqAIGqAIFsAIIugIEwLhAx8ACAsgCANAC4Ojb04yY0-2ZAeACAA%3bredirecturl2=%22%20type=%22text/javascript%22%3e%3c/script%3e%0a%0a%3cimg%20src=%22http://exch.quantserve.com/pixel/p-zj4nHTrrBJ43g.gif%3fmedia=ad&p=89D486155BE599F5&r=&rand=54152&labels=_qc.imp,_imp.adserver.rtb&rtbip=192.184.64.199&rtbdata2=EAQaHUNhbXBhaWduX01vbml0b3JfTGVhZHNfQXByXzE2ING3GSjCqAwwrJAyOhdodHRwOi8vd3d3LnNibmF0aW9uLmNvbVooV0JvdVFROGZmaFZBR240ZUNCMW1SVlVXY2haQUh5NURDMG9ITXpnRHUe9jhEgAHRh6apDqABAagBhKvOAroBKDY4NjQ4MjM2OTcyYTIzZjk3NmNiOTI5MzI5NWY3YjVjMzY3ZmFlNGHAAf77PcgBw7-J-b4q2gEoNmYzNmYzMDUyZGFjYmFkNzJlN2FkMTYxOWVlNTI4MjVjNjg3MGY4MOUBKrbKPegBZJgC37MNqAIGqAIFsAIIugIEwLhAx8ACAsgCANAC4Ojb04yY0-2ZAeACAA%22%20style=%22display:%20none%3b%22%20border=%220%22%20height=%221%22%20width=%221%22%20alt=%22Quantcast%22/%3e%0a%0a%3c/div%3e%0a%3c/div%3e%0a%3cscript%20src=%22https://z.moatads.com/quantcastv2691176990399/moatad.js%23moatClientLevel1=p-zj4nHTrrBJ43g&moatClientLevel2=$%7bCAMPAIGN_ID%7d&moatClientLevel3=201794&moatClientLevel4=821292&uid=6f36f3052dacbad72e7ad1619ee52825c6870f80%22%20type=%22text/javascript%22%3e%3c/script%3e\"; rubicon_tag_code = rubicon_tag_code.replace(/##RUBICON_CB##/g,rubicon_cb); document.write(unescape(rubicon_tag_code)); document.write(\"<div style=\\\"height: 0px; width: 0px; overflow: hidden\\\">\\n<script>\\n(function() {var proto = document.location.protocol; var server=\\\"http://tap2-cdn.rubiconproject.com\\\"; if (proto == \\\"https:\\\") server=\\\"https://tap-secure.rubiconproject.com\\\"; document.write(\\'<iframe src=\\\"\\'+server+\\'/partner/scripts/rubicon/emily.html?rtb_ext=1&pc=7470/23308&geo=na&co=us\\\" frameborder=\\\"0\\\" marginwidth=\\\"0\\\" marginheight=\\\"0\\\" scrolling=\\\"NO\\\" width=\\\"0\\\" height=\\\"0\\\" style=\\\"height: 0px; width: 0px\\\"></iframe>\\'); })();\\n<\\/script>\\n\\n</div>\");"
+}]
+};
+try{TN8.RUBICON_CB_1(rp_ad_response);}catch(ignore){}

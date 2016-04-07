@@ -1,0 +1,282 @@
+/* = Browser Reset
+-----------------------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* /Browser Reset */
+
+
+
+
+/* = General
+-----------------------------------------------------------------------------*/
+
+.panel {
+	width: 970px;
+	height: 418px;
+	overflow: hidden;
+}
+.panel#col_panel, #col_frame {
+	height: 90px;
+}
+#banner div, 
+#banner img {
+	position: absolute;
+}
+img, video, svg {
+	display: block; /* now it doesn't adhere to line-height anymore */
+}
+
+.frame {
+	box-sizing: border-box;
+	border: 1px solid #000;
+	pointer-events: none;
+}
+
+.gen_loader {
+	top: 50%;
+	left: 50%;
+	margin: -13px 0 0 -10px;
+	display: none;
+}
+
+/* ----- General Navigation ----- */
+
+.mainClickTag {
+	cursor: pointer;
+	background-color: black; opacity: 0; /*IE 10 make clickable fix*/
+}
+.ctaBtn, .closeBtn {
+	/* border-radius: 5px; /*for boxShadow/glow*/
+	/* box-shadow: 0px 0px 20px 0px #FFFFFF;*/
+	cursor: pointer;
+}
+.closeBtn, .closeBtnOver {
+	top: 2px;
+	right: 3px;
+	/*box-shadow: 0px 0px 5px 0px #000000;*/
+}
+.closeBtnOver {
+	display: none;
+}
+.gen_overlayPlayBtn {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: rgba(255,255,255,0.75);
+	border-radius: 100%;
+	top: 50%;
+	left: 50%;
+	margin: -35px 0 0 -35px;
+	display: none;
+}
+
+.gen_overlayPlayIcon {
+	position: relative;
+	top: 17px;
+	left: 35%;
+	width: 0;
+	height: 0;
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	border-left: 28px solid rgba(111, 111, 111, 0.8);
+}
+
+/* remove iPhone video play button */
+video::-webkit-media-controls-start-playback-button {
+	display: none !important;
+	-webkit-appearance: none;
+}
+
+
+
+
+
+/* COLLAPSED Panel
+-----------------------------------------------------------------------------*/
+
+#col_panel {
+	background-color: white;
+	visibility: hidden; /* Firefox fix: "display:none" not working for svg/tweenmax */
+}
+#col_txt {
+	top: 8px;
+	left: 79px;
+}
+#col_tt {
+	top: 32px;
+	left: 43px;
+}
+#col_bg {
+	top: 0px;
+	right: 3px;
+}
+#col_date {
+	top: 0px;
+	right: 0px;
+}
+#col_ctaBtn1, #col_ctaBtn1over {
+	top: 49px;
+	right: 93px;
+}
+#col_ctaBtn1over {
+	display: none;
+}
+/* /COLLAPSED Panel */
+
+
+
+
+/* AUTO/EXPAND Panel
+-----------------------------------------------------------------------------*/
+
+#auto_panel, #exp_panel {
+	background-color: white;
+	visibility: hidden; /* Firefox fix: "display:none" not working for svg/tweenmax */
+}
+#auto_bg, #exp_bg {
+	left: 4px;
+	bottom: 0px;
+}
+#auto_txt, #exp_txt {
+	top: 13px;
+	left: 62px;
+}
+#auto_tt, #exp_tt  {
+	left: 20px;
+	top: 38px;
+}
+#auto_date, #exp_date  {
+	left: 393px;
+	top: 27px;
+}
+#auto_ctaBtn1, #auto_ctaBtn1over, #exp_ctaBtn1, #exp_ctaBtn1over {
+	top: 22px;
+	left: 757px;
+}
+#auto_ctaBtn1over, #exp_ctaBtn1over {
+	display: none;
+}
+
+
+/* AUTO/EXPAND Video
+-----------------------------*/
+
+#auto_vidCont, #exp_vidCont {
+	top: 79px;
+	left: 357px;
+	/*border: 1px solid #afafaf;*/
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+	background-color: black;
+}
+
+#auto_vid, #auto_vidStill, #exp_vid, #exp_vidStill {
+	display: none;
+}
+
+#auto_vidStill, #exp_vidStill {
+	top: 0;
+}
+
+#exp_vidNav {
+	height: 25px;
+	left: 7px;
+	top: 286px;
+}
+#exp_skipBtn,
+#exp_pauseBtn,
+#exp_playBtn,
+#exp_audioOffBtn,
+#exp_audioOnBtn,
+#exp_replayBtn {
+	background: url("gen_btns.svg") no-repeat;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+#exp_skipBtn {
+	background-position: 0px 0px;
+}
+#exp_skipBtn:hover {
+	background-position: -50px 0px;
+}
+
+#exp_pauseBtn {
+	left: 26px;
+	background-position: 0px -50px;
+}
+#exp_pauseBtn:hover {
+	background-position: -50px -50px;
+}
+
+#exp_playBtn {
+	left: 26px;
+	background-position: 0px -100px;
+	visibility: hidden;
+}
+#exp_playBtn:hover {
+	background-position: -50px -100px;
+}
+
+#exp_audioOffBtn {
+	left: 52px;
+	background-position: 0px -150px;
+}
+#exp_audioOffBtn:hover {
+	background-position: -50px -150px;
+}
+
+#exp_audioOnBtn {
+	left: 52px;
+	background-position: 0px -200px;
+	visibility: hidden;
+}
+#exp_audioOnBtn:hover {
+	background-position: -50px -200px;
+}
+
+#exp_replayBtn {
+	width: 99px;
+	height: 29px;
+	background-position: 0px -250px;
+	margin: -14px 0 0 -49px;
+	left: 50%;
+	top: 50%;
+}
+#exp_replayBtn:hover {
+	background-position: 0px -300px;
+}
+/* /EXPAND Panel */
+
+

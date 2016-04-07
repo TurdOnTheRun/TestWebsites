@@ -1,0 +1,1 @@
+define(["jquery","version!fly/managers/debug","version!fly/components/base"],function(t,e){e=e.init("lazyloadElement"),t.widget("cnet.lazyloadElement",t.fly.base,{options:{urlAttr:"data-src"},_create:function(){var e=this;this._setup(),t(document).ready(function(){var t=e.$element.attr(e.options.urlAttr);e.$element.attr("src",t),e.$element.removeAttr(e.options.urlAttr)})}})});

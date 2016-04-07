@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://vzwmap.verizonwireless.com/dotcom/coveragelocator/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Coverage Locator</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./custom.min.css" rel="stylesheet">
+    
+      <!--JS-->                 
+    <script src="./CoverageLocator.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.min.js"></script>
+      <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body style="width:740px" marginwidth="0" marginheight="0">
+  <form name="form1" method="post" action="https://vzwmap.verizonwireless.com/dotcom/coveragelocator/" id="form1" autocomplete="off">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1MDE1OTI1NTRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYFBQ5kYXRhY292ZXJhZ2U0ZwUMZGF0YWNvdmVyYWdlBRF2b2ljZWFuZG1lc3NhZ2luZwUGcHJlcGF5BQpwdXNodG90YWxraKK+ENMW3eCwo7t+hSQa3u56bUU=">
+</div>
+
+<script>var newMapResponse = null;var addressToken  = '/7CL/xcMnglO4pKU+9jp+SLyaz2B3TgO573ZmlEn+2x2ZpRgb1PI1t0cVv3qblIpaszwwNcrRlrnZBEhousM0kq1n5E2vf+BNiMww56EcQQ=';var mappedPointIsFromStoreLocator = false;var storeIsDirect = null; requestFrom = 'dotcom'; var newAddressResponse = null;newMapResponse = new addressToMapResponse();newAddressResponse = new addressResponse();newRequestedStoreAddressResponse = new addressResponse();var newMapResponse = null;var newAddressResponse = null;newMapResponse = new addressToMapResponse();newAddressResponse = new addressResponse();var addressToPlace = false;newMapResponse.minx = '-126.976676';newMapResponse.maxx = '-65.023324';newMapResponse.miny = '60.0';newMapResponse.maxy = '10.0';var applicationDown = false; var addressToPlace = false; var mapErrorCode = '';var mapErrorMsg = '';</script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7DCADFA0">
+</div> 
+      
+      
+        <div id="txtCityStateAList"></div>
+        <div id="storeInfoContainer"></div>
+           
+        <div id="addresspopup">
+            <div> 
+                <span style="position:absolute;margin:7px 0px 0px 0px;padding-left:6px;"> <img alt="" src="./alert_yellow.gif" id="Img2"></span>
+	            <span style="position:absolute;margin:7px 0px 0px 25px;padding-left:6px;" id="addresspopupTitle">Select a location</span><span><img style="position:absolute;margin-left:231px;margin-top:3px" alt="Close Address List" onclick="closeAddressSearchList();" src="./close_21x21.gif"></span>
+	            <span style="position:absolute;margin:30px 0px 0px 25px;padding-left:6px;" id="addresspopupTitle1">Your search produced multiple matches. Please select your preferred location below:</span>
+	            <span style="position:absolute;margin:60px 0px 0px 0px;padding-left:0px;width:100%" id="addressTitleUnderline"></span>
+	        </div>
+            <div id="addressContent">
+           
+            </div>
+        </div>
+               
+        <div class="background-white">
+            
+
+            <div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="pageHeadline">Check your coverage</p>                       
+                    </div>
+                    
+                    <div class="col-sm-6">                            
+                        <div class="table table-display pull-right">
+                            <div class="table-row">
+                                <div class="table-cell table-content-right">
+                                    <p><a href="https://vzwmap.verizonwireless.com/dotcom/coveragelocator/#" class="smallLinkNoHref js-goto-international-coverage">International Coverage</a></p>
+                                </div>
+                            </div>
+                        </div>                              
+                    </div>
+
+                </div>
+            </div>
+ 
+
+            <div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <small>See detailed information about coverage in your area by searching this map.</small>
+                    </div>
+                    <div class="col-sm-8"> 
+                        <div id="addressLookupContainer" onkeypress="return SubmitOnEnter(this,event);" class="input-group">
+                            <input name="txtAddress" id="txtAddress" type="text" class="form-control vz-input-background vz-input-no-radius vz-input-border" placeholder="Enter street address, city or zip" onblur="setTimeout(&#39;hideList(\&#39;txtCityStateA\&#39;,0)&#39;,300);" onkeyup="handleListSelectionByKeys(this.id,0,event,&#39;CityStateA&#39;);">
+                            <span class="input-group-btn">
+                                <button id="btnSearch" class="btn vz-button-red vz-input-no-radius" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- 1st column -->
+                </div><!-- /.row -->
+            </div>
+                                                                   
+                               
+            <div class="row">
+                <div class="col-sm-4">
+                    
+                     <div id="spanUsrMsg" class="alert alert-danger userMessage" role="alert" style="visibility: hidden;"></div>
+
+                </div>
+                <div class="col-sm-8">
+                                        
+                    <div id="coverageTypes" class="table table-display bottom-buffer-0">
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <p><label class="radio-inline vzw-font-size-12"><input value="datacoverage4g" name="coverageType" type="radio" id="datacoverage4g" class="js-change-coverage" checked="checked">4G LTE Data Coverage<img src="./tooltip-icon-question.png" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Available with 4G Mobile Broadband USB Modems." data-original-title="" title=""></label></p>
+                            </div>
+                            <div class="table-cell" id="datacoverageCell">
+                                <p><label class="radio-inline vzw-font-size-12"><input value="datacoverage" name="coverageType" type="radio" id="datacoverage" class="js-change-coverage">Data Coverage<img src="./tooltip-icon-question.png" class="vzw-popover-datacoverage" data-original-title="" title=""></label></p>
+                            </div>
+                            <div class="table-cell">
+                                <p><label class="radio-inline vzw-font-size-12"><input value="voiceandmessaging" name="coverageType" type="radio" id="voiceandmessaging" class="js-change-coverage">Voice &amp; Messaging<img src="./tooltip-icon-question.png" data-container="body" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="Voice service is available only in the digital and analog coverage area depicted. Text messaging only works on the digital coverage area shown." data-original-title="" title=""></label></p>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <p><label class="radio-inline vzw-font-size-12"><input value="prepay" name="coverageType" type="radio" id="prepay" class="js-change-coverage">Prepaid<img src="./tooltip-icon-question.png" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Voice service is available only in the digital and analog coverage area depicted. Text messaging only works on the digital coverage area shown." data-original-title="" title=""></label></p>
+                            </div>
+                            <div class="table-cell">
+                                <p><label class="radio-inline vzw-font-size-12"><input value="pushtotalk" name="coverageType" type="radio" id="pushtotalk" class="js-change-coverage">Push to Talk<img src="./tooltip-icon-question.png" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Verizon Wireless Push to Talk service offers instant two-way communication for mobile teams on the go. When you need to get more done in less time, connect with the push of a button using Push to Talk." data-original-title="" title=""></label></p>
+                            </div>
+                        </div>
+                    </div>                                        
+                </div>
+            </div>
+            
+                                 
+            <div style="width: 740px;"> <!--map-->                      
+                                                                   
+                    
+                        <div id="clMap">
+                            <div id="mapNavigationCover"></div>
+                            <div id="imgLoadingAnimated">
+                                <img alt="Loading..." title="Loading..." src="./loading_animated.gif">
+                                Loading...
+                            </div>
+                            <div id="mapNavigation">
+                                <div id="zoombar">                                      
+                                    <div>
+                                        <img id="icon-zoomin" src="./navigation-zoom-in-33.png" onclick="mapEventHandler(level - 1,&#39;Zoom&#39;);"><br>
+                                        <img id="icon-zoomout" src="./navigation-zoom-out-33.png" onclick="mapEventHandler(level + 1,&#39;Zoom&#39;);">
+                                    </div>
+                                </div>
+                            </div>
+                           <div id="divMap" style="overflow:hidden;clip:rect(0px 740px 300px 0px);">
+                            <img src="./datacoverage4g.png" id="imgMapCanvas" alt="Verizon Wireless Coverage Map" title="" style="height:300px;width:740px;overflow:hidden;">
+                            <script type="text/javascript" language="JavaScript">
+                                var storeCount = 51;
+                                for (k = 1; k < storeCount; k++) {
+                                    document.write("<img class=\'vzwstore\' alt=\'\' src=\'images/icons/icon-vzw-store.png\' style=\'position:absolute; z-index:1;visibility:hidden\'" + "id=\'imgStore" + k + "\'" + "/>");
+                                }
+                             </script><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore1" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore2" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore3" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore4" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore5" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore6" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore7" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore8" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore9" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore10" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore11" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore12" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore13" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore14" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore15" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore16" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore17" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore18" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore19" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore20" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore21" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore22" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore23" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore24" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore25" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore26" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore27" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore28" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore29" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore30" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore31" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore32" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore33" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore34" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore35" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore36" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore37" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore38" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore39" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore40" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore41" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore42" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore43" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore44" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore45" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore46" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore47" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore48" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore49" data-original-title="" title=""><img class="vzwstore" alt="" src="./icon-vzw-store.png" style="position:absolute; z-index:1;visibility:hidden" id="imgStore50" data-original-title="" title="">
+                             <img alt="" style="visibility:hidden;" src="./pushpin-white-red.png" id="imgPushpin" class="pushpin" data-original-title="" title="">
+                             <div id="divInfoBubble"></div>                                                                             
+                           </div>                                                        
+                        </div>                   
+            </div>            
+                                                                                         
+            <div class="row" style="padding-top:10px;">
+                <div class="col-sm-12">                    
+                    <ul class="js-legend-items"><li style="color:rgb(201,16,26)"><span>Verizon 4G LTE</span></li><li style="color:rgb(140,20,18)"><span>Verizon 3G</span></li><li style="color:rgb(144,110,95)"><span>Extended 3G</span></li><li style="color:rgb(230,195,207)"><span>International 4G</span></li><li style="color:rgb(247,226,231)"><span>International 3G</span></li><li class="js-icon-vzw-store"><img src="./legend-item-nocoverage-12x12.png"><span>No Coverage</span></li></ul>                    
+                </div>
+            </div> <!--legend-->
+            
+                
+            <div class="row">
+                <div class="col-sm-12"><hr></div>
+            </div>            
+
+            <div class="row">                
+                <div class="col-sm-12">                    
+                    <div class="legalDisclaimerText small js-disclaimer-text" style="padding-top:20px;" id="disclaimer"><p>These Coverage Locator depictions apply to the following calling plans: <br>National Calling Plans, Mobile Broadband and Prepaid.</p><p>International rates for voice and data will apply.</p><p>These maps are not a guarantee of coverage and contain areas of no service, and are a general prediction of where rates apply based on our internal data. Wireless service is subject to network and transmission limitations, including cell site unavailability, particularly near boundaries and in remote areas. Customer equipment, weather, topography and other environmental considerations associated with radio technology also affect service and service may vary significantly within buildings. Some information on service outside the Verizon Wireless proprietary network, and we can not vouch for its accuracy.</p></div>
+                </div>
+            </div> <!--disclaimer-->
+ 
+        </div> <!--CONTENT CONTAINER-->     
+
+<div class="clear"></div>
+   
+
+
+</form>
+      
+      
+    <!-- BACK BUTTON HANDLER ROCKET -->
+    <input name="originalCoverageType" type="hidden" id="originalCoverageType" style="position:absolute;top:0px;left:0px;" value="datacoverage4g">
+                            
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./bootstrap.min.js"></script>
+      
+    <!--EVENTS-->
+    <script src="./events.min.js"></script>
+    
+      <!--SITE CAYALYST-->
+        <script language="JavaScript" type="text/javascript"><!--
+        var trackingOn = false;
+
+        if (typeof s_account != "undefined") {
+
+            trackingOn = true;
+
+            /* You may give each page an identifying name, server, and channel on
+            the next lines. */
+            s.pageName = TrackingPageName;
+            s.server = ""
+            s.channel = ""
+            s.pageType = ""
+            s.prop1 = ""
+            s.prop2 = ""
+            s.prop3 = ""
+            s.prop4 = ""
+            s.prop5 = ""
+            /* Conversion Variables */
+            s.campaign = ""
+            s.state = ""
+            s.zip = ""
+            s.events = ""
+            s.products = ""
+            s.purchaseID = ""
+            s.eVar1 = ""
+            s.eVar2 = ""
+            s.eVar3 = ""
+            s.eVar4 = ""
+            s.eVar5 = ""
+            /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+            var s_code = s.t(); if (s_code) document.write(s_code)//-->
+        }
+                </script>
+            <script language="JavaScript" type="text/javascript"><!--
+        if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-');
+        //--></script><noscript>&lt;img src="http://verizonwireless.112.2o7.net/b/ss/vzwitestenv/1/H.23.3--NS/0"
+            height="1" width="1" border="0" alt="" /&gt;</noscript><!--/DO NOT REMOVE/-->
+            <!-- End SiteCatalyst code version: H.23.3. -->
+
+        <script src="./tracking.js" type="text/javascript"></script>      
+
+         
+   <script type="text/javascript" language="javascript">
+       $(document).ready(function () {
+           pageLoad();
+           refreshToOriginal();
+       });
+   </script> 
+                                    
+  
+
+
+
+</body></html>

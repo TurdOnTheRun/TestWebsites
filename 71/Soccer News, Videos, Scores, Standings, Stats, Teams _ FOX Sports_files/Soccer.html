@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://www.foxsoccer2go.com/advert/contentType/Soccer -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Fox Soccer Advert Widget</title>
+  <script src="./jquery.min.js"></script>
+  <!--[if lt IE 9]><script src="/js/global/js/core/html5.js"></script><![endif]-->   
+  <script type="text/javascript" src="./jquery.jscrollpane.min.js"></script>
+  <link rel="stylesheet" href="./advertWidget">
+  <script>
+    $(document).ready(function(){
+      $("#widget1 .innerList").jScrollPane({showArrows:true});
+    });
+  </script>
+    <script>
+  function filterSchedule() {
+  var showComp = $("#filterEventBy").val(),
+      showLive = $("#showLive").is(":checked"),
+      showDelayed = $("#showDelayed").is(":checked"),
+      dateHeaderClass;
+  
+  $('.eventList li.dateHeader').hide();
+  $('.eventList li.event').hide();
+
+  if ( showComp == -1 ) {
+   $('.eventList .event').show();
+  } else {
+   $('.eventList .'+showComp).show();
+  }
+
+  if (!showLive) {
+   $('.eventList .live:visible').hide();
+  }
+
+  if (!showDelayed) {
+   $('.eventList .delayed:visible').hide();
+  }
+
+  $('.eventList li.event:visible').each(function(){
+    dateHeaderClass = $(this).children(".metadate").html();
+    $(".dateHeader.date"+dateHeaderClass).show();
+  });
+    
+  }  
+  $(document).ready(function(){
+  $("#filterEventBy, #showLive, #showDelayed").change(function(){filterSchedule();})
+  
+  $('.scroll-down').click(function(){
+   $('.upcoming .result').stop().scrollTo('+=300', 610);
+  });
+  $('.scroll-up').click(function(){
+   $('.upcoming .result').stop().scrollTo('-=300', 610);
+  })
+  });
+  </script>
+</head>
+<body>
+  
+    
+    <script src="./eventlist.js"></script>
+    <script>
+      var eventArray = new EventList();
+      eventArray.addEvent('1109279', '20160405235000', '20160406000000', '20160406031500', 'Tigres v Queretaro ');
+      eventArray.addEvent('1114769', '20160406003500', '20160406004500', '20160406030000', 'SOCCER: Toluca v LDU Quito<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1114771', '20160406003500', '20160406004500', '20160406030000', 'SOCCER: São Paulo v Trujillanos<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1109281', '20160406015000', '20160406020000', '20160406053000', 'Club America v Santos Laguna ');
+      eventArray.addEvent('1112655', '20160406173500', '20160406174500', '20160406210000', 'Wolfsburg v Real Madrid  ');
+      eventArray.addEvent('1112657', '20160406173500', '20160406174500', '20160406210000', 'PSG v Manchester City');
+      eventArray.addEvent('1109151', '20160406215000', '20160406220000', '20160406224500', 'Bundesliga v Weekly Show ');
+      eventArray.addEvent('1114875', '20160406222000', '20160406223000', '20160407004500', 'SOCCER: River Plate v The Strongest<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1109317', '20160406225000', '20160406230000', '20160407020000', 'USA v Colombia');
+      eventArray.addEvent('1114877', '20160407003500', '20160407004500', '20160407030000', 'SOCCER: Independiente del Valle v Atlético Mineiro<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1115157', '20160407003500', '20160407004500', '20160407030000', 'SOCCER: Rosario Central v Palmeiras<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1115807', '20160407003500', '20160407004500', '20160407030000', 'SOCCER: Santa Fe v Corinthians<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1114879', '20160407025000', '20160407030000', '20160407051500', 'SOCCER: Pumas UNAM v Olimpia<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1115185', '20160407094000', '20160407095000', '20160407120500', 'RUGBY: Brisbane Broncos v St. George-Illawarra Dragons<BR>Not available in Australia, New Zealand and USA ');
+      eventArray.addEvent('1111551', '20160407185000', '20160407190000', '20160407211500', 'Hull KR v Catalans Dragons');
+      eventArray.addEvent('1112753', '20160407185500', '20160407190500', '20160407212000', 'Villarreal v Sparta Prague');
+      eventArray.addEvent('1112757', '20160407185500', '20160407190500', '20160407212000', 'Braga v Shakhtar');
+      eventArray.addEvent('1112755', '20160407185500', '20160407190500', '20160407212000', 'Dortmund v Liverpool');
+      eventArray.addEvent('1112759', '20160407185500', '20160407190500', '20160407212000', 'Athletic Bibao  v Sevilla');
+      eventArray.addEvent('1115065', '20160407222000', '20160407223000', '20160408004500', 'SOCCER: Boca Juniors v Bolívar<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1115063', '20160407222000', '20160407223000', '20160408004500', 'SOCCER: River Plate v Nacional<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1115069', '20160408003500', '20160408004500', '20160408030000', 'SOCCER: Melgar v Colo Colo<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1115067', '20160408003500', '20160408004500', '20160408030000', 'SOCCER: Racing Club v Deportivo Cali<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1115307', '20160408094000', '20160408095000', '20160408120500', 'RUGBY: South Sydney Rabbitohs v Sydney Roosters<BR>Not available in Australia, New Zealand and USA ');
+      eventArray.addEvent('1109291', '20160408105000', '20160408110000', '20160408114500', 'UEFA Champions League v Magazine Show ');
+      eventArray.addEvent('1109283', '20160408183500', '20160408184500', '20160408210000', 'Heart of Midlothian v Aberdeen ');
+      eventArray.addEvent('1111553', '20160408185000', '20160408190000', '20160408211500', 'Warrington Wolves v St Helens');
+      eventArray.addEvent('1109155', '20160408192000', '20160408193000', '20160408214500', 'Hertha Berlin v Hannover 96 ');
+      eventArray.addEvent('1097135', '20160408215000', '20160408220000', '20160408224500', 'Copa Libertadores v Highlight Show  ');
+      eventArray.addEvent('1108889', '20160409042000', '20160409043000', '20160409073000', 'St Kilda v Collingwood');
+      eventArray.addEvent('1115523', '20160409045000', '20160409050000', '20160409071500', 'RUGBY: Parramatta Eels v Canberra Raiders<BR>Not available in Australia, New Zealand and USA ');
+      eventArray.addEvent('1108893', '20160409072000', '20160409073000', '20160409103000', 'Sydney Swans v GWS Giants');
+      eventArray.addEvent('1115525', '20160409072000', '20160409073000', '20160409094500', 'RUGBY: New Zealand Warriors v Manly-Warringah Sea Eagles<BR>Not available in Australia, New Zealand and USA ');
+      eventArray.addEvent('1115537', '20160409092000', '20160409093000', '20160409114500', 'RUGBY: Penrith Panthers v North Queensland Cowboys<BR>Not available in Australia, New Zealand and USA ');
+      eventArray.addEvent('1109285', '20160409112000', '20160409113000', '20160409134500', 'Motherwell v Celtic ');
+      eventArray.addEvent('1109163', '20160409132000', '20160409133000', '20160409154500', 'Werder Bremen v Augsburg ');
+      eventArray.addEvent('1109167', '20160409132000', '20160409133000', '20160409154500', 'Stuttgart v Bayern Munich ');
+      eventArray.addEvent('1109231', '20160409132000', '20160409133000', '20160409154500', 'Eintracht Frankfurt v Hoffenheim ');
+      eventArray.addEvent('1109259', '20160409132000', '20160409133000', '20160409154500', 'Hamburg v Darmstadt ');
+      eventArray.addEvent('1109265', '20160409132000', '20160409133000', '20160409154500', 'Ingolstadt v Monchengladbach ');
+      eventArray.addEvent('1109269', '20160409162000', '20160409163000', '20160409184500', 'Wolfsburg v FSV Mainz ');
+      eventArray.addEvent('1118703', '20160410012000', '20160410013000', '20160410034500', 'LA Galaxy v Portland Timbers ');
+      eventArray.addEvent('1115727', '20160410035000', '20160410040000', '20160410061500', 'RUGBY: Cronulla-Sutherland Sharks v Gold Coast Titans<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1115729', '20160410055000', '20160410060000', '20160410081500', 'RUGBY: Newcastle Knights v Wests Tigers<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1109271', '20160410132000', '20160410133000', '20160410154500', 'FC Schalke 04 v Borussia Dortmund ');
+      eventArray.addEvent('1109273', '20160410152000', '20160410153000', '20160410174500', 'FC Koln v Bayer Leverkusen ');
+      eventArray.addEvent('1109275', '20160410225000', '20160410230000', '20160411011500', 'New York City FC v Chicago Fire ');
+      eventArray.addEvent('1109277', '20160411012000', '20160411013000', '20160411034500', 'LA Galaxy v Portland Timbers ');
+      eventArray.addEvent('1115833', '20160411085000', '20160411090000', '20160411111500', 'RUGBY: Melbourne Storm v Canterbury-Bankstown Bulldogs<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1112745', '20160412173500', '20160412174500', '20160412220000', 'Man City v PSG ');
+      eventArray.addEvent('1112751', '20160412173500', '20160412174500', '20160412220000', 'Real Madrid v Wolfsburg ');
+      eventArray.addEvent('1116209', '20160412222000', '20160412223000', '20160413004500', 'SOCCER: Trujillanos v The Strongest<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1116211', '20160412222000', '20160412223000', '20160413004500', 'SOCCER: Huracán v Peñarol<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1116269', '20160413003500', '20160413004500', '20160413030000', 'SOCCER: Sporting Cristal v Atlético Nacional<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1116271', '20160413003500', '20160413004500', '20160413030000', 'SOCCER: Toluca v San Lorenzo<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1112747', '20160413173500', '20160413174500', '20160413220000', 'Benfica v Bayern München   ');
+      eventArray.addEvent('1112749', '20160413173500', '20160413174500', '20160413220000', 'Atletico Madrid  v Barcelona ');
+      eventArray.addEvent('1118803', '20160413175000', '20160413180000', '20160413201500', 'West Ham v Manchester United');
+      eventArray.addEvent('1119019', '20160413215000', '20160413220000', '20160413224500', 'Bundesliga v Weekly Show ');
+      eventArray.addEvent('1116273', '20160413222000', '20160413223000', '20160414004500', 'SOCCER: Cobresal v Cerro Porteño<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1116275', '20160413222000', '20160413223000', '20160414004500', 'SOCCER: LDU Quito v Grêmio<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1116277', '20160413222000', '20160413223000', '20160414004500', 'SOCCER: Racing Club v Boca Juniors<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1118031', '20160414003500', '20160414004500', '20160414030000', 'SOCCER: São Paulo v River Plate<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1118039', '20160414003500', '20160414004500', '20160414030000', 'SOCCER: Olimpia v Deportivo Táchira<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1118079', '20160414025000', '20160414030000', '20160414051500', 'SOCCER: Emelec v Pumas UNAM<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1118239', '20160414094000', '20160414095000', '20160414120500', 'RUGBY: Manly-Warringah Sea Eagles v Parramatta Eels<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1112773', '20160414182000', '20160414183000', '20160414204500', 'UEFA Europa League v MultiMatch 90');
+      eventArray.addEvent('1111555', '20160414185000', '20160414190000', '20160414211500', 'St Helens v Catalans Dragons');
+      eventArray.addEvent('1112765', '20160414185500', '20160414190500', '20160414222500', 'Shakhtar v Braga ');
+      eventArray.addEvent('1112767', '20160414185500', '20160414190500', '20160414222500', 'Sevilla v Athletic Bibao  ');
+      eventArray.addEvent('1112769', '20160414185500', '20160414190500', '20160414222500', 'Sparta Prague v Villarreal ');
+      eventArray.addEvent('1112771', '20160414185500', '20160414190500', '20160414222500', 'Liverpool v Dortmund ');
+      eventArray.addEvent('1118147', '20160414222000', '20160414223000', '20160415004500', 'SOCCER: Atlético Mineiro v Melgar<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1118221', '20160414222000', '20160414223000', '20160415004500', 'SOCCER: Colo Colo v Independiente del Valle<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1118223', '20160414222000', '20160414223000', '20160415004500', 'SOCCER: Deportivo Cali v Bolívar<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1115231', '20160415003500', '20160415004500', '20160415030000', 'SOCCER: Nacional v Rosario Central<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1118073', '20160415003500', '20160415004500', '20160415030000', 'SOCCER: Palmeiras v River Plate<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1118525', '20160415094000', '20160415095000', '20160415120500', 'RUGBY: North Queensland Cowboys v South Sydney Rabbitohs<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1111157', '20160415105000', '20160415110000', '20160415131500', 'UEFA Champions League v Semi-Final Draw');
+      eventArray.addEvent('1111159', '20160415155000', '20160415160000', '20160415164500', 'UEFA Champions League v Magazine Show');
+      eventArray.addEvent('1119083', '20160415182000', '20160415183000', '20160415204500', 'Hannover v Monchengladbach ');
+      eventArray.addEvent('1111559', '20160415185000', '20160415190000', '20160415211500', 'TBC  v TBC');
+      eventArray.addEvent('1097137', '20160415225000', '20160415230000', '20160415234500', 'Copa Libertadores v Highlight Show  ');
+      eventArray.addEvent('1118723', '20160416045000', '20160416050000', '20160416071500', 'RUGBY: Gold Coast Titans v St. George-Illawarra Dragons<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1118727', '20160416072000', '20160416073000', '20160416094500', 'RUGBY: Canterbury-Bankstown Bulldogs v New Zealand Warriors<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1115559', '20160416092000', '20160416093000', '20160416123000', 'Adelaide Crows v Sydney Swans');
+      eventArray.addEvent('1118729', '20160416092000', '20160416093000', '20160416114500', 'RUGBY: Brisbane Broncos v Newcastle Knights<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1119063', '20160416152000', '20160416153000', '20160416184500', 'Bayern Munich v FC Schalke ');
+      eventArray.addEvent('1111561', '20160416185000', '20160416190000', '20160416211500', 'TBC  v TBC');
+      eventArray.addEvent('1119023', '20160417035000', '20160417040000', '20160417061500', 'RUGBY: Canberra Raiders v Cronulla-Sutherland Sharks<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1119021', '20160417055000', '20160417060000', '20160417083000', 'RUGBY: Wests Tigers v Melbourne Storm<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1119059', '20160417132000', '20160417133000', '20160417154500', 'Borussia Dortmund v Hamburg ');
+      eventArray.addEvent('1119061', '20160417152000', '20160417153000', '20160417174500', 'FSV Mainz v FC Koln ');
+      eventArray.addEvent('1111563', '20160417185000', '20160417190000', '20160417211500', 'Wigan Warriors v Huddersfield Giants');
+      eventArray.addEvent('1115563', '20160417225000', '20160417230000', '20160418011500', 'FC Dallas v Sporting KC ');
+      eventArray.addEvent('1115561', '20160418062000', '20160418063000', '20160418093000', 'North Melbourne v Fremantle');
+      eventArray.addEvent('1119099', '20160418085000', '20160418090000', '20160418111500', 'RUGBY: Sydney Roosters v Penrith Panthers<BR>Not available in Australia, New Zealand and USA');
+      eventArray.addEvent('1119207', '20160419222000', '20160419223000', '20160420004500', 'SOCCER: Peñarol v Sporting Cristal<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1119209', '20160419222000', '20160419223000', '20160420004500', 'SOCCER: Atlético Nacional v Huracán<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1119193', '20160420003500', '20160420004500', '20160420030000', 'SOCCER: Grêmio v Toluca<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1119195', '20160420003500', '20160420004500', '20160420030000', 'SOCCER: San Lorenzo v LDU Quito<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1115583', '20160420183500', '20160420184500', '20160420210000', 'Hibernian v Rangers ');
+      eventArray.addEvent('1119089', '20160420215000', '20160420220000', '20160420224500', 'Bundesliga v Weekly Show ');
+      eventArray.addEvent('1119197', '20160420222000', '20160420223000', '20160421004500', 'SOCCER: Bolívar v Racing Club<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1119199', '20160420222000', '20160420223000', '20160421004500', 'SOCCER: Boca Juniors v Deportivo Cali<BR>Not available in Brazil and USA ');
+      eventArray.addEvent('1119167', '20160421003500', '20160421004500', '20160421030000', 'SOCCER: Corinthians v Cobresal<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1119163', '20160421003500', '20160421004500', '20160421030000', 'SOCCER: Cerro Porteño v Santa Fe<BR>Not available in Brazil and USA');
+      eventArray.addEvent('1115585', '20160421165000', '20160421170000', '20160421180000', 'FA Cup Semifinal  v Preview Show ');
+      eventArray.addEvent('1115567', '20160422042000', '20160422043000', '20160422073000', 'Hawthorn v Adelaide Crows');
+      eventArray.addEvent('1119073', '20160422182000', '20160422183000', '20160422204500', 'Hamburg v Werder Bremen ');
+      eventArray.addEvent('1111567', '20160422185000', '20160422190000', '20160422211500', 'St Helens v Leeds Rhinos');
+      eventArray.addEvent('1097139', '20160422225000', '20160422230000', '20160422234500', 'Copa Libertadores v Highlight Show  ');
+      eventArray.addEvent('1119079', '20160423132000', '20160423133000', '20160423154500', 'FC Koln v Darmstadt ');
+      eventArray.addEvent('1119085', '20160423132000', '20160423133000', '20160423154500', 'FC Ingolstadt v Hannover ');
+      eventArray.addEvent('1119121', '20160423132000', '20160423133000', '20160423154500', 'Hertha Berlin v Bayern Munich');
+      eventArray.addEvent('1119123', '20160423132000', '20160423133000', '20160423154500', 'Stuttgart v Borussia Dortmund');
+      eventArray.addEvent('1119125', '20160423132000', '20160423133000', '20160423154500', 'Wolfsburg v Augsburg');
+      eventArray.addEvent('1119129', '20160423152000', '20160423153000', '20160423184500', 'FC Schalke v Bayer Leverkusen');
+      eventArray.addEvent('1111569', '20160423155000', '20160423160000', '20160423181500', 'Catalans Dragons v Salford Red Devils');
+      eventArray.addEvent('1115587', '20160423160500', '20160423161500', '20160423183000', 'Everton v Manchester United or West Ham ');
+      eventArray.addEvent('1115569', '20160424085000', '20160424090000', '20160424120000', 'Melbourne v Richmond');
+      eventArray.addEvent('1119133', '20160424132000', '20160424133000', '20160424154500', 'Monchengladbach v Hoffenheim');
+      eventArray.addEvent('1115589', '20160424145000', '20160424150000', '20160424171500', 'Crystal Palace v Watford ');
+      eventArray.addEvent('1119135', '20160424152000', '20160424153000', '20160424174500', 'Eintracht Frankfurt v FSV Mainz');
+      eventArray.addEvent('1115565', '20160424232000', '20160424233000', '20160425014500', 'New York Red Bulls v Orlando City SC ');
+      eventArray.addEvent('1115733', '20160426173500', '20160426174500', '20160426220000', 'Semi-final 1st v Leg TBD ');
+      eventArray.addEvent('1115731', '20160427173500', '20160427174500', '20160427220000', 'Semi-final 1st v Leg TBD ');
+      eventArray.addEvent('1111571', '20160428185000', '20160428190000', '20160428211500', 'Warrington Wolves v Wigan Warriors');
+      eventArray.addEvent('1115735', '20160429115000', '20160429120000', '20160429124500', 'UEFA Champions League v Magazine Show ');
+      eventArray.addEvent('1111575', '20160429185000', '20160429190000', '20160429211500', 'Huddersfield  Giants v  Leeds Rhinos');
+      eventArray.addEvent('1115571', '20160430035000', '20160430040000', '20160430070000', 'Adelaide Crows v Fremantle');
+      eventArray.addEvent('1115581', '20160430085000', '20160430090000', '20160430120000', 'Richmond v Port Adelaide ');
+      eventArray.addEvent('1111577', '20160506185000', '20160506190000', '20160506211500', 'TBC  v TBC');
+      eventArray.addEvent('1111581', '20160512185000', '20160512190000', '20160512211500', 'Leeds Rhinos v Castleford Tigers');
+      eventArray.addEvent('1111587', '20160513185000', '20160513190000', '20160513211500', 'TBC  v TBC');
+      eventArray.addEvent('1111589', '20160514155000', '20160514160000', '20160514181500', 'Catalans Dragons v Huddersfield Giants');
+      eventArray.addEvent('1111591', '20160521132000', '20160521133000', '20160521154500', 'Salford Red Devils v Widnes Vikings');
+      eventArray.addEvent('1111593', '20160521153500', '20160521154500', '20160521180000', 'Warrington Wolves v Castleford Tigers');
+      eventArray.addEvent('1111595', '20160521175000', '20160521180000', '20160521201500', 'Leeds Rhinos v Wigan Warriors ');
+      eventArray.addEvent('1111599', '20160522115000', '20160522120000', '20160522141500', 'Wakefield Wildcats v Catalans Dragons ');
+      eventArray.addEvent('1111597', '20160522140500', '20160522141500', '20160522163000', 'St Helens v Huddersfield Giants  ');
+      eventArray.addEvent('1111601', '20160522162000', '20160522163000', '20160522184500', 'Hull FC v Hull KR');
+      eventArray.addEvent('1111603', '20160526185000', '20160526190000', '20160526211500', 'Castleford Tigers v Wigan Warriors');
+      eventArray.addEvent('1111605', '20160527185000', '20160527190000', '20160527211500', 'TBC  v TBC');
+      eventArray.addEvent('1115595', '20160425215000', '20160425220000', '20160425224500', '2018 FIFA World Cup v Magazine Episode 9');
+      $(document).ready( function() {
+        eventArray.startTimer();
+      });
+    </script>
+
+    <div class="eventList" id="widget1">
+      <a href="http://foxsoccer2go.com/?WT.mc_id=FOX_Widget" class="logo" target="_blank">FOXSOCCER2GO.COM</a>
+      <div class="innerList jspScrollable" tabindex="0" style="overflow: hidden; padding: 0px; width: 300px;">
+
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+          
+      
+
+     <div class="jspContainer" style="width: 300px; height: 144px;"><div class="jspPane" style="padding: 15px 0px 0px; width: 274px; top: 0px;"><div class="event1114879 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1114879/soccer:_pumas_unam_v_olimpia%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Pumas UNAM
+            
+          
+          <span class="vs">v</span>
+            Olimpia
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/match/eventid/1114879/soccer:_pumas_unam_v_olimpia%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 10:50 PM EDT</span></span>
+           <span class="eventOn eventStatus"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156299/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112753 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112753/villarreal_v_sparta_prague" target="_blank">
+Villarreal
+          <span class="vs">v</span>
+Sparta Prague
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112753/villarreal_v_sparta_prague" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155187/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160407"> - Apr 07</span>
+
+       </div><div class="event1112757 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112757/braga_v_shakhtar" target="_blank">
+Braga
+          <span class="vs">v</span>
+Shakhtar
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112757/braga_v_shakhtar" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155188/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112755 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112755/dortmund_v_liverpool" target="_blank">
+Dortmund
+          <span class="vs">v</span>
+Liverpool
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112755/dortmund_v_liverpool" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155189/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112759 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112759/athletic_bibao__v_sevilla" target="_blank">
+Athletic Bibao
+          <span class="vs">v</span>
+Sevilla
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112759/athletic_bibao__v_sevilla" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155190/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115065 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115065/soccer:_boca_juniors_v_bol%C3%ADvar%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Boca Juniors
+            
+          
+          <span class="vs">v</span>
+            Bolívar
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115065/soccer:_boca_juniors_v_bol%C3%ADvar%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156501/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115063 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115063/soccer:_river_plate_v_nacional%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            River Plate
+            
+          
+          <span class="vs">v</span>
+            Nacional
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115063/soccer:_river_plate_v_nacional%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156505/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115069 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115069/soccer:_melgar_v_colo_colo%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Melgar
+            
+          
+          <span class="vs">v</span>
+            Colo Colo
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115069/soccer:_melgar_v_colo_colo%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156503/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115067 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115067/soccer:_racing_club_v_deportivo_cali%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Racing Club
+            
+          
+          <span class="vs">v</span>
+            Deportivo Cali
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115067/soccer:_racing_club_v_deportivo_cali%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156504/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109291 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109291/uefa_champions_league_v_magazine_show" target="_blank">
+UEFA Champions League
+          <span class="vs">v</span>
+Magazine Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109291/uefa_champions_league_v_magazine_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:50 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153628/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160408"> - Apr 08</span>
+
+       </div><div class="event1109283 event Soccer Premiership(Scotland) live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109283/heart_of_midlothian_v_aberdeen" target="_blank">
+Heart of Midlothian
+          <span class="vs">v</span>
+Aberdeen
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109283/heart_of_midlothian_v_aberdeen" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153603/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109155 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109155/hertha_berlin_v_hannover_96" target="_blank">
+Hertha Berlin
+          <span class="vs">v</span>
+Hannover 96
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109155/hertha_berlin_v_hannover_96" target="_blank"><b>Live</b></a> <span class="eventTime">from 3:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153549/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1097135 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1097135/copa_libertadores_v_highlight_show" target="_blank">
+Copa Libertadores
+          <span class="vs">v</span>
+Highlight Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1097135/copa_libertadores_v_highlight_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 5:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/148511/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109285 event Soccer Premiership(Scotland) live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109285/motherwell_v_celtic" target="_blank">
+Motherwell
+          <span class="vs">v</span>
+Celtic
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109285/motherwell_v_celtic" target="_blank"><b>Live</b></a> <span class="eventTime">from 7:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153604/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160409"> - Apr 09</span>
+
+       </div><div class="event1109163 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109163/werder_bremen_v_augsburg" target="_blank">
+Werder Bremen
+          <span class="vs">v</span>
+Augsburg
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109163/werder_bremen_v_augsburg" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153554/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109167 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109167/stuttgart_v_bayern_munich" target="_blank">
+Stuttgart
+          <span class="vs">v</span>
+Bayern Munich
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109167/stuttgart_v_bayern_munich" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153556/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109231 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109231/eintracht_frankfurt_v_hoffenheim" target="_blank">
+Eintracht Frankfurt
+          <span class="vs">v</span>
+Hoffenheim
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109231/eintracht_frankfurt_v_hoffenheim" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153582/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109259 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109259/hamburg_v_darmstadt" target="_blank">
+Hamburg
+          <span class="vs">v</span>
+Darmstadt
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109259/hamburg_v_darmstadt" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153591/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109265 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109265/ingolstadt_v_monchengladbach" target="_blank">
+Ingolstadt
+          <span class="vs">v</span>
+Monchengladbach
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109265/ingolstadt_v_monchengladbach" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153594/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109269 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109269/wolfsburg_v_fsv_mainz" target="_blank">
+Wolfsburg
+          <span class="vs">v</span>
+FSV Mainz
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109269/wolfsburg_v_fsv_mainz" target="_blank"><b>Live</b></a> <span class="eventTime">from 12:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153596/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118703 event Soccer MLS live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118703/la_galaxy_v_portland_timbers" target="_blank">
+LA Galaxy
+          <span class="vs">v</span>
+Portland Timbers
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118703/la_galaxy_v_portland_timbers" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157650/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109271 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109271/fc_schalke_04_v_borussia_dortmund" target="_blank">
+FC Schalke 04
+          <span class="vs">v</span>
+Borussia Dortmund
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109271/fc_schalke_04_v_borussia_dortmund" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153597/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160410"> - Apr 10</span>
+
+       </div><div class="event1109273 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109273/fc_koln_v_bayer_leverkusen" target="_blank">
+FC Koln
+          <span class="vs">v</span>
+Bayer Leverkusen
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109273/fc_koln_v_bayer_leverkusen" target="_blank"><b>Live</b></a> <span class="eventTime">from 11:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153598/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109275 event Soccer MLS live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109275/new_york_city_fc_v_chicago_fire" target="_blank">
+New York City FC
+          <span class="vs">v</span>
+Chicago Fire
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109275/new_york_city_fc_v_chicago_fire" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153599/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1109277 event Soccer MLS live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1109277/la_galaxy_v_portland_timbers" target="_blank">
+LA Galaxy
+          <span class="vs">v</span>
+Portland Timbers
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1109277/la_galaxy_v_portland_timbers" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/153600/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112745 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112745/man_city_v_psg" target="_blank">
+Man City
+          <span class="vs">v</span>
+PSG
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112745/man_city_v_psg" target="_blank"><b>Live</b></a> <span class="eventTime">from 1:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155183/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160412"> - Apr 12</span>
+
+       </div><div class="event1112751 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112751/real_madrid_v_wolfsburg" target="_blank">
+Real Madrid
+          <span class="vs">v</span>
+Wolfsburg
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112751/real_madrid_v_wolfsburg" target="_blank"><b>Live</b></a> <span class="eventTime">from 1:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155186/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1116209 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1116209/soccer:_trujillanos_v_the_strongest%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Trujillanos
+            
+          
+          <span class="vs">v</span>
+            The Strongest
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1116209/soccer:_trujillanos_v_the_strongest%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156837/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1116211 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1116211/soccer:_hurac%C3%A1n_v_pe%C3%B1arol%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Huracán
+            
+          
+          <span class="vs">v</span>
+            Peñarol
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1116211/soccer:_hurac%C3%A1n_v_pe%C3%B1arol%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156838/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1116269 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1116269/soccer:_sporting_cristal_v_atl%C3%A9tico_nacional%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Sporting Cristal
+            
+          
+          <span class="vs">v</span>
+            Atlético Nacional
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1116269/soccer:_sporting_cristal_v_atl%C3%A9tico_nacional%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156845/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1116271 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1116271/soccer:_toluca_v_san_lorenzo%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Toluca
+            
+          
+          <span class="vs">v</span>
+            San Lorenzo
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1116271/soccer:_toluca_v_san_lorenzo%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156846/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112747 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112747/benfica_v_bayern_m%C3%BCnchen" target="_blank">
+Benfica
+          <span class="vs">v</span>
+Bayern München
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112747/benfica_v_bayern_m%C3%BCnchen" target="_blank"><b>Live</b></a> <span class="eventTime">from 1:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155184/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160413"> - Apr 13</span>
+
+       </div><div class="event1112749 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112749/atletico_madrid__v_barcelona" target="_blank">
+Atletico Madrid
+          <span class="vs">v</span>
+Barcelona
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112749/atletico_madrid__v_barcelona" target="_blank"><b>Live</b></a> <span class="eventTime">from 1:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155185/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118803 event Soccer FACup live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118803/west_ham_v_manchester_united" target="_blank">
+West Ham
+          <span class="vs">v</span>
+Manchester United
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118803/west_ham_v_manchester_united" target="_blank"><b>Live</b></a> <span class="eventTime">from 1:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157690/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119019 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119019/bundesliga_v_weekly_show" target="_blank">
+Bundesliga
+          <span class="vs">v</span>
+Weekly Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119019/bundesliga_v_weekly_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 5:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157791/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1116273 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1116273/soccer:_cobresal_v_cerro_porte%C3%B1o%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Cobresal
+            
+          
+          <span class="vs">v</span>
+            Cerro Porteño
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1116273/soccer:_cobresal_v_cerro_porte%C3%B1o%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156847/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1116275 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1116275/soccer:_ldu_quito_v_gr%C3%AAmio%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            LDU Quito
+            
+          
+          <span class="vs">v</span>
+            Grêmio
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1116275/soccer:_ldu_quito_v_gr%C3%AAmio%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156848/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1116277 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1116277/soccer:_racing_club_v_boca_juniors%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Racing Club
+            
+          
+          <span class="vs">v</span>
+            Boca Juniors
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1116277/soccer:_racing_club_v_boca_juniors%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156853/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118031 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118031/soccer:_s%C3%A3o_paulo_v_river_plate%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            São Paulo
+            
+          
+          <span class="vs">v</span>
+            River Plate
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118031/soccer:_s%C3%A3o_paulo_v_river_plate%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157459/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118039 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118039/soccer:_olimpia_v_deportivo_t%C3%A1chira%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Olimpia
+            
+          
+          <span class="vs">v</span>
+            Deportivo Táchira
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118039/soccer:_olimpia_v_deportivo_t%C3%A1chira%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157460/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118079 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118079/soccer:_emelec_v_pumas_unam%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Emelec
+            
+          
+          <span class="vs">v</span>
+            Pumas UNAM
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118079/soccer:_emelec_v_pumas_unam%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 10:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157472/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112773 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112773/uefa_europa_league_v_multimatch_90" target="_blank">
+UEFA Europa League
+          <span class="vs">v</span>
+MultiMatch 90
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112773/uefa_europa_league_v_multimatch_90" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155195/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160414"> - Apr 14</span>
+
+       </div><div class="event1112765 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112765/shakhtar_v_braga" target="_blank">
+Shakhtar
+          <span class="vs">v</span>
+Braga
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112765/shakhtar_v_braga" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155191/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112767 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112767/sevilla_v_athletic_bibao" target="_blank">
+Sevilla
+          <span class="vs">v</span>
+Athletic Bibao
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112767/sevilla_v_athletic_bibao" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155192/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112769 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112769/sparta_prague_v_villarreal" target="_blank">
+Sparta Prague
+          <span class="vs">v</span>
+Villarreal
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112769/sparta_prague_v_villarreal" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155193/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1112771 event Soccer UEFAEuropaLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1112771/liverpool_v_dortmund" target="_blank">
+Liverpool
+          <span class="vs">v</span>
+Dortmund
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1112771/liverpool_v_dortmund" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:55 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/155194/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118147 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118147/soccer:_atl%C3%A9tico_mineiro_v_melgar%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Atlético Mineiro
+            
+          
+          <span class="vs">v</span>
+            Melgar
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118147/soccer:_atl%C3%A9tico_mineiro_v_melgar%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157473/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118221 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118221/soccer:_colo_colo_v_independiente_del_valle%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Colo Colo
+            
+          
+          <span class="vs">v</span>
+            Independiente del Valle
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118221/soccer:_colo_colo_v_independiente_del_valle%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157489/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118223 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118223/soccer:_deportivo_cali_v_bol%C3%ADvar%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Deportivo Cali
+            
+          
+          <span class="vs">v</span>
+            Bolívar
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118223/soccer:_deportivo_cali_v_bol%C3%ADvar%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157490/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115231 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115231/soccer:_nacional_v_rosario_central%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Nacional
+            
+          
+          <span class="vs">v</span>
+            Rosario Central
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115231/soccer:_nacional_v_rosario_central%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156528/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1118073 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1118073/soccer:_palmeiras_v_river_plate%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Palmeiras
+            
+          
+          <span class="vs">v</span>
+            River Plate
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1118073/soccer:_palmeiras_v_river_plate%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157464/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1111157 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1111157/uefa_champions_league_v_semi-final_draw" target="_blank">
+UEFA Champions League
+          <span class="vs">v</span>
+Semi-Final Draw
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1111157/uefa_champions_league_v_semi-final_draw" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:50 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/154567/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160415"> - Apr 15</span>
+
+       </div><div class="event1111159 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1111159/uefa_champions_league_v_magazine_show" target="_blank">
+UEFA Champions League
+          <span class="vs">v</span>
+Magazine Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1111159/uefa_champions_league_v_magazine_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 11:50 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/154568/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119083 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119083/hannover_v_monchengladbach" target="_blank">
+Hannover
+          <span class="vs">v</span>
+Monchengladbach
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119083/hannover_v_monchengladbach" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157802/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1097137 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1097137/copa_libertadores_v_highlight_show" target="_blank">
+Copa Libertadores
+          <span class="vs">v</span>
+Highlight Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1097137/copa_libertadores_v_highlight_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/148514/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119063 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119063/bayern_munich_v_fc_schalke" target="_blank">
+Bayern Munich
+          <span class="vs">v</span>
+FC Schalke
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119063/bayern_munich_v_fc_schalke" target="_blank"><b>Live</b></a> <span class="eventTime">from 11:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157799/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160416"> - Apr 16</span>
+
+       </div><div class="event1119059 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119059/borussia_dortmund_v_hamburg" target="_blank">
+Borussia Dortmund
+          <span class="vs">v</span>
+Hamburg
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119059/borussia_dortmund_v_hamburg" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157797/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160417"> - Apr 17</span>
+
+       </div><div class="event1119061 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119061/fsv_mainz_v_fc_koln" target="_blank">
+FSV Mainz
+          <span class="vs">v</span>
+FC Koln
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119061/fsv_mainz_v_fc_koln" target="_blank"><b>Live</b></a> <span class="eventTime">from 11:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157798/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115563 event Soccer MLS live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115563/fc_dallas_v_sporting_kc" target="_blank">
+FC Dallas
+          <span class="vs">v</span>
+Sporting KC
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115563/fc_dallas_v_sporting_kc" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156677/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119207 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119207/soccer:_pe%C3%B1arol_v_sporting_cristal%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Peñarol
+            
+          
+          <span class="vs">v</span>
+            Sporting Cristal
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119207/soccer:_pe%C3%B1arol_v_sporting_cristal%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157865/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160419"> - Apr 19</span>
+
+       </div><div class="event1119209 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119209/soccer:_atl%C3%A9tico_nacional_v_hurac%C3%A1n%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Atlético Nacional
+            
+          
+          <span class="vs">v</span>
+            Huracán
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119209/soccer:_atl%C3%A9tico_nacional_v_hurac%C3%A1n%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157866/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119193 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119193/soccer:_gr%C3%AAmio_v_toluca%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Grêmio
+            
+          
+          <span class="vs">v</span>
+            Toluca
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119193/soccer:_gr%C3%AAmio_v_toluca%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157853/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119195 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119195/soccer:_san_lorenzo_v_ldu_quito%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            San Lorenzo
+            
+          
+          <span class="vs">v</span>
+            LDU Quito
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119195/soccer:_san_lorenzo_v_ldu_quito%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157854/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115583 event Soccer ScottishChampionship live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115583/hibernian_v_rangers" target="_blank">
+Hibernian
+          <span class="vs">v</span>
+Rangers
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115583/hibernian_v_rangers" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156684/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160420"> - Apr 20</span>
+
+       </div><div class="event1119089 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119089/bundesliga_v_weekly_show" target="_blank">
+Bundesliga
+          <span class="vs">v</span>
+Weekly Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119089/bundesliga_v_weekly_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 5:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157807/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119197 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119197/soccer:_bol%C3%ADvar_v_racing_club%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Bolívar
+            
+          
+          <span class="vs">v</span>
+            Racing Club
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119197/soccer:_bol%C3%ADvar_v_racing_club%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157855/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119199 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119199/soccer:_boca_juniors_v_deportivo_cali%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Boca Juniors
+            
+          
+          <span class="vs">v</span>
+            Deportivo Cali
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119199/soccer:_boca_juniors_v_deportivo_cali%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157856/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119167 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119167/soccer:_corinthians_v_cobresal%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Corinthians
+            
+          
+          <span class="vs">v</span>
+            Cobresal
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119167/soccer:_corinthians_v_cobresal%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157840/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119163 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119163/soccer:_cerro_porte%C3%B1o_v_santa_fe%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank">
+            Cerro Porteño
+            
+          
+          <span class="vs">v</span>
+            Santa Fe
+          
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119163/soccer:_cerro_porte%C3%B1o_v_santa_fe%3Cbr%3Enot_available_in_brazil_and_usa" target="_blank"><b>Live</b></a> <span class="eventTime">from 8:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157841/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115585 event Soccer FACup live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115585/fa_cup_semifinal__v_preview_show" target="_blank">
+FA Cup Semifinal
+          <span class="vs">v</span>
+Preview Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115585/fa_cup_semifinal__v_preview_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 12:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156685/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160421"> - Apr 21</span>
+
+       </div><div class="event1119073 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119073/hamburg_v_werder_bremen" target="_blank">
+Hamburg
+          <span class="vs">v</span>
+Werder Bremen
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119073/hamburg_v_werder_bremen" target="_blank"><b>Live</b></a> <span class="eventTime">from 2:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157800/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160422"> - Apr 22</span>
+
+       </div><div class="event1097139 event Soccer CopaLibertadores live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1097139/copa_libertadores_v_highlight_show" target="_blank">
+Copa Libertadores
+          <span class="vs">v</span>
+Highlight Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1097139/copa_libertadores_v_highlight_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 6:50 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/148512/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119079 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119079/fc_koln_v_darmstadt" target="_blank">
+FC Koln
+          <span class="vs">v</span>
+Darmstadt
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119079/fc_koln_v_darmstadt" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157801/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160423"> - Apr 23</span>
+
+       </div><div class="event1119085 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119085/fc_ingolstadt_v_hannover" target="_blank">
+FC Ingolstadt
+          <span class="vs">v</span>
+Hannover
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119085/fc_ingolstadt_v_hannover" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157803/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119121 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119121/hertha_berlin_v_bayern_munich" target="_blank">
+Hertha Berlin
+          <span class="vs">v</span>
+Bayern Munich
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119121/hertha_berlin_v_bayern_munich" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157821/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119123 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119123/stuttgart_v_borussia_dortmund" target="_blank">
+Stuttgart
+          <span class="vs">v</span>
+Borussia Dortmund
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119123/stuttgart_v_borussia_dortmund" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157822/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119125 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119125/wolfsburg_v_augsburg" target="_blank">
+Wolfsburg
+          <span class="vs">v</span>
+Augsburg
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119125/wolfsburg_v_augsburg" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157824/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119129 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119129/fc_schalke_v_bayer_leverkusen" target="_blank">
+FC Schalke
+          <span class="vs">v</span>
+Bayer Leverkusen
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119129/fc_schalke_v_bayer_leverkusen" target="_blank"><b>Live</b></a> <span class="eventTime">from 11:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157825/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115587 event Soccer FACup live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115587/everton_v_manchester_united_or_west_ham" target="_blank">
+Everton
+          <span class="vs">v</span>
+Manchester United or West Ham
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115587/everton_v_manchester_united_or_west_ham" target="_blank"><b>Live</b></a> <span class="eventTime">from 12:05 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156686/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119133 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119133/monchengladbach_v_hoffenheim" target="_blank">
+Monchengladbach
+          <span class="vs">v</span>
+Hoffenheim
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119133/monchengladbach_v_hoffenheim" target="_blank"><b>Live</b></a> <span class="eventTime">from 9:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157826/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160424"> - Apr 24</span>
+
+       </div><div class="event1115589 event Soccer FACup live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115589/crystal_palace_v_watford" target="_blank">
+Crystal Palace
+          <span class="vs">v</span>
+Watford
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115589/crystal_palace_v_watford" target="_blank"><b>Live</b></a> <span class="eventTime">from 10:50 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156687/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1119135 event Soccer Bundesliga live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1119135/eintracht_frankfurt_v_fsv_mainz" target="_blank">
+Eintracht Frankfurt
+          <span class="vs">v</span>
+FSV Mainz
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1119135/eintracht_frankfurt_v_fsv_mainz" target="_blank"><b>Live</b></a> <span class="eventTime">from 11:20 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/157827/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115565 event Soccer MLS live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115565/new_york_red_bulls_v_orlando_city_sc" target="_blank">
+New York Red Bulls
+          <span class="vs">v</span>
+Orlando City SC
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115565/new_york_red_bulls_v_orlando_city_sc" target="_blank"><b>Live</b></a> <span class="eventTime">from 7:20 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156678/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+
+       </div><div class="event1115595 event Soccer 2018FIFAWorldCupShow delayed">
+
+        <span class="eventDesc">
+2018 FIFA World Cup
+          <span class="vs">v</span>
+Magazine Episode 9
+        </span>
+
+          <span class="eventStatus"><a href="http://www.foxsoccer2go.com/replay/?WT.mc_id=FOX_Widget" target="_blank"><b>On-Demand</b></a> <span class="eventTime">from 6:00 PM EDT</span></span>
+
+          <span class="dateHeader date20160425"> - Apr 25</span>
+
+       </div><div class="event1115733 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115733/semi-final_1st_v_leg_tbd" target="_blank">
+Semi-final 1st
+          <span class="vs">v</span>
+Leg TBD
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115733/semi-final_1st_v_leg_tbd" target="_blank"><b>Live</b></a> <span class="eventTime">from 1:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156694/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160426"> - Apr 26</span>
+
+       </div><div class="event1115731 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115731/semi-final_1st_v_leg_tbd" target="_blank">
+Semi-final 1st
+          <span class="vs">v</span>
+Leg TBD
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115731/semi-final_1st_v_leg_tbd" target="_blank"><b>Live</b></a> <span class="eventTime">from 1:35 PM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156693/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160427"> - Apr 27</span>
+
+       </div><div class="event1115735 event Soccer UEFAChampionsLeague live">
+
+        <span class="eventDesc">
+         <a href="http://www.foxsoccer2go.com/match/eventid/1115735/uefa_champions_league_v_magazine_show" target="_blank">
+UEFA Champions League
+          <span class="vs">v</span>
+Magazine Show
+          </a>
+        </span>
+
+          
+           <span class="eventOff eventStatus"><a href="http://www.foxsoccer2go.com/match/eventid/1115735/uefa_champions_league_v_magazine_show" target="_blank"><b>Live</b></a> <span class="eventTime">from 7:50 AM EDT</span></span>
+           <span class="eventOn eventStatus" style="display: none;"><a href="http://www.foxsoccer2go.com/watchlive/type/livedvr/event/156695/?WT.mc_id=FOX_Widget" target="_blank"><div class="playButton"><img src="./0,,13138-11317031,00.png"></div>Watch LIVE Now </a></span>
+
+          <span class="dateHeader date20160429"> - Apr 29</span>
+
+       </div></div><div class="jspVerticalBar"><div class="jspCap jspCapTop"></div><a class="jspArrow jspArrowUp jspDisabled"></a><div class="jspTrack" style="height: 106px;"><div class="jspDrag" style="height: 3px;"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div><a class="jspArrow jspArrowDown"></a><div class="jspCap jspCapBottom"></div></div></div></div>
+     <a class="watchLive" href="http://foxsoccer2go.com/?WT.mc_id=FOX_Widget" target="_blank">Watch live online - click here</a>
+   </div>
+
+
+
+
+</body></html>

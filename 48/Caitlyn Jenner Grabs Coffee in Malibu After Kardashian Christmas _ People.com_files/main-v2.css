@@ -1,0 +1,1243 @@
+*, html * {font-family:brandon-grotesque,sans-serif !important;}
+
+#country #masthead, #country #hot-topics {display:none;}
+
+/* Remove gutter social sticky. */
+#social_sticky {display:none;}
+
+#container #wrapper #main #header #headerWrapper ul#subnav{font:500 20px/22px brandon-grotesque,arial,sans-serif !important; letter-spacing:0.3px;}
+
+/* extended subnav background */
+.new-nav body.with-subnav {background:url('http://img2.timeinc.net/people/static/i/article/nav-and-gutter-bgs/2.png') 0 0 repeat-x;}
+.new-nav body.with-breaking-news.with-subnav {background:url('http://img2.timeinc.net/people/static/i/article/nav-and-gutter-bgs/5.png') 0 0 repeat-x;}
+.new-nav-v2 body.with-hat.with-subnav {background-position:0 35px;}
+.new-nav-v2 body.with-hat.with-subnav.with-breaking-news {background-position:0 35px;}
+
+/* set a higher z-index so the Disqus notification pops under the sticky nav (PEOP-5614) */
+#nav-outer.fixed {z-index:2147483650;}
+
+/* ---------- Header treatment with wider breakpoint ---------- */
+@media (min-width:1200px) {
+	.new-nav-v2 body {background-color:#fff;}
+    .new-nav-v2 #nav-links {width:994px; margin:0 auto;}
+    .new-nav-v2 body.article-v2 #subnavigation #subnavMore div {width:994px;}
+    .new-nav-v2 body.article-v2 #subnavigation #subnavMore.active div {top:0; left:100px;}
+    .new-nav-v2 body.article-v2 #subnavigation #subnavMore ul li {width:100%;}
+    #subnavigation .inner-wrapper {width:994px; margin:0 auto;}
+}
+
+/* ---------- Floating Header ---------- */
+
+/* Floating Header */
+#floating-header {display:none; width:100%; height:60px; position:fixed; top:0; z-index:2000; background:#fff; -webkit-box-shadow:0 5px 5px 0 rgba(130, 130, 130, 0.1); -moz-box-shadow:0 5px 5px 0 rgba(130, 130, 130, 0.1); box-shadow:0 5px 5px 0 rgba(130, 130, 130, 0.1); opacity:0.97; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=97)"; filter:alpha(opacity=97); -moz-opacity:0.97; -khtml-opacity:0.97; opacity:0.97;}
+
+#floating-header .inner-wrapper {width:994px; margin:10px auto 0;}
+@media (min-width:1200px) {
+    #floating-header .inner-wrapper {width:1200px;}
+}
+#floating-header .left {float:left; width:102px;}
+#floating-header .right {float:right;}
+#floating-header .floating-header-logo {display:block; width:102px; height:42px; font-size:0; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/article/logo-people-102x.png') no-repeat;}
+#floating-header h3 {display:block; float:left; margin:11px 15px 0 0; font:bold 14px/16px brandon-grotesque,arial,sans-serif; text-transform:uppercase; color:#3cceff;}
+#floating-header .floating-header-social {float:left; margin-top:3px;}
+#floating-header .floating-header-social li {display:block; float:left; width:30px; height:30px; margin-right:15px;}
+#floating-header .floating-header-social a {font-size:0; display:block; width:30px; height:30px; padding-right:5px; background:transparent url('http://img2-1.timeinc.net/people/static/i/footer/sprite-social-footer.png') 0 0 no-repeat;}
+#floating-header .floating-header-social .floating-header-fb {background-position:0 0;}
+#floating-header .floating-header-social .floating-header-fb:hover {background-position:0 -43px;}
+#floating-header .floating-header-social .floating-header-twitter {background-position:-50px 0;}
+#floating-header .floating-header-social .floating-header-twitter:hover {background-position:-50px -43px;}
+#floating-header .floating-header-social .floating-header-instagram {background-position:-149px 0;}
+#floating-header .floating-header-social .floating-header-instagram:hover {background-position:-149px -43px;}
+#floating-header .floating-header-social .floating-header-newsletters {background-position:-348px 0;}
+#floating-header .floating-header-social .floating-header-newsletters:hover {background-position:-348px -43px;}
+#floating-header .floating-header-subscribe {display:block; float:left; width:96px; height:26px; margin-top:5px; background:transparent url('http://img2-1.timeinc.net/people/static/i/subscribe-button.png') 0 0 no-repeat; font-size:0;}
+#floating-header .floating-header-subscribe:hover {background-position:0 0;}
+
+/* ---------- Previous / Next Recirc Touts ---------- */
+/* Previous/next article hover links */
+.prev-next-arrow {display:none; position:fixed; top:50%; z-index:100;}
+.prev-next-arrow.show {display:block;}
+@media (max-width:1314px) {
+    .prev-next-arrow,
+    .prev-next-arrow.show {display:none;}
+}
+.prev-next-arrow.prev {left:0;}
+.prev-next-arrow.next {right:0;}
+.prev-next-arrow a {color:#000 !important;}
+.prev-next-arrow .hoverable {display:block; width:60px; height:110px; position:relative; background:#fff url('http://img2.timeinc.net/people/static/i/article/next-previous-arrows.png') 0 0 no-repeat;}
+.prev-next-arrow.prev .hoverable {background-position:0 0;}
+.prev-next-arrow.next .hoverable {background-position:-70px 0;}
+.prev-next-arrow .hoverable img {display:none;}
+.prev-next-arrow .hoverable span {display:none;}
+.prev-next-arrow .hoverable:hover {width:270px; height:auto; padding:15px; background-image:none; border:1px solid #d7d7d7; text-decoration:none;}
+body.permalink .prev-next-arrow .hoverable:hover, body.single-post .prev-next-arrow .hoverable:hover {width:180px; min-height:75px;}
+.prev-next-arrow .hoverable:hover * {text-decoration:none;}
+.prev-next-arrow .hoverable:hover img {display:block; float:left; width:75px; height:75px; padding-right:15px;}
+.prev-next-arrow .hoverable:hover span.eyebrow {display:block; float:right; width:180px; padding-bottom:3px; font:500 11px brandon-grotesque,arial,sans-serif; text-transform:uppercase; color:#3cceff; letter-spacing:1px;}
+.prev-next-arrow .hoverable:hover span.headline {display:block; float:right; width:180px; font:300 18px/20px brandon-grotesque,arial,sans-serif;}
+
+
+
+/* ---------- Wrappers ---------- */
+body.article #wrapper {clear:both; float:left;}
+body.article #wrapper .clearfix:after {content:"."; clear:both; display:block; height:0; visibility:hidden;}
+
+#wrapper, #wrapper #main {display:block; float:none; position:relative; background:#fff;}
+#wrapper #main {padding-top:20px;}
+
+#leftCol {float:left; width:600px; margin:0 0 0 15px;}
+@media (min-width:1200px) {
+    #leftCol {width:680px; margin:0 40px 0 80px;}
+}
+
+#right-rail {width:300px; margin-left:70px; float:left;}
+
+/* ---------- Top Stories Carousel ---------- */
+#topStoriesArea.hoverable {clear:both; width:972px; height:95px !important; padding:0 10px; position:relative; z-index:0; overflow-y:hidden; visibility:hidden; border:1px solid #e3e3e3; background-image:none; background-color:#fff; -webkit-box-shadow:0 5px 5px 0 rgba(130, 130, 130, 0.1); -moz-box-shadow:0 5px 5px 0 rgba(130, 130, 130, 0.1); box-shadow:0 5px 5px 0 rgba(130, 130, 130, 0.1); top:-1px !important;}
+#topStoriesArea.hoverable #topStoriesSlider {width:972px; height:95px; padding:0; overflow:hidden; background:none;}
+#topStoriesArea.hoverable a.bx-next,#topStoriesArea.hoverable a.bx-prev {display:none; width:42px; height:42px; position:absolute; top:20px; z-index:100; overflow:hidden; background:url('http://img2-1.timeinc.net/people/static/i/article/slider/sprite-carousel.png') no-repeat; text-indent:-99999px; outline:none;}
+.tablet #topStoriesArea.hoverable a.bx-next,.tablet #topStoriesArea.hoverable a.bx-prev,#topStoriesArea.hoverable.hover a.bx-next,#topStoriesArea.hoverable.hover a.bx-prev {display:block;}
+#topStoriesArea.hoverable a.bx-next {left:935px; top:8px; background-position:-9px -9px;}
+#topStoriesArea.hoverable a.bx-prev {left:935px; top:48px; background-position:-59px -9px;}
+#topStoriesArea.hoverable a.bx-next:hover {background-position:-9px -60px;}
+#topStoriesArea.hoverable a.bx-prev:hover {background-position:-59px -60px;}
+#topStoriesArea.hoverable ul#topStoriesTouts {float:left; width:1500px; position:relative;}
+#topStoriesArea.hoverable ul#topStoriesTouts li {float:left; width:298px !important;}
+#topStoriesArea.hoverable #topStoriesTouts li p {margin:0; padding:0;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout {display:block; width:290px; height:75px; margin-right:8px; padding:10px 0 10px 0; border-right:1px solid #e3e3e3;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout a {text-decoration:none;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout a:hover {text-decoration:underline;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout .sticker {display:none;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout .imgcont {float:left; width:75px; padding-right:8px; position:relative;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout .imgcont .play {display:block; width:18px; height:14px; padding:10px 0 0 10px; position:absolute; overflow:hidden; top:0; left:0; background:url('http://img2.timeinc.net/people/static/i/video/icon-video-arrow.png') 10px 5px no-repeat; background-color:rgba(37, 175, 229, 0.8); background-size:11px;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout .txtcont {float:left; width:199px; padding:0 8px 0 0;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout .txtcont h4 a {display:block; font:300 18px/20px brandon-grotesque,arial,sans-serif; color:#000;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout .more {display:none;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout.current .txtcont a {color:#888;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout.current .txtcont a:hover {text-decoration:none;}
+#topStoriesArea.hoverable #topStoriesTouts li .newstout .most-watched {font:bold 10px brandon-grotesque,arial,sans-serif; text-transform:uppercase; color:#f77f1e;}
+#topStoriesArea.hoverable #topStoriesTouts li .cmtout {display:table-cell; width:290px; height:75px; margin-right:8px; padding:10px 0; border-right:1px solid #e3e3e3; vertical-align:middle;}
+#topStoriesArea.hoverable #topStoriesTouts li .cmtout a {text-decoration:none;}
+#topStoriesArea.hoverable #topStoriesTouts li .cmtout a:hover {text-decoration:underline;}
+#topStoriesArea.hoverable #topStoriesTouts li .cmtout .imgcont, #topStoriesArea.hoverable #topStoriesTouts li .cmtout .image {float:left; width:44px; padding:3px 8px 0 0;}
+#topStoriesArea.hoverable #topStoriesTouts li .cmtout .txtcont {float:left; width:190px; padding:0 8px 0 0;}
+#topStoriesArea.hoverable #topStoriesTouts li .cmtout .txtcont h4 a {display:block; font:300 18px/20px brandon-grotesque,arial,sans-serif; color:#000;}
+#topStoriesArea.hoverable #topStoriesTouts li .cmtout .txtcont .more a {color:#067AB4; letter-spacing:0.5px;}
+#topStoriesArea.hoverable #topStoriesTouts li #newsstandblitz {display:block; width:250px; height:75px;}
+#topStoriesArea.hoverable #topStoriesTouts li #newsstandblitz .imgcont {float:left; width:44px; padding:8px 8px 0 0;}
+#topStoriesArea.hoverable #topStoriesTouts li #newsstandblitz .txtcont {float:left; width:190px; padding:8px 8px 0 0;}
+#topStoriesArea.hoverable #topStoriesTouts li #newsstandblitz .txtcont p.eyebrow {display:none;}
+#topStoriesArea.hoverable #topStoriesTouts li #newsstandblitz .txtcont p.headline a {display:block; font:bold 12px brandon-grotesque,arial,sans-serif; color:#000;}
+#topStoriesArea.hoverable #topStoriesTouts li #newsstandblitz .txtcont .more a {color:#067AB4;}
+#topStoriesArea.hoverable #topStoriesOverlay {z-index:50; position:absolute; right:0; top:0; width:60px; height:95px; background:-moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%); /* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0.5))); /* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%); /* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%); /* Opera 11.10+ */
+    background:-ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%); /* IE10+ */
+    background:linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%); /* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#80ffffff',GradientType=1 ); /* IE6-9 */
+}
+#topStoriesArea.hoverable {position:relative;}
+
+/* ---------- Top Ad ---------- */
+#article-top-ad {margin-top:20px; text-align:center;}
+#article-top-ad-inner {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+}
+
+/* ==================== LEFT COLUMN MODULES ==================== */
+
+/* ---------- Header Kickers ---------- */
+#header-kickers {width:100%; margin-bottom:25px; border-top:3px solid #f2f2f2;}
+#header-kickers .kicker {display:block; float:left; margin:-3px 12px 0 0; padding-top:7px; border-top:3px solid #89bac1; font-size:22px; font-weight:300; color:#89bac1;}
+#header-kickers .kicker-topic {color:#89bac1;}
+#header-kickers .kicker-topic a {color:#89bac1; text-decoration:none;}
+#header-kickers .kicker-topic a:hover {color:#89bac1; text-decoration:underline;}
+#header-kickers .kicker-important{color:#e07 !important; border-color:#e07 !important;}
+#header-kickers .kicker-country {font-size:0; width:144px; height:33px; border-color:#4F903D; background:transparent url('http://img2.timeinc.net/people/static/i/article/country-logo-v2.png') 0 7px no-repeat;}
+#header-kickers .kicker-great-ideas {font-size:0; width:172px; height:33px; border-color:#f7941e; background:transparent url('http://img2.timeinc.net/people/static/i/article/greatideas-logo-v2.png') 0 9px no-repeat;}
+#header-kickers .kicker-moms-babies {font-size:0; width:141px; height:33px; border-color:#BBA9FC; background:transparent url('http://img2.timeinc.net/people/static/i/article/moms-logo-v2.png') 0 9px no-repeat;}
+#header-kickers .kicker-pets {font-size:0; width:74px; height:33px; border-color:#f89529; background:transparent url('http://img2.timeinc.net/people/static/i/article/pets-logo.png') 0 10px no-repeat;}
+#header-kickers .kicker-royals {font-size:0; width:141px; height:33px; border-color:#3559b4; background:transparent url('http://img2.timeinc.net/people/static/i/article/royals-logo.png') 0 9px no-repeat;}
+#header-kickers .kicker-style-watch {font-size:0; width:113px; height:33px; border-color:#e3078d; background:transparent url('http://img2.timeinc.net/people/static/i/article/sw-logo.png') 0 9px no-repeat;}
+#header-kickers .kicker-tv-watch {font-size:0; width:164px; height:33px; border-color:#39B0C3; background:transparent url('http://img2.timeinc.net/people/static/i/article/tvwatch-logo-v2.png') 0 9px no-repeat;}
+#header-kickers .kicker-exclusive {color:#e07; border-color:#e07;}
+#header-kickers .kicker-misc {}
+#header-kickers .kicker-misc a {color:#89bac1; text-decoration:none;}
+#header-kickers .kicker-misc a:hover {color:#89bac1; text-decoration:underline;}
+#header-kickers .kicker.kicker-exclusive + .kicker.kicker-misc {display:none;} /* Double exclusive kicker fix */
+
+
+/* ---------- Header ---------- */
+#articleHeader {position:relative; border:1px solid transparent;} /*border fixes IE7 bug where text not displaying*/
+@media (min-width:1200px) {
+    #articleHeader {width:800px; margin-left:-80px;}
+}
+
+h1#articleHeadline {font:500 42px/44px brandon-grotesque,arial,sans-serif;}
+
+
+/* ---------- Article Details ---------- */
+#article_details {margin-bottom:25px;}
+#article_details p {display:inline; padding:0; font-weight:400; font-size:12px; color:#707070; letter-spacing:1px;}
+#article_details p.byline {padding-right:5px; text-transform:uppercase;}
+#article_details p.byline span.author {}
+#article_details a.twitter_handle {padding:0 5px 0 24px; background:url('http://img2.timeinc.net/people/static/i/article/twitter_bird.png') no-repeat 2px 7px; font-weight:500; font-size:17px; color:#4cc7e4;}
+#article_details p.updated {}
+#article_details p.updated span.copy {font-weight:700; color:#e07; text-transform:uppercase;}
+#article_details p.updated abbr.timestamp {}
+#article_details p.updated b {}
+#article_details p.published {}
+#article_details p.published span.copy {text-transform:uppercase;}
+#article_details p.published abbr.timestamp {}
+#article_details p.timestamp {display:none;}
+
+body.permalink .timestamp, body.single-post .timestamp {margin-bottom:-8px; font-size:12px; color:#707070; letter-spacing:1px; text-transform:uppercase;}
+
+
+/* ---------- General Share Button Styles ---------- */
+.socmedia img {width:100%; height:100%;}
+.socmedia a.fb_button, .socmedia a.tweet_button, .socmedia a.gplus_button, .socmedia a.pin_button, .socmedia a.su_button, .socmedia div.options_button, a.comment_button, a.t_button {float:left; width:36px; height:36px; margin-left:13px; background-image:url('http://img2.timeinc.net/people/static/i/article/sprite-social-article.png'); background-repeat:no-repeat;}
+
+/* ---------- Top Share Bar ---------- */
+#sharebarTop {clear:both; height:36px; margin-bottom:16px; padding-top:15px; position:relative; border:none;}
+@media (min-width:1200px) {
+    #sharebarTop {width:800px; margin-left:-80px;}
+}
+
+#sharebarTop a.fb_button {width:172px; margin-left:0; background-position:-23px -20px;}
+#sharebarTop a.fb_button:hover {background-position:-23px -73px;}
+#sharebarTop a.tweet_button {width:88px; background-position:-207px -20px;}
+#sharebarTop a.tweet_button:hover {background-position:-207px -73px;}
+#sharebarTop a.gplus_button {background-position:-167px -137px;}
+#sharebarTop a.gplus_button:hover {background-position:-167px -188px;}
+#sharebarTop a.pin_button {background-position:-119px -137px;}
+#sharebarTop a.pin_button:hover {background-position:-119px -188px;}
+#sharebarTop a.su_button {background-position:-215px -137px;}
+#sharebarTop a.su_button:hover {background-position:-215px -188px;}
+#sharebarTop a.t_button {background-position:-263px -137px;}
+#sharebarTop a.t_button:hover {background-position:-263px -188px;}
+
+#sharebarTop div.options_button {margin-right:11px; background-position:-359px -137px;}
+#sharebarTop div.options_button:hover {background-position:-359px -188px;}
+
+#sharebarTop a.comment_button {margin-left:7px; background-position:-403px -137px;}
+#sharebarTop a.comment_button:hover {background-position:-403px -188px;}
+
+#sharebarTop div.vert_break {float:left; width:1px; height:36px; margin-left:2px; border-left:1px solid #ccc;}
+
+#sharebarTop a.subscribe_button {float:right; width:78px; height:25px; margin-top:1px; padding-top:9px; background:#f00084; font:400 11px/1.5 brandon-grotesque,arial,sans-serif; color:#fff; letter-spacing:1px; text-align:center; text-decoration:none; text-indent:0; text-transform:uppercase; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.2); -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+#sharebarTop a.subscribe_button:hover {background:#cb0170;}
+#sharebarTop a.reprint_button {display:none; float:left; width:68px; height:28px; margin:1px 0 13px 13px; padding-top:5px; font-size:15px; text-indent:initial;}
+
+#sharebarTop .share_count {float:left; width:73px; height:36px; margin-right:13px; font:500 11px brandon-grotesque,arial,sans-serif; color:#9d9d9d; letter-spacing:1.5px; text-align:center;}
+#sharebarTop .share_count span {display:block; font:bold 43px/33px brandon-grotesque,arial,sans-serif; color:#89bf3e; letter-spacing:0; text-align:center;}
+
+#sharebarTop div.options_button #share_options {display:none;}
+#sharebarTop div.options_button:hover #share_options {display:block;}
+
+/* AMAZON SHOP & SHARE PEOP-4682*/
+#sns1.amazon_button {
+	float: left;
+	height: 36px;
+	margin: 1px 13px 0 0;
+}
+
+#share_options {position:absolute; top:50px; left:290px; z-index:500;}
+/* share options if Amazon Shop & Share button is present */
+/*#share_options {left:383px;}*/
+#share_options_container {height:38px; margin-top:9px; padding:15px 15px 15px 2px; border:1px solid #ccc; background:#fff; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+#share_options_container:after, #share_options_container:before {content:''; position:absolute; top:3px; right:11px; border-right:6px solid transparent; border-left:6px solid transparent; border-bottom:7px solid #fff;}
+#share_options_container:before {border-bottom:7px solid #ccc;}
+#share_options_container:after {margin-top:2px;}
+
+/* Gray Button - used with new article social media buttons */
+.button-gray {text-align:center; border:1px solid #c7c7c7; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; background:#f2f2f2; /* Old browsers */
+    background:-moz-linear-gradient(top, #ffffff 0%, #e2e2e2 100%); /* FF3.6+ */
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2e2e2)); /* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(top, #ffffff 0%,#e2e2e2 100%); /* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(top, #ffffff 0%,#e2e2e2 100%); /* Opera 11.10+ */
+    background:-ms-linear-gradient(top, #ffffff 0%,#e2e2e2 100%); /* IE10+ */
+    background:linear-gradient(to bottom, #ffffff 0%,#e2e2e2 100%); /* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+}
+.button-gray:hover {background:#e2e2e2; text-decoration:none;}
+
+
+/* ---------- Bottom Share Bar ---------- */
+#sharebarBottom {margin:50px 0; padding-top:0; border-top:1px solid #e6e6e6;}
+#sharebarBottom .socmedia {float:left; width:285px !important; height:102px; margin-top:0; border-right:1px solid #e6e6e6;}
+@media (min-width:1200px) {
+    #sharebarBottom .socmedia {width:330px !important;}
+}
+#sharebarBottom a.fb_button, #sharebarBottom a.tweet_button {float:left; width:120px; height:35px; margin-top:12px; background:url('http://img2.timeinc.net/people/static/i/article/sprite-social-article.png') no-repeat;}
+#sharebarBottom a.fb_button {background-position:-307px -21px; margin-left:0;}
+#sharebarBottom a.fb_button:hover {background-position:-307px -74px;}
+#sharebarBottom a.tweet_button {background-position:-440px -21px;}
+#sharebarBottom a.tweet_button:hover {background-position:-440px -74px;}
+#sharebarBottom .text {float:none !important; width:100% !important; height:34px; margin:7px 0 0 0 !important; padding:0 !important; border:none !important;}
+#sharebarBottom p.header {float:left; width:144px; background:none; font-size:18px; text-indent:initial;}
+#sharebarBottom p.totalvotes {float:right; width:117px; margin-right:6px; padding:0; font-size:11px; font-weight:500; letter-spacing:1px; text-transform:uppercase;}
+#sharebarBottom p.totalvotes strong {padding-top:2px; color:#000;}
+#sharebarBottom .count {display:block; margin-top:3px; font-size:13px;}
+
+/* ---------- Photo Blocks ---------- */
+
+#mainPhoto, #articleBody .imgcont {margin-bottom:25px; padding-bottom:4px; position:relative; background:#f3f3f3;}
+#mainPhoto .image, #articleBody .imgcont img {z-index:10; background:url('http://img2.timeinc.net/people/static/i/article/bg_hashline_grey.png') repeat; border-bottom:1px solid #fff;}
+
+#mainPhoto .image {text-align:center;}
+#mainPhoto .credit, #articleBody .imgcont .credit {padding:6px 8px 0 8px; font:normal 9px brandon-grotesque,arial,sans-serif; color:#727272; text-transform:uppercase;}
+#mainPhoto .caption, #articleBody .imgcont .caption {padding:6px 8px 0 8px; font:400 14px brandon-grotesque,arial,sans-serif; color:#000;}
+
+/* Photo Sizes & Layout */
+#mainPhoto.img150x113, #articleBody .imgcont.img150x113,#mainPhoto.img150x200, #articleBody .imgcont.img150x200 {float:left; width:150px; margin:0 18px 10px 0;}
+#mainPhoto.img229x305, #articleBody .imgcont.img229x305 {float:left; width:229px; margin:0 18px 10px 0;}
+#mainPhoto.img240x320, #articleBody .imgcont.img240x320 {float:left; width:240px; margin:0 18px 10px 0;}
+#mainPhoto.img280x590, #articleBody .imgcont.img280x590 {float:left; width:280px; margin:0 18px 10px 0;}
+#mainPhoto.img300x400, #articleBody .imgcont.img300x400 {float:left; width:300px; margin:0 18px 10px 0;}
+#mainPhoto.img320x240, #articleBody .imgcont.img320x240 {float:left; width:320px; margin:0 18px 10px 0;}
+#mainPhoto.img387x290, #articleBody .imgcont.img387x290,#mainPhoto.img400x300, #articleBody .imgcont.img400x300,#mainPhoto.img400x400, #articleBody .imgcont.img400x400,#mainPhoto.img435x580, #articleBody .imgcont.img435x580,#mainPhoto.img440x330, #articleBody .imgcont.img440x330,#mainPhoto.img600x450, #articleBody .imgcont.img600x450 {clear:both; width:600px; margin-bottom:16px;}
+#mainPhoto.img387x290 .image, #articleBody .imgcont.img387x290 img {width:387px; padding:0 106px;}
+#mainPhoto.img400x300 .image, #articleBody .imgcont.img400x300 img,#mainPhoto.img400x400 .image, #articleBody .imgcont.img400x400 img {width:400px; padding:0 100px;}
+#mainPhoto.img435x580 .image, #articleBody .imgcont.img435x580 img {width:435px; padding:0 82px;}
+#mainPhoto.img440x330 .image, #articleBody .imgcont.img440x330 img {width:440px; padding:0 80px;}
+
+#mainPhoto.img240 {float:left; width:240px; margin-right:30px;}
+#mainPhoto.img240 img {width:240px; height:auto;}
+#mainPhoto.img300 {width:600px; margin-right:30px;}
+#mainPhoto.img300 img {width:300px; height:auto;}
+#mainPhoto.img350 {width:600px; margin-right:30px;}
+#mainPhoto.img350 img {width:350px; height:auto;}
+#mainPhoto.img435 {width:600px; margin-right:30px;}
+#mainPhoto.img435 img {width:435px; height:auto;}
+#mainPhoto.img600 {width:600px;}
+#mainPhoto.img600 img {width:600px; height:auto;}
+
+#mainPhoto.img660, #mainPhoto.img768, #mainPhoto.img800, #mainPhoto.img1024 {width:600px;}
+#mainPhoto.img660 img, #mainPhoto.img768 img, #mainPhoto.img800 img, #mainPhoto.img1024 img {width:600px; height:auto;}
+
+@media (min-width:1200px) {
+	#mainPhoto.img240 {width:240px;}
+    #mainPhoto.img240 img {width:240px; height:auto;}
+    #mainPhoto.img300 {width:300px;}
+    #mainPhoto.img300 img {width:300px; height:auto;}
+    #mainPhoto.img350 {width:350px;}
+    #mainPhoto.img350 img {width:350px; height:auto;}
+    #mainPhoto.img435 {width:435px;}
+    #mainPhoto.img435 img {width:435px; height:auto;}
+    #mainPhoto.img240, #mainPhoto.img300, #mainPhoto.img350, #mainPhoto.img435 {float:left; margin-left:-80px;}
+    #mainPhoto.img768, #mainPhoto.img800, #mainPhoto.img1024 {width:800px; margin-left:-80px;}
+    #mainPhoto.img768 img, #mainPhoto.img800 img, #mainPhoto.img1024 img {width:800px; height:auto;}
+    #mainPhoto.img600 {width:800px; margin-left:-80px;}
+    #mainPhoto.img600 img {width:600px; height:auto;}
+    #mainPhoto.img660 {width:800px; margin-left:-80px;}
+    #mainPhoto.img660 img {width:660px; height:auto;}
+}
+
+.permalink #mainPhoto .image img, .single-post #mainPhoto .image img {margin-bottom:-8px;}/* Compensate for extra height on image wrapper for WordPress. */
+
+#articleBody .imgcont {display:inline-block; float:left; max-width:600px; margin-right:20px;}
+#articleBody .imgcont img {width:100%; height:auto;}
+#articleBody .imgcont.img435 {display:block; float:none; width:600px;}
+#articleBody .imgcont.img435 img {width:435px; height:auto; margin:0 auto;}
+#articleBody .imgcont.img600 {display:block; float:none; width:600px;}
+#articleBody .imgcont.img660 {display:block; float:none; width:600px;}
+#articleBody .imgcont.img800 {display:block; float:none; width:600px;}
+#articleBody .imgcont.img1024 {display:block; float:none; width:600px;}
+#articleBody .imgcont .credit {display:block;}
+
+#articleBody .secondary-img.imgcont.img150x113,
+#articleBody .secondary-img.imgcont.img150x200,
+#articleBody .secondary-img.imgcont.img229x305,
+#articleBody .secondary-img.imgcont.img240x320,
+#articleBody .secondary-img.imgcont.img280x590,
+#articleBody .secondary-img.imgcont.img300x400,
+#articleBody .secondary-img.imgcont.img320x240,
+#articleBody .secondary-img.imgcont.img387x290,
+#articleBody .secondary-img.imgcont.img400x300,
+#articleBody .secondary-img.imgcont.img400x400,
+#articleBody .secondary-img.imgcont.img435x580,
+#articleBody .secondary-img.imgcont.img440x330,
+#articleBody .secondary-img.imgcont.img600x450,
+#articleBody .secondary-img.imgcont.std_src {float:none; background:url('http://img2.timeinc.net/people/static/i/article/bg_hashline_grey.png') repeat;}
+#articleBody .secondary-img.imgcont {padding-bottom:0;}
+#articleBody .secondary-img.imgcont img {display:block; max-width:100%; height:auto; margin:0 auto; border:none;}
+#articleBody .secondary-img.imgcont .clearfix {min-height:38px; padding-bottom:4px; position:relative; background:#f3f3f3;}
+#articleBody .secondary-img.imgcont .photo_sharing {width:111px; margin-top:4px; position:absolute; top:0; bottom:0; right:10px; text-align:right;}
+#articleBody .secondary-img.imgcont .photo_sharing .container {display:table; height:100%; line-height:100%;}
+#articleBody .secondary-img.imgcont .photo_sharing .inner-container {display:table-cell; vertical-align:middle;}
+#articleBody .secondary-img.imgcont .photo_sharing button {display:inline-block; width:25px; height:25px; margin-right:15px; background-image:url('http://img2.timeinc.net/people/static/i/article/photo_share_sprites.png'); background-repeat:no-repeat; cursor:pointer;}
+#articleBody .secondary-img.imgcont .photo_sharing button:focus {outline:0;}
+#articleBody .secondary-img.imgcont .photo_sharing button.fb_button {background-position:0 0;}
+#articleBody .secondary-img.imgcont .photo_sharing button.fb_button:hover {background-position:0 -34px;}
+#articleBody .secondary-img.imgcont .photo_sharing button.tweet_button {margin-right:6px; background-position:-41px 0;}
+#articleBody .secondary-img.imgcont .photo_sharing button.tweet_button:hover {background-position:-41px -34px;}
+#articleBody .secondary-img.imgcont .photo_sharing button.pin_button {width:30px; margin-right:0; background-position:-83px 0;}
+#articleBody .secondary-img.imgcont .photo_sharing button.pin_button:hover {background-position:-83px -34px;}
+#articleBody .secondary-img.imgcont .photo_sharing button.t_button {width:11px; background-position:-131px 0;}
+#articleBody .secondary-img.imgcont .photo_sharing button.t_button:hover {background-position:-131px -34px;}
+#articleBody .secondary-img.imgcont .caption-area {width:467px;}
+@media (min-width:1200px) {
+	#articleBody .secondary-img.imgcont .caption-area {width:547px;}
+}
+#articleBody .secondary-img.imgcont .caption-area .credit {padding:0 0 0 8px;}
+#articleBody .secondary-img.imgcont .caption-area .caption {padding:0 0 0 8px;}
+
+/* With Enlarge button */
+#mainPhoto .zoom, #articleBody .imgcont .zoom {margin:0 auto; position:relative; z-index:20; font:bold 12px brandon-grotesque,arial,sans-serif; color:#fff; text-transform:uppercase;}
+.tablet #mainPhoto .zoom, .tablet #articleBody .imgcont .zoom {width:100%; height:100%; position:absolute;}
+#mainPhoto .zoom a, #articleBody .imgcont .zoom a {display:block; width:86px; height:26px; overflow:hidden; position:absolute; top:10px; right:10px; background:url('http://img2.timeinc.net/people/static/i/article/btn_zoom_enlarge.png') no-repeat; color:#fff; text-indent:-999999px;}
+.tablet #mainPhoto .zoom a, .tablet #articleBody .imgcont .zoom a {width:100%; height:100%; background-position:100% 0;}
+.img150x113 .zoom,.img150x200 .zoom {width:150px;}
+.img229x305 .zoom {width:229px;}
+.img240x320 .zoom {width:240px;}
+.img280x590 .zoom {width:280px;}
+.img300x400 .zoom {width:300px;}
+.img320x240 .zoom {width:320px;}
+.img387x290 .zoom {width:387px;}
+.img400x300 .zoom,.img400x400 .zoom {width:400px;}
+.img435x580 .zoom {width:435px;}
+.img440x330 .zoom {width:440px;}
+.img600x450 .zoom {width:600px;}
+
+/* ---------- Article Gallery ---------- */
+#articleGalleryArea {width:600px; margin-bottom:16px; position:relative;}
+#articleGalleryArea #articleGallerySlider {width:600px; min-height:500px;}
+#articleGalleryArea #articleGallerySlider .bx-pager {display:none;}
+#articleGalleryArea a.bx-prev, #articleGalleryArea a.bx-next {display:block; width:50px; height:100px; position:absolute; top:175px; overflow:hidden; text-indent:-99999px; outline:none;}
+#articleGalleryArea a.bx-prev {left:0; background:url('http://img2.timeinc.net/people/static/i/article/btn-gallery-prev.png') no-repeat;}
+#articleGalleryArea a.bx-next {right:0; background:url('http://img2.timeinc.net/people/static/i/article/btn-gallery-next.png') no-repeat;}
+#articleGalleryArea a.bx-prev:hover {background-image:url('http://img2.timeinc.net/people/static/i/article/btn-gallery-prev-over.png');}
+#articleGalleryArea a.bx-next:hover {background-image:url('http://img2.timeinc.net/people/static/i/article/btn-gallery-next-over.png');}
+#articleGalleryArea ul#articleGalleryTouts {width:600px;} /* LI width x 1 = this. The sliding area only, excludes the left & right padding that hides the other touts */
+#articleGalleryArea ul#articleGalleryTouts li {width:600px; min-height:450px;}
+#articleGalleryTouts .articleSlide {padding-bottom:4px; background:#F3F3F3;}
+#articleGalleryTouts .articleSlide .image {width:600px; height:450px; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/article/bg_hashline_blue.png') repeat; border-bottom:1px solid #fff; text-align:center;}
+#articleGalleryTouts .articleSlide .credit {padding:6px 8px 0 8px; font:normal 9px brandon-grotesque,arial,sans-serif; color:#727272; text-transform:uppercase;}
+#articleGalleryTouts .articleSlide .caption {padding:6px 8px 0 8px; font:400 14px brandon-grotesque,arial,sans-serif; color:#000;}
+#articleGalleryTouts .articleSlide .image span {display:block;}
+#articleGalleryTouts .articleSlide .img229x305 {width:229px; padding:72px 185px;}
+#articleGalleryTouts .articleSlide .img240x320 {width:240px; padding:65px 180px;}
+#articleGalleryTouts .articleSlide .img300x400 {width:300px; padding:25px 150px;}
+#articleGalleryTouts .articleSlide .img320x240 {width:320px; padding:105px 140px;}
+#articleGalleryTouts .articleSlide .img387x290 {width:387px; padding:80px 106px;}
+#articleGalleryTouts .articleSlide .img435x580 {width:435px; padding:0 82px;}
+#articleGalleryTouts .articleSlide .img440x330 {width:440px; padding:60px 80px;}
+/* hack for 660 images in 600 slot right now */
+#articleGalleryTouts .articleSlide .img600x450 img {width:600px; height:450px;}
+#articleGalleryArea #slideshow-sticker {display:block; padding:6px 8px; position:absolute; left:0; top:412px; background:url('data:image/png; base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABVJREFUeNpiNDY23s8ABEwMUAAQYAAUOAFcZSCG4gAAAABJRU5ErkJggg=='); font:normal 17px brandon-grotesque,arial,sans-serif; color:#fff; text-align:center; text-transform:uppercase;}
+
+/* ---------- Video Modules ---------- */
+#mainVideo {padding-bottom:20px;}
+#mainVideo #featuredVideo {text-align:center;}
+#featuredVideo .brightcovemain object {width:600px; height:338px;}
+.brightcovePlayerInline {clear:both; margin:15px 0; background:transparent; text-align:center;}
+.brightcovePlayerInline object {width:600px; height:338px;}
+.brightcovePlayerEmbedded {clear:both; margin:15px 0; text-align:center;}
+.brightcovePlayerEmbedded object {width:600px; height:338px;}
+
+.video-module {width:600px; margin-bottom:10px; position:relative; overflow:hidden;}
+.video-module .overlay-wrapper, .video-module .video-placeholder {display:block; width:600px;}
+.video-module .overlay-wrapper {background:#F3F3F3;}
+.video-module .overlay-meta {float:left; padding-top:6px;}
+.video-module .overlay-caption {margin:0; padding:0 8px 6px 8px; font:400 14px brandon-grotesque,arial,sans-serif; color:#000; text-align:left;}
+.video-module .overlay-credit {margin:0; padding:0 8px 6px 8px; font:normal 9px brandon-grotesque,arial,sans-serif; color:#727272; text-align:left; text-transform:uppercase;}
+.video-module .overlay-image {position:relative;}
+.video-module .overlay-image .icon-play {display:none; width:60px; height:32px; padding:10px 0 0 50px; position:absolute; overflow:hidden; top:0; left:0; background:url('http://img2.timeinc.net/people/static/i/video/icon-video-arrow.png') 18px 10px no-repeat; background-color:rgba(32,177,234,0.90); background-size:18px; font:bold 18px brandon-grotesque,arial,sans-serif; color:#fff; text-transform:uppercase;}
+.video-module .overlay-image .icon-play.hide-text {width:40px; height:32px; padding:10px 0 0 10px; text-indent:-99999px;}
+.video-module .overlay-share {display:none !important; float:right; width:147px;}
+.video-module .overlay-share .social {width:147px; margin:0; padding:3px 0 0 0;}
+.video-module .overlay-share .social li {display:block; float:left; width:25px; padding-left:10px;}
+.video-module .overlay-share .social li a {display:block; width:24px; height:24px; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/video/sprite-video-share.png') no-repeat; text-indent:-9999px;}
+.video-module .overlay-share .social li.facebook a {background-position:0 -300px;}
+.video-module .overlay-share .social li.facebook a:hover {background-position:0 -350px;}
+.video-module .overlay-share .social li.twitter a {background-position:-50px -300px;}
+.video-module .overlay-share .social li.twitter a:hover {background-position:-50px -350px;}
+.video-module .overlay-share .social li.pinterest {width:30px;}
+.video-module .overlay-share .social li.pinterest a {width:30px; background-position:-100px -300px;}
+.video-module .overlay-share .social li.pinterest a:hover {background-position:-100px -350px;}
+.video-module .overlay-share .social li.tumblr a {background-position:-146px -300px;}
+.video-module .overlay-share .social li.tumblr a:hover {background-position:-146px -350px;}
+.video-module.overlay-300, .video-module.overlay-320 {float:left; margin-right:16px;}
+.video-module.overlay-300, .video-module.overlay-300 .overlay-wrapper {width:300px;}
+.video-module.overlay-300 .overlay-meta {width:300px;}
+/* use smaller width when overlay shares are visible */
+.video-module.overlay-320, .video-module.overlay-320 .overlay-wrapper {width:320px;}
+.video-module.overlay-320 .overlay-meta {width:320px}
+.video-module.overlay-400, .video-module.overlay-400 .overlay-wrapper {width:400px;}
+.video-module.overlay-400 .overlay-meta {width:600px;}
+.video-module.overlay-435, .video-module.overlay-435 .overlay-wrapper {width:435px;}
+.video-module.overlay-435 .overlay-meta {width:600px;}
+.video-module.overlay-600, .video-module.overlay-600 .overlay-wrapper {width:600px;}
+.video-module.overlay-600 .overlay-meta, .video-module.overlay-600 .overlay-meta {width:600px;}
+.video-module.overlay-800, .video-module.overlay-800 .overlay-wrapper {width:600px;}
+.video-module.overlay-800 .overlay-meta, .video-module.overlay-800 .overlay-meta {width:600px;}
+.video-module.overlay-1024, .video-module.overlay-1024 .overlay-wrapper {width:600px;}
+.video-module.overlay-1024 .overlay-meta, .video-module.overlay-1024 .overlay-meta {width:600px;}
+.video-module.overlay-800 .overlay-image img, .video-module.overlay-1024 .overlay-image img {width:600px; height:450px;}
+.video-module .video-placeholder {width:600px;}
+.video-module .video-placeholder.has-overlay {width:0; height:0; text-indent:-99999px;}
+.brightcovePlayerInline .video-module object {width:600px; height:338px;}
+.video-module .playlist-meta p {}
+.video-module .playlist-meta .pub-date {margin:0; padding:0; font:bold 12px brandon-grotesque,arial,sans-serif;}
+.video-module .playlist-meta h4 {margin:0; padding:0; font:normal 18px brandon-grotesque,arial,sans-serif;}
+.video-module .playlist-meta h4 a {color:#000; text-decoration:none;}
+.video-module .playlist-meta h4 a:hover {text-decoration:underline;}
+.video-module .playlist-meta .desc {margin:0; padding:3px 0; font:normal 14px brandon-grotesque,arial,sans-serif;}
+.video-module .playlist-meta .kicker {font:normal 11px brandon-grotesque,arial,sans-serif; color:#4B7084;}
+.video-module .playlist-meta .channel {display:inline-block; margin:0; padding:0 10px 0 0; font-weight:bold; text-transform:uppercase;}
+.video-module .playlist-meta .duration {display:inline-block; margin:0; padding:0;}
+.video-module .playlist-meta .more {display:inline; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') no-repeat scroll right -92px;}
+.video-module .playlist-meta .more a {padding-right:7px; font:bold 11px brandon-grotesque,arial,sans-serif; color:#067AB4; text-decoration:none; text-transform:uppercase; white-space:nowrap;}
+.video-module .playlist-meta .more a:hover {text-decoration:underline;}
+#articleBody .video-module {max-width:600px;}
+/* Fit to left column for wider breakpoint. */
+/* http://docs.brightcove.com/en/video-cloud/smart-player-api/samples/responsive-sizing.html */
+@media (min-width:1200px) {
+	#mainVideo {width:800px; margin-left:-80px;}
+	
+	.video-module .video-placeholder {width:100%; height:0; padding-bottom:56.25%; position:relative;}
+	.video-module .video-placeholder.has-overlay {padding-bottom:0;}
+	.video-module .video-placeholder .BrightcoveExperience {width:100%; height:100%; position:absolute; top:0; left:0;}
+	.video-module .video-share {width:auto; margin:7px auto;}
+	
+	.video-module.overlay-800, .video-module.overlay-800 .overlay-wrapper {width:720px;}
+	.video-module.overlay-800 .overlay-meta, .video-module.overlay-800 .overlay-meta {width:720px;}
+	.video-module.overlay-1024, .video-module.overlay-1024 .overlay-wrapper {width:720px;}
+	.video-module.overlay-1024 .overlay-meta, .video-module.overlay-1024 .overlay-meta {width:720px;}
+	.video-module.overlay-800 .overlay-image img, .video-module.overlay-1024 .overlay-image img {width:720px; height:540px;}
+	
+	#mainVideo .video-module {width:auto;}
+	#mainVideo .video-module.overlay-800, #mainVideo .video-module.overlay-800 .overlay-wrapper {width:800px;}
+	#mainVideo .video-module.overlay-800 .overlay-meta, #mainVideo .video-module.overlay-800 .overlay-meta {width:800px;}
+	#mainVideo .video-module.overlay-1024, #mainVideo .video-module.overlay-1024 .overlay-wrapper {width:800px;}
+	#mainVideo .video-module.overlay-1024 #mainVideo .overlay-meta, .video-module.overlay-1024 .overlay-meta {width:800px;}
+	#mainVideo .video-module.overlay-800 .overlay-image img, #mainVideo .video-module.overlay-1024 .overlay-image img {width:800px; height:600px;}
+
+	#mainVideo .video-module .video-share .social li, #mainVideo .video-module .video-share .social li a {width:396px; height:44px;}
+	#mainVideo .video-module .video-share .social li.facebook {float:left; width:396px; padding-right:8px;}
+	#mainVideo .video-module .video-share .social li.facebook a {background-position:0 -405px;}
+	#mainVideo .video-module .video-share .social li.facebook a:hover {background-position:0 -480px;}
+	#mainVideo .video-module .video-share .social li.twitter {float:left;}
+	#mainVideo .video-module .video-share .social li.twitter a {background-position:-404px -405px;}
+	#mainVideo .video-module .video-share .social li.twitter a:hover {background-position:-404px -480px;}
+}
+/* 2 button share */
+.video-module .video-share {margin:7px 0;}
+body.permalink .video-module .video-share, body.single-post .video-module .video-share {display:none;}
+.video-module .video-share .social, .video-module .video-share .social {list-style:none; margin:0; padding:0;}
+.video-module .video-share .social {height:44px; overflow:hidden;}
+.video-module .video-share .social li {display:block; width:296px;}
+.video-module .video-share .social li a {display:block; width:296px; height:44px; background:url('http://img2.timeinc.net/people/static/i/video/sprite-video-share.png'); overflow:hidden; text-indent:-9999px;}
+.video-module .video-share .social li.facebook {float:left; padding-right:8px;}
+.video-module .video-share .social li.facebook a {background-position:0 0;}
+.video-module .video-share .social li.facebook a:hover {background-position:0 -75px;}
+.video-module .video-share .social li.twitter {float:left;}
+.video-module .video-share .social li.twitter a {background-position:-350px -0;}
+.video-module .video-share .social li.twitter a:hover {background-position:-350px -75px;}
+.video-module .video-share .social li.email {display:none; width:213px; padding-right:0;}
+.video-module .video-share .social li.email a {width:213px; background-position:-500px -150px;}
+.video-module .video-share .social li.email a:hover {background-position:-500px -225px;}
+
+/* ---------- Youtube (size currently set to 320x240 in source code) ---------- */
+.youtube object, .youtube object embed {width:600px; height:338px;}
+@media (min-width:1200px) {
+	.youtube object, .youtube object embed {width:680px; height:383px;}
+}
+
+
+/* ---------- Whosay ---------- */
+.WhoSayPhotoEmbed .photo {background:url('http://img2.timeinc.net/people/static/i/article/bg_hashline_blue.png') repeat;}
+.whosay150 {float:left; width:150px; margin:0 18px 10px 0;}
+.whosay240 {float:left; width:240px; margin:0 18px 10px 0;}
+.whosay300 {float:left; width:300px; margin:0 18px 10px 0;}
+.whosay320 {float:left; width:320px; margin:0 18px 10px 0;}
+.whosay430 {clear:both; width:430px; padding:0 85px;}
+.whosay600 {clear:both; width:600px;}
+
+/* ---------- Inline Tweets ---------- */
+.inline-tweet {display:inline; margin-right:3px; padding:1px 0 1px 1px; background:#f2f2f2 url('http://img2.timeinc.net/people/static/i/article/twitter_bird.png') right 10px no-repeat;}
+.inline-tweet.hover {background-color:#def8ff; cursor:pointer;}
+.inline-tweet > span {padding-right:18px;}
+body a.inline-tweet-link {display:none;}
+
+/* ---------- Infographics ---------- */
+.infographic {clear:both; width:600px; position:relative;}
+.infographic .image {width:600px; z-index:10;}
+.infographic ul.sharecard {width:180px; position:absolute; bottom:10px; right:10px; z-index:20;}
+.infographic .sharecard li {display:block; float:left; height:35px; padding-left:8px;}
+.infographic .sharecard a {display:block; width:35px; height:35px; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/article/sprite-social-article.png') no-repeat; color:#000; text-indent:-9999px;}
+.infographic .sharecard .fbshare a {background-position:-23px -138px;}
+.infographic .sharecard .fbshare a:hover {background-position:-23px -189px;}
+.infographic .sharecard .twitter a {background-position:-71px -138px;}
+.infographic .sharecard .twitter a:hover {background-position:-71px -189px;}
+.infographic .sharecard .pinterest a {background-position:-119px -138px;}
+.infographic .sharecard .pinterest a:hover {background-position:-119px -189px;}
+.infographic .sharecard .tumblr a {background-position:-263px -138px;}
+.infographic .sharecard .tumblr a:hover {background-position:-263px -189px;}
+
+/* ---------- Zoom ---------- */
+body.overlay {position:relative;}
+.tablet body.overlay {position:absolute;}
+body.overlay .image-zoom {width:100%; position:absolute; top:0; left:0; z-index:50000; background:url('http://img2.timeinc.net/people/static/i/article/bg_overlay.png');}
+body.overlay .image-zoom .zoom-wrapper {width:994px; margin:0 auto; padding:165px 0;}
+body.overlay .image-zoom .image {float:left; width:804px; padding:0 4px 0 95px;}
+body.overlay .image-zoom .image img {width:768px; border:18px solid #fff;}
+body.overlay .image-zoom .btn-close {float:left; width:85px; font:bold 12px brandon-grotesque,arial,sans-serif; color:#fff; text-transform:uppercase;}
+.tablet body.overlay .image-zoom .btn-close {position:relative; left:-86px;}
+body.overlay .image-zoom .btn-close a {display:block; width:85px; height:30px; background:url('http://img2.timeinc.net/people/static/i/article/btn_zoom_close.png') no-repeat; color:#fff; text-indent:-999999px; cursor:pointer;}
+
+/* ---------- Main Body ---------- */
+#articleBody {font:300 22px/30px brandon-grotesque,arial,sans-serif; letter-spacing:0.1px;}
+#articleBody a {color:#067AB4;}
+
+#articleBody .relatedtext, #articleBody .relatedtext a {font-weight:500 !important; font-size:22px !important; line-height:30px !important; letter-spacing:0.1px !important;}
+#articleBody .relatedtext b {padding-right:2px !important; font-weight:500 !important; font-size:18px !important; line-height:27px !important letter-spacing:1px !important;;}
+
+#articleBody h4 {padding:10px 0; font:500 22px/30px brandon-grotesque,arial,sans-serif;}
+
+#articleBody .yourturn, .blogEntry .yourturn {display:block; float:left; width:100%; padding:10px 0 10px 0; font:500 22px/30px brandon-grotesque,arial,sans-serif;}
+#articleBody .yourturn a, .blogEntry .yourturn a {display:inline; padding-right:10px; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') no-repeat scroll right -85px transparent; color:#067ab4;}
+#articleBody .yourturn span, .blogEntry .yourturn span {color:#13cbd6; text-transform:uppercase;}
+#articleBody .yourturn a span, .blogEntry .yourturn a span {color:#13cbd6;}
+#articleBody .yourturn span.bg, .blogEntry .yourturn span.bg {float:left; display:block; width:36px; height:35px; margin-top:-10px; background:url('http://img2.timeinc.net/people/static/i/article/bg_yourturn.png') no-repeat;}
+#articleBody .yourturn span.hd, .blogEntry .yourturn span.hd {color:#13cbd6; text-transform:uppercase;}
+#articleBody .yourturn a span.hd, .blogEntry .yourturn a span.hd {color:#13cbd6;}
+#articleBody .icon-react {display:block; float:left; width:44px; height:44px; padding-right:8px;}
+#articleBody .fraction {line-height:0;}
+#articleBody .fraction sup, .fraction sub {font-size:8px;}
+#articleBody .premium-link {color:#9627c2;}
+
+.articlePoll {}
+#articleBody .articlePoll h4 {padding-bottom:4px; font:bold 16px brandon-grotesque,arial,sans-serif; color:#e07;}
+.articlePoll h5 {padding-bottom:4px; font:bold 16px brandon-grotesque,arial,sans-serif;}
+.articlePoll ul {padding:4px 0 6px 0;}
+.articlePoll li {padding-bottom:3px; font-size:14px;}
+.articlePoll li .optionText {padding-left:4px;}
+.articlePoll li input {border:0;}
+.articlePoll input.voteBtn {padding:3px 10px; background:#e12985 url('http://img2.timeinc.net/people/static/i/article/btn_vote.png') left center repeat-x; border:1px solid #d9277f; font:bold italic 13px brandon-grotesque,arial,sans-serif; color:#fff; -webkit-border-radius:4px; border-radius:4px;}
+.articlePoll .showresults li span.polltext {display:block;}
+.articlePoll .showresults li .barframe {float:left; width:366px; margin-top:5px; background:#e6e6e6;}
+.articlePoll .showresults li .percentbar {height:10px; background:#e756eb; color:#fff;}
+.articlePoll .showresults li .votepercent {float:left; padding-left:10px; font-weight:bold; color:#9627c2;}
+.articlePoll .showresults li .votetotal {display:none;}
+
+#articleBody .related-article-tout .photo_sharing {margin-top:4px;}
+
+#articleBody iframe {display:block;} /* fix for text wrapping with instagram iframes */
+#articleBody .fb-like-article-wrapper {clear:both; display:block;}
+
+
+/* Inline Premium cm link */
+#pe_celebfood_subscriberExclusiveInline1ad p {margin:0 !important;}
+#pe_celebfood_subscriberExclusiveInline1ad .txtcont {padding:0 !important;}
+#pe_celebfood_subscriberExclusiveInline1ad .txtcont p.txt{margin:0 0 1em !important; font-size:18px !important; letter-spacing:1px !important;}
+
+
+
+/* ---------- Bracketology ---------- */
+.relatedtext.bracket {height:40px;}
+.relatedtext.bracket a {height:16px; padding:12px 0 12px 50px; background:url('http://img2.timeinc.net/people/static/i/package/redcarpet2014/article/bracket-article-sprite.png') 0 -417px no-repeat;}
+iframe.bracketPoll {margin-left:-14px;}
+
+
+/* ---------- Newsletter Sign Up (PEOP-3042) ---------- */
+#newsletter_signup_article {}
+#newsletter_signup_article input {float:left; width:335px; height:40px; margin-right:8px; padding:3px 0 0 54px; background:transparent url('http://img2.timeinc.net/people/static/i/article/envelope.png') 17px 15px no-repeat; border:2px solid #e1e1e1; font:normal 18px brandon-grotesque,arial,sans-serif; color:#000; letter-spacing:1px;}
+#newsletter_signup_article input.placeholder {color:#d7d7d7;}
+#newsletter_signup_article .button-submit {float:left; width:121px; height:47px;}
+#newsletter_signup_article form h1 {margin:0 0 5px 0; font:500 30px brandon-grotesque,arial,sans-serif; color:#27c4ff;}
+#newsletter_signup_article form h2 {margin:0 0 5px 0; font:300 20px/22px brandon-grotesque,arial,sans-serif; color:#000;}
+#newsletter_signup_article fieldset {margin-top:20px;}
+#newsletter_signup_article .tagline {display:block; margin-top:47px; font:bold italic 14px/19px brandon-grotesque,arial,sans-serif;}
+#newsletter_signup_article .tagline a {color:#e07; text-decoration:underline;}
+#newsletter_signup_article .tagline a:hover {text-decoration:none;}
+#newsletter_signup_article .thankyou h1 {margin:0; font:400 22px brandon-grotesque,arial,sans-serif; color:#27c4ff; letter-spacing:0.5px;}
+
+/* ---------- Related Celeb Links ---------- */
+#relatedCeleb {width:100%; margin:40px 0; padding-right:2px; font:500 18px/27px brandon-grotesque,arial,sans-serif; letter-spacing:1px; color:#88C442;}
+#relatedCeleb .text .links {font-size:15px; line-height:18px;}
+#relatedCeleb a {font-size:22px; line-height:30px; font-weight:500; letter-spacing:0.1px; color:#067AB4;}
+
+/* ---------- Wordpress Categories ---------- */
+#filedUnder {width:100%; margin:40px 0; padding-right:2px; font-weight:500; font-size:14px; line-height:27px; letter-spacing:1px; color:#88C442;}
+#filedUnder a {font-weight:400; font-size:17px; line-height:27px; letter-spacing:0.1px; color:#067AB4;}
+
+/* ---------- Package Banner ---------- */
+#package-banner {clear:both; margin-top:50px; padding:25px 0 15px 0; border-top:1px solid #e6e6e6;}
+@media (min-width:1200px) {
+    #package-banner {padding:25px 80px 15px 0;}
+}
+
+/* ---------- More Stuff We Love links for LiveStyle shop (PEOP-2697): supports article-include-txt shortcode for joyus page ---------- */
+div#more-list-insert {margin-bottom:35px;}
+div#more-list-insert h3 {margin-bottom:5px; font:bold 18px brandon-grotesque,arial,sans-serif; color:#067AB4; text-transform:uppercase; white-space:nowrap;}
+div#more-list-insert ul {margin:0; padding:0;}
+div#more-list-insert ul li {list-style:none; margin:0; padding:0 0 10px 10px; font:bold 12px brandon-grotesque,arial,sans-serif; background:url('http://img2.timeinc.net/people/static/i/article/icon_bullet_outbrain.png') 0 7px no-repeat;}
+div#more-list-insert ul li a {font:bold 12px brandon-grotesque,arial,sans-serif; color:#000;}
+div#more-list-insert ul li:last-child {background:none;}
+div#more-list-insert ul li:last-child a {padding:0 7px 0 8px; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') right -96px no-repeat; font:bold 11px brandon-grotesque,arial,sans-serif; color:#067AB4; text-transform:uppercase; white-space:nowrap;}
+
+
+/* ---------- Emotes ---------- */
+#userReaction {float:right; width:300px;}
+#userReaction .text {float:left; width:120px; margin-right:4px; padding-top:10px; border-right:1px dotted #d6d6d6;}
+#userReaction .emotes {width:auto; margin-top:6px;}
+/* Total Votes */
+#userReaction .totalvotes {font-size:18px;}
+#userReaction .totalvotes strong {font-size:16px;}
+
+/* Reaction */
+#userReaction .emotes li {width:41px;}
+#userReaction .emotes li {margin-right:19px;}
+#userReaction .emotes li:last-child {margin-right:0;}
+#userReaction .emotes li span.emote-image {width:41px; height:41px; background:url('http://img2.timeinc.net/people/static/i/article/emoticomments-sprite.png') no-repeat;}
+#userReaction .emotes li.wow {margin-left:15px;}
+#userReaction .emotes li.angry {margin-right:0;}
+/* default */
+#userReaction .emotes li.wow span.emote-image, #userReaction .emotes ul.voted li.wow span.emote-image {background-position:-36px -49px;}
+#userReaction .emotes li.funny span.emote-image, #userReaction .emotes ul.voted li.funny span.emote-image {background-position:-105px -49px;}
+#userReaction .emotes li.love span.emote-image, #userReaction .emotes ul.voted li.love span.emote-image {background-position:-175px -49px;}
+#userReaction .emotes li.sad span.emote-image, #userReaction .emotes ul.voted li.sad span.emote-image {background-position:-245px -49px;}
+#userReaction .emotes li.angry span.emote-image, #userReaction .emotes ul.voted li.angry span.emote-image {background-position:-315px -49px;}
+/* hover */
+#userReaction .emotes li.wow.hover span.emote-image {background-position:-36px -149px;}
+#userReaction .emotes li.funny.hover span.emote-image {background-position:-105px -149px;}
+#userReaction .emotes li.love.hover span.emote-image {background-position:-175px -149px;}
+#userReaction .emotes li.sad.hover span.emote-image {background-position:-245px -149px;}
+#userReaction .emotes li.angry.hover span.emote-image {background-position:-315px -149px;}
+/* selected */
+#userReaction .emotes ul.voted li.wow span.emote-image,#userReaction .emotes ul.voted li.funny span.emote-image,#userReaction .emotes ul.voted li.love span.emote-image,#userReaction .emotes ul.voted li.sad span.emote-image,#userReaction .emotes ul.voted li.angry span.emote-image {opacity:0.4;}
+#userReaction .emotes ul.voted li.wow.chosen span.emote-image {background-position:-36px -149px !important; opacity:1;}
+#userReaction .emotes ul.voted li.funny.chosen span.emote-image {background-position:-105px -149px !important; opacity:1;}
+#userReaction .emotes ul.voted li.love.chosen span.emote-image {background-position:-175px -149px !important; opacity:1;}
+#userReaction .emotes ul.voted li.sad.chosen span.emote-image {background-position:-245px -149px !important; opacity:1;}
+#userReaction .emotes ul.voted li.angry.chosen span.emote-image {background-position:-315px -149px !important; opacity:1;}
+
+
+/* panels */
+#reactLinks {clear:both; margin-top:15px;}
+#reactLinks .relatedBox {display:none; width:auto;}
+#reactLinks .relatedBox .headerbar {height:67px; border-bottom:1px solid #fff;}
+#reactLinks .relatedBox #headerbar_border {height:10px; position:relative;}
+#reactLinks .relatedBox #headerbar_border .carrot {width:47px; height:12px; position:absolute; top:0; background-image:url('http://img2.timeinc.net/people/static/i/article/reaction_carrot_sprites.png'); background-repeat:no-repeat;}
+#reactLinks .relatedBox .headerbar h4 {float:left; margin:15px 0 8px 0; padding:0; font:bold 16px brandon-grotesque,arial,sans-serif; text-transform:uppercase;}
+#reactLinks .relatedBox .headerbar span.arrow {display:block; width:28px; height:18px;}
+#reactLinks .relatedBox .headerbar h4 span.text {display:inline-block; width:auto !important; padding-left:14px; font-size:20px; font-weight:500; text-transform:initial !important;}
+#reactLinks .relatedBox .headerbar h4 span.icon {display:inline-block; width:34px; height:32px; margin:-2px 0 0 3px; padding-top:5px; background:url('http://img2.timeinc.net/people/static/i/article/emoticomments-sprite.png') no-repeat; text-indent:-99999px;}
+#reactLinks .relatedBox.happy .headerbar h4 span.icon {background-position:0 0;}
+#reactLinks .relatedBox.funny .headerbar h4 span.icon {background-position:0 -25px;}
+#reactLinks .relatedBox.love .headerbar h4 span.icon {background-position:0 -50px;}
+#reactLinks .relatedBox.sad .headerbar h4 span.icon {background-position:0 -75px;}
+#reactLinks .relatedBox.angry .headerbar h4 span.icon {background-position:0 -100px;}
+#reactLinks .relatedBox .headerbar .votecount {float:right; padding-right:14px; font:normal 12px brandon-grotesque,arial,sans-serif;}
+#reactLinks .relatedBox .headerbar .sharestory {float:right; padding-right:14px; font:bold 11px brandon-grotesque,arial,sans-serif; text-transform:uppercase;}
+#reactLinks .relatedBox .headerbar .sharestory a {display:block; height:16px; padding:1px 0 0 20px; background:url('http://img2.timeinc.net/people/static/i/article/icon_fb_sharestory.png') no-repeat; color:#fff; text-decoration:underline;}
+#reactLinks .relatedBox .linklist {float:left; width:100%; margin-bottom:5px; padding:0;}
+#reactLinks .relatedBox .linklist ul {padding:0;}
+#reactLinks .relatedBox .linklist li {margin-bottom:7px; padding:0; font:400 18px/22px brandon-grotesque,arial,sans-serif;}
+#reactLinks .relatedBox .linklist li a {padding-right:11px; background:url('data:image/png; base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpieMdQ3gHEggxIgAmIjYF4N7IEE5RGkWBC0gWXQBaESXSgC54F4gomNAFXIYbO90zoAjCLUARAACDAALSmFHRwpL+LAAAAAElFTkSuQmCC') center right no-repeat; font-size:18px; color:#000;}
+#reactLinks .moreReact {font:bold 12px brandon-grotesque,arial,sans-serif; text-transform:uppercase;}
+#reactLinks .moreReact a {display:inline-block; padding:3px 20px 3px 14px; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') no-repeat 19px -192px; color:#fff;}
+#reactLinks .moreReact a:hover {text-decoration:none;}
+/* With an ad call next to link list */
+#reactLinks p.moreReact {clear:both;}
+#reactLinks #reactAd170x30 {float:right; width:170px; padding:10px 10px 0 0; font:normal 9px brandon-grotesque,arial,sans-serif; color:#999; text-transform:uppercase;}
+#reactLinks #reactAd170x30 iframe {width:170px; height:31px;}
+#reactLinks .relatedBox .headerbar #reactAd170x30 {margin-top:16px;}
+/* End:With an ad call next to link list */
+
+/* wow */
+#reactLinks .relatedBox.wow #headerbar_border {border-bottom:1px solid #feaf25;}
+#reactLinks .relatedBox.wow #headerbar_border .carrot {right:244px; background-position:0 -16px;}
+#reactLinks .relatedBox.wow .headerbar h4 span.text {color:#feaf25;}
+#reactLinks .relatedBox.wow .headerbar h4 span.icon {background-position:-69px -350px !important}
+#reactLinks .relatedBox.wow .moreReact a {background-color:#feaf25;}
+#reactLinks .relatedBox.wow .moreReact a:hover {background-color:#cb8c1e;}
+/* funny */
+#reactLinks .relatedBox.funny #headerbar_border {border-bottom:1px solid #ce16da;}
+#reactLinks .relatedBox.funny #headerbar_border .carrot {right:184px; background-position:0 -63px;}
+#reactLinks .relatedBox.funny .headerbar h4 span.text {color:#ce16da;}
+#reactLinks .relatedBox.funny .headerbar h4 span.icon {background-position:-124px -350px !important}
+#reactLinks .relatedBox.funny .moreReact a {background-color:#ce16da;}
+#reactLinks .relatedBox.funny .moreReact a:hover {background-color:#a512ae;}
+/* love */
+#reactLinks .relatedBox.love #headerbar_border {border-bottom:1px solid #ff1b8d;}
+#reactLinks .relatedBox.love #headerbar_border .carrot {right:124px; background-position:0 -110px;}
+#reactLinks .relatedBox.love .headerbar h4 span.text {color:#ff1b8d;}
+#reactLinks .relatedBox.love .headerbar h4 span.icon {background-position:-179px -350px !important}
+#reactLinks .relatedBox.love .moreReact a {background-color:#ff1b8d;}
+#reactLinks .relatedBox.love .moreReact a:hover {background-color:#cc1671;}
+/* sad */
+#reactLinks .relatedBox.sad #headerbar_border {border-bottom:1px solid #27c4ff;}
+#reactLinks .relatedBox.sad #headerbar_border .carrot {right:64px; background-position:0 -157px;}
+#reactLinks .relatedBox.sad .headerbar h4 span.text {color:#27c4ff;}
+#reactLinks .relatedBox.sad .headerbar h4 span.icon {background-position:-235px -350px !important}
+#reactLinks .relatedBox.sad .moreReact a {background-color:#27c4ff;}
+#reactLinks .relatedBox.sad .moreReact a:hover {background-color:#1f9dcc;}
+/* angry */
+#reactLinks .relatedBox.angry #headerbar_border {border-bottom:1px solid #f53940;}
+#reactLinks .relatedBox.angry #headerbar_border .carrot {right:3px; background-position:0 -204px;}
+#reactLinks .relatedBox.angry .headerbar h4 span.text {color:#f53940;}
+#reactLinks .relatedBox.angry .headerbar h4 span.icon {background-position:-290px -350px !important}
+#reactLinks .relatedBox.angry .moreReact a {background-color:#f53940;}
+#reactLinks .relatedBox.angry .moreReact a:hover {background-color:#c42e33;}
+
+/* ---------- Left Column Section Headers (default styles) ---------- */
+.section-header {display:block; position:static; border-top:1px solid #e6e6e6; text-align:center;}
+.section-header span {display:inline-block; padding:0 10px; background:#fff; position:relative; top:-13px; font:bold 18px brandon-grotesque,arial,sans-serif; letter-spacing:1.5px; text-transform:uppercase;}
+
+/* ---------- Left Column Outbrain ---------- */
+#leftCol .OUTBRAIN {margin-bottom:30px;}
+.OUTBRAIN .AR_2 {background:url('http://img2.timeinc.net/people/static/i/article/around_the_web_header.png') 0 0 repeat-x;}
+.OUTBRAIN .AR_2 .strip-rec-link-title{font:400 17px/19px brandon-grotesque,arial,sans-serif !important;}
+.OUTBRAIN .AR_2 .ob_source{font:300 14px/18px brandon-grotesque,arial,sans-serif !important;}
+.OUTBRAIN .AR_2 .ob_container .ob_container_recs .item-link-container .item-container .ob-text-content .strip-rec-link-title{font:400 17px/19px brandon-grotesque,arial,sans-serif !important;}
+.OUTBRAIN .AR_2 .ob_container .ob_container_recs .item-link-container .item-container .ob-text-content .strip-rec-link-source .ob_source{font:300 14px/18px brandon-grotesque,arial,sans-serif !important;}
+.OUTBRAIN .AR_2 .ob_what a {font:300 14px brandon-grotesque,arial,sans-serif;}
+.OUTBRAIN .AR_2 span.ob_org_header {display:block; width:199px; margin:0 auto 19px auto; background:#fff; font:bold 18px/20px brandon-grotesque,arial,sans-serif !important; letter-spacing:1.5px !important; text-align:center; text-transform:uppercase;}
+body.permalink .OUTBRAIN .AR_2 span.ob_org_header, body.single-post .OUTBRAIN .AR_2 span.ob_org_header{margin:-18px auto 19px auto;}
+
+/* Wordpress articles */
+body.permalink #recircBox, body.single-post #recircBox {margin-top:30px;}
+
+
+/* OUTBRAIN MB_2 */
+.MB_2 ob_dual_right {
+    margin-top: .5rem;
+}
+.mod.just-for-you .MB_2 .ob-rec-link-img {
+	width: 90%;	
+	display: inline-block;
+	margin-bottom: 0;
+}
+.MB_2 .ob-text-content {
+    display: block;
+	margin-top: 8px;
+	width: 90%;
+}
+.MB_2 .odb_div {
+	clear: both;
+	width: 50%;
+	float: left;
+}
+.MB_2 .odb_div {
+    width: 50%;
+}
+.MB_2 .odb_div.ob-even {
+	clear:none;
+}
+
+/* ---------- The Latest ---------- */
+#the-latest {margin-bottom:50px;}
+#the-latest .tout{float:left;}
+#the-latest .tout.right{float:right;}
+/*#the-latest .tout +.tout{float:right;}*/
+.permalink #the-latest .tout:nth-child(3),
+.single-post #the-latest .tout:nth-child(3) {display:none;} /* Hide extra tout in WordPress. */
+#the-latest .tout a {text-decoration:none; color:#000;}
+#the-latest .tout a:hover {text-decoration:none;}
+#the-latest .tout .imgcont {margin-bottom:0; position:relative;}
+#the-latest .tout.tout-large {width:296px; margin-top:20px;}
+#the-latest .tout.tout-large .imgcont {width:296px; height:222px;}
+#the-latest .tout.tout-large .imgcont img {width:296px; height:222px;}
+#the-latest .tout.tout-large .imgcont span.play {display:block; width:40px; height:32px; padding:10px 0 0 10px; position:absolute; top:0; left:0; background:url('http://img2.timeinc.net/people/static/i/video/icon-video-arrow.png') 18px 10px no-repeat; background-color:rgba(37, 175, 229, 0.8); background-size:18px;}
+#the-latest .txtcont h4 {padding:8px 0 4px 0; font:300 20px/23px brandon-grotesque,arial,sans-serif;}
+#the-latest .toutheader{display:none;}
+/* #container #wrapper #main #leftCol #the-latest .row + .row .tout +.tout +.tout {display:none}/* Latest Module DeDupe (PEOP-4095) */
+/* #container #wrapper #main #leftCol #the-latest .row:last-child .tout:last-child {display:none}/* Latest Module DeDupe */
+
+@media (min-width:1200px) {
+	#the-latest .tout.tout-large {width:300px;}
+    #the-latest .tout.tout-large .imgcont {width:300px; height:225px;}
+    #the-latest .tout.tout-large .imgcont img {width:300px; height:225px;}
+}
+
+/* ---------- This Week's Issue ---------- */
+#this-weeks-issue {margin:20px 0 50px 0; font:normal 16px brandon-grotesque,arial,sans-serif;}
+#this-weeks-issue .section-header {margin-bottom:15px;}
+#this-weeks-issue .this-weeks-issue-image {float:left; width:150px;}
+#this-weeks-issue .this-weeks-issue-image img {width:150px; height:200px; margin-top:10px;}
+#this-weeks-issue .this-weeks-issue-list {float:left; width:180px; margin:10px 15px 0 40px;}
+#this-weeks-issue .this-weeks-issue-list ul {margin-bottom:8px;}
+#this-weeks-issue .this-weeks-issue-list li {list-style:disc; padding:6px 0; font-size:12px; color:#e07;}
+#this-weeks-issue .this-weeks-issue-list li a {font:300 18px/22px brandon-grotesque,arial,sans-serif; color:#000;}
+#this-weeks-issue .this-weeks-issue-list li a:hover {text-decoration:none;}
+#this-weeks-issue .this-weeks-issue-list strong{font-weight:400;}
+#this-weeks-issue .this-weeks-issue-cta {float:left; width:160px; height:150px; margin:10px 0 0 20px; padding:50px 0 0 30px; border-left:1px solid #e6e6e6;}
+#this-weeks-issue .this-weeks-issue-cta p {margin-bottom:8px;}
+#this-weeks-issue .button.pink {display:inline-block; width:110px; height:25px; padding:8px 0 4px 0; background:#e07; font-size:13px; font-weight:500; color:#fff; letter-spacing:1.5px; text-align:center; text-transform:uppercase; cursor:pointer; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+#this-weeks-issue .button.pink:hover {text-decoration:none;}
+@media (min-width:1200px) {
+    #this-weeks-issue .this-weeks-issue-list {width:245px;}
+}
+
+/* ---------- Disqus ---------- */
+#disqusArea {margin-bottom:50px;}
+#disqus_thread {clear:both;}
+
+
+/* ==================== RIGHT COLUMN MODULES ==================== */
+
+/* ---------- General Tout Styles ---------- */
+#right-rail .tout {clear:both; font:300 19px/21px brandon-grotesque,arial,sans-serif;}
+#right-rail .tout .imgcont {position:relative;}
+#right-rail .tout.tout-large {margin:25px 0;}
+#right-rail .tout.tout-large .imgcont {width:300px; height:225px; margin-bottom:9px;}
+#right-rail .tout.tout-large .imgcont img {width:300px; height:225px;}
+#right-rail .tout.tout-large .imgcont span.play {display:block; width:40px; height:32px; padding:10px 0 0 10px; position:absolute; top:0; left:0; background:url('http://img2.timeinc.net/people/static/i/video/icon-video-arrow.png') 18px 10px no-repeat; background-color:rgba(32,177,234,0.90); background-size:18px;}
+#right-rail .tout.tout-large.tout-cropped .imgcont {width:300px; height:130px; overflow-y:hidden;}
+#right-rail .tout.tout-large h4 {margin:1px 0;}
+#right-rail .tout.tout-large .deck {margin:3px 0; font:300 16px/18px brandon-grotesque;}
+#right-rail .tout.tout-small {margin-top:15px;}
+#right-rail .tout.tout-small .imgcont {float:left; width:75px; height:75px;}
+#right-rail .tout.tout-small .imgcont img {width:75px; height:75px;}
+#right-rail .tout.tout-small .imgcont span.play {display:block; width:18px; height:14px; padding:10px 0 0 10px; position:absolute; top:0; left:0; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/video/icon-video-arrow.png') 10px 5px no-repeat; background-color:rgba(32,177,234,0.90); background-size:11px;}
+#right-rail .tout.tout-small .txtcont {float:left; width:215px; margin-left:10px;}
+#right-rail .tout.tout-premium h4 a:after {content:"."; display:inline-block; width:28px; background:url('http://img2.timeinc.net/people/static/i/premium/premium-key.png') -155px -76px no-repeat; text-indent:-9999px;}
+#right-rail .tout h4 {font:300 19px/21px brandon-grotesque,arial,sans-serif;}
+#right-rail .tout .deck {font:normal 14px/16px brandon-grotesque,arial,sans-serif;}
+#right-rail .tout a {text-decoration:none;}
+#right-rail .tout a:hover {text-decoration:none;}
+
+/* Great Ideas */
+body#greatideas.single-post #right-rail .tout.tout-large .deck {display:none;}
+
+/* Joyus touts in SW blog  */
+body#stylewatch.permalink #right-rail .tout-video img {border:1px solid #e1e1e1;}
+body#stylewatch.permalink #right-rail .tout.tout-large .imgcont span.play {top:1px; left:1px;}
+body#stylewatch.permalink #right-rail .tout.tout-large .imgcont img {width:298px; height:223px;}
+body#stylewatch.permalink #right-rail .tout.tout-small .imgcont img {width:73px; height:73px;}
+
+/* Taboola / See More Video link (for Joyus) */
+#right-rail #tout-section-taboola {margin-bottom:25px;}
+body.permalink #right-rail #tout-section-taboola,
+body.single-post #right-rail #tout-section-taboola {margin-bottom:12px;}
+#right-rail #tout-section-taboola .see-more {float:right; margin-top:5px; padding-right:9px; color:#067AB4; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') right -2998px no-repeat; font:bold 12px brandon-grotesque,arial,sans-serif !important; text-transform:uppercase;}
+
+#right-rail .tout-section a.see-more {margin-top:5px; padding-right:9px; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') right -2998px no-repeat; font:bold 12px brandon-grotesque,arial,sans-serif; color:#067AB4; text-transform:uppercase;}
+body.permalink #right-rail .tout-section a.see-more,
+body.single-post #right-rail .tout-section a.see-more {display:inline-block; margin-bottom:15px;}
+
+
+/*Sticker styles  */
+#right-rail .tout .misc-sticker {display:block; padding:5px 7px; position:absolute; bottom:0; left:0; background:#3cf; font-size:19px; color:#000; text-transform:uppercase;}
+#right-rail .tout .misc-sticker.blue-sticker {color:#fff; background:#3cf;}
+#right-rail .tout .misc-sticker.gray-sticker {color:#fff; background:#333;}
+#right-rail .tout .misc-sticker.yellow-sticker {color:#000; background:#fff766;}
+#right-rail .tout .misc-sticker.orange-sticker {color:#fff; background:#f7941e;}
+#right-rail .tout .misc-sticker.red-sticker {color:#fff; background:#ed1c24;}
+#right-rail .tout .misc-sticker.pink-sticker {color:#fff; background:#e07;}
+#right-rail .tout .misc-sticker.purple-sticker {color:#fff; background:#9627C2;}
+#right-rail .tout .misc-sticker.green-sticker {color:#000; background:#88C442;}
+#right-rail .tout .misc-sticker.pink-sticker{font:500 16px brandon-grotesque,arial,sans-serif; letter-spacing:1.5px;} /* StarTrack Sticker */
+.permalink #right-rail .tout .misc-sticker, .single-post #right-rail .tout .misc-sticker {display:none;} /* Hide stickers on WordPress. */
+
+#right-rail .tout .toutheader {padding-right:0; font:500 10px brandon-grotesque,arial,sans-serif; color:#999; letter-spacing:0.5px;}
+#right-rail .tout .toutheader.blue-toutheader {color:#3cf;}
+#right-rail .tout .toutheader.gray-toutheader {color:#333;}
+#right-rail .tout .toutheader.yellow-toutheader {color:#fff766;}
+#right-rail .tout .toutheader.orange-toutheader {color:#f7941e;}
+#right-rail .tout .toutheader.red-toutheader {color:#ed1c24;}
+#right-rail .tout .toutheader.pink-toutheader {color:#e07;}
+#right-rail .tout .toutheader.purple-toutheader {color:#9627C2;}
+#right-rail .tout .toutheader.green-toutheader {color:#88C442;}
+
+/* ---------- General Ad Styles ---------- */
+#right-rail .ad-section #right-rail-ad-1, #right-rail .ad-section .ad-text{font-size:11px; letter-spacing:1px; color:#9a9a9a; text-align:center; text-transform:uppercase;}
+#right-rail .ad-section .ad-text{margin-top:25px;}
+#right-rail .adCMRight {margin-top:22px;}
+
+/* ---------- Twitter Module (on SW) ---------- */
+#right-rail #twitter-module {margin-left:-4px;}
+
+/* ---------- Just For You (Shown via JavaScript) ---------- */
+#just-for-you {display:none; margin-top:40px;}
+#just-for-you h2 {font:bold 18px/20px brandon-grotesque,arial,sans-serif; letter-spacing:1px; text-transform:uppercase;}
+#just-for-you li {margin:20px 0;}
+#just-for-you li a {font:300 19px/22px brandon-grotesque,arial,sans-serif; color:#067ab4;}
+#just-for-you li a:hover {color:#3cf; text-decoration:none;}
+
+/* ---------- Right Column Outbrain ---------- */
+#right-rail .ob_rr{margin-top:20px;}
+#right-rail .ob_rr .OUTBRAIN{padding-bottom:1px; margin-bottom:26px;}
+
+.OUTBRAIN .AR_4 .ob_source{font:300 14px/18px brandon-grotesque,arial,sans-serif !important;}
+.OUTBRAIN .AR_4 .ob_org_header {font-weight:500 !important; letter-spacing:0.1px;}
+.OUTBRAIN .AR_4 .strip-rec-link-title {font-weight:400 !important; font-size:16px !important; line-height:18px !important;}
+.OUTBRAIN .AR_4 .ob_container {height:auto !important;}
+.OUTBRAIN .AR_4 .ob_container_recs {position:relative !important; background:none !important;}
+.OUTBRAIN .AR_4 .ob_container_recs .item-container {height:180px !important; margin-bottom:15px;}
+.OUTBRAIN .AR_4 .ob_what {margin-top:0 !important; margin-bottom:15px !important; position:relative;}
+.OUTBRAIN .AR_4 .ob_what a{display:block; width:110px; position:absolute; bottom:0; left:0; text-align:left;}
+.OUTBRAIN .AR_4 .ob_what a.see-more{ padding-right:9px; position:absolute; left:inherit; right:0; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') right -2998px no-repeat; font:bold 12px brandon-grotesque,arial,sans-serif !important; color:#067AB4; text-align:right; text-transform:uppercase;}
+.OUTBRAIN .AR_4 .ob-rec-text{margin-left:4% !important; font-weight:300; font-size:19px; line-height:21px;}
+.OUTBRAIN .AR_4.ob-widget:hover .ob_amelia {background-position:center top !important;}
+.OUTBRAIN .AR_4.ob-widget .ob_what a:hover .ob_amelia{background-position:center bottom !important;}
+.OUTBRAIN .AR_4.ob-widget .ob_what a{font-size:12px;}
+.OUTBRAIN .AR_4.ob-widget .ob-widget-items-container.ob-multi-row{padding-top:5% !important;}
+
+/* ---------- From Our Partners/Zergnet (old version still exists on SW and Babies; will eventually get replaced by Zergnet) ---------- */
+/* Old module styles */
+#fromOurPartners_right {}
+#fromOurPartners_right #recircBlock {width:292px; padding:0 10px; border:6px solid #e6e6e6;}
+#fromOurPartners_right .recirc {overflow:hidden;}
+#fromOurPartners_right .recirc .header span {display:none;}
+#fromOurPartners_right .recirc ul {padding:8px 0 8px 15px;}
+#fromOurPartners_right .recirc li {list-style:disc; padding:0 0 6px; font-size:8px; color:#e07;}
+#fromOurPartners_right .recirc li a {font:400 16px/19px brandon-grotesque,arial,sans-serif; color:#000;}
+#fromOurPartners_right .recirc li p.readmore a {background-position:right -97px; font:bold 11px brandon-grotesque,arial,sans-serif !important;}
+#fromOurPartners_right .recirc .more {display:none;}
+/* Huff Post image tout */
+#HuffingtonPost {overflow:hidden;}
+#rightcolumn-recirc-top.recirc {background-repeat:repeat;}
+#rightcolumn-recirc-top.recirc .imagetout {margin-bottom:4px;}
+#rightcolumn-recirc-top.recirc li {clear:both;}
+#rightcolumn-recirc-top.recirc .title {display:none;}
+#rightcolumn-recirc-top.recirc .has-image {list-style-type:none; margin-left:-15px; padding-top:2px;}
+#rightcolumn-recirc-top.recirc .has-image img {float:left; padding:0 7px 9px 0;}
+#rightcolumn-recirc-top.recirc .has-image-headline {display:block; float:left; width:211px; margin-bottom:8px; font-weight:500;}
+#rightcolumn-recirc-top p.readmore {display:inline; margin:0;}
+#rightcolumn-recirc-top p.readmore a {padding-right:7px; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') right -96px no-repeat; font:bold 11px brandon-grotesque,arial,sans-serif; color:#067AB4; text-transform:uppercase; white-space:nowrap;}
+#rightcolumn-recirc-top p.celeblogo {padding:8px 0 0 0;}
+#fromOurPartners_right #HuffingtonPost {border-bottom:1px solid #e5e5e5}
+#fromOurPartners_right #HuffingtonPost_rightcolumnrecirc {padding-top:10px;}
+#fromOurPartners_right #rightcolumnrecirc {background:url('http://img2.timeinc.net/people/static/i/article/bg_hashline_7px.png') bottom left repeat-x;}
+#fromOurPartners_right #rightcolumnrecircbottom {}
+#HuffingtonPost p.header a {display:block; width:150px; height:30px; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/misc/partners/huffpost.png') no-repeat; text-indent:-99999px;}
+#HuffingtonPost p.header a img {visibility:hidden;}
+#HuffingtonPost p.celeblogo a {display:block; width:94px; height:18px; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/article/logo_huffpost_celeb.png') no-repeat;}
+#HuffingtonPost p.celeblogo a img {visibility:hidden;}
+#HuffingtonPost_rightcolumnrecirc p.header {display:block; width:33px; height:18px; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/article/logo_huffpost_tv.png') no-repeat;}
+#HuffingtonPost_rightcolumnrecirc p.header a img {visibility:hidden;}
+#HuffingtonPost_rightcolumnrecirc1 .recirclinks li a, #PopSugarcom_rightcolumnrecirc2 .recirclinks li a{font:400 17px/20px brandon-grotesque,arial,sans-serif;}
+
+/* Zergnet */
+#fromOurPartners_right {}
+#fromOurPartners_right h3 {padding-top:25px; font:bold 17px brandon-grotesque,arial,sans-serif; letter-spacing:1px; text-transform:uppercase}
+#fromOurPartners_right #recircBlock {width:300px; padding:0; border:none;}
+#fromOurPartners_right .zergheadline a, .zergheadline a {font:300 18px/20px brandon-grotesque,arial,sans-serif !important;}
+#fromOurPartners_right .zergheadline a:hover {text-decoration:none !important;}
+#fromOurPartners_right .zergheadline a span, .zergheadline a span {font-weight:500 !important; font-size:10px !important; letter-spacing:1px !important;}
+
+/* Hide extra header in Moms and Babies and StyleWatch WordPress RR. */
+body.permalink #fromOurPartners_right #rightcolumnrecirc1 .title,
+body.permalink #fromOurPartners_right #rightcolumnrecirc .title {display:none;}
+
+/* ---------- SOCIAL MODULE ---------- */
+#rail-social-module {width:299px; height:273px; margin-top:30px; overflow:hidden; border:1px solid #dfdfdf;}
+/* Header Nav */
+#rail-social-module header nav {margin-top:20px; margin-left:29px;}
+#rail-social-module header nav button img {width:100%; height:100%;}
+#rail-social-module header nav button.social-button {float:left; width:36px; height:36px; margin-right:16px !important; background-image:url('http://img2.timeinc.net/people/static/i/article/sprite-social-article.png'); background-repeat:no-repeat; background-color:transparent; border:none;}
+#rail-social-module header nav button.social-button:focus {outline:0;}
+#rail-social-module header nav button.facebook_button {background-position:-22px -137px;}
+#rail-social-module header nav button.facebook_button:hover,#rail-social-module.selected-facebook header nav button.facebook_button {background-position:-22px -188px;}
+#rail-social-module header nav button.twitter_button {background-position:-70px -137px;}
+#rail-social-module header nav button.twitter_button:hover,#rail-social-module.selected-twitter header nav button.twitter_button {background-position:-70px -188px;}
+#rail-social-module header nav button.pinterest_button {background-position:-119px -137px;}
+#rail-social-module header nav button.pinterest_button:hover,#rail-social-module.selected-pinterest header nav button.pinterest_button {background-position:-119px -188px;}
+#rail-social-module header nav button.instagram_button {background-position:-310px -137px;}
+#rail-social-module header nav button.instagram_button:hover,#rail-social-module.selected-instagram header nav button.instagram_button {background-position:-310px -188px;}
+#rail-social-module header nav button.newsletter_button {background-position:-448px -137px;}
+#rail-social-module header nav button.newsletter_button:hover,#rail-social-module.selected-newsletter header nav button.newsletter_button {background-position:-448px -188px;}
+/* Property Logos */
+#rail-social-module .property-logo {width:207px; height:35px; margin:19px auto 0 auto; background-image:url('http://img2.timeinc.net/people/static/i/article/rail-social/property-sprite-207x35.png'); background-repeat:no-repeat;}
+#rail-social-module.property-people .property-logo {background-position:0 0;}
+#rail-social-module.property-pets .property-logo {background-position:0 -37px;}
+#rail-social-module.property-cbb .property-logo {background-position:0 -75px;}
+#rail-social-module.property-stylewatch .property-logo {background-position:0 -107px;}
+#rail-social-module.property-gi .property-logo {background-position:0 -145px;}
+#rail-social-module.property-stylewatch .property-logo {background-image:url('http://img2.timeinc.net/people/static/i/nav/follow-sw-logo.png');background-position:center center; background-size: contain;}
+/* Arrow Bar */
+.arrow-bar {height:12px; margin-top:13px; margin-left:-1px; background-image:url('http://img2.timeinc.net/people/static/i/article/rail-social/arrow-sprite-299x12.png'); background-repeat:repeat-x;}
+#rail-social-module.selected-facebook .arrow-bar {background-position:0 -48px;}
+#rail-social-module.selected-twitter .arrow-bar {background-position:0 -36px;}
+#rail-social-module.selected-pinterest .arrow-bar {background-position:0 -24px;}
+#rail-social-module.selected-instagram .arrow-bar {background-position:0 -12px;}
+#rail-social-module.selected-newsletter .arrow-bar {background-position:0 0;}
+/* Panels */
+#rail-social-module footer.panels {height:138px; background:#f6f6f6; }
+#rail-social-module footer.panels .panel {display:none; padding-top:9px;}
+#rail-social-module.selected-facebook .facebook_panel,#rail-social-module.selected-twitter .twitter_panel,#rail-social-module.selected-pinterest .pinterest_panel,#rail-social-module.selected-instagram .instagram_panel,#rail-social-module.selected-newsletter .newsletter_panel {display:block !important;}
+/* Panel Copy */
+.panel .follow-copy {width:170px; margin:18px auto 0 auto; font:normal 22px/24px brandon-grotesque,arial,sans-serif; text-align:center;}
+.panel.facebook_panel  .follow-copy {color:#304d97;}
+.panel.twitter_panel   .follow-copy {color:#43b5d0;}
+.panel.pinterest_panel .follow-copy {color:#c50e2d;}
+.panel.instagram_panel .follow-copy {color:#325d8e;}
+/* Social Widgets */
+.panel .social-widget {margin-top:17px; margin-left:111px;}
+.panel.facebook_panel   .social-widget .fb-like span:first-child{overflow:hidden !important;}
+.panel.twitter_panel   .social-widget {margin-left:100px;}
+.panel.instagram_panel .social-widget {margin-left:117px;}
+.panel.pinterest_panel .social-widget {margin-left:0; text-align:center;}
+.panel.twitter_panel   .social-widget div.twitterFix {width:96px; height:20px; margin-right:0; overflow:hidden; border-right:1px solid #bbb; font-size:0; -moz-border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; border-radius:3px;}
+.panel.instagram_panel .social-widget a {display:block; width:60px; height:20px; background:url('http://img2.timeinc.net/people/static/i/article/rail-social/follow_instagram.png') no-repeat;}
+.panel.pinterest_panel .social-widget a {display:inline-block; height:20px; position:relative; background:transparent url('http://img2.timeinc.net/people/static/i/article/rail-social/pin-bg.png') 0 0 no-repeat; background-size:200px 60px; font:bold normal normal 11px/20px brandon-grotesque,arial,sans-serif; color:#444; text-decoration:none; text-indent:19px; vertical-align:baseline;}
+.panel.pinterest_panel .social-widget a b {width:14px; height:14px; position:absolute; top:3px; left:3px; background-image:url('http://img2.timeinc.net/people/static/i/article/rail-social/pin-logo.png'); background-size:14px 14px;}
+.panel.pinterest_panel .social-widget a i {width:4px; height:20px; position:absolute; top:0; right:-4px; background:transparent url('http://img2.timeinc.net/people/static/i/article/rail-social/pin-bg.png') 100% 0 no-repeat; background-size:200px 60px;}
+.panel.pinterest_panel .social-widget a:hover {background-position:0 -20px;}
+.panel.pinterest_panel .social-widget a:hover i{background-position:100% -20px;}
+.panel.instagram_panel .social-widget a:hover{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity:0.8; opacity:0.8;}
+.panel.instagram_panel .social-widget a img, .panel.pinterest_panel .social-widget a img {height:100%; width:100%;}
+#rail-social-module .fb_iframe_widget iframe {width:100% !important; height:100% !important;}
+#rail-social-module .fb_iframe_widget span {width:100px !important; height:100px !important;}
+/* Newsletter */
+#rail-social-module .newsletter_panel .container .copy {width:186px; margin:9px auto 0 auto; color:#000; font:300 18px/24px brandon-grotesque,arial,sans-serif; text-align:center;}
+#rail-social-module .newsletter_panel .clearfix {margin-top:13px;}
+#rail-social-module .newsletter_panel .email {display:inline-block; width:200px; height:40px; margin-left:24px; padding-top:0; padding-left:10px; border:1px solid #ccc; font-size:20px; font-family:brandon-grotesque; color:#000; text-transform:lowercase; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+#rail-social-module .newsletter_panel .email.placeholder {color:#e3e3e3;}
+#rail-social-module .newsletter_panel .button {display:inline-block !important; width:40px; height:35px; margin-left:1px; padding-top:7px; font-variant:small-caps !important; font-weight:bold !important; font-size:17px !important; text-align:center; vertical-align:2px; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+#rail-social-module .newsletter_panel .container .thankyou .copy {color:#3cf;}
+/* No Instagram */
+#rail-social-module.no-instagram .panel.instagram_panel,#rail-social-module.no-instagram .social-button.instagram_button {display:none;}
+#rail-social-module.no-instagram header nav {margin-left:54px;}
+#rail-social-module.no-instagram.selected-facebook   .arrow-bar {background-position:26px -48px;}
+#rail-social-module.no-instagram.selected-twitter    .arrow-bar {background-position:26px -36px;}
+#rail-social-module.no-instagram.selected-pinterest  .arrow-bar {background-position:25px -24px;}
+#rail-social-module.no-instagram.selected-newsletter .arrow-bar {background-position:-28px 0;}
+
+/* ==================== WORDPRESS ==================== */
+
+.post-body p {margin:20px 0;}
+.post-body p strong, .post-body p strong b {font-weight:500 !important;}
+
+/* Privacy Policy link */
+body.permalink #postcredit ,body.single-post #postcredit {clear:both; width:auto; padding:0 0 8px 0; border-bottom:1px solid #e5e5e5;}
+body.permalink #postcredit .editedby, body.single-post #postcredit .editedby {float:left; font:bold italic 11px/20px georgia,serif;}
+body.permalink #postcredit .privacypolicy, body.single-post #postcredit .privacypolicy {text-align:right;}
+body.permalink #postcredit .privacypolicy a, body.single-post #postcredit .privacypolicy a, {font:12px brandon-grotesque,arial,sans-serif; color:#067AB4;}
+
+/* Comments */
+body.permalink .blogComments, body.single-post .blogComments {clear:both; float:left; width:600px; margin:24px 0 0; padding:0;}
+body.permalink .blogComments.add, body.single-post .blogComments.add {width:598px; border:1px solid #dfdede;}
+body.permalink .blogComments span.addComments, body.single-post .blogComments span.addComments {display:none;}
+body.permalink .blogComments .commentsHdr, body.single-post .blogComments .commentsHdr {padding:5px 20px; background:#fff url('http://img2.timeinc.net/people/static/i/misc/hash-lines.gif');}
+body.permalink .blogComments .commentsHdr .comments, body.single-post .blogComments .commentsHdr .comments {font:500 18px/18px brandon-grotesque,arial,sans-serif;}
+body.permalink .blogComments.add .commentsHdr, body.single-post .blogComments.add .commentsHdr {padding:10px 20px;}
+body.permalink .blogComments.add .commentsHdr .comments, body.single-post .blogComments.add .commentsHdr .comments {text-transform:uppercase;}
+body.permalink .blogComments p.commentCount, body.single-post .blogComments p.commentCount {margin:0; padding:15px 0 15px 20px; font:normal 16px brandon-grotesque,arial,sans-serif !important; color:#8cb8c3;}
+body.permalink .blogComments .comments-desc, body.single-post .blogComments .comments-desc {padding:0 20px;}
+body.permalink .blogComments .comments-desc p, body.single-post .blogComments .comments-desc p {margin:.5em 0; padding:0; font:300 17px/22px brandon-grotesque,arial,sans-serif;}
+body.permalink .blogComments p.logged-in-note, body.single-post .blogComments p.logged-in-note {padding:4px 20px;}
+body.permalink .userComment, body.single-post .userComment {margin:0 20px 10px 11px;}
+body.permalink .userComment .comment, body.single-post .userComment .comment {padding:5px 10px; background:#f1fcff; font-size:14px;}
+body.permalink .userComment.alt, body.single-post .userComment.alt {}
+body.permalink .userComment .name, body.single-post .userComment .name {font:500 16px/18px brandon-grotesque,arial,sans-serif;}
+body.permalink .userComment .name a, body.single-post .userComment .name a {color:#067AB4;}
+body.permalink .userComment .date, body.single-post .userComment .date {font:normal 14px brandon-grotesque,arial,sans-serif; color:#959595;}
+body.permalink .userComment .comment-text, body.single-post .userComment .comment-text {padding:0 10px 20px 10px;}
+body.permalink .blogComments .comment-text p, body.single-post .blogComments .comment-text p {padding:8px 0; font:300 18px/24px brandon-grotesque,arial,sans-serif;}
+
+body.permalink .comment-page-numbers, body.single-post .comment-page-numbers {margin:3px 0 10px 0; padding:6px 0; font:normal 12px brandon-grotesque,arial,sans-serif; color:#ccc; text-align:right;}
+body.permalink .comment-page-numbers .title, body.single-post .comment-page-numbers .title {float:left; padding-right:4px;}
+body.permalink .comment-page-numbers li, body.single-post .comment-page-numbers li {display:inline;}
+body.permalink .comment-page-numbers strong.selectedCommentPage, body.single-post .comment-page-numbers strong.selectedCommentPage {padding:0 2px; font-weight:normal; color:#000;}
+body.permalink .comment-page-numbers a, body.single-post .comment-page-numbers a {padding:0 2px; font-size:14px; color:#067ab4;}
+
+body.permalink .bottom, body.single-post .bottom {margin:0 0 4px; border-top:0;}
+
+body.permalink #commentform, body.single-post #commentform {float:left; width:598px; margin:0; padding:8px 0 16px 0;}
+body.permalink #commentform .commentform-left, body.single-post #commentform .commentform-left {float:left; padding-left:20px;}
+body.permalink #commentform .commentform-right, body.single-post #commentform .commentform-right {float:right; padding:16px 20px 0 0;}
+body.permalink #commentform .commentform-left p, body.single-post #commentform .commentform-left p{font-weight:300; font-size:17px;}
+body.permalink #commentform .commentform-left p.form-field, body.single-post #commentform .commentform-left p.form-field {padding-bottom:10px;}
+body.permalink #commentform .commentform-left p.form-field input, body.single-post #commentform .commentform-left p.form-field input {padding:1px 4px; font:normal 12px brandon-grotesque,arial,sans-serif;}
+body.permalink #commentform .commentform-right textarea, body.single-post #commentform .commentform-right textarea {width:350px; padding:4px; border:3px solid #fff766; font:normal 12px/20px brandon-grotesque,arial,sans-serif; -webkit-box-shadow:inset 1px 1px 2px 1px #dedede; box-shadow:inset 1px 1px 2px 1px #dedede;}
+
+body.permalink #comments-open-footer, body.single-post #comments-open-footer {margin-left:6px;}
+
+body.permalink #comments-open-footer p.post-button, body.single-post #comments-open-footer p.post-button {margin:0; padding:6px 0 0 0; text-align:right;}
+body.permalink #commentform input#comment-post, body.single-post #commentform input#comment-post {
+	width:80px; padding:3px 0; 
+	background:#555; 
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#555),color-stop(52%,#555),color-stop(52%,#000),color-stop(100%,#000)); 
+	background:-webkit-linear-gradient(top,#555 0,#555 52%,#000 52%,#000ff766 100%); 
+	background:-moz-linear-gradient(top,#555 0,#555 52%,#000 52%,#000 100%); 
+	background:-ms-linear-gradient(top,#555 0,#555 52%,#000 52%,#000 100%); 
+	background:-o-linear-gradient(top,#555 0,#555 52%,#000 52%,#000 100%); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555',endColorstr='#000000',GradientType=0); 
+	background:linear-gradient(top,#555 0,#555 52%,#000 52%,#000 100%); 
+	font:bold 18px brandon-grotesque,arial,sans-serif; color:#fff; text-align:center; 
+	-webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; 
+}
+
+
+@media (min-width:1200px) {
+	body.permalink .blogComments, body.single-post .blogComments {width:680px;}
+	body.permalink .blogComments.add, body.single-post .blogComments.add {width:678px;}
+}
+
+body.permalink .postpagination li a, body.single .postpagination li a{font:normal 16px/18px brandon-grotesque,arial,sans-serif;}
+
+#blogroll li a{font:400 17px/32px brandon-grotesque,arial,sans-serif;} /* KT - I think this is for WP/Babies? Currently does not exist on articles. */
+
+
+/* ==================== ARTICLE FOOTER ==================== */
+
+
+/* From Our Partners Module */
+#fromourpartners{background:none !important; border-top:1px solid #d7d7d7;}
+#fromourpartners h3{font:700 18px brandon-grotesque,arial,sans-serif; letter-spacing:1.5px; text-transform:uppercase;}
+#fromourpartners li a {font-size:16px; line-height:19px}
+@media (min-width:1200px) {
+    .new-nav-v2 #fromourpartners {padding:0 103px;}
+}
+
+
+/* Google Text Ad */
+.googlead p.adtext a {font-size:14px;}
+.googlead p.adentry span.line1 {font-size:16px; font-weight:500;}
+.googlead p.adentry span.line2, .googlead p.adentry span.line3, .googlead p.adentry span.line4 {font-weight:300; font-size:15px; line-height:17px;}
+
+
+/* ==================== MISC ==================== */
+
+@media (min-width:1200px) {
+    .new-nav-v2 #container {width:1200px;}
+    .new-nav-v2 #insider-nav {width:1200px;}
+    body div#site-banner #adCMTop {left:985px;}
+    .new-nav-v2 .article-v2 #main {width:1170px; padding:0 15px;}
+    #footer.footer-v2 {width:1200px; border-left:none; border-right:none; border-bottom:none;}
+    #footer.footer-v2 .footer-cmad {padding:0 103px;}
+    .footer-list-wrapper {width:239px;}
+}
+
+.premium-link:after{width:30px !important; background:url('http://img2.timeinc.net/people/static/i/premium/premium-key.png') -154px -74px no-repeat !important;}
+
+#cm.peo_3_ad_container{margin-bottom:1em !important;} /* KT - This should be an ad in the article body somewhere; I couldn't find the exactly placement */
+
+#related-recirc {clear:left; width:150px; float:left; margin-right:30px;}
+#related-recirc h2 {margin-bottom:10px; font:500 18px/22px brandon-grotesque,arial,sans-serif; color:#86bf34; letter-spacing:1px; text-transform:uppercase;}
+#related-recirc .tout .imgcont {width:150px; position:relative;}
+#related-recirc .tout .imgcont img {width:150px; height:113px;}
+#related-recirc .tout .imgcont span.play {display:block; width:18px; height:14px; padding:10px 0 0 10px; position:absolute; top:0; left:0; background:url('http://img2.timeinc.net/people/static/i/video/icon-video-arrow.png') 10px 5px no-repeat; background-color:rgba(37, 175, 229, 0.8); background-size:11px;}
+#related-recirc .tout h4 {margin:8px 0; font:400 20px/22px brandon-grotesque,arial,sans-serif;}
+#related-recirc .tout h4 a {color:#067ab4; text-decoration:none;}
+#related-recirc .tout h4 a:hover {color:#20b1ea; text-decoration:underline;}
+#related-recirc .tout.text-only {margin:15px 0;}
+#related-recirc .tout.text-only h4 {font:normal 17px/20px brandon-grotesque,arial,sans-serif;}
+
+
+/* 300x100 ad call -- KT: Do we still need this? The 300x100 is now part of a multi-ad unit */
+#adMarketplaceNoAds {display:none;}
+#adMarketplaceAds {margin-bottom:20px;}
+#adMarketplaceAds p.title {display:block; font:normal 10px brandon-grotesque,arial,sans-serif; color:#ccc; text-align:center; text-transform:uppercase;}
+
+/* KT -- these items no longer exists?
+
+#ad300x50 {float:left; clear:both; margin-bottom:3px;}
+
+#container #wrapper #main #header #headerWrapper ul#subnav{font:500 20px/22px brandon-grotesque,arial,sans-serif !important; letter-spacing:0.3px;}
+
+#related-recirc {margin-right:30px;}
+#related-recirc .tout.text-only h4 {font:normal 17px/19px brandon-grotesque,arial,sans-serif;}
+
+#shareBottom {margin-top:50px;}
+
+*/

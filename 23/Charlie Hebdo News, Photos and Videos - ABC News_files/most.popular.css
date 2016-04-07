@@ -1,0 +1,36 @@
+/* Most Popular V2 */
+
+.story_widget .mostpopular{padding:0 5px;font:normal 13px/17px  helvetica, arial, serif;}
+.mostpopular .widget_head_short{margin-bottom:0;padding-top:7px;}
+.mostpopular .mostpopular-wrapper{background:url(http://a.abcnews.com/assets/images/ajax-loader-fff.gif) no-repeat top middle;position:relative;}
+.mostpopular .mpContent{padding:5px 0;position:relative;display:table;}
+.mostpopular .mpNum{width:18px;display:table-cell;vertical-align:middle;text-align:center;font: 300 35px/36px "proxima-nova", arial;padding-right: 10px;color: #2e538f;}
+
+.mostpopular .full .mpNum{margin-top: 0;}
+.mostpopular .mpImgLeft{display:table-cell;width: 83px;padding-right:10px;}
+.mostpopular .mpImgLeft img{display:block;}
+.mostpopular .mpImgLeft img:hover{background:#e2e2e2;filter:alpha(opacity=80);-moz-opacity:.80;opacity:.80;}
+.mostpopular .mpHeadline{width:160px;font-weight:bold;line-height:16px;display:table-cell;vertical-align:top;}
+.mostpopular .mpHeadline a{color:#2e538f}
+.mostpopular .divider{border-bottom:1px solid #bcc8dc;}
+.mostpopular .wide{width: 260px;margin:3px 5px 0px;}
+
+
+/*.story_widget */
+.mostpopular{width:298px !important;border: 1px solid #bcc8db;}
+.mostpopular #mostcommented-wrapper{position:relative;}
+.mostpopular .overlay{width:298px; position: absolute;bottom:5px;left:0; background:rgb(0, 0, 0);background:rgba(0, 0, 0, 0.6);}
+.mostpopular #item0 .mpNum{margin-right:0;margin-left:4px;}
+.mostpopular .overlay a, .mostpopular .overlay .mpNum{color:#fff !important;}
+.mostpopular .full .mpNum{margin-top:0;}
+
+
+/*most discussed additional styles*/
+#mostdiscussed .widget_head_short{margin-bottom:5px;}
+#mostdiscussed #item0{position:relative;}
+#mostdiscussed #item0 img{display:block;}
+#mostdiscussed .overlay a{color:#fff;}
+#mostdiscussed .overlay a:hover{color:#ccc;}
+#mostdiscussed .overlay .wide{margin-left:10px;}
+
+

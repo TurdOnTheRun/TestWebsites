@@ -1,0 +1,29 @@
+@charset "UTF-8";
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td { margin: 0; padding: 0; border: 0; outline: none; }
+#banner { position: relative; width: 1280px; overflow: hidden; }
+#banner, #banner * { box-sizing: border-box; }
+#banner .border { position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: 1px solid #000000; }
+#banner #pencil, #banner #expand { width: 1280px; display: none; }
+#banner #expand, #banner #auto { height: 100px; }
+#banner #pencil { height: 100px; }
+#banner .expandToggle { position: absolute; background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/buttonSprite_35.png" ) no-repeat -70px -35px; background-size: 140px; cursor: pointer; top: 0px; right: 0px; width: 35px; height: 35px; z-index: 175; }
+#banner .expandClose { background-position: 0px -70px; }
+#banner .mainBtn { position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; cursor: pointer; }
+#banner { height: 100px; }
+#banner, #banner * { position: absolute; }
+#banner .interaction { z-index: 100; }
+#banner { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/bg-1280.jpg" ) no-repeat center center; background-size: cover; }
+#banner * { position: absolute; }
+#banner #container { width: 1280px; height: 100px; display: none; }
+#logo { background: #d51725 url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/logo.svg" ) no-repeat center center; background-size: 75%; left: 0; top: 0; width: 90px; height: 100px; border-right: solid 2px white; }
+#txtBlock { left: 120px; top: 16px; width: 223px; height: 80px; }
+#txt1 { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/text.svg" ) no-repeat; background-size: 305%; width: 92px; height: 30px; }
+#txt2 { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/text.svg" ) no-repeat -94px 0px; background-size: 200%; left: 94px; width: 140px; height: 29px; }
+#txt3 { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/text.svg" ) no-repeat 0px -40px; background-size: cover; top: 39px; width: 294px; height: 30px; }
+#spotlightLeft { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/searchlightLeft.png" ) no-repeat; background-size: contain; left: 466px; top: 0; width: 214px; height: 99px; }
+#spotlightRight { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/searchlightRight.png" ) no-repeat; background-size: contain; left: 600px; top: 0; width: 310px; height: 81px; }
+#car { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/car.png" ) no-repeat; background-size: contain; left: 549px; top: 5px; width: 272px; height: 97px; }
+#legal { right: 30px; top: 82px; width: 200px; height: 10px; color: white; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 8px; text-align: right; }
+#ctaBtn { background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/ctaBase.svg" ) no-repeat left top; left: 1095px; top: 22px; width: 235px; height: 52px; }
+#ctaTxt { position: relative; background: url( "http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/assets/ctaTxt.svg" ) no-repeat center center; left: 40px; top: 20px; width: 106px; height: 13px; }

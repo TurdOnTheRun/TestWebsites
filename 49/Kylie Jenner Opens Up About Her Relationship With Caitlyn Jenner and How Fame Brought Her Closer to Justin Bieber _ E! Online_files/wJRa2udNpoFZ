@@ -1,0 +1,368 @@
+(function(k,b){var c=navigator.userAgent.toLowerCase(),l=function(m){return m.test(c)
+},d=l(/opera/),e=!d&&l(/msie/),f=e&&l(/trident\/5.0/),h=e&&l(/msie 6/),i=l(/webkit/),a=l(/chrome/),j=l(/android/),g=l(/windows|win32/);
+if(typeof($pdk)==="object"&&$pdk!==null){return
+}k.$pdk={version:1};
+$pdk.apply=function(q,r,n){if(n){$pdk.apply(q,n)
+}if(q&&r&&typeof r=="object"){for(var m in r){q[m]=r[m]
+}}return q
+};
+$pdk.apply($pdk,{isOpera:d,isIE:e,isIE9:f,isIE6:h,isWebKit:i,isChrome:a,isAndroid:j,isWindows:g,isArray:function(m){return Object.prototype.toString.apply(m)==="[object Array]"
+},isEmpty:function(n,m){return n===null||n===undefined||(($pdk.isArray(n)&&!n.length))||(!m?n==="":false)
+},isPrimitive:function(m){var n=typeof m;
+return n=="string"||n=="number"||n=="boolean"
+},isObject:function(m){return m&&typeof m=="object"
+},each:function(q,p,o){if($pdk.isEmpty(q,true)){return
+}if(typeof q.length=="undefined"||$pdk.isPrimitive(q)){q=[q]
+}for(var n=0,m=q.length;
+n<m;
+n++){if(p.call(o||q[n],q[n],n,q)===false){return n
+}}},ns:function(){var q,p,m=k;
+try{m=$wnd!==null&&typeof($wnd)==="object"?$wnd:k
+}catch(n){m=k
+}$pdk.each(arguments,function(o){p=o.split(".");
+q=m[p[0]]=m[p[0]]||{};
+$pdk.each(p.slice(1),function(r){q=q[r]=q[r]||{}
+})
+});
+return q
+},override:function(m,o){if(o){var n=m.prototype;
+$pdk.apply(n,o);
+if($pdk.isIE&&o.toString!=m.toString){n.toString=o.toString
+}}},extend:function(){var n=function(q){for(var p in q){this[p]=q[p]
+}},m=Object.prototype.constructor;
+return function(t,q,s){if($pdk.isObject(q)){s=q;
+q=t;
+t=s.constructor!=m?s.constructor:function(){q.apply(this,arguments)
+}
+}var p=function(){},r,o=q.prototype;
+p.prototype=o;
+r=t.prototype=new p();
+r.constructor=t;
+t.superclass=o;
+if(o.constructor==m){o.constructor=q
+}t.override=function(u){$pdk.override(t,u)
+};
+r.superclass=r.supr=(function(){return o
+});
+r.override=n;
+$pdk.override(t,s);
+t.extend=function(u){$pdk.extend(t,u)
+};
+return t
+}
+}()})
+})(window,document);
+$pdk.ns("$pdk.script");
+$pdk.script.CallbackWrapper=$pdk.extend(function(){},{invoked:false,toInvoke:function(){},constructor:function(a){this.toInvoke=a
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.CssWriterDefaultImpl=$pdk.extend(function(){},{constructor:function(b,a){this._d=b;
+this._markupWriter=a
+},writeStyleTag:function(b,a){if(!a){a=this._markupWriter.getHeadOrBody()
+}var c=this._d.createElement("style");
+c.type="text/css";
+if(c.styleSheet){c.styleSheet.cssText=b
+}else{c.appendChild(this._d.createTextNode(b))
+}return a.appendChild(c)
+},writeStyleLinkTag:function(a,d,b){if(!b){b=this._markupWriter.getHeadOrBody()
+}var c=this._d.createElement("link");
+c.setAttribute("type","text/css");
+c.setAttribute("media",d);
+c.setAttribute("rel","stylesheet");
+c.setAttribute("href",a);
+return b.appendChild(c)
+}});
+$pdk.ns("$pdk.util");
+$pdk.util.DomReadyDefaultImpl=$pdk.extend(function(){},{constructor:function(a){this._d=a;
+this._callbacks=[];
+this._isReady=false;
+this._checkReady()
+},ready:function(a){if(this._isReady){a()
+}else{this._callbacks.push(a)
+}},_testDomReady:function(a){if($pdk.isEmpty(this._d.readyState)){return !$pdk.isEmpty(this._d.body)
+}return/loaded|complete/.test(this._d.readyState)
+},_checkReady:function(){var b,a=this;
+a._isReady=a._testDomReady();
+if(a._isReady){while(a._callbacks.length>0){b=a._callbacks.shift();
+b()
+}}else{window.setTimeout(function(){a._checkReady()
+},25)
+}}});
+$pdk.ns("$pdk.util");
+$pdk.util.DomWriterDefaultImpl=$pdk.extend(function(){},{constructor:function(a){this._d=a
+},documentWrite:function(a){this._d.write(a)
+},getHeadOrBody:function(){var a=this._d.getElementsByTagName("head")[0];
+if(!a){a=this._d.body
+}return a
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.EntrypointDefaultImpl=$pdk.extend(function(){},{constructor:function(q,s,b,e,g,k,c,r,h,i,a){var f=new $pdk.util.DomWriterDefaultImpl(q),l=new $pdk.script.MarkupWriterDefaultImpl(f),p=new $pdk.script.CssWriterDefaultImpl(q,f),j=new $pdk.script.InstantiatorDefaultImpl(i,a),m=new $pdk.script.LoaderDefaultImpl(q,f),n=new $pdk.script.MetaTagWriterDefaultImpl(q,f),o=new $pdk.script.ReadyDefaultImpl(s);
+this._runner=new $pdk.script.RunnerDefaultImpl(new $pdk.util.DomReadyDefaultImpl(q),p,j,m,l,n,o,b,e,g,k,c,r,h)
+},start:function(){this._runner.run()
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.InstantiatorDefaultImpl=$pdk.extend(function(){},{constructor:function(b,a){this.instantiateCallbacks=a;
+this.instantiateCallbacks.push(b)
+},instantiate:function(){var c=0,a=this.instantiateCallbacks.length,d;
+for(;
+c<a;
+c++){d=this.instantiateCallbacks[c];
+if(typeof d==="function"){d()
+}else{if(d&&d.toInvoke&&(typeof d.toInvoke==="function")&&!d.invoked){var b=d.toInvoke;
+d.invoked=true;
+b()
+}}}this.instantiateCallbacks=[]
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.LoaderDefaultImpl=$pdk.extend(function(){},{constructor:function(b,a){this._d=b;
+this._markupWriter=a
+},load:function(b,c,a){if(!a){a=this._markupWriter.getHeadOrBody()
+}if(!c){c={onsuccess:function(){},onfailure:function(){}}
+}if(typeof b==="string"){this._load(b,c,a)
+}},_load:function(f,g,e){var c=this._d.createElement("script"),d=false,a=function(h){d=true;
+c.onload=null;
+c.onreadystatechange=null;
+c.onerror=null;
+g.onfailure(h)
+},b=function(){if(!d&&(!c.readyState||c.readyState==="loaded"||c.readyState==="complete")){d=true;
+g.onsuccess();
+c.onload=null;
+c.onreadystatechange=null;
+c.onerror=null
+}};
+c.type="text/javascript";
+c.src=f;
+c.onerror=a;
+c.onload=b;
+c.onreadystatechange=b;
+e.appendChild(c)
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.MarkupWriterDefaultImpl=$pdk.extend(function(){},{constructor:function(a){this._domWriter=a
+},writeMarkup:function(a){this._domWriter.documentWrite(a)
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.MetaTagWriterDefaultImpl=$pdk.extend(function(){},{constructor:function(b,a){this._d=b;
+this._domWriter=a
+},injectMetaTags:function(d,b){var c=0,a=d.length;
+for(;
+c<a;
+c++){this.injectMetaTag(d[c],b)
+}},injectMetaTag:function(a,b){if(!b){b=this._domWriter.getHeadOrBody()
+}var c=this._d.createElement("meta");
+c.setAttribute("name",a.name);
+c.setAttribute("content",a.content);
+b.appendChild(c)
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.ReadyContextDefaultImpl=$pdk.extend(function(){},{constructor:function(a){this._callbacks=[];
+this._ready=a
+},getCallbacks:function(a){return this._callbacks
+},isReady:function(){return this._ready
+},setIsReady:function(a){this._ready=a
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.ReadyDefaultImpl=$pdk.extend(function(){},{constructor:function(a){this._context=a
+},addCallback:function(a){if(this._context.isReady()){a();
+return
+}this._context.getCallbacks().push(a)
+},ready:function(){var a;
+this._context.setIsReady(true);
+while(this._context.getCallbacks().length>0){a=this._context.getCallbacks().shift();
+a()
+}}});
+$pdk.ns("$pdk.script");
+$pdk.script.RunnerContextDefaultImpl=$pdk.extend(function(){},{constructor:function(a){this._state=a
+},getState:function(){return this._state
+},setState:function(a){this._state=a
+}});
+$pdk.ns("$pdk.script");
+$pdk.script.RunnerDefaultImpl=$pdk.extend(function(){},{Input:{RUN:"RUN",PDK_LOAD_START:"PDK_LOAD_START",PDK_LOAD_COMPLETE:"PDK_LOAD_COMPLETE"},State:{STARTING:"STARTING",RUNNING:"RUNNING",LOADING_PDK:"LOADING_PDK",RESTING:"RESTING"},constructor:function(b,o,h,m,f,i,l,a,c,k,d,j,n,e){this._domReady=b;
+this._cssWriter=o;
+this._instantiator=h;
+this._loader=m;
+this._markupWriter=f;
+this._metaTagWriter=i;
+this._ready=l;
+this._context=a;
+this._pdkCss=c;
+this._pdkCssLink=k;
+this._pdkCustomCssUrls=d;
+this._pdkMarkup=j;
+this._pdkUrl=n;
+this._pdkMetaTags=e;
+this._guid=Math.floor(Math.random()*10000);
+var g=this;
+$pdk.ready=function(p){g._ready.addCallback(p)
+}
+},run:function(){var a=this;
+this._cssWriter.writeStyleTag(this._pdkCss);
+this._markupWriter.writeMarkup(this._pdkMarkup);
+a._input(a.Input.RUN)
+},_input:function(a){var b=this._context.getState();
+switch(a){case this.Input.RUN:switch(b){case this.State.STARTING:this._changeState(b,this.State.RUNNING);
+break;
+case this.State.RUNNING:break;
+case this.State.LOADING_PDK:break;
+case this.State.RESTING:this._changeState(b,this.State.LOADING_PDK);
+break;
+default:break
+}break;
+case this.Input.PDK_LOAD_START:switch(b){case this.State.STARTING:break;
+case this.State.RUNNING:this._changeState(b,this.State.LOADING_PDK);
+break;
+case this.State.LOADING_PDK:break;
+case this.State.RESTING:break;
+default:break
+}break;
+case this.Input.PDK_LOAD_COMPLETE:switch(b){case this.State.STARTING:break;
+case this.State.RUNNING:break;
+case this.State.LOADING_PDK:this._changeState(b,this.State.RESTING);
+break;
+case this.State.RESTING:break;
+default:break
+}break;
+default:break
+}},_changeState:function(b,e){this._context.setState(e);
+var d=this;
+switch(e){case this.State.STARTING:break;
+case this.State.RUNNING:this._cssWriter.writeStyleLinkTag(this._pdkCssLink,"screen");
+for(var c=0,a=this._pdkCustomCssUrls.length;
+c<a;
+c++){this._cssWriter.writeStyleLinkTag(this._pdkCustomCssUrls[c],"screen")
+}this._metaTagWriter.injectMetaTags(this._pdkMetaTags);
+d._input(d.Input.PDK_LOAD_START);
+break;
+case this.State.LOADING_PDK:if($pdk.isEmpty($pdk.env)){this._domReady.ready(function(){d._loader.load(d._pdkUrl,{onsuccess:function(){d._input(d.Input.PDK_LOAD_COMPLETE)
+},onfailure:function(){d._input(d.Input.PDK_LOAD_COMPLETE)
+}})
+})
+}else{d._input(d.Input.PDK_LOAD_COMPLETE)
+}break;
+case this.State.RESTING:this._instantiator.instantiate();
+this._ready.ready();
+break;
+default:break
+}}});
+(function(l,h,b,c,j,m,f,i,e,g){if(!b){var k=$pdk.___5ed98c35d07c3a09ab21099293b40308;
+var a=new $pdk.script.CallbackWrapper(g);
+if($pdk.isEmpty(k)){k=$pdk.___5ed98c35d07c3a09ab21099293b40308=[new $pdk.script.ReadyContextDefaultImpl(false),new $pdk.script.RunnerContextDefaultImpl($pdk.script.RunnerDefaultImpl.prototype.State.STARTING),[]]
+}(new $pdk.script.EntrypointDefaultImpl(h,k[0],k[1],c,i,e,j,m,f,a,k[2])).start()
+}}(window,document,window._PLAYERSERVICE_SUPRESS_AUTOINIT,"\t\t.tpContainervideo_243052 {\n\t\t\tposition: relative;\n\t\t\twidth: 600px;\n\t\t\theight: 338px;\n\t\t\tpadding-top: 0px;\n\t\t\tpadding-left: 0px;\n\t\t\tpadding-bottom: 0px;\n\t\t\tpadding-right: 0px;\n\t\t}\n\t\t.tpLayoutvideo_243052 {\n\t\t\tposition: relative;\n\t\t}\n\t\t.tpMessage {\n\t\t\tfont-size: 14px;\n\t\t\tcolor: #4f4f4f;\n\t\t\tbackground: #131313;\n\t\t}\n\t\t#playervideo_243052 {\n\t\t\tposition: absolute;\n\t\t\ttop: 0px;\n\t\t\tleft: 0px;\n\t\t\twidth: 600px;\n\t\t\theight: 338px;\n\t\t}\n\t\t#releasesvideo_243052 {\n\t\t\tposition: absolute;\n\t\t\ttop: 0px;\n\t\t\tleft: 0px;\n\t\t\twidth: 1px;\n\t\t\theight: 1px;\n\t\t}\n","\t<div class=\"tpContainervideo_243052\">\n\t\t<div class=\"tpLayoutvideo_243052\">\n\t\t\t<div id=\"playervideo_243052\">\n\t\t\t</div>\n\t\t\t<div id=\"releasesvideo_243052\">\n\t\t\t</div>\n\t\t\t<div id=\"tpReleaseModel1video_243052\">\n\t\t\t</div>\n\t\t</div>\n\t</div>\n","http://pdk.theplatform.com/current/pdk/tpPdk.js",[
+	{
+		"name": "tp:PreferredRuntimes",
+		"content": "flash,html5"
+	},
+	{
+		"name": "tp:PreferredFormats",
+		"content": "FLV,MPEG4,M3U"
+	},
+	{
+		"name": "tp:initialize",
+		"content": true
+	},
+	{
+		"name": "tp:EnableExternalController",
+		"content": false
+	},
+	{
+		"name": "tp:baseUrl",
+		"content": "http://pdk.theplatform.com/current/pdk"
+	}
+],"http://pdk.theplatform.com/current/pdk/skins/glass/main.css",[],function() {
+	var player = new Player("playervideo_243052");
+	player.scopes = "video_243052";
+	player.allowFullScreen = "true";
+	player.skinUrl = "/resources/videoplayer/playerskins/video_detail_skin.json";
+	player.showNav = "false";
+	player.allowRss = "false";
+	player.layoutUrl = "/resources/videoplayer/layouts/video_detail_layout.xml";
+	player.releaseUrl = "http://link.theplatform.com/s/BdHJDC/wJRa2udNpoFZ?policy=42697&player=Article%20Detail%20Player";
+	player.autoPlay = "false";
+	player.emailServiceURL = "http://player.theplatform.com/m/BdHJDC/articledetail/select/{releasePid}";
+	player.relatedItemsUrl = "http://feed.theplatform.com/f/BdHJDC/csVXqNCeIJZd_VMS?byRelatedReleasePid={releasePid}&params=policy%3D42697";
+	player.overlayImageUrl = "http://app.box.com/representation/file_version_13674487391/image_2048/1.png";
+	player.allowLink = "true";
+	player.playerUrl = "http://player.theplatform.com/p/BdHJDC/articledetail/select/{releasePid}?params=policy%3D42697&feedParams=entries%3Dfalse&autoPlay=false&instance=video_243052";
+	player.embeddedPlayerHtml = "<iframe src=\"http://player.theplatform.com/p/BdHJDC/articledetail/embed/select/{releasePid}?params=policy%3D42697&feedParams=entries%3Dfalse&autoPlay=false\" width=\"600\" height=\"338\" frameborder=\"0\" seamless=\"seamless\" allowfullscreen>Your browser does not support iframes.</iframe>";
+	player.altEmbeddedPlayerHtml = "<embed src=\"http://player.theplatform.com/p/BdHJDC/articledetail/swf/select/{releasePid}&params=policy%3D42697&feedParams=entries%3Dfalse&autoPlay=false\" width=\"600\" height=\"338\" type=\"application/x-shockwave-flash\" allowFullScreen=\"true\" bgcolor=\"0x131313\"/>";
+	player.showFullTime = "true";
+	player.controlBackgroundColor = "0xf8f8f8";
+	player.backgroundColor = "0x000000";
+	player.controlFrameColor = "0x000000";
+	player.frameColor = "0x000000";
+	player.textBackgroundColor = "0x131313";
+	player.controlHighlightColor = "0x131313";
+	player.controlHoverColor = "0xffffff";
+	player.loadProgressColor = "0x4f4f4f";
+	player.controlSelectedColor = "0xffffff";
+	player.playProgressColor = "0x959595";
+	player.scrubberFrameColor = "0xffffff";
+	player.controlColor = "0x4f4f4f";
+	player.textColor = "0x4f4f4f";
+	player.scrubberColor = "0x4f4f4f";
+	player.scrubTrackColor = "0x606060";
+	player.pageBackgroundColor = "0x131313";
+	player.endCard = "none";
+	player.showControlsBeforeVideo = "false";
+	player.allowBandwidth = "false";
+	player.plugin1 = "type=adcomponent|url=http://pdk.theplatform.com/current/pdk/swf/freewheel.swf|pemURLsSeparator=%2C|siteSectionId=dummyId|customVideoAssetIdField=advertisingID|exitFullscreenOnPause=false|priority=1|networkId=169843|adManagerUrl=http%3A%2F%2Fadm.fwmrm.net%2Fp%2Fnbcu_e_as3_live%2FAdManager.swf|autoPlay=true|playerProfile=169843%3Ae_as3_live|serverUrl=http%3A%2F%2F29773.v.fwmrm.net";
+	player.plugin2 = "type=adcomponent|url=http://pdk.theplatform.com/current/pdk/js/plugins/freewheel.js|pemURLsSeparator=%2C|siteSectionId=dummyId|customVideoAssetIdField=advertisingID|exitFullscreenOnPause=false|priority=1|networkId=169843|adManagerUrl=http%3A%2F%2Fadm.fwmrm.net%2Fp%2Fnbcu_e_as3_live%2FAdManager.swf|autoPlay=true|playerProfile=169843%3Ae_as3_live|serverUrl=http%3A%2F%2F29773.v.fwmrm.net";
+	player.plugin3 = "type=tracking|url=http://static.chartbeat.com/swf/ChartbeatPDK.swf|appId=video%40eonline.com|priority=1|acctId=53221";
+	player.plugin4 = "type=tracking|url=http://sb.scorecardresearch.com/c2/plugins/streamsense_plugin_theplatform.swf|labelmapping=c3%3D%22*null%22%2Cc4%3D%22eonline%22%2Cc6%3D%22*null%22%2Cns_st_ct%3D%22vc00%22|c2=6035083|priority=1";
+	player.plugin5 = "type=tracking|url=http://sb.scorecardresearch.com/c2/plugins/streamsense_plugin_theplatform.js|labelmapping=c3%3D%22*null%22%2Cc4%3D%22eonline%22%2Cc6%3D%22*null%22%2Cns_st_ct%3D%22vc00%22|c2=6035083|priority=1";
+	player.customer = "NBCU-E";
+	player.bind();
+
+	var releases = new ReleaseList("releasesvideo_243052");
+	releases.scopes = "video_243052";
+	releases.allowScrolling = "false";
+	releases.columns = "1";
+	releases.itemsPerPage = "10";
+	releases.playAll = "true";
+	releases.autoLoad = "false";
+	releases.autoPlay = "false";
+	releases.showAirdate = "false";
+	releases.showAuthor = "false";
+	releases.showBitrate = "false";
+	releases.showDescription = "true";
+	releases.showFormat = "false";
+	releases.showLength = "true";
+	releases.showThumbnail = "false";
+	releases.showTitle = "true";
+	releases.skinUrl = "http://pdk.theplatform.com/current/pdk/skins/glass/glass.json";
+	releases.thumbnailWidth = "160";
+	releases.thumbnailHeight = "90";
+	releases.backgroundColor = "0xf8f8f8";
+	releases.thumbnailBackgroundColor = "0xf8f8f8";
+	releases.frameColor = "0x000000";
+	releases.itemBackgroundColor = "0x131313";
+	releases.itemBackgroundHoverColor = "0x131313";
+	releases.itemBackgroundSelectedColor = "0x131313";
+	releases.textFrameColor = "0x131313";
+	releases.thumbnailFrameColor = "0x131313";
+	releases.itemFrameColor = "0x131313";
+	releases.thumbnailHighlightHoverColor = "0xffffff";
+	releases.itemShineHoverColor = "0xffffff";
+	releases.textHighlightHoverColor = "0xffffff";
+	releases.textHoverColor = "0xffffff";
+	releases.thumbnailPaddingColor = "0x131313";
+	releases.thumbnailHighlightSelectedColor = "0xffffff";
+	releases.itemShineSelectedColor = "0xffffff";
+	releases.textSelectedColor = "0xffffff";
+	releases.textColor = "0x4f4f4f";
+	releases.textBackgroundColor = "0x131313";
+	releases.textHighlightSelectedColor = "0xffffff";
+	releases.pageBackgroundColor = "0x131313";
+	releases.bind();
+
+	var tpReleaseModel1 = new ReleaseModel("tpReleaseModel1video_243052");
+	tpReleaseModel1.scopes = "video_243052";
+	tpReleaseModel1.startIndex = "1";
+	tpReleaseModel1.endIndex = "10";
+	tpReleaseModel1.params = "entries=false&params=policy%3D42697%26player%3DArticle%2520Detail%2520Player";
+	tpReleaseModel1.shuffle = "false";
+	tpReleaseModel1.feedsServiceURL = "http://feed.theplatform.com/f/BdHJDC/csVXqNCeIJZd_VMS";
+	tpReleaseModel1.bind();
+
+}));

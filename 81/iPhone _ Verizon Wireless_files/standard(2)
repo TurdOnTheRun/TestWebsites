@@ -1,0 +1,1 @@
+mboxFactories.get('default').get('VZW_Global_Promos',0).setOffer(new mboxOfferDefault()).loaded();

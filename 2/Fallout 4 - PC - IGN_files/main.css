@@ -1,0 +1,214 @@
+
+@font-face {
+    font-family: 'impactregular';
+    src: url('//d7ym2limyph0z.cloudfront.net​​/truth_finishers_fonts/impact-webfont.eot');
+    src: url('//d7ym2limyph0z.cloudfront.net​​/truth_finishers_fonts/impact-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//d7ym2limyph0z.cloudfront.net​​/truth_finishers_fonts/impact-webfont.woff2') format('woff2'),
+         url('//d7ym2limyph0z.cloudfront.net​​/truth_finishers_fonts/impact-webfont.woff') format('woff'),
+         url('//d7ym2limyph0z.cloudfront.net​​/truth_finishers_fonts/impact-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+#mainContainer {
+  z-index: 70;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 728px;
+  height: 90px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+
+/* PERMANENT ELEMENTS INIT*/
+
+.stroke {
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  top: 0;
+  left: 0;
+}
+
+#clickTag {
+  position: absolute;
+  z-index: 90;
+  display: block;
+  cursor: pointer;
+  width: 726px;
+  height: 88px;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.logo {
+  background: url(logo.png) no-repeat center center;
+  background-size: 100%;
+  width: 107px;
+  height: 30px;
+  left: 609px;
+  position: absolute;
+  top: 12px;
+  opacity: 0;
+}
+
+/* FRAME 2 */
+
+.white-button, .black-button{
+  position: absolute;
+  cursor: pointer;
+  background: url(cta1.svg) no-repeat center center;
+  background-size: 100%;
+  top: 54px;
+  left: 615px;
+  width: 112px;
+  height: 24px;
+  opacity: 0;
+  z-index: 100;
+}
+
+.black-button{
+  background: url(cta2.svg) no-repeat center center;
+  background-size: 100%;
+  z-index: 95;
+}
+
+#frame1, #frame2, #frame3, #frame4, #frame5, #frame6, #frame2, #endFrame, #textContainer1, #textContainer2, #textContainer3, #textContainer4{
+  display: block;
+  width:728px;
+  height:90px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+#frame1, #frame3, #frame5{
+  background: url(bg_logo.jpg) no-repeat center center;
+  background-size: 100%;
+}
+
+#frame2{
+  background: url(cat.jpg) no-repeat center center;
+  background-position:50% 50%;  /* Sets reference point to scale from */
+  background-size:100%; 
+}
+
+#frame4{
+  background: url(dog.jpg) no-repeat center center;
+  background-position:50% 50%;  /* Sets reference point to scale from */
+  background-size:100%; 
+}
+
+#frame6, #endFrame{
+  background: url(bg_logo_end.jpg) no-repeat center center;
+  background-size: 100%;
+}
+
+.txt_second, .txt_hand, .txt_smoking, .txt_doesnt, .txt_just, .txt_harm, .txt_people, 
+.txt_yep, .txt_even, .txt_pets, .txt_be, .txt_the, .txt_generation, .txt_that, .txt_ends, .txt_smoking2{
+  position: absolute;
+  height: 27px;
+  opacity: 1;
+}
+
+#textContainer1, #textContainer2, #textContainer3, #textContainer4{
+  /*top:60px;*/
+  opacity: 1;
+}
+
+/*#textContainer2{
+  top:20px;
+}
+
+#textContainer3{
+  top:30px;
+}*/
+
+/*frame1*/
+.txt_second{
+  background: url(txt_second.svg) no-repeat center center;
+  background-size: 100%;
+  width: 304px;
+  top: 18px;
+  left: 740px;
+}
+
+.txt_doesnt{
+  background: url(txt_doesnt.svg) no-repeat center center;
+  background-size: 100%;
+  width: 404px;
+  top: 47px;
+  left: 740px;
+}
+
+/*frame3*/
+.txt_yep{
+  background: url(txt_yep.svg) no-repeat center center;
+  background-size: 100%;
+  width: 125px;
+  height: 54px;
+  top: 17px;
+  left: 740px;
+}
+
+/*frame5*/
+.txt_even{
+  background: url(txt_even.svg) no-repeat center center;
+  background-size: 100%;
+  width: 336px;
+  height: 91px;
+  top: -2px;
+  left: 980px;
+}
+
+/*frame6*/
+.txt_be{
+  background: url(txt_be.svg) no-repeat center center;
+  background-size: 100%;
+  width: 288px;
+  height: 26px;
+  top: 18px;
+  left: 980px;
+}
+
+.txt_that{
+  background: url(txt_that.svg) no-repeat center center;
+  background-size: 100%;
+  width: 298px;
+  height: 26px;
+  top: 46px;
+  left: 980px;
+}
+
+#typeCont1, #typeCont2{
+  color:#fff;
+  font-family: "impactregular";
+  font-size: 58px;
+  position: absolute;
+  -webkit-text-stroke: 3px black;
+   text-shadow:
+    2px 2px  0 #000,
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+  left:407px;
+  top: -58px;
+  width:264px;
+  font-weight: lighter;
+  opacity: 0;
+}
+

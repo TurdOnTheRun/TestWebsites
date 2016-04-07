@@ -1,0 +1,8 @@
+
+<!-- saved from url=(0066)https://131788053.cdn.optimizely.com/client_storage/131788053.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script>
+
+var allowedOrigins = [[".*.cnn.com", "i"]];
+
+(function(){"use strict";function r(e){return!t||e.indexOf(t.origin)!==0}function s(e){t&&r(e.key)&&t.source.postMessage(JSON.stringify({type:"SYNC",response:{key:e.key,value:e.newValue}}),t.origin)}var e=window.localStorage,t,n="_",i=function(i){var s,o,u,a=!1;for(var f=0;f<allowedOrigins.length;f++)if((new RegExp(allowedOrigins[f][0],allowedOrigins[f][1])).test(i.origin)){a=!0;break}if(!a)return;t=i;try{s=JSON.parse(i.data)}catch(l){return}u=i.origin+n+s.key;if(s.type==="GET")o=e.getItem(u);else if(s.type==="PUT")o=e.setItem(u,s.value);else if(s.type==="GETALL"){o={};for(var c in e)r(c)&&(o[c]=e.getItem(c))}var h={id:s.id,response:o};i.source.postMessage(JSON.stringify(h),i.origin)};window.addEventListener("message",i,!0),window.addEventListener("storage",s,!0)})();
+</script></head><body></body></html>

@@ -1,0 +1,4 @@
+h2.sitemap{	margin : 10px 0 5px 0; padding : 0px; }
+ul.sitemap{ padding : 0 0 0 20px; }	
+li.sitemap_li_level1 { list-style-image: none; list-style-position: outside; list-style-type: none; }
+li.sitemap_li_level2 { list-style-image: none; list-style-position: outside; list-style-type: none; margin-left: 40px; font-size : 9px; }

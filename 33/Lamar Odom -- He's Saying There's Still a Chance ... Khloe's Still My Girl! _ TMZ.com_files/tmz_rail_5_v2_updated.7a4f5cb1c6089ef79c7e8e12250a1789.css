@@ -1,0 +1,122 @@
+ 	/* ------------------
+	TMZ - Most Popular Posts - Rail - 5 - UPDATED
+------------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,700);
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* ------------------
+  Widget Container
+------------------------- */
+#grv_widget {
+	margin: 0;
+	padding: 0 0 10px;
+  position: relative;
+}
+
+/* ------------------
+  Widget Title
+------------------------- */
+.grv_stories_header {
+	border-bottom: solid 3px #e5e5e5;
+	color: #c90202;
+	font-family: 'Source Sans Pro',helvetica,arial,sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 17px;
+  margin: 0px 0px 12px 0px;
+	padding: 0 0 2px 0;
+	text-transform: uppercase;
+}
+
+
+/* ------------------
+  Articles
+------------------------- */
+ul.grv_articles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li.grv_article {
+  padding: 0;
+  height: auto;
+  position: relative;
+}
+
+li.grv_article.grv_num_0 {
+	border-top: none;
+}
+
+a.grv_article_title {
+  text-decoration: none;
+	font-family: 'Source Sans Pro',helvetica,arial,sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 6px 0 12px 0;
+  color: #000;
+  position: relative;
+  display: block;
+  text-transform: capitalize;
+}
+
+a.grv_article_title:hover {
+  text-decoration: underline;
+}
+
+.grv_is_sponsored a.grv_article_title {
+	padding-bottom: 14px;
+	margin-bottom: 0px;
+  z-index: 2;
+}
+
+.grv_is_sponsored .grv_display_name {
+  text-decoration: none;
+	font-family: 'Source Sans Pro',helvetica,arial,sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  height: 11px;
+  margin: -11px 0 0;
+  overflow: hidden;
+  color: #999;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 1;
+}
+
+li.grv_article.grv_has_image a.grv_img_link {
+  height: 150px;
+  width: 100%;
+  margin: 10px 0 0 0;
+  display: block;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+}
+
+
+/* ------------------
+ 	Gravity Attribution
+------------------------- */
+#grv_badge {
+  display: block;
+  font-family: 'Source Sans Pro',helvetica,arial,sans-serif;
+  position: absolute;
+  top: 0px;
+  right: -10px;
+}
+
+#grv_personalization {
+	top: -1px;
+}
+#grvWidgetStylesLoaded_tmz_rail_5_v2_updated_7a4f5cb1c6089ef79c7e8e12250a1789_css {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}

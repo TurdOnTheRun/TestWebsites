@@ -1,0 +1,1 @@
+PARSELY.pInit({"apikey":"vanityfair.com","settings":{"debug":false,"widget":false,"tracker":true},"customizations":null,"track_ip_addresses":true,"bundle":"/code/ptrack-v0.4.11-engaged-time.js","track_third_party_cookies":true,"uuid":"581d66d2-73c9-404f-ade8-47adbea669b9","network_uuid":"0c5e7ff5-8229-4f06-8537-c8fbb752cd91","apikey_uuid":"581d66d2-73c9-404f-ade8-47adbea669b9"});

@@ -1,0 +1,355 @@
+(function() {
+	var parseResponse = function(resp) {
+		if (window.console) console.log("RESPONSE %o", resp);
+		try {
+			if (!resp.ads || !resp.siteSection) return;
+			var crs = {};
+			var ads = resp.ads[0]._.ad;
+			for (var a=0; a<ads.length; a++) {
+				var ad = ads[a];
+				for (var c=0; c<ad._.creatives[0]._.creative.length; c++) {
+					var creative = ad._.creatives[0]._.creative[c];
+					for (var r=0; r<creative._.creativeRenditions[0]._.creativeRendition.length; r++) {
+						var creativeRendition = creative._.creativeRenditions[0]._.creativeRendition[r];
+						for (var s=0; s<creativeRendition._.asset.length; s++) {
+							try {
+								var asset = creativeRendition._.asset[s];
+								var content = asset._.content[0]._;
+								var contentType = asset.contentType;
+								crs['_' + ad.adId + '_'+creativeRendition.creativeRenditionId+'_'+creativeRendition.adReplicaId] = content;
+							} catch (e) {
+								if (window.console) console.log("invalid creative rendition asset %o", e);
+							}
+						}
+					}
+				}
+			}
+			if (window.console) console.log("RENDITIONS", crs);
+			var cnt=0;
+			for (var s=0; s<resp.siteSection[0]._.adSlots[0]._.adSlot.length; s++) {
+				var slot = resp.siteSection[0]._.adSlots[0]._.adSlot[s];
+				for (var a=0; a<slot._.selectedAds[0]._.adReference.length; a++) {
+					var adReference = slot._.selectedAds[0]._.adReference[a];
+					var cbURLs = [];
+					var cbs = adReference._.eventCallbacks[0]._.eventCallback;
+					for (var cb=0; cb<cbs.length; cb++) {
+						if (cbs[cb].name=='defaultImpression') {
+							cbURLs.push(cbs[cb].url);
+							if (cbs[cb]._ && cbs[cb]._.trackingURLs) {
+								if (cbs[cb]._.trackingURLs[0]._) {
+									var trackingURLs = cbs[cb]._.trackingURLs[0]._.url;
+									for (var index = 0; index < trackingURLs.length; ++index) {
+										cbURLs.push(trackingURLs[index].value);
+									}
+								}
+							}
+						}
+					}
+					dealSlot(slot.customId, crs['_' + adReference.adId + '_' + adReference.creativeRenditionId + '_' + adReference.replicaId], cbURLs);
+				}
+			}
+			var needRefresh = false;
+			var refreshInterval = 0;
+			if (resp.parameters) {
+				for (var p = 0; p < resp.parameters[0]._.parameter.length; p++) {
+					var param = resp.parameters[0]._.parameter[p];
+					if (param.name == "refreshType" && param._ == "time") needRefresh = true;
+					if (param.name == "refreshInterval") refreshInterval = parseInt(param._ , 10);
+				}
+			}
+			if (needRefresh && !isNaN(refreshInterval) && refreshInterval > 0 && window._fw_linktag_refresh) {
+				window._fw_linktag_refresh(refreshInterval);
+			}
+		} catch (e) {
+		    if (window.console) console.log("ERROR in parseResponse %o", e);
+		}
+	};
+	var dealSlot = function(slid, html, cbURLs) {
+		if (!slid || !html || !document.getElementById(slid)) return;
+		if (window.console) console.log("SLOT %s AD str(%i) ACK %o", slid, html.length, cbURLs);
+		//setTimeout(function(){
+			try {
+				fillSlot(slid, html);
+				for (var i = 0; i < cbURLs.length; ++i) {
+					if (cbURLs[i] && cbURLs[i].length) sendCallback(slid, cbURLs[i]);
+				}
+			} catch (e) {
+			    if (window.console) console.log("ERROR in dealing slot %o", e);
+			}
+		//}, Math.floor(Math.random()*10+1));
+	};
+	var fillSlot = function(safeId, innerHTML) {
+		var adContainer = document.getElementById('_fw_container_'+safeId);
+		if (!adContainer) return;
+		if (navigator.appVersion.match(/\bMSIE\b/)){ // IE8 innerHTMl setter bug
+			adContainer.innerHTML = '<img id="_fw_img_placeholder" border="0" width="0" height="0" style="display:none;border:0px;width:0px;height:0px;padding:0px;margin:0px;">' + innerHTML;
+			var p = adContainer.firstChild;
+			if (p.id == '_fw_img_placeholder') {
+				adContainer.removeChild(p);
+			}
+		} else {
+			adContainer.innerHTML = innerHTML;
+		}
+		var scripts = adContainer.getElementsByTagName('script');
+		var head = document.getElementsByTagName("head")[0];
+		for (var i=0;i<scripts.length;i++) {
+			var script = scripts[i];
+			if (script.src) {
+				var script2 = document.createElement("script");
+				if (script.charset) script2.charset = script.charset;
+				script2.src = script.src;
+				script2.onload = script2.onreadystatechange = function(){ 
+					if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+						head.removeChild( script2 );
+					}
+				};
+				head.appendChild(script2);
+			} else {
+				eval(script.innerHTML);
+			}
+		}
+		return 1;
+	};
+	var sendCallback = function(safeId, callbackURL) {
+		if (!callbackURL) return 0;
+		var img= (navigator.appVersion.match(/\bMSIE\b/)) ? new Image() : document.createElement('img');
+		img.id = '_fw_cb_' + safeId;
+		img.src= callbackURL;
+		img.border = "0";
+		img.width="0";
+		img.height="0";
+		img.style.border = "0";
+		img.style.height = "1px";
+		img.style.width = "1px";
+		img.style.position = "absolute";
+		img.style.top = "0";
+		img.style.left = "0";
+		img.style.zIndex = "999";
+		img.style.backgroundColor = "transparent";
+		img.style.backgroundImage = "none";
+		img.style.padding = "0";
+		img.style.margin = "0";
+		img.style.filter = "Alpha(Opacity=0)";
+		img.style.visibility = "hidden";
+		if (document.body) {
+			if (document.body.insertBefore && document.body.childNodes[0]) {
+				document.body.insertBefore(img, document.body.childNodes[0]);
+			} else {
+			  document.body.appendChild(img);
+		  }
+	  }
+		return 1;
+	};
+	parseResponse({
+  "errors":[
+  {_:{
+    "error":[
+    {id:"3", name:"INVALID_ASSET_CUSTOM_ID", severity:"WARN", _:{
+      "context":[
+      {_:"topics/charlie-hebdo"
+      }]}
+    },
+    {id:"4", name:"INVALID_SITE_SECTION_CUSTOM_ID", severity:"WARN", _:{
+      "context":[
+      {_:"nws_undefined(168234/nws_undefined)"
+      }]}
+    }]}
+  }],
+  "visitor":[
+  {_:null
+  }],
+  "ads":[
+  {_:{
+    "ad":[
+    {adId:"14153549", adUnit:"23448", _:{
+      "creatives":[
+      {_:{
+        "creative":[
+        {adUnit:"fixed-size-interactive", baseUnit:"fixed-size-interactive", creativeId:"2163643", duration:"15", _:{
+          "creativeRenditions":[
+          {_:{
+            "creativeRendition":[
+            {adReplicaId:"0", creativeApi:"None", creativeRenditionId:"5066567", height:"250", preference:"0", width:"300", _:{
+              "asset":[
+              {bytes:"5484", contentType:"text/html_lit_js_wc_nw", id:"5001263", mimeType:"text/html", name:"external url/tag for Default asset package of  - 1", _:{
+                "content":[
+                {_:"<span data-width=\"300\" data-height=\"250\" style=\"display:block; vertical-align:top; margin:0px 0px 0px 0px;\"><iframe id=\"_fw_frame_rectangle\" width=\"300\" height=\"250\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" scrolling=\"no\" ALLOWTRANSPARENCY=\"true\"><\/iframe>\n<script language=\"javascript\" type=\"text/javascript\" id=\"_fw_container_js_rectangle\">//<!-- \n  (function(){\n    var fw_scope_window = window;\n    var fw_scope = document;\n    var fw_content = \"<!DOCTYPE HTML PUBLIC \\\"-//W3C//DTD HTML 4.01 Transitional//EN\\\" \\\"http://www.w3.org/TR/html4/loose.dtd\\\">\\n<html>\\n<head>\\n\\t<title>Advertisement<\/title>\\n\\t<scr\" + \"ipt type=\\\"text/javascr\" + \"ipt\\\">window._fw_page_url = \\\"http://abcnews.go.com/topics/news/reporters/charlie-hebdo.htm?page=4\\\";<\/scr\" + \"ipt>\\n<\/head>\\n<body style=\\\"margin:0px;background-color:transparent;\\\"><noscr\" + \"ipt>\\n<a href=\\\"http://servedby.flashtalking.com/click/6/58607;1692775;0;209;0/?ft_width=300\\&ft_height=250\\&url=9190132\\\" target=\\\"_blank\\\">\\n<img border=\\\"0\\\" src=\\\"http://servedby.flashtalking.com/imp/6/58607;1692775;205;gif;ABC;DISRESCPMFTAllThingsABCEntertainmentandLifestyleDisplayRONRM300x250/?\\\"><\/a>\\n<\/noscr\" + \"ipt>\\n<scr\" + \"ipt language=\\\"Javascr\" + \"ipt1.1\\\" type=\\\"text/javascr\" + \"ipt\\\">\\nvar ftClick = \\\"http://2912a.v.fwmrm.net/ad/l/1?s=f035\\&n=168234%3B168234\\&t=1458847046067452009\\&f=\\&r=168234\\&adid=14153549\\&reid=5066567\\&arid=0\\&auid=\\&cn=defaultClick\\&et=c\\&_cc=\\&tpos=\\&sr=0\\&cr=\\\";\\nvar ftExpTrack_1692775 = \\\"\\\";\\nvar ftX = \\\"\\\";\\nvar ftY = \\\"\\\";\\nvar ftZ = \\\"\\\";\\nvar ftOBA = 1;\\nvar ftContent = \\\"\\\";\\nvar ftCustom = \\\"\\\";\\nvar ft300x250_OOBclickTrack = \\\"\\\";\\nvar ftRandom = Math.random()*1000000;\\nvar ftBuildTag1 = \\\"<scr\\\";\\nvar ftBuildTag2 = \\\"<\/\\\";\\nvar ftClick_1692775 = ftClick;\\nif(typeof(ft_referrer)==\\\"undefined\\\"){var ft_referrer=(function(){var r=\\\"\\\";if(window==top){r=window.location.href;}else{try{r=window.parent.location.href;}catch(e){}r=(r)?r:document.referrer;}while(encodeURIComponent(r).length>1000){r=r.substring(0,r.length-1);}return r;}());}\\nvar ftDomain = (window==top)?\\\"\\\":(function(){var d=document.referrer,h=(d)?d.match(\\\"(?::q/q/)+([qw-]+(q.[qw-]+)+)(q/)?\\\".replace(/q/g,decodeURIComponent(\\\"%\\\"+\\\"5C\\\")))[1]:\\\"\\\";return (h\\&\\&h!=location.host)?\\\"\\&ft_ifb=1\\&ft_domain=\\\"+encodeURIComponent(h):\\\"\\\";}());\\nvar ftTag = ftBuildTag1 + \\'ipt language=\\\"javascr\" + \"ipt1.1\\\" type=\\\"text/javascr\" + \"ipt\\\" \\';\\nftTag += \\'src=\\\"http://servedby.flashtalking.com/imp/6/58607;1692775;201;js;ABC;DISRESCPMFTAllThingsABCEntertainmentandLifestyleDisplayRONRM300x250/?ftx=\\'+ftX+\\'\\&fty=\\'+ftY+\\'\\&ftadz=\\'+ftZ+\\'\\&ftscw=\\'+ftContent+\\'\\&ft_custom=\\'+ftCustom+\\'\\&ftOBA=\\'+ftOBA+ftDomain+\\'\\&ft_referrer=\\'+encodeURIComponent(ft_referrer)+\\'\\&cachebuster=\\'+ftRandom+\\'\\\" id=\\\"ftscr\" + \"ipt_300x250\\\" name=\\\"ftscr\" + \"ipt_300x250\\\"\\';\\nftTag += \\'>\\' + ftBuildTag2 + \\'scr\" + \"ipt>\\';\\ndocument.write(ftTag);\\n<\/scr\" + \"ipt><\/body>\\n<\/html>\";\n    var targetFrame = fw_scope.getElementById(\"_fw_frame_rectangle\");\n    var targetFrameDoc = (targetFrame.contentWindow) ? targetFrame.contentWindow : (targetFrame.contentDocument.document) ? targetFrame.contentDocument.document : targetFrame.contentDocument;\n    var writeContent = function(doc, content) {\n      var timeout = 0;\n      if(navigator.userAgent.match(/MSIE/) || navigator.userAgent.match(/Opera/)){\n        timeout = 7500;\n      } else if(navigator.userAgent.match(/Gecko\\//)) {\n        timeout = 30000;\n      }\n      targetFrameDoc.document.open();\n      targetFrameDoc.document.write(fw_content);\n      if (timeout>0) { setTimeout(function(){if (!!targetFrameDoc.document) targetFrameDoc.document.close()}, timeout); }\n      else if (!timeout) { targetFrameDoc.document.close(); }\n    }\n    var hasNoSandbox = false;\n    if ('never' == \"never\"){\n    \thasNoSandbox = true;\n    }\n    else if ('never' == \"always\"){\n    \thasNoSandbox = false;\n    }\n    else{\n    \thasNoSandbox = fw_content.indexOf(\"<!-\"+\"-nosandbox-\"+\"->\") >= 0 || fw_content.indexOf(\"<!-\"+\"-noecho-\"+\"->\") >= 0 || !!'';\n    }\n    var slotContentKey = \"_fw_slot_content_rectangle\";\n    var proxyHtml = window._fw_xd_proxy ? window._fw_xd_proxy : \"/_fw_xd_frame.html\";\n    if(hasNoSandbox) {\n      try {\n        if(!navigator.userAgent.match(/Gecko\\//)) { \n\t\t\t\t\twriteContent(targetFrameDoc, fw_content, 7500);\n\t\t\t\t} else if (targetFrameDoc.document.readyState == \"complete\" || targetFrameDoc.document.readyState == \"interactive\" ){\n          writeContent(targetFrameDoc, fw_content, 7500);\n        } else {\n\t\t\t\t\ttargetFrame.onload = function(){\n\t\t\t\t\t\twriteContent(targetFrameDoc, fw_content, 7500);\n\t\t\t\t\t};\n\t\t\t\t}\n      } catch (e) {\n        fw_scope_window[slotContentKey] = fw_content;\n        targetFrame.src = proxyHtml + \"?slid=rectangle&domain=\" + document.domain;\n      }\n    } else {\n      fw_scope_window[slotContentKey] = fw_content;\n      try {\n        targetFrameDoc.document.write('<script> window.name = parent[\"' + slotContentKey + '\"] + \"<!--\" + Math.random() + \"-->\"; window.location.replace(\"http://m2.feiwei.tv/g/lib/template/sandbox.html\");<\\/script>');\n      } catch(e) {\n        if((/MSIE 6/i.test(navigator.userAgent) && document.domain == fw_scope_window.location.hostname) ||\n            navigator.userAgent.match(/Gecko\\//) || navigator.userAgent.match(/Safari\\//)) {\n        } else {\n          targetFrame.src = proxyHtml + \"?sandbox&slid=rectangle&domain=\" + document.domain;\n        }\n      }\n    }\n  })();\n// --><\/script>\n<\/span>\n"
+                }]}
+              }]}
+            }]}
+          }],
+          "parameters":[
+          {_:{
+            "parameter":[
+            {name:"IAS", _:"7881;Kohl's;rectangle;Video;300x250;Kohls - FY1516 - Scatter"
+            },
+            {name:"_fw_advertiser_industries", _:""
+            },
+            {name:"_fw_advertiser_name", _:"Kohl's"
+            },
+            {name:"_fw_cr_primaryAssetlocation", _:""
+            },
+            {name:"hulu_industry", _:""
+            },
+            {name:"moat", _:"168234;298058;14152981;14153545;2163643;;g927146;g193978;109523;topic;14152983;23448;168234"
+            },
+            {name:"moat_callback", _:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=14153549&reid=5066567&arid=0&absid=&trigid=&et=i&cn=concreteEvent"
+            }]}
+          }]}
+        }]}
+      }]}
+    },
+    {adId:"1075404", adUnit:"23572", _:{
+      "creatives":[
+      {_:{
+        "creative":[
+        {adUnit:"fixed-size-interactive", baseUnit:"fixed-size-interactive", creativeId:"438440", duration:"15", _:{
+          "creativeRenditions":[
+          {_:{
+            "creativeRendition":[
+            {adReplicaId:"0", creativeApi:"None", creativeRenditionId:"602049", height:"250", preference:"0", width:"300", _:{
+              "asset":[
+              {bytes:"4536", contentType:"text/html_lit_js_wc_nw", id:"594425", mimeType:"text/html", name:"asset for external ad", _:{
+                "content":[
+                {_:"<span data-width=\"300\" data-height=\"250\" style=\"display:block; vertical-align:top; margin:0px 0px 0px 0px;\"><iframe id=\"_fw_frame_rectangle2\" width=\"300\" height=\"250\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" scrolling=\"no\" ALLOWTRANSPARENCY=\"true\"><\/iframe>\n<script language=\"javascript\" type=\"text/javascript\" id=\"_fw_container_js_rectangle2\">//<!-- \n  (function(){\n    var fw_scope_window = window;\n    var fw_scope = document;\n    var fw_content = \"<!DOCTYPE HTML PUBLIC \\\"-//W3C//DTD HTML 4.01 Transitional//EN\\\" \\\"http://www.w3.org/TR/html4/loose.dtd\\\">\\n<html>\\n<head>\\n\\t<title>Advertisement<\/title>\\n\\t<scr\" + \"ipt type=\\\"text/javascr\" + \"ipt\\\">window._fw_page_url = \\\"http://abcnews.go.com/topics/news/reporters/charlie-hebdo.htm?page=4\\\";<\/scr\" + \"ipt>\\n<\/head>\\n<body style=\\\"margin:0px;background-color:transparent;\\\"><!--  Rubicon Project Tag -->\\n<!--  Site: ABCNews.com   Zone: ABCNews MR ROS   Size: Medium Rectangle  -->\\n<scr\" + \"ipt language=\\\"JavaScript\\\" type=\\\"text/javascr\" + \"ipt\\\">\\nvar rp_account   = \\'8829\\';\\nvar rp_site      = \\'14549\\';\\nvar rp_zonesize  = \\'37692-15\\';\\nvar rp_adtype    = \\'js\\';\\nvar rp_smartfile = \\'http://abcnews.go.com/assets/static/ads/revv_smart_file.html\\';\\n<\/scr\" + \"ipt>\\n<scr\" + \"ipt type=\\\"text/javascr\" + \"ipt\\\" src=\\\"http://ads.rubiconproject.com/ad/8829.js\\\"><\/scr\" + \"ipt>\\n<noscr\" + \"ipt class=\\\"MOAT-abcfreewheemanual1547823658?moatClientLevel1=Rubicon\\&moatClientLevel2=\\&moatClientLevel3=10230676\\&moatClientLevel4=topic\\&moatClientSlicer1=ABCNEWS.com\\&moatClientSlicer2=ABCNEWS.com%7Cother\\&zMoatHeight=250\\&zMoatWidth=300\\\"><\/noscr\" + \"ipt><scr\" + \"ipt src=\\\"http://js.moatads.com/abcfreewheemanual1547823658/moatad.js#moatClientLevel1=Rubicon\\&moatClientLevel2=\\&moatClientLevel3=10230676\\&moatClientLevel4=topic\\&moatClientSlicer1=ABCNEWS.com\\&moatClientSlicer2=ABCNEWS.com%7Cother\\&zMoatHeight=250\\&zMoatWidth=300\\\" type=\\\"text/javascr\" + \"ipt\\\"><\/scr\" + \"ipt><\/body>\\n<\/html>\";\n    var targetFrame = fw_scope.getElementById(\"_fw_frame_rectangle2\");\n    var targetFrameDoc = (targetFrame.contentWindow) ? targetFrame.contentWindow : (targetFrame.contentDocument.document) ? targetFrame.contentDocument.document : targetFrame.contentDocument;\n    var writeContent = function(doc, content) {\n      var timeout = 0;\n      if(navigator.userAgent.match(/MSIE/) || navigator.userAgent.match(/Opera/)){\n        timeout = 7500;\n      } else if(navigator.userAgent.match(/Gecko\\//)) {\n        timeout = 30000;\n      }\n      targetFrameDoc.document.open();\n      targetFrameDoc.document.write(fw_content);\n      if (timeout>0) { setTimeout(function(){if (!!targetFrameDoc.document) targetFrameDoc.document.close()}, timeout); }\n      else if (!timeout) { targetFrameDoc.document.close(); }\n    }\n    var hasNoSandbox = false;\n    if ('never' == \"never\"){\n    \thasNoSandbox = true;\n    }\n    else if ('never' == \"always\"){\n    \thasNoSandbox = false;\n    }\n    else{\n    \thasNoSandbox = fw_content.indexOf(\"<!-\"+\"-nosandbox-\"+\"->\") >= 0 || fw_content.indexOf(\"<!-\"+\"-noecho-\"+\"->\") >= 0 || !!'';\n    }\n    var slotContentKey = \"_fw_slot_content_rectangle2\";\n    var proxyHtml = window._fw_xd_proxy ? window._fw_xd_proxy : \"/_fw_xd_frame.html\";\n    if(hasNoSandbox) {\n      try {\n        if(!navigator.userAgent.match(/Gecko\\//)) { \n\t\t\t\t\twriteContent(targetFrameDoc, fw_content, 7500);\n\t\t\t\t} else if (targetFrameDoc.document.readyState == \"complete\" || targetFrameDoc.document.readyState == \"interactive\" ){\n          writeContent(targetFrameDoc, fw_content, 7500);\n        } else {\n\t\t\t\t\ttargetFrame.onload = function(){\n\t\t\t\t\t\twriteContent(targetFrameDoc, fw_content, 7500);\n\t\t\t\t\t};\n\t\t\t\t}\n      } catch (e) {\n        fw_scope_window[slotContentKey] = fw_content;\n        targetFrame.src = proxyHtml + \"?slid=rectangle2&domain=\" + document.domain;\n      }\n    } else {\n      fw_scope_window[slotContentKey] = fw_content;\n      try {\n        targetFrameDoc.document.write('<script> window.name = parent[\"' + slotContentKey + '\"] + \"<!--\" + Math.random() + \"-->\"; window.location.replace(\"http://m2.feiwei.tv/g/lib/template/sandbox.html\");<\\/script>');\n      } catch(e) {\n        if((/MSIE 6/i.test(navigator.userAgent) && document.domain == fw_scope_window.location.hostname) ||\n            navigator.userAgent.match(/Gecko\\//) || navigator.userAgent.match(/Safari\\//)) {\n        } else {\n          targetFrame.src = proxyHtml + \"?sandbox&slid=rectangle2&domain=\" + document.domain;\n        }\n      }\n    }\n  })();\n// --><\/script>\n<\/span>\n"
+                }]}
+              }]}
+            }]}
+          }],
+          "parameters":[
+          {_:{
+            "parameter":[
+            {name:"IAS", _:"7881;;rectangle2;Video;300x250;"
+            },
+            {name:"_fw_advertiser_industries", _:""
+            },
+            {name:"_fw_advertiser_name", _:""
+            },
+            {name:"_fw_cr_primaryAssetlocation", _:""
+            },
+            {name:"hulu_industry", _:""
+            },
+            {name:"moat", _:"168234;;;10230676;438440;;g927146;g193978;109523;topic;;23572;168234"
+            },
+            {name:"moat_callback", _:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=1075404&reid=602049&arid=0&absid=&trigid=&et=i&cn=concreteEvent"
+            }]}
+          }]}
+        }]}
+      }]}
+    },
+    {adId:"8088854", adUnit:"23455", _:{
+      "creatives":[
+      {_:{
+        "creative":[
+        {adUnit:"fixed-size-interactive", baseUnit:"fixed-size-interactive", creativeId:"1527790", duration:"15", _:{
+          "creativeRenditions":[
+          {_:{
+            "creativeRendition":[
+            {adReplicaId:"0", creativeApi:"None", creativeRenditionId:"3484577", height:"1", preference:"0", width:"1", _:{
+              "asset":[
+              {bytes:"214", contentType:"text/html_lit_js_wc_nw", id:"3437290", mimeType:"text/html", name:"asset for external ad", _:{
+                "content":[
+                {_:"<span data-width=\"1\" data-height=\"1\" style=\"display:block; vertical-align:top; margin:0px 0px 0px 0px;\"><script type=\"text/javascript\" src=\"//wfpscripts.webspectator.com/bootstrap/ws-92BBB444.js\"><\/script><\/span>\n\n"
+                }]}
+              }]}
+            }]}
+          }],
+          "parameters":[
+          {_:{
+            "parameter":[
+            {name:"IAS", _:"7881;;overpage;Video;1x1;"
+            },
+            {name:"_fw_advertiser_industries", _:""
+            },
+            {name:"_fw_advertiser_name", _:""
+            },
+            {name:"_fw_cr_primaryAssetlocation", _:""
+            },
+            {name:"hulu_industry", _:""
+            },
+            {name:"moat", _:"168234;;;10230713;1527790;;g927146;g193978;109523;topic;;23455;168234"
+            },
+            {name:"moat_callback", _:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=8088854&reid=3484577&arid=0&absid=&trigid=&et=i&cn=concreteEvent"
+            }]}
+          }]}
+        }]}
+      }]}
+    }]}
+  }],
+  "siteSection":[
+  {customId:"nws_undefined", id:"-1", pageViewRandom:"767844376-681863806", _:{
+    "videoPlayer":[
+    {_:{
+      "videoAsset":[
+      {customId:"topics/charlie-hebdo", id:"-1", _:{
+        "adSlots":[
+        {_:null
+        }]}
+      }]}
+    }],
+    "adSlots":[
+    {_:{
+      "adSlot":[
+      {compatibleDimensions:"300,600", customId:"rectangle", height:"250", width:"300", _:{
+        "selectedAds":[
+        {_:{
+          "adReference":[
+          {adId:"14153549", creativeId:"2163643", creativeRenditionId:"5066567", replicaId:"0", _:{
+            "eventCallbacks":[
+            {_:{
+              "eventCallback":[
+              {type:"GENERIC", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=14153549&reid=5066567&arid=0", _:null
+              },
+              {name:"defaultImpression", type:"IMPRESSION", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=14153549&reid=5066567&arid=0&auid=&cn=defaultImpression&et=i&_cc=14153549,5066567,,21467.22155.22158.22161.,1458847046,1&tpos=&init=1&cr=https%3A//pixel.adsafeprotected.com/rfw/st/51086/7807330/skeleton.gif", _:null
+              },
+              {name:"defaultClick", type:"CLICK", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=14153549&reid=5066567&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=&cr=", _:null
+              }]}
+            }]}
+          }]}
+        }]}
+      },
+      {customId:"rectangle2", height:"250", width:"300", _:{
+        "selectedAds":[
+        {_:{
+          "adReference":[
+          {adId:"1075404", creativeId:"438440", creativeRenditionId:"602049", replicaId:"0", _:{
+            "eventCallbacks":[
+            {_:{
+              "eventCallback":[
+              {type:"GENERIC", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=1075404&reid=602049&arid=0", _:null
+              },
+              {name:"defaultImpression", type:"IMPRESSION", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=1075404&reid=602049&arid=0&auid=&cn=defaultImpression&et=i&_cc=1075404,602049,22161.,21467.22161.,1458847046,1&tpos=&init=1&cr=", _:null
+              },
+              {name:"defaultClick", type:"CLICK", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=1075404&reid=602049&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=&cr=", _:null
+              }]}
+            }]}
+          }]}
+        }]}
+      },
+      {customId:"overpage", height:"1", width:"1", _:{
+        "selectedAds":[
+        {_:{
+          "adReference":[
+          {adId:"8088854", creativeId:"1527790", creativeRenditionId:"3484577", replicaId:"0", _:{
+            "eventCallbacks":[
+            {_:{
+              "eventCallback":[
+              {type:"GENERIC", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=8088854&reid=3484577&arid=0", _:null
+              },
+              {name:"defaultImpression", type:"IMPRESSION", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=8088854&reid=3484577&arid=0&auid=&cn=defaultImpression&et=i&_cc=8088854,3484577,20429.,20429.,1458847046,1&tpos=&init=1&cr=", _:null
+              },
+              {name:"defaultClick", type:"CLICK", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009&f=&r=168234&adid=8088854&reid=3484577&arid=0&auid=&cn=defaultClick&et=c&_cc=&tpos=&cr=", _:null
+              }]}
+            }]}
+          }]}
+        }]}
+      }]}
+    }]}
+  }],
+  "eventCallbacks":[
+  {_:{
+    "eventCallback":[
+    {type:"GENERIC", url:"http://2912a.v.fwmrm.net/ad/l/1?s=f035&n=168234%3B168234&t=1458847046067452009", _:null
+    }]}
+  }]});
+})();

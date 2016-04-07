@@ -1,0 +1,193 @@
+/******************************
+Common Sense Media
+******************************/
+.read-csm-review-link{
+display: block;
+padding: 20px 0;
+}
+#ageslider {
+margin: 20px 0 0;
+}
+#sliderContainer {
+height: auto;
+width: 300px;
+}
+.msie6 #sliderContainer {
+width: 340px;
+}
+#sliderContainer.notforkids {
+background: url("../img/csm-ratings_sprite.png") no-repeat scroll -156px -621px rgba(0, 0, 0, 0);
+display: block;
+height: 28px;
+width: 280px;
+}
+#sliderContainer .number {
+border: 0 solid #FFFFFF;
+color: #FFFFFF;
+float: left;
+font-family: trebuchet MS;
+font-size: 17px;
+height: 23px;
+letter-spacing: -2px;
+padding: 0 4px 0 0;
+text-align: center;
+width: 15px;
+}
+#sliderContainer .odd {
+width: 8px;
+}
+#sliderContainer .off {
+background-color: #E83C24;
+}
+#sliderContainer .iffy {
+background: none repeat scroll 0 0 #FFD804;
+}
+#sliderContainer .on {
+background: none repeat scroll 0 0 #00B29F;
+}
+#sliderContainer .target {
+padding-right: 18px;
+}
+#sliderContainer .targetAgeOff, #sliderContainer .targetAgeIffy {
+background: none repeat scroll 0 0 #FFFFFF;
+}
+#targetAge, #targetLo, #targetHi {
+margin-top: 25px;
+}
+#targetAge span, #targetLo span, #targetHi span {
+border: 1px solid #CCCCCC;
+cursor: pointer;
+margin-bottom: 10px;
+padding: 10px;
+}
+#targetLo span {
+background: none repeat scroll 0 0 #FF3333;
+}
+#targetHi span {
+background: none repeat scroll 0 0 #33CCCC;
+}
+span#color, img#age {
+position: absolute;
+}
+span#color {
+top: -32px;
+}
+#agecolor {
+display: none;
+position: relative;
+margin-left: -2px;
+margin-top: -10px;
+width: 1px;
+}
+#agecolor img {
+display: none;
+}
+#ageslider .selected {
+background: none repeat scroll 0 0 #999999;
+color: #FFFFFF;
+font-size: 24px;
+font-weight: bold;
+}
+.csm_on, .csm_iffy, .csm_off, .csm_notkids {
+background: url("../img/csm-ratings_sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+display: block;
+float: left;
+height: 43px;
+position: relative;
+width: 55px;
+}
+.csm_on {
+background-position: -1px -49px;
+}
+.csm_iffy {
+background-position: -61px -49px;
+}
+.csm_off {
+background-position: -61px 0;
+}
+.csm_notkids {
+background-position: -11px 0;
+width: 45px;
+}
+.csm_notkids img {
+display: none;
+}
+.csm_1, .csm_2, .csm_3, .csm_4, .csm_5, .csm_6, .csm_7, .csm_8, .csm_9, .csm_10, .csm_11, .csm_12, .csm_13, .csm_14, .csm_15, .csm_16, .csm_17 {
+background: url("../img/csm-ratings_sprite.png") no-repeat scroll -123px 0 rgba(0, 0, 0, 0);
+display: block;
+height: 18px;
+position: relative;
+top: 11px;
+}
+.csm_1, .csm_2, .csm_3, .csm_4, .csm_5, .csm_6, .csm_7, .csm_8, .csm_9 {
+left: 27px;
+width: 11px;
+}
+.csm_10, .csm_11, .csm_12, .csm_13, .csm_14, .csm_15, .csm_16, .csm_17 {
+left: 25px;
+width: 18px;
+}
+.csm_1 {
+background-position: -123px 0;
+}
+.csm_2 {
+background-position: -141px 0;
+}
+.csm_3 {
+background-position: -161px 0;
+}
+.csm_4 {
+background-position: -181px 0;
+}
+.csm_5 {
+background-position: -201px 0;
+}
+.csm_6 {
+background-position: -221px 0;
+}
+.csm_7 {
+background-position: -240px 0;
+}
+.csm_8 {
+background-position: -124px -26px;
+}
+.csm_9 {
+background-position: -145px -26px;
+}
+.csm_10 {
+background-position: -166px -26px;
+}
+.csm_11 {
+background-position: -194px -26px;
+}
+.csm_12 {
+background-position: -219px -26px;
+}
+.csm_13 {
+background-position: -125px -54px;
+}
+.csm_14 {
+background-position: -152px -54px;
+}
+.csm_15 {
+background-position: -180px -54px;
+}
+.csm_16 {
+background-position: -207px -54px;
+}
+.csm_17 {
+background-position: -234px -54px;
+}
+#csm_num {
+margin: 0 0 8px;
+position: relative;
+top: -3px;
+}
+.csmreviews {
+float: left;
+font-weight: bold;
+left: 5px;
+position: relative;
+top: 14px;
+width: 120px;
+}

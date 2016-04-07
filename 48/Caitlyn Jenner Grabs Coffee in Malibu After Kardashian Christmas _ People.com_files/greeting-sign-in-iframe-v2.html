@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://www.people.com/people/static/h/premium/greeting-sign-in-iframe-v2.html -->
+<html class="wf-brandongrotesque-n3-active wf-brandongrotesque-n4-active wf-brandongrotesque-n5-active wf-brandongrotesque-n7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>PEOPLE Premium: Top Nav Greeting and Sign In, Version 2</title>
+    <style>
+        html {background:transparent;}
+        body {background:transparent;}
+        @font-face {font-family:"people-icons";src:url("http://fonts.timeinc.net/people/static/fonts/people-icons-v2.eot");src:url("http://fonts.timeinc.net/people/static/fonts/people-icons-v2.eot?#iefix") format("embedded-opentype"), url("http://fonts.timeinc.net/people/static/fonts/people-icons-v2.woff") format("woff"), url("http://fonts.timeinc.net/people/static/fonts/people-icons-v2.ttf") format("truetype"), url("http://fonts.timeinc.net/people/static/fonts/people-icons-v2.svg#people") format("svg");font-weight:normal;font-style:normal;}
+        .tools {display:block;float:right;padding-left:10px;border-left:1px solid #63bdf0;text-decoration:none;font-family:brandon-grotesque, Helvetica, Arial, sans-serif;font-size:14px;}
+        #insider-greeting,
+        #insider-notice {display:none;border-left:none;font-style:italic;color:#000;}
+        #insider-notice.show {display:block;}
+        #insider-greeting.show {display:block;margin-right:30px;}
+        #insider-greeting:hover {color:#000;text-decoration:underline;}
+        #insider-greeting strong {text-transform:uppercase;position:relative;}
+        #insider-greeting strong:after {position:absolute;content:"s";margin-left:10px;color:#27C4FF;font-size:20px;font-family:"people-icons" !important;font-style:normal !important;font-weight:normal !important;font-variant:normal !important;text-transform:none !important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+        #insider-sign-in-out {color:#27C4FF;margin-left:10px;}
+        #insider-sign-in-out:hover {color:#27C4FF;text-decoration:underline;}
+    </style>
+    <script src="./jquery-1.7.1.min.js"></script>
+    <script src="./xsp5fzp.js"></script>
+    <style type="text/css">.tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif;}</style><link rel="stylesheet" href="./xsp5fzp-d.css" media="all"><script>
+        try{Typekit.load();}catch(e){}
+    </script>
+    <script src="./46077909.js"></script>
+</head>
+<body>
+    <a class="tools in" id="insider-sign-in-out" href="http://www.people.com/people/static/h/premium/greeting-sign-in-iframe-v2.html#"><span class="sign-in">Sign In</span></a>
+    <div class="tools show" id="insider-notice">Digital Subscribers</div>
+    <a class="tools" id="insider-greeting" href="http://www.people.com/people/static/h/premium/greeting-sign-in-iframe-v2.html#">Welcome</a>
+    <div class="clear"></div>
+<script>
+
+    /****************************************************
+     * Cookie utility, and functions for auth and login.
+     ****************************************************/
+
+    /*\
+     |*|
+     |*|  :: cookies.js ::
+     |*|
+     |*|  A complete cookies reader/writer framework with full unicode support.
+     |*|
+     |*|  https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+     |*|
+     |*|  This framework is released under the GNU Public License, version 3 or later.
+     |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
+     |*|
+     |*|  Syntaxes:
+     |*|
+     |*|  * docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
+     |*|  * docCookies.getItem(name)
+     |*|  * docCookies.removeItem(name[, path])
+     |*|  * docCookies.hasItem(name)
+     |*|  * docCookies.keys()
+     |*|
+     \*/
+
+    var docCookies = {
+        getItem: function (sKey) {
+            return unescape(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+        },
+        setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+            if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+            var sExpires = "";
+            if (vEnd) {
+                switch (vEnd.constructor) {
+                    case Number:
+                        sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+                        break;
+                    case String:
+                        sExpires = "; expires=" + vEnd;
+                        break;
+                    case Date:
+                        sExpires = "; expires=" + vEnd.toGMTString();
+                        break;
+                }
+            }
+            document.cookie = escape(sKey) + "=" + escape(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+            return true;
+        },
+        removeItem: function (sKey, sPath) {
+            if (!sKey || !this.hasItem(sKey)) { return false; }
+            document.cookie = escape(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (sPath ? "; path=" + sPath : "");
+            return true;
+        },
+        hasItem: function (sKey) {
+            return (new RegExp("(?:^|;\\s*)" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+        },
+        keys: /* optional method: you can safely remove it! */ function () {
+            var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+            for (var nIdx = 0; nIdx < aKeys.length; nIdx++) { aKeys[nIdx] = unescape(aKeys[nIdx]); }
+            return aKeys;
+        }
+    };
+
+    document.domain = 'people.com';
+
+    (function(){
+        var $notice = $('#insider-notice'),
+                $greeting = $('#insider-greeting'),
+                $signWrapper = $('#insider-sign-in-out'),
+                $sign = $signWrapper.find('span'),
+                split,
+                length,
+                params = {};
+
+        function getCookie() {
+            return docCookies.getItem('TISub');
+        }
+
+        function parseCookie() {
+            var cookie = getCookie();
+
+            if ( cookie != null ) {
+                split = cookie.split('|');
+                length = split.length;
+                params = {};
+
+                for ( var i = 0; i < length; i++ ) {
+                    var pair = split[i],
+                            pairSplit = pair.split('~'),
+                            key = pairSplit[0],
+                            value = pairSplit[1];
+
+                    params[key] = value;
+                }
+
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function showNotice() {
+            $notice.addClass('show');
+        }
+
+        function hideNotice() {
+            $notice.removeClass('show');
+        }
+
+        function showGreeting() {
+            var replaceName,
+                    userName = params['firstName'];
+
+            if ( userName != null ) {
+                replaceName = userName.replace( '+', ' ' );
+                $greeting.html( 'Welcome, <strong>' + replaceName + '</strong>' );
+
+                $greeting.bind('click', function(e){
+                    e.preventDefault();
+                    parent.postMessage( 'location-preference-center', '*' );
+                });
+
+                $greeting.addClass('show');
+            }
+        }
+
+        function hideGreeting() {
+            $greeting.removeClass('show');
+        }
+
+        function showSignOut() {
+            $sign.text('Sign Out');
+            $sign.addClass('sign-out').removeClass('sign-in');
+            $signWrapper.addClass('out').removeClass('in');
+        }
+
+        function showSignIn() {
+            $sign.text('Sign In');
+            $sign.addClass('sign-in').removeClass('sign-out');
+            $signWrapper.addClass('in').removeClass('out');
+        }
+
+        function bindSignInOut() {
+            $sign.bind('click', function(){
+                if ( $(this).hasClass('sign-in') ) {
+                    parent.postMessage( 'sign-in', '*' );
+                } else {
+                    parent.postMessage( 'sign-out', '*' );
+                }
+            });
+        }
+
+        function init() {
+            if ( parseCookie() ) {
+                hideNotice();
+                showGreeting();
+                showSignOut();
+            } else {
+                showNotice();
+                hideGreeting();
+                showSignIn();
+            }
+
+            bindSignInOut();
+        }
+
+        init();
+    })();
+</script>
+
+
+</body></html>

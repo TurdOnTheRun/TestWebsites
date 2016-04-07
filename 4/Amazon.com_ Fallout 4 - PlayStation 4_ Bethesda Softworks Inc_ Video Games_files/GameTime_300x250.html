@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://s0.2mdn.net/4487524/1456958313993/GameTime_300x250/GameTime_300x250.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+	
+	<!-- Dubble Click -->
+	<meta name="ad.size" content="width=300,height=250">
+	<script type="text/javascript">var clickTag = "";</script>
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="./main.css">
+	<!-- GSAP -->
+	<script src="./TweenMax.min.js"></script>
+	<!-- Zepto -->
+	<script src="./zepto.js"></script>
+	<!-- main js -->
+ 	<script type="text/javascript" src="./main.js"></script>
+</head>
+
+<body onload="mainInit();">
+	<div class="container" style="display: block;">
+		
+		<!-- backgrounds -->
+		<img class="background_1" src="./background1.jpg">
+        <img class="background_2" src="./background2.jpg" style="opacity: 1;">
+    
+        <!-- frame-1 -->
+        <img class="tv2" src="./tv2.png" style="transform: matrix3d(0.731, 0.000127584, 0, 0, -0.000127584, 0.731, 0, 0, 0, 0, 1, 0, 34.162, -21, 0, 1);">
+        <img class="tvbg" src="./tvbg.jpg" style="opacity: 0;">
+        <img class="tv1" src="./tv1.jpg" style="opacity: 0;">
+        <img class="tvglow" src="./tvglow.png" style="opacity: 1; transform: matrix3d(0.731, 0.000127584, 0, 0, -0.000127584, 0.731, 0, 0, 0, 0, 1, 0, 0, -25, 0, 1);">
+        <img class="logo" src="./logo.png">
+        <img class="tv2_2" src="./tv2_2.jpg" style="opacity: 1;">
+        <img class="controller" src="./controller.png" style="top: 208px;">
+
+        <!-- frame-2 -->
+        <img class="controller_glow1" src="./controller_glow1.png" style="opacity: 1;">
+        <img class="tv3" src="./tv3.jpg" style="opacity: 1;">
+
+        <!-- frame-3 -->
+        <img class="controller_glow2" src="./controller_glow2.png" style="opacity: 1;">
+        <img class="tv4" src="./tv4.jpg" style="opacity: 1;">
+        <img class="controller2" src="./controller2.png" style="opacity: 1;">
+        <img class="txt-1" src="./txt-1.png" style="opacity: 1;">
+
+
+		<!-- frame-5 -->
+		<img class="background_4" src="./background2.jpg" style="opacity: 1;">
+        <img class="background_3" src="./background3.jpg" style="opacity: 1;">
+		<img class="txt-2" src="./txt-2.png" style="opacity: 1;">
+		<img class="txt-3" src="./txt-3.png" style="opacity: 1;">
+		<img class="txt-4" src="./txt-4.png" style="opacity: 1;">
+			
+		<img class="logo" src="./logo.png">
+		<div class="logo-txt" style="width: 159px;">
+		<img class="logo-txt-1" src="./logo-txt.png">
+		</div>
+		<!--<img class="glow-5" src="img/glow-5.png">-->
+		<!-- border -->
+		<div class="border"></div>
+
+		<!-- clickTag -->
+		<a href="javascript:(function(){window.open(window.clickTag)})();" id="bgExit"></a>
+		
+		<!-- cta -->
+		<div class="ctaContainer" style="opacity: 1;">
+		<a href="javascript:(function(){window.open(window.clickTag)})();">
+			<div class="ctaBg"></div>
+			<div class="ctaBg2"></div>
+			<img class="cta" src="./cta.png">
+		</a>
+		</div>
+
+	</div>
+
+</body></html>

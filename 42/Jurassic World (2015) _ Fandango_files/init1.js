@@ -1,0 +1,10 @@
+//<script>
+bouncex.state = {"newvid":true,"iol":true,"tn":1460005294,"pvid":1,"rc":false,"mobile":false,"vip":"74.71.4.239"};
+bouncex.cookie = {"v":{"checkout_timer":false,"asked_for_location":"false","ecap_flag":"false"},"sid":1,"fvt":1460005294,"vid":1460005294238389,"ao":0,"as":0,"vpv":1,"d":"d","lp":"http%3A%2F%2Fwww.fandango.com%2Fjurassicworld_174160%2Fmovieoverview","r":"","cvt":1460005294,"gcr":74,"m":0,"did":"3593268592088832165","lvt":1460005294,"hcs_movieoverview":1,"campaigns":{"256834":{"vv":0,"lvt":1460005294}}};
+bouncex.brandStyles = false;
+bouncex.webfonts = false;
+bouncex.campaigns = {"256834":{"ad_shown":false,"pid":"256833","ctype":"other","activations":[{"activation":"timer","prop":"","val":"0"}],"overlay":"none","coverlay":"none","ctop":"none","cbottom":"none","bottom":"none","callout":"none","callout_t":"","callout_pos":"rm","callout_anchor_pos":"lm","dom_placement_method":"","callout_voffset":"0","callout_hoffset":"0","acas":0,"top":"none","overlay_teleport_html":"","overlay_teleport_type":"_blank","opacity":0.9,"color":"#000000","close_button_delay":0,"show_close":0,"show_close_step":0,"close_redirect_url":"","close_redirect_type":"_self","activation_delay":0,"closed_no_show":0,"ipc":0,"mas":0,"mao":0,"map":0,"iao":"0","rao":"0","tvao":"0","is_ec":false,"is_api":false,"is_man":0,"ad_auto_close":0,"activation_offset":0,"header_top_nano":0,"header_bottom_nano":0,"type":"control","hbna":"0","hbnbg":"0","htna":"0","htnbg":"1","ad_visible":false,"osfn":"","tes":"1","te":"no_effect","t_valign":"top","b_valign":"bottom","qbxtest":false,"submission_redirect":"","submission_redirect_delay":2,"osfn_website":"","supress_overlay":0,"repress_overlay":0,"supress_top":0,"repress_top":0,"supress_bottom":0,"repress_bottom":0,"ng":0,"images":[],"edw":0,"event_js":"{\"activation\":\"\",\"impression\":\"\",\"click\":\"\",\"submission\":\"\",\"close\":\"\"}","ga_i":[],"gbi":false,"html":"","control":true}};
+bouncex.gbi.stacks = false;
+bouncex.debug = false;
+
+bouncex.init();

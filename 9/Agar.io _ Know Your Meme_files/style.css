@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+      margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+    text-align: center;
+}
+
+
+body, #holder {
+	width: 296px;
+	height: 246px;
+}
+
+.clickTag {
+	width: 100%;
+	height: 100%;
+	z-index: 300;
+	cursor: pointer;
+}
+
+#holder {
+	cursor: pointer;
+	font-family: 'Oswald', sans-serif;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #000;
+
+}
+
+#bg {
+  top:0;
+  left:0;
+  height:250px;
+  width:300px;
+  background-color: #000;
+  z-index: -10;
+  position: relative;
+  background-color: #000;
+}
+
+
+
+#border {
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      z-index: 20;
+     
+}
+
+#first_frame {
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      z-index: 0;
+      color: #ffffff;
+}
+
+#first_face_frame {
+      top: -300px;
+      left: 0px;
+      position: absolute;
+      z-index: -5;
+      color: #ffffff;
+      
+}
+
+#second_frame {
+   	 	top: -300px;
+    	left: 0px;
+   		position: absolute;
+    	z-index: 5;
+    	color: #ffffff;
+    	
+}
+
+
+#second_face_frame {
+      top: -300px;
+      left: 0px;
+      position: absolute;
+      z-index: -5;
+      color: #ffffff;
+      
+}
+
+
+#taste {
+      top: -300px;
+      left: 0px;
+      position: absolute;
+      z-index: -5;
+      color: #ffffff;
+      
+}
+#create {
+      top: -300px;
+      left: 0px;
+      position: absolute;
+      z-index: -5;
+      color: #ffffff;
+      
+}
+
+
+
+
+#border {
+	z-index: 250;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 727px) {
+	body, #border, #holder {
+		width: 296px;
+		height: 246px;
+	}
+	
+}

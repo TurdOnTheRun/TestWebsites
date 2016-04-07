@@ -1,0 +1,426 @@
+body {overflow-x:hidden;}
+.lp_layout {margin-top:0px;}
+
+body.news, html body.news {background:#ebebeb url("/resources/images/article/middle-bg.jpg") center repeat-y;}
+
+/* ***** disable iPad skinning  ***** */
+html.touch {background-color:transparent !important; background-image:none !important;} 
+.touch body {background:#ebebeb url("/resources/images/article/middle-bg.jpg") center repeat-y !important;}
+
+#Skin_Right,
+#SKin_Left,
+.split_skin {display:none !important;}
+
+/* ***** Next/Prev arrows ***** */
+#article-prev,
+#article-next {width:52px; display:none;}
+#article-prev {margin-left:-65px; position:fixed; top:0; z-index:9999;}
+#article-next {margin-left:993px; position:fixed; top:0; z-index:9999;}
+
+a#article-prev-link {background:#a4a4a4 url('/resources/images/article/arrow-left.png') no-repeat top left; height:132px; position:fixed; top:45%; text-decoration:none; width:52px;}
+a#article-next-link {background:#a4a4a4 url('/resources/images/article/arrow-right.png') no-repeat top right; height:132px; position:fixed; top:45%; text-decoration:none; width:52px;}
+
+a#article-prev-link:hover,
+a#article-next-link:hover {background-color:#c8c8c8;}
+
+a#article-prev-link .info,
+a#article-next-link .info {display:none; font-family:"DIN Web Condensed", "Arial Narrow", Sans-Serif;}
+
+.no-touch a#article-prev-link:hover .info,
+.no-touch a#article-next-link:hover .info {background-color:#e2e2e2; border:1px solid #c2c2c2; color:#6f6f6f; display:table; height:130px; position:relative; width:265px; z-index:9999;}
+.no-touch a#article-prev-link:hover .info {margin-left:51px;}
+.no-touch a#article-next-link:hover .info {margin-left:-266px;}
+
+.no-touch a#article-prev-link:hover .wrapper,
+.no-touch a#article-next-link:hover .wrapper {display:table-cell; padding:0 20px; vertical-align:middle;}
+
+.no-touch a#article-prev-link .title,
+.no-touch a#article-next-link .title {display:block; font-size:18px; line-height:22px;}
+
+.no-touch a#article-prev-link .date,
+.no-touch a#article-next-link .date {display:block; font-size:11px; line-height:15px; margin-top:8px;}
+
+/* ***** blog structure styles ***** */
+#content_interior {background:none !important;}
+
+/* ***** headline / section type styles ***** */
+body.news .entry_container .section-type {color:#03CDFF;}
+ 
+.entry_container .title-font-size-medium,
+.entry_container .title-font-size-medium a {font-size:36px; letter-spacing:-1px;}
+.entry_container .title-font-size-small,
+.entry_container .title-font-size-small a {font-size:36px; letter-spacing:-1px; line-height:36px; text-transform:none;}
+
+/* ***** social links ***** */
+#article-detail-social-icons,
+#article-detail-social-icons-bottom {border-bottom:1px dotted #ccc; margin-right:20px; padding-bottom:10px;}
+#article-detail-social-icons-bottom {padding-top:6px;}
+#article-detail-social-icons-bottom ul {margin-left:0;}
+.entry_container .cs-counttext {font-size:18px; line-height:30px; top:0;}
+.entry_container .cs-container .cs-email {margin-left:13px !important;}
+
+.entry_content .response_container p {color:#7c7c7c; font-family:"Ostrich Sans Pro Regular","Arial Narrow",Sans-Serif; font-size:70px; font-weight:bold; line-height:inherit; margin-top:38px; padding:0 50px;}
+.entry_content .response_container p.thank-you {color:#afafaf; font-size:40px; margin-top:18px;}
+/* embed */
+.entry_container .cs-embed .cs-share {display:none;}
+
+/* ***** link colors ***** */
+.entry_content a {color:#00B1DD; font-weight:600; text-decoration:none !important;}
+.entry_content a em {font-weight:600;}
+
+.entry_meta a {color:#083b74; text-decoration:none !important;}
+
+/* ***** image with link styles ***** */
+a:hover.img_link {text-decoration:none;}
+a:hover.img_link img {border-color:Transparent;}
+
+/* ***** breaking news alert (not sure if this is used, if not, please remove) ***** */
+#breaking_news {margin:-5px 0 0 0; padding:10px 25px; font-size:14px; color:#fff; background:#700 url("/static/uberblog/images/breaking_news_bg.gif") top repeat-x;}
+#breaking_news strong {display:block; font-size:18px;}
+#breaking_news a {display:block; color:#fff;}
+.alert_fancy_wedge {width:650px; height:15px; margin-bottom:-10px; background:url("/static/uberblog/images/breaking_news_wedge.png") no-repeat;}
+
+/* ***** blog styles ***** */
+.entry_banner {color:#fff;	margin:5px 0 20px;}
+.entry_banner span {
+	background-color:#c20000;
+	font-family:"Ostrich Sans Pro Regular","Arial Narrow",Sans-Serif;
+	font-size:17pt;
+	font-weight:normal;
+	letter-spacing:2px;
+	padding:5px 20px;
+	text-rendering:optimizelegibility;
+	text-transform:uppercase;
+}
+
+.entry_title {padding:0 0px 5px 0; line-height:1em; width:562px;}
+
+p.entry_meta {clear:both; color:#808080; display:block; margin:7px 20px 2px 0; padding:5px 0; font-size:12px;}
+p.entry_meta a {color:#03CDFF; font-size:11px; text-transform:uppercase;}
+p.entry_meta a:hover {text-decoration:underline !important;}
+p.entry_meta .timeMeta {color:#9d9d9d; display:inline-block; font-weight:bold; margin-left:6px;}
+
+/*SPONSORED CONTENT*/
+.branded-content {
+	font-family:"Arial";
+	font-size: 12px;
+	font-weight:bold;
+	margin: 7px 0 14px 0;
+}
+
+.entry_content {min-height:250px;}
+.entry_content img {display:block; float:left;}
+
+.lightbox-thumb-groups .thumbnail-links{margin-right:10px !important;}
+.entry_content .entry_img_left {float:left; margin:10px 10px 10px 0;}
+.relatedVideoThumb .lightbox-thumb-groups .thumbnail-links{margin-right:0px !important;}
+.entry_content .entry_img_right {float:right; margin:10px 0 15px 10px; padding-right:20px;}
+.entry_content .entry_img_top {float:none; margin:10px auto; padding-right:20px;}
+.entry_content .entry_img_top img {float:none;}
+.entry_content .photo_credit {display:block; clear:both; margin:5px 0 0 0; font-size:10px; line-height:1.2em; color:#999;}
+.entry_content .read_more {float:right; margin:12px 0; font-size:11px; letter-spacing:.09em;}
+
+.entry_content p {font-family:'Source Sans Pro', sans-serif; font-size:17px; line-height:1.4em; max-width:600px; padding:0.5em 20px 0.5em 0;}
+
+.entry_content ul, .entry_content ol {list-style-position:inside;}
+.entry_content ul {list-style-type:disc; margin-left:30px;}
+.entry_content ol {list-style-type:decimal;}
+.entry_content ul li, .entry_content ol li {margin-left:15px;}
+.entry_content ul li {list-style:disc; list-style-position:inside; margin-left:15px;}
+.entry_content ol li {list-style-type:decimal; list-style-position:inside;}
+
+.entry_content blockquote {margin:0 20px; padding:10px 0;}
+
+.entry_content .audio_player {margin:10px 0;}
+
+.entry_content ul.blog_gallery {clear:both; margin:10px 0; padding:0; list-style:none;}
+.entry_content ul.blog_gallery li  {list-style-type:none; float:left; width:110px; height:102px; *height:100px; padding:0; margin-left:0;}
+.entry_content ul.blog_gallery li.last {margin:0;}
+* + html .entry_content ul.blog_gallery li {height:102px;}
+.entry_content ul.blog_gallery img {display:inline; width:100px; height:100px;}
+.entry_content ul.blog_gallery a:hover img {border:1px solid #c00;}
+
+.entry_footer {clear:both; font-family:'Source Sans Pro', sans-serif; padding-bottom:15px; font-size:11px; text-align:right;}
+.entry_footer a {padding-top:1px; padding-bottom:1px; text-decoration:none; text-transform:uppercase;}
+.entry_footer a.comments {background-image:url("/static/uberblog/images/comment_icon.gif"); background-position:left; background-repeat:no-repeat; float:left;}
+.entry_footer a.comments span{margin-left:20px;}
+.entry_footer .categories {clear:both; display:block; margin:5px 0 0 0; padding:5px 0 0 0; text-align:left;}
+.entry_footer .categories a {color:#808080; font-size:12px; font-family:"Arial"; margin-left:0;}
+
+/* ***** snipe styles ***** */
+.snipe {margin:0 0 25px 0; padding:0 0 7px 0; background:url("/static/uberblog/images/snipe_tail.gif") left bottom no-repeat; color:#000; font-size:18px; font-weight:bold;}
+.snipe a, .snipe span {display:block; padding:9px 12px; color:#000; background:#fc0;}
+.snipe a:hover {background:#C49900; text-decoration:none;}
+
+/* ***** html_on_top block and the audio player block ***** */
+.html_on_top embed, .html_on_top object, .html_on_top iframe, .html_on_top a.in_blog_video {display:block; margin:0px auto; text-align:center;}
+.html_on_top a.in_blog_video {position:relative; width:425px; height:366px; background:url(/static/uberblog/images/video_underlay.gif);}
+.html_on_top a.in_blog_video img {width:419px; height:319px; margin:1px 2px 0;}
+.html_on_top a:hover.in_blog_video span {position:absolute; top:1px; left:0; display:block; width:419px; height:319px; margin:0 3px 0; background:url(/static/uberblog/images/video_playoverlay.png); cursor:pointer;}
+
+/* Instagram embed fix */
+.html_on_top iframe.instagram-media,
+.html_on_top iframe.instagram-media-rendered {position:relative !important;}
+
+
+
+/* ***** poll styles ***** */
+.entry_content .blog_poll {clear:both; margin:0; padding:10px; background:#fff; border:1px solid #c6c6c6; margin-right:20px;}
+.entry_content .blog_poll .blog_poll {border:none; margin-right:0px; padding:0;}
+.entry_content .blog_poll .vote_item {clear:both; margin-bottom:10px;}
+.entry_content .blog_poll form {margin:0; padding:0;}
+.entry_content .blog_poll img {float:left; margin:0;}
+.entry_content .blog_poll h3 {color:#222; text-transform:none; font-family:arial; font-size:16px; font-weight:bold; letter-spacing:0;}
+.entry_content .blog_poll .intro {margin:0; padding:0; font-size:11px; font-weight:normal; letter-spacing:0; line-height:14px; color:#666;}
+.entry_content .blog_poll h4 {margin:10px 0 5px 0; color:#222; text-transform:none; font-family:arial; font-size:13px; font-weight:bold; letter-spacing:0;}
+.entry_content .blog_poll .vote_item.no_images h4 {margin:10px 0 5px 0;}
+.entry_content .blog_poll ul {
+	display:block;
+	width:170px;
+	margin:0 0 0 80px;
+	*margin:0 0 0 120px;
+}
+.entry_content .blog_poll .vote_item.no_images ul {width:100%; margin:0; padding:0;}
+.entry_content .blog_poll ul li {margin-left:0;}
+.entry_content .blog_poll ul li.highest {background:#fff;}
+.entry_content .blog_poll span {float:left; width:45px; font-weight:bold;}
+.entry_content .blog_poll .poll_captcha {margin:20px 0;}
+.entry_content .blog_poll .poll_captcha div {display:block;}
+.entry_content .blog_poll .poll_captcha div#poll_captcha_message {color:#c00; font-weight:bold;}
+.entry_content .blog_poll .poll_captcha input {width:286px; margin-bottom:3px; padding:2px; font-size:12px; color:#666; border:1px solid #666;}
+.entry_content .blog_poll .poll_captcha img {width:290px; border:1px solid #666; margin-right:10px;}
+.entry_content .blog_poll .poll_captcha label {font-size:11px; color:#666; line-height:1.3em; font-style:italic;}
+.entry_content .blog_poll .voteBtn {clear:both;}
+.entry_content .blog_poll .voteBtn input {padding:5px 12px; font-size:12px; font-weight:bold; color:#fff; border:1px solid #999; background:#005dba url("/static/uberblog/images/button_gradient_blue.gif") top repeat-x; cursor:pointer;}
+.entry_content .blog_poll .voteBtn, .entry_content .blog_poll .thank-you, .entry_content .blog_poll .end_link {text-align:center;}
+.entry_content .blog_poll .thank-you h3 {color:#000; font-size:12px; margin:0; text-transform:none;}
+.entry_content .blog_poll .poll_disclaimer {text-align:center; font-size:10px; line-height:12px; margin-top:15px; color:#666;}
+
+/* ***** 88x31 sponsor logo in blog entry (not sure if this is used, if not, please remove) ***** */
+.entry_container .adiframe {float:right; margin-top:-5px;}
+
+/* ***** expandable video ***** */
+#expandable-video {visibility:hidden;position:absolute;z-index:2;}
+#expandable-player {display:block;margin-top:15px;}
+div.exp-video {margin:12px 25px 13px 0; float:left;clear:left;position:relative;background-color:transparent;overflow:visible;}
+div.exp-video img.thumb{margin:0 auto; border:none;display:block;width:196px; height:110px;}
+div.exp-video img.close-btn {position:absolute;left:-16px; top:-16px; border:none;display:none;}
+div.exp-video img.thumb:hover, div.exp-video img.close-btn:hover {cursor:pointer;}
+div.exp-video a {outline:none;float:left;overflow:hidden;}
+div.exp-video a span.thumbnail {background-color:#000;display:block;overflow:hidden;width:196px;height:110px;}
+div.exp-video a span.title {background:url("http://images.eonline.com/static/photogallery/images/thumb_overlay.png") repeat scroll 0 0 transparent; bottom:0px; display:block;left:0;line-height:16px;overflow:hidden;padding:0px 5px;position:absolute;width:186px;height:19px;color:#fff;}
+div.exp-video a span.play-btn {text-indent:-100000px;background:url("http://images.eonline.com/static/uberblog/images/play-btn.png") no-repeat scroll 0 0 transparent;display:block;left:72px;top:20px; position:absolute; width:56px; height:56px;}
+div.exp-video a:hover span.play-btn {text-indent:-100000px;background:url("http://images.eonline.com/static/uberblog/images/play-btn-over.png") no-repeat scroll 0 0 transparent;}
+div.exp-video a:hover span.overlay {width:190px;height:104px;border:3px solid #ff0000;position:absolute;z-index:3;cursor:pointer;}
+body div.expanded {background:transparent; margin:12px 0 13px; border:1px solid #BFBFBF;}
+* + html #expandable-player {margin-top:26px;} /*fix IE7 bug where expanded player overlaps some copy */
+* + html body div.expanded {margin-top:23px;} /*fix IE7 bug where expanded player overlaps some copy */
+body div.expanded a {display:none;}
+body div.expanded img.close-btn {z-index:100; display:block; position:relative;}
+
+body div.loading a span.title,
+body div.loading a span.play-btn,
+body div.loading a:hover span.overlay {display:none;}
+
+/* ***** columnist brick ***** */
+.columnistBrick {float:left; padding:10px 10px 10px 0; width:285px;}
+.columnistBrick img {border:none !important;}
+
+/* External/Non-Widget Lightbox */
+
+#detail .lightbox-thumb-groups.no-titles {
+	height:194px;
+	margin-bottom:15px;
+}
+
+#detail .lightbox-thumb-groups.has-titles {
+	height:125px;
+}
+
+#detail .lightbox-thumb-groups .lightbox-page-thumbs {
+	margin-right:5px;
+}
+
+#detail .lightbox-thumb-groups .lightbox-page-thumbs.horizontal {
+	float:left;
+}
+
+#detail .video-play-bttn {
+background:url('http://images.eonline.com/static/uberblog/images/play-btn.png') no-repeat left top transparent;
+background-position:-5px -5PX;
+height:45px;
+width:45px;
+position:absolute;
+margin-left:80px;
+margin-top:30px;
+opacity:0.7;
+background-color:#000000;
+}
+
+#detail .feed-duration {
+background:transparent url('/resources/images/misc/gradient-bg.png') repeat-y;
+font-family:"DIN Web Condensed","Arial Narrow",Sans-Serif;
+font-size:16px;
+line-height:28px;
+color:#fff;
+text-align:right;
+width:68px;
+height:26px;
+padding-right:6px;
+position:absolute;
+bottom:inherit;
+margin-top:78px;
+margin-left:111px;
+}
+
+.moreVideosTitle {
+	color:#00B1DD;
+	font-weight:bold;
+	font-style:normal;
+	font-size:15px;
+	line-height:1.4em;
+	font-family:Arial, Sans-Serif;
+	margin-bottom:10px;
+
+}
+
+#topicNewsDetail .video-play-bttn{
+	background:url('/resources/widgets/images/sprite_maps/white_video_player_arrows.png') no-repeat left top transparent;
+	background-position:0px -25px;
+	height:45px;
+	width:45px;
+	position:absolute;
+	margin-left:80px;
+	margin-top:30px;
+	opacity:0.6;
+}
+.relatedVideoThumb{
+	height:194px;
+	width:185px;
+	border-right:1px #e3e3e3;
+	border-left:1px #e3e3e3;	
+	margin-right:13px;
+	float:left;
+	background-color:#f0f0f0;
+	margin-bottom:10px;		
+}
+.relatedVideoThumb:hover{background-color:#d9d9d9 !important;}
+
+.lightbox-thumb-groups .thumbnail-links:hover{border:none;}
+.relatedVidImg a img{width:185px;}
+.lightbox-thumb-groups .thumbnail-links{border:none;}
+.relatedVidImg{
+	height:104px;
+	overflow:hidden;
+}
+.relatedVideoThumb:hover > .relatedVidImg a .video-overlay{visibility:visible;}
+@media only screen 
+and (min-device-width :768px) 
+and (max-device-width :1024px)  {
+	.relatedVideoThumb:hover > .relatedVidImg a .video-overlay{visibility:visible;}
+}
+.relatedVidTitle{color:#6a6868;
+text-decoration:none;
+font-family:"DIN Web Condensed","Arial Narrow",Sans-Serif;
+font-size:16pt;
+line-height:18pt;
+padding:11px 10px 11px 10px;
+font-weight:normal;
+border:1px solid #e3e3e3;
+height:67px;
+}
+
+.relatedVidImg .video-overlay{visibility:hidden;position:absolute;width:185px;height:104px;overflow:hidden;}
+.relatedVidImg .play-overlay {
+	position:absolute;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	background-color:#000;
+	width:185px;
+	height:104px;
+}
+.relatedVidImg .play-button {
+	position:absolute;
+	width:44px;
+	height:44px;
+	margin-top:30.5px;
+	margin-left:71px;
+	background-color:#fff;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+.relatedVidImg .play-arrow {
+	position:absolute;
+	margin-top:38px;
+	margin-left:83px;
+	width:0; 
+	height:0; 
+	border-top:14px solid transparent;
+	border-bottom:14px solid transparent;
+	border-left:20px solid #fff;
+}
+.relatedVidImg a {font-size:0; position:relative;}
+
+.relatedVidImg .feed-duration {
+	background:transparent url('/resources/widgets/images/m12-13/bg-duration.png') no-repeat;
+	bottom:0px;
+	color:#fff;
+	font-family:"Din Web Condensed", "Arial Narrow", Sans-Serif;
+	font-size:16px;
+	height:25px;
+	line-height:28px;
+	right:0px;
+	padding-right:5px;
+	position:absolute;
+	text-align:right;
+	width:65px;
+}
+
+
+
+.article_pinterest{z-index:20;position:absolute;bottom:0;}
+.gallery_sprite{background:url('/resources/images/article/gallery_icon_pink_sprite.png');}
+.article_gallery_link{
+	background-position:0 51px;
+	height:51px;
+	width:51px;
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+.galleryButton{height:53px;bottom:0;right:0;position:absolute;width:165px;background-color:#000;}
+.viewMore{
+  font-size: 22px;
+  color: #fff;
+  font-family: "Din Web Condensed", "Arial Narrow", Sans-Serif;
+  text-indent: 15px;
+  margin-top: 15px;
+  font-weight: bold;
+  font-style: italic;}
+ .gallerySize{
+  margin-top: 22px;
+  margin-left: 22px;
+  font-size: 12px;
+  color:#000;
+ }
+ .gallerySize.plus{
+  margin-left: 20px;
+  font-size: 11px;
+  }
+.galleryButton:hover{background-color:#FF24D1;}
+.galleryButton:hover .article_gallery_link{background-color:#FF24D1;background-position:0 0;}
+.galleryButton:hover .gallerySize{color:#FF24D1}
+.article_gallery_link:hover{
+	background-position:0 0;
+}
+
+
+/* 120x60 Ad */
+.nonBrandingAd li {float:right;	width:120px;}
+
+/* Outbrain overrides */
+.entry_content .outbrain-widget .hgroup h5 {line-height:36px;}
+.entry_content .outbrain-widget ul,
+.entry_content .outbrain-widget ul li {list-style:none; margin:0;}
+
+

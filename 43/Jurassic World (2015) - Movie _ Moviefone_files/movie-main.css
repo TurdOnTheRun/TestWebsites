@@ -1,0 +1,1669 @@
+							
+			
+						
+			
+		
+																																																																																																																																																					
+																																																																															
+																																																																																																																																																																																																																																			
+
+										
+	    
+	
+
+		
+				
+												
+					
+				
+																																																																									
+																																	
+					
+
+																													
+		
+	
+				
+												
+					
+				
+																																																																																																															
+																																	
+																																																																																																									
+
+																																												
+		
+	
+							/* this is layout css */
+
+#left {margin-right:20px;width:calc(100% - 320px);}
+#right {width:300px; position: relative; z-index:2; }
+
+@media (max-width:677px) {
+   #left {float:none;margin:0 0 10px 0;width:100%;}
+   #right {float:none;width:100%;position:static;}
+}
+
+							#page-title {margin-bottom:20px;}
+
+							.grid .body {font-size:0;}
+.grid .item {display:inline-block;font-size:14px;position:relative;vertical-align:top;}
+.grid .item-thumbnail {font-size:0;overflow:hidden;position:relative;width:100%;display:inline-block;line-height:0;}
+.grid .item-overlay {color:#fff;font-size:18px;height:100%;left:0;position:absolute;top:0;width:100%;}
+
+/*.grid .fa-play-circle-o {left:50%;margin:-16px 0 0 -16px;position:absolute;top:50%;}*/
+.grid .item-overlay.video-play {background-image:url('http://o.aolcdn.com/os/moviefone/img/play_btn_grey.png');background-repeat:no-repeat;background-position:50%;}
+.grid .item-overlay.video-play:hover {background-image:url('http://o.aolcdn.com/os/moviefone/img/play_btn_blue.png');}
+
+.grid .item-image {width:100%;}
+.grid .item-title {color:#333;font-weight:bold;line-height:20px;font-size:15px;}
+.grid .item-title:hover {color:#00c8ff;}
+.grid .more-button {display:block;margin:20px auto 0;}
+
+.grid.columns-1 .item {margin-bottom:10px;width:100%;}
+.grid.columns-1.margin-large .item {margin-bottom:20px;}
+.grid.columns-1 .item:last-child {margin-bottom:0;}
+
+.grid.columns-2 .item {margin:0 10px 10px 0;width:calc(50% - 5px);}
+.grid.columns-2.margin-large .item {margin:0 20px 20px 0;width:calc(50% - 10px);}
+.grid.columns-2 .item:nth-child(2n) {margin-right:0;}
+.grid.columns-2 .item:nth-last-child(-n+2) {margin-bottom:0;}
+
+.grid.columns-3 .item {margin:0 10px 10px 0;width:calc(33% - 6px);}
+.grid.columns-3.margin-large .item {margin:0 20px 20px 0;width:calc(33% - 13px);}
+.grid.columns-3 .item:nth-child(3n) {margin-right:0;}
+.grid.columns-3 .item:nth-last-child(-n+3) {margin-bottom:0;}
+
+.grid.columns-4 .item {margin:0 10px 10px 0;width:calc(25% - 8px);}
+.grid.columns-4.margin-large .item {margin:0 20px 20px 0;width:calc(25% - 15px);}
+.grid.columns-4 .item:nth-child(4n) {margin-right:0;}
+.grid.columns-4 .item:nth-last-child(-n+4) {margin-bottom:0;}
+
+/*.grid.type-video .item-overlay, .grid.type-5min .item-overlay {opacity:0.5;}*/
+/*.grid.type-video .item-overlay:hover, .grid.type-5min .item-overlay:hover {}*/
+.grid.type-5min .item-title {background-color: #000000; bottom: 0px; color: #fff; display: block; padding: 8px; position: absolute; width: 100%; font-weight: 400; font-family: Helvetica, Arial, sans-serif;white-space: normal;top: auto;text-align: left;font-size:15px;margin-bottom:0;}
+.grid.type-5min .item-thumbnail{margin: 0px; padding: 0px;}
+.grid.type-5min .item-tag {display: inline-block; height: 150px; margin-bottom: 10px;}
+
+/*.grid:not(.type-video):not(.type-5min) .item-overlay {background:-moz-linear-gradient(45deg,rgba(69,198,254,0.65) 0%, rgba(69,198,254,0.65) 22%, rgba(69,198,254,0) 88%, rgba(69,198,254,0) 100%);background:-webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(69,198,254,0.65)), color-stop(22%,rgba(69,198,254,0.65)), color-stop(88%,rgba(69,198,254,0)), color-stop(100%,rgba(69,198,254,0)));background:-webkit-linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);background:-o-linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);background:-ms-linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);background:linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#a600c8ff', endColorstr='#0000c8ff',GradientType=1 );opacity:0;}*/
+.grid:not(.type-video):not(.type-5min) .item-overlay{background-color:rgba(102,102,102,.4);opacity:0;}
+.grid:not(.type-video):not(.type-5min) .item-overlay:hover {opacity:1;}
+
+.grid.type-slide#all-galleries {padding: 0px;}
+
+#top-trailers .item-thumbnail {font-size:0;margin-bottom:10px;overflow:hidden;position:relative;width:100%;display:inline-block;}
+
+@media only screen and (max-width: 480px){
+	#left .grid .item {width: 100%;}  
+	/*  POSTER GRID  ===================================================   */
+	#left .twoColumnMobile .item {width: 48%;}
+	#left .twoColumnMobile .item:nth-child(odd) {margin: 0px 5px 15px 0px;}
+	#left .twoColumnMobile .item:nth-child(even) {margin: 0px 0px 15px 5px;}
+}
+
+@media screen and (max-width: 340px) {
+	/* Top Trailers - not Gravity so it is not in gravity.css */
+	#top-trailers h2 {font-size:24px !important;}
+	.grid.type-5min .item-title{
+		font-size:13px;
+		line-height:18px;
+		padding:5px 8px;
+	}
+}
+
+
+							.list-post-movie-news .news-item {overflow:hidden;padding:0 0 5px;}
+.list-post-movie-news .news-item-wrap {margin:0;clear:left;}
+.list-post-movie-news .title {color:#00ccff;display:block;font-family: Helvetica, Arial, sans-serif;font-weight:400;line-height:26px;}
+.list-post-movie-news .title:hover {color:#54ddff;}
+.list-post-movie-news .byline a, .list-post-movie-news .byline {color:#757373;font-size:16px;font-style:italic;font-weight:400;margin:6px 0 0;}
+.list-post-movie-news .byline a:hover {text-decoration:underline;}
+.list-post-movie-news .image {float:left;margin-right:4%;width:46%;}
+.list-post-movie-news .news-item .image .image-wrap {position:relative;width:100%;}
+.list-post-movie-news .image img {border-bottom:0;width:100%;height:auto;display:block !important;}
+.list-post-movie-news .info {float:left;width:48%;}
+.list-post-movie-news .feature-news img {width:100%;height:auto;}
+.list-post-movie-news .border-clear {clear:both;border-bottom:1px solid #dadada;border-top:none;margin:15px 0;}
+.list-post-movie-news .more-button {display:block;margin:0 auto 20px auto;}
+.list-post-movie-news .item-overlay {color:#fff;font-size:18px;height:100%;left:0;position:absolute;top:0;width:100%;}
+.list-post-movie-news .item-overlay {background:-moz-linear-gradient(45deg,rgba(69,198,254,0.65) 0%, rgba(69,198,254,0.65) 22%, rgba(69,198,254,0) 88%, rgba(69,198,254,0) 100%);background:-webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(69,198,254,0.65)), color-stop(22%,rgba(69,198,254,0.65)), color-stop(88%,rgba(69,198,254,0)), color-stop(100%,rgba(69,198,254,0)));background:-webkit-linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);background:-o-linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);background:-ms-linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);background:linear-gradient(45deg,rgba(69,198,254,0.65) 0%,rgba(69,198,254,0.65) 22%,rgba(69,198,254,0) 88%,rgba(69,198,254,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#a600c8ff', endColorstr='#0000c8ff',GradientType=1 );opacity:0;}
+.list-post-movie-news .item-overlay:hover {opacity:1;}
+.list-post-movie-news p {font-family:Helvetica, Arial, sans-serif;font-size:16px;color:#333333;line-height:24px;padding-bottom:12px;font-weight:400;margin:0px;}
+
+#right .movie-module.list-post {
+    background-color: #DEE2E3;
+    margin: 0 0 20px;
+    padding: 0;
+}
+#right .list-post-movie-news h2.module-title {
+    color: #333333;
+    padding: 9px 0 7px 15px;
+    font-weight: 700;
+    text-transform: lowercase;
+    font-size: 18px;
+    line-height: 20px;
+}
+#right .list-post-movie-news .news-item {
+    overflow: hidden;
+    padding: 10px;
+}
+#right .list-post-movie-news .image {
+    width: auto;
+    margin: 2px 10px 0px 0px;
+}
+#right .list-post-movie-news .image a {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+#right .list-post-movie-news .image img {
+    width: 60px;
+    height: 60px;
+}
+#right .list-post-movie-news .news-item:hover .item-overlay {
+    opacity: 1;
+}
+#right .list-post-movie-news .info {
+    color: #666666;
+    font-weight: 400;
+    width: calc(100% - 70px);
+}
+#right .list-post-movie-news .info .title {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: normal;
+}
+#right .list-post-movie-news .info p {
+    display: none;
+}
+#right .list-post-movie-news .byline {
+    font-size: 11px;
+    margin-top: 5px;
+    font-style: normal;
+}
+#right .list-post-movie-news .byline a {
+    font-size: 11px;
+    font-weight: 700;
+    font-style: normal;
+}
+#right .list-post-movie-news .border-clear {
+    border-bottom: none;
+    margin: 0;
+}
+							/*  emmys, oscars, summer kid movies css */
+#left .movie-module {border-radius:0;box-shadow:none;padding:0;border-bottom: 1px solid #dadada;margin-bottom: 20px;padding-bottom: 20px;}
+#left .module-title {color: #00c8ff; float: left; font-size: 28px; font-weight: 700; line-height: 34px; text-transform: lowercase;}
+#left .carousel-keyart-hub h3.module-title{margin-bottom:0;}
+.carousel-keyart-hub > .head {padding-bottom:0;}
+#left .movie-module.emmys-news, #left .movie-module.oscars-news, #left .movie-module.kid-perfect-news, #left .movie-module.family-movie-fun, #left .movie-module.golden-globes-news, #left .movie-module.horror-movies {border-bottom: none;}
+#left .module-title .title-grey {color: #666666; font-size: 28px; font-weight: 700;text-transform:none;}
+body.golden-globes #left .module-title .title-grey:first-of-type {color:#00c8ff;}
+.summer-banner, .fall-banner {display: block;margin: 0 auto 20px;width: 100%;}
+.oscar-banner {display: block;margin: 0 auto;width: 100%;}
+@media (min-width: 1024px) {.oscar-banner {margin-top: -15px;}}
+
+body.horror-movies #wrap .page-header h1 {
+    color: #00c8ff;
+    font-size: 34px;
+    font-weight: 700;
+    padding: 20px 20px 20px 0px;
+}
+body.horror-movies #wrap .page-header h1 .title-grey {
+    color: #666666;
+    font-weight: 700;
+}
+
+							.hero {background-color:#353535; color:#fff; margin: 110px auto 0 auto; position: relative; text-align: center; width: 100%; overflow: hidden; clear: both;}
+.has-gutters .hero {max-width: 970px;}
+.hero .container {height:100%;}
+.hero .h1 {font-size: 42px; font-weight: 700; letter-spacing: normal; line-height: 42px; display: block;}
+.hero .h1 h1 {color:#fff; font-weight:bold;}
+.hero h2 {font-size: 24px; font-weight: 700; letter-spacing: normal; line-height:34px; display: block; }
+.hero h2 a {font-weight: 700;}
+.hero .details {bottom:0px;display:inline-block;left:0px;padding:20px 20px 60px 20px;position:absolute;text-align:left;width:auto; max-width: 100%;}
+.hero button {margin-top:20px;}
+.hero .red {margin-right:10px;}
+
+#artwork, #info {height:100%;left:0px;position:absolute;top:0px;width:100%;}
+#artwork .container {background-position:center top;background-repeat:no-repeat;background-size:cover;max-width:1440px;}
+#info {text-shadow:0 2px 2px #000;}
+#info .container {position:relative;}
+
+.title.hero {border-bottom: none; height: 400px;}
+.title.ford .hero {height:333px;}
+.title.hero #viewport, .title.hero #viewport li {width:100%;}
+.title.hero  .details {max-width:none;}
+.title.hero .divider {color:#fff;}
+.title.hero .buttons {margin:10px 0 10px 0;}
+.title.hero .release-year {font-size:16px;}
+.title.hero .prompt {margin-top:10px;}
+.title.hero hr {margin:10px 0 10px 0;}
+.title.hero .button {color:#fff;float:left;height:50px;margin:0 5px 5px 0;padding-top:12px;text-shadow:none;}
+.title.hero .red {padding: 0px;}
+.title.hero img {position:relative;}
+.title.hero .icon {top:7px;}
+.title.hero .star {top:2px;}
+.title.hero .cta a {color:#fff;font-weight: 700;}
+.title.hero .plus-sign {color:#00c8ff;}
+.title #gradient, .title #gradient .container {background:none;}
+.title #artwork .container, .title #gradient .container {max-width:970px;}
+.title #artwork .container {background-position:right center;background-size:auto 100%;}
+.title #gradient .container {background:url("http://o.aolcdn.com/os/moviefone/img/gradient-hero-v3.png") no-repeat left top;background-size:100% 100%;}
+
+.hero .tomatoes-rating {background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') no-repeat 0px 0px; display: inline-block; height: 32px; position: relative; width: 31px;}
+.hero .metacritic-attribution, .hero .metacritic-attribution a {font-weight: 700;}
+.hero .details .rating.red {background: #ff0000;}
+.hero .details .rating.yellow {background: #ffcc33;}
+.hero .details .rating.green {background: #66cc33;}
+
+.hero .details .metacritic-details {display: inline-block; position: relative;}
+.hero .details .metacritic-details .rating-type {background: url("http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png") no-repeat scroll -358px -192px rgba(0, 0, 0, 0); display: inline-block; height: 22px; position: relative; top: 1px; width: 122px;}
+.hero .details .metacritic-details .metacritic-attribution {font-size: 10px; font-weight: 400; left: 25px; position: absolute; top: 20px;}
+
+.hero .rating-wrap { display: inline-block; height: 16px; top: 3px; position: relative; white-space: nowrap; }
+.hero .rating-wrap p.rate-label { float: left; margin-right: 10px; white-space: nowrap; font-weight: 700; padding: 0; line-height: 16px; }
+.hero .rating-wrap p.rate-label:after { content:":"}
+.hero .rating-wrap .star-rating-wrap { float: right; background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') -365px -32px no-repeat; }
+.hero .rating-wrap .star-rating-wrap .star-mask { background: none; }
+.hero .rating-wrap .star-rating-wrap .rating-bar { background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') -46px -64px no-repeat; }
+.hero .rating-wrap .star-rating-wrap.user-rating .rating-bar { background-position: -365px -48px; }
+
+.title.hero .details {width:100%;}
+.title.hero .options {height:38px;position:relative;margin-bottom:10px;}
+.title.hero p {padding-bottom:10px;}
+.title.hero .tv-hero-provider {float: left;}
+.title.hero .where-to-watch {background-color:rgb(0,0,0);background-color:rgba(0,0,0,.5);border-radius:5px;display:inline-block;margin:10px 0 10px 0;padding:20px;position:relative;}
+.title.hero .where-heading {padding-top:9px;text-transform:lowercase;font-size:16px;}
+.title.hero .season-heading {margin-bottom:10px;}
+
+.title.hero .next-starttime-wrap {display: none; height: 0px;}
+.title.hero .next-starttime-wrap .starttime {}
+.title.hero .next-starttime-wrap .starttime-channel {border-right: 1px solid #ffffff; font-weight: 700; padding: 3px 4px 0px 0px;}
+.title.hero .next-starttime-wrap .edit-provider{font-size: 12px; font-weight: 400;}
+
+.title.hero .custom-select {box-shadow:none !important;position:absolute;right:0;top:0;width:161px;}
+.title.hero .custom-select, .title.hero .custom-select .selected {color:#fff !important;text-shadow:none;}
+.title.hero .custom-select, .title.hero .custom-select li {background-color:#00c8ff;}
+.title.hero .custom-select, .title.hero .custom-select li:hover {background-color: #54ddff;}
+
+.title.hero .arrow-d-sml {background-position:-98px -248px;}
+.title.hero .provider {border-radius:3px;float:left;font-size:0;height:38px;margin-right:5px;padding:6px 10px 5px 10px;height:auto;}
+.title.hero .provider.red {font-size:16px;height:37px;padding:10px 20px 10px 20px;}
+.title.hero .balloon {background-image:url("http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png");background-position:-253px -40px;height:14px;margin-right:5px;width:19px;}
+.title.hero .bubble {background-color:#00C8FF;border-radius:2px;font-size:10px;font-weight: 700;padding:4px !important;position:relative;text-shadow:none;top:-2px;}
+
+.mandatory-share .share {left:10px !important;top:-30px !important;}
+
+.more-to-watch {display: block; text-align: right;margin-right: 5px; font-size:12px; padding-top: 2px;}
+
+@media only screen and (max-width : 767px) {
+   .hero {height:350px;margin-top:0px;}
+   .hero h1 {font-size:24px;line-height:34px;}
+   .hero h2 {font-size:18px;line-height:28px;}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1046px) {
+   .hero {height:600px;margin-top:50px;}
+   .mandatory-share .share {left:20px !important;top:-40px !important;}
+}
+
+@media only screen and (min-width : 1047px) {
+   /*.hero {height: 600px ;margin-top: -4px; padding-top: 76px;}*/
+	.mandatory-share .share {left:20px !important;top:-40px !important;}
+}
+
+/* The code below was inside the original module (inline). It was imported on 8/26/15 and needs to be audited for redunancies. */
+
+.title #artwork .container {
+   padding-top:28%;
+   opacity:0.3;
+}
+
+.title.hero {
+   height: 270px;
+}
+
+.has-hero #background-stripe {
+   background-color: #ffffff;
+}
+
+.title #artwork .container {
+   background-position: center;
+   background-size: 100%;
+}
+
+.hero h1 {
+   font-size: 30px;
+   line-height: 30px;
+   text-shadow: none;
+}
+
+.title.hero .next-starttime-wrap {
+   text-shadow: none;
+   margin-top: 6px;
+   padding-bottom: 0px;
+}
+
+.title.hero .where-heading {
+   text-shadow: none;
+}
+
+.red-text {
+   text-transform: capitalize;
+}
+
+.providers {
+   margin: 12px 0 0 166px;
+}
+
+.where-to-watch {
+   padding: 8px 20px 20px 20px !important;
+   margin: 6px 0 10px 0 !important;
+   min-height: 115px;
+   min-width: 200px;
+}
+
+.no-provider-text {
+   float: right;
+   margin-top: 12px;
+}
+
+@media only screen and (min-width: 1047px) {
+   .title.hero .details {
+      padding-bottom: 20px !important;
+      bottom: 18px;
+   }
+   .title.hero .options {
+      height: auto !important;
+      margin-bottom: 8px;
+   }
+   .title.hero .where-to-watch{
+      min-width:323px;
+      padding:20px !important;
+   }
+   .where-to-watch .blue {
+      left: 0;
+      top: 35px !important;
+   }
+}
+
+@media only screen and (min-width: 1280px) {
+   .title #artwork .container {
+      opacity:0.3;
+      padding-top:20%;
+   }
+}
+
+@media only screen and (max-width: 1046px) and (min-width: 768px) {
+   .desktop {
+      display: block !important;
+   }
+   .phone {
+      display: none !important;;
+   }
+   .desktop.header {
+      display: none !important;
+   }
+   .phone.header {
+      display: inline-block !important;
+   }
+   .title.hero .details {
+      bottom: 0;
+      padding-bottom: 40px !important;
+   }
+   .title.hero .options {
+      height: auto !important;
+      margin-bottom: 8px;
+   }
+   .title.hero .where-to-watch{
+      min-width:323px;
+      padding:20px !important;
+   }
+   .custom-select.light-gray {
+      width: 210px !important;
+   }
+   .where-to-watch .blue {
+      left: 0;
+      top: 35px !important;
+   }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 481px) {
+   #main-column-wrap #main-column {
+      margin-top: 0px !important;
+   }
+}
+
+@media only screen and (max-width : 767px) {
+   .no-provider-text {
+      float:none;
+      padding-top: 44px;
+      text-align: center;
+   }
+   .sticky-header #content-wrapper {
+      padding-top: 50px;
+   }
+   .provider.red.button {
+      width: 100%;
+   }
+   .provider.gray.button {
+      width: 48%;
+   }
+   .title.hero .options {
+      margin-bottom: 0px !important;
+      height: 26px !important;
+   }
+   .title.hero #info {
+      display: table;
+   }
+   .title.hero #info .container {
+      display: table-cell;
+      vertical-align: middle;
+   }
+   .title.hero .where-to-watch{
+      min-width:300px;
+      padding:10px !important;
+   }
+   .title.hero {
+      height: 300px !important;
+      margin-top:50px;
+   }
+   .title.hero .details {
+      padding: 12px !important;
+      position:relative;
+   }
+   .custom-select.blue {
+      width:100% !important;
+      text-align: center;
+   }
+   .providers {
+      margin-left: 0;
+      margin-top: 50px;
+   }
+   .where-to-watch{
+      min-height : 90px;
+   }
+   .where-to-watch .blue {
+      top: 30px !important;
+   }
+   .title.hero .next-starttime-wrap {
+      font-size: 14px;
+      line-height: 20px;
+   }
+   .title.hero .where-heading {
+      padding-top: 0px !important;
+   }
+   .title.hero .where-to-watch {
+      margin-top: 12px !important;
+   }
+   .custom-select.light-gray {
+      width: 100% !important;
+      text-align: center;
+   }
+   .custom-select.light-gray li {
+      font-weight: bold;
+      color: #333333;
+      text-transform: uppercase;
+   }
+   .custom-select.light-gray a {
+      font-family: helvetica;
+      font-size: 16px;
+      font-weight: bold !important;
+      text-transform: uppercase;
+   }
+}
+
+@media only screen and (max-width : 550px) {
+   .title #artwork .container {
+      background-position: right center !important;
+      background-size: auto 100% !important;
+   }
+}
+
+							.subnav {background-color:#dadada;position:relative;z-index:1;}
+.subnav .container {height:57px;}
+.subnav a {font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size: 13px;font-weight: bold;text-transform: uppercase;color: #333333;display: block;float: left;padding: 21px 20px 20px;}
+.subnav a:hover {background-color:#ececec;}
+.subnav a.active {background-color:#fff;}
+.subnav .container .tablet.phone {float:right;margin:10px 10px 0 0;}
+.subnav .nav {float:left;height:100%;}
+
+@media only screen and (max-width: 1046px) and (min-width: 768px){
+	.subnav .desktop a {
+	    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	    font-size: 12px;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    color: #333333;
+	}
+	.subnav a {
+	    padding-top: 23px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.subnav .container .tablet.phone {
+	    float: none;
+	    width: 100%;
+	    margin-right: 0px;
+	}
+}
+
+							.custom-select {border-radius:3px;display:inline-block;font-weight:400 !important;line-height:normal !important;margin:0;overflow:hidden;padding:0;font-size:0px;}
+.custom-select .arrow {background-image:url("http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png");background-repeat:no-repeat;cursor:pointer;height:11px;position:absolute;right:10px;top:14px;width:18px;}
+.custom-select ul, .custom-select li {list-style:none;margin:0;padding:0;}
+.custom-select.relative {position:relative;visibility:hidden;}
+.custom-select.relative .original, .custom-select.relative .selected li:nth-child(n+2) {display:none;}
+.custom-select ul {cursor:pointer;font-size:16px;}
+.custom-select li {padding:10px 38px 10px 10px;}
+.custom-select .selected, .custom-select li:last-child {margin-bottom:0;}
+.custom-select select {left:0px;opacity:0;position:absolute;top:0px;}
+.custom-select a {display:inline-block;font-weight:400 !important;text-decoration:none;width:100%;}
+.custom-select.absolute {position:absolute;z-index:99999;}
+.custom-select.absolute ul {max-height:600px;overflow-y:auto;}
+.custom-select.absolute .selected {left:0;position:absolute;top:0;}
+
+.custom-select.white {background-color:#fff;border:1px solid #ccc;color:#333 !important;}
+.custom-select.absolute.white {box-shadow:none;margin:-1px 0 0 -1px;}
+.custom-select.white .arrow {background-position:-40px -248px;}
+.custom-select.white li {background-color:#fff;}
+.custom-select.white a {color:#333 !important;}
+.custom-select.white li:hover {background-color:#00c8ff; color:#fff !important;}
+.custom-select.white li:hover a {color:#fff !important;}
+
+.custom-select.white li.selected:hover {background: #ffffff; color: #333333!important;}
+.custom-select.white li.selected:hover a {color: #333333!important;}
+
+.custom-select.light-gray {background-color:#dadada;color:#333 !important;}
+.custom-select.absolute.light-gray {box-shadow:0 0 10px #fff;}
+.custom-select.light-gray .arrow {background-position:-40px -248px;}
+.custom-select.light-gray li {background-color:#dadada;}
+.custom-select.light-gray a {color:#333 !important;}
+
+.custom-select.light-gray li:hover {background-color:#00c8ff; color:#fff !important;}
+.custom-select.light-gray li:hover a {color:#fff !important;}
+
+.custom-select.light-gray li.selected {display:block;}
+.custom-select.light-gray li.selected:hover {background: #dadada; color: #333333!important;}
+.custom-select.light-gray li.selected:hover a {color: #333333!important;}
+
+.custom-select.blue {background-color:#00ccff;color:#fff !important;}
+.custom-select.absolute.blue {box-shadow:0 0 10px #fff;}
+.custom-select.blue .arrow {background-position:-98px -248px;}
+.custom-select.blue li {background-color:#00c8ff;}
+.custom-select.blue a {color:#fff !important;}
+.custom-select.blue li:hover {background-color: #54ddff !important;}
+
+.custom-select.dark-gray {background-color:#acacac;color:#fff !important;}
+.custom-select.absolute.dark-gray {box-shadow:0 0 10px #fff;}
+.custom-select.dark-gray .arrow {background-position:-98px -248px;}
+.custom-select.dark-gray li {background-color:#acacac;}
+.custom-select.dark-gray a {color:#fff !important;}
+
+@media only screen and (max-width: 767px){
+	.custom-select.light-gray {
+	    width: 100% !important;
+	    text-align: center;
+	}
+}
+
+
+							/*  MAIN COLUMN  ================  */
+.grid-module .head {position:relative; width: 100%;}
+.grid-module .head h2, #main-column .grid-module .head h1 {color: #333333; font-size: 36px; display: inline; font-weight: 100; line-height: 46px; letter-spacing: -0.5px; margin-left: 10px; text-transform: none;}
+.grid-module .head .divider {background: none repeat scroll 0 0 #C0C0C0; color: #A4A4A4; display: inline-block; font-size: 40px; font-weight: 400 !important; height: 25px; margin: 0 10px; overflow: hidden; position: relative; top: 3px; width: 1px;}
+.grid-module .head a {font-size: 16px; position: relative;}
+.grid-module .head a span, .head a img {position:relative;}
+.grid-module .head a span {}
+.grid-module .head .view-all {font-size: 18px; top: 8px;}
+.grid-module .head .view-all .arrow-r-sml {display: inline-block; left: 5px; position: relative; top: 0px;}
+.grid-module .head .view-all:hover .arrow-r-sml,
+.grid-module .head .view-all .arrow-r-sml:hover {background-position:-11px -248px;}
+.grid-module .head select.select {display: none; opacity: 0; position: absolute; right: 16px; top: 17px; z-index: 3; width: 137px;}
+
+.article-grid {background: none; padding: 0px; width: auto;}
+.article-grid .article, #main-column .article-grid .article-more {margin-bottom: 20px; padding: 0px; width: 49%;}
+.article-grid .article:nth-of-type(2n+1) {padding: 0px 17px 0px 0px;}
+.article-grid .article:nth-of-type(2n) {padding: 0px 4px 0px 13px;}
+.article-grid .article .playmebtn, #main-column .article-grid .article-more .playmebtn {background:url("http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png") no-repeat scroll 0px 0px transparent; height: 46px; left: 50%; margin: -23px 0px 0px -23px; position: absolute; top: 50%; width: 46px;}
+.article-grid .article .playmebtn:hover, #main-column .article-grid .article-more .playmebtn:hover {background-position: 0px -46px;}
+.article-grid .article .play-btn, #main-column .article-grid .article-more .play-btn {background:url("http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png") no-repeat scroll 0px 0px transparent; height: 46px; left: 50%; margin: -23px 0px 0px -23px; position: absolute; top: 50%; width: 46px;}
+.article-grid .article .play-btn:hover, #main-column .article-grid .article-more .play-btn:hover {background-position: 0px -46px;}
+
+.home-movie-news .article .gradient, #main-column .article .gradient, #main-column .home-movie-news .article-more .gradient, #main-column .article-more .gradient {height: 50px;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.home-movie-news .article p, .blog #main-column .home-movie-news .article iframe, .blog #main-column .home-movie-news .article div:not(.gradient):not(.image-wrap):not(.hover-cover) {display:none !important;}
+.article-grid.weekend-watchlist-grid .article-more:nth-of-type(even) {
+ padding: 0px 4px 0px 13px;
+}
+.article-grid .article-more:nth-of-type(odd) {
+ padding: 0px 17px 0px 0px;
+}
+
+
+.article-grid .article, .article-grid .article-more {display:inline-block;overflow: hidden; padding: 5px; position: relative;vertical-align:top;}
+.article-grid .article a, .article-grid .article-more a {color: #666666; font-weight: 400; font-size: 14px; line-height: 15px;}
+.article-grid .article .image-wrap, .article-grid .article-more .image-wrap, .article-grid .main-article .image-wrap  {position: relative; width: 100%;}
+.article-grid .article h2, .article-grid .article-more h2 {color: #333333; font-size: 18px; font-weight: 700; line-height: 24px; margin: 10px 0px 0px 0px;}
+.article-grid img {display: block; width: 100%;}
+.article-grid span {color: #A8A8A8; display: block; font-size: 12px;}
+.article-grid .gradient {bottom: 0px; height: 200px; position: absolute; width: 100%;}
+.article-grid a {color: #333333;}
+
+.list-slideshow {
+ width: 100%;
+}
+							#left .movie-module.gallery-module {border-bottom:none;}
+.gallery-module {margin-top:0 !important;margin: 20px 0px 0px;padding:20px;}
+.gallery-module .aol-twist-wrapper.fullscreen {z-index: 2147483647; }
+.gallery-module a {color: #ffffff;}
+.aol-twist-wrapper .aol-twist-flyout .aol-twist-flyout-head .aol-twist-enter-fullscreen {background: none repeat scroll 0 0 #111111; border: 1px solid #000000; cursor: pointer; display: inline-block; font-size: 11px; font-weight: 400; margin: 5px 0 0 17px; padding: 1px 10px !important;}
+.aol-twist-wrapper .aol-twist-flyout .aol-twist-flyout-content {top: 40px;}
+ul.aol-twist-thumbs {padding: 10px !important;}
+ul.aol-twist-thumbs li {margin: 4px;}
+.blog #main-column .gallery-module h1, .blog .gallery-module h3 {background: none; color: #000000; font-size: 20px; font-weight: 400; }
+h3.aol-twist-slide-title, h3.aol-twist-flyout-title {background: transparent none; font-size: 17px; border-bottom: 0; padding:0 0 2px; color: #ffffff}
+.gallery-module .aol-twist-wrapper .aol-twist-infobar .aol-twist-slide-caption, .aol-twist-flyout-caption {font-size: 12px !important; color: #fff; }
+#permalink .gallery-module .aol-twist-wrapper p.aol-twist-flyout-caption, #permalink .gallery-module .aol-twist-wrapper p.aol-twist-flyout-caption p {color: #ffffff; line-height: 20px;}
+h4.aol-twist-flyout-count {font-size: 12px !important;}
+.aol-twist-wrapper .aol-twist-flyout .aol-twist-flyout-ad {border: 0; }
+.aol-twist-wrapper .aol-twist-flyout {z-index: 999999;-webkit-transform: translateZ(0);}
+.aol-twist-wrapper .aol-twist-thumbs-container, .aol-twist-wrapper .aol-twist-slide-wrapper {z-index: 9999999; }
+.gallery-module a:hover {color: #666;}
+.gallery-module .aol-knot-wrapper {background: transparent none; border:0;}
+.gallery-module .df-inline-slide, .gallery-module .aol-knot-slide-wrapper {background: transparent none;}
+.gallery-module .aol-knot-nav-prev:hover,.gallery-module .aol-knot-nav-next:hover{background:transparent;}
+.gallery-module .aol-knot-slide-video.aol-knot-active-slide iframe {margin: 0 auto !important;}
+.gallery-module .aol-twist-wrapper .aol-twist-slide-wrapper .aol-twist-loading-indicator {background: none repeat scroll 0 0 #000000; color: #FFFFFF;   font-size: 11px; left: 0; letter-spacing: 2px; margin: 0 auto; opacity: 0.4; padding: 5px 0; position: absolute; right: 0; text-align: center; text-shadow: 1px 1px 3px #000000; top: 47%; width: 25%;}
+.gallery-module .aol-knot-slide-video iframe {width: 85% !important; margin: 0 !important;}
+.gallery-module .movie-module-body {background: transparent; margin:0; padding: 20px; border:1px solid #DADADA; box-shadow:none; }
+.gallery-module .df-inline-info {padding: 0 20px 20px;}
+#permalink .gallery-module .see-all-galleries,
+.gallery-module .see-all-galleries {background: none repeat scroll 0 0 #00c8ff; border: medium none; clear: both; color: #FFFFFF; display: block; float: right; font-size: 16px; font-weight: 400; margin: 0px 0px 10px 0px; padding: 10px; text-align: center; width: 100%;}
+#permalink .gallery-module .see-all-galleries:hover,
+.gallery-module .see-all-galleries:hover {background: #54ddff;}
+.gallery-module .aol-knot-fullscreen-right-thumbs {  bottom: 310px; left: 7px;  position: absolute; top: 150px;  width: 315px; }
+.gallery-module .aol-knot-fullscreen-wrapper {display: none;}
+.gallery-module .aol-knot-fullscreen-wrapper .aol-knot-fullscreen-right-infobar {color: #D8D8D8; font-size: 11px; height: 450px; line-height: 14px; margin: -30px 0 6px;  overflow-x:hidden;  padding: 0 20px 10px; width: 282px; word-wrap: break-word;  font: 15px/1.5em !important; letter-spacing: normal;}
+.gallery-module .aol-knot-fullscreen-share {display: none;}
+.gallery-module .aol-knot-fullscreen-title {font-weight: 700; font-size: 16px; margin: 0 0 6px; color:#fff;}
+.gallery-module .aol-knot-fullscreen-caption{font-size: 12px; margin: 0 0 6px; color:#d8d8d8; line-height: 14px;}
+.gallery-module .aol-knot-fullscreen-caption p {  font-size: 12px !important;line-height: 18px !important;color: #FFF;width: 95%;margin: 0 2% 0 0;}
+.gallery-module .aol-knot-nav-prev, .gallery-module .aol-knot-nav-next, .gallery-module .aol-knot-thumb-prev, .gallery-module .aol-knot-thumb-next {font-size: 100px; color:#fff;}
+.gallery-module .aol-knot-default-enter-fullscreen {background: none repeat scroll 0 0 #111111; border-color: #2F2F2F; border-image: none; border-radius: 4px 0 0 4px; border-style: solid; border-width: 1px 0 1px 1px; bottom: 6px; color: #D8D8D8; cursor: pointer; font-size: 12px; font-weight: 400; height: 22px; line-height: 23px; padding: 10px; position: absolute; right: 0; text-align: left;}
+.gallery-module .aol-knot-default-enter-fullscreen:hover {background: #000;}
+.gallery-module .aol-knot-slideshow-title, .aol-knot-slide-info {color: #D8D8D8; font-size: 12px; line-height: 16px; padding: 20px 20px 10px;}
+.gallery-module .aol-knot-fullscreen-right {width: 360px; background: none repeat scroll 0 0 #282A2A;}
+.gallery-module .aol-knot-thumb:active,.gallery-module .aol-knot-thumb.active, .gallery-module .aol-knot-thumb:hover {border:5px solid #00c8ff;height:80px !important;width:80px !important;}
+.gallery-module .aol-knot-fullscreen-exit, .gallery-module .aol-knot-fullscreen-bottom {display:none;}
+.gallery-module .aol-knot-nav-prev, .gallery-module .aol-knot-nav-next, .gallery-module .aol-knot-thumb-prev, .gallery-module .aol-knot-thumb-next {width: 40px;}
+#permalink .gallery-module blockquote {background:transparent;border-left:0;margin:0;padding:0; quotes: none;}
+#permalink .gallery-module blockquote:before {color:#ccc;content:open-quote;font-size:4em;line-height:.1em;margin-right: 0;vertical-align:auto;}
+#permalink .gallery-module blockquote p {display:block;}
+#permalink .gallery-module  .twitter-tweet {border-color: transparent !important; margin: 0 !important; }
+.post .post-content .gallery-module .fmvps-wrapper object, .post .post-content .gallery-module #SmartPlayer_0 object {width: 500px; margin: 0;}
+.gallery-module div.aol-knot-enter-fullscreen {display:none !important;}
+.gallery-module .aol-knot-enter-fullscreen {background: none repeat scroll 0 0 #111111; cursor: pointer; padding: 15px 0; width: 100%; }
+.gallery-module .aol-knot-enter-fullscreen:hover {background: none repeat scroll 0 0 #000;}
+.gallery-module .aol-knot-thumbs-wrapper .aol-knot-enter-fullscreen:hover , .gallery-module .aol-knot-thumbs-wrapper .aol-knot-enter-fullscreen {background: transparent;  font-size:0;padding: 0;}
+.gallery-module .aol-knot-thumb {border:none;opacity:1 !important;margin:4px !important;width:80px;height:80px;}
+.gallery-module .aol-knot-fullscreen-caption {background: none repeat scroll 0 0 #282A2A; position: absolute; z-index: 1; height: 150px; overflow-x: auto;}
+.gallery-module .aol-knot-fullscreen-title {background: none repeat scroll 0 0 #282A2A; height: auto; margin: 0; padding: 0 0 4px; position: relative; width: 100%; z-index: 123; line-height: 20px;}
+.gallery-module .aol-knot-fullscreen-wrapper .aol-knot-fullscreen-right-infobar {margin:0;}
+.gallery-module .aol-knot-fullscreen-right .aol-share {margin: 0px auto; text-align: center; width: 100%;}
+.gallery-module .aol-knot-fullscreen-right .aol-share a {display: inline-block; float: none;}
+.knot-fullscreen #container, .knot-fullscreen .mf-banner-container {display:none;}
+
+.gallery-module .gallery-wrap .gallery-head {color: #00C8FF; font-size: 18px; font-weight: 400; margin-bottom: 20px; position: relative; width: 100%;}
+.gallery-module .gallery-wrap .gallery-head .gallery-name {border-left: 1px solid #DADADA; color: #333333; display: inline-block; font-size: 18px; font-weight: 400; margin: 0px 0px 10px 3px; padding: 5px 0 0 8px; }
+.gallery-module .gallery-wrap .gallery-head .gallery-poster {display: block; margin: 10px 0px; position: relative; width: 100%;}
+
+#movie-photos-all h1 {color: #333333 !important;position:absolute;font-size: 16px;font-weight: 700;line-height: 24px;}
+
+#movie-photos-all{
+	box-shadow:none;
+	padding:0;
+}
+
+#movie-photos-all .gallery-module{
+	background: transparent;
+    margin: 0 !important;
+    padding: 0;
+    border: 0;
+}
+
+#movie-photos-all .gallery-module .gallery-wrap{border: 1px solid #dadada;margin-bottom: 20px;padding: 20px;}
+
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-facebook, #movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-twitter,
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-pinterest, #movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-email{
+	background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') no-repeat 0px 0px transparent;
+    display: block;
+    float: left;
+    height: 30px;
+    width: 30px;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-facebook, #movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-twitter,
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-pinterest, #movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-email{
+    background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') no-repeat 0px 0px transparent;
+    display: block;
+    float: left;
+    height: 30px;
+    width: 30px;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-facebook{
+    background-position: -60px -122px;
+}
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-facebook:hover{
+    background-position: -60px -152px;
+}
+
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-twitter{
+    background-position: 0 -122px;	
+}
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-twitter:hover{
+    background-position: 0 -152px;	
+}
+
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-pinterest{
+    background-position: -90px -122px;	
+}
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-pinterest:hover{
+    background-position: -90px -152px;	
+}
+
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-email{
+	background-position: -270px -122px;	
+}
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-email:hover{
+	background-position: -270px -152px;	
+}
+
+#movie-photos-all .gallery-module .aol-knot-fullscreen-right .aol-share a{display:inline-block !important;float:none !important;}
+
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-facebook{
+    background-position: -60px -122px;
+}
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-facebook:hover{
+    background-position: -60px -152px;
+}
+
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-twitter{
+    background-position: 0 -122px;  
+}
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-twitter:hover{
+    background-position: 0 -152px;  
+}
+
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-pinterest{
+    background-position: -90px -122px;  
+}
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-pinterest:hover{
+    background-position: -90px -152px;  
+}
+
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-email{
+    background-position: -270px -122px; 
+}
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a.aol-share-email:hover{
+    background-position: -270px -152px; 
+}
+
+#movie-photos .gallery-module .aol-knot-fullscreen-right .aol-share a{display:inline-block !important;float:none !important;}
+
+							#left #movie-credits-full.movie-module {border-bottom:none;}
+#movie-credits-full {position:relative;padding:0;box-shadow:none;}
+#movie-credits-full a, #movie-credits-full a:hover {color:#333;}
+#movie-credits-full .tab-content img {display:block;height:auto;width:100%;}
+#movie-credits-full .tab-content li {border-bottom:1px solid #dadada;padding:10px 0 10px 0;}
+#movie-credits-full .tab-content li:first-child {padding-top:0;}
+#movie-credits-full .tab-content li:last-child {border-bottom:none;padding-bottom:0;}
+#movie-credits-full .image-wrap {border:1px solid #dadada;display:inline-block; float: left; max-height:80px;max-width:80px;overflow:hidden;position:relative;}
+#movie-credits-full .image-wrap:hover .hover-cover {display: block;}
+#movie-credits-full .tab-content span {display: block; float: left; left:10px; margin-right: 5px; position:relative;}
+#movie-credits-full .filter-wrap {height: 30px; position: absolute; right: 0; top: 60px; width: 174px;}
+#movie-credits-full .filter-wrap select {display: none; height: 100%; opacity: 0; position: absolute; width: 100%; z-index: 3;}
+#movie-credits-full li {display:table;height:80px;text-align:left;width:100%;}
+#movie-credits-full .credit-image {display:table-cell;height:100%;width:80px;}
+#movie-credits-full .credit-text {display:table-cell;height:100%;padding-left:10px;vertical-align:middle;}
+
+/* Taken from css/old/mf-modules.css */
+.movie-module.four-column .grid {font-size:0;}
+.movie-module.four-column .grid li {display:inline-block;font-size:16px; margin-top:0px; padding-right:10px;vertical-align:top;width:25%;word-wrap:break-word;}
+.movie-module.four-column .grid li span strong {font-size: 14px;}
+
+.movie-module.four-column .grid li img {display:block;height:auto;width:100%;}
+.movie-module.four-column .grid li a, .cast li a:hover {color:#333;}
+.movie-module.four-column .grid li span {display:block; font-size: 14px; line-height: 15px; margin-top: 5px; word-spacing: -2px;}
+.movie-module.four-column .image-wrap {border:1px solid #dadada;max-height:193px;margin-bottom:10px;overflow:hidden;position:relative;width:100%;}
+.movie-module.four-column .image-wrap:hover .hover-cover, .movie-module.four-column .image-wrap:hover .hover-cover-main {display: block;}
+.movie-module.four-column hr {background-color:#FFFFFF;border:none;height:1px;margin-top:20px;width:100%;}
+
+.column .movie-module{
+	/*border-bottom: 1px solid #dadada;*/
+    margin-bottom: 20px;
+    padding-bottom: 20px;	
+}
+
+.column .movie-module:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.column hr{
+    background-color: #dadada;
+    border: none;
+    height: 1px;
+    margin: 20px 0 20px 0;	
+}
+
+.column .featured-cast{
+    padding:0 0 20px;
+    border:0;
+    box-shadow:none;
+	/*border-bottom: 1px solid #dadada;*/
+}
+							#movie-reviews {padding-top: 20px; width: 100%;box-shadow:none;padding:20px 0 0 0;}
+
+#movie-reviews .rating-wrap {float: left;}
+#movie-reviews .rating-wrap .rating {display: block; float: left; font-family: Helvetica, Arial, sans-serif; font-size: 25px; font-weight: 700;}
+#movie-reviews .rating-wrap .copy {float: left;}
+#movie-reviews .rating-wrap .copy .rating-type {font-size: 18px; font-weight: 400;}
+#movie-reviews .rating-wrap .copy .rating-basis {display: block; font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 14px;}
+
+#movie-reviews .rating-rotten-tomatoes {padding-top: 8px; width: 57%;}
+#movie-reviews .rating-rotten-tomatoes .rating {font-weight: 700;}
+#movie-reviews .rating-rotten-tomatoes .rating:after {content: "%"; display: inline-block; font-size: 18px; margin-right: 10px; position: relative; top: -9px;}
+#movie-reviews .rating-rotten-tomatoes .rating span {background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') left -395px no-repeat; display: block; float: left; height: 31px; margin-right: 7px; position: relative; top: -8px; width: 31px;}
+#movie-reviews .rating-metacritic {width: 43%;}
+#movie-reviews .rating-metacritic .rating-type {background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') no-repeat -181px -182px; display: block; height: 40px; margin-bottom:20px;width: 176px;}
+#movie-reviews .rating-metacritic .rating {background: #dddddd; color: #FFFFFF; height: 50px; line-height: 52px; margin-right: 10px; padding: 0px; text-align: center; width: 50px;}
+#movie-reviews .rating-metacritic .rating.red {background: #ff0000;}
+#movie-reviews .rating-metacritic .rating.yellow {background: #ffcc33;}
+#movie-reviews .rating-metacritic .rating.green {background: #66cc33;}
+#movie-reviews .rating-metacritic .copy .rating-basis {float: right; left: -22px; position: relative; top: -30px;}
+
+#movie-reviews .review-write {background: #00c8ff; margin-bottom: 20px; padding: 20px; position: relative; width: 100%;}
+#movie-reviews .review-write .head .title {color: #ffffff; float: left; font-weight: 400;}
+
+#movie-reviews .review-write .head .rating-wrap {float: right;}
+#movie-reviews .review-write .head .rating-wrap p {color: #FFFFFF; display: block; float: left; font-weight: 400; line-height:normal;margin: 0 10px 0 0; padding: 0px;}
+#movie-reviews .review-write .head .rating-wrap .rating-star {background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') no-repeat -163px -66px; cursor: pointer; display: block; float: left; height: 17px; margin: 0 3px 0 0; position: relative; width: 17px;}
+#movie-reviews .review-write .head .rating-wrap .star-5 {margin-right: 0;}
+#movie-reviews .review-write .head .rating-wrap.rated .rating-star { background: none; }
+#movie-reviews .review-write .head .rating-wrap.stars-1 .star-1 {background-position: -145px -66px;}
+#movie-reviews .review-write .head .rating-wrap.stars-2 .star-1, #movie-reviews .review-write .head .rating-wrap.stars-2 .star-2 {background-position: -145px -66px;}
+#movie-reviews .review-write .head .rating-wrap.stars-3 .star-1, #movie-reviews .review-write .head .rating-wrap.stars-3 .star-2, #movie-reviews .review-write .head .rating-wrap.stars-3 .star-3 {background-position: -145px -66px;}
+#movie-reviews .review-write .head .rating-wrap.stars-4 .star-1, #movie-reviews .review-write .head .rating-wrap.stars-4 .star-2, #movie-reviews .review-write .head .rating-wrap.stars-4 .star-3, #movie-reviews .review-write .head .rating-wrap.stars-4 .star-4 {background-position: -145px -66px;}
+#movie-reviews .review-write .head .rating-wrap.stars-5 .star-1, #movie-reviews .review-write .head .rating-wrap.stars-5 .star-2, #movie-reviews .review-write .head .rating-wrap.stars-5 .star-3, #movie-reviews .review-write .head .rating-wrap.stars-5 .star-4, #movie-reviews .review-write .head .rating-wrap.stars-5 .star-5 {background-position: -145px -66px;}
+#movie-reviews .review-write .head .rating-wrap .star-rating-wrap { float: right; position:relative; top:-3px; }
+#movie-reviews .review-write .review-text {border-radius: 3px; height: 130px; margin: 5px 0 10px; padding: 10px; resize: none; width: 100%;}
+#movie-reviews .review-write .foot .button {background: #00b2e3; color: #ffffff; display: block; float: right; margin: 0px 0px 0px 10px;}
+#movie-reviews .review-write .foot .button:hover {background: #54ddff; color: #ffffff;}
+
+#critic-reviews li:nth-child(n+2) {padding-top:15px;}
+
+
+/*#movie-reviews .body{
+	border-top: 1px solid #DADADA;
+    padding: 30px 0;
+}*/
+
+#movie-reviews .review-write .head .title, #movie-reviews .review-write .head .rate-label, #movie-reviews .tab-wrap .tab-title{
+	text-transform: lowercase;
+}
+
+.tab-wrap {position: relative; z-index: 2;}
+.tab-wrap .tab-item {background-color: #ededed;border: 1px solid #dfdfdf;border-bottom: none;border-radius: 3px 3px 0px 0px;cursor: pointer;display: inline-block;padding: 15px 20px;}
+.tab-wrap .tab-item:last-child {margin-right:0;}
+.tab-wrap .tab-item:hover {background-color:#ececec;}
+.tab-wrap .tab-item.active {background-color:#ffffff;}
+.tab-wrap .tab-item .tab-title {font-size: 16px; font-weight: 400;}
+.tab-wrap .tab-item .tab-count {font-size: 14px;}
+
+.tab-content-wrap {position: relative; z-index: 1;border: 1px solid #dfdfdf;top:-1px;}
+.tab-content-wrap .tab-content {display: none; position: relative; width: 100%;padding:20px;}
+.tab-content-wrap .tab-content.active {display: block;}
+
+.filter-wrap {height: 30px; position: absolute; right: 0; top: 60px; width: 174px;}
+.filter-wrap select {display: none; height: 100%; opacity: 0; position: absolute; width: 100%; z-index: 3;}
+
+.tab-content-wrap .tab-content ul {}
+.tab-content-wrap .tab-content ul li {border-bottom: 1px dotted #aaaaaa; }
+.tab-content-wrap .tab-content ul li:last-of-type {border-bottom: none;}
+
+.tab-content-wrap .tab-content .review-head {position: relative;}
+.tab-content-wrap .tab-content .review-head .rating {background: #dddddd; color: #FFFFFF; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; height: 40px; line-height: 42px; margin-right: 10px; padding: 0px; text-align: center; width: 40px;}
+.tab-content-wrap .tab-content .review-head .rating.red {background: #ff0000;}
+.tab-content-wrap .tab-content .review-head .rating.yellow {background: #ffcc33;}
+.tab-content-wrap .tab-content .review-head .rating.green {background: #66cc33;}
+
+.tab-content-wrap .tab-content .review-head .info {display: inline-block; position: absolute; top: 4px;}
+.tab-content-wrap .tab-content .review-head .info span {font-size: 14px;}
+.tab-content-wrap .tab-content .review-head .info .date:after {content: "|"; font-size: 22px; font-weight: 400; margin: 0px 0px 0px 5px; position: relative; top: 3px;}
+.tab-content-wrap .tab-content.user-tab .review-head .info .date {font-weight:bold;}
+.tab-content-wrap .tab-content.user-tab .review-head .info .critic {font-weight:bold;}
+.tab-content-wrap .tab-content .review-head .info .critic:after {content: "|"; font-size: 18px; font-weight: 500; margin: 0px 5px; position: relative; }
+.tab-content-wrap .tab-content .review-head .info .title {}
+.tab-content-wrap .tab-content .review-head .info .report-user {color: #333333; display: block; font-size: 12px;}
+
+.tab-content-wrap #user-reviews .review-head .info { position: static; }
+.tab-content-wrap #user-reviews .review-head .info .critic:after {content: ""; }
+.tab-content-wrap #user-reviews .review-head div.rating-wrap { margin: 5px 0; float: left; }
+.tab-content-wrap #user-reviews .review-head .info .report-user { display: inline-block; margin: 3px 0; font-weight: 400; }
+.tab-content-wrap .tab-content .review-body {}
+.tab-content-wrap .tab-content .review-body .review-text {margin-top: 6px; word-wrap: break-word;}
+.tab-content-wrap .tab-content .review-body .review-text .show-more {font-size: 12px; font-weight: 700;text-transform: lowercase;}
+
+
+@media only screen and (max-width: 840px) and (min-width: 678px){
+	.tab-wrap .tab-item {
+		width: 48%;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.tab-wrap .tab-item {
+		width: 48%;
+	}
+}
+							#tms-attribution {background:url("http://o.aolcdn.com/os/moviefone/img/attribution-tms.png") no-repeat;height:25px;width:102px;}
+
+							.providers {
+	margin: 0;
+    padding: 0;
+}
+.movie-module {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+}
+#left .module-title .title-grey {
+    text-transform: none;
+}
+#left .movie-module .head .view-all {position: absolute; font-size: 18px; top: 8px; right: 15px;}
+#left .movie-module .head .view-all .arrow-r-sml {display: inline-block; left: 5px; position: relative; top: 3px;}
+#left .movie-module .head .view-all:hover .arrow-r-sml,
+#left .movie-module .head .view-all .arrow-r-sml:hover {background-position:-11px -248px;}
+#left .image-wrap:hover .hover-cover {display:block;}
+
+/*  ==================================================================================================================  */
+/*  MOVIE TRAILERS  (movie-trailers-trailers)  =======================================================================  */
+/*  ==================================================================================================================  */
+
+.movie-trailersclips {position: relative; margin: 0;}
+.movie-trailersclips .head {border-bottom: 0;}
+.movie-trailersclips .head h3 {}
+.movie-trailersclips .head h3 a {color: #fff; display: inline-block; padding: 0 30px 0 0;}
+.movie-trailersclips .body {position:relative;}
+.movie-trailersclips .article {margin-bottom:0 !important;}
+
+/*  TRAILER ITEMS  ==============  */
+.movie-trailersclips .trailer-item {float: left; margin: 0px 0px 20px 0px; position: relative; width: 100%;}
+.movie-trailersclips .trailer-item img {display: block; width: 100%;}
+.movie-trailersclips .trailer-item .playmebtn {background:url("http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png") no-repeat scroll 0px 0px transparent; bottom: 20px; height: 46px; left: 20px; position: absolute; width: 46px;}
+.movie-trailersclips .trailer-item .playmebtn:hover {background-position: 0px -46px;}
+.movie-trailersclips .trailer-item .imagelink {text-decoration: none;}
+.movie-trailersclips .trailer-item .video-playing {display: none;}
+
+/*  GRADIENT  ===================  */
+.movie-trailersclips .trailer-item .gradient {bottom: 0px; left: 0px; position: absolute; right: 0px; top: 60px;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 2%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(2%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.movie-trailersclips .trailer-item:hover .gradient {top: 0px;}
+.movie-trailersclips .trailer-item .video-playing .gradient {bottom: 4px; left: 4px; right: 4px;}
+.movie-trailersclips .trailer-item:hover .video-playing .gradient {top: 4px;}
+
+/*  PHOTO NAME  =================  */
+.movie-trailersclips .trailer-item .photo-name {bottom: 33px; color:#fff; font-size: 14px; font-weight: 700; left: 80px; text-decoration: none; position: absolute; line-height: 12px;}
+.movie-trailersclips .trailer-item .photo-name a {color: #fff; font-size:11px; font-weight: 700;}
+.movie-trailersclips .trailer-item .video-playing .photo-name {bottom: 20px; left: 20px; }
+
+/*  ==================================================================================================================  */
+/*  OVOD  =========================================================================================================  */
+/*  ==================================================================================================================  */
+
+.movie-module.ovod-options .body {border: 1px solid #dadada; padding: 0px;}
+.movie-module.ovod-options .text {float:left;}
+.movie-module.ovod-options .ovod-item {border-bottom: 1px dotted #dadada; padding: 18px 0px 10px 0px;}
+.movie-module.ovod-options .ovod-item:last-child {border-bottom:none; margin-bottom:0;}
+.movie-module.ovod-options .ovod-item.next-episode {background: #f4f4f4;}
+.movie-module.ovod-options .ovod-item.next-episode .heading {font-size: 20px; font-weight: 700; padding: 0px 0px 10px 20px;}
+.movie-module.ovod-options .ovod-item .watch-now, .movie-module.ovod-options .ovod-item .more-info {margin-right: 20px;}
+.movie-module.ovod-options .ovod-item .text {padding-left: 20px;}
+.movie-module.ovod-options .ovod-item.next-episode .text {padding-right: 20px;}
+.movie-module.ovod-options .ovod-item .text .episodic-data {padding-bottom: 0px;}
+.movie-module.ovod-options .ovod-item .text .epi-season {font-weight: 700;}
+.movie-module.ovod-options .ovod-item .text .airdate {display: block; font-size: 14px;}
+.movie-module.ovod-options .ovod-item .text .synopsis {font-size: 14px; line-height: 20px; margin-top: 10px;}
+
+.movie-module.ovod-options .ovod-item .ovod-option-providers {max-height: 0px;}
+.movie-module.ovod-options .ovod-item.loading .ovod-option-providers {max-height: 200px;}
+.movie-module.ovod-options .ovod-item.open .ovod-option-providers {max-height: 1000px;}
+.movie-module.ovod-options .ovod-item .episode-loading {display: none; text-align: center;}
+.movie-module.ovod-options .ovod-item .episode-loading span {position: relative; top: 2px;}
+.movie-module.ovod-options .ovod-item.loading .episode-loading {display: block;}
+.movie-module.ovod-options .ovod-item .ovod-option-content {display: none;}
+.movie-module.ovod-options .ovod-item.open .ovod-option-content {display: block;}
+
+.movie-module.ovod-options .ovod-item .ovod-option-providers .synopsis {padding: 10px 20px 10px 20px;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap {padding: 0px 10px;position: relative; width: 100%;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .ovod-option-provider {float: left; padding: 10px; position: relative; width: 33.3%;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .ovod-option-inner-wrap {border: 1px solid #dadada; position: relative; width: 100%;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .logo {display: inline-block; height: 46px; position: relative; text-align: center; width: 84px; vertical-align: middle;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .logo img {position: relative; height: 100%;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .info {display: inline-block; font-size: 12px; line-height: normal; vertical-align: middle;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .info .type {font-weight: 700; margin-right: 5px;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .info a {color: #333333;}
+.movie-module.ovod-options .ovod-item .ovod-option-providers .ovod-option-provider-wrap .info a:hover {color: #00c8ff;}
+
+.movie-module.ovod-options.movie-title-ovod .body {border: 1px solid #dadada;}
+.movie-module.ovod-options.movie-title-ovod .ovod-item .ovod-option-providers .ovod-option-provider-wrap .ovod-option-provider {padding: 3px 10px; width: 100%;}
+.movie-module.ovod-options.movie-title-ovod .ovod-item .ovod-option-providers .ovod-option-provider-wrap .ovod-option-inner-wrap {padding: 10px;}
+.movie-module.ovod-options.movie-title-ovod .ovod-item .ovod-option-providers .ovod-option-provider-wrap .logo {margin-top: -23px; position: absolute; top: 50%;}
+.movie-module.ovod-options.movie-title-ovod .ovod-item .ovod-option-providers .ovod-option-provider-wrap .info {padding-left: 95px; width: 100%;}
+.movie-module.ovod-options.movie-title-ovod .ovod-item .ovod-option-providers .ovod-option-provider-wrap .license-type {display: block; font-weight: 400; margin-bottom: 2px;}
+.movie-module.ovod-options.movie-title-ovod .ovod-item .ovod-option-providers .ovod-option-provider-wrap .license-type-wrap {float: left; width: 33%;}
+
+#left .movie-module.ovod-options.movie-title-ovod .watchnow-provider-time {float: left; margin: 10px 0px 0px 20px;}
+#left .movie-module.ovod-options.movie-title-ovod .watchnow-provider-time p a {margin-right: 3px;}
+#left .movie-module.ovod-options.movie-title-ovod .watchnow-provider-time .edit-provider {border-right: none;}
+#left .movie-module.ovod-options.movie-title-ovod .watchnow-provider-time .set-provider {border-right: none;}
+#left .movie-module.ovod-options.movie-title-ovod .watchnow-provider-time .next-airing-loading {position: relative; top: 2px;}
+#left .movie-module.ovod-options.movie-title-ovod .watchnow-provider-time .loaded .next-airing-loading {display: none;}
+
+/*  ==================================================================================================================  */
+/*  MOVIE TITLE OVOD  ================================================================================================  */
+/*  ==================================================================================================================  */
+
+.movie-module.ovod {}
+.movie-module.ovod .body {border: 1px solid #dadada;}
+.movie-module.ovod .text {float:left;}
+
+/*  BUTTONS  */
+.movie-module.ovod .watch-now {color: #ffffff; float: right; margin-left: 5%; width: 145px;}
+.movie-module.ovod .open .watch-now {background: #ffffff; -moz-box-shadow: 0px 0px 0px 2px #FF4F37; -webkit-box-shadow: 0px 0px 0px 2px #FF4F37; box-shadow: 0px 0px 0px 2px #FF4F37; color: #FF4F37;}
+.movie-module.ovod .watch-now span {background-position: -98px -248px; display: inline-block; margin-left: 10px; position: relative; top: 2px;}
+.movie-module.ovod .open .watch-now span {background-position: -258px -248px}
+
+.movie-module.ovod .more-info {color: #ffffff; float: right; margin-left: 5%; width: 145px;}
+.movie-module.ovod .open .more-info {background: #ffffff; -moz-box-shadow: 0px 0px 0px 2px #00c8ff; -webkit-box-shadow: 0px 0px 0px 2px #00c8ff; box-shadow: 0px 0px 0px 2px #00c8ff; color: #00c8ff;}
+.movie-module.ovod .more-info span {background-position: -98px -248px; display: inline-block; margin-left: 10px; position: relative; top: 2px;}
+.movie-module.ovod .open .more-info span {background-position: -22px -248px}
+
+#left .movie-module.ovod .view-all {margin-left: 15px;}
+#left .ovod .watchnow-provider-time {float: right;}
+#left .ovod .watchnow-provider-time p {border-right: 1px solid #00C8FF; display: none; float: left; padding: 4px 12px 0 0; position: relative; margin-right: 14px; top: 2px;}
+#left .ovod .watchnow-provider-time p a {font-weight: 700;}
+
+#left .ovod .watchnow-provider-time .on-tv {}
+#left .ovod .watchnow-provider-time .on-tv .on-tv-loading {display: none; float: left; position: relative; right: 8px; top: 2px;}
+#left .ovod .watchnow-provider-time .on-tv.loading .on-tv-loading {display: block;}
+#left .ovod .watchnow-provider-time .on-tv .icon {background: url('http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png') no-repeat -212px -223px; display: inline-block; height: 17px; margin-right: 7px; position: relative; top: 3px; width: 24px;}
+#left .ovod .watchnow-provider-time .on-tv .provider-name {font-weight: 700;}
+
+#left .ovod .watchnow-provider-time .set-provider {}
+#left .ovod.tv-episodes .watchnow-provider-time .set-provider {border: none; margin-right: 0px;}
+
+#left .ovod.tv-episodes .watchnow-provider-time .edit-provider {border: none; margin-right: 0px;}
+
+.tab-wrap {position: relative; z-index: 2;}
+.tab-wrap .tab-item {background-color: #ededed;border: 1px solid #dfdfdf;border-bottom: none;border-radius: 3px 3px 0px 0px;cursor: pointer;display: inline-block;padding: 15px 20px;}
+.tab-wrap .tab-item:last-child {margin-right:0;}
+.tab-wrap .tab-item:hover {background-color:#ececec;}
+.tab-wrap .tab-item.active {background-color:#ffffff;}
+.tab-wrap .tab-item .tab-title {font-size: 16px; font-weight: 400;}
+.tab-wrap .tab-item .tab-count {font-size: 14px;}
+
+.tab-content-wrap {position: relative; z-index: 1;border: 1px solid #dfdfdf;top:-1px;}
+.tab-content-wrap .tab-content {display: none; position: relative; width: 100%;padding:20px;}
+.tab-content-wrap .tab-content.active {display: block;}
+
+.tab-content-wrap .tab-content ul {}
+.tab-content-wrap .tab-content ul li {border-bottom: 1px dotted #aaaaaa; }
+.tab-content-wrap .tab-content ul li:last-of-type {border-bottom: none;}
+
+.tab-content-wrap .tab-content .review-head {position: relative;}
+.tab-content-wrap .tab-content .review-head .rating {background: #dddddd; color: #FFFFFF; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; height: 40px; line-height: 42px; margin-right: 10px; padding: 0px; text-align: center; width: 40px;}
+.tab-content-wrap .tab-content .review-head .rating.red {background: #ff0000;}
+.tab-content-wrap .tab-content .review-head .rating.yellow {background: #ffcc33;}
+.tab-content-wrap .tab-content .review-head .rating.green {background: #66cc33;}
+
+.tab-content-wrap .tab-content .review-head .info {display: inline-block; position: absolute; top: 4px;}
+.tab-content-wrap .tab-content .review-head .info span {font-size: 14px;}
+.tab-content-wrap .tab-content .review-head .info .date:after {content: "|"; font-size: 22px; font-weight: 400; margin: 0px 0px 0px 5px; position: relative; top: 3px;}
+.tab-content-wrap .tab-content.user-tab .review-head .info .date {font-weight:bold;}
+.tab-content-wrap .tab-content.user-tab .review-head .info .critic {font-weight:bold;}
+.tab-content-wrap .tab-content .review-head .info .critic:after {content: "|"; font-size: 18px; font-weight: 500; margin: 0px 5px; position: relative; }
+.tab-content-wrap .tab-content .review-head .info .title {}
+.tab-content-wrap .tab-content .review-head .info .report-user {color: #333333; display: block; font-size: 12px;}
+
+.tab-content-wrap #user-reviews .review-head .info { position: static; }
+.tab-content-wrap #user-reviews .review-head .info .critic:after {content: ""; }
+.tab-content-wrap #user-reviews .review-head div.rating-wrap { margin: 5px 0; float: left; }
+.tab-content-wrap #user-reviews .review-head .info .report-user { display: inline-block; margin: 3px 0; font-weight: 400; }
+.tab-content-wrap .tab-content .review-body {}
+.tab-content-wrap .tab-content .review-body .review-text {margin-top: 6px; word-wrap: break-word;}
+.tab-content-wrap .tab-content .review-body .review-text .show-more {font-size: 12px; font-weight: 700;text-transform: lowercase;}
+
+@media only screen and (max-width: 1046px) and (min-width: 768px) {
+    .view-all .desktop {
+        display: inline-block !important;
+    }
+}
+
+@media only screen and (max-width: 840px) and (min-width: 678px){
+    .tab-wrap .tab-item {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .tab-wrap .tab-item {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 1040px) and (min-width: 768px) {
+    .subnav .desktop a{
+        padding:22px 9px;
+    }
+}
+							#movie-overview {margin-bottom:0;}
+#movie-overview .rating.yellow, #movie-overview .rating.red, #movie-overview .rating.green { display: inline-block; height: 30px; line-height: 30px; margin: 0; padding: 0; text-align: center; width: 30px; color: #fff; }
+#movie-overview .rating.red { background: #ff0000 }
+#movie-overview .rating.yellow { background: #ffcc33 }
+#movie-overview .rating.green { background: #66cc33 }
+#movie-overview .ratings-comments-sharing { display: inline-block; float: left; }
+#movie-overview .metacritic-details { margin-bottom: 20px }
+#movie-overview .metacritic-attribution { display: block; padding-left: 70px; margin-top: -11px; font-size: 11px; }
+#movie-overview .metacritic-attribution a { color: #000 }
+#movie-overview .metacritic-details .rating-type { background: url("http://o.aolcdn.com/os/moviefone/img/sprite-mf-main.png") no-repeat scroll -357px -188px rgba(0, 0, 0, 0); display: inline-block; height: 26px; position: relative; margin-left: 10px; padding-left: 30px; width: 30px; color: #000000; font-size: 15px; }
+#movie-overview .keyart {float: left;max-width: 194px;overflow: hidden;position: relative;width: 30%;}
+#movie-overview .keyart img {width:100%;}
+#movie-overview .text {margin-left:33%;}
+#movie-overview .show-title {font-size:24px;margin-top:0;}
+
+							#leaderboard, #in-view {font-size:0;margin:0px auto;max-width:970px;position:relative;text-align:center;width:100%;z-index:2;}
+#in-view {margin: 0 auto;}
+
+#right-rail {margin-bottom:10px;}
+
+#aol-mobile-leader {display: none;}
+
+#similar-shows{    
+    margin: 0px 0px 20px 0px;
+    display: inline-block;
+    width: 100%;
+    background-color: #DEE2E3;
+    padding:0;
+}
+
+#similar-shows .head{
+    padding: 9px 0 7px 15px;
+}
+
+#similar-shows h2{
+    color: #333333;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: lowercase;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#similar-shows .body{
+    padding: 0 10px 10px 10px;
+}
+
+#similar-shows li{
+    background-color: #fff;
+    float: left;
+    overflow: hidden;
+    width: 135px;    
+    list-style: none;
+}
+#similar-shows .item-thumbnail{
+    display:inline;
+}
+#similar-shows .item:first-child{
+    width:auto;
+    margin:0 10px 10px 0;
+}
+#similar-shows .item{
+    width:auto;
+    margin:0 0 10px 0;
+}
+
+#similar-shows .item-thumbnail{
+    display:inline;
+}
+
+#similar-shows a{
+    margin-bottom: 0;
+}
+
+#similar-shows h4{
+    color: #666;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 10px 10px;
+    text-align: center; 
+    width:100%;
+}
+
+#tv-listings{
+    border-bottom: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    padding: 10px;
+}
+
+#creative66972968_1 > div, #creative66972967_1 > div{
+    top:0 !important;
+}
+.sponsor-logo{float:left;}
+.article-gallery-logo { 
+  margin-bottom: 20px;
+  width:100%;
+}
+
+@media only screen and (min-width: 1047px){
+    body:not(.in-view):not(.homepage):not(.tv):not(.movie):not(.celeb) #wrap,
+    body.movie-streaming #wrap {margin-top:110px;}
+}
+
+@media only screen and (max-width: 1046px){
+    /*#leaderboard, #right-rail {display:none;}  this was causing the ads to not show on tablets*/
+    body:not(.in-view):not(.homepage):not(.tv):not(.movie):not(.celeb) #wrap,
+    body.movie-streaming #wrap {margin-top:70px;}
+    #in-view {margin-top:70px;}
+}
+
+
+@media only screen and (max-width: 767px){
+    #aol-mobile-leader { position: fixed; bottom: 0; left: 0; display: block; text-align:center !important;width: 100%; z-index: 4; }
+    #aol-mobile-leader > div {margin: 0 auto;}
+    body:not(.in-view):not(.homepage) #wrap {margin-top:0;padding:10px;}
+    body.in-view #wrap{margin-top:50px;}
+    #in-view {display:none;}
+    #leaderboard, #right-rail {display:none;}
+}
+							@media (max-width:767px) {
+   #watch-now #right {display:none;}
+}
+
+							#ovod-settings-overlay {background: rgb(0,0,0);background: rgba(0,0,0,.75); display: none; height: 100%; left: 0px; overflow-y: auto; position: fixed; top: 0px; width: 100%; z-index: 99999;}
+#ovod-settings-content {background: #ffffff; border: 1px solid #dadada; margin: 0 auto; max-width: 610px; position: relative; top: 200px;}
+#ovod-settings-content .close {background-color: #FFFFFF; background-position: -178px -457px; border-radius: 15px; cursor: pointer; position: absolute; right: -15px; top: -15px;}
+
+#ovod-settings-content input{height:auto;padding:0;margin:0;}
+
+#ovod-settings-content .ovod-settings-title {background: #ededed; clear: both; font-size: 20px; font-weight: 700; padding: 20px 0px; text-align: center; width: 100%;}
+#ovod-settings-content .custom-select {width: 100%!important;}
+
+#ovod-settings-content .details {padding: 20px 20px 30px 20px;}
+#ovod-settings-content .ovod-form {background: #dadada; height: 90px;}
+#ovod-settings-content .zip-provider .ovod-form {padding-right: 10px;}
+#ovod-settings-content .ovod-form label {color: #333333; display: block; font-size: 12px; font-weight: 700;height: 20px;}
+
+#ovod-settings-content .ovod-form .form-section {display: block; float: left; height: 65px; padding-top: 10px; position: relative;height:auto; }
+#ovod-settings-content .ovod-form .form-section input {border-radius: 2px; color: #666666; font-size: 16px; font-weight: 400; padding: 13px 10px 7px 10px; width: 100%;}
+
+#ovod-settings-content .form-section.form-zipcode {padding: 10px 55px 0px 20px;}
+#ovod-settings-content .zip-only .form-section.form-zipcode {padding-right: 65px; width: 100%;}
+#ovod-settings-content .zip-provider .form-section.form-zipcode {width: 33%;}
+#ovod-settings-content .form-section.form-zipcode .location-go {background: #00c8ff; border-radius: 2px; color: #FFFFFF; display: block; font-weight: 400; height: 37px; padding: 0; position: absolute; right: 10px; top: 30px; width: 40px;}
+#ovod-settings-content .zip-only .form-section.form-zipcode .location-go {right: 20px;}
+
+
+.provider-select.custom-select.absolute ul {max-height: 350px}
+#ovod-settings-content .form-section.form-provider {width: 66%}
+#ovod-settings-content .zip-only .form-section.form-provider {display: none;}
+#ovod-settings-content .form-section.form-provider .provider-wrap {display: none;}
+#ovod-settings-content .form-section.form-provider.loaded .provider-wrap {display: block;}
+#ovod-settings-content .zip-provider .form-section.form-provider,
+#ovod-settings-content .form-section.form-provider {display: block; padding-right: 10px;}
+
+.provider-select.custom-select li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+#ovod-settings-content .form-section.form-provider .provider-loading {color: #00C8FF; display: block; font-weight: 400; position: relative; text-align: center; top: 10px;}
+#ovod-settings-content .form-section.form-provider.loaded .provider-loading {display: none;}
+#ovod-settings-content .form-section.form-provider .provider-loading span {margin: 0px 10px 0px 0px; position: relative; top: 2px;}
+
+#ovod-settings-content #provider-grid-wrap {padding: 20px 20px 10px 20px; position: relative; width: 100%;}
+#ovod-settings-content .provider-grid-title {color: #333333; font-size: 14px; font-weight: 700; left: 55px; position: absolute; top: 40px;}
+#ovod-settings-content .provider-grid {background: #dadada; display: table; padding: 45px 30px 0px 30px; width: 100%;}
+#ovod-settings-content .provider-grid li {display: block; float: left; padding: 5px; position: relative; top: 0; width: 20%;}
+#ovod-settings-content .provider-grid .provider {background: #ffffff; border: 1px solid #adadad; cursor: pointer; padding-bottom: 66.66%; position: relative; width: 100%;}
+#ovod-settings-content .provider-grid .provider:hover {border: 1px solid #00c8ff;}
+#ovod-settings-content .provider-grid .provider img {height: 100%; position: absolute; width: 100%;}
+#ovod-settings-content .provider-grid li .provider-check {left: 2px; position: absolute; top: 3px;}
+
+#vod-setting-actions {padding: 0px 20px; position: relative; width: 100%;} /* WAS VOD */
+#vod-setting-actions a {float: right; margin: 0px 0px 20px 5px;}
+
+#ovod-schedule-overlay {background: rgb(0,0,0);background: rgba(0,0,0,.8); display: none; height: 100%; left: 0px; overflow-y: auto; position: fixed; top: 0px; width: 100%; z-index: 99999;}
+#ovod-schedule-overlay .scroll-spacer {height: 120px; margin: 0px auto; width: 100px;}
+#ovod-schedule-content {background: #ffffff; border: 1px solid #dadada; -webkit-box-shadow: 0px 0px 0px 20px rgba(255,255,255,.1); -moz-box-shadow: 0px 0px 0px 20px rgba(255,255,255,.1); box-shadow: 0px 0px 0px 20px rgba(255,255,255,.1); color: #333333; margin: 0 auto; max-width: 1000px; position: relative; top: 60px;}
+#ovod-schedule-content .close {background-color: #FFFFFF; background-position: -178px -457px; border-radius: 15px; cursor: pointer; position: absolute; right: -15px; top: -15px;}
+
+#ovod-schedule-content .schedule-header {background: #ededed; padding: 25px 40px 20px 40px;}
+#ovod-schedule-content .schedule-header h4 {color: #333333; display: inline-block; font-size: 32px; font-weight: 400; line-height: 26px; margin-right: 3px; padding-right: 10px; position: relative; vertical-align: middle;}
+#ovod-schedule-content .schedule-header h4:after {border-right: 1px solid #CACACA; content: ""; display: block; height: 50px; position: absolute; right: 0; top: -13px;}
+#ovod-schedule-content .schedule-header span {color: #333333; display: inline-block; font-size: 22px; font-weight: 400; vertical-align: middle;}
+
+#ovod-schedule-content .next-showing-wrap {padding: 20px; width: 100%;}
+#ovod-schedule-content .next-showing-wrap .time-date {background: #e8e8e8; border-bottom: 1px solid #cccccc; font-size: 18px; padding: 16px 40px 20px 40px;}
+#ovod-schedule-content .next-showing-wrap .time-date span {font-size: 20px; font-weight: 400;}
+#ovod-schedule-content .next-showing-wrap .meta {background: #e8e8e8; padding: 20px 40px;}
+#ovod-schedule-content .next-showing-wrap .meta .showing-data {display: block; font-size: 18px; font-weight: 400; }
+#ovod-schedule-content .next-showing-wrap .meta .showing-synopsis {display: block; font-size: 15px; line-height: 22px; position: relative; top: 3px;}
+
+#ovod-schedule-content .schedule-list {position: relative; width: 100%;}
+#ovod-schedule-content .schedule-list li {border-bottom: 1px solid #E9E9E9; padding: 20px 30px; position: relative; width: 100%;font-size:16px;}
+#ovod-schedule-content .schedule-list li:last-child {border: none; }
+#ovod-schedule-content .schedule-list li > div {margin-right: -4px;}
+#ovod-schedule-content .schedule-list li .title-meta {display: inline-block; vertical-align: middle; width: 45%;}
+#ovod-schedule-content .schedule-list li .title-meta span {display: block; font-weight: 700; margin-bottom: 5px;}
+#ovod-schedule-content .schedule-list li .date {display: inline-block; font-weight: 400; vertical-align: middle ;width: 15%;}
+#ovod-schedule-content .schedule-list li .time {display: inline-block; font-weight: 400; vertical-align: middle; width: 20%;}
+#ovod-schedule-content .schedule-list li .provider-name {display: inline-block; font-weight: 400; vertical-align: middle; width: 20%;}
+
+
+@media only screen and (max-width: 920px){
+	#ovod-schedule-content .close {right: 10px;top: -45px;}
+}
+
+@media only screen and (max-width : 840px) {
+	/*  ON TV LINEAR LISTING ===========================================  */
+	#ovod-schedule-content .schedule-list li .title-meta {width: 100%;}
+	#ovod-schedule-content .schedule-list li .date,
+	#ovod-schedule-content .schedule-list li .time,
+	#ovod-schedule-content .schedule-list li .provider-name {margin-top: 10px; width: 33%;}
+	
+}
+
+@media only screen and (max-width: 767px){
+	#ovod-schedule-content .schedule-header h4 {font-size: 26px;margin-bottom: 15px;width: 100%;}
+	#ovod-schedule-content .schedule-header h4:after {display: none;}
+}
+
+@media only screen and (max-width: 677px){
+	#ovod-settings-content .form-section.form-provider{padding-left: 20px;padding-right: 20px;width: 100%;}
+	#ovod-settings-content .zip-provider .form-section.form-zipcode{padding-left: 20px;width: 100%;}
+	#ovod-settings-content .zip-provider .ovod-form{height:153px;}
+}
+
+@media only screen and (max-width: 480px){
+	#ovod-settings-content{top:50px;}
+	#ovod-settings-content .ovod-settings-title {padding-left: 20px;text-align: left;}
+	#ovod-settings-content .close {right: 15px;top: -40px;}
+	#ovod-settings-content .provider-grid li {width: 33.3%;}
+	#ovod-settings-content .details {padding: 10px 10px 20px 10px;}
+	#ovod-settings-content #provider-grid-wrap {padding: 20px 10px 10px 10px;}
+	#ovod-schedule-content {top: 0px;}
+	#ovod-schedule-content .close {right: 5px; top: 5px;}
+	#ovod-schedule-content .schedule-header {padding: 25px 40px 20px 20px;}
+	#ovod-schedule-content .next-showing-wrap {padding: 20px 10px;}
+	#ovod-schedule-content .schedule-list li .title-meta {width: 100%;}
+	#ovod-schedule-content .schedule-list li .date,
+	#ovod-schedule-content .schedule-list li .time {margin-top: 10px; width: 50%;}
+	#ovod-schedule-content .schedule-list li .provider-name {margin-top: 10px; width: 100%;}
+	#ovod-settings-content .provider-grid li{width:33.33%;}
+}
+
+@media only screen and (max-width: 400px){
+	#vod-setting-actions a {margin: 5px 0 10px 0px;width: 100%;}
+	#ovod-settings-content .provider-grid li{width:50%;}
+}
+
+
+
+
+
+
+
+
+
+
+							.aol-share-common {
+	display: block;
+    left: -50px;
+    float: left;
+    right: auto;
+    position: fixed;
+    bottom: 5%;
+    width: 20px;
+    z-index: 100020;
+    background: none;
+    opacity: 0;
+}
+.aol-share-common .aol-share {
+    font: 11px/11px Helvetica,Arial,sans-serif;
+    position: relative;
+}
+.aol-share-common .aol-share a {
+	width:50px !important;
+	height:50px !important;
+	overflow: hidden;
+	font-weight: normal !important;
+	margin: 0 !important;
+	border-radius: 0 !important;
+	border: 0 !important;
+	display: inline !important;
+    float: left !important;
+    text-decoration: none !important;
+	transition: 0.25s;
+    text-indent: 0;
+
+}
+.aol-share-common .aol-share a b {
+	display: none !important;
+}
+#gallery-full-share.aol-share a.aol-share-facebook,.aol-share-block .aol-share a.aol-share-facebook, .aol-share-common .aol-share a.aol-share-facebook {
+    background: #2B4375 none !important;
+    color: #fff !important;
+    padding: 20px 0 0;
+}
+#gallery-full-share.aol-share a.aol-share-facebook:before,.aol-share-block .aol-share a.aol-share-facebook:before, .aol-share-common .aol-share a.aol-share-facebook:before {
+    content: "\f09a";
+    font-size: 22px;
+    font-family: FontAwesome;
+    display: block;
+    text-align: center;
+}
+#gallery-full-share.aol-share a.aol-share-twitter,.aol-share-block .aol-share a.aol-share-twitter, .aol-share-common .aol-share a.aol-share-twitter {
+    background: #55ACEE none !important;
+    color: #fff !important;
+    padding: 20px 0 0;
+}
+#gallery-full-share.aol-share a.aol-share-twitter:before,.aol-share-block .aol-share a.aol-share-twitter:before, .aol-share-common .aol-share a.aol-share-twitter:before {
+    content: "\f099";
+    font-size: 19px;
+    font-family: FontAwesome;
+    display: block;
+    text-align: center;
+}
+#gallery-full-share.aol-share a.aol-share-email,.aol-share-block .aol-share a.aol-share-email, .aol-share-common .aol-share a.aol-share-email {
+    background: #666 none !important;
+    color: #fff !important;
+    padding: 20px 0 0;
+}
+#gallery-full-share.aol-share a.aol-share-email:before,.aol-share-block .aol-share a.aol-share-email:before, .aol-share-common .aol-share a.aol-share-email:before {
+    content: "\f0e0";
+    font-size: 19px;
+    font-family: FontAwesome;
+    display: block;
+    text-align: center;
+}
+#gallery-full-share.aol-share a.aol-share-pinterest,.aol-share-block .aol-share a.aol-share-pinterest, .aol-share-common .aol-share a.aol-share-pinterest {
+    background: #CB2026 none !important;
+    color: #fff !important;
+    padding: 20px 0 0;
+}
+#gallery-full-share.aol-share a.aol-share-pinterest:before,.aol-share-block .aol-share a.aol-share-pinterest:before, .aol-share-common .aol-share a.aol-share-pinterest:before {
+    content: "\f0d2";
+    font-size: 19px;
+    font-family: FontAwesome;
+    display: block;
+    text-align: center;
+}
+#gallery-full-share.aol-share a.aol-share-googleplus,.aol-share-block .aol-share a.aol-share-googleplus, .aol-share-common .aol-share a.aol-share-googleplus {
+    background: #d34836 none !important;
+    color: #fff!important;
+    padding: 20px 0 0;
+}
+#gallery-full-share.aol-share a.aol-share-googleplus:before,.aol-share-block .aol-share a.aol-share-googleplus:before, .aol-share-common .aol-share a.aol-share-googleplus:before {
+    content: "\f1a0";
+    font-size: 19px;
+    font-family: FontAwesome;
+    display: block;
+    text-align: center;
+}
+#gallery-full-share.aol-share a.aol-share-tumblr,.aol-share-block .aol-share a.aol-share-tumblr, .aol-share-common .aol-share a.aol-share-tumblr {
+    background: #35465c none !important;
+    color: #fff!important;
+    padding: 20px 0 0;
+}
+#gallery-full-share.aol-share a.aol-share-tumblr:before,.aol-share-block .aol-share a.aol-share-tumblr:before, .aol-share-common .aol-share a.aol-share-tumblr:before {
+    content: "\f173";
+    font-size: 19px;
+    font-family: FontAwesome;
+    display: block;
+    text-align: center;
+}
+.aol-share-common .aol-share a.aol-share-facebook:hover,.aol-share-common .aol-share a.aol-share-twitter:hover,.aol-share-common .aol-share a.aol-share-pinterest:hover,.aol-share-common .aol-share a.aol-share-googleplus:hover,.aol-share-common .aol-share a.aol-share-tumblr:hover,.aol-share-common .aol-share a.aol-share-email:hover {
+	width: 60px !important;
+}
+
+.aol-share-common.horizontal { 
+	width: 100%;
+	left:0;
+	bottom: -50px;
+}
+
+.aol-share-common.gallery-horizontal { 
+    width: 100%;
+    left:0;
+    top: -50px;
+    bottom: auto;
+}
+
+.aol-share-common.gallery-horizontal .aol-share a { 
+    height: 43px !important;
+}
+
+.aol-share-common.mobile { 
+	width: 100%;
+	left:0;
+	bottom: auto;
+	top:-100px;
+	opacity: 1;
+	display: none;
+}
+
+.aol-share-common.mobile .aol-share {
+    overflow: hidden;
+    height: 36px;
+}
+.aol-share-common.mobile .aol-share a {
+    height: 36px !important;
+}
+.aol-share-common.mobile .aol-share a.aol-share-facebook,
+.aol-share-common.mobile .aol-share a.aol-share-twitter,
+.aol-share-common.mobile .aol-share a.aol-share-pinterest,
+.aol-share-common.mobile .aol-share a.aol-share-googleplus,
+.aol-share-common.mobile .aol-share a.aol-share-tumblr,
+.aol-share-common.mobile .aol-share a.aol-share-email {
+    padding: 13px 0 0;
+}
+.aol-share-common.mobile .aol-share a.aol-share-email {
+    padding: 12px 0 0;   
+}
+.aol-share-common.mobile .aol-share a.aol-share-googleplus {
+    padding: 14px 0 0;   
+}
+.aol-share-common.gallery-mobile { 
+    width: 100%;
+    left:0;
+    bottom: auto;
+    top:0;
+    opacity: 1;
+    display: block;
+}
+
+.aol-share-common.gallery-vertical { 
+    left:-50px;
+    top:0;
+    bottom: auto;
+}
+
+.aol-share-common.mobile .aol-share a.aol-share-facebook:hover,.aol-share-common.mobile .aol-share a.aol-share-twitter:hover,.aol-share-common.mobile .aol-share a.aol-share-pinterest:hover,.aol-share-common.mobile .aol-share a.aol-share-googleplus:hover,.aol-share-common.mobile .aol-share a.aol-share-tumblr:hover,.aol-share-common.mobile .aol-share a.aol-share-email:hover, .aol-share-common.mobile .aol-share a {
+	width: 16.6666667% !important;
+}
+
+.aol-share-block {
+	display: block;
+    float: left;
+    bottom: 5%;
+    width: 100%;
+    background: none;
+    margin: 0 0 2% 0;
+}
+
+.article-top-share .aol-share-block {
+    margin: 2% 0 0;
+}
+
+#gallery-full-share.aol-share,.aol-share-block .aol-share {
+    font: 11px/11px Helvetica,Arial,sans-serif;
+    position: relative;
+}
+#gallery-full-share.aol-share a,.aol-share-block .aol-share a {
+	width:16.6666667% !important;
+	height:40px !important;
+	overflow: hidden;
+	font-weight: normal !important;
+	margin: 0 !important;
+	border-radius: 0 !important;
+	border: 0 !important;
+    float: left !important;
+    text-decoration: none !important;
+	padding-top: 15px !important;
+    text-indent: 0 !important;
+}
+
+.aol-share-block .aol-share a.aol-share-facebook:before {
+	font-size: 20px;
+}
+
+.aol-share-block.in-gallery .aol-share a {
+    width: 15% !important;
+}
+
+
+
+	

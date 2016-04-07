@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0145)http://s0.2mdn.net/ads/richmedia/studio/pv2/41987779/20160314090715972/257x90.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=n65XyIKaAh&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>257x90</title>
+<!-- write your code here -->
+
+<script src="./Enabler_01_107.js"></script>
+<script src="./createjs-2015.11.26.min.js"></script>
+<script src="./257x90.js"></script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	// --- write your JS code here ---
+
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib._257x90();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+</script>
+
+<!-- write your code here -->
+<style>
+body {
+	margin: 0;
+}
+#bg-exit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    opacity: 0;
+}
+</style>
+</head>
+<body onload="init();" style="background-color:#D4D4D4;margin:0px;">
+	<canvas id="canvas" width="257" height="90" style="background-color:#000000"></canvas>
+
+	<div id="bg-exit"></div>
+	<script>
+	function bgExitHandler(e) {
+	    Enabler.exit('Background Exit');
+	}
+
+	document.getElementById('bg-exit').addEventListener('click', bgExitHandler, false);
+	</script>
+
+
+</body></html>

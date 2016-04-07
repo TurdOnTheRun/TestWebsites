@@ -1,0 +1,47 @@
+.br-teamstream-advanced-container { position: relative; border: 1px solid #BBBBBB; padding-bottom: 32px; width: 300px; background: white; font: 16px/1 "Helvetica Bold", Arial, sans-serif; outline: 0; vertical-align: baseline; }
+
+.br-teamstream-advanced-container.no-border { border: 0; }
+
+.br-teamstream-advanced-container h3 { margin: 0; height: 54px; background: url("/images/partners/br_logo.png") bottom 10px center no-repeat; overflow: hidden; text-indent: -1000px; }
+
+.br-teamstream-advanced-container a { text-decoration: none; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul { color: #EF3F23; background: #BBBBBB; padding: 4px 0 0 0; margin: 0; font-size: 16px; font-weight: 600; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul li:first-child { padding-top: 15px; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul li:last-child { padding-bottom: 15px; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul li { background: #EEEEEE; min-height: 79px; padding: 8px 15px; line-height: 21px; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul li img { float: left; height: 79px; width: 120px; margin-right: 10px; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul li a { color: #373737; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.allThumbnails { list-style-type: none; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.noThumbnails { list-style: disc inside; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.noThumbnails li { min-height: inherit; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.noThumbnails li img { display: none; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.firstThumbnail { list-style: disc inside; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.firstThumbnail li { min-height: inherit; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.firstThumbnail li img { display: none; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.firstThumbnail li:first-child { min-height: 79px; list-style: none; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content ul.firstThumbnail li:first-child img { display: block; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content .fbpage { position: absolute; bottom: 0; left: 0; right: 0; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content .fbpage a { text-align: right; height: 40px; background-color: #265376; display: block; color: white; font-size: 16px; font-weight: 400; line-height: 36px; }
+
+.br-teamstream-advanced-container #br-teamstream-advanced-content .fbpage a span { width: 220px; height: 100%; margin: auto; display: block; position: relative; top: 3px; background: url("/images/partners/fb.png") 0 9px no-repeat; }
+
+.br-teamstream-advanced-container p { background-color: #EEEEEE; text-align: center; margin: 0 0 10px 0; padding: 0; font-weight: 600; height: 27px; }
+
+.br-teamstream-advanced-container p a { color: #EF3F23; font-size: 18px; text-transform: uppercase; }

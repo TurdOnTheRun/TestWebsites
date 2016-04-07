@@ -1,0 +1,74 @@
+/* line 2, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.sprite {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(../images/sprite-mixins.png);
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* line 3, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.frame_01_copy {
+  margin-left: 90px;
+  margin-top: 106px;
+  width: 124px;
+  height: 76px;
+  background-position: -202px -84px;
+  background-size: 328px 234px; }
+
+/* line 4, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.frame_02_copy {
+  margin-left: 86px;
+  margin-top: 104px;
+  width: 128px;
+  height: 80px;
+  background-position: -192px -2px;
+  background-size: 328px 234px; }
+
+/* line 5, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.frame_03_copy {
+  margin-left: 98px;
+  margin-top: 104px;
+  width: 102px;
+  height: 80px;
+  background-position: -98px -94px;
+  background-size: 328px 234px; }
+
+/* line 6, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.frame_04_copy {
+  margin-left: 56px;
+  margin-top: 88px;
+  width: 188px;
+  height: 90px;
+  background-position: -2px -2px;
+  background-size: 328px 234px; }
+
+/* line 7, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.logo {
+  margin-left: 104px;
+  margin-top: 4px;
+  width: 70px;
+  height: 48px;
+  background-position: -250px -162px;
+  background-size: 328px 234px; }
+
+/* line 8, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.pkg {
+  margin-left: 108px;
+  margin-top: 450px;
+  width: 94px;
+  height: 138px;
+  background-position: -2px -94px;
+  background-size: 328px 234px; }
+
+/* line 9, /Users/cmartin2/Google Drive/VML/KELLOGGS/16-01-27_FrostedFlakes_Q1/REDUCE TO 10k AND ADD CODE/FF_Q1-2016_300x600_v1/css/sprite-sheet.scss */
+.small_Great {
+  margin-left: 74px;
+  margin-top: 414px;
+  width: 150px;
+  height: 24px;
+  background-position: -98px -176px;
+  background-size: 328px 234px; }
+
+/*# sourceMappingURL=sprite-sheet.css.map */

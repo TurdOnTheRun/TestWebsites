@@ -1,0 +1,9 @@
+/* JS */ gapi.loaded_1(function(_){var window=this;
+_.e("gapi.plusone.render",_.pG);_.e("gapi.plusone.go",_.qG);
+var od,qd,sd,rd;od=function(a,c){if("string"==typeof a){a=a.toLowerCase();var f;for(f=0;f<c.length;f++)if(c[f]==a)return a}};qd="inline bubble none only pp vertical-bubble".split(" ");sd=["left","right"];_.pd=function(a){return od(a,qd)};rd=function(a){return od(a,sd)};_.td=function(a){a.source=[null,"source"];a.expandTo=[null,"expandTo"];a.align=[rd];a.annotation=[_.pd];a.origin=[_.md]};
+
+_.Sm.Ka("ytsubscribe",function(a,c){var f=_.Sm.wc;f&&_.Sm.Zc({role:"ytsubscribe",iframe:f,data:c},{role:"ytrelay",iframe:a})},void 0,_.Vz);
+var HU={onytevent:!0},IU=["https://www.youtube.com"],JU=["http://www.youtube.com","https://www.youtube.com"];var KU=function(){this.hg=this.wc=null};KU.prototype.Ph=function(){var a=window.location.href.split("#")[0],c=_.Sm.wc,c=c&&c.Pq();return{eurl:a,notificationsPipeSupported:-1!=_.xd.call(JU,c)}};KU.prototype.Na=function(a){var c=_.Sm.wc;if(c)try{c.send("ytsubscribe-msg",a,void 0,MU(this))}catch(f){}};var LU=function(a){a.wc||(a.wc=_.AD(IU));return a.wc},MU=function(a){a.hg||(a.hg=_.AD(JU));return a.hg};
+(function(){var a=new KU;_.iC({0:"ytsubscribe",3:HU,5:function(c,f){if("e"==c){var g=f[5];g.register("_ready",a.Ph,LU(a));g.register("msg-youtube-pubsub",(0,_.H)(a.Na,a),LU(a))}}})})();
+});
+// Google Inc.

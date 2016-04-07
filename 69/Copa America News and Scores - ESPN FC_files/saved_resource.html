@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://assets.espn.go.com/ad/html5/label/ESP30835-MP-885_ToyotaPrius/v5/1280x100/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="ad.size" content="width=1280,height=100">
+    <title>1280x100</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <script src="./TweenMax.min.js"></script>
+<script>
+    var BANNER = function() {
+	var clickTag = '%%CLICK_URL_UNESC%%%%DEST_URL%%';
+	var clickArea = document.getElementById('btn');
+	var ctaBtn = document.getElementById('ctaBtn');
+    
+  this.start = function() {
+	//clickTag function
+  	clickArea.addEventListener("click", clickThrough);
+  	clickArea.addEventListener("mouseover", overFunction);
+    clickArea.addEventListener("mouseout", outFunction);
+  	
+    //Mouse Over
+      function overFunction(e){
+          if(animationEnded){TweenLite.to("#ctaBtn", .3, {left:"1085px"});}
+      }
+    //Mouse Out
+      function outFunction(e){
+          if(animationEnded){TweenLite.to("#ctaBtn", .3, {left:"1095px"});}
+      }  
+    //banner main clicktag function 
+    function clickThrough(){
+        window.open(clickTag);
+    }
+
+	//Animate the banner//
+    var tlBanner = new TimelineLite();
+	
+  //Call this banner to animate the banner//
+      var animationEnded = false;
+  function animateBanner(){
+    	tlBanner.set("#container", {display:"block"})
+            .from("#txt1", .35, {backgroundPosition:"100px 0px",ease:Strong.ease},"begin+=.25")
+            .from("#txt2", .35, {backgroundPosition:"-250px 0px",ease:Strong.ease},"begin+=.25")
+            .from("#txt3", .35, {backgroundPosition:"0px -200px",ease:Strong.ease},"begin+=.5")
+            .from("#spotlightLeft", .5, {rotation:"-=100px",transformOrigin:"left top",ease:Strong.ease},"mid")
+            .from("#spotlightRight", .5, {rotation:"+=100px",transformOrigin:"right top",ease:Strong.ease},"mid+=.25")
+            .from("#car", .5, {opacity:0,left:"+=10px",top:"-=20px",scale:.9,ease:Strong.easeOut},"mid+=.5")
+            .from("#ctaBtn", .5, {left:"+=200px",ease:Back.easeOut},"+=.25")
+            .add(function(){animationEnded = true;})
+        ;
+  }
+
+	function showFrame(frame){
+		document.getElementById(frame).style.display = "block";
+	}
+	function hideFrame(frame){
+		document.getElementById(frame).style.display = "none";
+	}
+	animateBanner();   
+  };
+  
+};
+
+var init = function() {
+  var theBanner = new BANNER();
+ 	theBanner.start();
+};
+</script>
+</head>
+
+<body onload="init()">
+<div id="banner">
+    <div id="container" style="display: block;">
+        <div id="logo"></div>
+        <div id="txtBlock"><div id="txt1" style="background-position: 0px 0px;"></div><div id="txt2" style="background-position: -94px 0px;"></div><div id="txt3" style="background-position: 0px -40px;"></div></div>
+        <div id="spotlightLeft" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div id="spotlightRight" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div id="car" style="top: 5px; left: 549px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        <p id="legal">Prototype shown with options.</p>
+        <div id="ctaBtn" style="left: 1095px;"><div id="ctaTxt"></div></div>
+    </div>
+    <div class="border"></div>
+    <div id="btn" class="mainBtn"></div>
+</div>
+
+
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)https://s0.2mdn.net/5252016/1459179901000/728X90_VZW_DE_GS7_BOGO/728X90_VZW_DE_GS7_BOGO.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="ad.size" content="width=728,height=90">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="./main(1).css">
+	</head>
+
+	<body>
+		<!-- Click Tag For Google -->
+		<script>
+			var clickTag = 'http://www.verizonwireless.com/landingpages/samsung/';
+		</script>
+
+		<!-- Ad content -->
+		<div id="ad_content">
+			<div id="branding" class="sprite branding"></div>
+			<div id="samsung_branding" class="sprite samsung_branding"></div>
+
+			<div id="headline_1" class="sprite headline_1 headline" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="legal_1" class="sprite legal" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="device_1a" class="sprite device_1" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="device_1b" class="sprite device_1" style="transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1); opacity: 0;"></div>
+
+			<div id="headline_2" class="sprite headline_2 headline" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="device_2" class="sprite device_2" style="opacity: 0; transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);"></div>
+
+			<div id="headline_3" class="sprite headline_3 headline" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+
+			<div id="headline_4" class="sprite headline_1 headline" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="legal_2" class="sprite legal" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="device_3" class="sprite device_1" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+			<div id="cta" class="sprite cta" style="opacity: 1;"></div>
+		</div>
+
+		<!-- Load scripts -->
+		<script src="./TweenLite.min.js"></script>
+		<script src="./EasePack.min.js"></script>
+		<script src="./CSSPlugin.min.js"></script>
+		<script src="./main(2).js"></script>
+	
+
+</body></html>

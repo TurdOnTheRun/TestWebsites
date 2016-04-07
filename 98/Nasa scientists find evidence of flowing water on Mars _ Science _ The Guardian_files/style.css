@@ -1,0 +1,62 @@
+/* auto generated sprite classes */
+.sprite { position: absolute; background: url('sprite-s73e6f5a4c4.png'); }
+
+.f1_txt { background-position: 0 0; height: 121px; width: 300px; }
+
+.f5_txt { background-position: 0 -123px; height: 327px; width: 275px; }
+
+.f6_cta { background-position: 0 -452px; height: 17px; width: 119px; }
+
+.f6_cta_arrow { background-position: 0 -471px; height: 17px; width: 14px; }
+
+.f6_txt { background-position: 0 -490px; height: 130px; width: 216px; }
+
+.line { background-position: 0 -622px; height: 600px; width: 2px; }
+
+.logo { background-position: 0 -1224px; height: 55px; width: 300px; }
+
+/* Global variables -------------------------------------------------------- */
+/* Reset -------------------------------------------------------- */
+body, #ad * { margin: 0; padding: 0; border: 0 none; outline: 0; }
+
+body { background: #fff; }
+
+#ad_content {display: none;}
+
+/* Content -------------------------------------------------------- */
+/* CSS Document */
+.f1_txt { top: 358px; }
+
+.f6_txt { top: 333px; left: 24px; }
+
+.cta { top: 484px; left: 24px; }
+
+.f6_cta { top: 0; left: 0; width: 113px; height: 17px; }
+
+.f6_cta_arrow { top: 0; left: 120px; animation: pound 1s infinite; }
+
+.f5-holder { top: 265px; left: 0; display: inline-block; overflow: hidden; width: 275px; height: 327px; }
+
+.alpha0 { opacity: 0 !important; }
+
+.img-trans-1000 { -webkit-transition: all 1000ms linear !important; transition: all 0ms linear !important; }
+
+.bg-color1 { background: #00327b; }
+
+.bg-color2 { background: #007fcc; }
+
+@keyframes img-anim-f1 { from { left: 0; }
+  to { left: -100px; } }
+.f1-anim { animation: img-anim-f1 1000ms; animation-fill-mode: forwards; }
+
+body, #ad_content { margin: 0; padding: 0; color: #003179; border: 0 none; outline: 0; }
+
+#story { position: absolute; width: 300px; height: 250px; }
+
+#ad_content { position: relative; overflow: hidden; box-sizing: border-box; width: 300px; height: 600px; cursor: pointer; border: 1px solid #666; }
+
+#ad_content * { position: absolute; }
+
+@keyframes pound { from { transform: none; }
+  50% { transform: scale(1.2); }
+  to { transform: none; } }

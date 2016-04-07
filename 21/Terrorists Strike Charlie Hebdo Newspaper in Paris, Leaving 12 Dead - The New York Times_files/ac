@@ -1,0 +1,36 @@
+(function(w, d){
+var getDomElem = function(id)
+{ return d.getElementById(id).contentDocument || d.frames[id].document; }
+
+var i = d.createElement('iframe');
+i.id = 'sas_4632634_iframe';
+i.scrolling = 'no';
+i.frameBorder = 0;
+i.width = 300; 
+i.height = 250; 
+i.style.margin = 0;
+i.style.padding = 0;
+i.style.width = '300px';
+i.style.height = '250px';
+if (typeof(sas_ajax) != 'undefined' && sas_ajax) {
+    sas_appendToContainer(34856, i); // sas_formatId 
+} 
+else
+{ 
+    d.write('<div id="sas_rtb_4632634"></div>');
+    var sas_rtb_div = d.getElementById("sas_rtb_4632634");    
+    if((typeof (sas_rtb_div) != 'undefined') && (sas_rtb_div != null))
+    {
+        sas_rtb_div.appendChild(i);
+    }
+}
+i.doc = getDomElem(i.id);
+i.doc.write(
+'<!doctype html><html><head><title></title></head><body style="margin:0;padding:0">'+
+'<scr'+'ipt type="text/javascript">var inDapIF=inDapMgrIf=true;</scr'+'ipt>'+
+"\x3Cimg src=\'http://www9.smartadserver.com:80/h/aip?visit=m&amp;pubid=9&amp;statid=2&amp;ckid=2402638624175693916&amp;tmstp=1066894175&amp;usrtgt=&amp;tgt=%3b%24dt%3d1t%3b%24dma%3d501%3b%24hc&amp;systgt=%24qc%3d1313175519%3b%24ql%3dmedium%3b%24qpc%3d10020%3b%24qpp%3d212%3b%24qt%3d152_1829_29211t%3b%24dma%3d501%3b%24b%3d16490%3b%24o%3d12100&amp;rfr=http%3a%2f%2fwww.nytimes.com%2f2015%2f01%2f08%2fworld%2feurope%2fcharlie-hebdo-paris-shooting.html&amp;capp=0&amp;mcrdbt=0&amp;insid=4632634&amp;imgid=0&amp;pgid=609025&amp;fmtid=34856&amp;loguid=368827826488320218&amp;logdate=1458847005626&amp;rtb=1&amp;rtbnid=1538&amp;rtbbid=368827826488320219&amp;rtbh=088d04211500e99be5192dcdf9794ac4362cbd8d&amp;rtblt=635944438056262914&amp;rtbet=0\' border=\'0\' width=\'0\' height=\'0\' style=\'display:none\'/>\x3Ciframe src=\'http://ak-ns.sascdn.com:80/diff/rtb/handler/st.min.html?%7b%22bid%22%3a%22368827826488320219%22%2c%22adomain%22%3a%22dell.com%22%2c%22page%22%3a%22609025%22%2c%22format%22%3a%2234856%22%2c%22crid%22%3a%222086052%22%2c%22dsp%22%3a%2225%22%2c%22buyer%22%3a%228873%22%2c%22cid%22%3a%22228400%22%2c%22adid%22%3a%222086052%22%7d\' width=\'0\' scrolling=\'no\' height=\'0\' frameborder=\'0\' style=\'display: none;\'>\x3C/iframe>\x3Cscript language=\'JavaScript\' src=\'http://tags.mathtag.com/notify/js?exch=sas&id=5aW95q2jLzgvIC9ZalF4WVRVMVpqQXRZVEJqTVMwME9UQXdMV0pqWXpRdFkyVTVNR1EyWkdZMllUUmovNzc0ODA4MDAwMDQzMzUyNzY4LzIwODYwNTIvMTE2OTUxNS8zOS9xamVOY1k1N0p5OS0xcjVHWGVmZ2Vodk5hTHltNmFFYnlBT3dHeVZEOTF3LzEvMzkvMTQ1ODc2NjUwMy8wLzE4MTAzNC8xMjQ2MTY4MzAzLzEyOTgwNS8yMjg0MDAvMS85MjY0MjkvMC9ZalF4WVRVMVpqQXRZVEJqTVMwME9UQXdMV0pqWXpRdFkyVTVNR1EyWkdZMllUUmov/9CZZ7oQeh6vSNfNChDER5Vs6AvM&sid=1169515&cid=2086052&nodeid=43&price=2.016835&bp=d_adadad\'>\x3C/script>" + 
+'</body></html>'
+);
+
+if (navigator.userAgent.indexOf('MSIE') == -1 && navigator.userAgent.indexOf('Opera') == -1) i.doc.close();
+})(window, document);

@@ -1,0 +1,1 @@
+(function(){var picad=picadService.getPJL();if (picad.segment_data != undefined) {picad.segment_data.status=200;picad.url_hash="e286e16c8cbc23481d932d46f1e241f1";picad.segment_data.ch = [];picad.segment_data.cat = [{"id":56},{"id":252},{"id":78},{"id":417},{"id":52},{"id":256},{"id":260},{"id":262},{"id":81},{"id":391},{"id":419}];}})();

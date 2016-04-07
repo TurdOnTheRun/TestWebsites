@@ -1,0 +1,5 @@
+/*!CK:40644445!*//*1459866040,*/
+
+if (self.CavalryLogger) { CavalryLogger.start_js(["oZhh6"]); }
+
+__d('LtgLanguageSettingsBasePreferenceEntry',['ContentTranslationStrings','LtgTranslationPreferenceEntryBase','TranslationPreferenceEvent'],function a(b,c,d,e,f,g){var h,i;if(c.__markCompiled)c.__markCompiled();h=babelHelpers.inherits(j,c('LtgTranslationPreferenceEntryBase'));i=h&&h.prototype;j.prototype.getPreferenceType=function(){'use strict';return c('TranslationPreferenceEvent').LANGUAGE_SETTINGS;};j.prototype.getShouldShowPreference=function(){'use strict';return true;};j.prototype.getEntryTitle=function(){'use strict';return c('ContentTranslationStrings').LANGUAGE_SETTINGS;};j.prototype.getUseConfirmDialog=function(){'use strict';return false;};j.prototype.getUseEditableDialog=function(){'use strict';return false;};function j(){'use strict';h.apply(this,arguments);}f.exports=j;},null);

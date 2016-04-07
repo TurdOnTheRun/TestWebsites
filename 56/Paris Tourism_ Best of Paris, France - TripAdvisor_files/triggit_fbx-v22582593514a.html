@@ -1,0 +1,191 @@
+
+<!-- saved from url=(0841)https://static.tacdn.com/static/page_moniker/triggit_fbx-v22582593514a.html#pixelType=PAGEVIEW&curLocId=187147&geoId=187147&reqUnique=4c8a5073f7b9d5628dc90907f3d7e9f4496a7b84&userUnique=3242fb23c13a2d0b6eead6234df9577131fefd50&locale=en_US&seqId=2&geoName=Paris&geoParentId=187144&geoParentName=Ile-de-France&geoMostPop=222913&isRemarketable=false&loc1=222913&productIds=["d222913enUS187147","187147enUS"]&productIdsShort=d222913enUS187147,187147enUS&trueServlet=Tourism&fbTrueServlet=P&servlet=Hotels&geoFeedBucket=medium&serverName=www.tripadvisor.com&device=Desktop&fbDevice=1&errorJS=https://static.tacdn.com/js3/remarketing-errors-c-v22262320586a.js&puid=VwXqZQokMHUAAV1QodIAAABJ&siteType=d&isMobileDevice=n&taSplit=1&tasource=OTH&geo=187147&isClickoutYN=no&criteoPartnerId=4653&ulbBucket=2&ulbScore=0.24940277326656074&countryAlpha2=US -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var loadElem = function(tag, attribs) {
+                if (!tag) {
+                    return;
+                }
+                var elem = document.createElement(tag);
+                for (var key in attribs) {
+                    if (attribs.hasOwnProperty(key)) {
+                        elem[key] = attribs[key];
+                    }
+                }
+                document.body.appendChild(elem);
+            };
+            var loadScript = function(src, attribs) {
+                attribs = attribs || {};
+                attribs.src = src;
+                attribs.type = attribs.type || 'text/javascript';
+                loadElem('script', attribs);
+            };
+
+            var context = {};
+            context.get = function(key) {
+                return this.hasOwnProperty(key) ? this[key] : '';
+            };
+            (function() {
+                var pairs = window.location.hash.substring(1).split('&');
+                for (var i = 0; i < pairs.length; i++) {
+                    var pair = pairs[i].split('=');
+                    context[pair[0]] = pair[1];
+                }
+            })();
+            
+            var newIn = '', newOut = '';
+            if (context.hasOwnProperty('dateIn')) {
+                newIn = context.dateIn.substring(5, 7) + '/' +
+                        context.dateIn.substring(8, 10) + '/' +
+                        context.dateIn.substring(0, 4);
+            }
+            if (context.hasOwnProperty('dateOut')) {
+                newOut = context.dateOut.substring(5, 7) + '/' +
+                         context.dateOut.substring(8, 10) + '/' +
+                         context.dateOut.substring(0, 4);
+            }
+
+            var servlet = context.get('servlet'), sourceCategory = context.get('sourceCategory'), sourceTraffic = context.get('tasource');
+            var geoBucket = 'Low';
+            switch(context.get('geoFeedBucket')) {
+              case 'high':
+                geoBucket = 'High';
+                break;
+              case 'medium':
+                geoBucket = 'Medium';
+                break;
+            }  
+            var segment, triggit_data;
+            if (servlet === 'Home') {
+                segment = 'tahome';
+                triggit_data = {
+                    pos: context.get('locale'),
+                    tas: '6',
+                    geoscore: geoBucket,
+                    tacid: context.get('userUnique'),
+                    tasplit: context.get('taSplit'),
+                    tapv: context.get('seqId'),
+                    tasource: sourceTraffic
+                };
+            }
+            else if (servlet === 'Hotel_Review' || servlet === 'ShowUserReviews') {
+                segment = 'tahotel';
+                triggit_data = {
+                    ppk: context.get('locale') + 'Pe' + context.get('propId'),
+                    pt: 'hotel',
+                    pos: context.get('locale'),
+                    tas: '1',
+                    geoscore: geoBucket,
+                    dd: context.get('dateIn'),
+                    cin: newIn,
+                    cout: newOut,
+                    tauid: context.get('reqUnique'),
+                    tacid: context.get('userUnique'),
+                    tasplit: context.get('taSplit'),
+                    tapv: context.get('seqId'),
+                    tasource: sourceTraffic
+                };
+            }
+            else if (servlet === 'CheapFlights') {
+                segment = 'taflight';
+                triggit_data = {
+                    ppk: context.get('locale') + 'Pe' + context.get('loc1'),
+                    pt: 'flight',
+                    pos: context.get('locale'),
+                    tas: '5',
+                    geoscore: geoBucket,
+                    dd: context.get('dateIn'),
+                    cin: newIn,
+                    cout: newOut,
+                    tauid: context.get('reqUnique'),
+                    tacid: context.get('userUnique'),
+                    tasplit: context.get('taSplit'),
+                    tapv: context.get('seqId'),
+                    tasource: sourceTraffic
+                };
+            }
+            else if (servlet === 'SmartDeals' || servlet === 'Hotels' || servlet === 'HACSearch') {
+                segment = 'tahotel';
+                triggit_data = {
+                    ppk: context.get('locale') + 'Pe' + context.get('geoMostPop'),
+                    pt: 'hotel',
+                    pos: context.get('locale'),
+                    tas: '3',
+                    geoscore: geoBucket,
+                    dd: context.get('dateIn'),
+                    cin: newIn,
+                    cout: newOut,
+                    tauid: context.get('reqUnique'),
+                    tacid: context.get('userUnique'),
+                    tasplit: context.get('taSplit'),
+                    tapv: context.get('seqId'),
+                    tasource: sourceTraffic
+                };
+            }
+            else if (servlet === 'HotelLander') {
+                segment = 'tahotel';
+                triggit_data = {
+                    ppk: context.get('locale') + 'Pe' + context.get('geoMostPop'),
+                    pt: 'hotel',
+                    pos: context.get('locale'),
+                    tas: sourceCategory === 'flights' ? '4' : sourceCategory === 'hotels' ? '2' : '',
+                    geoscore: geoBucket,
+                    dd: context.get('dateIn'),
+                    cin: newIn,
+                    cout: newOut,
+                    tauid: context.get('reqUnique'),
+                    tacid: context.get('userUnique'),
+                    tasplit: context.get('taSplit'),
+                    tapv: context.get('seqId'),
+                    tasource: sourceTraffic
+                };
+            }
+            else if (servlet === 'ShowForum') {
+                segment = 'tashowforum';
+                triggit_data = {
+                    ppk: context.get('locale') + 'Pe' + context.get('geoMostPop'),
+                    pt: 'hotel',
+                    pos: context.get('locale'),
+                    tas: '7',
+                    geoscore: geoBucket,
+                    dd: context.get('dateIn'),
+                    cin: newIn,
+                    cout: newOut,
+                    tauid: context.get('reqUnique'),
+                    tacid: context.get('userUnique'),
+                    tasplit: context.get('taSplit'),
+                    tapv: context.get('seqId'),
+                    tasource: sourceTraffic
+                };
+            }
+            else if (servlet === 'ShowTopic') {
+                segment = 'tashowtopic';
+                triggit_data = {
+                    ppk: context.get('locale') + 'Pe' + context.get('geoMostPop'),
+                    pt: 'hotel',
+                    pos: context.get('locale'),
+                    tas: '8',
+                    geoscore: geoBucket,
+                    dd: context.get('dateIn'),
+                    cin: newIn,
+                    cout: newOut,
+                    tauid: context.get('reqUnique'),
+                    tacid: context.get('userUnique'),
+                    tasplit: context.get('taSplit'),
+                    tapv: context.get('seqId'),
+                    tasource: sourceTraffic
+                };
+            }
+
+            var triggit_advertiser = context.get('locale') + 'Pe';
+            var triggit_segments = ['ta', segment];
+            if (segment) {
+                loadScript('//dgy6rx5roq02d.cloudfront.net/triggit-analytics.min.js', {async: true});
+            }
+        </script><script async="" src="./triggit-analytics.min.js" type="text/javascript"></script>
+    
+
+<img src="./px" height="1" width="1" style="display: none;"><script src="./ps"></script><script src="./ps(1)"></script><script src="./ps(2)"></script></body></html>

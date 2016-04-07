@@ -1,0 +1,1 @@
+crtg_content = ''; (function(){document.cookie = 'cto_tmz=' + escape(crtg_content) + '; path=/; expires=Sat, 07 May 2016 04:48:43 GMT; domain=tmz.com';})();

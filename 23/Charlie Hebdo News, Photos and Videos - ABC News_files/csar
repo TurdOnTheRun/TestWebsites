@@ -1,0 +1,55 @@
+
+
+//if(window.location.hostname.indexOf('dev.abcnews') != -1){
+	var digAdData; var digRequestAds = function(){}; var digGetAd = function(){};//void above functions
+	//document.write('<scr'+'ipt type="text/javascript" src="http://a.abcnews.com/assets/static/ads/digcsserver.js"></scr'+'ipt>');
+//}
+
+
+
+
+
+
+	if(typeof tq == 'undefined'){
+		tq = new Object();
+		tq.path = '';
+		tq.keywords = '';
+		tq.show = '';
+		tq.id = '';
+	}else{
+		if(tq.path!=''){
+			fwContextFlag = (tq.path.indexOf('/blog') != -1) ? false : true;
+			tq.objType = 'topic';
+			if(fwContextFlag){
+				tq.caid = (tq.path.charAt(0)=='/') ? tq.path.substring(1, tq.path.length) : tq.path;
+				tq.caid = (tq.caid.charAt(tq.path.length-2)=='/') ? tq.caid.substring(0, tq.caid.length-1) : tq.caid;
+				//tq.section = ''; //already being set in blogs, no need to reset
+				tq.subsection = '';
+			}else{
+				fwBlogPathArr = tq.path.split('/');
+				tq.caid = '';
+				tq.section = fwBlogPathArr[1];
+				tq.subsection = (fwBlogPathArr.length > 3) ? fwBlogPathArr[3]:'';
+			}
+		}
+	}
+	
+
+
+
+tq.urlFullQuery = (tq.path!='')?'&tqkw='+encodeURI(tq.keywords)+'&tqshow='+encodeURI(tq.show)+'&url='+encodeURI(tq.path):'&url='+encodeURI(window.location.pathname);
+var csarUrl = "http://abcnews.csar.go.com/DynamicCSAd?srvc=nws&itype=Banner&itype=SponsoredByLogo&itype=Rectangle&itype=OverPage&itype=RevenueScience"+tq.urlFullQuery;
+var paramD = "?"; var regexS = "[\?&]test=([^&#]*)"; var regex = new RegExp(regexS); var resultsT = regex.exec(window.location.href); if(resultsT != null) csarUrl += paramD + "test="+ resultsT[1];
+var cntCodes = "topic";
+digRequestAds(csarUrl, true, cntCodes);
+
+var fwNetworkId = '168234'
+var fwSectionFallbackId = '109523';
+var fwAdSystem = true;
+var mainURL = window.location.href;
+if (mainURL.indexOf("https://") == 0) {
+	document.write('<scr'+'ipt type="text/javascript" src="https://abcnews.go.com/assets/js/fw.js?v27"></scr'+'ipt>');
+}
+else {
+	document.write('<scr'+'ipt type="text/javascript" src="http://a.abcnews.com/assets/js/fw.js?v27"></scr'+'ipt>');
+}

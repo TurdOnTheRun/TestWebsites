@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://s0.2mdn.net/3673529/1454344615018/FF_Q1-2016_300x600_v2/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+        <title>Frosted Flakes | Q1-2016 | 300x600</title>
+        <!-- DoubleClick Size Meta Tag -- ensures size will be rendered correclty. Use '0' for flexible ads.  -->
+        <meta name="ad.size" content="width=300,height=600">
+        <!-- Local link to style sheet -->
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./sprite-sheet.css">
+
+        <script type="text/javascript" language="javascript">
+            // In Page Scripting
+            var clickTag = "";
+        </script>
+
+        <noscript>Your browser does not support JavaScript!</noscript>  <!--message for browsers not supporting JavaScript.-->
+    </head>
+
+    <body>
+        <div id="ad">
+            <a href="javascript:window.open(window.clickTag)">
+                <div id="adWrapper" style="visibility: inherit; opacity: 1;">
+
+                    <div class="img blkFade"></div>
+
+                    <div id="f4" style="opacity: 1;">
+                        <div class="img frame_04"></div>
+                        <div id="frame_04_copy" class="sprite frame_04_copy"></div>
+                    </div>
+
+                    <div id="f3" style="opacity: 0;">
+                        <div class="img frame_03"></div>
+                        <div id="frame_03_copy" class="sprite frame_03_copy"></div>
+                        <div class="sprite small_Great"></div>
+                    </div>
+
+                    <div id="f2" style="opacity: 0;">
+                        <div class="img frame_02"></div>
+                        <div id="frame_02_copy" class="sprite frame_02_copy"></div>
+                        <div class="sprite small_Great"></div>
+                    </div>
+
+                    <div id="f1" style="opacity: 0;">
+                        <div class="img frame_01"></div>
+                        <div id="frame_01_copy" class="sprite frame_01_copy"></div>
+                        <div class="sprite small_Great"></div>
+                    </div>
+
+                    <div class="sprite logo" style="visibility: inherit; opacity: 1;"></div>
+                    <div class="sprite pkg" style="visibility: inherit; opacity: 1;"></div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <!---------------------------------------- CDN Library Links ---------------------------------------->
+        <!--CDN library link for: Jquery -->
+<!--        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+
+        <!--Greensock AKA GSAP CDN Links -->
+        <!--TweenMax-->
+        <script src="./TweenMax.min.js"></script>
+
+        <!--TweenLite, CSSPlugin, and EasePack-->
+<!--        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>-->
+<!--        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>-->
+<!--        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>    -->
+
+        <!---------------------------------------- Local Script Links ---------------------------------------->
+        <!-- Local link to JavaScripts -->
+        <script type="text/javascript" src="./animation.js"></script>
+
+    
+
+
+
+</body></html>

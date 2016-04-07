@@ -1,0 +1,2 @@
+function IBPartner(){this.Go='245684';this.Xid='';this.Ida='';this.Pid='304';this.Id1='';}
+(function(){try{var s=window.document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src','//ev.ib-ibi.com/ibiview.js?go=245684&xid=&pid=304&ida=&id1=');(window.document.getElementsByTagName('body')[0]||window.document.getElementsByTagName('head')[0]).appendChild(s);}catch(e){}})();
